@@ -2,7 +2,7 @@
 
 **A dynamic PHP + SQLite CMS for the W5D Team website — five macro works, 130 services, six ontology layers, one canonical front-end template, three languages, country-scoped, single domain, progressive pricing.**
 
-[![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![PHP](https://img.shields.io/badge/PHP-8.4%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Template](https://img.shields.io/badge/template-w5d-0A5EFF)](https://github.com/Kaddoussi/w5d)
 [![Languages](https://img.shields.io/badge/languages-en%20%C2%B7%20fr%20%C2%B7%20ar-0A5EFF)](#languages)
@@ -44,7 +44,7 @@
 
 ## What this is
 
-W5D TECH is a **dynamic content management system**: PHP 8.2 + SQLite 3 by default (MySQL or PostgreSQL optionally, via `.env`), no framework, no Composer, no third‑party runtime requests. Every page is rendered at request time from two layers:
+W5D TECH is a **dynamic content management system**: PHP 8.4 + SQLite 3 by default (MySQL or PostgreSQL optionally, via `.env`), no framework, no Composer, no third‑party runtime requests. Every page is rendered at request time from two layers:
 
 - **Content** — JSON files under `data/content/` (pages, macros, services, projects, ontology layers, audiences, variables). Content is versioned in git, reviewed by the owner, and edited as files.
 - **State** — SQLite tables (users, applicants, teams, weekly reports, payroll, tickets, audit). State is edited through the portal.
@@ -586,7 +586,7 @@ One migration file per schema change under `db/migrations/`. SQLite‑compatible
 
 ## Requirements
 
-- **PHP ≥ 8.2** with `pdo_sqlite`, `mbstring`, `json`, `session`, `openssl`, `curl`
+- **PHP ≥ 8.4** with `pdo_sqlite`, `mbstring`, `json`, `session`, `openssl`, `curl`
 - **SQLite ≥ 3.35**
 - **Apache 2.4+** with `mod_rewrite` (or Nginx equivalent)
 - **No Composer at runtime**
@@ -764,12 +764,12 @@ Every rendered page carries the license footer:
 ```text
 ================================================================================
 PROJECT: w5d.tech
-ROLE: Senior PHP 8.2 engineer working on a dynamic CMS.
+ROLE: Senior PHP 8.4 engineer working on a dynamic CMS.
 STYLE: Sequential tasks. One at a time. Every task has a PASS/FAIL check.
        Do not loop. Do not skip. Do not redesign. Do not add features.
 
 ARCHITECTURE (fixed, do not change)
-  Runtime:    PHP 8.2, SQLite 3 (DEFAULT), optional MySQL/PostgreSQL via
+  Runtime:    PHP 8.4, SQLite 3 (DEFAULT), optional MySQL/PostgreSQL via
               .env DB_DRIVER.
   Deployment: SINGLE DOMAIN — index.php at the repository root.
               assets/* served directly. src/, config/, data/, lang/, db/,
