@@ -1,21 +1,290 @@
-MIT License
+W5D TECH — License
 
-Copyright (c) 2026 W5Downer
+Copyright © 2026 Maher Kaddoussi / W5D. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Contact: owner@w5d.tech
+Website: https://w5d.tech
+Repository: https://github.com/W5Downer/w5d.tech
+Original front-end template: https://github.com/Kaddoussi/w5d
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+────────────────────────────────────────────────────────────────────────────
+1. LICENSE RATE
+────────────────────────────────────────────────────────────────────────────
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+W5D TECH is licensed at 610.5 TND per hour of work.
+
+Promotional offer valid before 2027 — strictly before 31 December 2026.
+After that date, the standard rate applies.
+
+The rate applies to:
+  - Initial implementation and onboarding of a new deployment.
+  - Custom blocks or modules built for a specific deployment.
+  - Migrations, refactors, and feature additions requested by the licensee.
+  - Integration work: payment gateways, SMS gateways, OAuth providers,
+    external APIs.
+  - Training, documentation, and support hours beyond the documented
+    baseline.
+  - Data migration or schema changes caused by a change of database
+    driver (SQLite <-> MySQL/PostgreSQL).
+  - Any extension of the progressive pricing curve beyond the canonical
+    defaults (see §3).
+
+A running total of hours x 610.5 TND must be visible on the owner
+dashboard and in the license footer of every rendered page:
+
+  "W5D Admin Dashboard licensed at 610.5 TND/hour of work.
+   Promotional offer valid before 2027."
+
+────────────────────────────────────────────────────────────────────────────
+2. OPERATING DOCTRINE — 5% SAMPLING RULE
+────────────────────────────────────────────────────────────────────────────
+
+The software enforces a 5% sampling rule on weekly reports:
+
+  - Every week, 5% of submitted reports are randomly selected for
+    re-review by the service leader or a delegate.
+  - Selection is deterministic per (country_id, week_id) so the sample
+    is reproducible.
+  - Each sampled report is re-scored against the same rubric the
+    manager used, and the result is recorded.
+  - A sampled failure triggers the same rework path as a manager
+    rejection.
+
+The 5% rate is a fixed operating doctrine of this software. It is not
+configurable from the owner dashboard, not editable in configuration
+files, and not subject to per-country override. Any fork that changes
+this rate must remove the W5D name and branding.
+
+The 5% rate is published on the public status page (/status/) and on
+each service page as part of the declared limits.
+
+────────────────────────────────────────────────────────────────────────────
+3. PROGRESSIVE PRICING — MONEY x TIME
+────────────────────────────────────────────────────────────────────────────
+
+The price of a part is NOT FIXED. It is a published function of two
+factors:
+
+  p = experts_current / experts_target        (progress, 0 -> 1)
+  t = 1 - (deadline - now) / (deadline - start)   (time pressure, 0 -> 1)
+
+The function is:
+
+  price_per_day(p, t)  = base_day  * (1 + alpha * p^p_prog)
+                                    * (1 + beta  * t^p_time)
+  price_per_week(p, t) = base_week * (1 + alpha * p^p_prog)
+                                    * (1 + beta  * t^p_time)
+
+Canonical defaults live in config/variables.php:
+
+  base_day   = 10 TND
+  base_week  = 70 TND
+  alpha      = 1.0
+  beta       = 1.0
+  p_prog     = 2.0
+  p_time     = 2.0
+  cap        = 3.0  (the price can never exceed 3x base)
+
+The following properties are guaranteed by the license:
+
+  - At p = 0 and t = 0, the day price is exactly 10.00 TND and the
+    week price is exactly 70.00 TND.
+  - At p = 1 and t = 1, the day price is exactly 30.00 TND and the
+    week price is exactly 210.00 TND (capped at 3x base).
+  - The function is monotonic in both p and t.
+  - The function is published on /pricing/ and /investors/ as a live
+    chart before any checkout is made.
+  - No block may compute a price independently of Pricing.php.
+  - Every change to alpha, beta, p_prog, p_time, or cap is written to
+    config/variables.php as a dated commit AND to the append-only
+    pricing_audit table.
+
+The progressive price is a DECLARED curve, not a scarcity trick. It is
+shown alongside the declared limit: "a part is an investment in a path,
+not a job."
+
+────────────────────────────────────────────────────────────────────────────
+4. HONESTY CONSTRAINT
+────────────────────────────────────────────────────────────────────────────
+
+The figure "130,000 experts" is a DESIGN EQUATION:
+
+  5 macro works x 26 services per macro work x 1,000 experts per
+  service = 130,000.
+
+It is NOT a claim that 130,000 experts are currently employed by W5D.
+As of the date of this license:
+
+  - The real footprint of W5D is 26 developers in Tunisia.
+  - The number of certified W5D expert team members is 0.
+  - "Live" in the status register does not mean "1,000 experts
+    employed".
+
+The software must not be deployed, marketed, or represented in a way
+that contradicts this constraint. Every page that mentions the number
+130,000 must link to the trust statement (/trust/statement/) and must
+not promise a job. The linter enforces this constraint: any hard-coded
+"130,000" or "2027" outside config/variables.php and
+data/countries/tn.json fails the build.
+
+────────────────────────────────────────────────────────────────────────────
+5. THE ORIGINAL FRONT-END TEMPLATE
+────────────────────────────────────────────────────────────────────────────
+
+The single canonical front-end template shipped with this software is
+the `w5d` template, imported from:
+
+  https://github.com/Kaddoussi/w5d
+
+It is the owner's original work: 3 home variants, 14 inner pages, a
+Blocks library of 30+ sections, a Heroes library of 12 variants, a
+Sections library of 28 sections, a mega-menu, a shell renderer, a
+theme system, wired forms, and an animation library.
+
+The template is converted once, during onboarding, into PHP blocks and
+components. No content is restated. Tailwind is compiled locally,
+Lucide is vendored locally, and fonts are self-hosted. No CDN is used
+at runtime.
+
+The license grants the licensee the right to use the `w5d` template as
+part of W5D TECH but does NOT grant the right to redistribute the
+template as a standalone product or under a different name.
+
+────────────────────────────────────────────────────────────────────────────
+6. WHAT IS LICENSED
+────────────────────────────────────────────────────────────────────────────
+
+The license grants the licensee the right to:
+
+  - Deploy W5D TECH on domains operated by the licensee.
+  - Customise the `w5d` template and its blocks for the licensee's own
+    deployments.
+  - Extend the software with the licensee's own code, provided the
+    extensions are not resold as W5D TECH.
+  - Run multiple instances (development, staging, production) without
+    additional license fees.
+  - Choose any supported database driver (SQLite, MySQL, PostgreSQL)
+    by setting DB_DRIVER in the .env file. SQLite is the default and
+    is the only driver supported on the documented 100 MB VPS budget.
+  - Tune the progressive pricing constants (alpha, beta, p_prog,
+    p_time, cap) provided every change is committed and logged in
+    pricing_audit.
+
+────────────────────────────────────────────────────────────────────────────
+7. STORAGE BUDGET — LICENSEE RESPONSIBILITY
+────────────────────────────────────────────────────────────────────────────
+
+The reference deployment has 100 MB of disk and no MySQL. The README
+documents this budget. The licensee is solely responsible for:
+
+  - Configuring STORAGE_DRIVER, ARCHIVE_DRIVER, and BACKUP_DRIVER
+    before launch.
+  - Ensuring that bin/archive.php, bin/rollup.php, bin/health.php, and
+    bin/backup.php run on schedule.
+  - Ensuring that the live SQLite database does not exceed the
+    documented budget.
+  - Switching to an external database provider via DB_DRIVER if the
+    VPS budget is exceeded.
+  - Any data loss caused by leaving raw weekly_reports in the live
+    database beyond the documented window, by disabling the archive
+    cron, or by running without a backup.
+
+At full operational scale (130,000 weekly reports per week for a year),
+the raw history exceeds the 100 MB budget by roughly an order of
+magnitude. The licensee must configure an external archive or an
+external database provider for a full-scale deployment.
+
+────────────────────────────────────────────────────────────────────────────
+8. WHAT IS NOT LICENSED
+────────────────────────────────────────────────────────────────────────────
+
+The license does NOT grant the right to:
+
+  - Resell, sublicense, or redistribute W5D TECH as a product,
+    template, or SaaS offering under the W5D name or a derived name.
+  - Redistribute the `w5d` template as a standalone product.
+  - Remove or alter the license footer or the license block from the
+    source files.
+  - Change the 5% sampling rule and continue to represent the result
+    as W5D TECH.
+  - Replace the progressive pricing function with a fixed price and
+    continue to represent the result as W5D TECH.
+  - Represent the software as providing employment, guaranteed jobs,
+    or a hiring pipeline.
+  - Use the W5D name, logo, or ontology vocabulary (macro works,
+    services, meta solutions, layers L0-L5) to describe a product
+    that is not W5D TECH as delivered by the copyright holder.
+
+────────────────────────────────────────────────────────────────────────────
+9. THIRD-PARTY COMPONENTS
+────────────────────────────────────────────────────────────────────────────
+
+W5D TECH is delivered with no third-party runtime dependencies:
+
+  - No Composer packages.
+  - No CDN requests.
+  - No jQuery.
+  - No icon font (Lucide is vendored locally as a file).
+  - No Tailwind at runtime (compiled to a local CSS file).
+  - Fonts are self-hosted (Space Grotesk, Inter).
+
+SQLite is bundled with PHP and is not a third-party dependency. Any
+future addition of a third-party dependency must be documented in
+docs/dependencies.md with the license of the dependency, its version,
+and its URL.
+
+────────────────────────────────────────────────────────────────────────────
+10. DATA & PRIVACY
+────────────────────────────────────────────────────────────────────────────
+
+W5D TECH stores personal data (names, CINs, diplomas, contact
+details) for applicants and team members. The licensee is the data
+controller for their own deployment and is responsible for compliance
+with:
+
+  - Tunisia: Organic Law 2004-63 on personal data protection
+    (regulator: INPDP).
+  - Any other jurisdiction where the licensee operates.
+
+The software provides consent capture, retention configuration, and
+data-subject-request workflows. The licensee must configure these
+before launch and must not disable the audit log.
+
+Because SQLite stores all personal data in a single file, the licensee
+is responsible for securing that file at the filesystem level (mode
+0600, owned by the web user) and for ensuring that any backup of it
+is encrypted and stored off-server.
+
+────────────────────────────────────────────────────────────────────────────
+11. NO WARRANTY
+────────────────────────────────────────────────────────────────────────────
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+NONINFRINGEMENT, AND FITNESS FOR A GIVEN STORAGE BUDGET.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE, INCLUDING
+DATA LOSS CAUSED BY RUNNING WITHOUT A CONFIGURED ARCHIVE OR BACKUP,
+OR BY REPLACING THE PROGRESSIVE PRICING FUNCTION WITH A FIXED PRICE.
+
+────────────────────────────────────────────────────────────────────────────
+12. ACCEPTANCE
+────────────────────────────────────────────────────────────────────────────
+
+Deploying W5D TECH, modifying its source, or operating it on any
+domain constitutes acceptance of this license.
+
+For a signed commercial agreement, a per-deployment quote, or a
+multi-deployment license, contact:
+
+  Maher Kaddoussi
+  owner@w5d.tech
+
+────────────────────────────────────────────────────────────────────────────
+
+Version 1.2 — 2026-11-14
+Copyright © 2026 Maher Kaddoussi / W5D
