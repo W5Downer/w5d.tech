@@ -44,7 +44,7 @@
 
 ## What this is
 
-W5D PHP CMS is a **dynamic content management system**: PHP 8.2 + SQLite 3 by default (MySQL or PostgreSQL optionally, via `.env`), no framework, no Composer, no third‑party runtime requests. Every page is rendered at request time from two layers:
+W5D TECH is a **dynamic content management system**: PHP 8.2 + SQLite 3 by default (MySQL or PostgreSQL optionally, via `.env`), no framework, no Composer, no third‑party runtime requests. Every page is rendered at request time from two layers:
 
 - **Content** — JSON files under `data/content/` (pages, macros, services, projects, ontology layers, audiences, variables). Content is versioned in git, reviewed by the owner, and edited as files.
 - **State** — SQLite tables (users, applicants, teams, weekly reports, payroll, tickets, audit). State is edited through the portal.
@@ -739,7 +739,7 @@ See [LICENSE](LICENSE) for the full text.
 
 **Summary:**
 
-- **W5D PHP CMS** is licensed at **610.5 TND per hour of work**.
+- **W5D TECH** is licensed at **610.5 TND per hour of work**.
 - Promotional offer valid **before 2027**.
 - **Sampling rule: 5%** — fixed.
 - **Progressive pricing** — the part price is a published function of progress and time; the exact constants live in `config/variables.php` and every change is logged in `pricing_audit`.
