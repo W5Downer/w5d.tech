@@ -1,0 +1,167 @@
+{
+ "slug": "smart-buildings",
+ "id": 30,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Smart Buildings & IoT",
+  "fr": "Bâtiments intelligents & IoT",
+  "ar": "المباني الذكية وإنترنت الأشياء (IoT)"
+ },
+ "short": {
+  "en": "The service provides sensors, BMS, energy dashboards.",
+  "fr": "Intégrer des capteurs dans des bâtiments exploitables.",
+  "ar": "دمج الحساسات في مبان قابلة للتشغيل."
+ },
+ "abstract": {
+  "en": "Building management systems with integrated IoT — sensor networks, BMS integration, real-time energy dashboards, and cybersecurity baselines for operational technology.",
+  "fr": "Systèmes de gestion technique des bâtiments intégrant l’IoT — réseaux de capteurs, intégration des GTB, tableaux de bord énergétiques en temps réel et référentiels de cybersécurité pour les technologies opérationnelles.",
+  "ar": "أنظمة إدارة المباني المدمجة مع إنترنت الأشياء — شبكات أجهزة الاستشعار، وتكامل أنظمة إدارة المباني، ولوحات معلومات الطاقة في الوقت الفعلي، وخطوط أساس للأمن السيبراني للتكنولوجيا التشغيلية."
+ },
+ "long": [
+  {
+   "en": "The Smart Buildings & IoT service organises a weekly work package around sensor commissioning tests, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 sensor commissioning tests; 500 bms integration tests; 100 energy baseline reports; 200 fault investigations. Building management systems with integrated IoT — sensor networks, BMS integration, real-time energy dashboards, and cybersecurity baselines for operational technology. Specialists sequence those methods against the accepted weekly package. The governing boundary is that operators can override automation safely and understand baseline energy use. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Bâtiments intelligents & IoT organise un lot de travail hebdomadaire autour des tests de mise en service des capteurs, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 tests de mise en service des capteurs ; 500 tests d’intégration des GTB ; 100 rapports de référence énergétique ; 200 enquêtes sur les défaillances. Systèmes de gestion technique des bâtiments intégrant l’IoT — réseaux de capteurs, intégration des GTB, tableaux de bord énergétiques en temps réel et référentiels de cybersécurité pour les technologies opérationnelles. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. Le principe directeur est que les opérateurs puissent neutraliser l’automatisation en toute sécurité et comprendre la consommation énergétique de référence. Il s’agit de résultats échelonnés issus de cas confiés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة المباني الذكية وإنترنت الأشياء حزمة عمل أسبوعية تتمحور حول اختبارات تشغيل أجهزة الاستشعار، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 2000 اختبار لتشغيل أجهزة الاستشعار؛ و500 اختبار لتكامل أنظمة إدارة المباني؛ و100 تقرير لخط أساس الطاقة؛ و200 تحقيق في الأعطال. أنظمة إدارة المباني المدمجة مع إنترنت الأشياء — شبكات أجهزة الاستشعار، وتكامل أنظمة إدارة المباني، ولوحات معلومات الطاقة في الوقت الفعلي، وخطوط أساس للأمن السيبراني للتكنولوجيا التشغيلية. وينسق الاختصاصيون تطبيق هذه الأساليب مع الحزمة الأسبوعية المعتمدة. والحد الناظم هو أن يتمكن المشغلون من تجاوز التشغيل الآلي بأمان وفهم استهلاك الطاقة الأساسي. وهذه مخرجات مرحلية ناتجة عن حالات جرى التكليف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `smart-buildings`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of sensor commissioning tests, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration côtière, le coût du logement et les obstacles liés aux transports limitent la mise en adéquation des personnes qualifiées et des emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures tributaires de l’investissement ; aucun de ces constats ne quantifie les postes mis en service pour ce service. La préparation des projets implique différentes responsabilités en matière d’actifs, d’accès local et de marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans le respect de la loi. Pour `smart-buildings`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire désigné et une définition approuvée des tests de mise en service des capteurs, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يشير مسح OECD لتونس الصادر في أبريل 2022 إلى أن تركز النشاط في المناطق الساحلية وتكاليف السكن وعوائق النقل تحدّ من مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُحصي أي من النتيجتين الوظائف المكلف بها لهذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد يظل العمل المجدي تقنيًا مجزأً إلى أن يكلف به عميل مخول قانونًا. ولذلك، يتمثل النهج المقترح لـ`smart-buildings` في سير عمل تعاقدي يحدد مستفيدًا وتعريفًا معتمدًا لاختبارات تشغيل أجهزة الاستشعار، لا في تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the sensor commissioning tests acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks bms integration tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted sensor commissioning tests from rejected or deferred work and records blockers around energy baseline reports. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des tests de mise en service des capteurs ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les tests d’intégration BMS avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants à la source et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les tests de mise en service des capteurs acceptés des travaux rejetés ou différés et consigne les obstacles liés aux rapports de référence énergétique. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول اختبارات تشغيل مستشعرات القياس؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من اختبارات تكامل BMS قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير التجميعي للخدمة بين اختبارات تشغيل مستشعرات القياس المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بتقارير خط أساس الطاقة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف الخبراء البالغ 1,000."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Sensor commissioning tests",
+    "fr": "Tests de mise en service des capteurs",
+    "ar": "اختبارات تشغيل مستشعرات القياس"
+   },
+   "unit": {
+    "en": "sensor commissioning tests",
+    "fr": "tests de mise en service des capteurs",
+    "ar": "اختبارات تشغيل مستشعرات القياس"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "BMS integration tests",
+    "fr": "Tests d’intégration BMS",
+    "ar": "اختبارات تكامل BMS"
+   },
+   "unit": {
+    "en": "bms integration tests",
+    "fr": "tests d’intégration BMS",
+    "ar": "اختبارات تكامل BMS"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Energy baseline reports",
+    "fr": "Rapports de référence énergétique",
+    "ar": "تقارير خط أساس الطاقة"
+   },
+   "unit": {
+    "en": "energy baseline reports",
+    "fr": "rapports de référence énergétique",
+    "ar": "تقارير خط أساس الطاقة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Fault investigations",
+    "fr": "Enquêtes sur les défaillances",
+    "ar": "تحقيقات الأعطال"
+   },
+   "unit": {
+    "en": "fault investigations",
+    "fr": "enquêtes sur les défaillances",
+    "ar": "تحقيقات الأعطال"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `smart-buildings` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the sensor commissioning tests to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `smart-buildings` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photos géoréférencés ou des fichiers de conception, qui relient les tests de mise en service des capteurs à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `smart-buildings` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات فحص أو تصميم محددة الموقع الجغرافي، أو صورًا؛ وتربط اختبارات تشغيل مستشعرات القياس بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted sensor commissioning tests** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **≥16 tests de mise en service des capteurs acceptés** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la vie privée prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥16 اختبارًا لتشغيل مستشعرات القياس** لكل فريق في الأسبوع، بحسب تعقيد الحالة؛ **طلب إعادة عمل واحد على الأكثر مرتبط بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة والتسويات المقام المؤهل، فيما تتجاوز عيوب السلامة والخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "operators can override automation safely and understand baseline energy use",
+  "fr": "les opérateurs peuvent passer outre l’automatisation en toute sécurité et comprendre la consommation énergétique de référence",
+  "ar": "يستطيع المشغلون تجاوز الأتمتة بأمان ويفهمون استخدام الطاقة الأساسي"
+ },
+ "depends": [
+  {
+   "slug": "metrology",
+   "id": 64
+  },
+  {
+   "slug": "cybersecurity",
+   "id": 106
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "renewable-science",
+   "id": 68
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Insecure controllers expose building systems → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Des contrôleurs non sécurisés exposent les systèmes des bâtiments → limiter les accès, caviarder les éléments probants diffusés et tester le processus d’accès restreint.",
+   "ar": "تكشف وحدات التحكم غير الآمنة أنظمة المباني ← تقليل الوصول، وحجب البيانات من الأدلة المنشورة، واختبار سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Sensor drift triggers false controls → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "La dérive des capteurs déclenche de fausses commandes → exiger des vérifications indépendantes des sources, un dispositif de comparaison et une incertitude explicitement indiquée avant acceptation.",
+   "ar": "يؤدي انحراف المستشعرات إلى تشغيل عناصر التحكم على نحو خاطئ ← اشتراط عمليات تحقق مستقلة من المصادر، ومرجع للمقارنة، وتحديد صريح لمستوى عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Vendor lock-in blocks maintenance → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "La dépendance à un fournisseur entrave la maintenance → tester le transfert aux opérateurs, les dépendances de maintenance et l’existence d’une procédure de reprise.",
+   "ar": "يعيق الارتهان للمورّد أعمال الصيانة ← اختبار تسليم المهام إلى المشغل، والاعتماديات اللازمة للصيانة، وإجراء متاح للتعافي."
+  }
+ ]
+}

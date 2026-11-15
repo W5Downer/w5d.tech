@@ -1,0 +1,65 @@
+{
+ "slug": "weekly-work-engine",
+ "id": 14,
+ "order": 14,
+ "icon": "calendar-clock",
+ "status": "building",
+ "status_label": {
+  "en": "Building",
+  "fr": "En construction",
+  "ar": "قيد البناء"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Weekly work engine",
+  "fr": "Moteur de travail hebdomadaire",
+  "ar": "محرك العمل الأسبوعي"
+ },
+ "tagline": {
+  "en": "Directives, reports, approvals, lock, rollup and archive, every week.",
+  "fr": "Directives, rapports, approbations, verrouillage, consolidation et archivage, chaque semaine.",
+  "ar": "التوجيهات والتقارير والموافقات والإقفال وتجميع النتائج والأرشفة، كل أسبوع."
+ },
+ "outcome": [
+  {
+   "en": "The engine runs a weekly cycle: directives issued, reports submitted by Friday 12:00, approvals, a lock, a rollup and an archive.",
+   "fr": "Le moteur suit un cycle hebdomadaire : directives émises, rapports soumis au plus tard le vendredi à 12:00, approbations, verrouillage, consolidation et archivage.",
+   "ar": "تعمل المنظومة وفق دورة أسبوعية: إصدار التوجيهات، وتقديم التقارير بحلول يوم الجمعة الساعة 12:00، ثم الموافقات والإقفال وتجميع النتائج والأرشفة."
+  },
+  {
+   "en": "The {{ quality.sampling_percent }}% random audit rechecks source evidence; it does not replace manager review.",
+   "fr": "L’audit aléatoire de {{ quality.sampling_percent }}% vérifie à nouveau les pièces justificatives ; il ne remplace pas l’examen du responsable.",
+   "ar": "يعيد التدقيق العشوائي بنسبة {{ quality.sampling_percent }}% التحقق من الأدلة المصدرية؛ ولا يحل محل مراجعة المدير."
+  }
+ ],
+ "evidence": {
+  "en": "Implemented in the platform scripts; no production cohort yet.",
+  "fr": "Mis en œuvre dans les scripts de la plateforme ; aucune cohorte de production pour le moment.",
+  "ar": "نُفّذ في نصوص المنصة البرمجية؛ ولم تبدأ أي مجموعة إنتاجية بعد."
+ },
+ "services": [
+  "official-stats",
+  "research-data",
+  "it-governance"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Implemented in code",
+    "fr": "Mis en œuvre dans le code",
+    "ar": "نُفّذ في الشيفرة البرمجية"
+   },
+   "body": {
+    "en": "Rollup and archive scripts exist.",
+    "fr": "Les scripts de consolidation et d’archivage existent.",
+    "ar": "تتوفر نصوص برمجية لتجميع النتائج والأرشفة."
+   }
+  }
+ ],
+ "gradient": "technology"
+}

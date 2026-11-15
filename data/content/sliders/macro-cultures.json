@@ -1,0 +1,137 @@
+{
+ "slug": "macro-cultures",
+ "label": {
+  "en": "Cultures / Humanities",
+  "fr": "Cultures / Sciences humaines",
+  "ar": "الثقافات / العلوم الإنسانية"
+ },
+ "interval": 9000,
+ "height": "34rem",
+ "slides": [
+  {
+   "gradient": "cultures",
+   "icon": "landmark",
+   "eyebrow": {
+    "en": "Heritage, language, memory",
+    "fr": "Patrimoine, langues, mémoire",
+    "ar": "التراث واللغة والذاكرة"
+   },
+   "title": {
+    "en": "Capture what Tunisia knows before it is lost.",
+    "fr": "Préserver les savoirs tunisiens avant qu’ils ne se perdent.",
+    "ar": "وثّقوا ما تعرفه تونس قبل أن يندثر."
+   },
+   "lead": {
+    "en": "Twenty-six services turn graduates in history, languages and heritage into reviewable capture, translation and cataloguing work, with custodial consent first.",
+    "fr": "Vingt-six services permettent à des diplômés en histoire, en langues et en patrimoine de réaliser des travaux de collecte, de traduction et de catalogage pouvant être examinés, avec le consentement préalable des dépositaires.",
+    "ar": "تحوّل ست وعشرون خدمة خريجي التاريخ واللغات والتراث إلى أعمال توثيق وترجمة وفهرسة قابلة للمراجعة، مع إعطاء الأولوية لموافقة أصحاب الحق في حفظ المواد."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Find my service here",
+      "fr": "Trouver mon service ici",
+      "ar": "اعثر على خدمتي هنا"
+     },
+     "href": "#mw-catalog",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "cultures",
+   "icon": "users",
+   "eyebrow": {
+    "en": "Cultures / Humanities · leaders",
+    "fr": "Cultures / Sciences humaines · dirigeants",
+    "ar": "الثقافات / العلوم الإنسانية · القادة"
+   },
+   "title": {
+    "en": "Lead a **{{ experts.team_size }}-expert** team in Cultures / Humanities.",
+    "fr": "Dirigez une équipe de **{{ experts.team_size }} experts** en Cultures / Sciences humaines.",
+    "ar": "قُد فريقًا من **{{ experts.team_size }} خبيرًا** في مجال الثقافات / العلوم الإنسانية."
+   },
+   "lead": {
+    "en": "{{ experts.managers_per_service }} managers per service by design. Managers translate a service leader's rubric into weekly assignments and sign the report.",
+    "fr": "{{ experts.managers_per_service }} responsables par service, selon la conception du programme. Les responsables traduisent le référentiel du chef de service en tâches hebdomadaires et signent le rapport.",
+    "ar": "{{ experts.managers_per_service }} مديرًا لكل خدمة وفق التصميم. يحوّل المديرون معايير قائد الخدمة إلى مهام أسبوعية ويوقّعون التقرير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Open careers",
+      "fr": "Consulter les offres d’emploi",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "cultures",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "Cultures / Humanities · investors",
+    "fr": "Cultures / Sciences humaines · investisseurs",
+    "ar": "الثقافات / العلوم الإنسانية · المستثمرون"
+   },
+   "title": {
+    "en": "Fund the path into **Cultures / Humanities**.",
+    "fr": "Financez le parcours vers les **Cultures / Sciences humaines**.",
+    "ar": "موّل مسار العمل في **الثقافات / العلوم الإنسانية**."
+   },
+   "lead": {
+    "en": "A part funds certification and delivery capacity across the programme at a published, capped price. No return is promised.",
+    "fr": "Une part finance la certification et la capacité de prestation dans l’ensemble du programme, à un prix publié et plafonné. Aucun rendement n’est promis.",
+    "ar": "يسهم جزء من التمويل في تغطية تكاليف الاعتماد والقدرة على تقديم الخدمات في البرنامج، بسعر معلن ومحدّد بسقف. لا يوجد أي عائد مضمون."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/?macro=cultures",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the price",
+      "fr": "Voir le prix",
+      "ar": "اطّلع على السعر"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  }
+ ]
+}

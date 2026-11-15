@@ -1,0 +1,167 @@
+{
+ "slug": "history-science",
+ "id": 15,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "History of Science & Technology",
+  "fr": "Histoire des sciences et des techniques",
+  "ar": "تاريخ العلوم والتكنولوجيا"
+ },
+ "short": {
+  "en": "The service provides research, exhibits, curriculum.",
+  "fr": "Documenter les institutions scientifiques historiques.",
+  "ar": "توثيق تاريخ المؤسسات العلمية."
+ },
+ "abstract": {
+  "en": "Historical research on science and technology — archival research, museum exhibits, curriculum development, and public scholarship on the history of scientific and technical institutions.",
+  "fr": "Recherche historique sur les sciences et les techniques — recherche en archives, expositions muséales, élaboration de programmes d’études et diffusion des connaissances auprès du public sur l’histoire des institutions scientifiques et techniques.",
+  "ar": "البحث التاريخي في العلوم والتكنولوجيا — البحوث الأرشيفية، ومعارض المتاحف، وتطوير المناهج، والإسهام المعرفي العام في تاريخ المؤسسات العلمية والتقنية."
+ },
+ "long": [
+  {
+   "en": "The History of Science & Technology service organises a weekly work package around archival source records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 archival source records; 100 institutional timelines; 50 exhibit scripts; 50 curriculum source packs. Historical research on science and technology — archival research, museum exhibits, curriculum development, and public scholarship on the history of scientific and technical institutions. Specialists sequence those methods against the accepted weekly package. The governing boundary is that historical claims distinguish contemporary documents from retrospective testimony. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’histoire des sciences et des techniques organise un lot de travail hebdomadaire autour de documents d’archives sources, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 documents d’archives sources ; 100 chronologies institutionnelles ; 50 scénarios d’exposition ; 50 dossiers de sources pour les programmes d’études. Recherche historique sur les sciences et les techniques — recherche en archives, expositions muséales, élaboration de programmes d’études et diffusion des connaissances auprès du public sur l’histoire des institutions scientifiques et techniques. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les affirmations historiques distinguent les documents contemporains des témoignages rétrospectifs. Il s’agit de produits échelonnés issus de mandats spécifiques, et non de la promesse d’achever chaque semaine un programme national complet.",
+   "ar": "تنظّم خدمة تاريخ العلوم والتكنولوجيا حزمة عمل أسبوعية تتمحور حول سجلات المصادر الأرشيفية، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند التشغيل بكامل الطاقة مع توفير الموارد، 2000 سجل من سجلات المصادر الأرشيفية؛ و100 خط زمني للمؤسسات؛ و50 نصاً لمعارض؛ و50 حزمة مصادر للمناهج. البحث التاريخي في العلوم والتكنولوجيا — البحوث الأرشيفية، ومعارض المتاحف، وتطوير المناهج، والإسهام المعرفي العام في تاريخ المؤسسات العلمية والتقنية. وينسّق المختصون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المقبولة. والضابط الحاكم هو التمييز في الادعاءات التاريخية بين الوثائق المعاصرة للأحداث والشهادات الاستعادية. هذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `history-science`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of archival source records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse publiée par la Banque mondiale en 2022 compare 64,540 diplômés universitaires annuels au cours des années universitaires 2012/13–2017/18 à 10,675 emplois supplémentaires nets annuels sur la période 2011–2017. Cette inadéquation historique étaye une hypothèse plus large concernant les mandats ; elle ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’une organisation contractante unique ; il faut donc identifier un commanditaire payeur et conclure un accord de réutilisation. Pour `history-science`, la réponse proposée est donc un processus de travail sous contrat, avec un bénéficiaire nommé et une définition acceptée des documents d’archives sources, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجاً جامعياً سنوياً خلال السنوات الأكاديمية 2012/13–2017/18، وبين 10,675 وظيفة إضافية صافية سنوياً في الفئة العليا خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع بشأن التكليف بالأعمال؛ لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد تستفيد الجهات الحافظة والمجتمعات من العمل من دون أن تتوفر لها ميزانية أو جهة تعاقد واحدة، لذا يجب تحديد جهة راعية تدفع التكاليف واتفاق لإعادة الاستخدام. لذلك، يتمثل الرد المقترح في `history-science` في سير عمل تعاقدي، له مستفيد محدد وتعريف معتمد لسجلات المصادر الأرشيفية، لا في التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the archival source records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks institutional timelines before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted archival source records from rejected or deferred work and records blockers around exhibit scripts. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des documents d’archives sources ; 100 gestionnaires les traduisent en affectations d’équipe d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’une personne qualifiée examine les chronologies institutionnelles avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments de preuve sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un gestionnaire. Le bilan du service distingue les documents d’archives sources acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux scénarios d’exposition. Les examens menés par les responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول سجلات المصادر الأرشيفية؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من الخطوط الزمنية للمؤسسات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصادر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويُميّز ملخص الخدمة بين سجلات المصادر الأرشيفية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بنصوص المعارض. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "history of science, history of institutions and education",
+  "fr": "histoire des sciences, histoire des institutions et de l’éducation",
+  "ar": "تاريخ العلوم، وتاريخ المؤسسات والتعليم"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Archival source records",
+    "fr": "Documents d’archives sources",
+    "ar": "سجلات المصادر الأرشيفية"
+   },
+   "unit": {
+    "en": "archival source records",
+    "fr": "documents d’archives sources",
+    "ar": "سجلات المصادر الأرشيفية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Institutional timelines",
+    "fr": "Chronologies institutionnelles",
+    "ar": "الخطوط الزمنية للمؤسسات"
+   },
+   "unit": {
+    "en": "institutional timelines",
+    "fr": "chronologies institutionnelles",
+    "ar": "الخطوط الزمنية للمؤسسات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Exhibit scripts",
+    "fr": "Scénarios d’exposition",
+    "ar": "نصوص المعارض"
+   },
+   "unit": {
+    "en": "exhibit scripts",
+    "fr": "scénarios d’exposition",
+    "ar": "نصوص المعارض"
+   },
+   "target": 50
+  },
+  {
+   "name": {
+    "en": "Curriculum source packs",
+    "fr": "Dossiers de sources pour les programmes d’études",
+    "ar": "حزم مصادر المناهج"
+   },
+   "unit": {
+    "en": "curriculum source packs",
+    "fr": "dossiers de sources pour les programmes d’études",
+    "ar": "حزم مصادر المناهج"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `history-science` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the archival source records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `history-science` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des dossiers de consultation expurgés, établissant un lien entre les documents d’archives sources et la source, la personne chargée de l’examen, la version, le registre des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة القبول المرتبطة بحالة `history-science` ملف قبول PDF/A + بيان مصادر CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط سجلات المصادر الأرشيفية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted archival source records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici ven. 12:00 ; **≥16 documents sources d’archives acceptés** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥16 سجلًا مقبولًا لمصادر أرشيفية** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق-أسبوع. وتُغيّر الإجازات أو التعديلات المعتمدة المقام المؤهل، كما أن العيوب الجسيمة المتعلقة بالسلامة/الخصوصية تلغي أثر النتيجة الخضراء. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "historical claims distinguish contemporary documents from retrospective testimony",
+  "fr": "les affirmations historiques distinguent les documents contemporains des témoignages rétrospectifs",
+  "ar": "تميّز الادعاءات التاريخية بين الوثائق المعاصرة وشهادات الاستذكار اللاحقة"
+ },
+ "depends": [
+  {
+   "slug": "research-data",
+   "id": 63
+  },
+  {
+   "slug": "education-governance",
+   "id": 98
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "stem-education",
+   "id": 76
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Present-day categories distort past practice → reconcile source records with the archival source records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les catégories actuelles déforment les pratiques passées → rapprocher les documents sources de la liste de contrôle d’acceptation des documents sources d’archives et attribuer la responsabilité des mesures correctives.",
+   "ar": "الفئات المعاصرة تشوّه الممارسات الماضية → طابِق سجلات المصادر مع قائمة التحقق لقبول سجلات المصادر الأرشيفية، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Institutional narratives suppress controversy → reconcile source records with the archival source records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les récits institutionnels passent sous silence les controverses → rapprocher les documents sources de la liste de contrôle d’acceptation des documents sources d’archives et attribuer la responsabilité des mesures correctives.",
+   "ar": "السرديات المؤسسية تحجب الجدل → طابِق سجلات المصادر مع قائمة التحقق لقبول سجلات المصادر الأرشيفية، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Sources inaccessible to independent reviewers → reconcile source records with the archival source records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les sources sont inaccessibles aux évaluateurs indépendants → rapprocher les documents sources de la liste de contrôle d’acceptation des documents sources d’archives et attribuer la responsabilité des mesures correctives.",
+   "ar": "تعذّر وصول المراجعين المستقلين إلى المصادر → طابِق سجلات المصادر مع قائمة التحقق لقبول سجلات المصادر الأرشيفية، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

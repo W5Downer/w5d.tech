@@ -1,0 +1,167 @@
+{
+ "slug": "crisis-governance",
+ "id": 101,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Crisis & Emergency Governance",
+  "fr": "Gouvernance des crises et des urgences",
+  "ar": "حوكمة الأزمات والطوارئ"
+ },
+ "short": {
+  "en": "The service provides plans, drills, inter-agency coordination.",
+  "fr": "Préparer une coordination de crise testable.",
+  "ar": "إعداد تنسيق أزمات قابل للاختبار."
+ },
+ "abstract": {
+  "en": "Crisis and emergency governance — contingency planning, drills, and inter-agency coordination protocols for national and local emergencies.",
+  "fr": "Gouvernance des crises et des urgences — planification des mesures d’urgence, exercices et protocoles de coordination interinstitutionnelle pour les urgences nationales et locales.",
+  "ar": "حوكمة الأزمات والطوارئ — تخطيط للطوارئ، وتمارين، وبروتوكولات للتنسيق بين الجهات في حالات الطوارئ الوطنية والمحلية."
+ },
+ "long": [
+  {
+   "en": "The Crisis & Emergency Governance service organises a weekly work package around contingency plan reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 contingency plan reviews; 100 tabletop exercises; 500 contact tree tests; 100 after action briefs. Crisis and emergency governance — contingency planning, drills, and inter-agency coordination protocols for national and local emergencies. Specialists sequence those methods against the accepted weekly package. The governing boundary is that competent emergency authorities retain command and public warning powers. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance des crises et des urgences organise un lot de travail hebdomadaire autour de l’examen des plans d’urgence, plutôt que de faire de la participation une fin en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens de plans d’urgence ; 100 exercices sur table ; 500 tests des arbres de contacts ; 100 comptes rendus post-action. Gouvernance des crises et des urgences — planification des mesures d’urgence, exercices et protocoles de coordination interinstitutionnelle pour les urgences nationales et locales. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La limite de compétence est claire : les autorités compétentes en matière d’urgence conservent les pouvoirs de commandement et d’alerte publique. Ces résultats sont issus de cas commandités et déployés par étapes ; ils ne constituent pas une promesse de réaliser un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة حوكمة الأزمات والطوارئ حزمة عمل أسبوعية تتمحور حول مراجعة خطط الطوارئ، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر كامل الموارد والقدرة التشغيلية، مراجعة 200 خطة طوارئ؛ وإجراء 100 تمرين محاكاة؛ واختبار 500 شجرة اتصال؛ وإعداد 100 موجز لما بعد الحدث. حوكمة الأزمات والطوارئ — تخطيط للطوارئ، وتمارين، وبروتوكولات للتنسيق بين الجهات في حالات الطوارئ الوطنية والمحلية. وينسق المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والحد الفاصل في الحوكمة هو احتفاظ سلطات الطوارئ المختصة بصلاحيات القيادة والتحذير العام. وهذه مخرجات مرحلية لحالات تم التكليف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `crisis-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of contingency plan reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons des Enquêtes auprès des entreprises étiquetées 2020 ou dernière année disponible. L’analyse juridique de Kotrane, publiée en 2024, relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil améliore une institution sans ces utilisateurs. Pour `crisis-governance`, la réponse proposée consiste donc en un processus de travail sous contrat, avec un bénéficiaire nommé et une définition acceptée des examens de plans d’urgence, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن نحو 40% من الشركات التونسية المشمولة ترى أن قصور مهارات القوى العاملة يشكل عائقًا رئيسيًا، وذلك استنادًا إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها مشكلات، لا مجرد قصور في التدريب. وتعتمد الفوائد على وجود سلطة مشروعة وسجلات إدارية مشتركة وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسن أداء مؤسسة في غياب هذه الجهات. لذلك، يتمثل النهج المقترح لخدمة `crisis-governance` في سير عمل تعاقدي ذي مستفيد محدد وتعريف معتمد لمراجعة خطط الطوارئ، لا في تبرير التوظيف استنادًا حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the contingency plan reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks tabletop exercises before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted contingency plan reviews from rejected or deferred work and records blockers around contact tree tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens de plans d’urgence ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs redevables de leurs résultats, tandis qu’un réviseur compétent vérifie les exercices sur table avant approbation. L’audit aléatoire proposé de 5% réexamine les pièces sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens de plans d’urgence acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux tests des arbres de contacts. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعة خطط الطوارئ؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص تمارين المحاكاة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز الملخص الإجمالي للخدمة بين مراجعات خطط الطوارئ المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باختبارات أشجار الاتصال. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "emergency management, public administration and risk analysis",
+  "fr": "gestion des urgences, administration publique et analyse des risques",
+  "ar": "إدارة الطوارئ، والإدارة العامة، وتحليل المخاطر"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Contingency plan reviews",
+    "fr": "Examens des plans d’urgence",
+    "ar": "مراجعة خطط الطوارئ"
+   },
+   "unit": {
+    "en": "contingency plan reviews",
+    "fr": "examens des plans d’urgence",
+    "ar": "مراجعة خطط الطوارئ"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Tabletop exercises",
+    "fr": "Exercices sur table",
+    "ar": "تمارين المحاكاة"
+   },
+   "unit": {
+    "en": "tabletop exercises",
+    "fr": "exercices sur table",
+    "ar": "تمارين محاكاة مكتبية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Contact tree tests",
+    "fr": "Tests des chaînes d’alerte",
+    "ar": "اختبارات شجرة الاتصال"
+   },
+   "unit": {
+    "en": "contact tree tests",
+    "fr": "tests des chaînes d’alerte",
+    "ar": "اختبارات شجرة الاتصال"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "After action briefs",
+    "fr": "Notes de synthèse après action",
+    "ar": "موجزات ما بعد التنفيذ"
+   },
+   "unit": {
+    "en": "after action briefs",
+    "fr": "notes de synthèse après action",
+    "ar": "موجزات ما بعد التنفيذ"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `crisis-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the contingency plan reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `crisis-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des dossiers sources et de consultation expurgés, reliant les examens des plans d’urgence à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة في مجال `crisis-governance` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات خطة الطوارئ بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted contingency plan reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis au plus tard le vendredi à 12:00 ; **≥2 examens de plans d’urgence acceptés** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من مراجعات خطط الطوارئ** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات المعتمدة/الترتيبات الخاصة المقام المؤهل، كما تتقدم العيوب الحرجة المتعلقة بالسلامة/الخصوصية على الدرجة الخضراء. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "competent emergency authorities retain command and public warning powers",
+  "fr": "les autorités compétentes en cas d’urgence conservent le commandement et le pouvoir d’alerter le public",
+  "ar": "تحتفظ سلطات الطوارئ المختصة بسلطات القيادة والتحذير العام"
+ },
+ "depends": [
+  {
+   "slug": "disaster-construction",
+   "id": 38
+  },
+  {
+   "slug": "disaster-tech",
+   "id": 130
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "ocean-monitoring",
+   "id": 71
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "11",
+   "target": "11"
+  },
+  {
+   "goal": "13",
+   "target": "13.1"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Contact trees fail outside office hours → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les chaînes d’alerte échouent en dehors des heures de bureau → exiger l’approbation d’un responsable compétent en matière de sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "تتعطل أشجار الاتصال خارج ساعات العمل → يُشترط اعتماد مختص بالسلامة، وإجراء تجارب مضبوطة، وتحديد محفّز موثق لإيقاف العمل."
+  },
+  {
+   "en": "Plans assume unavailable resources → reconcile source records with the contingency plan reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les plans reposent sur des ressources indisponibles → rapprocher les dossiers sources de la liste de contrôle d’acceptation des examens des plans d’urgence et attribuer la responsabilité des mesures correctives.",
+   "ar": "تفترض الخطط توافر موارد غير متاحة → طابِق سجلات المصادر مع قائمة التحقق من قبول مراجعات خطة الطوارئ، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Exercises avoid realistic inter-agency conflicts → reconcile source records with the contingency plan reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les exercices évitent les conflits réalistes entre organismes → rapprocher les dossiers sources de la liste de contrôle d’acceptation des examens des plans d’urgence et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتجنب التمارين النزاعات الواقعية بين الجهات → طابِق سجلات المصادر مع قائمة التحقق من قبول مراجعات خطة الطوارئ، وحدد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

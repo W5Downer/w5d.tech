@@ -1,0 +1,167 @@
+{
+ "slug": "manuscript-studies",
+ "id": 20,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Manuscript Studies",
+  "fr": "Études des manuscrits",
+  "ar": "دراسات المخطوطات"
+ },
+ "short": {
+  "en": "The service provides codicology, conservation, critical editions.",
+  "fr": "Conserver et éditer les manuscrits.",
+  "ar": "حفظ المخطوطات وتحقيقها."
+ },
+ "abstract": {
+  "en": "Manuscript scholarship and conservation — codicology, physical conservation, high-resolution imaging, and critical digital editions for scholars and public access.",
+  "fr": "Recherche et conservation des manuscrits — codicologie, conservation matérielle, imagerie haute résolution et éditions critiques numériques à l’intention des chercheurs et du public.",
+  "ar": "دراسة المخطوطات وصونها — علم المخطوطات، والصون المادي، والتصوير عالي الدقة، والطبعات الرقمية النقدية للباحثين وإتاحة الوصول للجمهور."
+ },
+ "long": [
+  {
+   "en": "The Manuscript Studies service organises a weekly work package around imaged folios, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 10000 imaged folios; 500 codicological records; 200 conservation assessments; 100 critical edition sections. Manuscript scholarship and conservation — codicology, physical conservation, high-resolution imaging, and critical digital editions for scholars and public access. Specialists sequence those methods against the accepted weekly package. The governing boundary is that imaging and handling follow conservator approval and documented condition checks. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Études des manuscrits organise un lot de travail hebdomadaire autour de feuillets numérisés, plutôt que de considérer la présence comme un résultat en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 10000 feuillets numérisés ; 500 notices codicologiques ; 200 évaluations de conservation ; 100 sections d’édition critique. Recherche et conservation des manuscrits — codicologie, conservation matérielle, imagerie haute résolution et éditions critiques numériques à l’intention des chercheurs et du public. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que l’imagerie et la manipulation se font après approbation d’un conservateur et vérification documentée de l’état des documents. Il s’agit de résultats échelonnés issus de dossiers commandités, et non d’une promesse de mener à bien chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة دراسات المخطوطات حزمة عمل أسبوعية تتمحور حول الأوراق المصورة، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ كامل الطاقة الاستيعابية المزوّدة بالموارد، 10000 ورقة مصورة؛ و500 سجلّ في علم المخطوطات؛ و200 تقييم للصون؛ و100 قسم من طبعة نقدية. دراسة المخطوطات وصونها — علم المخطوطات، والصون المادي، والتصوير عالي الدقة، والطبعات الرقمية النقدية للباحثين وإتاحة الوصول للجمهور. وينسّق المختصون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن التصوير والتداول لا يتمان إلا بعد موافقة أخصائي الصون وإجراء فحوصات موثقة للحالة. وهذه مخرجات مرحلية لحالات مكلّف بها الفريق، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `manuscript-studies`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of imaged folios, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse 2022 de la Banque mondiale compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois haut de gamme nets supplémentaires par an en 2011–2017. Ce décalage historique étaye une hypothèse plus générale en matière de commande ; il ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme unique chargé de passer les contrats ; il faut donc identifier un commanditaire payeur et un accord de réutilisation. Pour `manuscript-studies`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire désigné et une définition acceptée des feuillets numérisés, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن لمحة البنك الدولي لعام 2022 بين 64,540 خريجاً جامعياً سنوياً في السنوات الأكاديمية 2012/13–2017/18، و10,675 وظيفة إضافية صافية سنوياً في القطاعات عالية المهارة خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع بشأن التكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القائمون على رعاية المخطوطات والمجتمعات من الخدمة من دون أن تكون لديهم ميزانية أو جهة واحدة متعاقدة، لذا يجب تحديد جهة راعية تدفع التكلفة واتفاقية لإعادة الاستخدام. لذلك، فإن الاستجابة المقترحة لـ`manuscript-studies` هي سير عمل تعاقدي، مع مستفيد محدد وتعريف معتمد للأوراق المصورة، لا توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the imaged folios acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks codicological records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted imaged folios from rejected or deferred work and records blockers around conservation assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des feuillets numérisés ; 100 responsables la traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les notices codicologiques avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. Le bilan du service distingue les feuillets numérisés acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux évaluations de conservation. Les revues des responsables de pôles coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول الأوراق المصورة؛ ويحوّل 100 مدير هذه المعايير إلى مهام موزعة على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يراجع مختص مؤهل سجلات علم المخطوطات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين الأوراق المصورة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بتقييمات الصون. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "codicology, palaeography, philology and conservation",
+  "fr": "codicologie, paléographie, philologie et conservation",
+  "ar": "علم المخطوطات، وعلم الكتابات القديمة، وفقه اللغة، والصون"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and Kairouan manuscript custodians",
+  "fr": "dépositaires de manuscrits à Tunis et Kairouan",
+  "ar": "القائمون على رعاية المخطوطات في تونس والقيروان"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Imaged folios",
+    "fr": "Feuillets numérisés",
+    "ar": "الأوراق المصورة"
+   },
+   "unit": {
+    "en": "imaged folios",
+    "fr": "feuillets numérisés",
+    "ar": "الأوراق المصورة"
+   },
+   "target": 10000
+  },
+  {
+   "name": {
+    "en": "Codicological records",
+    "fr": "Notices codicologiques",
+    "ar": "سجلات علم المخطوطات"
+   },
+   "unit": {
+    "en": "codicological records",
+    "fr": "notices codicologiques",
+    "ar": "سجلات علم المخطوطات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Conservation assessments",
+    "fr": "Évaluations de conservation",
+    "ar": "تقييمات الصون"
+   },
+   "unit": {
+    "en": "conservation assessments",
+    "fr": "évaluations de conservation",
+    "ar": "تقييمات الصون"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Critical edition sections",
+    "fr": "Sections d’édition critique",
+    "ar": "أقسام الطبعة النقدية"
+   },
+   "unit": {
+    "en": "critical edition sections",
+    "fr": "sections d’édition critique",
+    "ar": "أقسام الطبعة النقدية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `manuscript-studies` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + TIFF/3D or material-test source files as applicable, linking the imaged folios to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `manuscript-studies` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + les fichiers sources TIFF/3D ou les fichiers d’essais de matériaux, selon le cas, reliant les feuillets numérisés à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `manuscript-studies` المرتبطة بالحالة ملف قبول بصيغة PDF/A + بياناً بالمصادر بصيغة CSV/JSON + ملفات مصدر بصيغة TIFF/3D أو ملفات اختبارات المواد، حسب الاقتضاء، مع ربط الأوراق المصورة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥80 accepted imaged folios** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis le vendredi à 12:00 ; **≥80 feuillets numérisés acceptés** par équipe et par semaine, sous réserve de la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité priment sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ و**≥80 ورقة مصورة مقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات والتسهيلات المعتمدة المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أي تقييم أخضر. هذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "imaging and handling follow conservator approval and documented condition checks",
+  "fr": "l’imagerie et la manipulation se font après approbation d’un conservateur et vérification documentée de l’état des documents",
+  "ar": "يتم التصوير والتداول بعد موافقة أخصائي الصون وإجراء فحوصات موثقة للحالة"
+ },
+ "depends": [
+  {
+   "slug": "materials-science",
+   "id": 59
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Light and handling damage manuscripts → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "La lumière et la manipulation endommagent les manuscrits → exiger une approbation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "قد يتسبب الضوء والتداول في إتلاف المخطوطات → يُشترط اعتماد السلامة من مختص مؤهل، وإجراء تجارب مضبوطة، وتوثيق معيار لإيقاف العمل."
+  },
+  {
+   "en": "Conjectures presented as certain readings → reconcile source records with the imaged folios acceptance checklist and assign corrective-action ownership.",
+   "fr": "Conjectures présentées comme des lectures certaines → rapprocher les notices sources de la liste de vérification d’acceptation des feuillets numérisés et désigner un responsable des mesures correctives.",
+   "ar": "عرض التخمينات على أنها قراءات مؤكدة → طابِق سجلات المصادر مع قائمة التحقق لقبول الأوراق المصورة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Ownership disputes interrupt publication → document permissions and obtain qualified rights review before release.",
+   "fr": "Les litiges relatifs aux droits interrompent la publication → documentez les autorisations et faites examiner les droits par une personne qualifiée avant la diffusion.",
+   "ar": "تؤدي نزاعات الملكية إلى تعطيل النشر ← وثّق الأذونات واحصل على مراجعة مؤهلة للحقوق قبل الإصدار."
+  }
+ ]
+}

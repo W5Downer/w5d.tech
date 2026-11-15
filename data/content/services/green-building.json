@@ -1,0 +1,167 @@
+{
+ "slug": "green-building",
+ "id": 32,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Green Building Certification",
+  "fr": "Certification des bâtiments écologiques",
+  "ar": "شهادة المباني الخضراء"
+ },
+ "short": {
+  "en": "The service provides eDGE/LEED assessment, retrofit plans.",
+  "fr": "Préparer des bâtiments à une certification vérifiable.",
+  "ar": "إعداد المباني لشهادة قابلة للتحقق."
+ },
+ "abstract": {
+  "en": "Green building assessment and delivery — EDGE and LEED certification pathways, net-zero retrofit planning, and performance verification against the certified targets.",
+  "fr": "Évaluation et réalisation de bâtiments écologiques — parcours de certification EDGE et LEED, planification de rénovations visant la neutralité carbone et vérification des performances au regard des objectifs certifiés.",
+  "ar": "تقييم المباني الخضراء وتنفيذها — مسارات الحصول على شهادتي EDGE وLEED، والتخطيط للتحديثات المؤدية إلى صافي انبعاثات صفري، والتحقق من الأداء مقارنة بالأهداف المعتمدة."
+ },
+ "long": [
+  {
+   "en": "The Green Building Certification service organises a weekly work package around building assessments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 building assessments; 200 retrofit option studies; 100 evidence dossiers; 200 performance verification visits. Green building assessment and delivery — EDGE and LEED certification pathways, net-zero retrofit planning, and performance verification against the certified targets. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only the authorised scheme can award its certification, not Dyon. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de certification des bâtiments écologiques organise un lot de travail hebdomadaire autour des évaluations de bâtiments, plutôt que de faire de la présence son produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 évaluations de bâtiments ; 200 études d’options de rénovation ; 100 dossiers de preuves ; 200 visites de vérification des performances. Évaluation et réalisation de bâtiments écologiques — parcours de certification EDGE et LEED, planification de rénovations visant la neutralité carbone et vérification des performances au regard des objectifs certifiés. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que seul l’organisme habilité par le référentiel concerné peut délivrer sa certification, et non Dyon. Il s’agit de livrables échelonnés issus de dossiers commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة شهادة المباني الخضراء حزمة عمل أسبوعية حول تقييمات المباني، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية عند توافر كامل الموارد 200 تقييم للمباني؛ و200 دراسة لخيارات التحديث؛ و100 ملف أدلة؛ و200 زيارة للتحقق من الأداء. تقييم المباني الخضراء وتنفيذها — مسارات الحصول على شهادتي EDGE وLEED، والتخطيط للتحديثات المؤدية إلى صافي انبعاثات صفري، والتحقق من الأداء مقارنة بالأهداف المعتمدة. ويرتّب المتخصصون هذه الأساليب وفق حزمة العمل الأسبوعية المقبولة. والحد الفاصل الحاكم هو أن الجهة المخولة وحدها هي التي تمنح الشهادة، وليس Dyon. وهذه مخرجات مرحلية ناجمة عن حالات متعاقد عليها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `green-building`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of building assessments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie, publiée en avril 2022, relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports limitent la mise en adéquation des compétences avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures tributaires des investissements ; aucun de ces constats ne comptabilise les postes commandés pour ce service. La préparation des projets implique des contraintes liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés tant qu’un client ne les commande pas dans le respect du droit. Pour `green-building`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des évaluations de bâtiments, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "حدّد المسح الذي أجرته منظمة OECD لتونس في أبريل 2022 تركز الأنشطة على الساحل، وتكاليف السكن، وعوائق النقل بوصفها قيوداً على مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُحصي أي من النتيجتين الوظائف المتعاقد عليها لهذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذلك قد يظل العمل القابل للتنفيذ من الناحية الفنية مجزّأً إلى أن يتعاقد عليه عميل وفق الأصول القانونية. لذا، يتمثل النهج المقترح لـ`green-building` في سير عمل تعاقدي يحدد المستفيد وتعريفاً مقبولاً لتقييمات المباني، لا في تبرير التوظيف استناداً إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the building assessments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks retrofit option studies before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted building assessments from rejected or deferred work and records blockers around evidence dossiers. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des évaluations de bâtiments ; 100 responsables les déclinent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les études d’options de rénovation avant leur approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les évaluations de bâtiments acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux dossiers de preuves. Les examens menés par les responsables de grappe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تقييمات المباني؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص دراسات خيارات التحديث قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير التجميعي للخدمة بين تقييمات المباني المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بملفات الأدلة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Building assessments",
+    "fr": "Évaluations de bâtiments",
+    "ar": "تقييمات المباني"
+   },
+   "unit": {
+    "en": "building assessments",
+    "fr": "évaluations de bâtiments",
+    "ar": "تقييمات المباني"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Retrofit option studies",
+    "fr": "Études d’options de rénovation",
+    "ar": "دراسات خيارات التحديث"
+   },
+   "unit": {
+    "en": "retrofit option studies",
+    "fr": "études d’options de rénovation",
+    "ar": "دراسات خيارات التحديث"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Evidence dossiers",
+    "fr": "Dossiers de preuves",
+    "ar": "ملفات الأدلة"
+   },
+   "unit": {
+    "en": "evidence dossiers",
+    "fr": "dossiers de preuves",
+    "ar": "ملفات الأدلة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Performance verification visits",
+    "fr": "Visites de vérification des performances",
+    "ar": "زيارات التحقق من الأداء"
+   },
+   "unit": {
+    "en": "performance verification visits",
+    "fr": "visites de vérification des performances",
+    "ar": "زيارات التحقق من الأداء"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `green-building` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the building assessments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `green-building` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des fichiers d’inspection, de photographie ou de conception géoréférencés, qui relient les évaluations de bâtiments à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تحتوي حزمة قبول `green-building` المرتبطة بالحالة على ملف قبول بصيغة PDF/A + بيان بالمصادر بصيغتي CSV/JSON + ملفات تفتيش/صور أو تصميم محددة جغرافيًا، تربط تقييمات المباني بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted building assessments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici ven. 12:00 ; **≥2 évaluations de bâtiments acceptées** par équipe-semaine, sous réserve de la complexité des dossiers ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pour le projet pilote, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من تقييمات المباني** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب مسائل متعلقة بالأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتُبطل العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي تقييم أخضر. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "only the authorised scheme can award its certification, not Dyon",
+  "fr": "Seul le dispositif habilité peut délivrer sa certification, et non Dyon.",
+  "ar": "لا يحق منح الشهادة إلا للجهة المخوّلة باعتماد البرنامج، وليس Dyon"
+ },
+ "depends": [
+  {
+   "slug": "renewable-science",
+   "id": 68
+  },
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "energy-audits",
+   "id": 124
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Checklist compliance masks actual consumption → reconcile source records with the building assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le respect de la liste de contrôle masque la consommation réelle → rapprocher les pièces sources de la liste de contrôle d’acceptation des évaluations de bâtiments et attribuer la responsabilité des mesures correctives.",
+   "ar": "الامتثال لقائمة التحقق يحجب الاستهلاك الفعلي → طابِق سجلات المصدر مع قائمة التحقق الخاصة بقبول تقييمات المباني، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unsupported certification claims mislead users → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les déclarations de certification non étayées induisent les utilisateurs en erreur → exiger des vérifications indépendantes des sources, un élément de comparaison et une incertitude explicitement indiquée avant l’acceptation.",
+   "ar": "قد تؤدي ادعاءات الاعتماد غير المدعومة إلى تضليل المستخدمين → اشترط التحقق المستقل من المصادر، ووجود معيار للمقارنة، والإفصاح الصريح عن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Comfort declines after efficiency changes → reconcile source records with the building assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le confort se dégrade après des changements visant à améliorer l’efficacité → rapprocher les pièces sources de la liste de contrôle d’acceptation des évaluations de bâtiments et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد يتراجع مستوى الراحة بعد تغييرات الكفاءة → طابِق سجلات المصدر مع قائمة التحقق الخاصة بقبول تقييمات المباني، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

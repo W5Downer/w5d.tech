@@ -1,0 +1,167 @@
+{
+ "slug": "philosophy-ethics",
+ "id": 14,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Philosophy & Ethics Clinics",
+  "fr": "Cliniques de philosophie et d’éthique",
+  "ar": "عيادات الفلسفة والأخلاقيات"
+ },
+ "short": {
+  "en": "The service provides applied ethics for technology and governance.",
+  "fr": "Examiner les dilemmes éthiques appliqués.",
+  "ar": "دراسة المعضلات الأخلاقية التطبيقية."
+ },
+ "abstract": {
+  "en": "Applied philosophy and ethics clinics — case-based ethics consultation for technology, healthcare, and public policy; professional ethics training; and publication of ethical frameworks.",
+  "fr": "Cliniques de philosophie appliquée et d’éthique — consultations éthiques fondées sur des cas dans les domaines de la technologie, de la santé et des politiques publiques ; formation à l’éthique professionnelle ; et publication de cadres éthiques.",
+  "ar": "عيادات الفلسفة والأخلاقيات التطبيقية — استشارات أخلاقية قائمة على الحالات في مجالات التكنولوجيا والرعاية الصحية والسياسة العامة؛ وتدريب على أخلاقيات المهنة؛ ونشر أطر أخلاقية."
+ },
+ "long": [
+  {
+   "en": "The Philosophy & Ethics Clinics service organises a weekly work package around case analyses, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 case analyses; 100 ethics opinions; 100 workshop sessions; 50 decision framework tests. Applied philosophy and ethics clinics — case-based ethics consultation for technology, healthcare, and public policy; professional ethics training; and publication of ethical frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that opinions disclose conflicts and distinguish ethics advice from legal authorisation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des cliniques de philosophie et d’éthique organise un lot de travail hebdomadaire autour d’analyses de cas, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 analyses de cas ; 100 avis éthiques ; 100 séances d’atelier ; 50 tests de cadres décisionnels. Cliniques de philosophie appliquée et d’éthique — consultations éthiques fondées sur des cas dans les domaines de la technologie, de la santé et des politiques publiques ; formation à l’éthique professionnelle ; et publication de cadres éthiques. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. La règle de gouvernance est que les avis divulguent les conflits d’intérêts et distinguent les conseils éthiques de l’autorisation juridique. Il s’agit de livrables échelonnés issus de cas faisant l’objet d’un mandat, et non d’un engagement à achever chaque semaine un programme national complet.",
+   "ar": "تنظم خدمة عيادات الفلسفة والأخلاقيات حزمة عمل أسبوعية تتمحور حول تحليل الحالات، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 200 تحليل حالة؛ و100 رأي أخلاقي؛ و100 جلسة ورش عمل؛ و50 اختباراً لأطر اتخاذ القرار. عيادات الفلسفة والأخلاقيات التطبيقية — استشارات أخلاقية قائمة على الحالات في مجالات التكنولوجيا والرعاية الصحية والسياسة العامة؛ وتدريب على أخلاقيات المهنة؛ ونشر أطر أخلاقية. ويرتب الاختصاصيون هذه الأساليب ضمن حزمة العمل الأسبوعية المعتمدة. ويقضي الضابط الناظم بأن تفصح الآراء عن تضارب المصالح وأن تميز بين المشورة الأخلاقية والتفويض القانوني. وهذه مخرجات مرحلية لحالات مُكلّف بها، وليست وعداً بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `philosophy-ethics`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of case analyses, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse de la Banque mondiale de 2022 compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois hautement qualifiés nets supplémentaires par an en 2011–2017. Ce décalage historique étaye une hypothèse plus générale concernant la mise en place de mandats ; il n’établit pas l’existence actuelle de postes vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un commanditaire payeur et conclure un accord de réutilisation. Pour `philosophy-ethics`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition approuvée des analyses de cas, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجاً جامعياً سنوياً في الأعوام الأكاديمية 2012/13–2017/18 وبين 10,675 وظيفة إضافية صافية سنوياً في القطاعات عالية المهارة خلال 2011–2017. ويؤيد هذا التفاوت التاريخي فرضية أوسع بشأن التكليف بالخدمات؛ لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد أمناء السجلات والمجتمعات من الخدمة من دون أن تكون لديهم ميزانية أو جهة واحدة تتولى التعاقد، لذا يجب تحديد جهة راعية تدفع التكاليف واتفاقية لإعادة الاستخدام. لذلك، فإن الاستجابة المقترحة لـ `philosophy-ethics` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لتحليلات الحالات، لا التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the case analyses acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks ethics opinions before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted case analyses from rejected or deferred work and records blockers around workshop sessions. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des analyses de cas ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les avis éthiques avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les analyses de cas acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux séances d’atelier. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول تحليلات الحالات؛ ويحوّل 100 مدير هذا المعيار إلى مهام تُسند إلى فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل الآراء الأخلاقية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير المجمّع للخدمة بين تحليلات الحالات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بجلسات ورش العمل. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف الخبراء البالغ 1,000."
+  }
+ ],
+ "fields": {
+  "en": "philosophy, applied ethics, law and social inquiry",
+  "fr": "philosophie, éthique appliquée, droit et sciences sociales",
+  "ar": "الفلسفة والأخلاقيات التطبيقية والقانون والبحث الاجتماعي"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Case analyses",
+    "fr": "Analyses de cas",
+    "ar": "تحليلات الحالات"
+   },
+   "unit": {
+    "en": "case analyses",
+    "fr": "analyses de cas",
+    "ar": "تحليلات الحالات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Ethics opinions",
+    "fr": "Avis éthiques",
+    "ar": "الآراء الأخلاقية"
+   },
+   "unit": {
+    "en": "ethics opinions",
+    "fr": "avis éthiques",
+    "ar": "الآراء الأخلاقية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Workshop sessions",
+    "fr": "Séances d’atelier",
+    "ar": "جلسات ورش العمل"
+   },
+   "unit": {
+    "en": "workshop sessions",
+    "fr": "séances d’atelier",
+    "ar": "جلسات ورش العمل"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Decision framework tests",
+    "fr": "Tests de cadres décisionnels",
+    "ar": "اختبارات أطر اتخاذ القرار"
+   },
+   "unit": {
+    "en": "decision framework tests",
+    "fr": "tests de cadres décisionnels",
+    "ar": "اختبارات أطر اتخاذ القرار"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `philosophy-ethics` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the case analyses to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `philosophy-ethics` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + les documents sources et les comptes rendus de consultation expurgés, qui relient les analyses de cas à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `philosophy-ethics` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، مع ربط تحليلات الحالات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted case analyses** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 analyses de cas acceptées** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés ou ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ و**≥2 من تحليلات الحالات المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. ويؤدي الإجازة أو التعديل المعتمد إلى تغيير المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتغلب على التقييم الأخضر. وهذه أهداف تجريبية وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "opinions disclose conflicts and distinguish ethics advice from legal authorisation",
+  "fr": "les avis divulguent les conflits d’intérêts et distinguent les conseils éthiques de l’autorisation juridique",
+  "ar": "تفصح الآراء عن تضارب المصالح وتميز بين المشورة الأخلاقية والتفويض القانوني"
+ },
+ "depends": [
+  {
+   "slug": "regulatory-impact",
+   "id": 79
+  },
+  {
+   "slug": "ai-ml",
+   "id": 109
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "platform-ai-governance",
+   "id": 93
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Ethics review becomes rubber stamping → reconcile source records with the case analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’examen éthique se réduit à une approbation automatique → rapprochez les documents sources de la liste de contrôle d’acceptation des analyses de cas et attribuez la responsabilité des actions correctives.",
+   "ar": "تحوّل المراجعة الأخلاقية إلى إجراء شكلي للمصادقة → طابقوا السجلات المصدرية مع قائمة التحقق من قبول تحليلات الحالات، وأسندوا مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Conflicted reviewers legitimise clients → reconcile source records with the case analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des évaluateurs en situation de conflit d’intérêts légitiment les clients → rapprochez les documents sources de la liste de contrôle d’acceptation des analyses de cas et attribuez la responsabilité des actions correctives.",
+   "ar": "يمنح المراجعون ذوو المصالح المتعارضة العملاء شرعية → طابقوا السجلات المصدرية مع قائمة التحقق من قبول تحليلات الحالات، وأسندوا مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "General principles ignore affected people → reconcile source records with the case analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les principes généraux ignorent les personnes concernées → rapprochez les documents sources de la liste de contrôle d’acceptation des analyses de cas et attribuez la responsabilité des actions correctives.",
+   "ar": "تتجاهل المبادئ العامة الأشخاص المتأثرين → طابقوا السجلات المصدرية مع قائمة التحقق من قبول تحليلات الحالات، وأسندوا مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

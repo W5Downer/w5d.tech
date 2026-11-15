@@ -1,0 +1,12 @@
+# Safety net for hosts whose document root is the repository root instead of htdocs/.
+# Preferred setup: point the document root at htdocs/. This file denies everything
+# that must never be public and forwards the rest to htdocs/.
+Options -Indexes
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(src|config|data|lang|db|bin|storage|docs|views|tools|tests)(/|$) - [F,L]
+  RewriteRule ^\.(env|git) - [F,L]
+  RewriteRule \.(env|sqlite|sql|log|md)$ - [F,L]
+  RewriteCond %{REQUEST_URI} !^/htdocs/
+  RewriteRule ^(.*)$ htdocs/$1 [L]
+</IfModule>

@@ -1,0 +1,234 @@
+{
+ "slug": "faq",
+ "title": {
+  "en": "FAQ — straight answers",
+  "fr": "FAQ — des réponses directes",
+  "ar": "الأسئلة الشائعة — إجابات مباشرة"
+ },
+ "description": {
+  "en": "Frequently asked questions for investors, managers and graduates.",
+  "fr": "Questions fréquemment posées par les investisseurs, les gestionnaires et les diplômés.",
+  "ar": "الأسئلة الشائعة للمستثمرين والمديرين والخريجين."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "faq-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Straight **answers.**",
+    "fr": "Des **réponses directes.**",
+    "ar": "إجابات **مباشرة.**"
+   },
+   "lead": {
+    "en": "If an answer is missing, ask. We publish corrections within 14 days.",
+    "fr": "Si une réponse manque, posez la question. Nous publions les corrections sous 14 jours.",
+    "ar": "إذا لم تجد إجابة، فاسأل. ننشر التصويبات خلال 14 يومًا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Ask a question",
+      "fr": "Posez une question",
+      "ar": "اطرح سؤالًا"
+     },
+     "href": "/contact/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "FAQ",
+    "fr": "FAQ",
+    "ar": "الأسئلة الشائعة"
+   }
+  },
+  {
+   "type": "faq",
+   "id": "faq-investors",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Investors",
+    "fr": "Investisseurs",
+    "ar": "المستثمرون"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "How much is a part?",
+      "fr": "Combien coûte une part ?",
+      "ar": "كم تبلغ قيمة الحصة؟"
+     },
+     "a": {
+      "en": "{{ price.day }} {{ money.currency }} per day today, rising with progress and time up to {{ pricing.cap }}× base.",
+      "fr": "{{ price.day }} {{ money.currency }} par jour aujourd’hui, avec une hausse liée à l’avancement et au temps, jusqu’à {{ pricing.cap }}× la base.",
+      "ar": "{{ price.day }} {{ money.currency }} يوميًا اليوم، وترتفع مع التقدم والوقت حتى {{ pricing.cap }}× من القيمة الأساسية."
+     }
+    },
+    {
+     "q": {
+      "en": "Is anything guaranteed?",
+      "fr": "Y a-t-il des garanties ?",
+      "ar": "هل هناك أي ضمانات؟"
+     },
+     "a": {
+      "en": "No return, no resale value, no employment. See the declared limits.",
+      "fr": "Aucun rendement, aucune valeur de revente, aucun emploi. Consultez les limites déclarées.",
+      "ar": "لا عائد، ولا قيمة لإعادة البيع، ولا توظيف. اطّلع على الحدود المعلنة."
+     }
+    },
+    {
+     "q": {
+      "en": "Can I buy every day?",
+      "fr": "Puis-je acheter chaque jour ?",
+      "ar": "هل يمكنني الشراء كل يوم؟"
+     },
+     "a": {
+      "en": "Yes, with a daily subscription. You see the full schedule and can pause or cancel.",
+      "fr": "Oui, avec un abonnement quotidien. Vous voyez l’échéancier complet et pouvez le suspendre ou l’annuler.",
+      "ar": "نعم، عبر اشتراك يومي. يمكنك الاطّلاع على الجدول الكامل وإيقاف الاشتراك مؤقتًا أو إلغاؤه."
+     }
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "faq-managers",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Managers",
+    "fr": "Responsables",
+    "ar": "المديرون"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Is a post promised?",
+      "fr": "Un poste est-il promis ?",
+      "ar": "هل هناك وظيفة مضمونة؟"
+     },
+     "a": {
+      "en": "No. Posts follow certified headcount and funded capacity.",
+      "fr": "Non. Les postes dépendent des effectifs certifiés et des capacités financées.",
+      "ar": "لا. تُطرح الوظائف وفقًا لعدد الموظفين المعتمد والقدرة التمويلية."
+     }
+    },
+    {
+     "q": {
+      "en": "How is the scenario scored?",
+      "fr": "Comment le scénario est-il évalué ?",
+      "ar": "كيف يُقيَّم السيناريو؟"
+     },
+     "a": {
+      "en": "Against a published rubric on judgement, evidence and honesty.",
+      "fr": "Selon une grille d’évaluation publiée portant sur le jugement, les éléments probants et l’honnêteté.",
+      "ar": "وفقًا لمعايير تقييم منشورة تشمل حسن التقدير والأدلة والصدق."
+     }
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "faq-graduates",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Graduates",
+    "fr": "Diplômés",
+    "ar": "الخريجون"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Do I pay to join?",
+      "fr": "Dois-je payer pour rejoindre le programme ?",
+      "ar": "هل أدفع للانضمام؟"
+     },
+     "a": {
+      "en": "No. Certification is free for applicants.",
+      "fr": "Non. La certification est gratuite pour les candidats.",
+      "ar": "لا. الشهادة مجانية للمتقدمين."
+     }
+    },
+    {
+     "q": {
+      "en": "Will I get a job?",
+      "fr": "Vais-je obtenir un emploi ?",
+      "ar": "هل سأحصل على وظيفة؟"
+     },
+     "a": {
+      "en": "W5D does not promise employment. It offers a supervised path with dated evidence.",
+      "fr": "W5D ne promet pas d’emploi. Le programme propose un parcours encadré, assorti d’éléments probants datés.",
+      "ar": "لا تضمن W5D التوظيف. لكنها توفر مسارًا خاضعًا للإشراف ومدعومًا بأدلة مؤرخة."
+     }
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "faq-final",
+   "gradient": "calm",
+   "title": {
+    "en": "Still unsure? **Write to the right desk.**",
+    "fr": "Vous avez encore des questions ? **Écrivez au service concerné.**",
+    "ar": "ما زلت مترددًا؟ **راسل القسم المناسب.**"
+   },
+   "body": {
+    "en": "",
+    "fr": "",
+    "ar": ""
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Contact",
+      "fr": "Contact",
+      "ar": "اتصل بنا"
+     },
+     "href": "/contact/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

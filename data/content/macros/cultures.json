@@ -1,0 +1,66 @@
+{
+ "slug": "cultures",
+ "id": 1,
+ "order": 1,
+ "icon": "landmark",
+ "gradient": "cultures",
+ "range": "#001–#026",
+ "placement": "Real 1.0",
+ "name": {
+  "en": "Cultures / Humanities",
+  "fr": "Cultures / Sciences humaines",
+  "ar": "الثقافات / العلوم الإنسانية"
+ },
+ "tagline": {
+  "en": "How societies remember, interpret, translate and transmit meaning.",
+  "fr": "Comment les sociétés se souviennent, interprètent, traduisent et transmettent le sens.",
+  "ar": "كيف تتذكر المجتمعات المعاني وتفسرها وتترجمها وتنقلها."
+ },
+ "question": {
+  "en": "How do societies remember, interpret, translate and transmit meaning?",
+  "fr": "Comment les sociétés se souviennent-elles, interprètent-elles, traduisent-elles et transmettent-elles le sens ?",
+  "ar": "كيف تتذكر المجتمعات المعاني وتفسرها وتترجمها وتنقلها؟"
+ },
+ "fields": {
+  "en": "Archaeology, linguistics, museum studies, translation, film preservation, conservation, cultural economics",
+  "fr": "Archéologie, linguistique, études muséales, traduction, préservation des films, conservation, économie de la culture",
+  "ar": "علم الآثار، واللغويات، ودراسات المتاحف، والترجمة، وحفظ الأفلام، والصون، والاقتصاد الثقافي"
+ },
+ "unit": {
+  "en": "Accepted capture packages, annotated recordings, translated words, restored footage minutes, catalogue records",
+  "fr": "Ensembles de capture validés, enregistrements annotés, mots traduits, minutes de séquences restaurées, notices de catalogue",
+  "ar": "حزم توثيق مقبولة، وتسجيلات مشروحة، ونصوص مترجمة، ودقائق من اللقطات المستعادة، وسجلات فهرسة"
+ },
+ "boundary": {
+  "en": "Custodial permission and community consent precede publication; W5D never substitutes for statutory heritage authority.",
+  "fr": "L’autorisation du dépositaire et le consentement de la communauté doivent précéder toute publication ; W5D ne se substitue jamais à l’autorité patrimoniale compétente en vertu de la loi.",
+  "ar": "يسبق النشرَ الإذنُ من الجهة الحافظة وموافقةُ المجتمع؛ ولا يحل W5D أبداً محل السلطة القانونية المختصة بالتراث."
+ },
+ "body": [
+  {
+   "en": "Cultures is the macro work with the most direct Tunisian anchor: a deep archive, a multilingual public and a graduate cohort in languages, history and heritage that the formal labour market absorbs slowly.",
+   "fr": "Cultures est le domaine macro qui s’ancre le plus directement en Tunisie : des archives riches, un public multilingue et une cohorte de diplômés en langues, en histoire et en patrimoine que le marché du travail formel intègre lentement.",
+   "ar": "يمثل مجال الثقافات مجال العمل الكلي ذا الارتباط التونسي الأكثر مباشرة: أرشيف ثري، وجمهور متعدد اللغات، ومجموعة من الخريجين في اللغات والتاريخ والتراث لا يستوعبها سوق العمل الرسمي إلا ببطء."
+  },
+  {
+   "en": "It is explicitly not an IT-only demand map. Heritage conservation combines materials science, building safety and digital access; translation hubs feed science communication and digital governance.",
+   "fr": "Il ne s’agit explicitement pas d’une cartographie de la demande limitée à l’informatique. La conservation du patrimoine associe les sciences des matériaux, la sécurité des bâtiments et l’accès numérique ; les pôles de traduction alimentent la communication scientifique et la gouvernance numérique.",
+   "ar": "هذه ليست خريطة للطلب في مجال تقنية المعلومات وحده. فصون التراث يجمع بين علم المواد وسلامة المباني وإتاحة الوصول الرقمي؛ كما تسهم مراكز الترجمة في التواصل العلمي والحوكمة الرقمية."
+  },
+  {
+   "en": "Its services feed Built Environment (heritage-built), Sciences (research-data, official-stats) and Governance (municipal-capacity).",
+   "fr": "Ses services alimentent l’Environnement bâti (patrimoine bâti), les Sciences (données de recherche, statistiques officielles) et la Gouvernance (capacités municipales).",
+   "ar": "ترفد خدماته البيئة المبنية (التراث المبني)، والعلوم (بيانات الأبحاث، والإحصاءات الرسمية)، والحوكمة (قدرات البلديات)."
+  }
+ ],
+ "feeds": {
+  "en": "Built Environment, Sciences, Governance",
+  "fr": "Environnement bâti, Sciences, Gouvernance",
+  "ar": "البيئة المبنية، العلوم، الحوكمة"
+ },
+ "why": {
+  "en": "Tunisia holds archives, manuscripts and living languages that are documented unevenly. Each capture package is a dated, reviewable unit of work with a named custodian.",
+  "fr": "La Tunisie possède des archives, des manuscrits et des langues vivantes qui sont documentés de manière inégale. Chaque ensemble de capture constitue une unité de travail datée et vérifiable, confiée à un dépositaire nommé.",
+  "ar": "تضم تونس أرشيفات ومخطوطات ولغات حية متفاوتة المستوى من حيث التوثيق. وكل حزمة توثيق وحدة عمل مؤرخة وقابلة للمراجعة، ولها جهة حافظة محددة بالاسم."
+ }
+}

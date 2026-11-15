@@ -1,0 +1,66 @@
+{
+ "slug": "governance",
+ "id": 4,
+ "order": 4,
+ "icon": "scale",
+ "gradient": "governance",
+ "range": "#079–#104",
+ "placement": "Between 1.0",
+ "name": {
+  "en": "Governance",
+  "fr": "Gouvernance",
+  "ar": "الحوكمة"
+ },
+ "tagline": {
+  "en": "How rules are made, decisions legitimised, public money allocated and accountability maintained.",
+  "fr": "Comment les règles sont élaborées, les décisions légitimées, les fonds publics alloués et la responsabilité assurée.",
+  "ar": "كيف توضع القواعد، وتُضفى الشرعية على القرارات، وتُخصَّص الأموال العامة، وتُصان المساءلة."
+ },
+ "question": {
+  "en": "How are rules made, legitimate decisions taken, public money allocated and accountability maintained?",
+  "fr": "Comment les règles sont-elles élaborées, les décisions légitimes prises, les fonds publics alloués et la responsabilité assurée ?",
+  "ar": "كيف توضع القواعد، وتُتخذ القرارات المشروعة، وتُخصَّص الأموال العامة، وتُصان المساءلة؟"
+ },
+ "fields": {
+  "en": "Law, public administration, economics, audit, social policy, statistics, international relations",
+  "fr": "Droit, administration publique, économie, audit, politiques sociales, statistiques, relations internationales",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والتدقيق، والسياسة الاجتماعية، والإحصاء، والعلاقات الدولية"
+ },
+ "unit": {
+  "en": "Regulatory option briefs, draft clause packages, integrity risk reviews, cash forecast reviews, MRV dataset reviews",
+  "fr": "Notes de synthèse sur les options réglementaires, ensembles de clauses préliminaires, évaluations des risques d’atteinte à l’intégrité, examens des prévisions de trésorerie, examens des jeux de données MRV",
+  "ar": "موجزات خيارات تنظيمية، وحزم بنود مقترحة، ومراجعات لمخاطر النزاهة، ومراجعات لتوقعات التدفقات النقدية، ومراجعات لمجموعات بيانات MRV"
+ },
+ "boundary": {
+  "en": "Only authorised institutions adopt law, set tariffs, declare emergencies or award accreditation; W5D supports evidence and referrals, not statutory powers.",
+  "fr": "Seules les institutions habilitées adoptent les lois, fixent les tarifs, déclarent les situations d’urgence ou accordent les accréditations ; W5D contribue aux données probantes et aux orientations, sans exercer de pouvoirs légaux.",
+  "ar": "لا تعتمد القوانين، أو تحدد التعريفات، أو تعلن حالات الطوارئ، أو تمنح الاعتماد إلا المؤسسات المخولة؛ ويدعم W5D الأدلة والإحالات، ولا يمارس صلاحيات قانونية."
+ },
+ "body": [
+  {
+   "en": "Governance is the accountability macro. Its work is neither purely documentary nor purely physical: it needs legitimate authority, administrative records and implementation owners.",
+   "fr": "La Gouvernance est le macro de la redevabilité. Son travail n’est ni purement documentaire ni purement matériel : il nécessite une autorité légitime, des dossiers administratifs et des responsables de la mise en œuvre.",
+   "ar": "الحوكمة هي مجال المساءلة. ولا يقتصر عملها على التوثيق أو التنفيذ المادي؛ إذ يتطلب سلطة شرعية، وسجلات إدارية، وجهات مسؤولة عن التنفيذ."
+  },
+  {
+   "en": "It depends most on named beneficiaries: an advisory product without a public-service partner cannot be assumed to improve an institution.",
+   "fr": "Elle dépend avant tout de bénéficiaires nommément désignés : on ne peut présumer qu’un produit de conseil améliore une institution s’il n’est pas associé à un partenaire du service public.",
+   "ar": "يعتمد هذا المجال بدرجة أكبر على مستفيدين محددين بالاسم؛ فلا يمكن افتراض أن منتجًا استشاريًا يحسّن أداء مؤسسة من دون شريك من قطاع الخدمات العامة."
+  },
+  {
+   "en": "Its services reach all macros through the authorising environment.",
+   "fr": "Ses services touchent tous les macros par l’intermédiaire de l’environnement habilitant.",
+   "ar": "تصل خدماته إلى جميع المجالات عبر البيئة التي تمنح التفويض."
+  }
+ ],
+ "feeds": {
+  "en": "All macros via the authorising environment",
+  "fr": "Tous les macros par l’intermédiaire de l’environnement habilitant",
+  "ar": "جميع المجالات عبر البيئة التي تمنح التفويض"
+ },
+ "why": {
+  "en": "Law, public administration and economics graduates can prepare option briefs and reviews that a competent authority may adopt, amend or reject.",
+  "fr": "Les diplômés en droit, en administration publique et en économie peuvent préparer des notes présentant des options et des évaluations qu’une autorité compétente peut adopter, modifier ou rejeter.",
+  "ar": "يمكن لخريجي القانون والإدارة العامة والاقتصاد إعداد موجزات للخيارات ومراجعات، يجوز لسلطة مختصة اعتمادها أو تعديلها أو رفضها."
+ }
+}

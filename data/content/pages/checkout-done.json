@@ -1,0 +1,15 @@
+{
+ "slug": "checkout-done",
+ "title": {
+  "en": "Pledge recorded",
+  "fr": "Engagement enregistré",
+  "ar": "تم تسجيل التعهّد"
+ },
+ "description": {
+  "en": "Your pledge is recorded.",
+  "fr": "Votre engagement a été enregistré.",
+  "ar": "تم تسجيل تعهّدك."
+ },
+ "sections": [],
+ "robots": "noindex,follow"
+}

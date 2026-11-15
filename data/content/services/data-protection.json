@@ -1,0 +1,167 @@
+{
+ "slug": "data-protection",
+ "id": 84,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Data Protection & Privacy",
+  "fr": "Protection des données et confidentialité",
+  "ar": "حماية البيانات والخصوصية"
+ },
+ "short": {
+  "en": "The service provides gDPR-style compliance, DPIAs.",
+  "fr": "Protéger les personnes dans les traitements de données.",
+  "ar": "حماية الأشخاص أثناء معالجة البيانات."
+ },
+ "abstract": {
+  "en": "Data protection and privacy — GDPR-aligned compliance, data protection impact assessments, and institutional data-governance frameworks.",
+  "fr": "Protection des données et confidentialité — conformité alignée sur le RGPD, analyses d’impact relatives à la protection des données et cadres institutionnels de gouvernance des données.",
+  "ar": "حماية البيانات والخصوصية — الامتثال المتوافق مع GDPR، وتقييمات أثر حماية البيانات، وأطر حوكمة البيانات المؤسسية."
+ },
+ "long": [
+  {
+   "en": "The Data Protection & Privacy service organises a weekly work package around data processing inventories, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 data processing inventories; 200 impact assessments; 500 access control reviews; 200 retention schedule checks. Data protection and privacy — GDPR-aligned compliance, data protection impact assessments, and institutional data-governance frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that privacy work applies Tunisian law and any applicable foreign obligations separately. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Protection des données et confidentialité organise un lot de travail hebdomadaire axé sur les inventaires des traitements de données, plutôt que de considérer la présence comme un résultat en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 inventaires des traitements de données ; 200 analyses d’impact ; 500 revues des contrôles d’accès ; 200 vérifications des calendriers de conservation. Protection des données et confidentialité — conformité alignée sur le RGPD, analyses d’impact relatives à la protection des données et cadres institutionnels de gouvernance des données. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les travaux relatifs à la confidentialité appliquent séparément le droit tunisien et les obligations étrangères éventuellement applicables. Il s’agit de résultats progressifs issus de cas confiés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة حماية البيانات والخصوصية حزمة عمل أسبوعية حول قوائم جرد أنشطة معالجة البيانات، بدلًا من اعتبار الحضور هو المنتج. وتتضمن خطتها التجريبية، عند توافر كامل الموارد والقدرات، 500 قائمة جرد لأنشطة معالجة البيانات؛ و200 تقييم أثر؛ و500 مراجعة لضوابط الوصول؛ و200 مراجعة لجداول الاحتفاظ بالبيانات. حماية البيانات والخصوصية — الامتثال المتوافق مع GDPR، وتقييمات أثر حماية البيانات، وأطر حوكمة البيانات المؤسسية. ويرتب المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. والحد الناظم هو أن أعمال الخصوصية تطبق القانون التونسي وأي التزامات أجنبية منطبقة كلٌّ على حدة. وهذه مخرجات مرحلية للحالات المكلّف بها الفريق، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `data-protection`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of data processing inventories, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40 % des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons de l’Enquête auprès des entreprises libellées 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, et non un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil dépourvu de ces utilisateurs améliorera le fonctionnement d’une institution. Pour `data-protection`, la réponse proposée consiste donc en un processus contractualisé, avec un bénéficiaire désigné et une définition acceptée des inventaires des traitements de données, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تفيد مراجعة OECD الصادرة في يونيو 2024 بأن نحو 40% من الشركات التونسية المشمولة ترى أن قصور مهارات القوى العاملة يمثل قيدًا رئيسيًا، استنادًا إلى مقارنات مسح المؤسسات الموسومة بسنة 2020 أو بأحدث سنة متاحة. كما يشير التحليل القانوني الذي أعده Kotrane في 2024 إلى ندرة الوظائف الرسمية والقيود المؤسسية، لا إلى مشكلة تقتصر على التدريب. وتتوقف الفوائد على وجود صلاحية مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا يحسن أداء مؤسسة من دون هؤلاء المستخدمين. لذلك، تتمثل الاستجابة المقترحة في مجال `data-protection` في سير عمل تعاقدي يضم مستفيدًا محددًا وتعريفًا مقبولًا لقوائم جرد أنشطة معالجة البيانات، لا في التوظيف الذي لا يستند إلا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the data processing inventories acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks impact assessments before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted data processing inventories from rejected or deferred work and records blockers around access control reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des inventaires des traitements de données ; 100 responsables le déclinent en affectations d’équipe comptant environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les analyses d’impact avant leur approbation. L’audit aléatoire proposé de 5 % réexamine les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les inventaires des traitements de données acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux revues des contrôles d’accès. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول قوائم جرد أنشطة معالجة البيانات؛ ويحوّل 100 مدير هذه المعايير إلى مهام فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من تقييمات الأثر قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة قوائم جرد أنشطة معالجة البيانات المقبولة عن الأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بمراجعات ضوابط الوصول. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, information governance, data protection and risk assessment",
+  "fr": "droit, gouvernance de l’information, protection des données et évaluation des risques",
+  "ar": "القانون، وحوكمة المعلومات، وحماية البيانات، وتقييم المخاطر"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Data processing inventories",
+    "fr": "Inventaires des traitements de données",
+    "ar": "قوائم جرد أنشطة معالجة البيانات"
+   },
+   "unit": {
+    "en": "data processing inventories",
+    "fr": "inventaires des traitements de données",
+    "ar": "قوائم جرد أنشطة معالجة البيانات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Impact assessments",
+    "fr": "Analyses d’impact",
+    "ar": "تقييمات الأثر"
+   },
+   "unit": {
+    "en": "impact assessments",
+    "fr": "évaluations d’impact",
+    "ar": "تقييمات الأثر"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Access control reviews",
+    "fr": "examens des contrôles d’accès",
+    "ar": "مراجعات ضبط الوصول"
+   },
+   "unit": {
+    "en": "access control reviews",
+    "fr": "examens des contrôles d’accès",
+    "ar": "مراجعات ضبط الوصول"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Retention schedule checks",
+    "fr": "vérifications des calendriers de conservation",
+    "ar": "عمليات التحقق من جداول الاحتفاظ"
+   },
+   "unit": {
+    "en": "retention schedule checks",
+    "fr": "vérifications des calendriers de conservation",
+    "ar": "عمليات التحقق من جداول الاحتفاظ"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `data-protection` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the data processing inventories to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `data-protection` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des documents sources et des comptes rendus de consultation expurgés, qui relient les inventaires des traitements de données à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `data-protection` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + سجلات منقحة للمصادر والاستشارات، وتربط قوائم جرد معالجة البيانات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted data processing inventories** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant vendredi 12:00 ; **≥4 inventaires des traitements de données acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les aménagements modifient le dénominateur des rapports éligibles, et les défauts critiques en matière de sécurité et de confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 قوائم جرد لمعالجة البيانات** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. تغيّر الإجازات المعتمدة أو التعديلات المقام المؤهل، وتعلو عيوب السلامة/الخصوصية الحرجة على التقييم الأخضر. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "privacy work applies Tunisian law and any applicable foreign obligations separately",
+  "fr": "les travaux relatifs à la confidentialité appliquent séparément le droit tunisien et toute obligation étrangère applicable",
+  "ar": "تُطبّق أعمال الخصوصية القانون التونسي وأي التزامات أجنبية واجبة التطبيق كلٌّ على حدة"
+ },
+ "depends": [
+  {
+   "slug": "cultural-data",
+   "id": 26
+  },
+  {
+   "slug": "digital-identity",
+   "id": 111
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "bioinformatics",
+   "id": 60
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Copied GDPR templates miss local law → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les modèles de conformité au RGPD copiés ne tiennent pas compte du droit local → obtenir la validation d’une autorité ou d’un juriste compétent et interdire toute décision opérationnelle non autorisée.",
+   "ar": "القوالب المنسوخة من GDPR قد تغفل القانون المحلي → اطلبوا التحقق من جهة قانونية/سلطة مختصة، واحظروا اتخاذ قرارات تشغيلية غير مصرّح بها."
+  },
+  {
+   "en": "Consent used where people cannot refuse → document permissions and obtain qualified rights review before release.",
+   "fr": "Le consentement est utilisé lorsque les personnes ne peuvent pas le refuser → documenter les autorisations et obtenir l’examen des droits par un spécialiste qualifié avant la diffusion.",
+   "ar": "استخدام الموافقة حين يتعذر على الأشخاص رفضها → وثّقوا الأذونات واطلبوا مراجعة مؤهلة للحقوق قبل النشر."
+  },
+  {
+   "en": "Deletion schedules conflict with lawful retention → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les calendriers de suppression sont incompatibles avec les obligations légales de conservation → obtenir la validation d’une autorité ou d’un juriste compétent et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تعارض جداول الحذف متطلبات الاحتفاظ القانونية → اطلبوا التحقق من جهة قانونية/سلطة مختصة، واحظروا اتخاذ قرارات تشغيلية غير مصرّح بها."
+  }
+ ]
+}

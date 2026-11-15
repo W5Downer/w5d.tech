@@ -1,0 +1,167 @@
+{
+ "slug": "science-comm",
+ "id": 62,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Science Communication",
+  "fr": "Communication scientifique",
+  "ar": "التواصل العلمي"
+ },
+ "short": {
+  "en": "The service provides explainers, media training, public engagement.",
+  "fr": "Expliquer les sciences avec exactitude et clarté.",
+  "ar": "شرح العلوم بدقة ووضوح."
+ },
+ "abstract": {
+  "en": "Science communication — explainer content, media training for researchers, and public engagement programs that maintain scientific accuracy while being accessible.",
+  "fr": "Communication scientifique — contenus explicatifs, formation aux médias pour les chercheurs et programmes de dialogue avec le public qui préservent l’exactitude scientifique tout en rendant les contenus accessibles.",
+  "ar": "التواصل العلمي — محتوى تفسيري، وتدريب إعلامي للباحثين، وبرامج مشاركة عامة تحافظ على الدقة العلمية مع جعل المحتوى متاحًا للجمهور."
+ },
+ "long": [
+  {
+   "en": "The Science Communication service organises a weekly work package around fact checked explainers, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 fact checked explainers; 200 researcher coaching sessions; 200 accessible media packages; 100 public feedback summaries. Science communication — explainer content, media training for researchers, and public engagement programs that maintain scientific accuracy while being accessible. Specialists sequence those methods against the accepted weekly package. The governing boundary is that communicators separate established evidence, uncertainty and author opinion. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de communication scientifique organise chaque semaine un lot de travaux axé sur des contenus explicatifs vérifiés, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 contenus explicatifs vérifiés ; 200 séances d’accompagnement de chercheurs ; 200 dossiers médiatiques accessibles ; 100 synthèses des retours du public. Communication scientifique — contenus explicatifs, formation aux médias pour les chercheurs et programmes de dialogue avec le public qui préservent l’exactitude scientifique tout en rendant les contenus accessibles. Les spécialistes organisent ces activités en fonction du lot hebdomadaire accepté. Le principe directeur est que les communicants distinguent les éléments étayés par des preuves, les incertitudes et les opinions des auteurs. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة التواصل العلمي حزمة عمل أسبوعية حول مواد تفسيرية مدققة الحقائق، بدلًا من اعتبار الحضور منتجًا بحد ذاته. وعند بلوغ الطاقة الكاملة الممولة، تتضمن خطتها التجريبية 300 مادة تفسيرية مدققة الحقائق؛ و200 جلسة تدريب للباحثين؛ و200 حزمة إعلامية ميسّرة؛ و100 ملخص لملاحظات الجمهور. التواصل العلمي — محتوى تفسيري، وتدريب إعلامي للباحثين، وبرامج مشاركة عامة تحافظ على الدقة العلمية مع جعل المحتوى متاحًا للجمهور. وينسق المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. والقاعدة الحاكمة هي أن يميز القائمون على التواصل بين الأدلة الراسخة وحالات عدم اليقين وآراء المؤلفين. وهذه مخرجات مرحلية لحالات جرى التعاقد عليها، وليست تعهدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `science-comm`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of fact checked explainers, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active tunisienne diplômée était au chômage au T2 2026, tandis que l’analyse de l’OCDE d’avril 2022 décrit le faible lien entre les qualifications et les exigences pratiques des employeurs. Aucun de ces chiffres n’établit le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, les méthodes encadrées et la continuité du financement de la recherche font qu’un groupe de travailleurs indépendants ne saurait remplacer à lui seul un service partagé et responsable. Pour `science-comm`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des contenus explicatifs vérifiés, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر INS أن 26.6% من القوى العاملة التونسية من خريجي الجامعات كانوا عاطلين عن العمل في الربع الثاني من 2026، فيما يصف تحليل منظمة التعاون والتنمية الاقتصادية الصادر في أبريل 2022 ضعف الصلات بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا يحدد أي من الإحصاءين عدد المختصين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل توافر المختبرات والأساليب الخاضعة للإشراف واستمرارية التمويل البحثي من مجموعة المستقلين الأفراد بديلًا غير كافٍ عن خدمة مشتركة خاضعة للمساءلة. لذلك، فإن الاستجابة المقترحة لمشروع `science-comm` هي سير عمل تعاقدي له مستفيد محدد وتعريف معتمد للمواد التفسيرية المدققة الحقائق، لا استقطابًا تبرره وحده نسبة البطالة الوطنية."
+  },
+  {
+   "en": "A service leader sets the fact checked explainers acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks researcher coaching sessions before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted fact checked explainers from rejected or deferred work and records blockers around accessible media packages. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des contenus explicatifs vérifiés ; 100 responsables répartissent ensuite les équipes, composées d’environ dix experts chacune. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur qualifié examine les séances d’accompagnement des chercheurs avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les sources et les exceptions ; il ne remplace pas l’examen, par les responsables, de chaque rapport hebdomadaire. Le bilan consolidé du service distingue les contenus explicatifs vérifiés acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux dossiers médias accessibles. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans augmenter le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول الشروح المدققة من حيث صحة المعلومات؛ ويحوّلها 100 مدير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل جلسات إرشاد الباحثين قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين الشروح المدققة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بحزم الوسائط الميسّرة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "science communication, journalism, education and relevant scientific fields",
+  "fr": "communication scientifique, journalisme, éducation et domaines scientifiques pertinents",
+  "ar": "التواصل العلمي والصحافة والتعليم والحقول العلمية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Fact checked explainers",
+    "fr": "Contenus explicatifs vérifiés",
+    "ar": "شروح مدققة من حيث صحة المعلومات"
+   },
+   "unit": {
+    "en": "fact checked explainers",
+    "fr": "contenus explicatifs vérifiés",
+    "ar": "شروح مدققة من حيث صحة المعلومات"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Researcher coaching sessions",
+    "fr": "Séances d’accompagnement des chercheurs",
+    "ar": "جلسات إرشاد الباحثين"
+   },
+   "unit": {
+    "en": "researcher coaching sessions",
+    "fr": "séances d’accompagnement des chercheurs",
+    "ar": "جلسات إرشاد الباحثين"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Accessible media packages",
+    "fr": "Dossiers médias accessibles",
+    "ar": "حزم وسائط ميسّرة"
+   },
+   "unit": {
+    "en": "accessible media packages",
+    "fr": "dossiers médias accessibles",
+    "ar": "حزم وسائط ميسّرة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Public feedback summaries",
+    "fr": "Synthèses des retours du public",
+    "ar": "ملخصات ملاحظات الجمهور"
+   },
+   "unit": {
+    "en": "public feedback summaries",
+    "fr": "synthèses des retours du public",
+    "ar": "ملخصات ملاحظات الجمهور"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `science-comm` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the fact checked explainers to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `science-comm` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, et relie les contenus explicatifs vérifiés à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة في `science-comm` ملف قبول PDF/A + بيان مصادر CSV/JSON + معرّفات المنهج/الإصدار والبيانات المصدرية القابلة لإعادة الإنتاج، وتربط الشروح المدققة من حيث صحة المعلومات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted fact checked explainers** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **≥3 contenus explicatifs vérifiés acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés autorisés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم 9 تقارير أسبوعية مؤهلة على الأقل من أصل 10** بحلول الجمعة 12:00؛ **قبول 3 شروح مدققة من حيث صحة المعلومات على الأقل** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **طلب إعادة عمل واحد مرتبط بالأدلة كحد أقصى** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة والتسويات المقام المؤهل، كما تتقدم العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي نتيجة خضراء. هذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "communicators separate established evidence, uncertainty and author opinion",
+  "fr": "les communicants distinguent les éléments probants établis, les incertitudes et les opinions des auteurs",
+  "ar": "يفصل المتواصلون بين الأدلة الراسخة ومواطن عدم اليقين ورأي المؤلف"
+ },
+ "depends": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  },
+  {
+   "slug": "digital-storytelling",
+   "id": 24
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "education-governance",
+   "id": 98
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Simplification turns uncertainty into certainty → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "La simplification transforme l’incertitude en certitude → exiger des vérifications indépendantes des sources, un point de comparaison et une expression explicite de l’incertitude avant l’acceptation.",
+   "ar": "يحوّل التبسيط عدم اليقين إلى يقين ← اشترط التحقق المستقل من المصادر، ووجود عنصر للمقارنة، والتصريح بوضوح عن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Translation changes scientific meaning → reconcile source records with the fact checked explainers acceptance checklist and assign corrective-action ownership.",
+   "fr": "La traduction altère le sens scientifique → rapprocher les documents sources de la liste de contrôle d’acceptation des contenus explicatifs vérifiés et désigner le responsable des mesures correctives.",
+   "ar": "تغيّر الترجمة المعنى العلمي ← طابق سجلات المصادر مع قائمة التحقق لقبول الشروح المدققة من حيث صحة المعلومات، وحدد الجهة المسؤولة عن الإجراء التصحيحي."
+  },
+  {
+   "en": "Engagement rewards sensational claims → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "La recherche de l’engagement favorise les affirmations sensationnalistes → exiger des vérifications indépendantes des sources, un point de comparaison et une expression explicite de l’incertitude avant l’acceptation.",
+   "ar": "تكافئ المشاركة الادعاءات المثيرة ← اشترط التحقق المستقل من المصادر، ووجود عنصر للمقارنة، والتصريح بوضوح عن عدم اليقين قبل القبول."
+  }
+ ]
+}

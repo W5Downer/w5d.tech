@@ -1,0 +1,146 @@
+{
+ "slug": "partners",
+ "title": {
+  "en": "Partners and clients — commission a delivery",
+  "fr": "Partenaires et clients — commandez une prestation",
+  "ar": "الشركاء والعملاء — اطلبوا تنفيذ خدمة"
+ },
+ "description": {
+  "en": "Commission a scoped delivery from a service team with a named beneficiary, an acceptance rule and a dated report.",
+  "fr": "Commandez une prestation au périmètre défini auprès d’une équipe de service, avec un bénéficiaire désigné, une règle d’acceptation et un rapport daté.",
+  "ar": "اطلبوا تنفيذ خدمة محددة النطاق من فريق خدمة، مع مستفيد محدد، وقاعدة قبول، وتقرير مؤرخ."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "par-hero",
+   "variant": "classic",
+   "gradient": "built",
+   "title": {
+    "en": "Commission a delivery. **Accept against a rule.**",
+    "fr": "Commandez une prestation. **Acceptez-la selon une règle définie.**",
+    "ar": "اطلبوا تنفيذ خدمة. **واقبلوها وفق قاعدة محددة.**"
+   },
+   "lead": {
+    "en": "Every engagement has a named beneficiary, a definition of the deliverable unit and an acceptance rubric agreed before work starts.",
+    "fr": "Chaque mission a un bénéficiaire désigné, une définition de l’unité livrable et une grille d’acceptation convenues avant le début des travaux.",
+    "ar": "لكل مهمة مستفيد محدد، وتعريف لوحدة التسليم، ومعايير قبول متفق عليها قبل بدء العمل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Book a scoping call",
+      "fr": "Réserver un appel de cadrage",
+      "ar": "احجز مكالمة لتحديد النطاق"
+     },
+     "href": "/contact/?desk=partners",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Partners",
+    "fr": "Partenaires",
+    "ar": "الشركاء"
+   }
+  },
+  {
+   "type": "cards",
+   "id": "par-how",
+   "tier": "i",
+   "focus": 3,
+   "cols": 3,
+   "title": {
+    "en": "What a scoped delivery contains",
+    "fr": "Contenu d’une prestation au périmètre défini",
+    "ar": "ما يتضمنه تنفيذ خدمة محددة النطاق"
+   },
+   "items": [
+    {
+     "icon": "target",
+     "title": {
+      "en": "Deliverable unit",
+      "fr": "Unité livrable",
+      "ar": "وحدة التسليم"
+     },
+     "body": {
+      "en": "For example capture packages, condition surveys or option briefs, with a weekly target.",
+      "fr": "Par exemple, des lots de collecte, des inspections d’état ou des notes d’options, avec un objectif hebdomadaire.",
+      "ar": "مثل حزم التوثيق، أو مسوحات الحالة، أو موجزات الخيارات، مع هدف أسبوعي."
+     }
+    },
+    {
+     "icon": "clipboard-check",
+     "title": {
+      "en": "Acceptance rule",
+      "fr": "Règle d’acceptation",
+      "ar": "قاعدة القبول"
+     },
+     "body": {
+      "en": "Evidence format, reviewer, version and exception log.",
+      "fr": "Format des preuves, réviseur, version et registre des exceptions.",
+      "ar": "صيغة الأدلة، والمراجع، والإصدار، وسجل الاستثناءات."
+     }
+    },
+    {
+     "icon": "user-round-check",
+     "title": {
+      "en": "Named beneficiary",
+      "fr": "Bénéficiaire désigné",
+      "ar": "المستفيد المحدد"
+     },
+     "body": {
+      "en": "An advisory product without a named public-service partner is not assumed to help anyone.",
+      "fr": "Un produit de conseil sans partenaire désigné du service public n’est pas présumé utile à qui que ce soit.",
+      "ar": "لا يُفترض أن يفيد أي جهة منتج استشاري لا شريك له محدد من جهات الخدمة العامة."
+     }
+    }
+   ]
+  },
+  {
+   "type": "notice",
+   "id": "par-limits",
+   "tier": "i",
+   "focus": 1,
+   "items": [
+    {
+     "en": "W5D supports evidence and referrals. Only authorised bodies adopt law, set tariffs or award accreditation.",
+     "fr": "W5D accompagne la production de preuves et l’orientation. Seuls les organismes habilités adoptent les lois, fixent les tarifs ou délivrent les accréditations.",
+     "ar": "يدعم W5D الأدلة والإحالات. ولا تتولى اعتماد القوانين أو تحديد التعرفات أو منح الاعتماد إلا الجهات المخولة."
+    },
+    {
+     "en": "Licence for the Admin Dashboard: {{ money.license_hour }} {{ money.currency }} per hour of work.",
+     "fr": "Licence du tableau de bord d’administration : {{ money.license_hour }} {{ money.currency }} par heure de travail.",
+     "ar": "ترخيص لوحة الإدارة: {{ money.license_hour }} {{ money.currency }} لكل ساعة عمل."
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "par-final",
+   "gradient": "built",
+   "title": {
+    "en": "Tell us the **problem.** We will scope the unit.",
+    "fr": "Décrivez-nous le **problème.** Nous définirons le périmètre de l’unité.",
+    "ar": "أخبرنا **بالمشكلة.** وسنحدد نطاق الوحدة."
+   },
+   "body": {
+    "en": "A scoping call is free.",
+    "fr": "Un entretien de cadrage est gratuit.",
+    "ar": "مكالمة تحديد النطاق مجانية."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Book a scoping call",
+      "fr": "Réserver un appel de cadrage",
+      "ar": "احجز مكالمة لتحديد النطاق"
+     },
+     "href": "/contact/?desk=partners",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "procurement",
+ "id": 46,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Construction Procurement",
+  "fr": "Marchés de travaux",
+  "ar": "مشتريات الإنشاءات"
+ },
+ "short": {
+  "en": "The service provides tendering, contract administration.",
+  "fr": "Préparer et suivre des marchés de travaux traçables.",
+  "ar": "إعداد صفقات الأشغال ومتابعتها بشفافية."
+ },
+ "abstract": {
+  "en": "Construction procurement — tender documentation, contract administration under FIDIC and national forms, and dispute avoidance through structured contract management.",
+  "fr": "Marchés de travaux — documentation des appels d’offres, administration des contrats selon les formulaires FIDIC et nationaux, et prévention des litiges grâce à une gestion structurée des contrats.",
+  "ar": "مشتريات الإنشاءات — وثائق المناقصات، وإدارة العقود وفق نماذج FIDIC والنماذج الوطنية، وتجنب النزاعات من خلال إدارة العقود المنهجية."
+ },
+ "long": [
+  {
+   "en": "The Construction Procurement service organises a weekly work package around tender document reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 tender document reviews; 1000 quantity checks; 200 contract change assessments; 500 payment evidence checks. Construction procurement — tender documentation, contract administration under FIDIC and national forms, and dispute avoidance through structured contract management. Specialists sequence those methods against the accepted weekly package. The governing boundary is that the contracting authority retains award and payment powers. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des marchés de travaux organise un lot de travail hebdomadaire autour de l’examen des documents d’appel d’offres, plutôt que de considérer la présence comme le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens de documents d’appel d’offres ; 1000 vérifications de quantités ; 200 évaluations de modifications contractuelles ; 500 vérifications des justificatifs de paiement. Marchés de travaux — documentation des appels d’offres, administration des contrats selon les formulaires FIDIC et nationaux, et prévention des litiges grâce à une gestion structurée des contrats. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite applicable est que le pouvoir adjudicateur conserve les pouvoirs d’attribution et de paiement. Il s’agit de résultats par étapes issus de dossiers commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة مشتريات الإنشاءات حزمة عمل أسبوعية تتمحور حول مراجعة وثائق المناقصات، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند استكمال الموارد والقدرة التشغيلية، 200 مراجعة لوثائق المناقصات؛ و1000 عملية تحقق من الكميات؛ و200 تقييم لتغييرات العقود؛ و500 عملية تحقق من مستندات إثبات الدفع. مشتريات الإنشاءات — وثائق المناقصات، وإدارة العقود وفق نماذج FIDIC والنماذج الوطنية، وتجنب النزاعات من خلال إدارة العقود المنهجية. ويُنسّق المختصون هذه الأساليب وفق الحزمة الأسبوعية المعتمدة. ويتمثل الحد الفاصل الناظم في احتفاظ الجهة المتعاقدة بصلاحيات الترسية والدفع. وهذه مخرجات مرحلية لحالات مُكلَّف بها، وليست تعهداً بإكمال برنامج وطني بأكمله كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `procurement`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of tender document reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 identifie la concentration sur le littoral, le coût du logement et les obstacles liés aux transports comme des contraintes à la mise en adéquation des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins d’infrastructure dépendant des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets implique des limites liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans le respect du cadre légal. Pour `procurement`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des examens de documents d’appel d’offres, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير دراسة OECD عن تونس الصادرة في أبريل 2022 إلى أن تركز الأنشطة في المناطق الساحلية، وتكاليف السكن، وعوائق النقل تحدّ من مواءمة أصحاب المهارات مع فرص العمل. كما يشير تقرير CCDR الصادر في نوفمبر 2023 إلى احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُثبت أي من النتيجتين عدد الوظائف المُكلَّف بها لهذه الخدمة. وتتجاوز أعمال إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد تظل الأعمال المجدية من الناحية الفنية مجزأة إلى أن يكلّف بها عميل وفق الأصول القانونية. لذلك، يتمثل الرد المقترح على `procurement` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لمراجعات وثائق المناقصات، لا في توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the tender document reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks quantity checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted tender document reviews from rejected or deferred work and records blockers around contract change assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens de documents d’appel d’offres ; 100 gestionnaires les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les vérifications de quantités avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les pièces sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un gestionnaire. Le bilan du service distingue les examens de documents d’appel d’offres acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux évaluations de modifications contractuelles. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات وثائق المناقصات؛ ويحوّل 100 مدير هذه المعايير إلى مهام فرق تضم نحو عشرة خبراء. وتتيح الهويات المرتبطة بـDyon تحديد المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات التحقق من الكميات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مراجعات وثائق المناقصات المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بتقييمات تغييرات العقود. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "quantity surveying, construction management and contract administration",
+  "fr": "métré, gestion de la construction et administration des contrats",
+  "ar": "مساحة الكميات، وإدارة الإنشاءات، وإدارة العقود"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Tender document reviews",
+    "fr": "Examens de documents d’appel d’offres",
+    "ar": "مراجعات وثائق المناقصات"
+   },
+   "unit": {
+    "en": "tender document reviews",
+    "fr": "examens de documents d’appel d’offres",
+    "ar": "مراجعات وثائق المناقصات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Quantity checks",
+    "fr": "Vérifications de quantités",
+    "ar": "عمليات التحقق من الكميات"
+   },
+   "unit": {
+    "en": "quantity checks",
+    "fr": "vérifications de quantités",
+    "ar": "عمليات التحقق من الكميات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Contract change assessments",
+    "fr": "Évaluations de modifications contractuelles",
+    "ar": "تقييمات تغييرات العقود"
+   },
+   "unit": {
+    "en": "contract change assessments",
+    "fr": "évaluations de modifications contractuelles",
+    "ar": "تقييمات تغييرات العقود"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Payment evidence checks",
+    "fr": "Vérifications des justificatifs de paiement",
+    "ar": "عمليات التحقق من مستندات إثبات الدفع"
+   },
+   "unit": {
+    "en": "payment evidence checks",
+    "fr": "vérifications des justificatifs de paiement",
+    "ar": "عمليات التحقق من مستندات إثبات الدفع"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `procurement` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the tender document reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `procurement` associé à un dossier contient un dossier d’acceptation PDF/A + un manifeste des données sources CSV/JSON + des fichiers d’inspection ou de conception géoréférencés, avec un lien entre les examens de documents d’appel d’offres et la source, le réviseur, la version, le registre des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة في `procurement` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + ملفات مسح/صور أو تصميم محددة الإسناد الجغرافي، وتربط مراجعات وثائق المناقصات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted tender document reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 examens de documents d’appel d’offres acceptés** par équipe et par semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux pièces justificatives** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ **≥2 من مراجعات وثائق المناقصات المقبولة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. ويؤدي الإجازة المعتمدة/التعديلات إلى تغيير المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة أي نتيجة خضراء. وهذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "the contracting authority retains award and payment powers",
+  "fr": "le pouvoir adjudicateur conserve les pouvoirs d’attribution et de paiement",
+  "ar": "تحتفظ الجهة المتعاقدة بصلاحيات الترسية والدفع"
+ },
+ "depends": [
+  {
+   "slug": "regulatory-impact",
+   "id": 79
+  },
+  {
+   "slug": "procurement-reform",
+   "id": 82
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "soe-oversight",
+   "id": 102
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Specifications favour one vendor → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Les spécifications privilégient un fournisseur → tester la passation à l’exploitant, les dépendances de maintenance et l’existence d’une procédure de reprise.",
+   "ar": "المواصفات تفضّل مورّداً واحداً → اختبر تسليم التشغيل، ومتطلبات الصيانة، وإجراء الاستعادة المتاح."
+  },
+  {
+   "en": "Quantity errors inflate claims → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les erreurs de quantité gonflent les réclamations → exiger des vérifications indépendantes des données sources, un élément de comparaison et une incertitude explicitement indiquée avant l’acceptation.",
+   "ar": "أخطاء الكميات تضخّم المطالبات → اشترط عمليات تحقق مستقلة من المصادر، ومرجعاً للمقارنة، وتحديداً صريحاً لمستوى عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Change orders bypass competition → reconcile source records with the tender document reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les avenants contournent la concurrence → rapprochez les pièces justificatives des examens du dossier d’appel d’offres, vérifiez la liste de contrôle d’acceptation et attribuez la responsabilité des mesures correctives.",
+   "ar": "تتجاوز أوامر التغيير المنافسة ← طابِق سجلات المصدر مع وثيقة المناقصة، وراجِع قائمة التحقق من القبول، وحدد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

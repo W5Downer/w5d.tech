@@ -1,0 +1,65 @@
+{
+ "slug": "kun-aalam",
+ "id": 6,
+ "order": 6,
+ "icon": "book-open",
+ "status": "draft",
+ "status_label": {
+  "en": "Draft",
+  "fr": "Brouillon",
+  "ar": "مسودة"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Be More Knowing",
+  "fr": "Sois plus savant",
+  "ar": "كن أعلم"
+ },
+ "tagline": {
+  "en": "The eleventh project: an Arabic-language knowledge programme. Draft.",
+  "fr": "Le onzième projet : un programme de connaissances en langue arabe. À l’état de projet.",
+  "ar": "المشروع الحادي عشر: برنامج معرفي باللغة العربية. مسودة."
+ },
+ "outcome": [
+  {
+   "en": "Be More Knowing (كن أعلم) appears in the project registry as a draft. It is likely an Arabic-language knowledge and capability programme, but it is not yet specified.",
+   "fr": "Be More Knowing (كن أعلم) figure à l’état de projet dans le registre des projets. Il s’agit probablement d’un programme de connaissances et de développement des compétences en langue arabe, mais il n’est pas encore défini.",
+   "ar": "يظهر برنامج Be More Knowing (كن أعلم) في سجل المشاريع بوصفه مسودة. ومن المرجح أن يكون برنامجًا معرفيًا وتنمويًا باللغة العربية، لكنه لم يُحدَّد بعد."
+  },
+  {
+   "en": "We list it so that nothing in the register is hidden, and we say plainly that it is a draft.",
+   "fr": "Nous le répertorions afin que rien ne soit caché dans le registre, et nous indiquons clairement qu’il s’agit d’un projet.",
+   "ar": "نُدرجه كي لا يُخفى أي شيء في السجل، ونوضح صراحةً أنه مسودة."
+  }
+ ],
+ "evidence": {
+  "en": "Listed in the registry; no specification published.",
+  "fr": "Répertorié dans le registre ; aucune spécification publiée.",
+  "ar": "مدرج في السجل؛ لم تُنشر أي مواصفات."
+ },
+ "services": [
+  "stem-education",
+  "science-comm",
+  "library-modernisation"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Draft registered",
+    "fr": "Projet enregistré",
+    "ar": "مسودة مسجلة"
+   },
+   "body": {
+    "en": "No specification yet.",
+    "fr": "Aucune spécification pour le moment.",
+    "ar": "لا توجد مواصفات بعد."
+   }
+  }
+ ],
+ "gradient": "built"
+}

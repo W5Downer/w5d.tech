@@ -1,0 +1,58 @@
+{
+ "slug": "join-thanks",
+ "title": {
+  "en": "Thank you",
+  "fr": "Merci",
+  "ar": "شكرًا لك"
+ },
+ "description": {
+  "en": "Your request is recorded.",
+  "fr": "Votre demande a bien été enregistrée.",
+  "ar": "تم تسجيل طلبك."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "thx-hero",
+   "variant": "classic",
+   "gradient": "cultures",
+   "title": {
+    "en": "Thank you. **It is recorded.**",
+    "fr": "Merci. **Votre demande est enregistrée.**",
+    "ar": "شكرًا لك. **تم تسجيله.**"
+   },
+   "lead": {
+    "en": "We keep what you sent, and nothing more. A reviewer answers within five working days.",
+    "fr": "Nous conservons les éléments que vous avez envoyés, et rien de plus. Une personne chargée de l’examen vous répondra dans un délai de cinq jours ouvrés.",
+    "ar": "نحتفظ بما أرسلته، ولا شيء أكثر. سيردّ عليك أحد المراجعين خلال خمسة أيام عمل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Back home",
+      "fr": "Retour à l’accueil",
+      "ar": "العودة إلى الصفحة الرئيسية"
+     },
+     "href": "/",
+     "style": "focus",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Share the programme",
+      "fr": "Partager le programme",
+      "ar": "مشاركة البرنامج"
+     },
+     "href": "/join/",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Done",
+    "fr": "Terminé",
+    "ar": "تم"
+   }
+  }
+ ],
+ "robots": "noindex,follow"
+}

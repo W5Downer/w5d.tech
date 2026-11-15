@@ -1,0 +1,176 @@
+{
+ "slug": "trust",
+ "title": {
+  "en": "Trust and limits",
+  "fr": "Confiance et limites",
+  "ar": "الثقة والحدود"
+ },
+ "description": {
+  "en": "Declared limits, sampling method, privacy, terms, security and corrections.",
+  "fr": "Limites déclarées, méthode d’échantillonnage, confidentialité, conditions, sécurité et corrections.",
+  "ar": "الحدود المعلنة، ومنهجية أخذ العينات، والخصوصية، والشروط، والأمن، والتصويبات."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "tr-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Trust is a **list of limits.**",
+    "fr": "La confiance est une **liste de limites.**",
+    "ar": "الثقة هي **قائمة من الحدود.**"
+   },
+   "lead": {
+    "en": "We publish what we do not claim, how we check ourselves and how to correct us.",
+    "fr": "Nous publions ce que nous ne revendiquons pas, la manière dont nous nous vérifions et comment nous corriger.",
+    "ar": "ننشر ما لا ندّعيه، وكيف نراجع عملنا، وكيف يمكن تصويبنا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Declared limits",
+      "fr": "Limites déclarées",
+      "ar": "الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Trust",
+    "fr": "Confiance",
+    "ar": "الثقة"
+   }
+  },
+  {
+   "type": "cards",
+   "id": "tr-index",
+   "tier": "e",
+   "focus": 3,
+   "cols": 3,
+   "title": {
+    "en": "Trust pages",
+    "fr": "Pages sur la confiance",
+    "ar": "صفحات الثقة"
+   },
+   "items": [
+    {
+     "icon": "scale",
+     "title": {
+      "en": "Declared limits",
+      "fr": "Limites déclarées",
+      "ar": "الحدود المعلنة"
+     },
+     "body": {
+      "en": "No job, no return, no headcount claim.",
+      "fr": "Aucune revendication concernant les emplois, les rendements ou les effectifs.",
+      "ar": "لا ادعاء بوجود وظيفة أو عائد أو عدد موظفين."
+     },
+     "href": "/trust/statement/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    },
+    {
+     "icon": "file-search",
+     "title": {
+      "en": "5% sampling",
+      "fr": "Échantillonnage à 5 %",
+      "ar": "أخذ عينات بنسبة 5%"
+     },
+     "body": {
+      "en": "How reports are re-checked.",
+      "fr": "Comment les rapports sont revérifiés.",
+      "ar": "كيفية إعادة التحقق من التقارير."
+     },
+     "href": "/trust/sampling/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    },
+    {
+     "icon": "lock",
+     "title": {
+      "en": "Privacy",
+      "fr": "Confidentialité",
+      "ar": "الخصوصية"
+     },
+     "body": {
+      "en": "What we collect and keep.",
+      "fr": "Ce que nous recueillons et conservons.",
+      "ar": "ما نجمعه وما نحتفظ به."
+     },
+     "href": "/trust/privacy/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    },
+    {
+     "icon": "file-text",
+     "title": {
+      "en": "Terms",
+      "fr": "Conditions",
+      "ar": "الشروط"
+     },
+     "body": {
+      "en": "Demo-mode terms for pledges.",
+      "fr": "Conditions du mode démo pour les engagements.",
+      "ar": "شروط وضع العرض التجريبي للتعهدات."
+     },
+     "href": "/trust/terms/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    },
+    {
+     "icon": "shield",
+     "title": {
+      "en": "Security",
+      "fr": "Sécurité",
+      "ar": "الأمان"
+     },
+     "body": {
+      "en": "Controls and disclosure.",
+      "fr": "Contrôles et informations divulguées.",
+      "ar": "الضوابط والإفصاح."
+     },
+     "href": "/trust/security/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    },
+    {
+     "icon": "file-pen",
+     "title": {
+      "en": "Corrections",
+      "fr": "Corrections",
+      "ar": "التصحيحات"
+     },
+     "body": {
+      "en": "Report an error; 14-day answer.",
+      "fr": "Signaler une erreur ; réponse sous 14 jours.",
+      "ar": "أبلغ عن خطأ؛ والرد خلال 14 يومًا."
+     },
+     "href": "/trust/corrections/",
+     "cta": {
+      "en": "Read",
+      "fr": "Lire",
+      "ar": "اقرأ"
+     }
+    }
+   ]
+  }
+ ]
+}

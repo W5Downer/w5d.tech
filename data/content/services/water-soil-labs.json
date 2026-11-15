@@ -1,0 +1,167 @@
+{
+ "slug": "water-soil-labs",
+ "id": 55,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Water & Soil Quality Labs",
+  "fr": "Laboratoires de la qualité de l’eau et des sols",
+  "ar": "مختبرات جودة المياه والتربة"
+ },
+ "short": {
+  "en": "The service provides sampling, accredited analysis, remediation.",
+  "fr": "Analyser l'eau et les sols avec traçabilité.",
+  "ar": "تحليل المياه والتربة مع تتبع العينات."
+ },
+ "abstract": {
+  "en": "Water and soil quality laboratories — accredited sampling, chemical and biological analysis, remediation design, and long-term monitoring programs.",
+  "fr": "Laboratoires de la qualité de l’eau et des sols — échantillonnage accrédité, analyses chimiques et biologiques, conception de mesures correctives et programmes de suivi à long terme.",
+  "ar": "مختبرات جودة المياه والتربة — أخذ عينات معتمد، وتحليل كيميائي وبيولوجي، وتصميم المعالجة، وبرامج رصد طويلة الأجل."
+ },
+ "long": [
+  {
+   "en": "The Water & Soil Quality Labs service organises a weekly work package around accessioned samples, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 5000 accessioned samples; 5000 validated assay results; 1000 chain of custody checks; 100 remediation screening notes. Water and soil quality laboratories — accredited sampling, chemical and biological analysis, remediation design, and long-term monitoring programs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that test claims stay within the laboratory's validated and accredited scope. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Laboratoires de la qualité de l’eau et des sols organise un lot de travail hebdomadaire autour des échantillons enregistrés, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 5000 échantillons enregistrés ; 5000 résultats d’analyse validés ; 1000 vérifications de la chaîne de traçabilité ; 100 notes de présélection des mesures correctives. Laboratoires de la qualité de l’eau et des sols — échantillonnage accrédité, analyses chimiques et biologiques, conception de mesures correctives et programmes de suivi à long terme. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les affirmations relatives aux analyses restent dans les limites du champ validé et accrédité du laboratoire. Il s’agit de livrables échelonnés issus de cas commandés, et non de la promesse d’achever chaque semaine un programme national complet.",
+   "ar": "تنظم خدمة Water & Soil Quality Labs حزمة عمل أسبوعية حول العينات المسجلة، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند التشغيل بكامل الطاقة والموارد، 5000 عينة مسجلة؛ و5000 نتيجة اختبار مُعتمدة؛ و1000 فحص لسلسلة الحيازة؛ و100 مذكرة لفحص خيارات المعالجة. مختبرات جودة المياه والتربة — أخذ عينات معتمد، وتحليل كيميائي وبيولوجي، وتصميم المعالجة، وبرامج رصد طويلة الأجل. ويحدد المختصون تسلسل هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويقضي الضابط الأساسي بأن تظل ادعاءات الاختبار ضمن النطاق المعتمد والمُتحقق من صلاحيته في المختبر. وهذه مخرجات مرحلية لحالات مفوضة، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `water-soil-labs`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of accessioned samples, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit un besoin d’interventions techniques mesurées, et non l’existence d’une commande financée pour ce service en particulier. La séparation des propriétaires d’actifs, des budgets d’infrastructure et des responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `water-soil-labs`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des échantillons enregistrés, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، ومنها أن خسائر التوزيع لدى SONEDE بلغت 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قابل للقياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد تؤدي اختلافات ملاك الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنياً. لذلك، يتمثل النهج المقترح لخدمة `water-soil-labs` في سير عمل تعاقدي مع جهة مستفيدة محددة وتعريف معتمد للعينات المسجلة، لا في تبرير التوظيف اعتماداً حصراً على معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the accessioned samples acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks validated assay results before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted accessioned samples from rejected or deferred work and records blockers around chain of custody checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service établit les critères d’acceptation des échantillons enregistrés ; 100 responsables les traduisent en affectations d’équipe d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les résultats d’analyse validés avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les échantillons enregistrés acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux vérifications de la chaîne de traçabilité. Les examens par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1 000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول العينات المسجلة؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، بينما يتحقق مراجع مؤهل من نتائج الاختبارات المُعتمدة قبل الموافقة عليها. وتعيد عملية التدقيق العشوائي المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين العينات المسجلة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بفحوص سلسلة الحيازة. وتنسق مراجعات قادة التجمعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "analytical chemistry, microbiology, soil science and hydrology",
+  "fr": "chimie analytique, microbiologie, pédologie et hydrologie",
+  "ar": "الكيمياء التحليلية، وعلم الأحياء الدقيقة، وعلوم التربة، والهيدرولوجيا"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "Kairouan, Sidi Bouzid and north-west laboratory/field partnerships",
+  "fr": "partenariats de laboratoire et de terrain à Kairouan, Sidi Bouzid et dans le nord-ouest",
+  "ar": "شراكات مختبرية وميدانية في القيروان وسيدي بوزيد والشمال الغربي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Accessioned samples",
+    "fr": "Échantillons enregistrés",
+    "ar": "العينات المسجلة"
+   },
+   "unit": {
+    "en": "accessioned samples",
+    "fr": "échantillons enregistrés",
+    "ar": "العينات المسجلة"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Validated assay results",
+    "fr": "Résultats d’analyses validés",
+    "ar": "نتائج الفحوص المخبرية المعتمدة"
+   },
+   "unit": {
+    "en": "validated assay results",
+    "fr": "résultats d’analyses validés",
+    "ar": "نتائج الفحوص المخبرية المعتمدة"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Chain of custody checks",
+    "fr": "Vérifications de la chaîne de traçabilité",
+    "ar": "عمليات التحقق من سلسلة حيازة العينات"
+   },
+   "unit": {
+    "en": "chain of custody checks",
+    "fr": "vérifications de la chaîne de traçabilité",
+    "ar": "عمليات التحقق من سلسلة حيازة العينات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Remediation screening notes",
+    "fr": "Notes de dépistage des mesures correctives",
+    "ar": "ملاحظات فحص المعالجة التصحيحية"
+   },
+   "unit": {
+    "en": "remediation screening notes",
+    "fr": "notes de dépistage des mesures correctives",
+    "ar": "ملاحظات فحص المعالجة التصحيحية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `water-soil-labs` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the accessioned samples to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `water-soil-labs` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les échantillons enregistrés à la source, au relecteur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `water-soil-labs` ملف قبول PDF/A + بيانًا بمصادر CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط العينات المسجلة بمصدرها والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥40 accepted accessioned samples** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **au moins 9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **au moins 40 échantillons enregistrés acceptés** par équipe et par semaine, sous réserve de la complexité des dossiers ; **au plus 1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les aménagements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥40 عينة مسجلة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتتجاوز العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي نتيجة خضراء. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "test claims stay within the laboratory's validated and accredited scope",
+  "fr": "les allégations relatives aux essais restent dans le périmètre validé et accrédité du laboratoire",
+  "ar": "تظل ادعاءات الاختبار ضمن النطاق المعتمد والمعترف به للمختبر"
+ },
+ "depends": [
+  {
+   "slug": "water-sanitation",
+   "id": 35
+  },
+  {
+   "slug": "water-treatment",
+   "id": 120
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "6",
+   "target": "6.3"
+  },
+  {
+   "goal": "6",
+   "target": "6.4"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sample contamination changes results → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "La contamination des échantillons modifie les résultats → refaire les vérifications critiques à partir de références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "يؤدي تلوث العينات إلى تغيير النتائج → أعد إجراء عمليات التحقق الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Holding times invalidate assays → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les délais de conservation invalident les analyses → refaire les vérifications critiques à partir de références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "تؤدي تجاوزات أوقات الاحتفاظ إلى إبطال الفحوص → أعد إجراء عمليات التحقق الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Unvalidated methods create false safety assurances → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Des méthodes non validées donnent une fausse assurance quant à la sécurité → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitement indiquée avant l’acceptation.",
+   "ar": "تؤدي المنهجيات غير المعتمدة إلى تأكيدات زائفة بشأن السلامة → اشترط عمليات تحقق مستقلة من المصدر، ومقارنة مرجعية، وإفصاحاً صريحاً عن عدم اليقين قبل القبول."
+  }
+ ]
+}

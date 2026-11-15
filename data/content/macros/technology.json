@@ -1,0 +1,66 @@
+{
+ "slug": "technology",
+ "id": 5,
+ "order": 5,
+ "icon": "cpu",
+ "gradient": "technology",
+ "range": "#105–#130",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "name": {
+  "en": "Technology",
+  "fr": "Technologie",
+  "ar": "التكنولوجيا"
+ },
+ "tagline": {
+  "en": "How deployable technical capabilities are built, secured, integrated and maintained.",
+  "fr": "Comment les capacités techniques déployables sont conçues, sécurisées, intégrées et maintenues.",
+  "ar": "كيفية بناء القدرات التقنية القابلة للتطبيق وتأمينها ودمجها وصيانتها."
+ },
+ "question": {
+  "en": "How are deployable technical capabilities built, secured, integrated and maintained?",
+  "fr": "Comment les capacités techniques déployables sont-elles conçues, sécurisées, intégrées et maintenues ?",
+  "ar": "كيف تُبنى القدرات التقنية القابلة للتطبيق وتُؤمَّن وتُدمج وتُصان؟"
+ },
+ "fields": {
+  "en": "Computer science, engineering, applied mathematics, cybersecurity, robotics, biomedical engineering",
+  "fr": "Informatique, ingénierie, mathématiques appliquées, cybersécurité, robotique, ingénierie biomédicale",
+  "ar": "علوم الحاسوب، الهندسة، الرياضيات التطبيقية، الأمن السيبراني، الروبوتات، الهندسة الطبية الحيوية"
+ },
+ "unit": {
+  "en": "Reviewed feature increments, alert investigations, validated pipeline changes, infrastructure change reviews, site device commissioning tests",
+  "fr": "Incréments fonctionnels examinés, alertes analysées, modifications des pipelines validées, changements d’infrastructure examinés, tests de mise en service des appareils sur site",
+  "ar": "مراجعة الزيادات الوظيفية، والتحقيق في التنبيهات، والتحقق من تغييرات مسارات العمل، ومراجعة تغييرات البنية التحتية، واختبارات تشغيل أجهزة المواقع"
+ },
+ "boundary": {
+  "en": "Operators approve changes; model deployment requires a defined use case, baseline comparison and human escalation; testing requires written scope.",
+  "fr": "Les opérateurs approuvent les changements ; le déploiement de modèles nécessite un cas d’usage défini, une comparaison avec une référence et une procédure d’escalade vers un humain ; les tests nécessitent un périmètre écrit.",
+  "ar": "يوافق المشغّلون على التغييرات؛ ويتطلب نشر النماذج حالة استخدام محددة، ومقارنة بخط أساس، وتصعيدًا إلى التدخل البشري؛ كما يتطلب الاختبار نطاقًا مكتوبًا."
+ },
+ "body": [
+  {
+   "en": "Technology is internally split: #105–#117 are the Virtual core (primarily digital deliverables), while #118–#130 are Real instantiation (technology deployed into construction sites, water plants, farms, clinics, mines and cold chains).",
+   "fr": "La technologie est répartie en interne : #105–#117 constituent le cœur virtuel (principalement des livrables numériques), tandis que #118–#130 correspondent à l’instanciation réelle (technologie déployée sur des chantiers, dans des usines de traitement de l’eau, des exploitations agricoles, des cliniques, des mines et des chaînes du froid).",
+   "ar": "تنقسم التكنولوجيا داخليًا إلى قسمين: #105–#117 هي النواة الافتراضية (وتشمل أساسًا مخرجات رقمية)، بينما #118–#130 هي التجسيد الفعلي (أي التكنولوجيا المنشورة في مواقع الإنشاء، ومحطات المياه، والمزارع، والعيادات، والمناجم، وسلاسل التبريد)."
+  },
+  {
+   "en": "The Real 0.5 / Virtual 0.5 label is an organisational convention, not a measured fraction of hours.",
+   "fr": "Le ratio Réel 0.5 / Virtuel 0.5 est une convention organisationnelle, et non une fraction mesurée des heures.",
+   "ar": "التسمية Real 0.5 / Virtual 0.5 اصطلاح تنظيمي، وليست نسبة مقاسة من ساعات العمل."
+  },
+  {
+   "en": "It is also where W5D already has delivery capacity: {{ experts.developers_today }} developers in Tunisia today.",
+   "fr": "C’est également là que W5D dispose déjà d’une capacité de livraison : {{ experts.developers_today }} développeurs en Tunisie aujourd’hui.",
+   "ar": "وهذا أيضًا هو المجال الذي تمتلك فيه W5D بالفعل القدرة على التنفيذ: {{ experts.developers_today }} مطورًا في تونس اليوم."
+  }
+ ],
+ "feeds": {
+  "en": "All macros via tooling and infrastructure",
+  "fr": "Toutes les macros via l’outillage et l’infrastructure",
+  "ar": "جميع وحدات الماكرو عبر الأدوات والبنية التحتية"
+ },
+ "why": {
+  "en": "{{ experts.developers_today }} developers deliver in Tunisia today. The macro scales that proven capacity before the rest of the ontology.",
+  "fr": "{{ experts.developers_today }} développeurs assurent des livraisons en Tunisie aujourd’hui. La macro développe cette capacité éprouvée avant le reste de l’ontologie.",
+  "ar": "ينفذ {{ experts.developers_today }} مطورًا أعمالًا في تونس اليوم. وتوسّع وحدات الماكرو هذه القدرة المثبتة قبل التوسع إلى بقية الأنطولوجيا."
+ }
+}

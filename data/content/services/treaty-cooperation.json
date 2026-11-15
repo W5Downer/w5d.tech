@@ -1,0 +1,167 @@
+{
+ "slug": "treaty-cooperation",
+ "id": 104,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Treaty & International Cooperation",
+  "fr": "Traités et coopération internationale",
+  "ar": "المعاهدات والتعاون الدولي"
+ },
+ "short": {
+  "en": "The service provides negotiation support, compliance reporting.",
+  "fr": "Soutenir les coopérations et engagements internationaux.",
+  "ar": "دعم التعاون والالتزامات الدولية."
+ },
+ "abstract": {
+  "en": "Treaty and international cooperation — negotiation support, compliance reporting, and multilateral engagement frameworks.",
+  "fr": "Le service Traités et coopération internationale — appui à la négociation, rapports de conformité et cadres de coopération multilatérale.",
+  "ar": "المعاهدات والتعاون الدولي — دعم المفاوضات، وإعداد تقارير الامتثال، وأطر المشاركة متعددة الأطراف."
+ },
+ "long": [
+  {
+   "en": "The Treaty & International Cooperation service organises a weekly work package around treaty obligation matrices, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 treaty obligation matrices; 100 negotiation evidence briefs; 200 compliance dossier reviews; 100 partner consultation records. Treaty and international cooperation — negotiation support, compliance reporting, and multilateral engagement frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only authorised representatives negotiate, commit or interpret obligations for the state. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Traités et coopération internationale organise un lot de travail hebdomadaire autour des matrices d’obligations conventionnelles, plutôt que de considérer la participation comme un résultat en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 matrices d’obligations conventionnelles ; 100 notes sur les éléments probants de négociation ; 200 examens de dossiers de conformité ; 100 comptes rendus de consultation des partenaires. Le service Traités et coopération internationale — appui à la négociation, rapports de conformité et cadres de coopération multilatérale. Les spécialistes organisent ces travaux en fonction du lot hebdomadaire accepté. La règle fondamentale est que seuls les représentants habilités peuvent négocier, prendre des engagements ou interpréter les obligations au nom de l’État. Ces résultats sont issus de cas commandés et réalisés par étapes ; ils ne constituent pas une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة المعاهدات والتعاون الدولي حزمة عمل أسبوعية تتمحور حول مصفوفات الالتزامات التعاهدية، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند اكتمال الموارد والقدرة، 100 مصفوفة للالتزامات التعاهدية؛ و100 موجز للأدلة التفاوضية؛ و200 مراجعة لملفات الامتثال؛ و100 سجل لمشاورات الشركاء. المعاهدات والتعاون الدولي — دعم المفاوضات، وإعداد تقارير الامتثال، وأطر المشاركة متعددة الأطراف. ويرتّب المختصون هذه الأساليب وفقًا للحزمة الأسبوعية المقبولة. والحدّ الحاكم هو أن الممثلين المخولين وحدهم يفاوضون أو يلتزمون أو يفسرون الالتزامات نيابةً عن الدولة. وهذه مخرجات مرحلية ناتجة عن حالات مكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `treaty-cooperation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of treaty obligation matrices, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40 % des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enquête auprès des entreprises indiquées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane (2024) relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent de l’existence d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliorera le fonctionnement d’une institution. Pour `treaty-cooperation`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des matrices d’obligations conventionnelles, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن نحو 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة بوصفه عائقًا رئيسيًا، استنادًا إلى مقارنات استقصاء المؤسسات المصنفة بعام 2020 أو بأحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها عوامل مؤثرة، وليس التدريب وحده. وتتوقف الفوائد على وجود صلاحيات مشروعة، وسجلات إدارية مشتركة، ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسّن أداء مؤسسة من دون هؤلاء المستخدمين. ولذلك، فإن الاستجابة المقترحة لـ `treaty-cooperation` هي سير عمل تعاقدي مع جهة مستفيدة محددة وتعريف مقبول لمصفوفات الالتزامات التعاهدية، لا استقطاب كوادر يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the treaty obligation matrices acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks negotiation evidence briefs before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted treaty obligation matrices from rejected or deferred work and records blockers around compliance dossier reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des matrices d’obligations conventionnelles ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les notes sur les éléments probants de négociation avant leur approbation. L’audit aléatoire proposé, portant sur 5 %, réexamine les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les matrices d’obligations conventionnelles acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux examens des dossiers de conformité. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مصفوفات الالتزامات التعاهدية؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مراجع مختص موجزات الأدلة التفاوضية قبل اعتمادها. وتعيد عملية تدقيق عشوائية مقترحة بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين مصفوفات الالتزامات التعاهدية المقبولة والعمل المرفوض أو المؤجل، ويسجّل العوائق المتعلقة بمراجعات ملفات الامتثال. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "international law, international relations, economics and languages",
+  "fr": "droit international, relations internationales, économie et langues",
+  "ar": "القانون الدولي والعلاقات الدولية والاقتصاد واللغات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Treaty obligation matrices",
+    "fr": "Matrices d’obligations conventionnelles",
+    "ar": "مصفوفات الالتزامات التعاهدية"
+   },
+   "unit": {
+    "en": "treaty obligation matrices",
+    "fr": "matrices d’obligations conventionnelles",
+    "ar": "مصفوفات الالتزامات التعاهدية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Negotiation evidence briefs",
+    "fr": "Notes sur les éléments probants de négociation",
+    "ar": "موجزات الأدلة التفاوضية"
+   },
+   "unit": {
+    "en": "negotiation evidence briefs",
+    "fr": "Notes de synthèse sur les éléments probants de négociation",
+    "ar": "موجزات أدلة التفاوض"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Compliance dossier reviews",
+    "fr": "Examens des dossiers de conformité",
+    "ar": "مراجعات ملفات الامتثال"
+   },
+   "unit": {
+    "en": "compliance dossier reviews",
+    "fr": "examens des dossiers de conformité",
+    "ar": "مراجعات ملفات الامتثال"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Partner consultation records",
+    "fr": "Comptes rendus de consultation des partenaires",
+    "ar": "سجلات مشاورات الشركاء"
+   },
+   "unit": {
+    "en": "partner consultation records",
+    "fr": "comptes rendus de consultation des partenaires",
+    "ar": "سجلات مشاورات الشركاء"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `treaty-cooperation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the treaty obligation matrices to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `treaty-cooperation` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des comptes rendus de consultation expurgés, reliant les matrices d’obligations conventionnelles aux sources, aux réviseurs, aux versions, au journal des exceptions et aux autorisations.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `treaty-cooperation` ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مصفوفات الالتزامات التعاهدية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted treaty obligation matrices** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥1 matrice d’obligations conventionnelles acceptée** par équipe-semaine, en fonction de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité annulent tout résultat vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول Fri 12:00؛ **قبول ≥1 مصفوفة من مصفوفات الالتزامات التعاهدية** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات المعتمدة والتسويات العددَ المؤهل، كما تتقدم العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "only authorised representatives negotiate, commit or interpret obligations for the state",
+  "fr": "seuls les représentants autorisés négocient, prennent des engagements ou interprètent les obligations au nom de l’État",
+  "ar": "لا يتفاوض بشأن الالتزامات أو يتعهد بها أو يفسرها نيابةً عن الدولة إلا الممثلون المخولون"
+ },
+ "depends": [
+  {
+   "slug": "cultural-diplomacy",
+   "id": 18
+  },
+  {
+   "slug": "science-policy",
+   "id": 74
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Draft advice mistaken for state commitments → reconcile source records with the treaty obligation matrices acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des avis provisoires sont pris pour des engagements de l’État → rapprocher les documents sources de la liste de contrôle d’acceptation des matrices d’obligations conventionnelles et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد يُساء فهم المشورة الأولية على أنها التزامات للدولة → طابق سجلات المصدر مع قائمة التحقق لقبول مصفوفات الالتزامات التعاهدية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Confidential negotiating positions leak → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Des positions de négociation confidentielles sont divulguées → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "تسرب مواقف التفاوض السرية → قلّل نطاق الوصول، ونقّح الأدلة المفرج عنها، واختبر سير عمل الوصول المقيّد."
+  },
+  {
+   "en": "Compliance claims lack implementation evidence → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les déclarations de conformité ne sont pas étayées par des preuves de mise en œuvre → exiger des vérifications indépendantes des sources, un comparateur et une explicitation de l’incertitude avant toute acceptation.",
+   "ar": "ادعاءات الامتثال تفتقر إلى أدلة التنفيذ → اشترط إجراء فحوص مستقلة للمصادر، واستخدام عنصر للمقارنة، والتصريح بوضوح عن مواطن عدم اليقين قبل القبول."
+  }
+ ]
+}

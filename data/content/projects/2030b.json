@@ -1,0 +1,82 @@
+{
+ "slug": "2030b",
+ "id": 1,
+ "order": 1,
+ "icon": "sunrise",
+ "status": "building",
+ "status_label": {
+  "en": "Building",
+  "fr": "En construction",
+  "ar": "قيد البناء"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "2030B",
+  "fr": "2030B",
+  "ar": "2030B"
+ },
+ "tagline": {
+  "en": "The strategic horizon: ten projects for the whole human.",
+  "fr": "L’horizon stratégique : dix projets pour toute l’humanité.",
+  "ar": "الأفق الاستراتيجي: عشرة مشاريع من أجل البشرية جمعاء."
+ },
+ "outcome": [
+  {
+   "en": "2030B is the longer strategic frame around W5D. The programme planning horizon is the current hiring window; 2030B is where the ten human-development projects (Be Smarter to Be Grateful) are meant to converge.",
+   "fr": "2030B est le cadre stratégique à plus long terme de W5D. L’horizon de planification du programme correspond à la période de recrutement actuelle ; 2030B est l’objectif vers lequel les dix projets de développement humain (Devenir plus intelligent pour être reconnaissant) sont destinés à converger.",
+   "ar": "يمثل 2030B الإطار الاستراتيجي الأبعد مدى لـ W5D. أفق التخطيط للبرنامج هو فترة التوظيف الحالية؛ أما 2030B فهو الإطار الذي يُفترض أن تلتقي فيه مشاريع تنمية الإنسان العشرة (كن أكثر ذكاءً لتكون أكثر امتنانًا)."
+  },
+  {
+   "en": "It is labelled as building, not delivered. Each of the ten projects has its own page, its own status and its own date.",
+   "fr": "Le programme est présenté comme étant en cours de construction, et non comme achevé. Chacun des dix projets a sa propre page, son propre statut et sa propre date.",
+   "ar": "وُصف بأنه قيد البناء، لا بأنه منجز. ولكل مشروع من المشاريع العشرة صفحة خاصة به، وحالة خاصة به، وتاريخ خاص به."
+  }
+ ],
+ "evidence": {
+  "en": "Site self-label \"2030B Building\"; ten project indexes on file.",
+  "fr": "Le site porte la mention « 2030B Building » ; les index des dix projets sont archivés.",
+  "ar": "التسمية الذاتية للموقع «2030B قيد البناء»؛ وفهارس المشاريع العشرة متاحة."
+ },
+ "services": [
+  "science-policy",
+  "education-culture",
+  "cultural-policy"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Ten project indexes completed",
+    "fr": "Index des dix projets achevés",
+    "ar": "اكتمل إعداد فهارس المشاريع العشرة"
+   },
+   "body": {
+    "en": "The Arabic indexes for all ten projects are on file.",
+    "fr": "Les index en arabe des dix projets sont archivés.",
+    "ar": "فهارس المشاريع العشرة باللغة العربية متاحة."
+   }
+  },
+  {
+   "when": {
+    "en": "2030",
+    "fr": "2030",
+    "ar": "2030"
+   },
+   "title": {
+    "en": "Horizon",
+    "fr": "Horizon",
+    "ar": "الأفق"
+   },
+   "body": {
+    "en": "Convergence target, not a delivery promise.",
+    "fr": "Objectif de convergence, et non promesse de livraison.",
+    "ar": "هدف للتلاقي، وليس وعدًا بالتسليم."
+   }
+  }
+ ],
+ "gradient": "built"
+}

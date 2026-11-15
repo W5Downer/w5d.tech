@@ -1,0 +1,167 @@
+{
+ "slug": "decentralisation",
+ "id": 103,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Decentralisation & Local Finance",
+  "fr": "Décentralisation et finances locales",
+  "ar": "اللامركزية والمالية المحلية"
+ },
+ "short": {
+  "en": "The service provides own-source revenue, transfers, capacity.",
+  "fr": "Évaluer les ressources et capacités des territoires.",
+  "ar": "تقييم موارد الأقاليم وقدراتها."
+ },
+ "abstract": {
+  "en": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments.",
+  "fr": "Décentralisation et finances locales — conception des recettes propres, transferts intergouvernementaux et renforcement des capacités locales des administrations infranationales.",
+  "ar": "اللامركزية والمالية المحلية — تصميم الإيرادات الذاتية، والتحويلات بين الحكومات، وبناء القدرات المحلية للحكومات دون الوطنية."
+ },
+ "long": [
+  {
+   "en": "The Decentralisation & Local Finance service organises a weekly work package around local revenue assessments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 local revenue assessments; 100 transfer formula scenarios; 200 fiscal capacity datasets; 100 distributional impact notes. Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments. Specialists sequence those methods against the accepted weekly package. The governing boundary is that recommendations reflect current legal institutions rather than assuming past decentralisation arrangements. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Décentralisation et finances locales organise un lot de travail hebdomadaire autour des évaluations des recettes locales, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 évaluations des recettes locales ; 100 scénarios de formules de transfert ; 200 jeux de données sur la capacité budgétaire ; 100 notes d’impact distributif. Décentralisation et finances locales — conception des recettes propres, transferts intergouvernementaux et renforcement des capacités locales des administrations infranationales. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les recommandations tiennent compte des institutions juridiques en vigueur, sans présumer que les dispositions antérieures en matière de décentralisation s’appliquent toujours. Il s’agit de produits échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة اللامركزية والمالية المحلية حزمة عمل أسبوعية تتمحور حول تقييمات الإيرادات المحلية، بدلاً من اعتبار الحضور هو المنتج. وفي ظل طاقة تشغيلية كاملة ومموّلة، تتضمن خطتها التجريبية 200 تقييم للإيرادات المحلية؛ و100 سيناريو لصيغ التحويلات؛ و200 مجموعة بيانات للقدرة المالية؛ و100 مذكرة عن الأثر التوزيعي. اللامركزية والمالية المحلية — تصميم الإيرادات الذاتية، والتحويلات بين الحكومات، وبناء القدرات المحلية للحكومات دون الوطنية. ويحدّد المتخصصون تسلسل هذه الأساليب بما يتوافق مع الحزمة الأسبوعية المقبولة. والضابط الأساسي هو أن تعكس التوصيات المؤسسات القانونية الحالية، لا أن تفترض استمرار ترتيبات اللامركزية السابقة. وهذه مخرجات مرحلية للحالات المكلّف بها الفريق، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `decentralisation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of local revenue assessments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme un obstacle majeur, sur la base de comparaisons de l’Enquête auprès des entreprises indiquées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème qui relèverait uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut pas présumer qu’un produit consultatif sans ces utilisateurs améliore une institution. Pour la `décentralisation`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des évaluations des recettes locales, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن قرابة 40% من الشركات التونسية المشمولة تعتبر قصور مهارات القوى العاملة عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث سنة متاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، بدلاً من اعتبار المشكلة مقتصرة على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة وسجلات إدارية مشتركة وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسّن مؤسسة ما من دون هؤلاء المستخدمين. لذلك، فإن الاستجابة المقترحة في مجال `decentralisation` هي سير عمل تعاقدي مع جهة مستفيدة محددة وتعريف مقبول لتقييمات الإيرادات المحلية، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the local revenue assessments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks transfer formula scenarios before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted local revenue assessments from rejected or deferred work and records blockers around fiscal capacity datasets. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des évaluations des recettes locales ; 100 responsables les traduisent en affectations d’équipe d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les scénarios de formules de transfert avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les évaluations des recettes locales acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux jeux de données sur la capacité budgétaire. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تقييمات الإيرادات المحلية؛ ويحوّل 100 مدير تلك المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص سيناريوهات صيغ التحويلات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين تقييمات الإيرادات المحلية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بمجموعات بيانات القدرة المالية. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "local public finance, regional economics and administration",
+  "fr": "finances publiques locales, économie régionale et administration",
+  "ar": "المالية العامة المحلية والاقتصاد الإقليمي والإدارة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Local revenue assessments",
+    "fr": "Évaluations des recettes locales",
+    "ar": "تقييمات الإيرادات المحلية"
+   },
+   "unit": {
+    "en": "local revenue assessments",
+    "fr": "évaluations des recettes locales",
+    "ar": "تقييمات الإيرادات المحلية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Transfer formula scenarios",
+    "fr": "Scénarios de formules de transfert",
+    "ar": "سيناريوهات صيغ التحويلات"
+   },
+   "unit": {
+    "en": "transfer formula scenarios",
+    "fr": "scénarios de formules de transfert",
+    "ar": "سيناريوهات صيغ التحويل"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Fiscal capacity datasets",
+    "fr": "jeux de données sur la capacité fiscale",
+    "ar": "مجموعات بيانات القدرة المالية"
+   },
+   "unit": {
+    "en": "fiscal capacity datasets",
+    "fr": "jeux de données sur la capacité fiscale",
+    "ar": "مجموعات بيانات القدرة المالية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Distributional impact notes",
+    "fr": "notes sur les effets distributifs",
+    "ar": "ملاحظات الأثر التوزيعي"
+   },
+   "unit": {
+    "en": "distributional impact notes",
+    "fr": "notes sur les effets distributifs",
+    "ar": "ملاحظات الأثر التوزيعي"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `decentralisation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the local revenue assessments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation de `décentralisation` lié à un dossier comprend un dossier d’acceptation PDF/A, un manifeste source CSV/JSON et des documents sources et de consultation expurgés, qui relient les évaluations des recettes locales à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `decentralisation` المرتبطة بحالة ما ملف قبول PDF/A + بيانًا بمصادر CSV/JSON + سجلات منقحة للمصادر والمشاورات، تربط تقييمات الإيرادات المحلية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted local revenue assessments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 évaluations acceptées des recettes locales** par équipe-semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux pièces justificatives** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من تقييمات الإيرادات المحلية** لكل فريق-أسبوع، وفقًا لتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، بينما تتغلب العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "recommendations reflect current legal institutions rather than assuming past decentralisation arrangements",
+  "fr": "les recommandations reflètent les institutions juridiques actuelles plutôt que de présumer que les dispositifs de décentralisation antérieurs sont toujours en vigueur",
+  "ar": "تعكس التوصيات المؤسسات القانونية الحالية بدلًا من افتراض استمرار ترتيبات اللامركزية السابقة"
+ },
+ "depends": [
+  {
+   "slug": "neighbourhood-upgrading",
+   "id": 52
+  },
+  {
+   "slug": "math-modelling",
+   "id": 72
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "urban-planning",
+   "id": 28
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Formulas entrench historic inequalities → reconcile source records with the local revenue assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les formules perpétuent les inégalités historiques → rapprocher les documents sources de la liste de contrôle d’acceptation des évaluations des recettes locales et attribuer la responsabilité des mesures correctives.",
+   "ar": "ترسّخ الصيغ أوجه عدم المساواة التاريخية ← طابِق سجلات المصادر مع قائمة التحقق لقبول تقييمات الإيرادات المحلية، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unfunded mandates shift costs locally → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les mandats non financés transfèrent les coûts au niveau local → obtenir la validation de l’autorité juridique compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تنقل التفويضات غير الممولة التكاليف إلى المستوى المحلي ← احصل على تصديق قانوني ومن الجهة المختصة، وامنع اتخاذ قرارات تشغيلية غير مصرح بها."
+  },
+  {
+   "en": "Revenue measures burden vulnerable households → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les mesures relatives aux recettes pèsent sur les ménages vulnérables → inclure l’examen par les personnes concernées, publier les hypothèses de sélection et maintenir un mécanisme de recours.",
+   "ar": "تُحمّل تدابير الإيرادات الأسر الهشة أعباءً إضافية ← أدرج مراجعة من المستخدمين المتأثرين، وانشر افتراضات الاختيار، واحتفظ بمسار لتقديم التظلمات."
+  }
+ ]
+}

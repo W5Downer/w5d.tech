@@ -1,0 +1,15 @@
+{
+ "slug": "l3",
+ "code": "L3",
+ "order": 3,
+ "name": {
+  "en": "Macro works",
+  "fr": "Grands chantiers",
+  "ar": "الأعمال الكبرى"
+ },
+ "body": {
+  "en": "{{ counts.macros }} macro works: the top-level demand map, {{ experts.services_per_macro }} services each.",
+  "fr": "{{ counts.macros }} grands chantiers : la cartographie des demandes au niveau supérieur, {{ experts.services_per_macro }} services chacun.",
+  "ar": "{{ counts.macros }} عملًا كبيرًا: خريطة الطلب على المستوى الأعلى، و{{ experts.services_per_macro }} خدمة لكل عمل."
+ }
+}

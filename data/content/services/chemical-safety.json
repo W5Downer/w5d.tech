@@ -1,0 +1,167 @@
+{
+ "slug": "chemical-safety",
+ "id": 65,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Chemical Safety & Toxicology",
+  "fr": "Sécurité chimique et toxicologie",
+  "ar": "السلامة الكيميائية وعلم السموم"
+ },
+ "short": {
+  "en": "The service provides risk assessment, SDS authoring.",
+  "fr": "Réduire les expositions chimiques évitables.",
+  "ar": "تقليص التعرضات الكيميائية القابلة للتجنب."
+ },
+ "abstract": {
+  "en": "Chemical safety and toxicology — risk assessment, SDS authoring, and exposure-reduction programs for labs, factories, and public institutions.",
+  "fr": "Sécurité chimique et toxicologie — évaluation des risques, rédaction de FDS et programmes de réduction de l’exposition pour les laboratoires, les usines et les établissements publics.",
+  "ar": "السلامة الكيميائية وعلم السموم — تقييم المخاطر، وإعداد نشرات بيانات السلامة، وبرامج الحد من التعرض للمختبرات والمصانع والمؤسسات العامة."
+ },
+ "long": [
+  {
+   "en": "The Chemical Safety & Toxicology service organises a weekly work package around chemical inventories, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 1000 chemical inventories; 500 safety data sheet reviews; 200 exposure assessments; 200 control verification visits. Chemical safety and toxicology — risk assessment, SDS authoring, and exposure-reduction programs for labs, factories, and public institutions. Specialists sequence those methods against the accepted weekly package. The governing boundary is that control recommendations follow actual substances, tasks and authorised exposure standards. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Sécurité chimique et toxicologie organise un lot de travail hebdomadaire autour des inventaires de produits chimiques, plutôt que de considérer la présence comme le produit du service. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 1000 inventaires de produits chimiques ; 500 examens de fiches de données de sécurité ; 200 évaluations de l’exposition ; 200 visites de vérification des mesures de maîtrise des risques. Sécurité chimique et toxicologie — évaluation des risques, rédaction de FDS et programmes de réduction de l’exposition pour les laboratoires, les usines et les établissements publics. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les recommandations de maîtrise des risques tiennent compte des substances et des tâches réelles ainsi que des normes d’exposition autorisées. Il s’agit de résultats échelonnés issus de cas confiés au service, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة السلامة الكيميائية وعلم السموم حزمة عمل أسبوعية حول قوائم جرد المواد الكيميائية، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة مع توفير الموارد، 1000 قائمة جرد للمواد الكيميائية؛ و500 مراجعة لنشرات بيانات السلامة؛ و200 تقييم للتعرض؛ و200 زيارة للتحقق من تدابير التحكم. السلامة الكيميائية وعلم السموم — تقييم المخاطر، وإعداد نشرات بيانات السلامة، وبرامج الحد من التعرض للمختبرات والمصانع والمؤسسات العامة. ويرتب المختصون استخدام هذه الأساليب وفق الحزمة الأسبوعية المقبولة. والمبدأ الحاكم هو أن توصيات التحكم تستند إلى المواد والمهام الفعلية ومعايير التعرض المعتمدة. هذه مخرجات مرحلية لحالات مكلف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `chemical-safety`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of chemical inventories, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active diplômée tunisienne était au chômage au T2 2026, tandis que l’analyse de l’OCDE d’avril 2022 fait état de liens faibles entre les qualifications et les exigences pratiques des employeurs. Aucune de ces statistiques ne permet d’établir le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, la supervision des méthodes et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne saurait remplacer un service mutualisé responsable. Pour `chemical-safety`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des inventaires de produits chimiques, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من القوى العاملة التونسية من خريجي الجامعات كانت عاطلة عن العمل في Q2 2026، فيما يصف تحليل OECD الصادر في أبريل 2022 ضعف الروابط بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا يحدد أي من الإحصاءين عدد المختصين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل الوصول إلى المختبرات، والأساليب الخاضعة للإشراف، واستمرارية تمويل الأبحاث، مجموعة العاملين المستقلين كلٌ على حدة بديلًا غير مكتمل لخدمة مشتركة خاضعة للمساءلة. لذلك، فإن الاستجابة المقترحة لمجال `chemical-safety` هي سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لقوائم جرد المواد الكيميائية، لا توظيف يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the chemical inventories acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks safety data sheet reviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted chemical inventories from rejected or deferred work and records blockers around exposure assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service établit les critères d’acceptation des inventaires de produits chimiques ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les examens des fiches de données de sécurité avant leur approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les inventaires de produits chimiques acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux évaluations de l’exposition. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول قوائم جرد المواد الكيميائية؛ ويترجم 100 مدير هذه المعايير إلى تكليفات لفِرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon هوية المساهمين المسؤولين، فيما يتحقق مراجع مختص من مراجعات نشرات بيانات السلامة قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة، بنسبة 5%، التحقق من الأدلة المصدرية والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز الملخص الإجمالي للخدمة بين قوائم جرد المواد الكيميائية المقبولة والعمل المرفوض أو المؤجل، ويسجل المعوقات المتعلقة بتقييمات التعرض. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "chemistry, toxicology, industrial hygiene and occupational health",
+  "fr": "chimie, toxicologie, hygiène industrielle et santé au travail",
+  "ar": "الكيمياء وعلم السموم والصحة الصناعية والصحة المهنية"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Chemical inventories",
+    "fr": "Inventaires chimiques",
+    "ar": "قوائم جرد المواد الكيميائية"
+   },
+   "unit": {
+    "en": "chemical inventories",
+    "fr": "inventaires chimiques",
+    "ar": "قوائم جرد المواد الكيميائية"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Safety data sheet reviews",
+    "fr": "Examens des fiches de données de sécurité",
+    "ar": "مراجعة نشرات بيانات السلامة"
+   },
+   "unit": {
+    "en": "safety data sheet reviews",
+    "fr": "examens des fiches de données de sécurité",
+    "ar": "مراجعة نشرات بيانات السلامة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Exposure assessments",
+    "fr": "Évaluations de l’exposition",
+    "ar": "تقييمات التعرض"
+   },
+   "unit": {
+    "en": "exposure assessments",
+    "fr": "évaluations de l’exposition",
+    "ar": "تقييمات التعرض"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Control verification visits",
+    "fr": "Visites de vérification des mesures de maîtrise",
+    "ar": "زيارات التحقق من الضوابط"
+   },
+   "unit": {
+    "en": "control verification visits",
+    "fr": "visites de vérification des mesures de maîtrise",
+    "ar": "زيارات التحقق من الضوابط"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `chemical-safety` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the chemical inventories to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `chemical-safety` lié à un dossier de cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, qui relient les inventaires chimiques à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `chemical-safety` المرتبطة بالحالة ملف قبول PDF/A + بيانًا بمصادر البيانات بصيغتي CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط قوائم جرد المواد الكيميائية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥8 accepted chemical inventories** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis d’ici vendredi 12:00 ; **≥8 inventaires chimiques acceptés** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité/confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥8 قوائم جرد للمواد الكيميائية** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **تقديم ≤1 طلب لإعادة العمل بسبب نقص الأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتتجاوز عيوب السلامة/الخصوصية الحرجة التقييم الأخضر. هذه أهداف تجريبية وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "control recommendations follow actual substances, tasks and authorised exposure standards",
+  "fr": "les recommandations de maîtrise tiennent compte des substances, des tâches et des normes d’exposition autorisées réelles",
+  "ar": "تستند توصيات الضوابط إلى المواد والمهام الفعلية ومعايير التعرض المعتمدة"
+ },
+ "depends": [
+  {
+   "slug": "construction-training",
+   "id": 39
+  },
+  {
+   "slug": "mining-tech",
+   "id": 127
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "labour-governance",
+   "id": 94
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Copied SDS omits local mixtures → reconcile source records with the chemical inventories acceptance checklist and assign corrective-action ownership.",
+   "fr": "La FDS copiée omet les mélanges locaux → rapprocher les dossiers sources de la liste de contrôle d’acceptation des inventaires chimiques et désigner le responsable des mesures correctives.",
+   "ar": "إغفال المزيج المحلي في نشرة بيانات السلامة المنسوخة ← طابق سجلات المصدر مع قائمة التحقق لقبول قوائم جرد المواد الكيميائية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Protective equipment replaces source control → reconcile source records with the chemical inventories acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’équipement de protection remplace la maîtrise à la source → rapprocher les dossiers sources de la liste de contrôle d’acceptation des inventaires chimiques et désigner le responsable des mesures correctives.",
+   "ar": "استبدال الضوابط عند المصدر بمعدات الوقاية ← طابق سجلات المصدر مع قائمة التحقق لقبول قوائم جرد المواد الكيميائية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unmeasured exposure falsely declared safe → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Une exposition non mesurée est déclarée à tort sans danger → limiter l’accès, expurger les éléments justificatifs diffusés et tester le processus d’accès restreint.",
+   "ar": "الإعلان خطأً عن سلامة تعرض لم يُقَس ← قلّل الوصول، واحجب الأدلة المُتاحة، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

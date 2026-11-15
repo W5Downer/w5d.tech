@@ -1,0 +1,199 @@
+{
+ "slug": "join",
+ "title": {
+  "en": "Join as an expert — check, register, certify",
+  "fr": "Rejoindre le programme en tant qu’expert — vérifier, s’inscrire, obtenir la certification",
+  "ar": "انضم كخبير — تحقّق، سجّل، واحصل على الاعتماد"
+ },
+ "description": {
+  "en": "Graduates: check eligibility, register, complete certification tasks, then deliver weekly units. Nothing is promised before evidence.",
+  "fr": "Diplômés : vérifiez votre admissibilité, inscrivez-vous, accomplissez les tâches de certification, puis livrez des unités hebdomadaires. Rien n’est promis avant vérification des preuves.",
+  "ar": "الخريجون: تحقّق من الأهلية، وسجّل، وأكمل مهام الاعتماد، ثم قدّم وحدات أسبوعية. لا شيء مضمون قبل تقديم الأدلة."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "join-hero",
+   "variant": "classic",
+   "gradient": "technology",
+   "title": {
+    "en": "Your diploma can become a **service.**",
+    "fr": "Votre diplôme peut devenir une **prestation.**",
+    "ar": "يمكن أن تصبح شهادتك **خدمة.**"
+   },
+   "lead": {
+    "en": "Check in thirty seconds which of the {{ counts.services }} services fits your field, then register. Certification comes first, delivery follows.",
+    "fr": "Vérifiez en trente secondes lequel des {{ counts.services }} services correspond à votre domaine, puis inscrivez-vous. La certification vient d’abord, la prestation suit.",
+    "ar": "تحقّق خلال ثلاثين ثانية من الخدمة المناسبة لمجالك من بين {{ counts.services }} خدمة، ثم سجّل. الاعتماد أولًا، ثم تقديم الخدمة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Register now",
+      "fr": "Inscrivez-vous maintenant",
+      "ar": "سجّل الآن"
+     },
+     "href": "/app/register",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Join",
+    "fr": "Rejoindre",
+    "ar": "انضم"
+   },
+   "note": {
+    "en": "A part is an investment in a path, not a job. W5D does not promise employment.",
+    "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet pas d’emploi.",
+    "ar": "الحصة مساهمة في مسار، وليست وظيفة. لا تَعِد W5D بتوفير فرص عمل."
+   }
+  },
+  {
+   "type": "steps",
+   "id": "join-steps",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "The path",
+    "fr": "Le parcours",
+    "ar": "المسار"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Check",
+      "fr": "Vérifier",
+      "ar": "تحقّق"
+     },
+     "body": {
+      "en": "Diploma level and field give you a short list of services.",
+      "fr": "Le niveau et le domaine de votre diplôme vous donnent accès à une courte liste de services.",
+      "ar": "يحدّد مستوى الدبلوم ومجاله قائمة مختصرة من الخدمات المناسبة لك."
+     },
+     "meta": {
+      "en": "30 seconds",
+      "fr": "30 secondes",
+      "ar": "30 ثانية"
+     }
+    },
+    {
+     "title": {
+      "en": "Register",
+      "fr": "S’inscrire",
+      "ar": "سجّل"
+     },
+     "body": {
+      "en": "Open an applicant file linked to one verified identity.",
+      "fr": "Ouvrez un dossier de candidature associé à une identité vérifiée.",
+      "ar": "أنشئ ملف متقدّم مرتبطًا بهوية واحدة تم التحقق منها."
+     },
+     "meta": {
+      "en": "5 minutes",
+      "fr": "5 minutes",
+      "ar": "5 دقائق"
+     }
+    },
+    {
+     "title": {
+      "en": "Certify",
+      "fr": "Obtenir la certification",
+      "ar": "احصل على الاعتماد"
+     },
+     "body": {
+      "en": "Complete task sets L1 to L4, reviewed by a competent reviewer.",
+      "fr": "Accomplissez les ensembles de tâches L1 à L4, qui seront examinés par un évaluateur compétent.",
+      "ar": "أكمل مجموعات المهام من L1 إلى L4، التي يراجعها مراجع مختص."
+     },
+     "meta": {
+      "en": "Weeks",
+      "fr": "Semaines",
+      "ar": "أسابيع"
+     }
+    },
+    {
+     "title": {
+      "en": "Deliver",
+      "fr": "Fournir les prestations",
+      "ar": "قدّم الخدمة"
+     },
+     "body": {
+      "en": "Join a team of about {{ experts.team_size }} and file weekly units.",
+      "fr": "Rejoignez une équipe d’environ {{ experts.team_size }} personnes et déposez des unités chaque semaine.",
+      "ar": "انضم إلى فريق يضم نحو {{ experts.team_size }} خبيرًا وقدّم وحدات أسبوعية."
+     },
+     "meta": {
+      "en": "Weekly",
+      "fr": "Chaque semaine",
+      "ar": "أسبوعيًا"
+     }
+    }
+   ]
+  },
+  {
+   "type": "gov-map",
+   "id": "join-gov",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Find your governorate",
+    "fr": "Trouvez votre gouvernorat",
+    "ar": "اعثر على ولايتك"
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Tunisia hub",
+      "fr": "Pôle tunisien",
+      "ar": "مركز تونس"
+     },
+     "href": "/countries/tunisia/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "notice",
+   "id": "join-limits",
+   "tier": "i",
+   "focus": 1
+  },
+  {
+   "type": "cta",
+   "id": "join-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Start with the **thirty-second check.**",
+    "fr": "Commencez par la **vérification en trente secondes.**",
+    "ar": "ابدأ **بالتحقّق في ثلاثين ثانية.**"
+   },
+   "body": {
+    "en": "No account needed.",
+    "fr": "Aucun compte requis.",
+    "ar": "لا حاجة إلى حساب."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

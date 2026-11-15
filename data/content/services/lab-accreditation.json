@@ -1,0 +1,167 @@
+{
+ "slug": "lab-accreditation",
+ "id": 75,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Laboratory Accreditation Support",
+  "fr": "Accompagnement à l’accréditation des laboratoires",
+  "ar": "دعم اعتماد المختبرات"
+ },
+ "short": {
+  "en": "The service provides iSO 17025, audits, method validation.",
+  "fr": "Préparer les laboratoires à une accréditation réelle.",
+  "ar": "إعداد المختبرات لاعتماد فعلي."
+ },
+ "abstract": {
+  "en": "Laboratory accreditation support — ISO 17025 implementation, internal audits, and method validation for university and commercial labs.",
+  "fr": "Accompagnement à l’accréditation des laboratoires — mise en œuvre de l’ISO 17025, audits internes et validation des méthodes pour les laboratoires universitaires et commerciaux.",
+  "ar": "دعم اعتماد المختبرات — تطبيق ISO 17025، وعمليات التدقيق الداخلي، والتحقق من صلاحية الطرق لمختبرات الجامعات والمختبرات التجارية."
+ },
+ "long": [
+  {
+   "en": "The Laboratory Accreditation Support service organises a weekly work package around method validation dossiers, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 method validation dossiers; 500 internal audit findings; 500 corrective action checks; 100 scope readiness assessments. Laboratory accreditation support — ISO 17025 implementation, internal audits, and method validation for university and commercial labs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only the competent accreditation body awards accreditation after assessment. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’accompagnement à l’accréditation des laboratoires organise un lot de travail hebdomadaire axé sur les dossiers de validation des méthodes, plutôt que de faire de la présence le produit lui-même. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 dossiers de validation des méthodes ; 500 constats d’audit interne ; 500 vérifications des actions correctives ; 100 évaluations de préparation à l’extension du champ d’accréditation. Accompagnement à l’accréditation des laboratoires — mise en œuvre de l’ISO 17025, audits internes et validation des méthodes pour les laboratoires universitaires et commerciaux. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que seul l’organisme d’accréditation compétent délivre l’accréditation après évaluation. Il s’agit de résultats par étapes issus de dossiers confiés, et non d’une promesse de réaliser un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة دعم اعتماد المختبرات حزمة عمل أسبوعية حول ملفات التحقق من صلاحية الطرق، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ القدرة الكاملة وتوفير الموارد، 200 ملف للتحقق من صلاحية الطرق؛ و500 من ملاحظات التدقيق الداخلي؛ و500 فحص للإجراءات التصحيحية؛ و100 تقييم للجاهزية لنطاق الاعتماد. دعم اعتماد المختبرات — تطبيق ISO 17025، وعمليات التدقيق الداخلي، والتحقق من صلاحية الطرق لمختبرات الجامعات والمختبرات التجارية. ويرتب المختصون هذه الطرق وفق حزمة العمل الأسبوعية المعتمدة. والحد الفاصل الناظم هو أن جهة الاعتماد المختصة وحدها تمنح الاعتماد بعد التقييم. وهذه مخرجات مرحلية لحالات مفوضة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `lab-accreditation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of method validation dossiers, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active tunisienne diplômée était au chômage au T2 2026, tandis que l’analyse de l’OCDE d’avril 2022 décrit le faible lien entre les qualifications et les exigences pratiques des employeurs. Aucun de ces chiffres ne permet d’établir le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, la supervision des méthodes et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne constitue pas un substitut adéquat à un service partagé responsable. Pour `lab-accreditation`, la réponse proposée est donc un processus contractuel doté d’un bénéficiaire désigné et d’une définition acceptée des dossiers de validation des méthodes, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من القوى العاملة التونسية من خريجي الجامعات كانت عاطلة عن العمل في الربع الثاني من 2026، فيما يصف تحليل OECD الصادر في أبريل 2022 ضعف الروابط بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا تثبت أي من الإحصائيتين عدد المختصين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل إتاحة المختبرات، والعمل تحت الإشراف على الطرق، واستمرارية تمويل البحث من مجموعة العاملين المستقلين بديلًا غير مكتمل عن خدمة مشتركة خاضعة للمساءلة. لذلك، فإن الاستجابة المقترحة لـ`lab-accreditation` هي سير عمل تعاقدي يحدد المستفيد ويعتمد تعريفًا مقبولًا لملفات التحقق من صلاحية الطرق، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the method validation dossiers acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks internal audit findings before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted method validation dossiers from rejected or deferred work and records blockers around corrective action checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des dossiers de validation des méthodes ; 100 responsables la déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les constats d’audit interne avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les dossiers de validation des méthodes acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux vérifications des actions correctives. Les examens par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول ملفات التحقق من صلاحية الطرق؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص ملاحظات التدقيق الداخلي قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير التجميعي للخدمة بين ملفات التحقق من صلاحية الطرق المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بفحوص الإجراءات التصحيحية. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "laboratory sciences, metrology and quality management",
+  "fr": "sciences de laboratoire, métrologie et management de la qualité",
+  "ar": "علوم المختبرات والمترولوجيا وإدارة الجودة"
+ },
+ "diploma": "maîtrise | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Method validation dossiers",
+    "fr": "Dossiers de validation des méthodes",
+    "ar": "ملفات التحقق من صلاحية الطرق"
+   },
+   "unit": {
+    "en": "method validation dossiers",
+    "fr": "dossiers de validation des méthodes",
+    "ar": "ملفات التحقق من صلاحية الطرق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Internal audit findings",
+    "fr": "Constats d’audit interne",
+    "ar": "ملاحظات التدقيق الداخلي"
+   },
+   "unit": {
+    "en": "internal audit findings",
+    "fr": "constats d’audit interne",
+    "ar": "ملاحظات التدقيق الداخلي"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Corrective action checks",
+    "fr": "Vérifications des actions correctives",
+    "ar": "فحوص الإجراءات التصحيحية"
+   },
+   "unit": {
+    "en": "corrective action checks",
+    "fr": "vérifications des actions correctives",
+    "ar": "فحوص الإجراءات التصحيحية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Scope readiness assessments",
+    "fr": "Évaluations de préparation à l’extension du champ d’accréditation",
+    "ar": "تقييمات الجاهزية لنطاق الاعتماد"
+   },
+   "unit": {
+    "en": "scope readiness assessments",
+    "fr": "évaluations de préparation à l’extension du champ d’accréditation",
+    "ar": "تقييمات الجاهزية لنطاق الاعتماد"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `lab-accreditation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the method validation dossiers to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `lab-accreditation` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + les identifiants de méthode/version et des données sources reproductibles, qui relient les dossiers de validation des méthodes à la source, à l’examinateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `lab-accreditation` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات الطريقة/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط ملفات التحقق من صلاحية الطرق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted method validation dossiers** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard ven. à 12:00 ; **≥2 dossiers de validation des méthodes acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux preuves** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم 9 تقارير أسبوعية على الأقل من أصل 10 تقارير مؤهلة** بحلول الجمعة 12:00؛ **قبول ملفين على الأقل للتحقق من صلاحية الطرق** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **طلب واحد على الأكثر لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. وهذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "only the competent accreditation body awards accreditation after assessment",
+  "fr": "seul l’organisme d’accréditation compétent délivre l’accréditation après évaluation",
+  "ar": "لا تمنح الاعتماد بعد التقييم إلا جهة الاعتماد المختصة"
+ },
+ "depends": [
+  {
+   "slug": "procurement",
+   "id": 46
+  },
+  {
+   "slug": "biotech",
+   "id": 121
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "procurement-reform",
+   "id": 82
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Consultant checklists replace laboratory competence → reconcile source records with the method validation dossiers acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les listes de contrôle des consultants se substituent à la compétence des laboratoires → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des dossiers de validation des méthodes et attribuer la responsabilité des actions correctives.",
+   "ar": "قوائم التحقق التي يعدها الاستشاريون تحل محل كفاءة المختبر ← طابق السجلات المصدرية مع قائمة التحقق من قبول ملفات التحقق من صلاحية الطرق، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Scope claims exceed validated methods → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les affirmations relatives au périmètre dépassent les méthodes validées → exiger des vérifications indépendantes des sources, un élément de comparaison et une incertitude explicitée avant toute acceptation.",
+   "ar": "تتجاوز ادعاءات النطاق ما تثبته الأساليب المعتمدة → يلزم التحقق من المصادر بشكل مستقل، واستخدام مصدر للمقارنة، والتصريح بوضوح عن مواطن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Corrective actions closed without evidence → reconcile source records with the method validation dossiers acceptance checklist and assign corrective-action ownership.",
+   "fr": "Actions correctives clôturées sans preuve → rapprocher les sources des dossiers de validation de la méthode et de la liste de contrôle d’acceptation, puis attribuer la responsabilité des actions correctives.",
+   "ar": "أُغلقت الإجراءات التصحيحية دون أدلة → طابق سجلات المصادر مع ملفات التحقق من صحة المنهج وقائمة التحقق للقبول، وحدد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "cultural-data",
+ "id": 26,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Cultural Data Governance",
+  "fr": "Gouvernance des données culturelles",
+  "ar": "حوكمة البيانات الثقافية"
+ },
+ "short": {
+  "en": "The service provides consent, provenance, repatriation frameworks.",
+  "fr": "Gouverner les données culturelles et leur provenance.",
+  "ar": "حوكمة البيانات الثقافية ومصادرها."
+ },
+ "abstract": {
+  "en": "Governance of cultural data — consent frameworks, provenance documentation, repatriation policy design, and legal review of cultural data collection, use, and sharing.",
+  "fr": "Gouvernance des données culturelles — cadres de consentement, documentation de la provenance, conception de politiques de rapatriement et examen juridique de la collecte, de l’utilisation et du partage des données culturelles.",
+  "ar": "حوكمة البيانات الثقافية — أطر الموافقة، وتوثيق مصدر البيانات، وتصميم سياسات الإعادة إلى أصحابها، والمراجعة القانونية لجمع البيانات الثقافية واستخدامها ومشاركتها."
+ },
+ "long": [
+  {
+   "en": "The Cultural Data Governance service organises a weekly work package around consent audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 consent audits; 3000 provenance records; 200 access agreements; 50 repatriation case reviews. Governance of cultural data — consent frameworks, provenance documentation, repatriation policy design, and legal review of cultural data collection, use, and sharing. Specialists sequence those methods against the accepted weekly package. The governing boundary is that access decisions preserve custodial authority and community restrictions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance des données culturelles organise un lot de travail hebdomadaire autour des audits de consentement, plutôt que de considérer la présence comme le produit livré. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 audits de consentement ; 3000 dossiers de provenance ; 200 accords d’accès ; 50 examens de dossiers de rapatriement. Gouvernance des données culturelles — cadres de consentement, documentation de la provenance, conception de politiques de rapatriement et examen juridique de la collecte, de l’utilisation et du partage des données culturelles. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les décisions d’accès préservent l’autorité des dépositaires et les restrictions imposées par les communautés. Il s’agit de livrables échelonnés issus de dossiers commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة حوكمة البيانات الثقافية حزمة عمل أسبوعية تتمحور حول عمليات تدقيق الموافقة، بدلاً من اعتبار الحضور هو الناتج. وتستهدف خطتها التجريبية، عند بلوغ الطاقة الكاملة وتوفير الموارد، إجراء 500 تدقيق للموافقة؛ وإنشاء 3000 سجل لمصدر البيانات؛ وإبرام 200 اتفاقية إتاحة؛ ومراجعة 50 حالة إعادة إلى أصحابها. حوكمة البيانات الثقافية — أطر الموافقة، وتوثيق مصدر البيانات، وتصميم سياسات الإعادة إلى أصحابها، والمراجعة القانونية لجمع البيانات الثقافية واستخدامها ومشاركتها. ويرتب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المقبولة. ويتمثل الحد الحاكم في أن تحافظ قرارات الإتاحة على سلطة الجهات القائمة على الحفظ والقيود التي تفرضها المجتمعات. وهذه مخرجات مرحلية لحالات مفوضة، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `cultural-data`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of consent audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La vue d’ensemble publiée par la Banque mondiale en 2022 compare 64,540 diplômés universitaires par an pendant les années universitaires 2012/13–2017/18 à 10,675 emplois hautement qualifiés supplémentaires nets par an en 2011–2017. Ce décalage historique étaye une hypothèse plus large de commande de prestations ; il ne permet pas d’établir les postes actuellement vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un commanditaire payeur et un accord de réutilisation. Pour `cultural-data`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des audits de consentement, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن لمحة البنك الدولي لعام 2022 بين 64,540 خريجاً جامعياً سنوياً خلال السنوات الأكاديمية 2012/13–2017/18 وبين 10,675 وظيفة إضافية صافية سنوياً في الفئات المهنية العليا خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع بشأن التكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القائمون على حفظ البيانات والمجتمعات من الخدمة من دون أن تكون لديهم ميزانية أو جهة تعاقد واحدة، لذا يجب تحديد جهة راعية ممولة واتفاقية لإعادة الاستخدام. وعليه، فإن الاستجابة المقترحة لمجال `cultural-data` هي سير عمل تعاقدي يحدد المستفيد بالاسم وتعريفاً مقبولاً لتدقيقات الموافقة، لا التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the consent audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks provenance records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted consent audits from rejected or deferred work and records blockers around access agreements. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits de consentement ; 100 responsables les déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de provenance avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les audits de consentement acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux accords d’accès. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات الموافقة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من سجلات مصدر البيانات قبل الموافقة. وتعيد مراجعة عشوائية بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين تدقيقات الموافقة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باتفاقيات الإتاحة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "cultural heritage, information governance, law and data stewardship",
+  "fr": "patrimoine culturel, gouvernance de l’information, droit et gestion responsable des données",
+  "ar": "التراث الثقافي، وحوكمة المعلومات، والقانون، والإشراف على البيانات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Consent audits",
+    "fr": "Audits de consentement",
+    "ar": "تدقيقات الموافقة"
+   },
+   "unit": {
+    "en": "consent audits",
+    "fr": "audits de consentement",
+    "ar": "تدقيقات الموافقة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Provenance records",
+    "fr": "Dossiers de provenance",
+    "ar": "سجلات مصدر البيانات"
+   },
+   "unit": {
+    "en": "provenance records",
+    "fr": "dossiers de provenance",
+    "ar": "سجلات المنشأ"
+   },
+   "target": 3000
+  },
+  {
+   "name": {
+    "en": "Access agreements",
+    "fr": "Accords d’accès",
+    "ar": "اتفاقيات الوصول"
+   },
+   "unit": {
+    "en": "access agreements",
+    "fr": "accords d’accès",
+    "ar": "اتفاقيات الوصول"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Repatriation case reviews",
+    "fr": "Examens des dossiers de rapatriement",
+    "ar": "مراجعات حالات الإعادة إلى الوطن"
+   },
+   "unit": {
+    "en": "repatriation case reviews",
+    "fr": "examens des dossiers de rapatriement",
+    "ar": "مراجعات حالات الإعادة إلى الوطن"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cultural-data` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the consent audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `cultural-data` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des sources expurgées et des comptes rendus de consultation, qui relient les audits de consentement à la source, à l’évaluateur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `cultural-data` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط عمليات تدقيق الموافقة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted consent audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant vendredi 12:00 ; **≥4 audits de consentement acceptés** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur éligible, et les défauts critiques de sécurité ou de confidentialité l’emportent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 عمليات تدقيق للموافقة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **طلب إعادة عمل واحد على الأكثر متعلق بالأدلة** لكل فريق-أسبوع. تغيّر الإجازات المعتمدة والتعديلات المقامَ المؤهل، وتتجاوز العيوب الحرجة المتعلقة بالسلامة والخصوصية أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "access decisions preserve custodial authority and community restrictions",
+  "fr": "les décisions d’accès préservent l’autorité des communautés dépositaires et leurs restrictions",
+  "ar": "تحافظ قرارات الوصول على سلطة الجهات الوصية والقيود التي تضعها المجتمعات"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "digital-identity",
+   "id": 111
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Open-data defaults violate restrictions → reconcile source records with the consent audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les paramètres par défaut des données ouvertes enfreignent les restrictions → rapprocher les documents sources de la liste de contrôle d’acceptation des audits de consentement et désigner un responsable des mesures correctives.",
+   "ar": "الإعدادات الافتراضية للبيانات المفتوحة تنتهك القيود ← طابِق سجلات المصدر مع قائمة التحقق لقبول عمليات تدقيق الموافقة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Provenance claims conceal illicit acquisition → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les déclarations de provenance dissimulent une acquisition illicite → exiger des vérifications indépendantes des sources, un élément de comparaison et une incertitude explicitement formulée avant toute acceptation.",
+   "ar": "ادعاءات المنشأ تحجب حيازة غير مشروعة ← اشترط التحقق المستقل من المصدر، ووجود عنصر للمقارنة، والتصريح الصريح بمواطن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Repatriation advice exceeds legal mandate → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les conseils en matière de rapatriement dépassent le mandat légal → obtenir la validation d’une autorité ou d’un juriste compétent et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تتجاوز المشورة بشأن الإعادة إلى الوطن التفويض القانوني ← احصل على تصديق الجهة المختصة قانونيًا أو رسميًا، وامنع القرارات التشغيلية غير المصرح بها."
+  }
+ ]
+}

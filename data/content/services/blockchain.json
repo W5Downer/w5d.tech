@@ -1,0 +1,167 @@
+{
+ "slug": "blockchain",
+ "id": 115,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Blockchain & Distributed Systems",
+  "fr": "Chaînes de blocs et systèmes distribués",
+  "ar": "البلوك تشين والأنظمة الموزعة"
+ },
+ "short": {
+  "en": "The service provides ledgers, smart contracts, audit.",
+  "fr": "Tester l'utilité et la sécurité des registres distribués.",
+  "ar": "اختبار جدوى السجلات الموزعة وأمنها."
+ },
+ "abstract": {
+  "en": "Blockchain and distributed systems — ledgers, smart contracts, and independent security audits for distributed applications.",
+  "fr": "Chaînes de blocs et systèmes distribués — registres, contrats intelligents et audits de sécurité indépendants pour les applications distribuées.",
+  "ar": "البلوك تشين والأنظمة الموزعة — السجلات، والعقود الذكية، وعمليات تدقيق أمنية مستقلة للتطبيقات الموزعة."
+ },
+ "long": [
+  {
+   "en": "The Blockchain & Distributed Systems service organises a weekly work package around ledger suitability assessments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 ledger suitability assessments; 200 smart contract test suites; 500 security review findings; 100 recovery simulations. Blockchain and distributed systems — ledgers, smart contracts, and independent security audits for distributed applications. Specialists sequence those methods against the accepted weekly package. The governing boundary is that a conventional signed database remains the baseline alternative. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Chaînes de blocs et systèmes distribués organise un lot de travail hebdomadaire autour des évaluations de l’adéquation des registres distribués, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 évaluations de l’adéquation des registres distribués ; 200 suites de tests de contrats intelligents ; 500 constats d’examen de sécurité ; 100 simulations de récupération. Chaînes de blocs et systèmes distribués — registres, contrats intelligents et audits de sécurité indépendants pour les applications distribuées. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est qu’une base de données classique signée reste l’alternative de référence. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse de mener à bien chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة البلوك تشين والأنظمة الموزعة حزمة عمل أسبوعية تتمحور حول تقييمات ملاءمة السجلات، بدلاً من اعتبار الحضور ناتج العمل. وتستهدف خطتها التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، إنجاز 100 تقييم لملاءمة السجلات؛ و200 مجموعة اختبارات للعقود الذكية؛ و500 نتيجة لمراجعات أمنية؛ و100 محاكاة للاستعادة. البلوك تشين والأنظمة الموزعة — السجلات، والعقود الذكية، وعمليات تدقيق أمنية مستقلة للتطبيقات الموزعة. ويرتّب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المقبولة. والبديل الأساسي المعتمد هو قاعدة بيانات تقليدية موقّعة. هذه مخرجات مرحلية لحالات جرى التكليف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `blockchain`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of ledger suitability assessments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude 2026 de la Banque mondiale sur les compétences numériques relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données formelles, urbaines et en ligne recueillies jusqu’en 2025. L’examen publié séparément par l’OCDE en juin 2024 documente les contraintes liées aux compétences des employeurs. Aucune de ces sources ne vérifie le nombre national de postes vacants dans cette niche technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable système engagé ; affecter des développeurs isolément ne garantit ni cette coordination ni l’existence d’un acheteur. Pour `blockchain`, la réponse proposée est donc un flux de travail sous contrat, avec un bénéficiaire désigné et une définition acceptée des évaluations de l’adéquation des registres distribués, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى الطلب على القدرات التقنية والمختلطة في مختلف الصناعات التونسية، مستندةً أساساً إلى بيانات إلكترونية رسمية وحضرية حتى عام 2025. وتوثّق مراجعة منظمة التعاون والتنمية الاقتصادية الصادرة في يونيو 2024، على نحو منفصل، قيود المهارات لدى أصحاب العمل. ولا يثبت أي من المصدرين إجمالي الوظائف الشاغرة على المستوى الوطني في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدمين والصيانة المستمرة وجود مسؤول ملتزم عن النظام؛ فتعيين مطورين كلٌّ على حدة لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، تتمثل الاستجابة المقترحة لـ`blockchain` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً مقبولاً لتقييمات ملاءمة السجلات، لا في التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the ledger suitability assessments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks smart contract test suites before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted ledger suitability assessments from rejected or deferred work and records blockers around security review findings. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des évaluations de l’adéquation des registres distribués ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les suites de tests de contrats intelligents avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les évaluations de l’adéquation des registres distribués acceptées des travaux rejetés ou reportés, et consigne les obstacles liés aux constats d’examen de sécurité. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تقييمات ملاءمة السجلات؛ ويوزّع 100 مدير المهام على الفرق، بحيث يضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من مجموعات اختبارات العقود الذكية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين تقييمات ملاءمة السجلات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المرتبطة بنتائج مراجعات الأمن. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Ledger suitability assessments",
+    "fr": "Évaluations de l’adéquation du registre",
+    "ar": "تقييمات مدى ملاءمة دفتر الأستاذ الموزع"
+   },
+   "unit": {
+    "en": "ledger suitability assessments",
+    "fr": "évaluations de l’adéquation du registre",
+    "ar": "تقييمات مدى ملاءمة دفتر الأستاذ الموزع"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Smart contract test suites",
+    "fr": "Suites de tests de contrats intelligents",
+    "ar": "مجموعات اختبارات العقود الذكية"
+   },
+   "unit": {
+    "en": "smart contract test suites",
+    "fr": "suites de tests de contrats intelligents",
+    "ar": "مجموعات اختبارات العقود الذكية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Security review findings",
+    "fr": "Constats de l’examen de sécurité",
+    "ar": "نتائج مراجعة الأمان"
+   },
+   "unit": {
+    "en": "security review findings",
+    "fr": "constats de l’examen de sécurité",
+    "ar": "نتائج مراجعة الأمان"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Recovery simulations",
+    "fr": "Simulations de récupération",
+    "ar": "محاكاة الاسترداد"
+   },
+   "unit": {
+    "en": "recovery simulations",
+    "fr": "simulations de récupération",
+    "ar": "محاكاة الاسترداد"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `blockchain` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the ledger suitability assessments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception `blockchain` lié à un cas comprend un dossier de réception PDF/A + un manifeste source CSV/JSON + le code et la configuration versionnés, les tests ainsi que les journaux de déploiement ou de récupération, et relie les évaluations de l’adéquation du registre à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `blockchain` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + الشيفرة والإعدادات ذات الإصدارات المحددة، والاختبارات، وسجلات النشر أو الاسترداد؛ وتربط تقييمات مدى ملاءمة دفتر الأستاذ الموزع بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted ledger suitability assessments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant ven. 12:00 ; **≥1 évaluation de l’adéquation du registre acceptée** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من تقييمات مدى ملاءمة دفتر الأستاذ الموزع** لكل فريق في الأسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة والتسويات المقام المؤهل، كما تتجاوز عيوب السلامة/الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "a conventional signed database remains the baseline alternative",
+  "fr": "une base de données classique signée reste l’option de référence",
+  "ar": "تظل قاعدة البيانات التقليدية الموقعة البديلَ الأساسي"
+ },
+ "depends": [
+  {
+   "slug": "regulatory-impact",
+   "id": 79
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "procurement",
+   "id": 46
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Immutable ledgers retain unlawful personal data → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les registres immuables conservent des données personnelles traitées illégalement → limiter les accès, caviarder les éléments probants diffusés et tester le processus d’accès restreint.",
+   "ar": "تحتفظ دفاتر الأستاذ غير القابلة للتغيير ببيانات شخصية جُمعت بصورة غير مشروعة → قلّل الوصول، واحجب البيانات من الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Contract bugs lock assets → reconcile source records with the ledger suitability assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les bogues des contrats bloquent les actifs → rapprocher les enregistrements sources de la liste de contrôle de réception des évaluations de l’adéquation du registre et désigner un responsable des mesures correctives.",
+   "ar": "تؤدي أخطاء العقود إلى تجميد الأصول → طابق السجلات المصدرية مع قائمة التحقق لقبول تقييمات مدى ملاءمة دفتر الأستاذ الموزع، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Token speculation replaces service utility → reconcile source records with the ledger suitability assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "La spéculation sur les jetons se substitue à l’utilité du service → rapprocher les enregistrements sources de la liste de contrôle de réception des évaluations de l’adéquation du registre et désigner un responsable des mesures correctives.",
+   "ar": "تحل المضاربة بالرموز محل المنفعة الخدمية → طابق السجلات المصدرية مع قائمة التحقق لقبول تقييمات مدى ملاءمة دفتر الأستاذ الموزع، وحدد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

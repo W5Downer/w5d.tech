@@ -1,0 +1,167 @@
+{
+ "slug": "digital-humanities",
+ "id": 7,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Digital Humanities Labs",
+  "fr": "Laboratoires des humanités numériques",
+  "ar": "مختبرات العلوم الإنسانية الرقمية"
+ },
+ "short": {
+  "en": "The service provides text mining, network analysis, scholarly tooling.",
+  "fr": "Produire des corpus et analyses reproductibles.",
+  "ar": "إنتاج مدونات وتحليلات قابلة لإعادة التنفيذ."
+ },
+ "abstract": {
+  "en": "Digital humanities research labs supporting scholars with text-mining pipelines, network analysis, geospatial humanities, and long-term preservation of scholarly digital outputs.",
+  "fr": "Laboratoires de recherche en humanités numériques qui accompagnent les chercheurs grâce à des chaînes de traitement de fouille de textes, à l’analyse de réseaux, aux humanités géospatiales et à la préservation à long terme des productions numériques scientifiques.",
+  "ar": "مختبرات للبحث في العلوم الإنسانية الرقمية، تدعم الباحثين عبر مسارات عمل للتنقيب في النصوص، وتحليل الشبكات، والعلوم الإنسانية الجغرافية المكانية، والحفظ طويل الأمد للمخرجات الرقمية للبحوث."
+ },
+ "long": [
+  {
+   "en": "The Digital Humanities Labs service organises a weekly work package around cleaned text records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 20000 cleaned text records; 5000 annotated passages; 100 reproducible notebooks; 50 scholarly datasets. Digital humanities research labs supporting scholars with text-mining pipelines, network analysis, geospatial humanities, and long-term preservation of scholarly digital outputs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that every text transformation retains the source identifier and editorial uncertainty. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des Laboratoires des humanités numériques organise un lot de travail hebdomadaire autour des documents textuels nettoyés, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 20000 documents textuels nettoyés ; 5000 passages annotés ; 100 carnets reproductibles ; 50 jeux de données scientifiques. Laboratoires de recherche en humanités numériques qui accompagnent les chercheurs grâce à des chaînes de traitement de fouille de textes, à l’analyse de réseaux, aux humanités géospatiales et à la préservation à long terme des productions numériques scientifiques. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que chaque transformation de texte conserve l’identifiant de la source et l’incertitude éditoriale. Il s’agit de résultats échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة مختبرات العلوم الإنسانية الرقمية حزمة عمل أسبوعية تتمحور حول سجلات النصوص المنقحة، بدلًا من اعتبار الحضور مخرجًا بحد ذاته. ووفق الخطة التجريبية وعند بلوغ الطاقة التشغيلية الكاملة وتوفير الموارد، تستهدف الخطة 20000 سجل نصي منقح؛ و5000 مقطع مشروح؛ و100 دفتر ملاحظات قابل لإعادة الإنتاج؛ و50 مجموعة بيانات بحثية. مختبرات للبحث في العلوم الإنسانية الرقمية، تدعم الباحثين عبر مسارات عمل للتنقيب في النصوص، وتحليل الشبكات، والعلوم الإنسانية الجغرافية المكانية، والحفظ طويل الأمد للمخرجات الرقمية للبحوث. ويرتب المتخصصون استخدام هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المقبولة. والضابط الأساسي هو احتفاظ كل تحويل للنص بمعرّف المصدر وما يحيط به من عدم يقين تحريري. وهذه مخرجات مرحلية مستمدة من حالات مكلّف بها، وليست وعدًا بإكمال برنامج وطني بأكمله كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `digital-humanities`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of cleaned text records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse 2022 de la Banque mondiale compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois hautement qualifiés nets supplémentaires par an entre 2011 et 2017. Cet écart historique étaye une hypothèse plus large en matière de commande de prestations ; il ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les organismes dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’une organisation contractante unique ; il faut donc identifier un commanditaire payeur et conclure un accord de réutilisation. Pour `digital-humanities`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des documents textuels nettoyés, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا خلال السنوات الأكاديمية 2012/13–2017/18 و10,675 وظيفة إضافية صافية سنويًا في الفئة العليا خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع بشأن التكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القائمون على حفظ الموارد والمجتمعات منها من دون امتلاك ميزانية أو وجود جهة تعاقد واحدة، لذا يجب تحديد جهة راعية تدفع التكاليف واتفاقية لإعادة الاستخدام. ومن ثم، فإن الاستجابة المقترحة لمجال `digital-humanities` هي سير عمل تعاقدي يحدد المستفيد بالاسم وتعريفًا مقبولًا لسجلات النصوص المنقحة، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the cleaned text records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks annotated passages before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted cleaned text records from rejected or deferred work and records blockers around reproducible notebooks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des documents textuels nettoyés ; 100 responsables le déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’une personne compétente chargée de la revue vérifie les passages annotés avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les documents textuels nettoyés acceptés des travaux rejetés ou reportés et consigne les blocages concernant les carnets reproductibles. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول سجلات النصوص المنقحة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص المقاطع المشروحة قبل اعتمادها. وتعيد عملية التدقيق العشوائي المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين سجلات النصوص المنقحة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بدفاتر الملاحظات القابلة لإعادة الإنتاج. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "literature, history, computational humanities and information science",
+  "fr": "littérature, histoire, humanités computationnelles et sciences de l’information",
+  "ar": "الأدب والتاريخ والعلوم الإنسانية الحاسوبية وعلوم المعلومات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Cleaned text records",
+    "fr": "Documents textuels nettoyés",
+    "ar": "سجلات نصية منقحة"
+   },
+   "unit": {
+    "en": "cleaned text records",
+    "fr": "documents textuels nettoyés",
+    "ar": "سجلات نصية منقحة"
+   },
+   "target": 20000
+  },
+  {
+   "name": {
+    "en": "Annotated passages",
+    "fr": "Passages annotés",
+    "ar": "مقاطع مشروحة"
+   },
+   "unit": {
+    "en": "annotated passages",
+    "fr": "passages annotés",
+    "ar": "مقاطع مشروحة"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Reproducible notebooks",
+    "fr": "Carnets reproductibles",
+    "ar": "دفاتر ملاحظات قابلة لإعادة الإنتاج"
+   },
+   "unit": {
+    "en": "reproducible notebooks",
+    "fr": "carnets reproductibles",
+    "ar": "دفاتر ملاحظات قابلة لإعادة الإنتاج"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Scholarly datasets",
+    "fr": "Jeux de données scientifiques",
+    "ar": "مجموعات بيانات علمية"
+   },
+   "unit": {
+    "en": "scholarly datasets",
+    "fr": "jeux de données scientifiques",
+    "ar": "مجموعات بيانات علمية"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `digital-humanities` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the cleaned text records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception en `digital-humanities` associé à un cas contient un dossier de réception PDF/A + un manifeste des sources CSV/JSON + des documents sources et de consultation expurgés, reliant les enregistrements textuels nettoyés à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة اعتماد `digital-humanities` المرتبطة بحالة ملف اعتماد بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط سجلات النصوص المنقحة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥160 accepted cleaned text records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard le vendredi à 12:00 ; **≥160 enregistrements textuels nettoyés et acceptés** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥160 سجل نص منقح** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات أو الترتيبات المعتمدة المقام المؤهل، فيما تتجاوز عيوب السلامة أو الخصوصية الحرجة التقييم الأخضر. هذه أهداف تجريبية وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "every text transformation retains the source identifier and editorial uncertainty",
+  "fr": "chaque transformation de texte conserve l’identifiant de la source et l’incertitude éditoriale",
+  "ar": "يحتفظ كل تحويل نصي بمعرّف المصدر وبمواضع عدم اليقين التحريري"
+ },
+ "depends": [
+  {
+   "slug": "research-data",
+   "id": 63
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "science-policy",
+   "id": 74
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "OCR errors become historical claims → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les erreurs d’OCR deviennent des affirmations historiques → exiger des vérifications indépendantes des sources, un élément de comparaison et une incertitude explicite avant acceptation.",
+   "ar": "قد تتحول أخطاء OCR إلى ادعاءات تاريخية ← لذا يلزم التحقق المستقل من المصدر، ومصدر مقارن، والتصريح صراحةً بعدم اليقين قبل القبول."
+  },
+  {
+   "en": "Copyright blocks redistribution → document permissions and obtain qualified rights review before release.",
+   "fr": "Les droits d’auteur empêchent la redistribution → documenter les autorisations et obtenir une expertise qualifiée en matière de droits avant publication.",
+   "ar": "قد تحول حقوق النشر دون إعادة التوزيع ← وثّق الأذونات واحصل على مراجعة مؤهلة للحقوق قبل النشر."
+  },
+  {
+   "en": "Networks suggest unsupported causation → reconcile source records with the cleaned text records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les réseaux suggèrent une causalité non étayée → rapprocher les documents sources de la liste de contrôle d’acceptation des enregistrements textuels nettoyés et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد توحي الشبكات بعلاقة سببية غير مدعومة ← طابق سجلات المصادر مع قائمة التحقق من قبول سجلات النصوص المنقحة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

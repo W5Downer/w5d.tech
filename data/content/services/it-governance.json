@@ -1,0 +1,167 @@
+{
+ "slug": "it-governance",
+ "id": 117,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "IT Governance & Compliance",
+  "fr": "Gouvernance et conformité informatiques",
+  "ar": "حوكمة تقنية المعلومات والامتثال"
+ },
+ "short": {
+  "en": "The service provides iSO 27001, audits, policies.",
+  "fr": "Gouverner les risques informatiques avec des preuves.",
+  "ar": "حوكمة المخاطر المعلوماتية بأدلة."
+ },
+ "abstract": {
+  "en": "IT governance and compliance — ISO 27001 implementation, audits, and policy frameworks for technology organizations.",
+  "fr": "Gouvernance et conformité informatiques — mise en œuvre d’ISO 27001, audits et cadres de politiques pour les organisations technologiques.",
+  "ar": "حوكمة تقنية المعلومات والامتثال — تنفيذ ISO 27001 والتدقيق وأطر السياسات للمؤسسات التقنية."
+ },
+ "long": [
+  {
+   "en": "The IT Governance & Compliance service organises a weekly work package around control evidence reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 1000 control evidence reviews; 200 policy gap analyses; 100 internal audit packages; 500 corrective action checks. IT governance and compliance — ISO 27001 implementation, audits, and policy frameworks for technology organizations. Specialists sequence those methods against the accepted weekly package. The governing boundary is that certification claims remain with authorised independent certification bodies. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance et de conformité informatiques organise un lot de travail hebdomadaire autour de revues des preuves de contrôle, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 1000 revues des preuves de contrôle ; 200 analyses des écarts de politiques ; 100 dossiers d’audit interne ; 500 vérifications des actions correctives. Gouvernance et conformité informatiques — mise en œuvre d’ISO 27001, audits et cadres de politiques pour les organisations technologiques. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite de gouvernance est que les déclarations relatives à la certification restent du ressort d’organismes indépendants de certification habilités. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة حوكمة تقنية المعلومات والامتثال حزمة عمل أسبوعية تتمحور حول مراجعة أدلة الضوابط، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند العمل بكامل الطاقة المموّلة والموارد، 1000 مراجعة لأدلة الضوابط؛ و200 تحليل لفجوات السياسات؛ و100 حزمة تدقيق داخلي؛ و500 فحص للإجراءات التصحيحية. حوكمة تقنية المعلومات والامتثال — تنفيذ ISO 27001 والتدقيق وأطر السياسات للمؤسسات التقنية. ويرتّب الاختصاصيون هذه الأساليب وفق حزمة العمل الأسبوعية المقبولة. والحدّ الحاكم هو أن تظل ادعاءات الحصول على الشهادات من اختصاص جهات منح الشهادات المستقلة المخوّلة. وهذه مخرجات مرحلية من حالات تم التعاقد بشأنها، وليست وعداً بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `it-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of control evidence reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale sur les compétences numériques de 2026 relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne, formelles et urbaines couvrant la période jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes des employeurs en matière de compétences. Aucune de ces sources ne vérifie le nombre national d’offres d’emploi dans ce créneau technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable du système engagé ; affecter des développeurs isolément ne garantit ni cette coordination ni la présence d’un acheteur. Pour `it-governance`, la réponse proposée est donc un processus sous contrat avec un bénéficiaire désigné et une définition acceptée des revues des preuves de contrôle, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تُظهر دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، مستندةً أساساً إلى أدلة إلكترونية رسمية وحضرية حتى عام 2025. ويوثّق استعراض OECD الصادر في يونيو 2024، بشكل منفصل، قيود المهارات لدى أصحاب العمل. ولا يتحقق أيٌّ من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا التخصص التقني. ويتطلب التكامل وقبول المستخدمين والصيانة المستمرة وجود مسؤول ملتزم عن النظام؛ فتعيين مطورين على نحو منفرد لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، فإن الاستجابة المقترحة ضمن `it-governance` هي سير عمل تعاقدي، له مستفيد محدد وتعريف مقبول لمراجعات أدلة الضوابط، وليس توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the control evidence reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks policy gap analyses before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted control evidence reviews from rejected or deferred work and records blockers around internal audit packages. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des revues des preuves de contrôle ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les analyses des écarts de politiques avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les revues des preuves de contrôle acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux dossiers d’audit interne. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات أدلة الضوابط؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفِرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مختص من تحليلات فجوات السياسات قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز تقرير الخدمة الموحّد بين مراجعات أدلة الضوابط المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بحزم التدقيق الداخلي. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Control evidence reviews",
+    "fr": "Revues des preuves de contrôle",
+    "ar": "مراجعات أدلة الضوابط"
+   },
+   "unit": {
+    "en": "control evidence reviews",
+    "fr": "revues des preuves de contrôle",
+    "ar": "مراجعات أدلة الضوابط"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Policy gap analyses",
+    "fr": "Analyses des écarts de politiques",
+    "ar": "تحليلات فجوات السياسات"
+   },
+   "unit": {
+    "en": "policy gap analyses",
+    "fr": "analyses des écarts de politiques",
+    "ar": "تحليلات فجوات السياسات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Internal audit packages",
+    "fr": "Dossiers d’audit interne",
+    "ar": "حزم التدقيق الداخلي"
+   },
+   "unit": {
+    "en": "internal audit packages",
+    "fr": "dossiers d’audit interne",
+    "ar": "حزم التدقيق الداخلي"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Corrective action checks",
+    "fr": "Vérifications des actions correctives",
+    "ar": "فحوص الإجراءات التصحيحية"
+   },
+   "unit": {
+    "en": "corrective action checks",
+    "fr": "vérifications des actions correctives",
+    "ar": "فحوص الإجراءات التصحيحية"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `it-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the control evidence reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `it-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + le code/la configuration versionnés, les tests et les journaux de déploiement ou de récupération, reliant les revues des preuves de contrôle à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `it-governance` المرتبطة بالحالة ملف قبول PDF/A + بيان مصادر CSV/JSON + الشفرة/الإعدادات ذات الإصدارات المحددة، والاختبارات، وسجلات النشر أو الاستعادة، بما يربط مراجعات أدلة الضوابط بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥8 accepted control evidence reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** remis avant ven. 12:00 ; **≥8 revues des preuves de contrôle acceptées** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥8 مراجعات لأدلة الضوابط** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تلغي التقييم الأخضر. هذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "certification claims remain with authorised independent certification bodies",
+  "fr": "les déclarations de certification restent du ressort des organismes de certification indépendants habilités",
+  "ar": "تظل ادعاءات الاعتماد من اختصاص هيئات الاعتماد المستقلة المخوّلة"
+ },
+ "depends": [
+  {
+   "slug": "lab-accreditation",
+   "id": 75
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "procurement-reform",
+   "id": 82
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Paper policies misrepresent deployed controls → reconcile source records with the control evidence reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les politiques sur papier donnent une image inexacte des contrôles déployés → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des examens des preuves relatives aux contrôles et attribuer la responsabilité des actions correctives.",
+   "ar": "السياسات الورقية لا تعكس الضوابط المطبقة فعليًا ← طابق السجلات المصدرية مع قائمة التحقق من قبول مراجعات أدلة الضوابط، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Auditor conflicts undermine findings → reconcile source records with the control evidence reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les conflits d’intérêts des auditeurs fragilisent les conclusions → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des examens des preuves relatives aux contrôles et attribuer la responsabilité des actions correctives.",
+   "ar": "تضارب المصالح لدى المدققين يقوض النتائج ← طابق السجلات المصدرية مع قائمة التحقق من قبول مراجعات أدلة الضوابط، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Framework mapping hides local legal duties → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "La correspondance avec les référentiels occulte les obligations légales locales → obtenir la validation d’une autorité compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "مواءمة الأطر تحجب الالتزامات القانونية المحلية ← احصل على تحقق من جهة قانونية أو رسمية مختصة، وامنع اتخاذ قرارات تشغيلية غير مخوّلة."
+  }
+ ]
+}

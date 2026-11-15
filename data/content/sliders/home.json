@@ -1,0 +1,266 @@
+{
+ "slug": "home",
+ "label": {
+  "en": "W5D highlights",
+  "fr": "À la une de W5D",
+  "ar": "أبرز أخبار W5D"
+ },
+ "interval": 8000,
+ "slides": [
+  {
+   "gradient": "peak",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "For investors",
+    "fr": "Pour les investisseurs",
+    "ar": "للمستثمرين"
+   },
+   "title": {
+    "en": "Take a part of W5D **today**. Then again tomorrow.",
+    "fr": "Prenez une part de W5D **aujourd’hui**. Puis encore une demain.",
+    "ar": "احصل على حصة من W5D **اليوم**. ثم مرة أخرى غداً."
+   },
+   "lead": {
+    "en": "One part is {{ price.day }} {{ money.currency }} per day at today's published price. Buy one part, or commit to at least one part every day until {{ dates.deadline }}.",
+    "fr": "Une part coûte {{ price.day }} {{ money.currency }} par jour au prix publié aujourd’hui. Achetez une part, ou engagez-vous à en acheter au moins une chaque jour jusqu’au {{ dates.deadline }}.",
+    "ar": "سعر الحصة الواحدة هو {{ price.day }} {{ money.currency }} يومياً وفق السعر المنشور اليوم. اشترِ حصة واحدة، أو التزم بشراء حصة واحدة على الأقل كل يوم حتى {{ dates.deadline }}."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the daily subscription",
+      "fr": "Voir la souscription quotidienne",
+      "ar": "اطّلع على الاشتراك اليومي"
+     },
+     "href": "/subscription/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "A part is an investment in a path, not a job. No return is promised. Read the declared limits.",
+    "fr": "Une part est un investissement dans une trajectoire, pas un emploi. Aucun rendement n’est promis. Consultez les limites déclarées.",
+    "ar": "الحصة استثمار في مسار، وليست وظيفة. لا يوجد عائد مضمون. اقرأ الحدود المُعلنة."
+   }
+  },
+  {
+   "gradient": "governance",
+   "icon": "users",
+   "eyebrow": {
+    "en": "For expert team managers",
+    "fr": "Pour les responsables d’équipes d’experts",
+    "ar": "لمديري فرق الخبراء"
+   },
+   "title": {
+    "en": "Lead about {{ experts.team_size }} experts. **Run** a service.",
+    "fr": "Encadrez environ {{ experts.team_size }} experts. **Pilotez** un service.",
+    "ar": "أدر فريقًا يضم نحو {{ experts.team_size }} خبيرًا. **أدِر** خدمة."
+   },
+   "lead": {
+    "en": "W5D is recruiting managers first: people who can turn a rubric into weekly work for a team and sign a report they are willing to defend.",
+    "fr": "W5D recrute d’abord des responsables : des personnes capables de traduire un référentiel en tâches hebdomadaires pour une équipe et de signer un rapport qu’elles sont prêtes à défendre.",
+    "ar": "تبدأ W5D بتوظيف المديرين: أشخاص يستطيعون تحويل معيار تقييم إلى مهام أسبوعية لفريق، والتوقيع على تقرير مستعدين للدفاع عنه."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the roles",
+      "fr": "Voir les postes",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "{{ d.managers_target }} manager seats exist by design. Today the certified headcount is {{ d.experts_current }}.",
+    "fr": "{{ d.managers_target }} postes de responsable sont prévus dès la conception. Aujourd’hui, l’effectif certifié est de {{ d.experts_current }}.",
+    "ar": "هناك {{ d.managers_target }} منصبًا للمديرين، وهذا مقصود. يبلغ عدد الخبراء المعتمدين اليوم {{ d.experts_current }}."
+   }
+  },
+  {
+   "gradient": "technology",
+   "icon": "graduation-cap",
+   "eyebrow": {
+    "en": "For graduates",
+    "fr": "Pour les diplômés",
+    "ar": "للخريجين"
+   },
+   "title": {
+    "en": "Your diploma can become a **service**.",
+    "fr": "Votre diplôme peut devenir un **service**.",
+    "ar": "يمكن أن يصبح دبلومك **خدمة**."
+   },
+   "lead": {
+    "en": "Check in thirty seconds which of the {{ counts.services }} services matches your field. Certification tasks come first; delivery follows; nothing is promised before evidence.",
+    "fr": "En trente secondes, vérifiez lequel des {{ counts.services }} services correspond à votre domaine. Les tâches de certification viennent d’abord ; la prestation suit. Rien n’est promis sans éléments probants.",
+    "ar": "تحقّق في ثلاثين ثانية من الخدمة التي تناسب تخصصك من بين {{ counts.services }} خدمة. تأتي مهام الاعتماد أولًا؛ ثم يبدأ تقديم الخدمات؛ ولا وعود قبل توافر الأدلة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "How it works",
+      "fr": "Comment ça marche",
+      "ar": "كيف يعمل"
+     },
+     "href": "/how-it-works/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "sciences",
+   "icon": "network",
+   "eyebrow": {
+    "en": "The ontology",
+    "fr": "L’ontologie",
+    "ar": "الأنطولوجيا"
+   },
+   "title": {
+    "en": "**{{ counts.macros }} macro works.** {{ counts.services }} services. One vocabulary.",
+    "fr": "**{{ counts.macros }} macro-domaines.** {{ counts.services }} services. Un vocabulaire commun.",
+    "ar": "**{{ counts.macros }} مجالًا كبيرًا.** {{ counts.services }} خدمة. ومفردات موحّدة."
+   },
+   "lead": {
+    "en": "Cultures, Built Environment, Sciences, Governance and Technology, {{ experts.services_per_macro }} services each, every one with a deliverable unit and a declared boundary.",
+    "fr": "Cultures, environnement bâti, sciences, gouvernance et technologie : {{ experts.services_per_macro }} services chacun, tous dotés d’une unité de prestation et d’un périmètre défini.",
+    "ar": "الثقافات، والبيئة العمرانية، والعلوم، والحوكمة والتكنولوجيا؛ {{ experts.services_per_macro }} خدمة لكل مجال، ولكل خدمة وحدة تسليم وحدود معلنة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Explore the macro works",
+      "fr": "Explorer les macro-domaines",
+      "ar": "استكشف المجالات الكبرى"
+     },
+     "href": "/macro-works/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Read the ontology",
+      "fr": "Lire l’ontologie",
+      "ar": "اقرأ الأنطولوجيا"
+     },
+     "href": "/ontology/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "cultures",
+   "icon": "calendar-check",
+   "eyebrow": {
+    "en": "Daily subscription",
+    "fr": "Abonnement journalier",
+    "ar": "اشتراك يومي"
+   },
+   "title": {
+    "en": "At least one part, **every day**.",
+    "fr": "Au moins une part, **chaque jour**.",
+    "ar": "جزء واحد على الأقل، **كل يوم**."
+   },
+   "lead": {
+    "en": "Choose parts per day, a start date and a number of days. See the full daily schedule before you confirm. Pause or cancel with your management key.",
+    "fr": "Choisissez le nombre de parts par jour, une date de début et un nombre de jours. Consultez le calendrier quotidien complet avant de confirmer. Mettez en pause ou annulez avec votre clé de gestion.",
+    "ar": "اختر عدد الأجزاء يوميًا، وتاريخ البدء، وعدد الأيام. اطّلع على الجدول اليومي كاملًا قبل التأكيد. أوقف الاشتراك مؤقتًا أو ألغِه باستخدام مفتاح الإدارة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Start a daily subscription",
+      "fr": "Commencer un abonnement quotidien",
+      "ar": "ابدأ اشتراكًا يوميًا"
+     },
+     "href": "/subscription/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Open the price chart",
+      "fr": "Ouvrir la grille tarifaire",
+      "ar": "افتح جدول الأسعار"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken until the payment provider is connected.",
+    "fr": "Mode démo : aucun paiement n’est prélevé tant que le prestataire de paiement n’est pas connecté.",
+    "ar": "الوضع التجريبي: لن يُحصّل أي مبلغ قبل ربط مزوّد الدفع."
+   }
+  },
+  {
+   "gradient": "calm",
+   "icon": "scale",
+   "eyebrow": {
+    "en": "What we do not promise",
+    "fr": "Ce que nous ne promettons pas",
+    "ar": "ما لا نعد به"
+   },
+   "title": {
+    "en": "No job. No return. **No design ceiling mistaken for a headcount.**",
+    "fr": "Pas d’emploi. Pas de rendement. **Ne confondez pas un plafond de conception avec un effectif.**",
+    "ar": "لا وظيفة. لا عائد. **لا تخلط سقف التصميم مع عدد الموظفين.**"
+   },
+   "lead": {
+    "en": "\"{{ d.experts_target }} experts\" is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: a design equation. Today: {{ experts.developers_today }} developers deliver; {{ d.experts_current }} experts are certified.",
+    "fr": "« {{ d.experts_target }} experts » correspond à {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }} : une équation de conception. Aujourd’hui : {{ experts.developers_today }} développeurs assurent la prestation ; {{ d.experts_current }} experts sont certifiés.",
+    "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: معادلة تصميمية. اليوم، يقدّم {{ experts.developers_today }} مطورًا الخدمات؛ وقد حصل {{ d.experts_current }} خبيرًا على الاعتماد."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the declared limits",
+      "fr": "Consulter les limites déclarées",
+      "ar": "اطّلع على الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the status page",
+      "fr": "Voir la page d’état",
+      "ar": "عرض صفحة الحالة"
+     },
+     "href": "/status/",
+     "style": "ghost"
+    }
+   ]
+  }
+ ]
+}

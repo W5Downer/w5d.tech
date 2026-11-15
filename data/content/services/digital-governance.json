@@ -1,0 +1,167 @@
+{
+ "slug": "digital-governance",
+ "id": 83,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Digital Governance & e-Services",
+  "fr": "Gouvernance numérique et services en ligne",
+  "ar": "الحوكمة الرقمية والخدمات الإلكترونية"
+ },
+ "short": {
+  "en": "The service provides portals, identity, service design.",
+  "fr": "Concevoir des démarches publiques accessibles.",
+  "ar": "تصميم إجراءات عامة ميسرة."
+ },
+ "abstract": {
+  "en": "Digital governance and e-services — public service portals, digital identity, and service-design methods that put citizens first.",
+  "fr": "Gouvernance numérique et services en ligne — portails de services publics, identité numérique et méthodes de conception de services qui donnent la priorité aux citoyens.",
+  "ar": "الحوكمة الرقمية والخدمات الإلكترونية — بوابات الخدمات العامة، والهوية الرقمية، وأساليب تصميم الخدمات التي تضع المواطنين أولًا."
+ },
+ "long": [
+  {
+   "en": "The Digital Governance & e-Services service organises a weekly work package around service journey maps, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 service journey maps; 1000 form usability tests; 100 interoperability specifications; 100 service pilot evaluations. Digital governance and e-services — public service portals, digital identity, and service-design methods that put citizens first. Specialists sequence those methods against the accepted weekly package. The governing boundary is that citizens retain offline alternatives and administrations control legal decisions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Gouvernance numérique et services en ligne organise un lot de travail hebdomadaire autour des parcours de service, plutôt que de considérer la présence comme un résultat. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 200 parcours de service ; 1000 tests d’utilisabilité des formulaires ; 100 spécifications d’interopérabilité ; 100 évaluations de projets pilotes de services. Gouvernance numérique et services en ligne — portails de services publics, identité numérique et méthodes de conception de services qui donnent la priorité aux citoyens. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les citoyens conservent des solutions hors ligne et que les administrations maîtrisent les décisions juridiques. Il s’agit de résultats échelonnés issus de dossiers commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة الحوكمة الرقمية والخدمات الإلكترونية حزمة عمل أسبوعية حول خرائط رحلة الخدمة، بدلًا من اعتبار الحضور هو الناتج. وتستهدف خطتها التجريبية، عند توافر القدرة الكاملة والموارد اللازمة، إعداد 200 خريطة لرحلة الخدمة؛ وإجراء 1000 اختبار لقابلية استخدام النماذج؛ ووضع 100 مواصفة للتشغيل البيني؛ وتقييم 100 تجربة تجريبية للخدمات. الحوكمة الرقمية والخدمات الإلكترونية — بوابات الخدمات العامة، والهوية الرقمية، وأساليب تصميم الخدمات التي تضع المواطنين أولًا. ويرتب المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو احتفاظ المواطنين ببدائل غير رقمية، وبقاء القرارات القانونية تحت سيطرة الإدارات. وهذه مخرجات مرحلية لحالات مُسندة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `digital-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of service journey maps, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40 % des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons d’Enterprise Survey libellées 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent de l’existence d’une autorité légitime, de dossiers administratifs partagés et de responsables de mise en œuvre ; on ne peut pas présumer qu’un produit de conseil sans ces utilisateurs améliore une institution. Pour `digital-governance`, la réponse proposée est donc un processus de travail contractualisé avec un bénéficiaire désigné et une définition acceptée des parcours de service, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقرب من 40% من الشركات التونسية المشمولة تحدد عدم كفاية مهارات القوى العاملة باعتبارها عائقًا رئيسيًا، استنادًا إلى مقارنات Enterprise Survey الموسومة بعام 2020 أو بأحدث سنة متاحة. كما يشير التحليل القانوني الذي أعده Kotrane في 2024 إلى ندرة الوظائف الرسمية والقيود المؤسسية، لا إلى مشكلة تدريب فحسب. وتتوقف الفوائد على وجود صلاحيات مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسن أداء مؤسسة ما في غياب المستخدمين المعنيين. لذلك، يتمثل المقترح لـ`digital-governance` في سير عمل تعاقدي يحدد جهة مستفيدة وتعريفًا معتمدًا لخرائط رحلة الخدمة، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the service journey maps acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks form usability tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted service journey maps from rejected or deferred work and records blockers around interoperability specifications. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit la grille d’acceptation des parcours de service ; 100 responsables traduisent celle-ci en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les tests d’utilisabilité des formulaires avant leur approbation. L’audit aléatoire proposé de 5% revérifie les pièces justificatives sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. Le bilan du service distingue les parcours de service acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux spécifications d’interopérabilité. Les examens des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول خرائط رحلة الخدمة؛ ويحوّل 100 مدير هذه المعايير إلى مهام تُسند إلى فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من اختبارات قابلية استخدام النماذج قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين خرائط رحلة الخدمة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمواصفات التشغيل البيني. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Service journey maps",
+    "fr": "Parcours de service",
+    "ar": "خرائط رحلة الخدمة"
+   },
+   "unit": {
+    "en": "service journey maps",
+    "fr": "parcours de service",
+    "ar": "خرائط رحلة الخدمة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Form usability tests",
+    "fr": "Tests d’utilisabilité des formulaires",
+    "ar": "اختبارات قابلية استخدام النماذج"
+   },
+   "unit": {
+    "en": "form usability tests",
+    "fr": "tests d’utilisabilité des formulaires",
+    "ar": "اختبارات قابلية استخدام النماذج"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Interoperability specifications",
+    "fr": "Spécifications d’interopérabilité",
+    "ar": "مواصفات التشغيل البيني"
+   },
+   "unit": {
+    "en": "interoperability specifications",
+    "fr": "spécifications d’interopérabilité",
+    "ar": "مواصفات التشغيل البيني"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Service pilot evaluations",
+    "fr": "Évaluations de pilotes de services",
+    "ar": "تقييمات تجارب الخدمات"
+   },
+   "unit": {
+    "en": "service pilot evaluations",
+    "fr": "évaluations de pilotes de services",
+    "ar": "تقييمات تجارب الخدمات"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `digital-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the service journey maps to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception `digital-governance` lié à un cas comprend un dossier de réception PDF/A + un manifeste source CSV/JSON + des documents sources et des comptes rendus de consultation expurgés, qui relient les cartographies du parcours de service à la source, à la personne chargée de la revue, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `digital-governance` المرتبطة بالحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، وتربط خرائط رحلة الخدمة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted service journey maps** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 cartographies du parcours de service acceptées** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés autorisés et les aménagements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score favorable. Il s’agit d’objectifs pour le pilote, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من خرائط رحلة الخدمة** لكل فريق-أسبوع، وفقًا لتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. وتؤدي الإجازات والتعديلات المعتمدة إلى تغيير المقام المؤهل، فيما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "citizens retain offline alternatives and administrations control legal decisions",
+  "fr": "les citoyens conservent des solutions hors ligne et les administrations gardent le contrôle des décisions juridiques",
+  "ar": "يحتفظ المواطنون ببدائل غير متصلة بالإنترنت، وتتحكم الإدارات في القرارات القانونية"
+ },
+ "depends": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  },
+  {
+   "slug": "digital-identity",
+   "id": 111
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "software-eng",
+   "id": 105
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Online-only forms exclude users → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les formulaires accessibles uniquement en ligne excluent des usagers → inclure l’examen par les usagers concernés, publier les hypothèses de sélection et maintenir une voie de réclamation.",
+   "ar": "النماذج المتاحة عبر الإنترنت فقط تستبعد المستخدمين ← إشراك المستخدمين المتأثرين في المراجعة، ونشر افتراضات الاختيار، والإبقاء على مسار للتظلمات."
+  },
+  {
+   "en": "Identity errors deny services → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les erreurs d’identité privent des personnes de services → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "أخطاء الهوية تحرم الأشخاص من الخدمات ← تقليل نطاق الوصول، وتنقيح الأدلة المنشورة، واختبار سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Back-office bottlenecks persist behind polished portals → reconcile source records with the service journey maps acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les goulets d’étranglement persistent en arrière-guichet malgré des portails soignés → rapprocher les documents sources de la liste de contrôle de réception des cartographies du parcours de service et attribuer la responsabilité des mesures correctives.",
+   "ar": "استمرار الاختناقات في الإجراءات الخلفية رغم تحسين البوابات ← مطابقة السجلات المصدرية مع قائمة التحقق لقبول خرائط رحلة الخدمة، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

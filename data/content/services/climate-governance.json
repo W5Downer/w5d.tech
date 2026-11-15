@@ -1,0 +1,167 @@
+{
+ "slug": "climate-governance",
+ "id": 90,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Climate Governance & NDCs",
+  "fr": "Gouvernance climatique et CDN",
+  "ar": "حوكمة المناخ والمساهمات المحددة وطنياً"
+ },
+ "short": {
+  "en": "The service provides mRV, policy alignment, reporting.",
+  "fr": "Relier les engagements climatiques aux données vérifiables.",
+  "ar": "ربط الالتزامات المناخية ببيانات قابلة للتحقق."
+ },
+ "abstract": {
+  "en": "Climate governance — measurement, reporting, and verification (MRV), policy alignment, and NDC reporting for national climate commitments.",
+  "fr": "Gouvernance climatique — mesure, notification et vérification (MRV), alignement des politiques et rapports sur les CDN pour les engagements climatiques nationaux.",
+  "ar": "حوكمة المناخ — القياس والإبلاغ والتحقق (MRV)، ومواءمة السياسات، والإبلاغ عن المساهمات المحددة وطنياً في إطار الالتزامات المناخية الوطنية."
+ },
+ "long": [
+  {
+   "en": "The Climate Governance & NDCs service organises a weekly work package around mrv dataset reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 mrv dataset reviews; 100 ndc implementation briefs; 200 policy consistency checks; 100 reporting workbooks. Climate governance — measurement, reporting, and verification (MRV), policy alignment, and NDC reporting for national climate commitments. Specialists sequence those methods against the accepted weekly package. The governing boundary is that emission claims state system boundaries, baselines and responsible data owners. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Gouvernance climatique et CDN organise un lot de travail hebdomadaire autour de l’examen des jeux de données MRV, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens de jeux de données MRV ; 100 notes de mise en œuvre des CDN ; 200 contrôles de cohérence des politiques ; 100 classeurs de reporting. Gouvernance climatique — mesure, notification et vérification (MRV), alignement des politiques et rapports sur les CDN pour les engagements climatiques nationaux. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les déclarations relatives aux émissions précisent les limites du système, les valeurs de référence et les responsables des données. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة حوكمة المناخ والمساهمات المحددة وطنياً حزمة عمل أسبوعية تتمحور حول مراجعات مجموعات بيانات MRV، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر كامل الموارد والقدرة، إنجاز 200 مراجعة لمجموعات بيانات MRV؛ و100 موجز لتنفيذ المساهمات المحددة وطنياً؛ و200 فحص لاتساق السياسات؛ و100 مصنف للإبلاغ. حوكمة المناخ — القياس والإبلاغ والتحقق (MRV)، ومواءمة السياسات، والإبلاغ عن المساهمات المحددة وطنياً في إطار الالتزامات المناخية الوطنية. ويرتب المتخصصون هذه الأساليب ضمن حزمة العمل الأسبوعية المقبولة. ويقتضي الضابط الأساسي أن تحدد ادعاءات الانبعاثات حدود النظام وخطوط الأساس ومسؤولي البيانات. وهذه مخرجات مرحلية لحالات تعاقدية، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `climate-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of mrv dataset reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes dans le réseau de distribution de SONEDE, qui atteignaient 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service particulier. La séparation des propriétaires d’actifs, des budgets d’infrastructure et des responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `climate-governance`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des examens de jeux de données MRV, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في مجال الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE الذي بلغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول على هذه الخدمة بعينها. وقد يؤدي اختلاف مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم تكليف جهات بتنفيذ أعمال مفيدة تقنياً. لذلك، يتمثل النهج المقترح لـ`climate-governance` في سير عمل تعاقدي يحدد المستفيد وتعريفاً مقبولاً لمراجعات مجموعات بيانات MRV، لا في تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the mrv dataset reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks ndc implementation briefs before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted mrv dataset reviews from rejected or deferred work and records blockers around policy consistency checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens de jeux de données MRV ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les notes de mise en œuvre des CDN avant leur approbation. L’audit aléatoire proposé de 5% revérifie les justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens de jeux de données MRV acceptés des travaux rejetés ou différés et consigne les obstacles liés aux contrôles de cohérence des politiques. Les examens menés par les responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات مجموعات بيانات MRV؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل موجزات تنفيذ المساهمات المحددة وطنياً قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين مراجعات مجموعات بيانات MRV المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بفحوص اتساق السياسات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "climate policy, environmental economics and emissions accounting",
+  "fr": "politique climatique, économie de l’environnement et comptabilisation des émissions",
+  "ar": "سياسات المناخ، والاقتصاد البيئي، ومحاسبة الانبعاثات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "MRV dataset reviews",
+    "fr": "Examens des jeux de données MRV",
+    "ar": "مراجعات مجموعات بيانات mrv"
+   },
+   "unit": {
+    "en": "mrv dataset reviews",
+    "fr": "examens des jeux de données mrv",
+    "ar": "مراجعات مجموعات بيانات mrv"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "NDC implementation briefs",
+    "fr": "Notes de synthèse sur la mise en œuvre des NDC",
+    "ar": "موجزات تنفيذ NDC"
+   },
+   "unit": {
+    "en": "ndc implementation briefs",
+    "fr": "notes de synthèse sur la mise en œuvre des ndc",
+    "ar": "موجزات تنفيذ NDC"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Policy consistency checks",
+    "fr": "Vérifications de cohérence des politiques",
+    "ar": "عمليات التحقق من اتساق السياسات"
+   },
+   "unit": {
+    "en": "policy consistency checks",
+    "fr": "vérifications de cohérence des politiques",
+    "ar": "عمليات التحقق من اتساق السياسات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Reporting workbooks",
+    "fr": "Cahiers de reporting",
+    "ar": "مصنفات إعداد التقارير"
+   },
+   "unit": {
+    "en": "reporting workbooks",
+    "fr": "cahiers de reporting",
+    "ar": "مصنفات إعداد التقارير"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `climate-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the mrv dataset reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `climate-governance` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et de consultation expurgés, qui relient les examens des jeux de données mrv à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `climate-governance` المرتبطة بالحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات مجموعات بيانات mrv بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted mrv dataset reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant ven. 12:00 ; **≥2 examens acceptés de jeux de données mrv** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur éligible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول Fri 12:00؛ **قبول ≥2 من مراجعات مجموعات بيانات mrv** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل يتعلق بالأدلة** لكل فريق-أسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة التقييم الأخضر. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "emission claims state system boundaries, baselines and responsible data owners",
+  "fr": "les déclarations relatives aux émissions précisent les limites du système, les niveaux de référence et les responsables des données",
+  "ar": "توضح ادعاءات الانبعاثات حدود النظام وخطوط الأساس ومالكي البيانات المسؤولين"
+ },
+ "depends": [
+  {
+   "slug": "climate-modelling",
+   "id": 58
+  },
+  {
+   "slug": "energy-audits",
+   "id": 124
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "flood-defence",
+   "id": 48
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Double counting inflates reductions → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Le double comptage gonfle les réductions → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicite avant acceptation.",
+   "ar": "يؤدي العد المزدوج إلى تضخيم التخفيضات ← يُشترط إجراء تحقق مستقل من المصدر، واستخدام قيمة مرجعية، وبيان صريح لعدم اليقين قبل القبول."
+  },
+  {
+   "en": "Unfunded targets presented as delivery → reconcile source records with the mrv dataset reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des objectifs non financés présentés comme des réalisations → rapprocher les documents sources de la liste de contrôle d’acceptation des examens des jeux de données mrv et attribuer la responsabilité des mesures correctives.",
+   "ar": "عرض أهداف غير ممولة على أنها قابلة للتنفيذ ← مطابقة سجلات المصدر مع قائمة التحقق من قبول مراجعات مجموعات بيانات mrv، وتحديد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Poor baselines conceal increasing emissions → reconcile source records with the mrv dataset reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des niveaux de référence inadéquats dissimulent une hausse des émissions → rapprocher les documents sources de la liste de contrôle d’acceptation des examens des jeux de données mrv et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد تخفي خطوط الأساس الضعيفة تزايد الانبعاثات ← مطابقة سجلات المصدر مع قائمة التحقق من قبول مراجعات مجموعات بيانات mrv، وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "border-migration",
+ "id": 89,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Border & Migration Governance",
+  "fr": "Gouvernance des frontières et des migrations",
+  "ar": "حوكمة الحدود والهجرة"
+ },
+ "short": {
+  "en": "The service provides documentation, screening, rights.",
+  "fr": "Améliorer les procédures migratoires et les droits.",
+  "ar": "تحسين إجراءات الهجرة وضمان الحقوق."
+ },
+ "abstract": {
+  "en": "Border and migration governance — documentation, screening protocols, and rights-based migration frameworks aligned with international law.",
+  "fr": "Gouvernance des frontières et des migrations — documentation, protocoles de contrôle et cadres migratoires fondés sur les droits et conformes au droit international.",
+  "ar": "حوكمة الحدود والهجرة — التوثيق، وبروتوكولات الفرز، وأطر الهجرة القائمة على الحقوق والمتوافقة مع القانون الدولي."
+ },
+ "long": [
+  {
+   "en": "The Border & Migration Governance service organises a weekly work package around documentation pathway maps, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 documentation pathway maps; 200 rights information sessions; 500 referral quality checks; 100 mobility agreement reviews. Border and migration governance — documentation, screening protocols, and rights-based migration frameworks aligned with international law. Specialists sequence those methods against the accepted weekly package. The governing boundary is that support never confers border enforcement powers or substitutes for legal advice. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Gouvernance des frontières et des migrations organise un lot de travail hebdomadaire autour des cartes des parcours de documentation, plutôt que de considérer la participation comme le produit. À pleine capacité dotée des ressources nécessaires, son plan pilote prévoit 100 cartes des parcours de documentation ; 200 séances d’information sur les droits ; 500 contrôles de la qualité des orientations ; 100 examens d’accords de mobilité. Gouvernance des frontières et des migrations — documentation, protocoles de contrôle et cadres migratoires fondés sur les droits et conformes au droit international. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite fondamentale est que l’accompagnement ne confère jamais de pouvoirs de contrôle aux frontières et ne se substitue pas à un conseil juridique. Il s’agit de livrables échelonnés issus de cas faisant l’objet d’un mandat, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة حوكمة الحدود والهجرة حزمة عمل أسبوعية تتمحور حول خرائط مسارات التوثيق، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توفير القدرة التشغيلية والموارد بالكامل، إعداد 100 خريطة لمسارات التوثيق؛ وعقد 200 جلسة للتوعية بالحقوق؛ وإجراء 500 عملية للتحقق من جودة الإحالات؛ ومراجعة 100 اتفاقية تنقّل. حوكمة الحدود والهجرة — التوثيق، وبروتوكولات الفرز، وأطر الهجرة القائمة على الحقوق والمتوافقة مع القانون الدولي. ويُنسّق المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. والحد الفاصل الناظم هو أن الدعم لا يمنح مطلقًا صلاحيات إنفاذ الحدود ولا يحل محل المشورة القانونية. وهذه مخرجات مرحلية لحالات مفوّضة، وليست وعدًا باستكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `border-migration`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of documentation pathway maps, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40 % des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, d’après les comparaisons des enquêtes auprès des entreprises intitulées 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème qui se résoudrait par la seule formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut supposer qu’un produit de conseil améliore une institution sans ces utilisateurs. Pour `border-migration`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire nommé et d’une définition acceptée des cartes des parcours de documentation, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن نحو 40% من الشركات التونسية المشمولة ترى أن عدم كفاية مهارات القوى العاملة يشكل قيدًا رئيسيًا، وذلك استنادًا إلى مقارنات مسح المؤسسات المصنّفة على أنها لعام 2020 أو لأحدث سنة متاحة. كما يحدد التحليل القانوني الذي أعدّه Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها عوامل، لا مجرد مشكلة تدريب. وتتوقف الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسّن مؤسسة ما من دون هؤلاء المستخدمين. لذلك، يتمثل النهج المقترح لخدمة `border-migration` في سير عمل تعاقدي، له مستفيد محدد وتعريف معتمد لخرائط مسارات التوثيق، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the documentation pathway maps acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks rights information sessions before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted documentation pathway maps from rejected or deferred work and records blockers around referral quality checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères de réception des cartes des parcours de documentation ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les séances d’information sur les droits avant leur approbation. L’audit aléatoire proposé de 5 % vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le suivi du service distingue les cartes des parcours de documentation acceptées des travaux rejetés ou différés et consigne les obstacles liés aux contrôles de la qualité des orientations. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول خرائط مسارات التوثيق؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مؤهل من جلسات التوعية بالحقوق قبل الموافقة عليها. وتُعيد عملية التدقيق العشوائي المقترحة بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين خرائط مسارات التوثيق المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بعمليات التحقق من جودة الإحالات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "migration studies, law, public administration and languages",
+  "fr": "études migratoires, droit, administration publique et langues",
+  "ar": "دراسات الهجرة والقانون والإدارة العامة واللغات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Documentation pathway maps",
+    "fr": "Cartographies des parcours documentaires",
+    "ar": "خرائط مسارات التوثيق"
+   },
+   "unit": {
+    "en": "documentation pathway maps",
+    "fr": "cartographies des parcours documentaires",
+    "ar": "خرائط مسارات التوثيق"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Rights information sessions",
+    "fr": "Séances d’information sur les droits",
+    "ar": "جلسات توعية بالحقوق"
+   },
+   "unit": {
+    "en": "rights information sessions",
+    "fr": "séances d’information sur les droits",
+    "ar": "جلسات توعية بالحقوق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Referral quality checks",
+    "fr": "Contrôles de la qualité des orientations",
+    "ar": "فحوص جودة الإحالات"
+   },
+   "unit": {
+    "en": "referral quality checks",
+    "fr": "contrôles de la qualité des orientations",
+    "ar": "فحوص جودة الإحالات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Mobility agreement reviews",
+    "fr": "Examens des accords de mobilité",
+    "ar": "مراجعات اتفاقيات التنقل"
+   },
+   "unit": {
+    "en": "mobility agreement reviews",
+    "fr": "examens des accords de mobilité",
+    "ar": "مراجعات اتفاقيات التنقل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `border-migration` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the documentation pathway maps to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `border-migration` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des documents sources et des comptes rendus de consultation expurgés, qui relient les cartographies des parcours documentaires à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة في مجال `border-migration` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات مصادر ومشاورات منقحة لحجب المعلومات، وتربط خرائط مسارات التوثيق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted documentation pathway maps** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant ven. 12:00 ; **≥1 cartographie des parcours documentaires acceptée** par équipe et par semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**قبول خريطة واحدة على الأقل لمسارات التوثيق** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب نقص الأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتلغي عيوب السلامة/الخصوصية الحرجة صلاحية النتيجة الخضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "support never confers border enforcement powers or substitutes for legal advice",
+  "fr": "l’accompagnement ne confère jamais de pouvoirs de contrôle aux frontières et ne se substitue pas à un avis juridique",
+  "ar": "لا يمنح الدعم مطلقًا صلاحيات إنفاذ قوانين الحدود ولا يحل محل المشورة القانونية"
+ },
+ "depends": [
+  {
+   "slug": "cultural-diplomacy",
+   "id": 18
+  },
+  {
+   "slug": "social-methods",
+   "id": 73
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Documentation support enables discrimination → reconcile source records with the documentation pathway maps acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’accompagnement documentaire favorise la discrimination → rapprocher les documents sources de la liste de contrôle d’acceptation des cartographies des parcours documentaires et désigner un responsable des mesures correctives.",
+   "ar": "قد يتيح دعم التوثيق التمييز → طابق سجلات المصادر مع قائمة التحقق لقبول خرائط مسارات التوثيق، وحدد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Sensitive status shared without authority → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Un statut sensible est communiqué sans autorisation → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "مشاركة معلومات عن وضع حساس دون تفويض → قلل نطاق الوصول، ونقّح الأدلة المعدّة للإفصاح لحجب المعلومات، واختبر آلية الوصول المقيّد."
+  },
+  {
+   "en": "Recruitment pathways expose workers to fees → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les parcours de recrutement exposent les travailleurs à des frais → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "قد تعرض مسارات التوظيف العمال لرسوم → قلل نطاق الوصول، ونقّح الأدلة المعدّة للإفصاح لحجب المعلومات، واختبر آلية الوصول المقيّد."
+  }
+ ]
+}

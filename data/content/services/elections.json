@@ -1,0 +1,167 @@
+{
+ "slug": "elections",
+ "id": 92,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Elections & Civic Participation",
+  "fr": "Élections et participation citoyenne",
+  "ar": "الانتخابات والمشاركة المدنية"
+ },
+ "short": {
+  "en": "The service provides roll management, observation, civic tech.",
+  "fr": "Soutenir une participation civique non partisane.",
+  "ar": "دعم مشاركة مدنية غير حزبية."
+ },
+ "abstract": {
+  "en": "Elections and civic participation — voter roll management, election observation, and civic-tech platforms that increase participation.",
+  "fr": "Élections et participation citoyenne — gestion des listes électorales, observation électorale et plateformes de technologie civique qui favorisent la participation.",
+  "ar": "الانتخابات والمشاركة المدنية — إدارة سجلات الناخبين، ومراقبة الانتخابات، ومنصات التكنولوجيا المدنية التي تعزز المشاركة."
+ },
+ "long": [
+  {
+   "en": "The Elections & Civic Participation service organises a weekly work package around accessibility reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 accessibility reviews; 200 civic information resources; 100 observation training sessions; 1000 roll quality test cases. Elections and civic participation — voter roll management, election observation, and civic-tech platforms that increase participation. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only electoral authorities maintain official rolls and accredited observers conduct observation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Élections et participation citoyenne organise un lot de travail hebdomadaire centré sur les examens d’accessibilité, plutôt que de considérer la présence comme un produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens d’accessibilité ; 200 ressources d’information civique ; 100 sessions de formation à l’observation ; 1000 cas de test de la qualité des listes. Élections et participation citoyenne — gestion des listes électorales, observation électorale et plateformes de technologie civique qui favorisent la participation. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle de gouvernance est que seules les autorités électorales tiennent les listes officielles et que l’observation est menée par des observateurs accrédités. Il s’agit de livrables échelonnés issus de cas commandités, et non d’une promesse de réaliser un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة الانتخابات والمشاركة المدنية حزمة عمل أسبوعية تتمحور حول مراجعات إمكانية الوصول، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر الطاقة الاستيعابية الكاملة والموارد اللازمة، إجراء 200 مراجعة لإمكانية الوصول؛ وإعداد 200 مورد للمعلومات المدنية؛ وتنفيذ 100 جلسة تدريب على المراقبة؛ وإجراء 1000 حالة اختبار لجودة السجل. الانتخابات والمشاركة المدنية — إدارة سجلات الناخبين، ومراقبة الانتخابات، ومنصات التكنولوجيا المدنية التي تعزز المشاركة. ويرتب الاختصاصيون هذه الأساليب ضمن حزمة العمل الأسبوعية المقبولة. ويتمثل الحد الفاصل الحاكم في أن السلطات الانتخابية وحدها تتولى إدارة السجلات الرسمية، وأن المراقبين المعتمدين هم من يجرون المراقبة. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `elections`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of accessibility reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’enquête sur les entreprises désignées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane de 2024 souligne également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème pouvant être résolu uniquement par la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliorera une institution. Pour `elections`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des examens d’accessibilité, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة باعتباره عائقًا رئيسيًا، استنادًا إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، وليس مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة وسجلات إدارية مشتركة وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسن أداء مؤسسة من دون إشراك مستخدميه. لذلك، تتمثل الاستجابة المقترحة في `elections` في مسار عمل تعاقدي يحدد جهة مستفيدة وتعريفًا مقبولًا لمراجعات إمكانية الوصول، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the accessibility reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks civic information resources before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted accessibility reviews from rejected or deferred work and records blockers around observation training sessions. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens d’accessibilité ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les ressources d’information civique avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens d’accessibilité acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux sessions de formation à l’observation. Les examens menés par les responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1 000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول مراجعات إمكانية الوصول؛ ويوزع 100 مدير العمل على الفرق، بحيث يضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل موارد المعلومات المدنية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز تقرير الخدمة الإجمالي بين مراجعات إمكانية الوصول المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بجلسات التدريب على المراقبة. وينسق قادة المجموعات مراجعة الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "political science, election law, accessibility and civic education",
+  "fr": "sciences politiques, droit électoral, accessibilité et éducation civique",
+  "ar": "العلوم السياسية، وقانون الانتخابات، وإمكانية الوصول، والتثقيف المدني"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Accessibility reviews",
+    "fr": "Examens d’accessibilité",
+    "ar": "مراجعات إمكانية الوصول"
+   },
+   "unit": {
+    "en": "accessibility reviews",
+    "fr": "examens d’accessibilité",
+    "ar": "مراجعات إمكانية الوصول"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Civic information resources",
+    "fr": "Ressources d’information civique",
+    "ar": "موارد المعلومات المدنية"
+   },
+   "unit": {
+    "en": "civic information resources",
+    "fr": "ressources d’information civique",
+    "ar": "موارد المعلومات المدنية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Observation training sessions",
+    "fr": "Sessions de formation à l’observation",
+    "ar": "جلسات التدريب على المراقبة"
+   },
+   "unit": {
+    "en": "observation training sessions",
+    "fr": "sessions de formation à l'observation",
+    "ar": "جلسات تدريب على الملاحظة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Roll quality test cases",
+    "fr": "Cas de test de qualité des listes électorales",
+    "ar": "حالات اختبار جودة سجل الناخبين"
+   },
+   "unit": {
+    "en": "roll quality test cases",
+    "fr": "cas de test de qualité des listes électorales",
+    "ar": "حالات اختبار جودة سجل الناخبين"
+   },
+   "target": 1000
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `elections` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the accessibility reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d'acceptation `elections` lié à un dossier contient un dossier d'acceptation PDF/A + un manifeste source CSV/JSON + des documents sources et de consultation expurgés, établissant le lien entre les examens d'accessibilité et la source, l'évaluateur, la version, le registre des exceptions et l'autorisation.",
+  "ar": "تتضمن حزمة قبول `elections` المرتبطة بحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات إمكانية الوصول بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted accessibility reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 examens d'accessibilité acceptés** par équipe-semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les aménagements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s'agit d'objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من مراجعات إمكانية الوصول** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، بينما تتغلب العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على النتيجة الخضراء. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "only electoral authorities maintain official rolls and accredited observers conduct observation",
+  "fr": "seules les autorités électorales tiennent les listes officielles et les observateurs accrédités assurent l'observation électorale",
+  "ar": "تتولى السلطات الانتخابية وحدها صيانة السجلات الرسمية، ويجري المراقبون المعتمدون أعمال المراقبة"
+ },
+ "depends": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  },
+  {
+   "slug": "cybersecurity",
+   "id": 106
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Partisan selection undermines neutrality → reconcile source records with the accessibility reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Une sélection partisane compromet la neutralité → rapprocher les documents sources de la liste de contrôle d'acceptation des examens d'accessibilité et attribuer la responsabilité des mesures correctives.",
+   "ar": "يُقوّض الاختيار الحزبي الحياد → طابِق سجلات المصدر بقائمة التحقق لقبول مراجعات إمكانية الوصول، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Voter information exposes personal data → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les informations sur les électeurs exposent des données personnelles → limiter les accès, expurger les éléments probants diffusés et tester le processus d'accès restreint.",
+   "ar": "تكشف معلومات الناخبين بيانات شخصية → قلّل نطاق الوصول، ونقّح الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Unofficial guidance contradicts electoral rules → reconcile source records with the accessibility reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des consignes non officielles contredisent les règles électorales → rapprocher les documents sources de la liste de contrôle d'acceptation des examens d'accessibilité et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتعارض الإرشادات غير الرسمية مع القواعد الانتخابية → طابِق سجلات المصدر بقائمة التحقق لقبول مراجعات إمكانية الوصول، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

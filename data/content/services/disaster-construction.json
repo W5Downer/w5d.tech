@@ -1,0 +1,167 @@
+{
+ "slug": "disaster-construction",
+ "id": 38,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Disaster-Resilient Construction",
+  "fr": "Construction résiliente aux catastrophes",
+  "ar": "البناء القادر على الصمود أمام الكوارث"
+ },
+ "short": {
+  "en": "The service provides seismic, flood, climate adaptation.",
+  "fr": "Préparer des constructions résistantes aux aléas.",
+  "ar": "إعداد مبان مقاومة للأخطار."
+ },
+ "abstract": {
+  "en": "Disaster-resilient construction — seismic detailing, flood-resistant design, climate-adaptation standards, and post-disaster reconstruction frameworks.",
+  "fr": "Construction résiliente aux catastrophes — conception parasismique, conception résistante aux inondations, normes d’adaptation au changement climatique et cadres de reconstruction après catastrophe.",
+  "ar": "البناء القادر على الصمود أمام الكوارث — التفاصيل الزلزالية، والتصميم المقاوم للفيضانات، ومعايير التكيف مع تغير المناخ، وأطر إعادة الإعمار بعد الكوارث."
+ },
+ "long": [
+  {
+   "en": "The Disaster-Resilient Construction service organises a weekly work package around hazard design reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 hazard design reviews; 500 structural detailing checks; 200 evacuation layout audits; 100 retrofit priority files. Disaster-resilient construction — seismic detailing, flood-resistant design, climate-adaptation standards, and post-disaster reconstruction frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that qualified engineers validate hazard assumptions and structural calculations. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Construction résiliente aux catastrophes organise un lot de travaux hebdomadaire autour des revues de conception tenant compte des aléas, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 revues de conception tenant compte des aléas ; 500 contrôles des détails de conception structurelle ; 200 audits des plans d’évacuation ; 100 dossiers de priorisation des travaux de rénovation. Construction résiliente aux catastrophes — conception parasismique, conception résistante aux inondations, normes d’adaptation au changement climatique et cadres de reconstruction après catastrophe. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire approuvé. La règle fondamentale est que des ingénieurs qualifiés valident les hypothèses relatives aux aléas et les calculs structurels. Il s’agit de résultats échelonnés issus de cas faisant l’objet d’un mandat, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة البناء القادر على الصمود أمام الكوارث حزمة عمل أسبوعية تتمحور حول مراجعات تصميم المخاطر، بدلًا من اعتبار الحضور هو المنتج. وتبلغ خطة الخدمة التجريبية، عند التشغيل بكامل الطاقة مع توفير الموارد، 200 مراجعة لتصميم المخاطر؛ و500 فحص للتفاصيل الإنشائية؛ و200 تدقيق لمخططات الإخلاء؛ و100 ملف لتحديد أولويات أعمال التأهيل. البناء القادر على الصمود أمام الكوارث — التفاصيل الزلزالية، والتصميم المقاوم للفيضانات، ومعايير التكيف مع تغير المناخ، وأطر إعادة الإعمار بعد الكوارث. ويحدد المختصون تسلسل هذه الأساليب وفقًا للحزمة الأسبوعية المعتمدة. ويقضي الضابط الناظم بأن يتحقق مهندسون مؤهلون من افتراضات المخاطر والحسابات الإنشائية. وهذه مخرجات مرحلية للحالات التي جرى التكليف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `disaster-construction`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of hazard design reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, et non l’existence d’une commande financée pour ce service particulier. La séparation entre les propriétaires des actifs, les budgets d’infrastructure et les responsabilités environnementales peut laisser sans mandat des travaux pourtant utiles sur le plan technique. Pour `disaster-construction`, la réponse proposée consiste donc en un processus de travail contractuel, avec un bénéficiaire désigné et une définition approuvée des revues de conception tenant compte des aléas, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 تحديات تونس المتعلقة بالمياه والسواحل والتحول في مجال الطاقة، بما فيها فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قابل للقياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي انفصال مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنيًا. لذلك، يتمثل النهج المقترح لـ`disaster-construction` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لمراجعات تصميم المخاطر، لا في تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the hazard design reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks structural detailing checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted hazard design reviews from rejected or deferred work and records blockers around evacuation layout audits. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des revues de conception tenant compte des aléas ; 100 responsables les déclinent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles des détails de conception structurelle avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants à la source et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le récapitulatif consolidé du service distingue les revues de conception tenant compte des aléas acceptées des travaux rejetés ou reportés, et consigne les obstacles liés aux audits des plans d’évacuation. Les revues des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول مراجعات تصميم المخاطر؛ ويحوّل 100 مدير هذا المعيار إلى تكليفات فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يراجع مراجع مختص فحوصات التفاصيل الإنشائية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين مراجعات تصميم المخاطر المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بتدقيق مخططات الإخلاء. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Hazard design reviews",
+    "fr": "Revues de conception tenant compte des aléas",
+    "ar": "مراجعات تصميم المخاطر"
+   },
+   "unit": {
+    "en": "hazard design reviews",
+    "fr": "revues de conception tenant compte des aléas",
+    "ar": "مراجعات تصميم المخاطر"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Structural detailing checks",
+    "fr": "Contrôles des détails de conception structurelle",
+    "ar": "فحوصات التفاصيل الإنشائية"
+   },
+   "unit": {
+    "en": "structural detailing checks",
+    "fr": "contrôles des détails de conception structurelle",
+    "ar": "فحوصات التفاصيل الإنشائية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Evacuation layout audits",
+    "fr": "Audits des plans d’évacuation",
+    "ar": "تدقيق مخططات الإخلاء"
+   },
+   "unit": {
+    "en": "evacuation layout audits",
+    "fr": "audits des plans d’évacuation",
+    "ar": "عمليات تدقيق مخططات الإخلاء"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Retrofit priority files",
+    "fr": "dossiers prioritaires de rénovation",
+    "ar": "ملفات أولويات إعادة التأهيل"
+   },
+   "unit": {
+    "en": "retrofit priority files",
+    "fr": "dossiers prioritaires de rénovation",
+    "ar": "ملفات أولويات إعادة التأهيل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `disaster-construction` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the hazard design reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation lié à un cas de `disaster-construction` comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des fichiers d’inspection/de photos géoréférencés ou des fichiers de conception, qui relient les revues de conception des risques à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لأعمال `disaster-construction` ملف قبول PDF/A + بيانًا بالمصادر بتنسيق CSV/JSON + ملفات معاينة/صور أو تصميم محددة جغرافيًا، وتربط مراجعات تصميم المخاطر بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted hazard design reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥2 revues de conception des risques acceptées** par équipe-semaine, en fonction de la complexité du cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من مراجعات تصميم المخاطر** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. تغيّر الإجازات/التعديلات المعتمدة المقام المؤهل، وتتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على التقييم الأخضر. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "qualified engineers validate hazard assumptions and structural calculations",
+  "fr": "des ingénieurs qualifiés valident les hypothèses relatives aux risques et les calculs structurels",
+  "ar": "يتحقق مهندسون مؤهلون من افتراضات المخاطر والحسابات الإنشائية"
+ },
+ "depends": [
+  {
+   "slug": "climate-modelling",
+   "id": 58
+  },
+  {
+   "slug": "crisis-governance",
+   "id": 101
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "disaster-tech",
+   "id": 130
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "11",
+   "target": "11"
+  },
+  {
+   "goal": "13",
+   "target": "13.1"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Old hazard maps understate floods → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Des cartes anciennes des risques sous-estiment les inondations → exiger l’approbation d’un responsable compétent en matière de sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "تُقلّل خرائط المخاطر القديمة من تقدير الفيضانات → يُشترط اعتماد سلامة من جهة مختصة، وتجارب مضبوطة، ومسوّغ موثق لإيقاف العمل."
+  },
+  {
+   "en": "Standard details fail on local soils → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les détails standard ne conviennent pas aux sols locaux → exiger l’approbation d’un responsable compétent en matière de sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "لا تلائم التفاصيل القياسية أنواع التربة المحلية → يُشترط اعتماد سلامة من جهة مختصة، وتجارب مضبوطة، ومسوّغ موثق لإيقاف العمل."
+  },
+  {
+   "en": "Retrofitting compromises evacuation routes → reconcile source records with the hazard design reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "La rénovation compromet les itinéraires d’évacuation → rapprocher les documents sources de la liste de contrôle d’acceptation des revues de conception des risques et attribuer la responsabilité des mesures correctives.",
+   "ar": "تُخلّ إعادة التأهيل بمسارات الإخلاء → طابِق سجلات المصادر مع قائمة التحقق لقبول مراجعات تصميم المخاطر، وحدّد مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

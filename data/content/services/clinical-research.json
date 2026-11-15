@@ -1,0 +1,167 @@
+{
+ "slug": "clinical-research",
+ "id": 53,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Clinical Research Coordination",
+  "fr": "Coordination de la recherche clinique",
+  "ar": "تنسيق البحوث السريرية"
+ },
+ "short": {
+  "en": "The service provides protocol design, ethics, site monitoring.",
+  "fr": "Coordonner des recherches cliniques autorisées.",
+  "ar": "تنسيق بحوث سريرية مرخصة."
+ },
+ "abstract": {
+  "en": "Clinical research coordination — protocol design, ethics submissions, site monitoring, and Good Clinical Practice compliance for academic and industry sponsors.",
+  "fr": "Coordination de la recherche clinique — conception de protocoles, soumissions aux comités d’éthique, suivi des sites et conformité aux bonnes pratiques cliniques pour les promoteurs universitaires et industriels.",
+  "ar": "تنسيق البحوث السريرية — تصميم البروتوكولات، وتقديم طلبات الأخلاقيات، ومراقبة المواقع، والامتثال لممارسات التجارب السريرية الجيدة، لصالح الجهات الراعية الأكاديمية والصناعية."
+ },
+ "long": [
+  {
+   "en": "The Clinical Research Coordination service organises a weekly work package around protocol review packages, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 protocol review packages; 100 ethics submission checks; 200 site monitoring reports; 500 training attestations. Clinical research coordination — protocol design, ethics submissions, site monitoring, and Good Clinical Practice compliance for academic and industry sponsors. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only approved protocols and authorised clinical sites may recruit participants. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de coordination de la recherche clinique organise un lot de travail hebdomadaire autour des dossiers d’examen de protocoles, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 dossiers d’examen de protocoles ; 100 vérifications de soumissions aux comités d’éthique ; 200 rapports de suivi des sites ; 500 attestations de formation. Coordination de la recherche clinique — conception de protocoles, soumissions aux comités d’éthique, suivi des sites et conformité aux bonnes pratiques cliniques pour les promoteurs universitaires et industriels. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que seuls les protocoles approuvés et les sites cliniques autorisés peuvent recruter des participants. Il s’agit de produits échelonnés issus de cas commandités, et non d’une promesse de mener à bien chaque semaine un programme national complet.",
+   "ar": "تنظّم خدمة تنسيق البحوث السريرية حزمة عمل أسبوعية تتمحور حول حزم مراجعة البروتوكولات، بدلاً من اعتبار الحضور هو الناتج. وتبلغ الخطة التجريبية عند توافر الطاقة الاستيعابية الكاملة والموارد اللازمة 100 حزمة لمراجعة البروتوكولات؛ و100 عملية تحقق من طلبات الأخلاقيات؛ و200 تقرير لمراقبة المواقع؛ و500 إفادة إتمام تدريب. تنسيق البحوث السريرية — تصميم البروتوكولات، وتقديم طلبات الأخلاقيات، ومراقبة المواقع، والامتثال لممارسات التجارب السريرية الجيدة، لصالح الجهات الراعية الأكاديمية والصناعية. ويُنسّق المختصون هذه الأساليب وفقاً للحزمة الأسبوعية المقبولة. ويتمثل القيد الحاكم في عدم السماح بتجنيد المشاركين إلا بموجب بروتوكولات معتمدة وفي مواقع سريرية مخوّلة. وهذه مخرجات مرحلية لحالات متعاقد عليها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `clinical-research`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of protocol review packages, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015–2020, tandis que l’INS estime le chômage des diplômés à 26.6% au Q2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne saurait remplacer des compétences en santé vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement, d’informations sécurisées et d’installations autorisées, plutôt que d’un vivier de main-d’œuvre non agréé. Pour `clinical-research`, la réponse proposée est donc un processus sous contrat, avec un bénéficiaire désigné et une définition acceptée des dossiers d’examen de protocoles, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، فيما يقدّر INS بطالة الخريجين بنسبة 26.6% في Q2 2026. وتُظهر هاتان الفئتان المختلفتان سبب عدم إمكانية اعتبار توافر الخريجين عموماً بديلاً عن التحقق من الكفاءات الصحية. فمستخدمو البحوث الصحية والمعدات يحتاجون إلى موظفين مؤهلين وموافقة مستنيرة ومعلومات آمنة ومرافق مخوّلة، لا إلى قوة عاملة غير مرخّصة. ولذلك، فإن الاستجابة المقترحة لـ`clinical-research` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً مقبولاً لحزم مراجعة البروتوكولات، لا تجنيداً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the protocol review packages acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks ethics submission checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted protocol review packages from rejected or deferred work and records blockers around site monitoring reports. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des dossiers d’examen de protocoles ; 100 responsables la traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un relecteur compétent vérifie les vérifications des soumissions aux comités d’éthique avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les dossiers d’examen de protocoles acceptés des travaux rejetés ou reportés et consigne les blocages concernant les rapports de suivi des sites. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول حزم مراجعة البروتوكولات؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفِرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات التحقق من طلبات الأخلاقيات قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين حزم مراجعة البروتوكولات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتقارير مراقبة المواقع. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "clinical research methods, pharmacy, life sciences and regulated health professions",
+  "fr": "méthodes de recherche clinique, pharmacie, sciences de la vie et professions de santé réglementées",
+  "ar": "مناهج البحوث السريرية، والصيدلة، وعلوم الحياة، والمهن الصحية الخاضعة للتنظيم"
+ },
+ "diploma": "maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Protocol review packages",
+    "fr": "Dossiers d’examen des protocoles",
+    "ar": "حزم مراجعة البروتوكول"
+   },
+   "unit": {
+    "en": "protocol review packages",
+    "fr": "dossiers d’examen des protocoles",
+    "ar": "حزم مراجعة البروتوكول"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Ethics submission checks",
+    "fr": "Vérifications des soumissions aux comités d’éthique",
+    "ar": "فحوص تقديم الطلبات إلى لجان الأخلاقيات"
+   },
+   "unit": {
+    "en": "ethics submission checks",
+    "fr": "vérifications des soumissions aux comités d’éthique",
+    "ar": "فحوص تقديم الطلبات إلى لجان الأخلاقيات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Site monitoring reports",
+    "fr": "Rapports de suivi des sites",
+    "ar": "تقارير مراقبة المواقع"
+   },
+   "unit": {
+    "en": "site monitoring reports",
+    "fr": "rapports de suivi des sites",
+    "ar": "تقارير مراقبة المواقع"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Training attestations",
+    "fr": "Attestations de formation",
+    "ar": "إقرارات إتمام التدريب"
+   },
+   "unit": {
+    "en": "training attestations",
+    "fr": "attestations de formation",
+    "ar": "إقرارات إتمام التدريب"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `clinical-research` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the protocol review packages to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `clinical-research` associé à un cas contient un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les dossiers d’examen des protocoles à la source, à la personne chargée de l’examen, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `clinical-research` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + معرّفات المنهج/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، بما يربط حزم مراجعة البروتوكول بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted protocol review packages** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant vendredi 12:00 ; **≥1 dossier d’examen des protocoles accepté** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥1 من حزم مراجعة البروتوكول المقبولة** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ و**≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، بينما تتجاوز العيوب الجوهرية المتعلقة بالسلامة/الخصوصية النتيجة الخضراء. هذه أهداف تجريبية، وليست حدودًا معتمدة في ملف README."
+ },
+ "boundary": {
+  "en": "only approved protocols and authorised clinical sites may recruit participants",
+  "fr": "seuls les protocoles approuvés et les sites cliniques autorisés peuvent recruter des participants",
+  "ar": "لا يجوز استقطاب المشاركين إلا بموجب بروتوكولات معتمدة ومن مواقع سريرية مصرّح بها"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "biotech",
+   "id": 121
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Recruitment precedes ethics approval → reconcile source records with the protocol review packages acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le recrutement précède l’approbation du comité d’éthique → rapprocher les documents sources de la liste de contrôle d’acceptation des dossiers d’examen des protocoles et attribuer la responsabilité des mesures correctives.",
+   "ar": "يبدأ الاستقطاب قبل الموافقة الأخلاقية → طابقوا سجلات المصدر مع قائمة التحقق من قبول حزم مراجعة البروتوكول، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Protocol deviations compromise safety → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les écarts au protocole compromettent la sécurité → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un critère d’arrêt des travaux documenté.",
+   "ar": "تُعرّض الانحرافات عن البروتوكول السلامة للخطر → اشترطوا اعتمادًا من مختص مؤهل في السلامة، وتجارب مضبوطة، ومحفزًا موثقًا لإيقاف العمل."
+  },
+  {
+   "en": "Commercial pressure biases site monitoring → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "La pression commerciale biaise le suivi des sites → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تؤثر الضغوط التجارية في مراقبة المواقع → أدرجوا مراجعة المستخدمين المتأثرين، وانشروا افتراضات الاختيار، وأبقوا مسارًا لتقديم التظلمات."
+  }
+ ]
+}

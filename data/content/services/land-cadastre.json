@@ -1,0 +1,167 @@
+{
+ "slug": "land-cadastre",
+ "id": 95,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Land Governance & Cadastre",
+  "fr": "Gouvernance foncière et cadastre",
+  "ar": "حوكمة الأراضي والسجل العقاري"
+ },
+ "short": {
+  "en": "The service provides registration, dispute resolution, GIS.",
+  "fr": "Fiabiliser les systèmes d'information foncière.",
+  "ar": "تحسين موثوقية نظم المعلومات العقارية."
+ },
+ "abstract": {
+  "en": "Land governance and cadastre — registration systems, dispute resolution, and GIS-based land information infrastructure.",
+  "fr": "Gouvernance foncière et cadastre — systèmes d’enregistrement, règlement des litiges et infrastructure d’information foncière fondée sur les SIG.",
+  "ar": "حوكمة الأراضي والسجل العقاري — أنظمة التسجيل، وتسوية المنازعات، والبنية التحتية للمعلومات العقارية القائمة على GIS."
+ },
+ "long": [
+  {
+   "en": "The Land Governance & Cadastre service organises a weekly work package around registry process maps, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 registry process maps; 2000 parcel identity reconciliations; 200 dispute workflow reviews; 100 gis exchange specifications. Land governance and cadastre — registration systems, dispute resolution, and GIS-based land information infrastructure. Specialists sequence those methods against the accepted weekly package. The governing boundary is that legal registry authority validates titles while field evidence remains contestable. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance foncière et de cadastre organise un lot de travail hebdomadaire autour de cartographies des processus du registre foncier, plutôt que de considérer la présence comme le produit livré. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 100 cartographies des processus du registre foncier ; 2000 rapprochements d’identité des parcelles ; 200 examens des procédures de règlement des litiges ; 100 spécifications d’échange SIG. Gouvernance foncière et cadastre — systèmes d’enregistrement, règlement des litiges et infrastructure d’information foncière fondée sur les SIG. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite à respecter est la suivante : l’autorité compétente du registre foncier valide les titres, tandis que les éléments de preuve recueillis sur le terrain restent susceptibles d’être contestés. Il s’agit de livrables échelonnés issus de dossiers commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة حوكمة الأراضي والسجل العقاري حزمة عمل أسبوعية تتمحور حول خرائط عمليات السجل، بدلاً من اعتبار الحضور هو الناتج. وتبلغ الخطة التجريبية، عند توافر القدرة الكاملة والموارد اللازمة، 100 خريطة لعمليات السجل؛ و2000 مطابقة لهوية القطع العقارية؛ و200 مراجعة لسير عمل المنازعات؛ و100 مواصفة لتبادل بيانات GIS. حوكمة الأراضي والسجل العقاري — أنظمة التسجيل، وتسوية المنازعات، والبنية التحتية للمعلومات العقارية القائمة على GIS. ويرتب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والحد الحاكم هو أن الجهة المخولة قانوناً بالسجل العقاري تصادق على الملكيات، بينما تظل الأدلة الميدانية قابلة للطعن. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `land-cadastre`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of registry process maps, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enterprise Survey indiquant 2020 ou la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème qui se résumerait à la formation. Les bénéfices dépendent de l’existence d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut supposer qu’un produit de conseil améliore une institution s’il ne s’adresse pas à ses utilisateurs. Pour `land-cadastre`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des cartographies des processus du registre foncier, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تعتبر عدم كفاية مهارات القوى العاملة عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، لا مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً من دون هؤلاء المستخدمين سيحسن أداء مؤسسة. لذلك، فإن الاستجابة المقترحة لـ `land-cadastre` هي سير عمل تعاقدي يتضمن مستفيداً مسمى وتعريفاً معتمداً لخرائط عمليات السجل، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the registry process maps acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks parcel identity reconciliations before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted registry process maps from rejected or deferred work and records blockers around dispute workflow reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des cartographies des processus du registre foncier ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les rapprochements d’identité des parcelles avant approbation. L’audit aléatoire proposé de 5% revérifie les preuves sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. La synthèse du service distingue les cartographies des processus du registre foncier acceptées des travaux rejetés ou différés, et consigne les blocages liés aux examens des procédures de règlement des litiges. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول خرائط عمليات السجل؛ ويحوّل 100 مدير هذا المعيار إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مختص من مطابقة هوية القطع العقارية قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين خرائط عمليات السجل المقبولة والعمل المرفوض أو المؤجل، ويسجل المعوقات المتعلقة بمراجعات سير عمل المنازعات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "land administration, property law, surveying and spatial governance",
+  "fr": "administration foncière, droit immobilier, levés topographiques et gouvernance spatiale",
+  "ar": "إدارة الأراضي، وقانون الملكية، والمساحة، والحوكمة المكانية"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Registry process maps",
+    "fr": "Cartographies des processus du registre foncier",
+    "ar": "خرائط عمليات السجل"
+   },
+   "unit": {
+    "en": "registry process maps",
+    "fr": "cartographies des processus du registre foncier",
+    "ar": "خرائط عمليات السجل"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Parcel identity reconciliations",
+    "fr": "Rapprochements d’identité des parcelles",
+    "ar": "مطابقات هوية القطع العقارية"
+   },
+   "unit": {
+    "en": "parcel identity reconciliations",
+    "fr": "rapprochements d’identité des parcelles",
+    "ar": "مطابقات هوية القطع العقارية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Dispute workflow reviews",
+    "fr": "Examens des procédures de règlement des litiges",
+    "ar": "مراجعات سير عمل المنازعات"
+   },
+   "unit": {
+    "en": "dispute workflow reviews",
+    "fr": "examens des procédures de règlement des litiges",
+    "ar": "مراجعات سير عمل المنازعات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "GIS exchange specifications",
+    "fr": "Spécifications d’échange SIG",
+    "ar": "مواصفات تبادل بيانات GIS"
+   },
+   "unit": {
+    "en": "gis exchange specifications",
+    "fr": "spécifications d’échange SIG",
+    "ar": "مواصفات تبادل بيانات GIS"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `land-cadastre` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the registry process maps to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `land-cadastre` associé à un dossier contient un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des sources expurgées et des comptes rendus de consultation, reliant les cartographies des processus du registre foncier à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `land-cadastre` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، وتربط خرائط عمليات السجل بالمصدر والمراجع والإصدار وسجل الاستثناءات والتصريح."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted registry process maps** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** remis avant ven. 12:00 ; **≥1 cartographie des processus du registre foncier acceptée** par équipe et par semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux preuves** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur éligible, et les défauts critiques de sécurité ou de confidentialité priment sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستحقة** بحلول Fri 12:00؛ و**قبول ≥1 من خرائط عمليات السجل** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسهيلات المعتمدة المقام المؤهل، وتتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "legal registry authority validates titles while field evidence remains contestable",
+  "fr": "l’autorité compétente du registre foncier valide les titres, tandis que les éléments de preuve recueillis sur le terrain restent susceptibles d’être contestés",
+  "ar": "تصادق الجهة المخولة قانوناً بالسجل العقاري على الملكيات، بينما تظل الأدلة الميدانية قابلة للطعن"
+ },
+ "depends": [
+  {
+   "slug": "land-governance",
+   "id": 34
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "urban-planning",
+   "id": 28
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Digitisation crystallises historical exclusion → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "La numérisation cristallise l’exclusion historique → inclure l’examen par les personnes concernées, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تؤدي الرقمنة إلى ترسيخ الإقصاء التاريخي → أدرج مراجعة يجريها المستخدمون المتأثرون، وانشر افتراضات الاختيار، وأبقِ مساراً للتظلمات."
+  },
+  {
+   "en": "Duplicate parcel IDs conceal disputes → reconcile source records with the registry process maps acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les identifiants de parcelles en double dissimulent des litiges → recoupez les documents sources avec la liste de contrôle d’acceptation des cartes cadastrales du registre et attribuez la responsabilité des mesures correctives.",
+   "ar": "تُخفي معرّفات القطع المكررة نزاعاتٍ → طابِق سجلات المصدر مع السجل، وحدّد في خرائط العملية قائمة التحقق الخاصة بالقبول، وأسند مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Access rules expose vulnerable owners → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les règles d’accès exposent les propriétaires vulnérables → limitez l’accès au minimum, caviardez les éléments de preuve communiqués et testez le processus d’accès restreint.",
+   "ar": "تكشف قواعد الوصول عن المُلّاك المعرّضين للمخاطر → قلّل الوصول إلى الحد الأدنى، واحجب البيانات من الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "security-governance",
+ "id": 96,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Security Sector Governance",
+  "fr": "Gouvernance du secteur de la sécurité",
+  "ar": "حوكمة القطاع الأمني"
+ },
+ "short": {
+  "en": "The service provides oversight, complaints, human rights.",
+  "fr": "Renforcer les garanties et recours du secteur de sécurité.",
+  "ar": "تعزيز الضمانات والتظلم في القطاع الأمني."
+ },
+ "abstract": {
+  "en": "Security sector governance — parliamentary oversight, complaints mechanisms, and human rights compliance frameworks for security forces.",
+  "fr": "Gouvernance du secteur de la sécurité — contrôle parlementaire, mécanismes de plainte et cadres de conformité aux droits humains applicables aux forces de sécurité.",
+  "ar": "حوكمة القطاع الأمني — الرقابة البرلمانية، وآليات الشكاوى، وأطر الامتثال لحقوق الإنسان للقوات الأمنية."
+ },
+ "long": [
+  {
+   "en": "The Security Sector Governance service organises a weekly work package around oversight procedure reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 oversight procedure reviews; 200 complaint pathway assessments; 200 rights compliance checklists; 100 public accountability briefs. Security sector governance — parliamentary oversight, complaints mechanisms, and human rights compliance frameworks for security forces. Specialists sequence those methods against the accepted weekly package. The governing boundary is that work is civilian governance support, never operational surveillance or policing. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance du secteur de la sécurité organise un ensemble de travaux hebdomadaire autour de l’examen des procédures de contrôle, plutôt que de considérer la participation comme un résultat. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 examens de procédures de contrôle ; 200 évaluations des voies de plainte ; 200 listes de contrôle de conformité aux droits humains ; 100 notes sur la responsabilité publique. Gouvernance du secteur de la sécurité — contrôle parlementaire, mécanismes de plainte et cadres de conformité aux droits humains applicables aux forces de sécurité. Les spécialistes organisent ces méthodes en fonction de l’ensemble de travaux hebdomadaire accepté. La limite fondamentale est que ces travaux relèvent du soutien à la gouvernance civile et ne constituent jamais des activités de surveillance opérationnelle ou de maintien de l’ordre. Il s’agit de résultats échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة حوكمة القطاع الأمني حزمة عمل أسبوعية تتمحور حول مراجعات إجراءات الرقابة، بدلًا من اعتبار الحضور مخرجًا بحد ذاته. وفي ظل الطاقة الاستيعابية الكاملة والممولة، تتضمن خطتها التجريبية 100 مراجعة لإجراءات الرقابة؛ و200 تقييم لمسارات الشكاوى؛ و200 قائمة تحقق للامتثال لحقوق الإنسان؛ و100 موجز للمساءلة العامة. حوكمة القطاع الأمني — الرقابة البرلمانية، وآليات الشكاوى، وأطر الامتثال لحقوق الإنسان للقوات الأمنية. ويحدد المختصون تسلسل هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والحد الفاصل الناظم هو أن العمل دعمٌ للحوكمة المدنية، وليس مراقبة تشغيلية أو عملًا شرطيًا. وهذه مخرجات مرحلية لحالات مُكلَّف بها، وليست وعدًا بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `security-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of oversight procedure reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enterprise Survey indiquées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les avantages dépendent d’une autorité légitime, du partage des dossiers administratifs et de responsables de la mise en œuvre ; on ne peut supposer qu’un produit consultatif améliore une institution s’il ne dispose pas de tels utilisateurs. Pour `security-governance`, la réponse proposée est donc un processus de travail contractuel avec un bénéficiaire désigné et une définition acceptée des examens de procédures de contrôle, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تحدد عدم كفاية مهارات القوى العاملة بوصفها عائقًا رئيسيًا، استنادًا إلى مقارنات Enterprise Survey المصنفة لعام 2020 أو أحدث سنة تتوافر بياناتها. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، بدلًا من اعتبار المشكلة متعلقة بالتدريب وحده. وتتوقف الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا لا يستفيد منه هؤلاء المستخدمون سيحسن أداء مؤسسة ما. لذلك، تتمثل الاستجابة المقترحة لـ `security-governance` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لمراجعات إجراءات الرقابة، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the oversight procedure reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks complaint pathway assessments before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted oversight procedure reviews from rejected or deferred work and records blockers around rights compliance checklists. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la procédure de supervision des évaluations des critères d’acceptation ; 100 responsables la déclinent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les évaluations des voies de traitement des plaintes avant approbation. L’audit aléatoire proposé de 5 % vérifie à nouveau les éléments probants issus des sources et les exceptions ; il ne remplace pas l’examen par un responsable de chaque rapport hebdomadaire. Le bilan du service distingue les évaluations des procédures de supervision acceptées des travaux refusés ou reportés, et consigne les obstacles liés aux listes de contrôle de conformité aux droits. Les évaluations des responsables de grappe coordonnent les ressources partagées sans relever le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات إجراءات الإشراف؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من تقييمات مسارات الشكاوى قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز الملخص الإجمالي للخدمة بين مراجعات إجراءات الإشراف المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بقوائم التحقق من الامتثال للحقوق. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف الخبراء البالغ 1,000."
+  }
+ ],
+ "fields": {
+  "en": "public law, human rights, security accountability and complaints administration",
+  "fr": "droit public, droits humains, responsabilité en matière de sécurité et administration des plaintes",
+  "ar": "القانون العام وحقوق الإنسان والمساءلة الأمنية وإدارة الشكاوى"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Oversight procedure reviews",
+    "fr": "Évaluations des procédures de supervision",
+    "ar": "مراجعات إجراءات الإشراف"
+   },
+   "unit": {
+    "en": "oversight procedure reviews",
+    "fr": "évaluations des procédures de supervision",
+    "ar": "مراجعات إجراءات الإشراف"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Complaint pathway assessments",
+    "fr": "Évaluations des voies de traitement des plaintes",
+    "ar": "تقييمات مسارات الشكاوى"
+   },
+   "unit": {
+    "en": "complaint pathway assessments",
+    "fr": "évaluations des voies de traitement des plaintes",
+    "ar": "تقييمات مسارات الشكاوى"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Rights compliance checklists",
+    "fr": "Listes de contrôle de conformité aux droits",
+    "ar": "قوائم التحقق من الامتثال للحقوق"
+   },
+   "unit": {
+    "en": "rights compliance checklists",
+    "fr": "listes de contrôle de conformité aux droits",
+    "ar": "قوائم التحقق من الامتثال للحقوق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Public accountability briefs",
+    "fr": "Notes d’information sur la responsabilité publique",
+    "ar": "موجزات المساءلة العامة"
+   },
+   "unit": {
+    "en": "public accountability briefs",
+    "fr": "notes d’information sur la responsabilité publique",
+    "ar": "موجزات المساءلة العامة"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `security-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the oversight procedure reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `security-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + les sources expurgées et les dossiers de consultation, établissant le lien entre les évaluations des procédures de supervision et la source, l’évaluateur, la version, le registre des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `security-governance` ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، تربط مراجعات إجراءات الإشراف بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted oversight procedure reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥1 évaluation acceptée des procédures de supervision** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من مراجعات إجراءات الإشراف** لكل فريق-أسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. وتؤدي الإجازات أو التعديلات المعتمدة إلى تغيير مقام التقارير المؤهلة، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتقدم على النتيجة الخضراء. هذه أهداف تجريبية وليست عتبات محددة في README."
+ },
+ "boundary": {
+  "en": "work is civilian governance support, never operational surveillance or policing",
+  "fr": "le travail relève du soutien à la gouvernance civile, jamais de la surveillance opérationnelle ni du maintien de l’ordre",
+  "ar": "العمل هو دعم للحوكمة المدنية، وليس مطلقًا مراقبة تشغيلية أو عملًا شرطيًا"
+ },
+ "depends": [
+  {
+   "slug": "forensics",
+   "id": 70
+  },
+  {
+   "slug": "cybersecurity",
+   "id": 106
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sensitive complaints expose victims → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les plaintes sensibles exposent les victimes → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "الشكاوى الحساسة قد تكشف عن هوية الضحايا → تقليل نطاق الوصول، وتنقيح الأدلة المنشورة، واختبار سير العمل الخاص بالوصول المقيّد."
+  },
+  {
+   "en": "Access restrictions conceal misconduct → reconcile source records with the oversight procedure reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les restrictions d’accès dissimulent des manquements → rapprocher les dossiers sources de la liste de contrôle d’acceptation des évaluations des procédures de supervision et désigner les responsables des mesures correctives.",
+   "ar": "قد تخفي قيود الوصول سوء السلوك → مطابقة سجلات المصادر مع قائمة التحقق لقبول مراجعات إجراءات الإشراف، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Advisory teams exceed lawful oversight mandates → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les équipes consultatives outrepassent les mandats légaux de supervision → obtenir une validation juridique ou institutionnelle compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "قد تتجاوز الفرق الاستشارية نطاق صلاحيات الإشراف القانونية → الحصول على تحقق قانوني/رسمي من جهة مختصة، وحظر القرارات التشغيلية غير المصرح بها."
+  }
+ ]
+}

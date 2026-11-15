@@ -1,0 +1,167 @@
+{
+ "slug": "construction-waste",
+ "id": 50,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Construction Waste Logistics",
+  "fr": "Logistique des déchets de construction",
+  "ar": "لوجستيات نفايات البناء"
+ },
+ "short": {
+  "en": "The service provides sorting, recycling, landfill diversion.",
+  "fr": "Organiser la collecte et la valorisation des déchets de chantier.",
+  "ar": "تنظيم جمع مخلفات البناء وتثمينها."
+ },
+ "abstract": {
+  "en": "Construction waste logistics — on-site sorting, recycling partnerships, landfill diversion targets, and reporting frameworks aligned with circular construction standards.",
+  "fr": "Logistique des déchets de construction — tri sur site, partenariats de recyclage, objectifs de détournement des déchets des décharges et cadres de reporting conformes aux normes de construction circulaire.",
+  "ar": "لوجستيات نفايات البناء — الفرز في الموقع، وشراكات إعادة التدوير، وأهداف تحويل النفايات بعيدًا عن مدافنها، وأطر إعداد التقارير المتوافقة مع معايير البناء الدائري."
+ },
+ "long": [
+  {
+   "en": "The Construction Waste Logistics service organises a weekly work package around waste stream audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 waste stream audits; 3000 verified load manifests; 200 sorting plans; 100 recycler qualification files. Construction waste logistics — on-site sorting, recycling partnerships, landfill diversion targets, and reporting frameworks aligned with circular construction standards. Specialists sequence those methods against the accepted weekly package. The governing boundary is that load manifests reconcile actual destinations with licensed treatment capacity. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de logistique des déchets de construction organise un lot de travaux hebdomadaire autour d’audits des flux de déchets, plutôt que de considérer la présence comme le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 audits des flux de déchets ; 3000 manifestes de chargement vérifiés ; 200 plans de tri ; 100 dossiers de qualification de recycleurs. Logistique des déchets de construction — tri sur site, partenariats de recyclage, objectifs de détournement des déchets des décharges et cadres de reporting conformes aux normes de construction circulaire. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les manifestes de chargement rapprochent les destinations réelles des capacités de traitement agréées. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة لوجستيات نفايات البناء حزمة عمل أسبوعية تتمحور حول تدقيقات تدفقات النفايات، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، إجراء 300 تدقيق لتدفقات النفايات؛ والتحقق من 3000 بيان حمولة؛ وإعداد 200 خطة فرز؛ وتجهيز 100 ملف لتأهيل جهات إعادة التدوير. لوجستيات نفايات البناء — الفرز في الموقع، وشراكات إعادة التدوير، وأهداف تحويل النفايات بعيدًا عن مدافنها، وأطر إعداد التقارير المتوافقة مع معايير البناء الدائري. ويرتب المختصون هذه الأساليب بما يتوافق مع الحزمة الأسبوعية المقبولة. ويتمثل الضابط الأساسي في مطابقة بيانات الحمولات بين وجهاتها الفعلية والطاقة الاستيعابية لمنشآت المعالجة المرخصة. وهذه مخرجات مرحلية لحالات جرى تكليفها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `construction-waste`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of waste stream audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit un besoin d’intervention technique mesurée, et non l’existence d’une commande financée pour ce service particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la mise en commande de travaux pourtant utiles sur le plan technique. Pour `construction-waste`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des audits des flux de déchets, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في عام 2021. ويؤكد ذلك الحاجة إلى تدخل تقني قائم على القياس، لكنه لا يشكل طلبًا ممولًا لهذه الخدمة بعينها. وقد يؤدي تعدد مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنيًا. لذلك، يتمثل النهج المقترح لـ`construction-waste` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لتدقيقات تدفقات النفايات، بدلًا من تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the waste stream audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks verified load manifests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted waste stream audits from rejected or deferred work and records blockers around sorting plans. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits des flux de déchets ; 100 responsables traduisent ces critères en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les manifestes de chargement vérifiés avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments de preuve sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les audits des flux de déchets acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux plans de tri. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات تدفقات النفايات؛ ويحوّلها 100 مدير إلى مهام موزعة على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من بيانات الحمولات الموثقة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص أداء الخدمة بين تدقيقات تدفقات النفايات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بخطط الفرز. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Waste stream audits",
+    "fr": "Audits des flux de déchets",
+    "ar": "تدقيقات تدفقات النفايات"
+   },
+   "unit": {
+    "en": "waste stream audits",
+    "fr": "audits des flux de déchets",
+    "ar": "تدقيقات تدفقات النفايات"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Verified load manifests",
+    "fr": "Manifestes de chargement vérifiés",
+    "ar": "بيانات الحمولات الموثقة"
+   },
+   "unit": {
+    "en": "verified load manifests",
+    "fr": "manifestes de chargement vérifiés",
+    "ar": "بيانات شحنات موثَّقة"
+   },
+   "target": 3000
+  },
+  {
+   "name": {
+    "en": "Sorting plans",
+    "fr": "Plans de tri",
+    "ar": "خطط الفرز"
+   },
+   "unit": {
+    "en": "sorting plans",
+    "fr": "plans de tri",
+    "ar": "خطط الفرز"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Recycler qualification files",
+    "fr": "Dossiers de qualification des recycleurs",
+    "ar": "ملفات تأهيل جهات إعادة التدوير"
+   },
+   "unit": {
+    "en": "recycler qualification files",
+    "fr": "dossiers de qualification des recycleurs",
+    "ar": "ملفات تأهيل جهات إعادة التدوير"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `construction-waste` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the waste stream audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `construction-waste` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photo géoréférencés ou des fichiers de conception, qui relient les audits des flux de déchets à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `construction-waste` ملف قبول بصيغة PDF/A + بيان مصدر بصيغة CSV/JSON + ملفات فحص أو صور محددة جغرافيًا أو ملفات تصميم، وتربط عمليات تدقيق تدفقات النفايات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted waste stream audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici ven. 12:00 ; **≥3 audits des flux de déchets acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés ou aménagements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥3 عمليات تدقيق لتدفقات النفايات** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتؤدي الإجازات أو التعديلات المعتمدة إلى تغيير المقام المؤهل، فيما تتجاوز العيوب الحرجة المتعلقة بالسلامة أو الخصوصية التقييم الأخضر. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "load manifests reconcile actual destinations with licensed treatment capacity",
+  "fr": "les manifestes de chargement rapprochent les destinations réelles des capacités de traitement autorisées",
+  "ar": "تطابق بيانات الشحنات الوجهات الفعلية مع الطاقة الاستيعابية لمنشآت المعالجة المرخصة"
+ },
+ "depends": [
+  {
+   "slug": "chemical-safety",
+   "id": 65
+  },
+  {
+   "slug": "waste-to-resource",
+   "id": 125
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Loads diverted to illegal dumping → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Chargements détournés vers des dépôts illégaux → obtenir la validation juridique ou administrative compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تحويل الشحنات إلى مكبات غير قانونية → الحصول على تحقق قانوني/رسمي من جهة مختصة، وحظر القرارات التشغيلية غير المصرح بها."
+  },
+  {
+   "en": "Mixed waste contaminates reusable material → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les déchets mélangés contaminent les matériaux réutilisables → refaire les contrôles critiques à partir de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "تلوث النفايات المختلطة المواد القابلة لإعادة الاستخدام → إعادة إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، وعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Transport records fabricated without weighbridge proof → reconcile source records with the waste stream audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Dossiers de transport falsifiés en l’absence de preuve de pesée sur pont-bascule → rapprocher les pièces sources de la liste de contrôle d’acceptation des audits des flux de déchets et désigner les responsables des mesures correctives.",
+   "ar": "تزوير سجلات النقل دون إثبات من ميزان الشاحنات → مطابقة سجلات المصدر مع قائمة التحقق الخاصة بقبول عمليات تدقيق تدفقات النفايات، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

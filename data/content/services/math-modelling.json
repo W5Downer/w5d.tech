@@ -1,0 +1,167 @@
+{
+ "slug": "math-modelling",
+ "id": 72,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Mathematical Modelling & Simulation",
+  "fr": "Modélisation mathématique et simulation",
+  "ar": "النمذجة الرياضية والمحاكاة"
+ },
+ "short": {
+  "en": "The service provides optimisation, stochastic models, HPC.",
+  "fr": "Résoudre des problèmes par des modèles vérifiables.",
+  "ar": "حل المشكلات بنماذج قابلة للتحقق."
+ },
+ "abstract": {
+  "en": "Mathematical modelling and simulation — optimisation, stochastic modelling, and high-performance computing for research and industry problems.",
+  "fr": "Modélisation mathématique et simulation — optimisation, modélisation stochastique et calcul haute performance pour des problématiques de recherche et d’industrie.",
+  "ar": "النمذجة الرياضية والمحاكاة — التحسين، والنمذجة الاحتمالية، والحوسبة عالية الأداء لمشكلات البحث والصناعة."
+ },
+ "long": [
+  {
+   "en": "The Mathematical Modelling & Simulation service organises a weekly work package around model specifications, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 model specifications; 500 simulation scenario sets; 200 verification test suites; 100 decision sensitivity notes. Mathematical modelling and simulation — optimisation, stochastic modelling, and high-performance computing for research and industry problems. Specialists sequence those methods against the accepted weekly package. The governing boundary is that models publish assumptions, validation limits and sensitivity before recommendation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de modélisation mathématique et simulation organise chaque semaine un lot de travaux autour de spécifications de modèle, au lieu de considérer la présence comme le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 spécifications de modèle ; 500 ensembles de scénarios de simulation ; 200 suites de tests de vérification ; 100 notes de sensibilité des décisions. Modélisation mathématique et simulation — optimisation, modélisation stochastique et calcul haute performance pour des problématiques de recherche et d’industrie. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. La règle directrice impose de publier les hypothèses des modèles, leurs limites de validation et leur sensibilité avant toute recommandation. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse de mener à bien chaque semaine un programme national complet.",
+   "ar": "تنظّم خدمة النمذجة الرياضية والمحاكاة حزمة عمل أسبوعية حول مواصفات النماذج، بدلًا من اعتبار الحضور هو المنتج. وتتمثل خطة البرنامج التجريبي، عند العمل بكامل الطاقة المزوّدة بالموارد، في إعداد 100 مواصفة نموذج؛ و500 مجموعة سيناريوهات محاكاة؛ و200 مجموعة اختبارات للتحقق؛ و100 مذكرة لحساسية القرارات. النمذجة الرياضية والمحاكاة — التحسين، والنمذجة الاحتمالية، والحوسبة عالية الأداء لمشكلات البحث والصناعة. ويرتّب المختصون هذه الأساليب بما يتناسب مع حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن تعرض النماذج افتراضاتها وحدود التحقق من صحتها وتحليل الحساسية قبل تقديم التوصية. وهذه مخرجات مرحلية لحالات مكلّف بها الفريق، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `math-modelling`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of model specifications, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active diplômée tunisienne était au chômage au Q2 2026, tandis que l’analyse de l’OCDE d’avril 2022 décrit la faiblesse des liens entre les qualifications et les exigences pratiques des employeurs. Aucune de ces statistiques n’établit le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, les méthodes supervisées et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne saurait remplacer un service partagé responsable. Pour `math-modelling`, la réponse proposée consiste donc en un flux de travail contractuel avec un bénéficiaire nommé et une définition approuvée des spécifications de modèle, plutôt qu’en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من خريجي الجامعات ضمن القوى العاملة في تونس كانوا عاطلين عن العمل في Q2 2026، فيما يصف تحليل OECD الصادر في أبريل 2022 ضعف الصلات بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا يثبت أي من الإحصاءين عدد المختصين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل إتاحة المختبرات، والأساليب الخاضعة للإشراف، واستمرارية تمويل الأبحاث، الاستعانة بمجموعة من المستقلين الأفراد بديلًا غير كافٍ عن خدمة مشتركة خاضعة للمساءلة. لذلك، يتمثل الرد المقترح لخدمة `math-modelling` في سير عمل تعاقدي ذي جهة مستفيدة محددة وتعريف معتمد لمواصفات النماذج، لا في التوظيف الذي تبرره معدلات البطالة الوطنية وحدها."
+  },
+  {
+   "en": "A service leader sets the model specifications acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks simulation scenario sets before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted model specifications from rejected or deferred work and records blockers around verification test suites. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des spécifications de modèle ; 100 responsables les déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les ensembles de scénarios de simulation avant leur approbation. L’audit aléatoire proposé de 5% revérifie les pièces justificatives et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les spécifications de modèle acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux suites de tests de vérification. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مواصفات النماذج؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من مجموعات سيناريوهات المحاكاة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مواصفات النماذج المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمجموعات اختبارات التحقق. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "mathematics, statistics, operational research and computational science",
+  "fr": "mathématiques, statistiques, recherche opérationnelle et sciences computationnelles",
+  "ar": "الرياضيات والإحصاء وبحوث العمليات والعلوم الحاسوبية"
+ },
+ "diploma": "maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Model specifications",
+    "fr": "Spécifications de modèle",
+    "ar": "مواصفات النماذج"
+   },
+   "unit": {
+    "en": "model specifications",
+    "fr": "spécifications de modèle",
+    "ar": "مواصفات النماذج"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Simulation scenario sets",
+    "fr": "Ensembles de scénarios de simulation",
+    "ar": "مجموعات سيناريوهات المحاكاة"
+   },
+   "unit": {
+    "en": "simulation scenario sets",
+    "fr": "ensembles de scénarios de simulation",
+    "ar": "مجموعات سيناريوهات المحاكاة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Verification test suites",
+    "fr": "Suites de tests de vérification",
+    "ar": "مجموعات اختبارات التحقق"
+   },
+   "unit": {
+    "en": "verification test suites",
+    "fr": "suites de tests de vérification",
+    "ar": "مجموعات اختبارات التحقق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Decision sensitivity notes",
+    "fr": "Notes de sensibilité des décisions",
+    "ar": "مذكرات حساسية القرارات"
+   },
+   "unit": {
+    "en": "decision sensitivity notes",
+    "fr": "notes de sensibilité des décisions",
+    "ar": "مذكرات حساسية القرارات"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `math-modelling` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the model specifications to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `math-modelling` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les spécifications de modèle à la source, à l’examinateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لخدمة `math-modelling` ملف PDF/A لملف القبول + بيانًا بالمصادر بتنسيق CSV/JSON + معرّفات للأسلوب والإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط مواصفات النماذج بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted model specifications** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant Fri 12:00 ; **≥1 spécification de modèle acceptée** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux pièces justificatives** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité/confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من مواصفات النماذج** لكل فريق في الأسبوع، رهنًا بتعقيد الحالة؛ **عدم تجاوز طلب واحد لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات أو الترتيبات المعتمدة المقام المؤهل، كما تتقدم العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي نتيجة خضراء. وهذه أهداف للبرنامج التجريبي، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "models publish assumptions, validation limits and sensitivity before recommendation",
+  "fr": "les modèles publient leurs hypothèses, leurs limites de validation et leur sensibilité avant toute recommandation",
+  "ar": "تعرض النماذج افتراضاتها وحدود التحقق من صحتها وتحليل الحساسية قبل تقديم التوصية"
+ },
+ "depends": [
+  {
+   "slug": "mobility-planning",
+   "id": 37
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "pfm",
+   "id": 91
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Optimisation omits political constraints → reconcile source records with the model specifications acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’optimisation omet les contraintes politiques → rapprochez les dossiers sources de la liste de contrôle d’acceptation des spécifications de modèle et attribuez la responsabilité des mesures correctives.",
+   "ar": "إغفال القيود السياسية في التحسين → طابق السجلات المصدرية مع قائمة التحقق من قبول مواصفات النماذج، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Poor inputs create false precision → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Des données d’entrée de mauvaise qualité créent une fausse précision → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicite avant toute acceptation.",
+   "ar": "المدخلات الضعيفة تولّد دقة زائفة → اشترط التحقق من مصادر مستقلة، واستخدام مصدر للمقارنة، والتصريح بمواضع عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Unreproducible code prevents challenge → reconcile source records with the model specifications acceptance checklist and assign corrective-action ownership.",
+   "fr": "Un code non reproductible empêche toute contestation → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des spécifications du modèle et attribuer la responsabilité des mesures correctives.",
+   "ar": "تعذّر إعادة إنتاج الشيفرة يحول دون مراجعتها → طابق سجلات المصدر مع مواصفات النموذج، وقائمة التحقق للقبول، وحدّد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

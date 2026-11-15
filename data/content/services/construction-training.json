@@ -1,0 +1,167 @@
+{
+ "slug": "construction-training",
+ "id": 39,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Construction Workforce Training",
+  "fr": "Formation de la main-d’œuvre du secteur de la construction",
+  "ar": "تدريب القوى العاملة في قطاع الإنشاءات"
+ },
+ "short": {
+  "en": "The service provides safety, trades, site supervision.",
+  "fr": "Former à la sécurité et à la supervision des chantiers.",
+  "ar": "التدريب على سلامة مواقع البناء والإشراف عليها."
+ },
+ "abstract": {
+  "en": "Construction workforce development — safety training, trade certification, site-supervision development, and trainer-of-trainers programs aligned with national accreditation.",
+  "fr": "Développement des compétences de la main-d’œuvre du secteur de la construction — formation à la sécurité, certification professionnelle, développement des compétences en supervision de chantier et programmes de formation de formateurs alignés sur l’accréditation nationale.",
+  "ar": "تطوير القوى العاملة في قطاع الإنشاءات — التدريب على السلامة، والشهادات المهنية، وتطوير الإشراف على المواقع، وبرامج تدريب المدربين المتوافقة مع الاعتماد الوطني."
+ },
+ "long": [
+  {
+   "en": "The Construction Workforce Training service organises a weekly work package around safety sessions, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 safety sessions; 1000 observed competency checks; 200 supervisor coaching visits; 100 incident learning briefs. Construction workforce development — safety training, trade certification, site-supervision development, and trainer-of-trainers programs aligned with national accreditation. Specialists sequence those methods against the accepted weekly package. The governing boundary is that competence is demonstrated on supervised tasks rather than attendance alone. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de formation de la main-d’œuvre du secteur de la construction organise chaque semaine un lot de travaux autour de séances de sécurité, plutôt que de considérer la participation comme le résultat attendu. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 séances de sécurité ; 1000 évaluations des compétences en situation observée ; 200 visites de coaching des superviseurs ; 100 comptes rendus sur les enseignements tirés des incidents. Développement des compétences de la main-d’œuvre du secteur de la construction — formation à la sécurité, certification professionnelle, développement des compétences en supervision de chantier et programmes de formation de formateurs alignés sur l’accréditation nationale. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les compétences doivent être démontrées lors de tâches supervisées, et non attestées par la seule présence. Il s’agit de résultats échelonnés issus de cas commandés, et non d’un engagement à réaliser un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة تدريب القوى العاملة في قطاع الإنشاءات حزمة عمل أسبوعية تتمحور حول جلسات السلامة، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند بلوغ كامل القدرة المتاحة والممولة، عقد 200 جلسة سلامة؛ وإجراء 1000 تقييم للكفاءة بالملاحظة؛ وتنفيذ 200 زيارة لتوجيه المشرفين؛ وإعداد 100 موجز تعلّم من الحوادث. تطوير القوى العاملة في قطاع الإنشاءات — التدريب على السلامة، والشهادات المهنية، وتطوير الإشراف على المواقع، وبرامج تدريب المدربين المتوافقة مع الاعتماد الوطني. ويرتب المختصون هذه الأساليب بما يتناسب مع حزمة العمل الأسبوعية المقبولة. ويقضي المبدأ الحاكم بأن تُثبت الكفاءة من خلال مهام خاضعة للإشراف، لا بمجرد الحضور. وهذه مخرجات مرحلية لحالات كُلّف بتنفيذها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `construction-training`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of safety sessions, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports limitent l’adéquation entre les personnes qualifiées et les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures dépendant des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets implique des limites liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans le respect de la loi. Pour `construction-training`, la réponse proposée consiste donc en un processus contractuel assorti d’un bénéficiaire désigné et d’une définition acceptée des séances de sécurité, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يحدد مسح OECD لتونس الصادر في أبريل 2022 التركز الساحلي وتكاليف السكن وعوائق النقل بوصفها قيودًا تعرقل مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُثبت أي من النتيجتين عدد الوظائف التي كُلّفَت هذه الخدمة بتوفيرها. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد يظل العمل المجدي من الناحية الفنية مجزأً إلى أن يتعاقد عليه عميل مخول قانونًا. لذلك، يتمثل المقترح الخاص بـ`construction-training` في سير عمل تعاقدي يحدد مستفيدًا ومعيارًا مقبولًا لجلسات السلامة، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the safety sessions acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks observed competency checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted safety sessions from rejected or deferred work and records blockers around supervisor coaching visits. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des séances de sécurité ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les évaluations des compétences en situation observée avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les séances de sécurité acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux visites de coaching des superviseurs. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول جلسات السلامة؛ ويحوّل 100 مدير هذا المعيار إلى تكليفات فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من تقييمات الكفاءة بالملاحظة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص نتائج الخدمة بين جلسات السلامة المقبولة والعمل المرفوض أو المؤجل، ويسجل المعوقات المتعلقة بزيارات توجيه المشرفين. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "construction engineering, occupational safety and adult education",
+  "fr": "ingénierie de la construction, sécurité au travail et éducation des adultes",
+  "ar": "هندسة الإنشاءات، والسلامة المهنية، وتعليم الكبار"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Safety sessions",
+    "fr": "Séances de sécurité",
+    "ar": "جلسات السلامة"
+   },
+   "unit": {
+    "en": "safety sessions",
+    "fr": "séances de sécurité",
+    "ar": "جلسات السلامة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Observed competency checks",
+    "fr": "Évaluations des compétences observées",
+    "ar": "فحوص الكفاءة المرصودة"
+   },
+   "unit": {
+    "en": "observed competency checks",
+    "fr": "évaluations des compétences observées",
+    "ar": "فحوص الكفاءة المرصودة"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Supervisor coaching visits",
+    "fr": "Visites d’accompagnement par les superviseurs",
+    "ar": "زيارات الإشراف والتوجيه"
+   },
+   "unit": {
+    "en": "supervisor coaching visits",
+    "fr": "visites d’accompagnement par les superviseurs",
+    "ar": "زيارات الإشراف والتوجيه"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Incident learning briefs",
+    "fr": "Fiches de retour d’expérience sur les incidents",
+    "ar": "موجزات التعلّم من الحوادث"
+   },
+   "unit": {
+    "en": "incident learning briefs",
+    "fr": "fiches de retour d’expérience sur les incidents",
+    "ar": "موجزات التعلّم من الحوادث"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `construction-training` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the safety sessions to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `construction-training` lié à un cas comprend un dossier d’acceptation PDF/A, un manifeste source CSV/JSON et des fichiers géoréférencés d’inspection, de photos ou de conception, qui relient les sessions de sécurité à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `construction-training` ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات تفتيش/صور محددة جغرافيًا أو ملفات تصميم، وتربط جلسات السلامة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted safety sessions** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant le vendredi à 12:00 ; **≥2 sessions de sécurité acceptées** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité l’emportent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من جلسات السلامة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات/التعديلات المعتمدة المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة التقييم الأخضر. هذه أهداف تجريبية، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "competence is demonstrated on supervised tasks rather than attendance alone",
+  "fr": "la compétence est démontrée lors de tâches supervisées, et non par la seule présence",
+  "ar": "تُثبت الكفاءة من خلال مهام خاضعة للإشراف، لا بمجرد الحضور"
+ },
+ "depends": [
+  {
+   "slug": "chemical-safety",
+   "id": 65
+  },
+  {
+   "slug": "labour-governance",
+   "id": 94
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "stem-education",
+   "id": 76
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Attendance certificates replace competence → reconcile source records with the safety sessions acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les attestations de présence remplacent les preuves de compétence → rapprocher les registres sources de la liste de contrôle d’acceptation des sessions de sécurité et attribuer la responsabilité des mesures correctives.",
+   "ar": "استبدال الكفاءة بشهادات الحضور → مطابقة سجلات المصدر مع قائمة التحقق لقبول جلسات السلامة وتحديد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Training ignores subcontracted workers → reconcile source records with the safety sessions acceptance checklist and assign corrective-action ownership.",
+   "fr": "La formation exclut les travailleurs sous-traitants → rapprocher les registres sources de la liste de contrôle d’acceptation des sessions de sécurité et attribuer la responsabilité des mesures correctives.",
+   "ar": "تجاهل التدريب للعاملين لدى المقاولين من الباطن → مطابقة سجلات المصدر مع قائمة التحقق لقبول جلسات السلامة وتحديد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unsafe demonstrations cause injuries → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Des démonstrations dangereuses entraînent des blessures → exiger l’approbation d’un responsable compétent en sécurité, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تؤدي العروض التوضيحية غير الآمنة إلى إصابات → اشتراط اعتماد السلامة من شخص مختص، وتجارب مضبوطة، وشرط موثق لإيقاف العمل."
+  }
+ ]
+}

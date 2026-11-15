@@ -1,0 +1,644 @@
+{
+ "slug": "investors",
+ "title": {
+  "en": "Investors — take a part every day",
+  "fr": "Investisseurs — souscrivez à une part chaque jour",
+  "ar": "المستثمرون — ساهموا بحصة كل يوم"
+ },
+ "description": {
+  "en": "The investor dossier: what a part funds, how the price is computed, how to commit to a daily part, and what W5D does not promise.",
+  "fr": "Le dossier investisseur : ce que finance une part, comment le prix est calculé, comment s’engager à souscrire à une part par jour et ce que W5D ne promet pas.",
+  "ar": "ملف المستثمر: ما الذي تموّله الحصة، وكيف يُحتسب السعر، وكيفية الالتزام بحصة يومية، وما الذي لا تعد به W5D."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "inv-hero",
+   "variant": "product",
+   "gradient": "peak",
+   "title": {
+    "en": "Take a part of W5D. **Every day.**",
+    "fr": "Souscrivez à une part de W5D. **Chaque jour.**",
+    "ar": "ساهم بحصة في W5D. **كل يوم.**"
+   },
+   "lead": {
+    "en": "A part is {{ price.day }} {{ money.currency }} today. Commit to at least one part per day for as many days as you choose, and see the full schedule before you confirm.",
+    "fr": "Une part coûte {{ price.day }} {{ money.currency }} aujourd’hui. Engagez-vous à souscrire à au moins une part par jour pendant le nombre de jours de votre choix, et consultez le calendrier complet avant de confirmer.",
+    "ar": "تبلغ قيمة الحصة اليوم {{ price.day }} {{ money.currency }}. التزم بحصة واحدة على الأقل يوميًا للمدة التي تختارها، واطّلع على الجدول الكامل قبل التأكيد."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Daily subscription",
+      "fr": "Abonnement journalier",
+      "ar": "اشتراك يومي"
+     },
+     "href": "/subscription/",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Investor dossier",
+    "fr": "Dossier investisseur",
+    "ar": "ملف المستثمر"
+   },
+   "badges": [
+    {
+     "icon": "shield-check",
+     "label": {
+      "en": "Public price function",
+      "fr": "Fonction de prix publique",
+      "ar": "دالة التسعير العامة"
+     }
+    },
+    {
+     "icon": "pause",
+     "label": {
+      "en": "Pause or cancel any time",
+      "fr": "Mettez en pause ou annulez à tout moment",
+      "ar": "أوقف مؤقتًا أو ألغِ في أي وقت"
+     }
+    },
+    {
+     "icon": "file-text",
+     "label": {
+      "en": "Dated, sourced figures",
+      "fr": "Chiffres datés et sourcés",
+      "ar": "أرقام مؤرخة ومستندة إلى مصادر"
+     }
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken. A part is an investment in a path, not a job. No return is promised.",
+    "fr": "Mode démo : aucun paiement n’est effectué. Une part est un investissement dans un parcours, pas un emploi. Aucun rendement n’est promis.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي مدفوعات. الحصة استثمار في مسار، لا وظيفة. ولا يوجد عائد مضمون."
+   }
+  },
+  {
+   "type": "kpis",
+   "id": "inv-numbers",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "The numbers behind a part",
+    "fr": "Les chiffres derrière une part",
+    "ar": "الأرقام وراء الحصة"
+   },
+   "items": [
+    {
+     "value": "{{ price.day }}",
+     "label": {
+      "en": "{{ money.currency }} per part per day, today",
+      "fr": "{{ money.currency }} par part et par jour, aujourd’hui",
+      "ar": "{{ money.currency }} لكل حصة يوميًا، اليوم"
+     },
+     "note": {
+      "en": "Base {{ money.base_day }}, cap {{ pricing.cap }}×",
+      "fr": "Base {{ money.base_day }}, plafond {{ pricing.cap }}×",
+      "ar": "الأساس {{ money.base_day }}، والحد الأقصى {{ pricing.cap }}×"
+     },
+     "dec": 2
+    },
+    {
+     "value": "{{ money.salary_monthly }}",
+     "label": {
+      "en": "{{ money.currency }} per expert post per month",
+      "fr": "{{ money.currency }} par publication d’expert et par mois",
+      "ar": "{{ money.currency }} لكل منشور خبير شهريًا"
+     },
+     "note": {
+      "en": "Salary model per 30-day month",
+      "fr": "Modèle de rémunération pour un mois de 30 jours",
+      "ar": "نموذج الراتب لكل شهر من 30 يومًا"
+     }
+    },
+    {
+     "value": "{{ d.part_monthly }}",
+     "label": {
+      "en": "{{ money.currency }} per part per month at base",
+      "fr": "{{ money.currency }} par part et par mois au tarif de base",
+      "ar": "{{ money.currency }} لكل حصة شهريًا عند السعر الأساسي"
+     },
+     "note": {
+      "en": "{{ money.base_day }} × 30",
+      "fr": "{{ money.base_day }} × 30",
+      "ar": "{{ money.base_day }} × 30"
+     }
+    },
+    {
+     "value": "{{ d.parts_per_post }}",
+     "label": {
+      "en": "parts at base to cover one post-month",
+      "fr": "parts au prix de base pour couvrir un mois ultérieur",
+      "ar": "حصص بالسعر الأساسي لتغطية شهر تالٍ واحد"
+     },
+     "note": {
+      "en": "Design arithmetic",
+      "fr": "Calculs de conception",
+      "ar": "حسابات تصميمية"
+     }
+    },
+    {
+     "value": "{{ d.payroll_monthly }}",
+     "label": {
+      "en": "{{ money.currency }} per month at the design ceiling",
+      "fr": "{{ money.currency }} par mois au plafond de conception",
+      "ar": "{{ money.currency }} شهريًا عند الحد التصميمي"
+     },
+     "note": {
+      "en": "{{ d.experts_target }} × {{ money.salary_monthly }}",
+      "fr": "{{ d.experts_target }} × {{ money.salary_monthly }}",
+      "ar": "{{ d.experts_target }} × {{ money.salary_monthly }}"
+     }
+    }
+   ],
+   "lead": {
+    "en": "These are design figures, computed from the same variables the pricing page uses.",
+    "fr": "Ces chiffres de conception sont calculés à partir des mêmes variables que celles utilisées par la page de tarification.",
+    "ar": "هذه أرقام تصميمية، محسوبة من المتغيرات نفسها التي تستخدمها صفحة التسعير."
+   }
+  },
+  {
+   "type": "prose",
+   "id": "inv-what",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "What a part funds",
+    "fr": "Ce que finance une part",
+    "ar": "ما تموّله الحصة"
+   },
+   "paragraphs": [
+    {
+     "en": "Parts fund the path from today's footprint ({{ experts.developers_today }} developers) toward the design ceiling: certification tasks, reviewer time, manager onboarding, tooling and the weekly work engine.",
+     "fr": "Les parts financent le parcours depuis l'effectif actuel ({{ experts.developers_today }} développeurs) vers le plafond de conception : tâches de certification, temps des évaluateurs, intégration des responsables, outils et moteur de travail hebdomadaire.",
+     "ar": "تموّل الحصص المسار من الوضع الحالي ({{ experts.developers_today }} مطورًا) نحو الحد التصميمي: مهام الاعتماد، ووقت المراجعين، وتأهيل المديرين، والأدوات، ومحرك العمل الأسبوعي."
+    },
+    {
+     "en": "Every part is recorded with its date, its unit price and the programme progress at that moment. Your daily subscription is a schedule of such records.",
+     "fr": "Chaque part est enregistrée avec sa date, son prix unitaire et l'état d'avancement du programme à ce moment-là. Votre abonnement quotidien consiste en une série de ces enregistrements.",
+     "ar": "تُسجَّل كل حصة مع تاريخها وسعر وحدتها وتقدم البرنامج في ذلك الوقت. واشتراكك اليومي هو جدول بهذه السجلات."
+    },
+    {
+     "en": "Nothing in this programme is a guarantee of employment for anyone, or of financial return for you.",
+     "fr": "Ce programme ne garantit ni un emploi à quiconque, ni un rendement financier pour vous.",
+     "ar": "لا يضمن هذا البرنامج التوظيف لأي شخص أو تحقيق عائد مالي لك."
+    }
+   ]
+  },
+  {
+   "type": "price-chart",
+   "id": "inv-price",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "The price function, live",
+    "fr": "La fonction de tarification, en direct",
+    "ar": "آلية التسعير، مباشرةً"
+   },
+   "lead": {
+    "en": "price = base × (1 + α·p^k) × (1 + β·t^m), capped. p is certified experts over the design target; t is the share of the programme clock elapsed.",
+    "fr": "prix = base × (1 + α·p^k) × (1 + β·t^m), plafonné. p correspond au nombre d'experts certifiés rapporté à l'objectif de conception ; t correspond à la part du calendrier du programme écoulée.",
+    "ar": "السعر = الأساس × (1 + α·p^k) × (1 + β·t^m)، مع سقف. p هو عدد الخبراء المعتمدين مقسومًا على الهدف التصميمي؛ وt هو نسبة الوقت المنقضي من مدة البرنامج."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the pricing page",
+      "fr": "Ouvrir la page de tarification",
+      "ar": "افتح صفحة التسعير"
+     },
+     "href": "/pricing/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "id": "inv-how",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Three steps to your first part",
+    "fr": "Trois étapes jusqu'à votre première part",
+    "ar": "ثلاث خطوات للحصول على حصتك الأولى"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Choose",
+      "fr": "Choisir",
+      "ar": "اختر"
+     },
+     "body": {
+      "en": "Parts per day, start date, number of days, and optionally a macro work you want to follow.",
+      "fr": "Le nombre de parts par jour, la date de début, le nombre de jours et, si vous le souhaitez, un grand chantier à suivre.",
+      "ar": "عدد الحصص يوميًا، وتاريخ البدء، وعدد الأيام، واختياريًا مشروعًا رئيسيًا ترغب في متابعته."
+     },
+     "meta": {
+      "en": "1 minute",
+      "fr": "1 minute",
+      "ar": "دقيقة واحدة"
+     }
+    },
+    {
+     "title": {
+      "en": "Review",
+      "fr": "Examiner",
+      "ar": "راجع"
+     },
+     "body": {
+      "en": "See the unit price for each day, the total, and the declared limits. Nothing is charged in demo mode.",
+      "fr": "Consultez le prix unitaire de chaque jour, le total et les limites indiquées. Aucun montant n'est prélevé en mode démo.",
+      "ar": "اطّلع على سعر الوحدة لكل يوم، والإجمالي، والحدود المعلنة. لا تُحصّل أي رسوم في الوضع التجريبي."
+     },
+     "meta": {
+      "en": "1 minute",
+      "fr": "1 minute",
+      "ar": "دقيقة واحدة"
+     }
+    },
+    {
+     "title": {
+      "en": "Confirm",
+      "fr": "Confirmer",
+      "ar": "أكّد"
+     },
+     "body": {
+      "en": "You receive a reference and a management key. Pause, resume or cancel from the manage page.",
+      "fr": "Vous recevez une référence et une clé de gestion. Mettez en pause, reprenez ou annulez depuis la page de gestion.",
+      "ar": "ستتلقى رقمًا مرجعيًا ومفتاحًا للإدارة. يمكنك الإيقاف مؤقتًا أو الاستئناف أو الإلغاء من صفحة الإدارة."
+     },
+     "meta": {
+      "en": "Instant",
+      "fr": "Instantané",
+      "ar": "فوري"
+     }
+    }
+   ],
+   "lead": {
+    "en": "The wizard shows the live price before every decision.",
+    "fr": "L’assistant affiche le prix en temps réel avant chaque décision.",
+    "ar": "يعرض المعالج الإرشادي السعر الفعلي قبل كل قرار."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "id": "inv-compare",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "One part, two ways to buy",
+    "fr": "Une part, deux façons d’acheter",
+    "ar": "جزء واحد، وطريقتان للشراء"
+   },
+   "columns": [
+    {
+     "en": "",
+     "fr": "",
+     "ar": ""
+    },
+    {
+     "en": "Single purchase",
+     "fr": "Achat unique",
+     "ar": "شراء منفرد"
+    },
+    {
+     "en": "Daily subscription",
+     "fr": "Abonnement journalier",
+     "ar": "اشتراك يومي"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "en": "Commitment",
+      "fr": "Engagement",
+      "ar": "التزام"
+     },
+     {
+      "en": "One-off",
+      "fr": "En une fois",
+      "ar": "لمرة واحدة"
+     },
+     {
+      "en": "At least one part per day for the days you choose",
+      "fr": "Au moins une part par jour pendant le nombre de jours que vous choisissez",
+      "ar": "جزء واحد على الأقل يوميًا خلال الأيام التي تختارها"
+     }
+    ],
+    [
+     {
+      "en": "Schedule",
+      "fr": "Calendrier",
+      "ar": "الجدول"
+     },
+     {
+      "en": "One date",
+      "fr": "Une date",
+      "ar": "تاريخ واحد"
+     },
+     {
+      "en": "Full day-by-day schedule shown up front",
+      "fr": "Calendrier complet, jour par jour, affiché à l’avance",
+      "ar": "يُعرض الجدول الكامل يومًا بيوم مسبقًا"
+     }
+    ],
+    [
+     {
+      "en": "Price",
+      "fr": "Prix",
+      "ar": "السعر"
+     },
+     {
+      "en": "Price on the day",
+      "fr": "Prix du jour",
+      "ar": "السعر في ذلك اليوم"
+     },
+     {
+      "en": "Forecast at today's progress, recomputed each day",
+      "fr": "Prévision selon l’avancement du jour, recalculée chaque jour",
+      "ar": "توقعات وفق التقدم المحرز اليوم، يعاد احتسابها يوميًا"
+     }
+    ],
+    [
+     {
+      "en": "Control",
+      "fr": "Gestion",
+      "ar": "التحكم"
+     },
+     {
+      "en": "None needed",
+      "fr": "Aucune nécessaire",
+      "ar": "لا حاجة إلى أي إجراء"
+     },
+     {
+      "en": "Pause, resume, cancel with your key",
+      "fr": "Mettez en pause, reprenez ou annulez à l’aide de votre clé",
+      "ar": "الإيقاف مؤقتًا والاستئناف والإلغاء باستخدام مفتاحك"
+     }
+    ],
+    [
+     {
+      "en": "Best for",
+      "fr": "Idéal pour",
+      "ar": "الأنسب لـ"
+     },
+     {
+      "en": "Testing the process",
+      "fr": "Tester le processus",
+      "ar": "اختبار العملية"
+     },
+     {
+      "en": "Backing the programme steadily",
+      "fr": "Soutenir régulièrement le programme",
+      "ar": "دعم البرنامج بانتظام"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "definitions",
+   "id": "inv-terms",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "Terms in plain words",
+    "fr": "Conditions en langage simple",
+    "ar": "المصطلحات بلغة مبسطة"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "Part",
+      "fr": "Part",
+      "ar": "حصة"
+     },
+     "def": {
+      "en": "A dated unit of contribution priced by the published function.",
+      "fr": "Unité de contribution datée, tarifée selon la fonction publiée.",
+      "ar": "وحدة مساهمة مؤرخة، يُحدَّد سعرها وفق الدالة المنشورة."
+     }
+    },
+    {
+     "term": {
+      "en": "Progress (p)",
+      "fr": "Progression (p)",
+      "ar": "التقدم (p)"
+     },
+     "def": {
+      "en": "Certified experts divided by the design target, from the daily rollup.",
+      "fr": "Nombre d’experts certifiés divisé par l’objectif prévu, selon le récapitulatif quotidien.",
+      "ar": "عدد الخبراء المعتمدين مقسومًا على الهدف التصميمي، وفق الملخص اليومي."
+     }
+    },
+    {
+     "term": {
+      "en": "Time (t)",
+      "fr": "Temps (t)",
+      "ar": "الوقت (t)"
+     },
+     "def": {
+      "en": "Elapsed share of the programme clock from {{ dates.start }} to {{ dates.deadline }}.",
+      "fr": "Part du temps écoulé dans le programme, entre {{ dates.start }} et {{ dates.deadline }}.",
+      "ar": "النسبة المنقضية من مدة البرنامج، من {{ dates.start }} إلى {{ dates.deadline }}."
+     }
+    },
+    {
+     "term": {
+      "en": "Cap",
+      "fr": "Plafond",
+      "ar": "السقف"
+     },
+     "def": {
+      "en": "The price never exceeds {{ pricing.cap }}× base, whatever p and t are.",
+      "fr": "Le prix ne dépasse jamais {{ pricing.cap }}× le prix de base, quelles que soient les valeurs de p et t.",
+      "ar": "لا يتجاوز السعر أبدًا {{ pricing.cap }}× السعر الأساسي، مهما كانت قيمتا p وt."
+     }
+    },
+    {
+     "term": {
+      "en": "Demo mode",
+      "fr": "Mode démo",
+      "ar": "الوضع التجريبي"
+     },
+     "def": {
+      "en": "Pledges are recorded, no payment is taken, no money moves.",
+      "fr": "Les engagements sont enregistrés, aucun paiement n’est prélevé et aucun argent ne circule.",
+      "ar": "تُسجَّل التعهدات، ولا يُحصَّل أي مبلغ أو تُحوَّل أي أموال."
+     }
+    },
+    {
+     "term": {
+      "en": "Management key",
+      "fr": "Clé de gestion",
+      "ar": "مفتاح الإدارة"
+     },
+     "def": {
+      "en": "A secret token that lets you pause, resume or cancel a subscription.",
+      "fr": "Jeton secret qui vous permet de suspendre, de reprendre ou d’annuler un abonnement.",
+      "ar": "رمز سري يتيح لك إيقاف الاشتراك مؤقتًا أو استئنافه أو إلغاءه."
+     }
+    }
+   ]
+  },
+  {
+   "type": "notice",
+   "id": "inv-limits",
+   "tier": "i",
+   "focus": 1,
+   "items": [
+    {
+     "en": "A part is an investment in a path, not a job. W5D does not promise employment.",
+     "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet pas d’emploi.",
+     "ar": "الحصة مساهمة في مسار، وليست وظيفة. لا تَعِد W5D بتوفير فرص عمل."
+    },
+    {
+     "en": "No return, dividend or resale value is promised. The price function is public.",
+     "fr": "Aucun rendement, dividende ou valeur de revente n’est garanti. La fonction de prix est publique.",
+     "ar": "لا يُوعَد بأي عائد أو توزيعات أرباح أو قيمة عند إعادة البيع. ودالة التسعير متاحة للعموم."
+    },
+    {
+     "en": "Experts certified today: {{ d.experts_current }}. The design ceiling is {{ d.experts_target }}.",
+     "fr": "Experts certifiés aujourd’hui : {{ d.experts_current }}. Le plafond prévu est de {{ d.experts_target }}.",
+     "ar": "الخبراء المعتمدون اليوم: {{ d.experts_current }}. الحد الأقصى التصميمي هو {{ d.experts_target }}."
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "inv-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Investor questions",
+    "fr": "Questions des investisseurs",
+    "ar": "أسئلة المستثمرين"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Is this a security or equity?",
+      "fr": "S’agit-il d’un titre financier ou d’une participation au capital ?",
+      "ar": "هل تُعد هذه الحصة ورقة مالية أو حصة ملكية؟"
+     },
+     "a": {
+      "en": "No. A part is a contribution to a published programme. Legal structuring for any future instrument would be published before it is offered.",
+      "fr": "Non. Une part est une contribution à un programme publié. La structuration juridique de tout instrument futur serait publiée avant sa mise en vente.",
+      "ar": "لا. الحصة مساهمة في برنامج منشور. وسيُنشر الهيكل القانوني لأي أداة مستقبلية قبل طرحها."
+     }
+    },
+    {
+     "q": {
+      "en": "Who verifies the figures?",
+      "fr": "Qui vérifie les chiffres ?",
+      "ar": "من يتحقق من الأرقام؟"
+     },
+     "a": {
+      "en": "Progress comes from the daily rollup; the price function and its constants are in the public pricing page and the JSON API; every change to a constant is logged.",
+      "fr": "La progression provient du récapitulatif quotidien ; la fonction de tarification et ses constantes figurent sur la page publique des tarifs et dans l’API JSON ; chaque modification d’une constante est consignée.",
+      "ar": "يُحتسب التقدّم من خلال التجميع اليومي؛ وترد دالة التسعير وثوابتها في صفحة الأسعار العامة وواجهة JSON البرمجية؛ ويُسجَّل كل تغيير يطرأ على ثابت."
+     }
+    },
+    {
+     "q": {
+      "en": "Can I get the dossier by email?",
+      "fr": "Puis-je recevoir le dossier par e-mail ?",
+      "ar": "هل يمكنني الحصول على الملف عبر البريد الإلكتروني؟"
+     },
+     "a": {
+      "en": "Yes. Use the contact form and choose the investor desk, or write to {{ investor.contact }}.",
+      "fr": "Oui. Utilisez le formulaire de contact et choisissez le service investisseurs, ou écrivez à {{ investor.contact }}.",
+      "ar": "نعم. استخدم نموذج التواصل واختر قسم المستثمرين، أو راسلنا على {{ investor.contact }}."
+     }
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Contact the investor desk",
+      "fr": "Contacter le service investisseurs",
+      "ar": "تواصل مع قسم المستثمرين"
+     },
+     "href": "/contact/?desk=investors",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "inv-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Take a part **today**.",
+    "fr": "Prenez part **dès aujourd’hui**.",
+    "ar": "شارك **اليوم**."
+   },
+   "body": {
+    "en": "Three steps, a full schedule, a reference you can verify.",
+    "fr": "Trois étapes, un calendrier complet et une référence que vous pouvez vérifier.",
+    "ar": "ثلاث خطوات، وجدول زمني كامل، ومرجع يمكنك التحقق منه."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Daily subscription",
+      "fr": "Abonnement journalier",
+      "ar": "اشتراك يومي"
+     },
+     "href": "/subscription/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  },
+  {
+   "type": "sticky-cta",
+   "id": "sticky",
+   "href": "/checkout/",
+   "label": {
+    "en": "Take a part today",
+    "fr": "Prendre une part aujourd’hui",
+    "ar": "احصل على حصة اليوم"
+   }
+  }
+ ]
+}

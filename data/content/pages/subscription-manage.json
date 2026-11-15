@@ -1,0 +1,49 @@
+{
+ "slug": "subscription-manage",
+ "title": {
+  "en": "Manage your subscription",
+  "fr": "Gérer votre abonnement",
+  "ar": "إدارة اشتراكك"
+ },
+ "description": {
+  "en": "Pause, resume or cancel a subscription with your reference and management key.",
+  "fr": "Mettez en pause, reprenez ou résiliez un abonnement à l’aide de votre référence et de votre clé de gestion.",
+  "ar": "أوقف الاشتراك مؤقتًا أو استأنفه أو ألغِه باستخدام الرقم المرجعي ومفتاح الإدارة."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "mng-hero",
+   "variant": "classic",
+   "gradient": "cultures",
+   "title": {
+    "en": "Manage your **subscription.**",
+    "fr": "Gérer votre **abonnement.**",
+    "ar": "إدارة **اشتراكك.**"
+   },
+   "lead": {
+    "en": "Enter your reference and management key.",
+    "fr": "Saisissez votre référence et votre clé de gestion.",
+    "ar": "أدخل الرقم المرجعي ومفتاح الإدارة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open",
+      "fr": "Ouvrir",
+      "ar": "فتح"
+     },
+     "href": "#mng-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Manage",
+    "fr": "Gérer",
+    "ar": "إدارة"
+   }
+  }
+ ],
+ "robots": "noindex,follow"
+}

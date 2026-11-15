@@ -1,0 +1,170 @@
+{
+ "slug": "join-eligibility",
+ "title": {
+  "en": "Check my eligibility",
+  "fr": "Vérifier mon admissibilité",
+  "ar": "تحقّق من أهليتي"
+ },
+ "description": {
+  "en": "Thirty-second eligibility check by diploma level and field.",
+  "fr": "Vérifiez votre admissibilité en trente secondes selon votre niveau de diplôme et votre domaine.",
+  "ar": "تحقّق من أهليتك في ثلاثين ثانية، بحسب مستوى الشهادة ومجالها."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "elig-hero",
+   "variant": "classic",
+   "gradient": "technology",
+   "title": {
+    "en": "Which service **fits you?**",
+    "fr": "Quel service vous **correspond ?**",
+    "ar": "أيّ الخدمات **تناسبك؟**"
+   },
+   "lead": {
+    "en": "Answer three questions. We suggest services; we do not promise a place.",
+    "fr": "Répondez à trois questions. Nous vous suggérons des services ; nous ne garantissons pas de place.",
+    "ar": "أجب عن ثلاثة أسئلة. نقترح خدمات، لكننا لا نضمن لك مكانًا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Start",
+      "fr": "Commencer",
+      "ar": "ابدأ"
+     },
+     "href": "#elig-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Eligibility",
+    "fr": "Admissibilité",
+    "ar": "الأهلية"
+   }
+  },
+  {
+   "type": "form",
+   "id": "elig-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/join/eligibility/",
+   "title": {
+    "en": "Three questions",
+    "fr": "Trois questions",
+    "ar": "ثلاثة أسئلة"
+   },
+   "submit": {
+    "en": "Show my services",
+    "fr": "Afficher mes services",
+    "ar": "اعرض الخدمات المناسبة لي"
+   },
+   "fields": [
+    {
+     "name": "diploma",
+     "label": {
+      "en": "Diploma level",
+      "fr": "Niveau de diplôme",
+      "ar": "مستوى الشهادة"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "licence": {
+       "en": "Licence / Bachelor",
+       "fr": "Licence / Bachelor",
+       "ar": "الإجازة / البكالوريوس"
+      },
+      "maitrise": {
+       "en": "Maîtrise / Master",
+       "fr": "Maîtrise / Master",
+       "ar": "الماجستير"
+      },
+      "engineer": {
+       "en": "Engineer",
+       "fr": "Ingénieur",
+       "ar": "الهندسة"
+      },
+      "phd": {
+       "en": "Doctorate",
+       "fr": "Doctorat",
+       "ar": "الدكتوراه"
+      },
+      "other": {
+       "en": "Other",
+       "fr": "Autre",
+       "ar": "أخرى"
+      }
+     }
+    },
+    {
+     "name": "field",
+     "label": {
+      "en": "Field of study (e.g. civil engineering, law, linguistics)",
+      "fr": "Domaine d’études (p. ex. génie civil, droit, linguistique)",
+      "ar": "مجال الدراسة (مثل الهندسة المدنية، أو القانون، أو اللسانيات)"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "macro",
+     "label": {
+      "en": "Macro work you prefer",
+      "fr": "Type de travail macro que vous préférez",
+      "ar": "نوع العمل العام الذي تفضّله"
+     },
+     "type": "select",
+     "required": false,
+     "span": 1,
+     "options": {
+      "": {
+       "en": "Any",
+       "fr": "N’importe lequel",
+       "ar": "أيٌّ منها"
+      },
+      "cultures": {
+       "en": "Cultures / Humanities",
+       "fr": "Cultures / Sciences humaines",
+       "ar": "الثقافات / العلوم الإنسانية"
+      },
+      "built": {
+       "en": "Built Environment",
+       "fr": "Environnement bâti",
+       "ar": "البيئة المبنية"
+      },
+      "sciences": {
+       "en": "Sciences",
+       "fr": "Sciences",
+       "ar": "العلوم"
+      },
+      "governance": {
+       "en": "Governance",
+       "fr": "Gouvernance",
+       "ar": "الحوكمة"
+      },
+      "technology": {
+       "en": "Technology",
+       "fr": "Technologie",
+       "ar": "التكنولوجيا"
+      }
+     }
+    },
+    {
+     "name": "email",
+     "label": {
+      "en": "Email (optional, to receive the list)",
+      "fr": "E-mail (facultatif, pour recevoir la liste)",
+      "ar": "البريد الإلكتروني (اختياري، لتلقّي القائمة)"
+     },
+     "type": "email",
+     "required": false,
+     "span": 1
+    }
+   ]
+  }
+ ]
+}

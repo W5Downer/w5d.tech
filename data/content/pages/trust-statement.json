@@ -1,0 +1,209 @@
+{
+ "slug": "trust-statement",
+ "title": {
+  "en": "Declared limits",
+  "fr": "Limites déclarées",
+  "ar": "الحدود المعلنة"
+ },
+ "description": {
+  "en": "What W5D does not promise: no job, no return, no headcount claim, and how the price works.",
+  "fr": "Ce que W5D ne promet pas : aucun emploi, aucun rendement, aucune promesse d’effectif, et le fonctionnement du prix.",
+  "ar": "ما لا تعد به W5D: لا وظيفة، ولا عائد، ولا ادعاء بشأن عدد العاملين، وكيفية احتساب السعر."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "ts-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Declared **limits.**",
+    "fr": "Limites **déclarées.**",
+    "ar": "حدود **معلنة.**"
+   },
+   "lead": {
+    "en": "Read this before you invest, apply or share.",
+    "fr": "Lisez ceci avant d’investir, de postuler ou de partager.",
+    "ar": "اقرأ هذا قبل أن تستثمر أو تتقدم بطلب أو تشارك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Back to investing",
+      "fr": "Retour à l’investissement",
+      "ar": "العودة إلى الاستثمار"
+     },
+     "href": "/investors/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Statement",
+    "fr": "Déclaration",
+    "ar": "بيان"
+   }
+  },
+  {
+   "type": "prose",
+   "id": "ts-jobs",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "1. A part is an investment in a path, not a job",
+    "fr": "1. Une part est un investissement dans un parcours, pas un emploi",
+    "ar": "1. الحصة استثمار في مسار، وليست وظيفة"
+   },
+   "paragraphs": [
+    {
+     "en": "W5D does not promise employment to anyone who buys a part, registers or is certified. Posts are created as certified headcount and funded capacity grow.",
+     "fr": "W5D ne promet pas d’emploi à quiconque achète une part, s’inscrit ou obtient une certification. Les postes sont créés à mesure que les effectifs certifiés et la capacité financée augmentent.",
+     "ar": "لا تعد W5D بالتوظيف لأي شخص يشتري حصة أو يسجل أو يحصل على شهادة. تُنشأ الوظائف مع نمو عدد العاملين المعتمدين والقدرة الممولة."
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "ts-design",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "2. The headcount is a design equation",
+    "fr": "2. L’effectif est une équation de conception",
+    "ar": "2. عدد العاملين معادلة تصميمية"
+   },
+   "paragraphs": [
+    {
+     "en": "\"{{ d.experts_target }} experts\" is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. It is a design ceiling, not a claim of employment.",
+     "fr": "\"{{ d.experts_target }} experts\" correspond à {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. Il s’agit d’un plafond théorique, et non d’une promesse d’emploi.",
+     "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. وهذا سقف تخطيطي، وليس ادعاءً بالتوظيف."
+    },
+    {
+     "en": "Today: {{ experts.developers_today }} developers deliver in Tunisia; {{ d.experts_current }} experts are certified (as of {{ dates.as_of }}).",
+     "fr": "Aujourd’hui : {{ experts.developers_today }} développeurs fournissent des prestations en Tunisie ; {{ d.experts_current }} experts sont certifiés (au {{ dates.as_of }}).",
+     "ar": "اليوم: يعمل {{ experts.developers_today }} من المطورين في تونس؛ وقد حصل {{ d.experts_current }} من الخبراء على اعتماد (حتى {{ dates.as_of }})."
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "ts-returns",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "3. No return is promised",
+    "fr": "3. Aucun rendement n’est promis",
+    "ar": "3. لا يوجد عائد مضمون"
+   },
+   "paragraphs": [
+    {
+     "en": "No return, dividend or resale value is promised. A part funds a published programme at a published price.",
+     "fr": "Aucun rendement, dividende ni valeur de revente n’est promis. Une partie finance un programme publié à un prix publié.",
+     "ar": "لا يوجد عائد أو توزيعات أرباح أو قيمة إعادة بيع مضمونة. يموّل جزءٌ من المبلغ برنامجًا معلنًا بسعر معلن."
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "ts-price",
+   "tier": "i",
+   "focus": 2,
+   "title": {
+    "en": "4. The price function",
+    "fr": "4. La fonction de prix",
+    "ar": "4. معادلة السعر"
+   },
+   "paragraphs": [
+    {
+     "en": "price = base × (1 + α·p^k) × (1 + β·t^m), capped at {{ pricing.cap }}× base, with base {{ money.base_day }} {{ money.currency }} per day. The curve is public; constants change only with a dated, logged entry.",
+     "fr": "price = base × (1 + α·p^k) × (1 + β·t^m), plafonné à {{ pricing.cap }}× base, avec une base de {{ money.base_day }} {{ money.currency }} par jour. La courbe est publique ; les constantes ne changent qu’au moyen d’une entrée datée et consignée.",
+     "ar": "السعر = الأساس × (1 + α·p^k) × (1 + β·t^m)، بحد أقصى {{ pricing.cap }}× الأساس، حيث يبلغ الأساس {{ money.base_day }} {{ money.currency }} لليوم. المنحنى معلن؛ ولا تتغير الثوابت إلا بإدخال مؤرّخ ومسجّل."
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "See the curve",
+      "fr": "Voir la courbe",
+      "ar": "اطّلع على المنحنى"
+     },
+     "href": "/pricing/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "ts-demo",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "5. Demo mode",
+    "fr": "5. Mode démo",
+    "ar": "5. الوضع التجريبي"
+   },
+   "paragraphs": [
+    {
+     "en": "While the payment provider is not connected, pledges are recorded and no payment is taken. Terms for real payments will be shown before you confirm.",
+     "fr": "Tant que le fournisseur de paiement n’est pas connecté, les engagements sont enregistrés et aucun paiement n’est prélevé. Les conditions applicables aux paiements réels seront présentées avant votre confirmation.",
+     "ar": "ما دام مزوّد الدفع غير متصل، تُسجّل التعهدات ولا تُحصّل أي مدفوعات. ستُعرض شروط الدفع الفعلي قبل التأكيد."
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "ts-offer",
+   "tier": "i",
+   "focus": 1,
+   "title": {
+    "en": "6. Dates",
+    "fr": "6. Dates",
+    "ar": "6. التواريخ"
+   },
+   "paragraphs": [
+    {
+     "en": "Programme clock: {{ dates.start }} to {{ dates.deadline }}. Promotional offer on the Admin Dashboard licence valid before {{ dates.offer_year }}.",
+     "fr": "Période du programme : du {{ dates.start }} au {{ dates.deadline }}. Offre promotionnelle sur la licence du tableau de bord d’administration, valable avant le {{ dates.offer_year }}.",
+     "ar": "الفترة الزمنية للبرنامج: من {{ dates.start }} إلى {{ dates.deadline }}. يسري العرض الترويجي على ترخيص لوحة تحكم المسؤول قبل {{ dates.offer_year }}."
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "ts-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Understood? **Continue.**",
+    "fr": "Vous avez compris ? **Continuer.**",
+    "ar": "هل اتضح؟ **تابع.**"
+   },
+   "body": {
+    "en": "",
+    "fr": "",
+    "ar": ""
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "File a correction",
+      "fr": "Signaler une correction",
+      "ar": "الإبلاغ عن تصحيح"
+     },
+     "href": "/trust/corrections/",
+     "style": "ghost"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "energy-audits",
+ "id": 124,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Energy Efficiency Audits",
+  "fr": "Audits de l'efficacité énergétique",
+  "ar": "تدقيقات كفاءة الطاقة"
+ },
+ "short": {
+  "en": "The service provides industrial audits, retrofits, monitoring.",
+  "fr": "Vérifier les consommations avant de promettre des économies.",
+  "ar": "التحقق من الاستهلاك قبل الوعد بالتوفير."
+ },
+ "abstract": {
+  "en": "Energy efficiency audits — industrial audits, retrofit planning, and continuous monitoring for measurable savings.",
+  "fr": "Audits de l'efficacité énergétique — audits industriels, planification de rénovations et suivi continu pour réaliser des économies mesurables.",
+  "ar": "تدقيقات كفاءة الطاقة — تدقيقات صناعية، وتخطيط للتحديث، ومراقبة مستمرة لتحقيق وفورات قابلة للقياس."
+ },
+ "long": [
+  {
+   "en": "The Energy Efficiency Audits service organises a weekly work package around industrial energy surveys, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 industrial energy surveys; 1000 meter validation tests; 200 retrofit business cases; 200 savings verification plans. Energy efficiency audits — industrial audits, retrofit planning, and continuous monitoring for measurable savings. Specialists sequence those methods against the accepted weekly package. The governing boundary is that audits separate measured baselines from savings estimates and production changes. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Audits de l'efficacité énergétique organise un lot de travail hebdomadaire autour des études énergétiques industrielles, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 études énergétiques industrielles ; 1000 tests de validation des compteurs ; 200 analyses de rentabilité de projets de rénovation ; 200 plans de vérification des économies d'énergie. Audits de l'efficacité énergétique — audits industriels, planification de rénovations et suivi continu pour réaliser des économies mesurables. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les audits distinguent les niveaux de référence mesurés des estimations d'économies et des changements de production. Il s'agit de livrables échelonnés issus de dossiers commandés, et non de la promesse de réaliser un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة تدقيقات كفاءة الطاقة حزمة عمل أسبوعية حول مسوحات الطاقة الصناعية، بدلًا من اعتبار الحضور هو الناتج. وتتمثل الخطة التجريبية، عند توافر القدرة التشغيلية الكاملة والموارد اللازمة، في إجراء 300 مسح للطاقة الصناعية؛ و1000 اختبار للتحقق من العدادات؛ وإعداد 200 دراسة جدوى لتحديث الأنظمة؛ و200 خطة للتحقق من الوفورات. تدقيقات كفاءة الطاقة — تدقيقات صناعية، وتخطيط للتحديث، ومراقبة مستمرة لتحقيق وفورات قابلة للقياس. ويُنسّق المختصون هذه الأساليب ضمن حزمة العمل الأسبوعية المعتمدة. ويتمثل الضابط الأساسي في أن تفصل عمليات التدقيق بين خطوط الأساس المقاسة وتقديرات الوفورات والتغيرات في الإنتاج. وهذه مخرجات مرحلية لحالات مُكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `energy-audits`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of industrial energy surveys, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d'eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui s'élevaient à 34% en 2021. Cela établit un besoin d'intervention technique mesurée, mais ne constitue pas une commande financée pour ce service particulier. La séparation entre les propriétaires des actifs, les budgets d'infrastructure et les responsabilités environnementales peut empêcher la mise en œuvre de travaux techniquement utiles. Pour `energy-audits`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des études énergétiques industrielles, plutôt qu'un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجهها تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك خسائر التوزيع لدى SONEDE التي بلغت 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي اختلاف مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية التقنية. لذلك، يتمثل النهج المقترح لخدمة `energy-audits` في سير عمل تعاقدي يحدد مستفيدًا معلومًا وتعريفًا معتمدًا لمسوح الطاقة الصناعية، لا في التوظيف الذي يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the industrial energy surveys acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks meter validation tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted industrial energy surveys from rejected or deferred work and records blockers around retrofit business cases. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d'acceptation des études énergétiques industrielles ; 100 responsables les traduisent en affectations pour des équipes d'environ dix experts. Les identités liées à Dyon permettent d'identifier les contributeurs responsables, tandis qu'un évaluateur compétent vérifie les tests de validation des compteurs avant leur approbation. L'audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l'examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les études énergétiques industrielles acceptées des travaux rejetés ou différés et consigne les obstacles liés aux analyses de rentabilité des projets de rénovation. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مسوح الطاقة الصناعية؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من اختبارات التحقق من العدادات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات، ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويُميّز التقرير الإجمالي للخدمة بين مسوح الطاقة الصناعية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بدراسات جدوى تحديث الأنظمة. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "energy engineering, industrial engineering, measurement and verification",
+  "fr": "génie énergétique, génie industriel, mesure et vérification",
+  "ar": "هندسة الطاقة، والهندسة الصناعية، والقياس والتحقق"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Industrial energy surveys",
+    "fr": "Études énergétiques industrielles",
+    "ar": "مسوح الطاقة الصناعية"
+   },
+   "unit": {
+    "en": "industrial energy surveys",
+    "fr": "études énergétiques industrielles",
+    "ar": "مسوح الطاقة الصناعية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Meter validation tests",
+    "fr": "Tests de validation des compteurs",
+    "ar": "اختبارات التحقق من العدادات"
+   },
+   "unit": {
+    "en": "meter validation tests",
+    "fr": "tests de validation des compteurs",
+    "ar": "اختبارات التحقق من العدادات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Retrofit business cases",
+    "fr": "Analyses de rentabilité de projets de rénovation",
+    "ar": "دراسات جدوى تحديث الأنظمة"
+   },
+   "unit": {
+    "en": "retrofit business cases",
+    "fr": "analyses de rentabilité des rénovations énergétiques",
+    "ar": "دراسات جدوى أعمال التحديث"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Savings verification plans",
+    "fr": "plans de vérification des économies d’énergie",
+    "ar": "خطط التحقق من الوفورات"
+   },
+   "unit": {
+    "en": "savings verification plans",
+    "fr": "plans de vérification des économies d’énergie",
+    "ar": "خطط التحقق من الوفورات"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `energy-audits` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the industrial energy surveys to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de validation lié au cas `energy-audits` comprend un dossier de réception PDF/A + un manifeste source CSV/JSON + le code/la configuration versionnés, les tests et les journaux de déploiement ou de reprise, reliant les audits énergétiques industriels à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `energy-audits` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + شيفرة/تهيئة ذات إصدارات محددة واختبارات وسجلات للنشر أو الاستعادة، بما يربط المسوحات الصناعية للطاقة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted industrial energy surveys** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant le vendredi à 12:00 ; **≥3 audits énergétiques industriels acceptés** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux justificatifs** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité l’emportent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **≥9 من أصل 10 تقارير أسبوعية مؤهلة** تُقدَّم بحلول الجمعة 12:00؛ **≥3 مسوحات صناعية للطاقة مقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات المعتمدة والتعديلات المقام المؤهل، فيما تتجاوز عيوب السلامة/الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "audits separate measured baselines from savings estimates and production changes",
+  "fr": "les audits distinguent les références mesurées des estimations d’économies et des changements de production",
+  "ar": "تفصل عمليات التدقيق بين خطوط الأساس المقاسة وتقديرات الوفورات وتغييرات الإنتاج"
+ },
+ "depends": [
+  {
+   "slug": "energy-retrofits",
+   "id": 36
+  },
+  {
+   "slug": "renewable-science",
+   "id": 68
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "7",
+   "target": "7.2"
+  },
+  {
+   "goal": "7",
+   "target": "7.3"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Meters misattribute process consumption → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les compteurs attribuent à tort la consommation aux procédés → refaire les contrôles critiques à partir de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "تؤدي العدادات إلى نسبة استهلاك العمليات على نحو غير صحيح → أَعِد إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Production decline mistaken for efficiency → reconcile source records with the industrial energy surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "Une baisse de la production est confondue avec un gain d’efficacité → rapprocher les documents sources de la liste de contrôle de réception des audits énergétiques industriels et désigner un responsable des mesures correctives.",
+   "ar": "يُساء تفسير انخفاض الإنتاج على أنه تحسن في الكفاءة → طابق السجلات المصدرية مع قائمة التحقق لقبول المسوحات الصناعية للطاقة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Recommendations increase maintenance burdens → reconcile source records with the industrial energy surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les recommandations alourdissent les tâches de maintenance → rapprocher les documents sources de la liste de contrôle de réception des audits énergétiques industriels et désigner un responsable des mesures correctives.",
+   "ar": "تؤدي التوصيات إلى زيادة أعباء الصيانة → طابق السجلات المصدرية مع قائمة التحقق لقبول المسوحات الصناعية للطاقة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "slug": "developers-tunisia",
+ "id": 11,
+ "order": 11,
+ "icon": "code",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Developers (Tunisia)",
+  "fr": "Développeurs (Tunisie)",
+  "ar": "المطورون (تونس)"
+ },
+ "tagline": {
+  "en": "The real delivery capacity today: {{ experts.developers_today }} developers.",
+  "fr": "La capacité réelle de réalisation aujourd’hui : {{ experts.developers_today }} développeurs.",
+  "ar": "القدرة الفعلية على الإنجاز اليوم: {{ experts.developers_today }} مطورًا."
+ },
+ "outcome": [
+  {
+   "en": "{{ experts.developers_today }} developers deliver in Tunisia today. This is the real footprint, distinct from the design ceiling of {{ d.experts_target }} expert seats.",
+   "fr": "{{ experts.developers_today }} développeurs réalisent des projets en Tunisie aujourd’hui. Il s’agit de la présence réelle, distincte du plafond théorique de {{ d.experts_target }} postes d’experts.",
+   "ar": "{{ experts.developers_today }} مطورًا ينجزون العمل في تونس اليوم. وهذا هو النطاق الفعلي، وهو متميز عن الحد الأقصى التصميمي البالغ {{ d.experts_target }} مقعدًا للخبراء."
+  },
+  {
+   "en": "Every part sold funds the path from this number toward the ceiling; it does not claim the ceiling is reached.",
+   "fr": "Chaque pièce vendue finance le chemin qui mène de ce nombre jusqu’au plafond ; cela ne signifie pas que le plafond est atteint.",
+   "ar": "يموّل بيع كل جزء المسار من هذا الرقم باتجاه السقف؛ ولا يعني ذلك بلوغ السقف."
+  }
+ ],
+ "evidence": {
+  "en": "Dated developer count on the preview.",
+  "fr": "Nombre de développeurs daté affiché dans l’aperçu.",
+  "ar": "عدد المطورين بتاريخ محدد في المعاينة."
+ },
+ "services": [
+  "software-eng",
+  "cybersecurity",
+  "ai-ml",
+  "data-engineering",
+  "cloud-infra"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "{{ experts.developers_today }} developers",
+    "fr": "{{ experts.developers_today }} développeurs",
+    "ar": "{{ experts.developers_today }} مطورًا"
+   },
+   "body": {
+    "en": "Dated count.",
+    "fr": "Nombre daté.",
+    "ar": "عدد مؤرَّخ."
+   }
+  }
+ ],
+ "gradient": "built",
+ "needs": {
+  "en": "Senior engineers who can lead teams of about {{ experts.team_size }}.",
+  "fr": "Ingénieurs seniors capables de diriger des équipes d’environ {{ experts.team_size }} personnes.",
+  "ar": "مهندسون كبار قادرون على قيادة فرق تضم نحو {{ experts.team_size }} فردًا."
+ }
+}

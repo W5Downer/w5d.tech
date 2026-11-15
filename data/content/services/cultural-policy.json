@@ -1,0 +1,167 @@
+{
+ "slug": "cultural-policy",
+ "id": 12,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Cultural Policy Advisory",
+  "fr": "Conseil consultatif en politique culturelle",
+  "ar": "المشورة في السياسات الثقافية"
+ },
+ "short": {
+  "en": "The service provides mapping, impact assessment, legal frameworks.",
+  "fr": "Évaluer les politiques et financements culturels.",
+  "ar": "تقييم السياسات والتمويل الثقافي."
+ },
+ "abstract": {
+  "en": "Advisory services for cultural policy — ecosystem mapping, cultural impact assessment methodologies, drafting of heritage and cultural law, and frameworks for public-private cultural funding.",
+  "fr": "Services de conseil en politique culturelle — cartographie de l’écosystème, méthodologies d’évaluation de l’impact culturel, rédaction de textes législatifs sur le patrimoine et la culture, et cadres de financement culturel public-privé.",
+  "ar": "خدمات استشارية في السياسات الثقافية — رسم خرائط المنظومة، ومنهجيات تقييم الأثر الثقافي، وصياغة قوانين التراث والثقافة، وأطر التمويل الثقافي بين القطاعين العام والخاص."
+ },
+ "long": [
+  {
+   "en": "The Cultural Policy Advisory service organises a weekly work package around policy briefs, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 50 policy briefs; 2000 ecosystem records; 100 consultation summaries; 25 funding instrument assessments. Advisory services for cultural policy — ecosystem mapping, cultural impact assessment methodologies, drafting of heritage and cultural law, and frameworks for public-private cultural funding. Specialists sequence those methods against the accepted weekly package. The governing boundary is that advisory recommendations separate measured outcomes from assumed benefits. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de conseil en politique culturelle organise un ensemble de travaux hebdomadaire autour des notes de politique publique, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 50 notes de politique publique ; 2000 données sur l’écosystème ; 100 synthèses de consultation ; 25 évaluations d’instruments de financement. Services de conseil en politique culturelle — cartographie de l’écosystème, méthodologies d’évaluation de l’impact culturel, rédaction de textes législatifs sur le patrimoine et la culture, et cadres de financement culturel public-privé. Les spécialistes organisent ces méthodes en fonction de l’ensemble de travaux hebdomadaire accepté. Le principe directeur est que les recommandations de conseil distinguent les résultats mesurés des bénéfices supposés. Il s’agit de livrables échelonnés issus de mandats spécifiques, et non de la promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة المشورة في السياسات الثقافية حزمة عمل أسبوعية تتمحور حول موجزات السياسات، بدلًا من اعتبار الحضور هو الناتج. وفي حال توافر كامل الموارد والقدرة التشغيلية، تتضمن خطتها التجريبية 50 موجزًا للسياسات؛ و2000 سجل للمنظومة؛ و100 ملخص للمشاورات؛ و25 تقييمًا لأدوات التمويل. خدمات استشارية في السياسات الثقافية — رسم خرائط المنظومة، ومنهجيات تقييم الأثر الثقافي، وصياغة قوانين التراث والثقافة، وأطر التمويل الثقافي بين القطاعين العام والخاص. ويُنسّق المختصون استخدام هذه المنهجيات بما يتوافق مع حزمة العمل الأسبوعية المعتمدة. والمبدأ الحاكم هو أن تفصل التوصيات الاستشارية بين النتائج المقاسة والمنافع المفترضة. وهذه مخرجات مرحلية لحالات بتكليف، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `cultural-policy`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of policy briefs, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse de la Banque mondiale de 2022 compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois hautement qualifiés nets supplémentaires par an en 2011–2017. Ce décalage historique étaye une hypothèse plus large de commande de prestations ; il ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les gardiens du patrimoine et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un commanditaire payeur et conclure un accord de réutilisation. Pour `cultural-policy`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire nommé et une définition acceptée des notes de politique publique, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا خلال السنوات الأكاديمية 2012/13–2017/18، و10,675 وظيفة إضافية صافية سنويًا في الفئات المهنية العليا خلال 2011–2017. ويدعم هذا التباين التاريخي فرضية أوسع للتكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القائمون على حفظ التراث والمجتمعات من دون أن تكون لديهم ميزانية أو جهة واحدة تتعاقد معهم، لذا يجب تحديد جهة راعية تدفع التكاليف واتفاقية لإعادة الاستخدام. لذلك، تتمثل الاستجابة المقترحة لـ `cultural-policy` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لموجزات السياسات، لا في تبرير التوظيف اعتمادًا على معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the policy briefs acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks ecosystem records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted policy briefs from rejected or deferred work and records blockers around consultation summaries. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des notes de politique publique ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les données sur l’écosystème avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les pièces justificatives et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les notes de politique publique acceptées des travaux rejetés ou reportés, et consigne les obstacles liés aux synthèses de consultation. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول موجزات السياسات؛ ويحوّل 100 مدير هذه المعايير إلى مهام للفرق تضم نحو عشرة خبراء. وتتيح الهويات المرتبطة بـ Dyon تحديد المساهمين المسؤولين، فيما يراجع مراجع مؤهل سجلات المنظومة قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص أدلة المصادر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص التجميعي للخدمة بين موجزات السياسات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بملخصات المشاورات. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "cultural policy, economics, law and programme evaluation",
+  "fr": "politique culturelle, économie, droit et évaluation de programmes",
+  "ar": "السياسات الثقافية والاقتصاد والقانون وتقييم البرامج"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Policy briefs",
+    "fr": "Notes de politique publique",
+    "ar": "موجزات السياسات"
+   },
+   "unit": {
+    "en": "policy briefs",
+    "fr": "notes de politique publique",
+    "ar": "موجزات السياسات"
+   },
+   "target": 50
+  },
+  {
+   "name": {
+    "en": "Ecosystem records",
+    "fr": "Données sur l’écosystème",
+    "ar": "سجلات المنظومة"
+   },
+   "unit": {
+    "en": "ecosystem records",
+    "fr": "dossiers de l’écosystème",
+    "ar": "سجلات المنظومة"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Consultation summaries",
+    "fr": "Synthèses des consultations",
+    "ar": "ملخصات المشاورات"
+   },
+   "unit": {
+    "en": "consultation summaries",
+    "fr": "synthèses des consultations",
+    "ar": "ملخصات المشاورات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Funding instrument assessments",
+    "fr": "Évaluations des instruments de financement",
+    "ar": "تقييمات أدوات التمويل"
+   },
+   "unit": {
+    "en": "funding instrument assessments",
+    "fr": "évaluations des instruments de financement",
+    "ar": "تقييمات أدوات التمويل"
+   },
+   "target": 25
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cultural-policy` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the policy briefs to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `cultural-policy` lié à un cas contient un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des sources expurgées et des dossiers de consultation, établissant un lien entre les notes d’orientation, la source, le réviseur, la version, le journal des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة اعتماد مرتبطة بحالة ضمن مجال `cultural-policy` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط موجزات السياسات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted policy briefs** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant vendredi 12:00 ; **≥1 note d’orientation acceptée** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **اعتماد ≥1 من موجزات السياسات** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، كما أن عيوب السلامة/الخصوصية الحرجة تتجاوز أثرها أي تقييم أخضر. هذه أهداف تجريبية وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "advisory recommendations separate measured outcomes from assumed benefits",
+  "fr": "les recommandations consultatives distinguent les résultats mesurés des bénéfices supposés",
+  "ar": "تفصل التوصيات الاستشارية بين النتائج المقاسة والمنافع المفترضة"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "pfm",
+   "id": 91
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "municipal-capacity",
+   "id": 85
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Consultation dominated by major institutions → reconcile source records with the policy briefs acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les consultations sont dominées par de grandes institutions → rapprocher les dossiers sources de la liste de contrôle d’acceptation des notes d’orientation et attribuer la responsabilité des mesures correctives.",
+   "ar": "هيمنة المؤسسات الكبرى على المشاورات → مطابقة سجلات المصادر مع قائمة التحقق لقبول موجزات السياسات وتحديد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Impact claims lack a comparison → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les affirmations d’impact ne reposent pas sur une comparaison → exiger des vérifications indépendantes des sources, un comparateur et une explicitation de l’incertitude avant l’acceptation.",
+   "ar": "تفتقر ادعاءات الأثر إلى مقارنة → اشتراط عمليات تحقق مستقلة من المصادر، ومجموعة مقارنة، وتوضيح صريح لعدم اليقين قبل الاعتماد."
+  },
+  {
+   "en": "Draft advice treated as binding law → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les avis préliminaires sont traités comme des dispositions juridiquement contraignantes → obtenir la validation d’une autorité ou d’un juriste compétent et interdire toute décision opérationnelle non autorisée.",
+   "ar": "التعامل مع المشورة الأولية باعتبارها قانوناً ملزماً → الحصول على تصديق من جهة قانونية/مختصة ومنع اتخاذ قرارات تشغيلية دون تفويض."
+  }
+ ]
+}

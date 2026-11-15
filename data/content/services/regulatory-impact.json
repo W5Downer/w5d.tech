@@ -1,0 +1,167 @@
+{
+ "slug": "regulatory-impact",
+ "id": 79,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Regulatory Impact Assessment",
+  "fr": "Évaluation de l’impact de la réglementation",
+  "ar": "تقييم الأثر التنظيمي"
+ },
+ "short": {
+  "en": "The service provides cost–benefit, stakeholder consultation.",
+  "fr": "Tester les effets et coûts des réglementations.",
+  "ar": "اختبار آثار اللوائح وتكاليفها."
+ },
+ "abstract": {
+  "en": "Regulatory impact assessment — structured cost-benefit analysis, stakeholder consultation, and publication of impact statements for proposed regulations.",
+  "fr": "Évaluation de l’impact de la réglementation — analyse coûts-avantages structurée, consultation des parties prenantes et publication de déclarations d’impact pour les réglementations proposées.",
+  "ar": "تقييم الأثر التنظيمي — تحليل منظّم للتكاليف والمنافع، ومشاورة أصحاب المصلحة، ونشر بيانات الأثر للوائح المقترحة."
+ },
+ "long": [
+  {
+   "en": "The Regulatory Impact Assessment service organises a weekly work package around regulatory option briefs, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 regulatory option briefs; 100 cost benefit workbooks; 200 consultation summaries; 100 distributional assessments. Regulatory impact assessment — structured cost-benefit analysis, stakeholder consultation, and publication of impact statements for proposed regulations. Specialists sequence those methods against the accepted weekly package. The governing boundary is that analysts disclose who bears costs, data gaps and non-monetised rights impacts. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’évaluation de l’impact de la réglementation organise un lot de travail hebdomadaire autour des notes d’options réglementaires, au lieu de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 notes d’options réglementaires ; 100 classeurs d’analyse coûts-avantages ; 200 synthèses de consultation ; 100 évaluations distributives. Évaluation de l’impact de la réglementation — analyse coûts-avantages structurée, consultation des parties prenantes et publication de déclarations d’impact pour les réglementations proposées. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les analystes indiquent qui supporte les coûts, les lacunes dans les données et les conséquences des droits qui ne sont pas monétisées. Il s’agit de livrables progressifs issus de cas commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة تقييم الأثر التنظيمي حزمة عمل أسبوعية تتمحور حول موجزات الخيارات التنظيمية، بدلاً من اعتبار الحضور هو المنتج. وتتمثل الخطة التجريبية عند اكتمال القدرة المموّلة والمزوّدة بالموارد في إعداد 100 موجز للخيارات التنظيمية؛ و100 مصنف لتحليل التكاليف والمنافع؛ و200 ملخص للمشاورات؛ و100 تقييم للأثر التوزيعي. تقييم الأثر التنظيمي — تحليل منظّم للتكاليف والمنافع، ومشاورة أصحاب المصلحة، ونشر بيانات الأثر للوائح المقترحة. ويرتّب المتخصصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن يفصح المحللون عمن يتحمل التكاليف، وعن فجوات البيانات، وآثار الحقوق التي لم تُقيّم نقدياً. وهذه مخرجات مرحلية لحالات مُكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `regulatory-impact`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of regulatory option briefs, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enquête auprès des entreprises libellées 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, et non un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, du partage des données administratives et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit consultatif améliore une institution s’il n’a pas de tels utilisateurs. Pour `regulatory-impact`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des notes d’options réglementaires, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يشير استعراض OECD الصادر في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تحدد نقص مهارات القوى العاملة بوصفه قيداً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، لا مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسّن أداء مؤسسة ما في غياب هؤلاء المستخدمين. ولذلك، فإن الاستجابة المقترحة لـ `regulatory-impact` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً مقبولاً لموجزات الخيارات التنظيمية، لا تبرير التوظيف استناداً حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the regulatory option briefs acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks cost benefit workbooks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted regulatory option briefs from rejected or deferred work and records blockers around consultation summaries. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit la grille d’acceptation des notes d’options réglementaires ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les classeurs d’analyse coûts-avantages avant leur approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants des sources et les exceptions ; il ne remplace pas l’examen, par les responsables, de chaque rapport hebdomadaire. Le bilan du service distingue les notes d’options réglementaires acceptées des travaux rejetés ou différés et consigne les obstacles liés aux synthèses de consultation. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول موجزات الخيارات التنظيمية؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل مصنفات تحليل التكاليف والمنافع قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز تقرير الخدمة التجميعي بين موجزات الخيارات التنظيمية المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بملخصات المشاورات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Regulatory option briefs",
+    "fr": "Notes d’options réglementaires",
+    "ar": "موجزات الخيارات التنظيمية"
+   },
+   "unit": {
+    "en": "regulatory option briefs",
+    "fr": "notes d’options réglementaires",
+    "ar": "موجزات الخيارات التنظيمية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Cost benefit workbooks",
+    "fr": "Classeurs d’analyse coûts-avantages",
+    "ar": "مصنفات تحليل التكاليف والمنافع"
+   },
+   "unit": {
+    "en": "cost benefit workbooks",
+    "fr": "classeurs d’analyse coûts-avantages",
+    "ar": "مصنفات تحليل التكاليف والمنافع"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Consultation summaries",
+    "fr": "Synthèses des consultations",
+    "ar": "ملخصات المشاورات"
+   },
+   "unit": {
+    "en": "consultation summaries",
+    "fr": "synthèses des consultations",
+    "ar": "ملخصات المشاورات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Distributional assessments",
+    "fr": "Évaluations distributives",
+    "ar": "تقييمات الآثار التوزيعية"
+   },
+   "unit": {
+    "en": "distributional assessments",
+    "fr": "évaluations distributives",
+    "ar": "تقييمات الآثار التوزيعية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `regulatory-impact` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the regulatory option briefs to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation associé à un cas `regulatory-impact` comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + les documents sources et les comptes rendus de consultation expurgés, reliant les notes d’options réglementaires à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لخدمة `regulatory-impact` ملف قبول PDF/A + بياناً بمصادر البيانات بصيغتي CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط موجزات الخيارات التنظيمية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted regulatory option briefs** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis le ven. 12:00 ; **≥1 note d’options réglementaires acceptée** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés autorisés et les aménagements modifient le dénominateur des rapports admissibles, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ و**قبول ≥1 من موجزات الخيارات التنظيمية** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات أو الترتيبات المعتمدة العدد الإجمالي للتقارير المستوفية للشروط، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أي تقييم أخضر. وهذه أهداف تجريبية، وليست عتبات محددة في README."
+ },
+ "boundary": {
+  "en": "analysts disclose who bears costs, data gaps and non-monetised rights impacts",
+  "fr": "les analystes indiquent qui supporte les coûts, les lacunes dans les données et les conséquences des droits qui ne sont pas monétisées",
+  "ar": "يفصح المحللون عمن يتحمل التكاليف، وعن فجوات البيانات، وآثار الحقوق التي لم تُقيّم نقدياً"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "cultural-impact",
+   "id": 22
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "affordable-housing",
+   "id": 27
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Benefits counted twice → reconcile source records with the regulatory option briefs acceptance checklist and assign corrective-action ownership.",
+   "fr": "Bénéfices comptabilisés deux fois → rapprocher les pièces justificatives des sources de la liste de contrôle d’acceptation des notes d’options réglementaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "احتساب المنافع مرتين → طابق سجلات المصادر مع قائمة التحقق لقبول موجزات الخيارات التنظيمية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Consultation captured by incumbents → reconcile source records with the regulatory option briefs acceptance checklist and assign corrective-action ownership.",
+   "fr": "Consultation accaparée par les acteurs en place → rapprocher les pièces justificatives des sources de la liste de contrôle d’acceptation des notes d’options réglementaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "هيمنة الجهات القائمة على المشاورات → طابق سجلات المصادر مع قائمة التحقق لقبول موجزات الخيارات التنظيمية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Rights impacts hidden in aggregate savings → document permissions and obtain qualified rights review before release.",
+   "fr": "Conséquences des droits masquées par les économies agrégées → documenter les autorisations et obtenir l’avis d’un spécialiste compétent des droits avant publication.",
+   "ar": "إخفاء آثار الحقوق ضمن إجمالي الوفورات → وثّق الأذونات واحصل على مراجعة مختصة للحقوق قبل النشر."
+  }
+ ]
+}

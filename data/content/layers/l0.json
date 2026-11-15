@@ -1,0 +1,15 @@
+{
+ "slug": "l0",
+ "code": "L0",
+ "order": 0,
+ "name": {
+  "en": "Doctrine and dimensions",
+  "fr": "Doctrine et dimensions",
+  "ar": "العقيدة والأبعاد"
+ },
+ "body": {
+  "en": "The five dimensions of W5D and the rule of Sidq: no page asserts more than its evidence supports.",
+  "fr": "Les cinq dimensions de W5D et la règle de Sidq : aucune page n’affirme plus que ce que ses éléments probants permettent d’étayer.",
+  "ar": "الأبعاد الخمسة لـ W5D وقاعدة الصدق: لا تؤكد أي صفحة ما يتجاوز ما تسنده أدلتها."
+ }
+}

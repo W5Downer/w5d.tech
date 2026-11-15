@@ -1,0 +1,167 @@
+{
+ "slug": "software-eng",
+ "id": 105,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Software Engineering Teams",
+  "fr": "Équipes d’ingénierie logicielle",
+  "ar": "فرق هندسة البرمجيات"
+ },
+ "short": {
+  "en": "The service provides full-stack, APIs, QA, DevOps.",
+  "fr": "Développer des logiciels testés et maintenables.",
+  "ar": "تطوير برمجيات مختبرة وقابلة للصيانة."
+ },
+ "abstract": {
+  "en": "Software engineering teams — full-stack development, API design, QA, and DevOps pipelines delivering production-grade software with observability built in.",
+  "fr": "Équipes d’ingénierie logicielle — développement full-stack, conception d’API, QA et pipelines DevOps, pour livrer des logiciels de qualité production avec une observabilité intégrée.",
+  "ar": "فرق هندسة البرمجيات — تطوير متكامل للواجهة الأمامية والخلفية، وتصميم API، وضمان الجودة، وخطوط DevOps، لتقديم برمجيات جاهزة للإنتاج ومضمنة بإمكانات الرصد."
+ },
+ "long": [
+  {
+   "en": "The Software Engineering Teams service organises a weekly work package around reviewed feature increments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 reviewed feature increments; 5000 automated test cases; 1000 api contract checks; 100 release candidates. Software engineering teams — full-stack development, API design, QA, and DevOps pipelines delivering production-grade software with observability built in. Specialists sequence those methods against the accepted weekly package. The governing boundary is that acceptance requires tests, accessibility review and an identified maintainer. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Équipes d’ingénierie logicielle organise un lot de travail hebdomadaire autour d’incréments fonctionnels examinés, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 incréments fonctionnels examinés ; 5000 cas de test automatisés ; 1000 contrôles de contrat API ; 100 versions candidates. Équipes d’ingénierie logicielle — développement full-stack, conception d’API, QA et pipelines DevOps, pour livrer des logiciels de qualité production avec une observabilité intégrée. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle est que l’acceptation exige des tests, un examen de l’accessibilité et l’identification d’un responsable de la maintenance. Il s’agit de résultats échelonnés issus de dossiers commandités, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة فرق هندسة البرمجيات حزمة عمل أسبوعية حول زيادات الميزات التي خضعت للمراجعة، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند توفر القدرة الكاملة والموارد اللازمة، 500 زيادة ميزة خضعت للمراجعة؛ و5000 حالة اختبار مؤتمتة؛ و1000 فحص لعقود API؛ و100 مرشح إصدار. فرق هندسة البرمجيات — تطوير متكامل للواجهة الأمامية والخلفية، وتصميم API، وضمان الجودة، وخطوط DevOps، لتقديم برمجيات جاهزة للإنتاج ومضمنة بإمكانات الرصد. ويرتب الاختصاصيون هذه الأساليب وفق الحزمة الأسبوعية المقبولة. ويقضي الشرط الحاكم بأن يتطلب القبول اجتياز الاختبارات ومراجعة إمكانية الوصول وتحديد جهة صيانة مسؤولة. وهذه مخرجات مرحلية للحالات المتعاقد عليها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `software-eng`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of reviewed feature increments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude 2026 de la Banque mondiale sur les compétences numériques relève une demande de compétences techniques et hybrides dans différents secteurs tunisiens, sur la base principalement de données en ligne, formelles et urbaines, couvrant la période jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes des employeurs en matière de compétences. Aucune de ces sources ne vérifie le nombre national de postes vacants dans cette niche technique. L’intégration, la recette utilisateur et la maintenance continue nécessitent un responsable système engagé ; affecter des développeurs isolément ne fournit pas cette coordination et ne garantit pas la présence d’un acheteur. Pour `software-eng`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des incréments fonctionnels examinés, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، استناداً أساساً إلى أدلة إلكترونية رسمية وحضرية حتى عام 2025. كما توثق مراجعة OECD الصادرة في يونيو 2024، على نحو منفصل، القيود التي تواجه أصحاب العمل فيما يتعلق بالمهارات. ولا يتحقق أي من المصدرين من إجمالي وطني للشواغر في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة التزام مالك للنظام؛ فإسناد مهام منفصلة إلى المطورين لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، فإن الاستجابة المقترحة لـ `software-eng` هي سير عمل تعاقدي بمستفيد محدد وتعريف مقبول لزيادات الميزات التي خضعت للمراجعة، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the reviewed feature increments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks automated test cases before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted reviewed feature increments from rejected or deferred work and records blockers around api contract checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des incréments fonctionnels examinés ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les cas de test automatisés avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La consolidation du service distingue les incréments fonctionnels examinés acceptés des travaux rejetés ou reportés et consigne les blocages liés aux contrôles de contrat API. Les examens menés par les responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يحدد قائد الخدمة معايير قبول زيادات الميزات التي خضعت للمراجعة؛ ويترجم 100 مدير هذه المعايير إلى مهام موزعة على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من حالات الاختبار المؤتمتة قبل الموافقة. وتعاد مراجعة أدلة المصادر والاستثناءات في التدقيق العشوائي المقترح بنسبة 5%؛ وهو لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين زيادات الميزات المقبولة التي خضعت للمراجعة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بفحوصات عقود API. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Reviewed feature increments",
+    "fr": "Incréments fonctionnels examinés",
+    "ar": "الزيادات المرحلية للميزات التي خضعت للمراجعة"
+   },
+   "unit": {
+    "en": "reviewed feature increments",
+    "fr": "incréments fonctionnels examinés",
+    "ar": "الزيادات المرحلية للميزات التي خضعت للمراجعة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Automated test cases",
+    "fr": "Cas de test automatisés",
+    "ar": "حالات الاختبار الآلية"
+   },
+   "unit": {
+    "en": "automated test cases",
+    "fr": "cas de test automatisés",
+    "ar": "حالات الاختبار الآلية"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "API contract checks",
+    "fr": "Vérifications des contrats d’API",
+    "ar": "فحوصات عقود API"
+   },
+   "unit": {
+    "en": "api contract checks",
+    "fr": "vérifications des contrats d’API",
+    "ar": "فحوصات عقود API"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Release candidates",
+    "fr": "Versions candidates",
+    "ar": "الإصدارات المرشحة"
+   },
+   "unit": {
+    "en": "release candidates",
+    "fr": "versions candidates",
+    "ar": "الإصدارات المرشحة"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `software-eng` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the reviewed feature increments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `software-eng` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + le code et la configuration versionnés, les tests et les journaux de déploiement ou de récupération ; il relie les incréments fonctionnels examinés à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `software-eng` مرتبطة بالحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + شيفرة/إعدادات ذات إصدارات محددة، واختبارات وسجلات للنشر أو الاستعادة، مع ربط الزيادات المرحلية للميزات التي خضعت للمراجعة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted reviewed feature increments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥4 incréments fonctionnels examinés et acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 زيادات مرحلية للميزات خضعت للمراجعة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق في الأسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، فيما تتجاوز عيوب السلامة/الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية أولية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "acceptance requires tests, accessibility review and an identified maintainer",
+  "fr": "l’acceptation exige des tests, une revue de l’accessibilité et un responsable de maintenance identifié",
+  "ar": "يتطلب القبول إجراء الاختبارات ومراجعة إمكانية الوصول وتحديد مسؤول عن الصيانة"
+ },
+ "depends": [
+  {
+   "slug": "legal-drafting",
+   "id": 80
+  },
+  {
+   "slug": "digital-governance",
+   "id": 83
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "library-modernisation",
+   "id": 17
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Feature velocity creates unmaintainable code → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "La vélocité des fonctionnalités génère du code difficile à maintenir → vérifier le transfert à l’opérateur, les dépendances de maintenance et la disponibilité d’une procédure de récupération.",
+   "ar": "تؤدي سرعة تطوير الميزات إلى شيفرة يصعب صيانتها → اختبار تسليم المهام إلى المشغل، والاعتماديات المتعلقة بالصيانة، وإجراء استعادة متاح."
+  },
+  {
+   "en": "APIs break dependent services → reconcile source records with the reviewed feature increments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les API perturbent les services dépendants → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des incréments fonctionnels examinés et attribuer la responsabilité des actions correctives.",
+   "ar": "تتسبب واجهات API في تعطل الخدمات التابعة → مطابقة سجلات المصدر مع قائمة التحقق لقبول الزيادات المرحلية للميزات التي خضعت للمراجعة، وإسناد مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Release lacks rollback capability → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "La version ne permet pas de retour en arrière → vérifier le transfert à l’opérateur, les dépendances de maintenance et la disponibilité d’une procédure de récupération.",
+   "ar": "يفتقر الإصدار إلى إمكانية التراجع → اختبار تسليم المهام إلى المشغل، والاعتماديات المتعلقة بالصيانة، وإجراء استعادة متاح."
+  }
+ ]
+}

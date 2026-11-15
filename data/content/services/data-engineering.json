@@ -1,0 +1,167 @@
+{
+ "slug": "data-engineering",
+ "id": 108,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Data Engineering & Analytics",
+  "fr": "Ingénierie des données et analytique",
+  "ar": "هندسة البيانات والتحليلات"
+ },
+ "short": {
+  "en": "The service provides pipelines, warehouses, BI.",
+  "fr": "Transformer les données en produits traçables.",
+  "ar": "تحويل البيانات إلى منتجات قابلة للتتبع."
+ },
+ "abstract": {
+  "en": "Data engineering and analytics — pipelines, warehouses, and business intelligence that turn raw data into decision-grade insight.",
+  "fr": "Ingénierie des données et analytique — pipelines, entrepôts de données et informatique décisionnelle qui transforment les données brutes en informations utiles à la prise de décision.",
+  "ar": "هندسة البيانات والتحليلات — مسارات نقل البيانات ومستودعاتها وذكاء الأعمال التي تحوّل البيانات الأولية إلى رؤى تدعم اتخاذ القرارات."
+ },
+ "long": [
+  {
+   "en": "The Data Engineering & Analytics service organises a weekly work package around validated pipeline changes, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 validated pipeline changes; 2000 data quality rules; 200 reconciled dataset releases; 500 analytics acceptance tests. Data engineering and analytics — pipelines, warehouses, and business intelligence that turn raw data into decision-grade insight. Specialists sequence those methods against the accepted weekly package. The governing boundary is that data lineage and schema contracts accompany every downstream release. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’ingénierie des données et analytique organise un lot de travail hebdomadaire autour de modifications de pipelines validées, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 modifications de pipelines validées ; 2000 règles de qualité des données ; 200 versions de jeux de données rapprochées ; 500 tests de réception analytique. Ingénierie des données et analytique — pipelines, entrepôts de données et informatique décisionnelle qui transforment les données brutes en informations utiles à la prise de décision. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que la traçabilité des données et les contrats de schéma accompagnent chaque version en aval. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة هندسة البيانات والتحليلات حزمة عمل أسبوعية حول التغييرات المعتمدة في مسارات نقل البيانات، بدلًا من اعتبار الحضور هو المنتج. وعند العمل بالطاقة الاستيعابية الكاملة مع توفير الموارد، تتضمن خطتها التجريبية 500 تغيير معتمد في مسارات نقل البيانات؛ و2000 قاعدة لجودة البيانات؛ و200 إصدار لمجموعات بيانات تمت تسويتها؛ و500 اختبار قبول للتحليلات. هندسة البيانات والتحليلات — مسارات نقل البيانات ومستودعاتها وذكاء الأعمال التي تحوّل البيانات الأولية إلى رؤى تدعم اتخاذ القرارات. ويُرتّب المتخصصون هذه الأساليب بحسب حزمة العمل الأسبوعية المقبولة. ويقضي الضابط الناظم بأن يرافق تتبّع منشأ البيانات وعقود المخططات كل إصدار لاحق. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `data-engineering`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of validated pipeline changes, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale sur les compétences numériques, publiée en 2026, relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne formelles et urbaines recueillies jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les difficultés des employeurs à trouver les compétences requises. Aucune de ces sources ne vérifie le nombre national de postes vacants dans ce créneau technique. L’intégration, la recette utilisateur et la maintenance continue nécessitent un responsable système désigné et engagé ; affecter des développeurs isolés n’assure ni cette coordination ni la présence d’un acheteur. Pour `data-engineering`, la réponse proposée consiste donc en un processus de travail sous contrat, avec un bénéficiaire désigné et une définition acceptée des modifications de pipelines validées, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تُظهر دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية الطلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، استنادًا أساسًا إلى أدلة رسمية وحضرية ومستمدة من الإنترنت حتى عام 2025. وتوثّق مراجعة منظمة التعاون الاقتصادي والتنمية الصادرة في يونيو 2024، على نحو مستقل، القيود التي تواجه أصحاب العمل في مجال المهارات. ولا يتحقق أي من المصدرين من إجمالي وطني للشواغر في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة وجود مالك ملتزم للنظام؛ فتعيين مطورين منفردين لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، يتمثل النهج المقترح في `data-engineering` في سير عمل تعاقدي يضم جهة مستفيدة محددة وتعريفًا مقبولًا للتغييرات المعتمدة في مسارات نقل البيانات، لا في التوظيف الذي يستند وحده إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the validated pipeline changes acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks data quality rules before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted validated pipeline changes from rejected or deferred work and records blockers around reconciled dataset releases. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des modifications de pipelines validées ; 100 managers les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les règles de qualité des données avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments de preuve sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les managers. Le bilan du service distingue les modifications de pipelines validées et acceptées des travaux rejetés ou différés, et consigne les obstacles liés aux versions de jeux de données rapprochées. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول التغييرات المعتمدة في مسارات نقل البيانات؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من قواعد جودة البيانات قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص التجميعي للخدمة بين التغييرات المقبولة في مسارات نقل البيانات والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بإصدارات مجموعات البيانات التي تمت تسويتها. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Validated pipeline changes",
+    "fr": "Modifications de pipelines validées",
+    "ar": "التغييرات المعتمدة في مسارات نقل البيانات"
+   },
+   "unit": {
+    "en": "validated pipeline changes",
+    "fr": "modifications de pipelines validées",
+    "ar": "التغييرات المعتمدة في مسارات نقل البيانات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Data quality rules",
+    "fr": "Règles de qualité des données",
+    "ar": "قواعد جودة البيانات"
+   },
+   "unit": {
+    "en": "data quality rules",
+    "fr": "règles de qualité des données",
+    "ar": "قواعد جودة البيانات"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Reconciled dataset releases",
+    "fr": "publications de jeux de données réconciliés",
+    "ar": "إصدارات مجموعات البيانات التي تمت مطابقتها"
+   },
+   "unit": {
+    "en": "reconciled dataset releases",
+    "fr": "publications de jeux de données réconciliés",
+    "ar": "إصدارات مجموعات البيانات التي تمت مطابقتها"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Analytics acceptance tests",
+    "fr": "tests d’acceptation analytiques",
+    "ar": "اختبارات قبول التحليلات"
+   },
+   "unit": {
+    "en": "analytics acceptance tests",
+    "fr": "tests d’acceptation analytiques",
+    "ar": "اختبارات قبول التحليلات"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `data-engineering` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the validated pipeline changes to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `data-engineering` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + du code et de la configuration versionnés, des tests ainsi que des journaux de déploiement ou de récupération, qui relient les modifications validées du pipeline à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `data-engineering` المرتبطة بحالةٍ ما ملف قبول PDF/A + بيانًا للمصادر بصيغة CSV/JSON + الشيفرة/الإعدادات ذات الإصدارات المحددة، والاختبارات، وسجلات النشر أو الاستعادة، بما يربط تغييرات مسار المعالجة التي تم التحقق منها بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted validated pipeline changes** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis d’ici ven. 12:00 ; **≥4 modifications validées du pipeline acceptées** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux preuves** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur éligible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score positif. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 تغييرات تم التحقق منها في مسارات المعالجة** لكل فريق أسبوعيًا، مع مراعاة مدى تعقيد الحالات؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق أسبوعيًا. يؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، كما أن عيوب السلامة/الخصوصية الحرجة تتجاوز نتيجة التقييم الإيجابية. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "data lineage and schema contracts accompany every downstream release",
+  "fr": "la traçabilité des données et les contrats de schéma accompagnent chaque publication en aval",
+  "ar": "ترافق بيانات منشأ البيانات وعقود المخططات كل إصدار لاحق"
+ },
+ "depends": [
+  {
+   "slug": "research-data",
+   "id": 63
+  },
+  {
+   "slug": "official-stats",
+   "id": 100
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "public-health",
+   "id": 54
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Silent schema changes corrupt reports → reconcile source records with the validated pipeline changes acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les modifications silencieuses du schéma corrompent les rapports → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des modifications validées du pipeline et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤدي تغييرات المخطط غير المعلنة إلى إفساد التقارير ← طابق سجلات المصدر مع قائمة التحقق لقبول تغييرات مسار المعالجة التي تم التحقق منها، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Pipelines duplicate sensitive data → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les pipelines dupliquent des données sensibles → limiter les accès, caviarder les preuves diffusées et tester le processus d’accès restreint.",
+   "ar": "تكرر مسارات المعالجة البيانات الحساسة ← قلل نطاق الوصول، واحجب الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Dashboards conceal missing observations → reconcile source records with the validated pipeline changes acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les tableaux de bord masquent les observations manquantes → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des modifications validées du pipeline et attribuer la responsabilité des mesures correctives.",
+   "ar": "تحجب لوحات المعلومات الملاحظات المفقودة ← طابق سجلات المصدر مع قائمة التحقق لقبول تغييرات مسار المعالجة التي تم التحقق منها، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

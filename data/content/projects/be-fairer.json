@@ -1,0 +1,85 @@
+{
+ "slug": "be-fairer",
+ "id": 23,
+ "order": 23,
+ "icon": "scale",
+ "status": "concept",
+ "status_label": {
+  "en": "Concept",
+  "fr": "Concept",
+  "ar": "مفهوم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Be Fairer",
+  "fr": "Sois plus juste",
+  "ar": "كن أعدل"
+ },
+ "tagline": {
+  "en": "A 2030B project for the human dimension: justice. Concept.",
+  "fr": "Un projet 2030B pour la dimension humaine : la justice. Concept.",
+  "ar": "مشروع 2030B للبعد الإنساني: العدالة. تصوّري."
+ },
+ "outcome": [
+  {
+   "en": "Be Fairer is one of the ten 2030B projects. Its human dimension is justice; its tool is \"Human scales\"; its credit unit is JEC (Justice credit).",
+   "fr": "Be Fairer est l’un des dix projets 2030B. Sa dimension humaine est la justice ; son outil est « Balance humaine » ; son unité de crédit est JEC (crédit de justice).",
+   "ar": "Be Fairer أحد مشاريع 2030B العشرة. بُعده الإنساني هو العدالة؛ وأداته «موازين الإنسان»؛ ووحدة رصيده هي JEC (رصيد العدالة)."
+  },
+  {
+   "en": "The Arabic index for this project is on file with three books: the guide for the person, the person and the machine, and the path from a skilled person to a self-training agent. The project is a concept: no product is live.",
+   "fr": "L’index arabe de ce projet est disponible et comprend trois livres : le guide destiné à la personne, la personne et la machine, et le parcours d’une personne qualifiée à un agent qui s’entraîne de manière autonome. Le projet est un concept : aucun produit n’est disponible.",
+   "ar": "فهرس المشروع باللغة العربية محفوظ، ويضم ثلاثة كتب: دليل الشخص، والشخص والآلة، والمسار من شخص ماهر إلى وكيل يتدرّب ذاتيًا. المشروع تصوّري: لا يوجد منتج متاح."
+  }
+ ],
+ "evidence": {
+  "en": "Arabic project index on file (completed 2026-11-15).",
+  "fr": "Index arabe du projet disponible (achevé le 2026-11-15).",
+  "ar": "فهرس المشروع باللغة العربية محفوظ (اكتمل في 2026-11-15)."
+ },
+ "services": [
+  "rule-of-law",
+  "legal-drafting",
+  "regulatory-impact"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Index completed",
+    "fr": "Index achevé",
+    "ar": "اكتمل الفهرس"
+   },
+   "body": {
+    "en": "Three-book index on file.",
+    "fr": "Index des trois livres disponible.",
+    "ar": "فهرس من ثلاثة كتب محفوظ."
+   }
+  },
+  {
+   "when": {
+    "en": "2030",
+    "fr": "2030",
+    "ar": "2030"
+   },
+   "title": {
+    "en": "Horizon",
+    "fr": "Horizon",
+    "ar": "الأفق"
+   },
+   "body": {
+    "en": "Target frame, not a delivery promise.",
+    "fr": "Cadre cible, et non engagement de livraison.",
+    "ar": "إطار مستهدف، وليس وعدًا بالتسليم."
+   }
+  }
+ ],
+ "gradient": "governance",
+ "code": "JEC",
+ "dimension": "Justice",
+ "parent": "2030b"
+}

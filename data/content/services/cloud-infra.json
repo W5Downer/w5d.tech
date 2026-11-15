@@ -1,0 +1,167 @@
+{
+ "slug": "cloud-infra",
+ "id": 107,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Cloud & Infrastructure",
+  "fr": "Cloud et infrastructure",
+  "ar": "السحابة والبنية التحتية"
+ },
+ "short": {
+  "en": "The service provides migration, IaC, cost optimisation.",
+  "fr": "Exploiter des infrastructures documentées et résilientes.",
+  "ar": "تشغيل بنى تحتية موثقة وقادرة على الصمود."
+ },
+ "abstract": {
+  "en": "Cloud and infrastructure — migration, infrastructure-as-code, and cost optimisation across major cloud providers.",
+  "fr": "Cloud et infrastructure — migration, infrastructure en tant que code et optimisation des coûts auprès des principaux fournisseurs de cloud.",
+  "ar": "السحابة والبنية التحتية — الترحيل، والبنية التحتية كتعليمة برمجية، وتحسين التكاليف عبر مزودي الخدمات السحابية الرئيسيين."
+ },
+ "long": [
+  {
+   "en": "The Cloud & Infrastructure service organises a weekly work package around infrastructure change reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 infrastructure change reviews; 200 restore tests; 200 cost optimisation assessments; 100 migration rehearsal reports. Cloud and infrastructure — migration, infrastructure-as-code, and cost optimisation across major cloud providers. Specialists sequence those methods against the accepted weekly package. The governing boundary is that changes preserve tested recovery paths and jurisdictional data requirements. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Cloud et infrastructure organise un lot de travail hebdomadaire autour des examens des changements d’infrastructure, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 examens des changements d’infrastructure ; 200 tests de restauration ; 200 évaluations d’optimisation des coûts ; 100 rapports de répétition de migration. Cloud et infrastructure — migration, infrastructure en tant que code et optimisation des coûts auprès des principaux fournisseurs de cloud. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les changements préservent les procédures de reprise testées et respectent les exigences juridictionnelles en matière de données. Il s’agit de résultats échelonnés issus de cas faisant l’objet d’un mandat, et non d’une promesse de mener à bien chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة السحابة والبنية التحتية حزمة عمل أسبوعية تتمحور حول مراجعات تغييرات البنية التحتية، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية عند بلوغ الطاقة التشغيلية الكاملة وتوفير الموارد اللازمة 500 مراجعة لتغييرات البنية التحتية؛ و200 اختبار استعادة؛ و200 تقييم لتحسين التكاليف؛ و100 تقرير عن تدريبات الترحيل. السحابة والبنية التحتية — الترحيل، والبنية التحتية كتعليمة برمجية، وتحسين التكاليف عبر مزودي الخدمات السحابية الرئيسيين. ويرتب المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. والضابط الحاكم هو أن تحافظ التغييرات على مسارات استعادة مختبرة ومتطلبات البيانات الخاصة بالولاية القضائية. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `cloud-infra`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of infrastructure change reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale de 2026 sur les compétences numériques constate une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données formelles, urbaines et en ligne jusqu’en 2025. L’examen de l’OCDE de juin 2024 décrit séparément les contraintes des employeurs en matière de compétences. Aucune de ces sources ne vérifie le nombre national de postes vacants dans ce créneau technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable du système engagé ; affecter des développeurs isolément ne fournit pas cette coordination et ne garantit pas la présence d’un acheteur. Pour `cloud-infra`, la réponse proposée est donc un flux de travail contractuel, avec un bénéficiaire désigné et une définition acceptée des examens des changements d’infrastructure, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على المهارات التقنية والهجينة في مختلف القطاعات التونسية، استنادًا أساسًا إلى أدلة رسمية وحضرية عبر الإنترنت حتى عام 2025. وتوثق مراجعة منظمة التعاون والتنمية في الميدان الاقتصادي (OECD) الصادرة في يونيو 2024، بصورة منفصلة، قيود المهارات لدى أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة وجود مسؤول محدد عن النظام وملتزم به؛ فتعيين مطورين منفردين لا يوفر هذا التنسيق ولا يضمن وجود جهة مشترية. لذا فإن الاستجابة المقترحة لـ `cloud-infra` هي سير عمل تعاقدي يحدد مستفيدًا وتعريفًا مقبولًا لمراجعات تغييرات البنية التحتية، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the infrastructure change reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks restore tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted infrastructure change reviews from rejected or deferred work and records blockers around cost optimisation assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens des changements d’infrastructure ; 100 responsables répartissent les tâches entre des équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’une personne compétente chargée de l’examen vérifie les tests de restauration avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens des changements d’infrastructure acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux évaluations d’optimisation des coûts. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات تغييرات البنية التحتية؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء لكل فريق. وتُستخدم الهويات المرتبطة بـDyon لتحديد المساهمين المسؤولين، بينما يتحقق مراجع مختص من اختبارات الاستعادة قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مراجعات تغييرات البنية التحتية المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتقييمات تحسين التكاليف. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون زيادة سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Infrastructure change reviews",
+    "fr": "Examens des changements d’infrastructure",
+    "ar": "مراجعات تغييرات البنية التحتية"
+   },
+   "unit": {
+    "en": "infrastructure change reviews",
+    "fr": "revues des modifications de l’infrastructure",
+    "ar": "مراجعات تغييرات البنية التحتية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Restore tests",
+    "fr": "tests de restauration",
+    "ar": "اختبارات الاستعادة"
+   },
+   "unit": {
+    "en": "restore tests",
+    "fr": "tests de restauration",
+    "ar": "اختبارات الاستعادة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Cost optimisation assessments",
+    "fr": "évaluations de l’optimisation des coûts",
+    "ar": "تقييمات تحسين التكاليف"
+   },
+   "unit": {
+    "en": "cost optimisation assessments",
+    "fr": "évaluations de l’optimisation des coûts",
+    "ar": "تقييمات تحسين التكاليف"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Migration rehearsal reports",
+    "fr": "rapports de répétition de migration",
+    "ar": "تقارير تدريبات الترحيل"
+   },
+   "unit": {
+    "en": "migration rehearsal reports",
+    "fr": "rapports de répétition de migration",
+    "ar": "تقارير تدريبات الترحيل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cloud-infra` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the infrastructure change reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `cloud-infra` associé à un cas contient un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + du code et de la configuration versionnés, des tests et des journaux de déploiement ou de récupération, reliant les revues des modifications de l’infrastructure à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `cloud-infra` المرتبطة بالحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + شيفرة/تهيئة ذات إصدارات، واختبارات وسجلات للنشر أو الاستعادة، وتربط مراجعات تغييرات البنية التحتية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted infrastructure change reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥4 revues des modifications de l’infrastructure acceptées** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 مراجعات لتغييرات البنية التحتية** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب مسائل تتعلق بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات والتعديلات المعتمدة المقام المؤهل، بينما تتغلب العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "changes preserve tested recovery paths and jurisdictional data requirements",
+  "fr": "les modifications préservent les voies de récupération testées et les exigences juridictionnelles en matière de données",
+  "ar": "تحافظ التغييرات على مسارات استعادة خضعت للاختبار ومتطلبات البيانات الخاصة بكل ولاية قضائية"
+ },
+ "depends": [
+  {
+   "slug": "research-data",
+   "id": 63
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "library-modernisation",
+   "id": 17
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Misconfigured storage exposes records → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Un stockage mal configuré expose des dossiers → limiter les accès, expurger les éléments justificatifs diffusés et tester le processus d’accès restreint.",
+   "ar": "يكشف إعداد التخزين غير الصحيح السجلات ← قلّل الوصول، واحجب البيانات من الأدلة المنشورة، واختبر سير العمل الخاص بالوصول المقيّد."
+  },
+  {
+   "en": "Cloud costs grow unnoticed → reconcile source records with the infrastructure change reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les coûts du cloud augmentent sans être remarqués → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des revues des modifications de l’infrastructure et attribuer la responsabilité des mesures correctives.",
+   "ar": "ترتفع تكاليف السحابة دون ملاحظة ← طابق السجلات المصدرية مع قائمة التحقق لقبول مراجعات تغييرات البنية التحتية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Backups cannot restore application state → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Les sauvegardes ne permettent pas de restaurer l’état de l’application → tester le transfert entre opérateurs, les dépendances de maintenance et la disponibilité d’une procédure de récupération.",
+   "ar": "لا تتمكن النسخ الاحتياطية من استعادة حالة التطبيق ← اختبر تسليم المهام للمشغّل، وتبعيات الصيانة، وإجراء استعادة متاحًا."
+  }
+ ]
+}

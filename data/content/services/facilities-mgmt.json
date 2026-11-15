@@ -1,0 +1,167 @@
+{
+ "slug": "facilities-mgmt",
+ "id": 44,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Facilities Management",
+  "fr": "Gestion des installations",
+  "ar": "إدارة المرافق"
+ },
+ "short": {
+  "en": "The service provides maintenance planning, KPIs, CMMS.",
+  "fr": "Organiser la maintenance des bâtiments et équipements.",
+  "ar": "تنظيم صيانة المباني والتجهيزات."
+ },
+ "abstract": {
+  "en": "Facilities management — maintenance planning, KPI frameworks, CMMS implementation, and lifecycle asset management for public and private estates.",
+  "fr": "Gestion des installations — planification de la maintenance, cadres KPI, mise en œuvre de CMMS et gestion du cycle de vie des actifs pour les patrimoines publics et privés.",
+  "ar": "إدارة المرافق — تخطيط الصيانة، وأطر KPI، وتنفيذ CMMS، وإدارة الأصول طوال دورة حياتها للعقارات العامة والخاصة."
+ },
+ "long": [
+  {
+   "en": "The Facilities Management service organises a weekly work package around asset inventory records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 10000 asset inventory records; 1000 maintenance job plans; 500 condition inspections; 200 cmms configuration tests. Facilities management — maintenance planning, KPI frameworks, CMMS implementation, and lifecycle asset management for public and private estates. Specialists sequence those methods against the accepted weekly package. The governing boundary is that asset criticality and spare-part availability determine maintenance schedules. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gestion des installations organise un lot de travaux hebdomadaire autour des dossiers d’inventaire des actifs, plutôt que de considérer la présence comme le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 10000 dossiers d’inventaire des actifs ; 1000 gammes de maintenance ; 500 inspections d’état ; 200 tests de configuration de CMMS. Gestion des installations — planification de la maintenance, cadres KPI, mise en œuvre de CMMS et gestion du cycle de vie des actifs pour les patrimoines publics et privés. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que la criticité des actifs et la disponibilité des pièces de rechange déterminent les calendriers de maintenance. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة إدارة المرافق حزمة عمل أسبوعية تتمحور حول سجلات جرد الأصول، بدلًا من اعتبار الحضور هو المنتج. وتبلغ خطة الخدمة التجريبية، عند توافر القدرة الكاملة والموارد اللازمة، 10000 سجل لجرد الأصول؛ و1000 خطة عمل للصيانة؛ و500 فحص للحالة؛ و200 اختبار لتهيئة cmms. إدارة المرافق — تخطيط الصيانة، وأطر KPI، وتنفيذ CMMS، وإدارة الأصول طوال دورة حياتها للعقارات العامة والخاصة. ويُرتب المختصون تطبيق هذه الأساليب وفقًا للحزمة الأسبوعية المقبولة. والقاعدة الحاكمة هي أن أهمية الأصول وتوافر قطع الغيار يحددان جداول الصيانة. وهذه مخرجات مرحلية لحالات تم التعاقد عليها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `facilities-mgmt`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of asset inventory records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports limitent la mise en correspondance des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures tributaires des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets suppose de franchir les limites liées à la propriété des actifs, à l’accès local et aux marchés publics, de sorte que des travaux techniquement viables peuvent rester fragmentés jusqu’à ce qu’un client les commande en bonne et due forme. Pour `facilities-mgmt`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des dossiers d’inventaire des actifs, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "حددت دراسة OECD عن تونس، الصادرة في أبريل 2022، تركز النشاط على الساحل وتكاليف الإسكان والعوائق المتعلقة بالنقل بوصفها قيودًا تحول دون مواءمة أصحاب المهارات مع فرص العمل. كما يشير تقرير CCDR الصادر في نوفمبر 2023 إلى احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُثبت أي من النتيجتين عدد الوظائف المتعاقد عليها لهذه الخدمة. وتتجاوز تهيئة المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد يظل العمل القابل للتنفيذ تقنيًا مجزأً إلى أن يتعاقد عليه عميل وفق الأصول القانونية. لذلك، فإن الاستجابة المقترحة لخدمة `facilities-mgmt` هي سير عمل تعاقدي مع مستفيد محدد وتعريف معتمد لسجلات جرد الأصول، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the asset inventory records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks maintenance job plans before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted asset inventory records from rejected or deferred work and records blockers around condition inspections. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des dossiers d’inventaire des actifs ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les gammes de maintenance avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas la vérification par un responsable de chaque rapport hebdomadaire. Le suivi global du service distingue les dossiers d’inventaire des actifs acceptés des travaux rejetés ou différés, et consigne les obstacles liés aux inspections d’état. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول سجلات جرد الأصول؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، بينما يراجع مراجع مؤهل خطط أعمال الصيانة قبل اعتمادها. وتعيد عملية التدقيق العشوائي المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين سجلات جرد الأصول المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بفحوص الحالة. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Asset inventory records",
+    "fr": "Dossiers d’inventaire des actifs",
+    "ar": "سجلات جرد الأصول"
+   },
+   "unit": {
+    "en": "asset inventory records",
+    "fr": "dossiers d’inventaire des actifs",
+    "ar": "سجلات جرد الأصول"
+   },
+   "target": 10000
+  },
+  {
+   "name": {
+    "en": "Maintenance job plans",
+    "fr": "Gammes de maintenance",
+    "ar": "خطط أعمال الصيانة"
+   },
+   "unit": {
+    "en": "maintenance job plans",
+    "fr": "gammes de maintenance",
+    "ar": "خطط أعمال الصيانة"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Condition inspections",
+    "fr": "Inspections d’état",
+    "ar": "فحوص الحالة"
+   },
+   "unit": {
+    "en": "condition inspections",
+    "fr": "inspections d’état",
+    "ar": "فحوص الحالة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "CMMS configuration tests",
+    "fr": "Tests de configuration de CMMS",
+    "ar": "اختبارات تهيئة CMMS"
+   },
+   "unit": {
+    "en": "cmms configuration tests",
+    "fr": "tests de configuration CMMS",
+    "ar": "اختبارات تهيئة cmms"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `facilities-mgmt` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the asset inventory records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `facilities-mgmt` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/de photo ou de conception géoréférencés, reliant les enregistrements de l’inventaire des actifs à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول لإدارة المرافق مرتبطة بحالة (`facilities-mgmt`) ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات فحص/صور أو تصميم محددة جغرافيًا، وتربط سجلات جرد الأصول بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥80 accepted asset inventory records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥80 enregistrements acceptés dans l’inventaire des actifs** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥80 سجلًا مقبولًا لجرد الأصول** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب إعادة عمل مرتبط بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، فيما تتقدم عيوب السلامة/الخصوصية الحرجة على النتيجة الخضراء. هذه أهداف تجريبية، وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "asset criticality and spare-part availability determine maintenance schedules",
+  "fr": "la criticité des actifs et la disponibilité des pièces de rechange déterminent les calendriers de maintenance",
+  "ar": "تحدد أهمية الأصول وتوافر قطع الغيار جداول الصيانة"
+ },
+ "depends": [
+  {
+   "slug": "metrology",
+   "id": 64
+  },
+  {
+   "slug": "platform-eng",
+   "id": 112
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "soe-oversight",
+   "id": 102
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Inventories omit critical assets → reconcile source records with the asset inventory records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les inventaires omettent des actifs critiques → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des enregistrements de l’inventaire des actifs et attribuer la responsabilité des mesures correctives.",
+   "ar": "إغفال الأصول الحرجة من قوائم الجرد → طابق سجلات المصدر مع قائمة التحقق لقبول سجلات جرد الأصول، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Preventive tasks crowd out urgent repairs → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Les tâches préventives prennent le pas sur les réparations urgentes → tester le transfert entre opérateurs, les dépendances de maintenance et l’existence d’une procédure de rétablissement.",
+   "ar": "استحواذ المهام الوقائية على وقت الإصلاحات العاجلة → اختبر تسليم المشغلين، واعتماديات الصيانة، وإجراءً متاحًا للتعافي."
+  },
+  {
+   "en": "Vendor-dependent software blocks continuity → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Les logiciels dépendant d’un fournisseur compromettent la continuité → tester le transfert entre opérateurs, les dépendances de maintenance et l’existence d’une procédure de rétablissement.",
+   "ar": "إعاقة البرمجيات المعتمدة على المورد لاستمرارية العمل → اختبر تسليم المشغلين، واعتماديات الصيانة، وإجراءً متاحًا للتعافي."
+  }
+ ]
+}

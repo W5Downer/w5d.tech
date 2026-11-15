@@ -1,0 +1,167 @@
+{
+ "slug": "energy-retrofits",
+ "id": 36,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Energy-Efficient Retrofits",
+  "fr": "Rénovations énergétiques",
+  "ar": "تحديثات كفاءة الطاقة"
+ },
+ "short": {
+  "en": "The service provides insulation, HVAC, solar integration.",
+  "fr": "Améliorer l'efficacité énergétique des bâtiments existants.",
+  "ar": "تحسين كفاءة الطاقة في المباني القائمة."
+ },
+ "abstract": {
+  "en": "Energy efficiency retrofits for buildings — envelope insulation, HVAC replacement, solar PV integration, and measured performance contracts against baseline consumption.",
+  "fr": "Rénovations énergétiques des bâtiments — isolation de l’enveloppe, remplacement des systèmes CVC, intégration de panneaux photovoltaïques et contrats de performance mesurée par rapport à la consommation de référence.",
+  "ar": "تحديثات كفاءة الطاقة في المباني — عزل الغلاف الخارجي، واستبدال أنظمة التدفئة والتهوية وتكييف الهواء، ودمج أنظمة الطاقة الشمسية الكهروضوئية، وعقود أداء تُقاس نتائجها مقارنةً باستهلاك خط الأساس."
+ },
+ "long": [
+  {
+   "en": "The Energy-Efficient Retrofits service organises a weekly work package around envelope surveys, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 envelope surveys; 200 hvac design reviews; 100 retrofit specifications; 200 measurement plans. Energy efficiency retrofits for buildings — envelope insulation, HVAC replacement, solar PV integration, and measured performance contracts against baseline consumption. Specialists sequence those methods against the accepted weekly package. The governing boundary is that savings estimates retain weather, occupancy and comfort assumptions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de rénovations énergétiques organise un lot de travail hebdomadaire autour des audits de l’enveloppe, plutôt que de considérer la présence comme le produit. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 500 audits de l’enveloppe ; 200 revues de conception CVC ; 100 spécifications de rénovation ; 200 plans de mesure. Rénovations énergétiques des bâtiments — isolation de l’enveloppe, remplacement des systèmes CVC, intégration de panneaux photovoltaïques et contrats de performance mesurée par rapport à la consommation de référence. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. La règle directrice est que les estimations d’économies indiquent les hypothèses relatives aux conditions météorologiques, à l’occupation et au confort. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة تحديثات كفاءة الطاقة حزمة عمل أسبوعية تتمحور حول مسوحات الغلاف الخارجي، بدلاً من اعتبار الحضور هو الناتج. وتستهدف خطتها التجريبية، عند توافر كامل الموارد والقدرة، إجراء 500 مسح للغلاف الخارجي؛ و200 مراجعة لتصميم أنظمة التدفئة والتهوية وتكييف الهواء؛ و100 مواصفة لأعمال التحديث؛ و200 خطة قياس. تحديثات كفاءة الطاقة في المباني — عزل الغلاف الخارجي، واستبدال أنظمة التدفئة والتهوية وتكييف الهواء، ودمج أنظمة الطاقة الشمسية الكهروضوئية، وعقود أداء تُقاس نتائجها مقارنةً باستهلاك خط الأساس. ويُنسق المختصون هذه الأساليب وفقاً لحزمة العمل الأسبوعية المقبولة. والضابط الأساسي هو أن تحتفظ تقديرات الوفورات بافتراضات الطقس والإشغال والراحة. وهذه نواتج مرحلية لحالات أُسند تنفيذها، وليست وعداً بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `energy-retrofits`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of envelope surveys, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes dans le réseau de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, et non l’existence d’une commande financée pour ce service particulier. La séparation des propriétaires d’actifs, des budgets d’infrastructure et des responsabilités environnementales peut empêcher la mise en service de travaux pourtant utiles sur le plan technique. Pour `energy-retrofits`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des audits de l’enveloppe, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 قيود تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك بلوغ فاقد التوزيع لدى SONEDE نسبة 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا وجود طلب ممول على هذه الخدمة بعينها. وقد يؤدي تباين مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم إسناد أعمال مفيدة من الناحية التقنية. لذلك، يتمثل النهج المقترح لخدمة `energy-retrofits` في سير عمل تعاقدي ذي مستفيد محدد وتعريف معتمد لمسوحات الغلاف الخارجي، بدلاً من تبرير التوظيف استناداً حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the envelope surveys acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks hvac design reviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted envelope surveys from rejected or deferred work and records blockers around retrofit specifications. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits de l’enveloppe ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les revues de conception CVC avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les audits de l’enveloppe acceptés des travaux rejetés ou différés et consigne les blocages concernant les spécifications de rénovation. Les examens par les responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مسوحات الغلاف الخارجي؛ ويوزع 100 مدير المهام على فرق تضم نحو عشرة خبراء لكل فريق. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، بينما يراجع مراجع مؤهل مراجعات تصميم أنظمة التدفئة والتهوية وتكييف الهواء قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مسوحات الغلاف الخارجي المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بمواصفات أعمال التحديث. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Envelope surveys",
+    "fr": "Audits de l’enveloppe",
+    "ar": "مسوحات الغلاف الخارجي"
+   },
+   "unit": {
+    "en": "envelope surveys",
+    "fr": "audits de l’enveloppe",
+    "ar": "مسوحات الغلاف الخارجي"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "HVAC design reviews",
+    "fr": "Revues de conception CVC",
+    "ar": "مراجعات تصميم أنظمة التدفئة والتهوية وتكييف الهواء"
+   },
+   "unit": {
+    "en": "hvac design reviews",
+    "fr": "revues de conception CVC",
+    "ar": "مراجعات تصميم أنظمة التدفئة والتهوية وتكييف الهواء"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Retrofit specifications",
+    "fr": "Spécifications de rénovation",
+    "ar": "مواصفات أعمال التحديث"
+   },
+   "unit": {
+    "en": "retrofit specifications",
+    "fr": "spécifications de rénovation",
+    "ar": "مواصفات أعمال التحديث"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Measurement plans",
+    "fr": "Plans de mesure",
+    "ar": "خطط القياس"
+   },
+   "unit": {
+    "en": "measurement plans",
+    "fr": "plans de mesure",
+    "ar": "خطط القياس"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `energy-retrofits` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the envelope surveys to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `energy-retrofits` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers géoréférencés d’inspection/de photos ou de conception, reliant les relevés de l’enveloppe du bâtiment à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `energy-retrofits` ملف قبول PDF/A + بيان مصدر CSV/JSON + ملفات تفتيش/صور أو تصميم محددة جغرافيًا، تربط مسوحات غلاف المبنى بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted envelope surveys** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant vendredi 12:00 ; **≥4 relevés acceptés de l’enveloppe du bâtiment** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 مسوحات لغلاف المبنى** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، كما أن عيوب السلامة/الخصوصية الحرجة تتجاوز أثرها أي تقييم أخضر. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "savings estimates retain weather, occupancy and comfort assumptions",
+  "fr": "les estimations des économies préservent les hypothèses relatives aux conditions météorologiques, à l’occupation et au confort",
+  "ar": "تُبقي تقديرات الوفورات افتراضات الطقس والإشغال والراحة في الحسبان"
+ },
+ "depends": [
+  {
+   "slug": "renewable-science",
+   "id": 68
+  },
+  {
+   "slug": "energy-audits",
+   "id": 124
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "7",
+   "target": "7.2"
+  },
+  {
+   "goal": "7",
+   "target": "7.3"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Insulation traps moisture → reconcile source records with the envelope surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’isolation emprisonne l’humidité → rapprocher les dossiers sources de la liste de contrôle d’acceptation des relevés de l’enveloppe du bâtiment et attribuer la responsabilité des mesures correctives.",
+   "ar": "احتباس الرطوبة بسبب العزل → طابقوا سجلات المصدر مع قائمة التحقق لقبول مسوحات غلاف المبنى، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "HVAC sizing ignores use patterns → reconcile source records with the envelope surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le dimensionnement du système HVAC ignore les habitudes d’utilisation → rapprocher les dossiers sources de la liste de contrôle d’acceptation des relevés de l’enveloppe du bâtiment et attribuer la responsabilité des mesures correctives.",
+   "ar": "تجاهل تحديد أحجام أنظمة HVAC لأنماط الاستخدام → طابقوا سجلات المصدر مع قائمة التحقق لقبول مسوحات غلاف المبنى، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Savings claims count reduced comfort → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les allégations d’économies comptabilisent une baisse du confort → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitée avant l’acceptation.",
+   "ar": "تحتسب ادعاءات الوفورات انخفاض مستوى الراحة → اشترطوا إجراء فحوص مستقلة للمصادر، واستخدام حالة مقارنة، والإفصاح صراحةً عن عدم اليقين قبل القبول."
+  }
+ ]
+}

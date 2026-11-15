@@ -1,0 +1,66 @@
+{
+ "slug": "built",
+ "id": 2,
+ "order": 2,
+ "icon": "building-2",
+ "gradient": "built",
+ "range": "#027–#052",
+ "placement": "Real 1.0",
+ "name": {
+  "en": "Built Environment",
+  "fr": "Environnement bâti",
+  "ar": "البيئة المبنية"
+ },
+ "tagline": {
+  "en": "How shelter, infrastructure and inhabited space are designed, delivered and maintained.",
+  "fr": "Comment les logements, les infrastructures et les espaces habités sont conçus, réalisés et entretenus.",
+  "ar": "كيفية تصميم المساكن والبنية التحتية والفضاءات المأهولة وتنفيذها وصيانتها."
+ },
+ "question": {
+  "en": "How are shelter, infrastructure and inhabited space designed, delivered and maintained?",
+  "fr": "Comment les logements, les infrastructures et les espaces habités sont-ils conçus, réalisés et entretenus ?",
+  "ar": "كيف تُصمَّم المساكن والبنية التحتية والفضاءات المأهولة وتُنفَّذ وتُصان؟"
+ },
+ "fields": {
+  "en": "Civil engineering, architecture, urban planning, surveying, building services, hydraulics",
+  "fr": "Génie civil, architecture, urbanisme, topographie, équipements des bâtiments, hydraulique",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمسح، وخدمات المباني، والهيدروليكا"
+ },
+ "unit": {
+  "en": "Design package reviews, asset inspections, leak survey kilometres, condition surveys, zoning layers",
+  "fr": "Revues de dossiers de conception, inspections d’actifs, kilomètres de prospection des fuites, études de l’état des ouvrages, couches de zonage",
+  "ar": "مراجعات حزم التصميم، وفحوص الأصول، وكيلومترات مسح التسربات، ودراسات الحالة، وطبقات تقسيم المناطق"
+ },
+ "boundary": {
+  "en": "Affordability includes operating costs, not sale price alone; draft zoning stays advisory until the competent authority validates it.",
+  "fr": "L’accessibilité financière inclut les coûts d’exploitation, et pas seulement le prix de vente ; les projets de zonage restent consultatifs jusqu’à leur validation par l’autorité compétente.",
+  "ar": "تشمل القدرة على تحمل التكاليف التكاليف التشغيلية، لا سعر البيع وحده؛ وتظل مسودات تقسيم المناطق استرشادية إلى أن تصادق عليها الجهة المختصة."
+ },
+ "body": [
+  {
+   "en": "Built Environment carries the heaviest physical-infrastructure load and the most explicit dependence on the November 2023 CCDR findings, including SONEDE network losses of 34% in 2021.",
+   "fr": "L’Environnement bâti représente la charge la plus lourde en infrastructures physiques et dépend le plus explicitement des conclusions du CCDR de novembre 2023, notamment des pertes de 34 % du réseau de la SONEDE en 2021.",
+   "ar": "تتحمل البيئة المبنية العبء الأكبر من البنية التحتية المادية، وتعتمد بصورة أوضح على نتائج CCDR الصادرة في نوفمبر 2023، بما فيها فاقد شبكة SONEDE البالغ 34% في 2021."
+  },
+  {
+   "en": "Engineers, architects and surveyors produce reviewable design, inspection and condition packages; a licensed professional on the client side signs what is binding.",
+   "fr": "Les ingénieurs, architectes et géomètres produisent des dossiers de conception, d’inspection et d’évaluation de l’état des ouvrages pouvant être examinés ; un professionnel agréé du côté du client signe les documents qui ont force contraignante.",
+   "ar": "يُعدّ المهندسون والمعماريون والمسّاحون حزمًا قابلة للمراجعة للتصميم والفحص وتقييم الحالة؛ ويوقّع مهني مرخّص من جانب العميل على ما له صفة ملزمة."
+  },
+  {
+   "en": "It feeds Sciences (environmental impact, climate modelling), Governance (municipal capacity, utility regulation) and Technology (BIM, construction-tech, renewable systems).",
+   "fr": "Il alimente les Sciences (impact environnemental, modélisation climatique), la Gouvernance (capacités municipales, réglementation des services publics) et la Technologie (BIM, technologies de la construction, systèmes d’énergie renouvelable).",
+   "ar": "يرفد العلوم (الأثر البيئي، والنمذجة المناخية)، والحوكمة (قدرات البلديات، وتنظيم المرافق العامة)، والتكنولوجيا (BIM، وتكنولوجيا البناء، وأنظمة الطاقة المتجددة)."
+  }
+ ],
+ "feeds": {
+  "en": "Sciences, Governance, Technology",
+  "fr": "Sciences, Gouvernance, Technologie",
+  "ar": "العلوم، الحوكمة، التكنولوجيا"
+ },
+ "why": {
+  "en": "Water losses, ageing stock and rapid urbanisation create a standing backlog of inspection and design work that graduates in engineering can begin to document.",
+  "fr": "Les pertes d’eau, le vieillissement du parc et l’urbanisation rapide créent un volume permanent de travaux d’inspection et de conception que les diplômés en ingénierie peuvent commencer à documenter.",
+  "ar": "تؤدي فاقدات المياه، وتقادم الأصول، والتوسع الحضري السريع إلى تراكم مستمر لأعمال الفحص والتصميم، يمكن لخريجي الهندسة البدء بتوثيقها."
+ }
+}

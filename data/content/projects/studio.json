@@ -1,0 +1,71 @@
+{
+ "slug": "studio",
+ "id": 8,
+ "order": 8,
+ "icon": "layout-template",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Studio",
+  "fr": "Studio",
+  "ar": "Studio"
+ },
+ "tagline": {
+  "en": "Static-first sites, built to be checked.",
+  "fr": "Des sites statiques par défaut, conçus pour être vérifiés.",
+  "ar": "مواقع تعتمد الصفحات الثابتة أولاً، ومصممة لتسهيل التحقق منها."
+ },
+ "outcome": [
+  {
+   "en": "Studio applies the discipline of this very site to client work: static-first pages, no blocking loaders, no third-party requests, every figure dated.",
+   "fr": "Studio applique aux projets clients la rigueur de ce site même : des pages statiques par défaut, sans chargeurs bloquants, sans requêtes tierces, et avec une date pour chaque chiffre.",
+   "ar": "يطبّق Studio نهج هذا الموقع نفسه في أعمال العملاء: صفحات تعتمد الصفحات الثابتة أولاً، بلا أدوات تحميل تعيق الاستخدام، ولا طلبات إلى أطراف ثالثة، مع تأريخ كل رقم."
+  },
+  {
+   "en": "It is a service-delivery vehicle for partners who want to publish with the same evidence standard.",
+   "fr": "C’est un moyen de fournir des services aux partenaires qui souhaitent publier selon le même standard de preuve.",
+   "ar": "هو وسيلة لتقديم الخدمات للشركاء الراغبين في النشر وفق معيار الأدلة نفسه."
+  }
+ ],
+ "evidence": {
+  "en": "Listed as live on the preview.",
+  "fr": "Indiqué comme disponible dans l’aperçu.",
+  "ar": "مُدرج بوصفه متاحًا في المعاينة."
+ },
+ "services": [
+  "software-eng",
+  "platform-eng",
+  "cloud-infra",
+  "cybersecurity"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Live",
+    "fr": "Actif",
+    "ar": "نشط"
+   },
+   "body": {
+    "en": "Client work uses the same standard.",
+    "fr": "Les projets clients suivent le même standard.",
+    "ar": "تُنفّذ أعمال العملاء وفق المعيار نفسه."
+   }
+  }
+ ],
+ "gradient": "governance",
+ "needs": {
+  "en": "Front-end engineers, accessibility reviewers.",
+  "fr": "Ingénieurs front-end, spécialistes de l’accessibilité.",
+  "ar": "مهندسو الواجهة الأمامية، ومراجعو إمكانية الوصول."
+ }
+}

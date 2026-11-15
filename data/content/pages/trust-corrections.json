@@ -1,0 +1,130 @@
+{
+ "slug": "trust-corrections",
+ "title": {
+  "en": "Corrections",
+  "fr": "Corrections",
+  "ar": "التصحيحات"
+ },
+ "description": {
+  "en": "Report an error. We answer within 14 days.",
+  "fr": "Signalez une erreur. Nous vous répondrons dans un délai de 14 jours.",
+  "ar": "أبلغ عن خطأ. نردّ خلال 14 يومًا."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "co-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Found an error? **Tell us.**",
+    "fr": "Vous avez repéré une erreur ? **Dites-le-nous.**",
+    "ar": "هل عثرت على خطأ؟ **أخبرنا.**"
+   },
+   "lead": {
+    "en": "Corrections are logged with a date and answered within 14 days.",
+    "fr": "Les corrections sont consignées avec leur date et font l’objet d’une réponse dans un délai de 14 jours.",
+    "ar": "تُسجّل التصحيحات مع تاريخها، ويُردّ عليها خلال 14 يومًا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the form",
+      "fr": "Ouvrir le formulaire",
+      "ar": "افتح النموذج"
+     },
+     "href": "#co-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Corrections",
+    "fr": "Corrections",
+    "ar": "التصحيحات"
+   }
+  },
+  {
+   "type": "form",
+   "id": "co-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/contact/",
+   "title": {
+    "en": "Report an error",
+    "fr": "Signaler une erreur",
+    "ar": "الإبلاغ عن خطأ"
+   },
+   "submit": {
+    "en": "Send",
+    "fr": "Envoyer",
+    "ar": "إرسال"
+   },
+   "fields": [
+    {
+     "name": "name",
+     "label": {
+      "en": "Full name",
+      "fr": "Nom complet",
+      "ar": "الاسم الكامل"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "email",
+     "label": {
+      "en": "Email",
+      "fr": "E-mail",
+      "ar": "البريد الإلكتروني"
+     },
+     "type": "email",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "desk",
+     "label": {
+      "en": "Desk",
+      "fr": "Assistance",
+      "ar": "مكتب"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "corrections": {
+       "en": "Corrections",
+       "fr": "Corrections",
+       "ar": "التصحيحات"
+      }
+     }
+    },
+    {
+     "name": "subject",
+     "label": {
+      "en": "Page or figure",
+      "fr": "Page ou figure",
+      "ar": "الصفحة أو الشكل"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "message",
+     "label": {
+      "en": "What is wrong, and what is your source?",
+      "fr": "Qu’est-ce qui est erroné et quelle est votre source ?",
+      "ar": "ما الخطأ، وما مصدرك؟"
+     },
+     "type": "textarea",
+     "required": true,
+     "span": 2,
+     "rows": 5
+    }
+   ]
+  }
+ ]
+}

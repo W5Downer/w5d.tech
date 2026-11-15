@@ -1,0 +1,70 @@
+{
+ "slug": "dyon",
+ "id": 13,
+ "order": 13,
+ "icon": "badge-check",
+ "status": "building",
+ "status_label": {
+  "en": "Building",
+  "fr": "En construction",
+  "ar": "قيد البناء"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Dyon identity-linked accounts",
+  "fr": "Comptes liés à l’identité Dyon",
+  "ar": "حسابات Dyon المرتبطة بالهوية"
+ },
+ "tagline": {
+  "en": "One accountable identity for every contributor, reviewer and certificate.",
+  "fr": "Une identité attribuable à une personne responsable pour chaque contributeur, réviseur et certificat.",
+  "ar": "هوية واحدة محددة المسؤولية لكل مساهم ومراجع وشهادة."
+ },
+ "outcome": [
+  {
+   "en": "Dyon links each account to a verified person so that every weekly report and every certificate has an accountable author.",
+   "fr": "Dyon relie chaque compte à une personne vérifiée afin que chaque rapport hebdomadaire et chaque certificat aient un auteur responsable identifiable.",
+   "ar": "يربط Dyon كل حساب بشخص تم التحقق من هويته، بحيث يكون لكل تقرير أسبوعي وشهادة مؤلف محدد المسؤولية."
+  },
+  {
+   "en": "Account counts are design totals ({{ d.accounts_total }} accounts across experts, managers, leaders and the owner), not issued accounts.",
+   "fr": "Les nombres de comptes sont des totaux prévus ({{ d.accounts_total }} comptes répartis entre experts, responsables, dirigeants et propriétaire), et non des comptes attribués.",
+   "ar": "أعداد الحسابات في التصميم هي إجماليات ({{ d.accounts_total }} حسابًا للخبراء والمديرين والقادة والمالك)، وليست حسابات صادرة."
+  }
+ ],
+ "evidence": {
+  "en": "Described in the platform specification; account issuance has not started.",
+  "fr": "Décrit dans la spécification de la plateforme ; l’attribution des comptes n’a pas commencé.",
+  "ar": "موصوفة في مواصفات المنصة؛ ولم يبدأ إصدار الحسابات."
+ },
+ "services": [
+  "digital-identity",
+  "data-protection",
+  "cybersecurity"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Specified",
+    "fr": "Spécifié",
+    "ar": "محدد في المواصفات"
+   },
+   "body": {
+    "en": "Not yet issued at scale.",
+    "fr": "Pas encore attribué à grande échelle.",
+    "ar": "لم تصدر بعد على نطاق واسع."
+   }
+  }
+ ],
+ "gradient": "governance",
+ "needs": {
+  "en": "Privacy and security reviewers.",
+  "fr": "Réviseurs en matière de confidentialité et de sécurité.",
+  "ar": "مراجعو الخصوصية والأمن."
+ }
+}

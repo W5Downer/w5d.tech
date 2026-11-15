@@ -1,0 +1,89 @@
+{
+ "slug": "newsletter",
+ "title": {
+  "en": "Newsletter — dated updates only",
+  "fr": "Lettre d’information — mises à jour datées uniquement",
+  "ar": "النشرة الإخبارية — تحديثات مؤرخة فقط"
+ },
+ "description": {
+  "en": "Subscribe to dated programme updates.",
+  "fr": "Abonnez-vous aux mises à jour datées du programme.",
+  "ar": "اشترك لتلقي تحديثات مؤرخة عن البرنامج."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "nl-hero",
+   "variant": "classic",
+   "gradient": "cultures",
+   "title": {
+    "en": "Dated updates. **Nothing else.**",
+    "fr": "Des mises à jour datées. **Rien d’autre.**",
+    "ar": "تحديثات مؤرخة. **لا شيء سواها.**"
+   },
+   "lead": {
+    "en": "One email when something real changes: a status, a price constant, a published rollup.",
+    "fr": "Un e-mail lorsqu’un changement concret intervient : un statut, une constante de prix ou une synthèse publiée.",
+    "ar": "رسالة واحدة عبر البريد الإلكتروني عند حدوث تغيير فعلي: حالة، أو قيمة ثابتة للسعر، أو ملخص تجميعي منشور."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Subscribe",
+      "fr": "S’abonner",
+      "ar": "اشترك"
+     },
+     "href": "#nl-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Newsletter",
+    "fr": "Newsletter",
+    "ar": "النشرة البريدية"
+   }
+  },
+  {
+   "type": "form",
+   "id": "nl-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/newsletter/",
+   "title": {
+    "en": "Subscribe",
+    "fr": "S’abonner",
+    "ar": "اشترك"
+   },
+   "submit": {
+    "en": "Subscribe",
+    "fr": "S’abonner",
+    "ar": "اشترك"
+   },
+   "fields": [
+    {
+     "name": "email",
+     "label": {
+      "en": "Email",
+      "fr": "E-mail",
+      "ar": "البريد الإلكتروني"
+     },
+     "type": "email",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "accept",
+     "label": {
+      "en": "I agree to receive dated programme updates.",
+      "fr": "J’accepte de recevoir les mises à jour datées du programme.",
+      "ar": "أوافق على تلقي تحديثات مؤرخة عن البرنامج."
+     },
+     "type": "checkbox",
+     "required": true,
+     "span": 1
+    }
+   ]
+  }
+ ]
+}

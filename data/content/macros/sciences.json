@@ -1,0 +1,66 @@
+{
+ "slug": "sciences",
+ "id": 3,
+ "order": 3,
+ "icon": "flask-conical",
+ "gradient": "sciences",
+ "range": "#053–#078",
+ "placement": "Between 1.0",
+ "name": {
+  "en": "Sciences",
+  "fr": "Sciences",
+  "ar": "العلوم"
+ },
+ "tagline": {
+  "en": "How reliable knowledge is produced, measured, validated and turned into decision-grade evidence.",
+  "fr": "Comment les connaissances fiables sont produites, mesurées, validées et converties en éléments probants adaptés à la prise de décision.",
+  "ar": "كيفية إنتاج المعرفة الموثوقة وقياسها والتحقق من صحتها وتحويلها إلى أدلة صالحة لاتخاذ القرارات."
+ },
+ "question": {
+  "en": "How is reliable knowledge produced, measured, validated and translated into decision-grade evidence?",
+  "fr": "Comment les connaissances fiables sont-elles produites, mesurées, validées et converties en éléments probants adaptés à la prise de décision ?",
+  "ar": "كيف تُنتَج المعرفة الموثوقة وتُقاس ويُتحقق من صحتها وتُترجم إلى أدلة صالحة لاتخاذ القرارات؟"
+ },
+ "fields": {
+  "en": "Epidemiology, analytical chemistry, agronomy, marine biology, materials engineering, metrology, biostatistics",
+  "fr": "Épidémiologie, chimie analytique, agronomie, biologie marine, ingénierie des matériaux, métrologie, biostatistique",
+  "ar": "علم الأوبئة، الكيمياء التحليلية، علم الزراعة، الأحياء البحرية، هندسة المواد، علم القياس، الإحصاء الحيوي"
+ },
+ "unit": {
+  "en": "Accessioned samples, validated assay results, pipeline validation runs, calibration certificates, species observation records",
+  "fr": "Échantillons enregistrés, résultats d’analyses validés, essais de validation de pipeline, certificats d’étalonnage, relevés d’observation des espèces",
+  "ar": "عينات مسجلة، ونتائج اختبارات مُعتمدة، وعمليات تحقق من صحة خطوط المعالجة، وشهادات معايرة، وسجلات رصد الأنواع"
+ },
+ "boundary": {
+  "en": "Research analyses cannot become clinical diagnoses without authorised validation; laboratories publish method limits and chain of custody.",
+  "fr": "Les analyses de recherche ne peuvent devenir des diagnostics cliniques sans validation autorisée ; les laboratoires publient les limites des méthodes et la chaîne de traçabilité.",
+  "ar": "لا يمكن أن تتحول التحليلات البحثية إلى تشخيصات سريرية من دون تحقق معتمد؛ وتنشر المختبرات حدود المنهج وسلسلة حيازة العينات."
+ },
+ "body": [
+  {
+   "en": "The Between 1.0 placement reflects a laboratory-and-field hybrid: many outputs are data and method, while physical samples, field stations and accredited facilities are load-bearing.",
+   "fr": "Le positionnement Between 1.0 reflète un modèle hybride de laboratoire et de terrain : de nombreux résultats sont des données et des méthodes, tandis que les échantillons physiques, les stations de terrain et les installations accréditées sont essentiels.",
+   "ar": "يعكس تصنيف Between 1.0 مزيجًا من العمل المخبري والميداني: فكثير من المخرجات بيانات ومنهجيات، فيما تشكل العينات المادية والمحطات الميدانية والمرافق المعتمدة عناصر أساسية."
+  },
+  {
+   "en": "Sciences services feed every other macro, most critically Governance (health, climate, utility regulation) and Technology (biotech, medical devices).",
+   "fr": "Les services des Sciences alimentent tous les autres macros, tout particulièrement la Gouvernance (santé, climat, régulation des services publics) et la Technologie (biotechnologies, dispositifs médicaux).",
+   "ar": "تغذي خدمات العلوم جميع المجالات، ولا سيما الحوكمة (الصحة والمناخ وتنظيم المرافق) والتكنولوجيا (التقنية الحيوية والأجهزة الطبية)."
+  },
+  {
+   "en": "Every result ships with its method limit, its reviewer and its chain of custody.",
+   "fr": "Chaque résultat est accompagné des limites de sa méthode, du nom de la personne qui l’a examiné et de sa chaîne de traçabilité.",
+   "ar": "تُرفق بكل نتيجة معلومات عن حدود منهجها، ومراجعها، وسلسلة حيازتها."
+  }
+ ],
+ "feeds": {
+  "en": "Governance, Technology, Built Environment",
+  "fr": "Gouvernance, Technologie, Environnement bâti",
+  "ar": "الحوكمة، التكنولوجيا، البيئة العمرانية"
+ },
+ "why": {
+  "en": "Tunisia graduates in science and agronomy are numerous; accredited methods and supervised sampling turn that capacity into evidence institutions can use.",
+  "fr": "Les diplômés tunisiens en sciences et en agronomie sont nombreux ; des méthodes accréditées et des prélèvements supervisés permettent de transformer cette capacité en éléments probants utilisables par les institutions.",
+  "ar": "خريجو العلوم والزراعة في تونس كثيرون؛ وتحول المنهجيات المعتمدة وأخذ العينات تحت الإشراف هذه القدرات إلى أدلة يمكن للمؤسسات استخدامها."
+ }
+}

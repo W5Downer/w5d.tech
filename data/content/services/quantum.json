@@ -1,0 +1,167 @@
+{
+ "slug": "quantum",
+ "id": 114,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Quantum & Advanced Computing",
+  "fr": "Informatique quantique et avancée",
+  "ar": "الحوسبة الكمومية والمتقدمة"
+ },
+ "short": {
+  "en": "The service provides simulation, algorithm design, education.",
+  "fr": "Évaluer des calculs avancés sans promesses spéculatives.",
+  "ar": "تقييم الحوسبة المتقدمة دون وعود مضاربية."
+ },
+ "abstract": {
+  "en": "Quantum and advanced computing — quantum simulation, algorithm design, and workforce education for the next computing paradigm.",
+  "fr": "Informatique quantique et avancée — simulation quantique, conception d’algorithmes et formation des professionnels à la prochaine génération de l’informatique.",
+  "ar": "الحوسبة الكمومية والمتقدمة — المحاكاة الكمومية، وتصميم الخوارزميات، وتأهيل القوى العاملة للجيل القادم من الحوسبة."
+ },
+ "long": [
+  {
+   "en": "The Quantum & Advanced Computing service organises a weekly work package around reproducible benchmark runs, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 reproducible benchmark runs; 100 algorithm comparison notes; 200 simulation notebooks; 100 teaching laboratories. Quantum and advanced computing — quantum simulation, algorithm design, and workforce education for the next computing paradigm. Specialists sequence those methods against the accepted weekly package. The governing boundary is that claims compare classical baselines and disclose hardware and noise assumptions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’informatique quantique et avancée organise un lot de travail hebdomadaire autour d’exécutions de référence reproductibles, plutôt que de faire de la participation le produit proposé. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 exécutions de référence reproductibles ; 100 notes de comparaison d’algorithmes ; 200 carnets de simulation ; 100 laboratoires pédagogiques. Informatique quantique et avancée — simulation quantique, conception d’algorithmes et formation des professionnels à la prochaine génération de l’informatique. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire convenu. La règle de fond est que les affirmations comparent les résultats aux références classiques et précisent les hypothèses relatives au matériel et au bruit. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse de mener à bien chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة الحوسبة الكمومية والمتقدمة حزمة عمل أسبوعية تتمحور حول عمليات قياس مرجعي قابلة لإعادة الإنتاج، بدلاً من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد اللازمة، تتضمن الخطة التجريبية 500 عملية قياس مرجعي قابلة لإعادة الإنتاج؛ و100 مذكرة لمقارنة الخوارزميات؛ و200 دفتر محاكاة؛ و100 مختبر تعليمي. الحوسبة الكمومية والمتقدمة — المحاكاة الكمومية، وتصميم الخوارزميات، وتأهيل القوى العاملة للجيل القادم من الحوسبة. ويرتّب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويتمثل الضابط الحاكم في أن تقارن الادعاءات بخطوط أساس للحوسبة التقليدية وأن تفصح عن افتراضات الأجهزة والضوضاء. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `quantum`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of reproducible benchmark runs, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale de 2026 sur les compétences numériques relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne formelles et urbaines jusqu’en 2025. L’examen distinct de l’OCDE de juin 2024 documente les contraintes liées aux compétences des employeurs. Aucune de ces sources ne vérifie un nombre national de postes vacants pour ce créneau technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable de système engagé ; affecter des développeurs isolés ne garantit ni cette coordination ni l’existence d’un acheteur. Pour `quantum`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire désigné et d’une définition approuvée des exécutions de référence reproductibles, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، استناداً أساساً إلى أدلة إلكترونية رسمية ومن المناطق الحضرية حتى عام 2025. وتوثّق مراجعة منظمة التعاون الاقتصادي والتنمية الصادرة في يونيو 2024، بشكل منفصل، قيود المهارات التي يواجهها أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للشواغر في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة وجود جهة مالكة للنظام ملتزمة؛ فتعيين مطورين كلٌّ على حدة لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، فإن الاستجابة المقترحة لـ `quantum` هي سير عمل تعاقدي مع مستفيد محدد وتعريف معتمد لعمليات القياس المرجعي القابلة لإعادة الإنتاج، لا توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the reproducible benchmark runs acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks algorithm comparison notes before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted reproducible benchmark runs from rejected or deferred work and records blockers around simulation notebooks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des exécutions de référence reproductibles ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les notes de comparaison d’algorithmes avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments justificatifs des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. La consolidation du service distingue les exécutions de référence reproductibles acceptées des travaux rejetés ou reportés, et consigne les obstacles liés aux carnets de simulation. Les évaluations des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول عمليات القياس المرجعي القابلة لإعادة الإنتاج؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon هوية المساهمين المسؤولين، فيما يراجع مراجع مؤهل مذكرات مقارنة الخوارزميات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين عمليات القياس المرجعي القابلة لإعادة الإنتاج المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بدفاتر المحاكاة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "physics, mathematics, computer science and advanced computing",
+  "fr": "physique, mathématiques, informatique et informatique avancée",
+  "ar": "الفيزياء والرياضيات وعلوم الحاسوب والحوسبة المتقدمة"
+ },
+ "diploma": "maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Reproducible benchmark runs",
+    "fr": "Exécutions de référence reproductibles",
+    "ar": "عمليات القياس المرجعي القابلة لإعادة الإنتاج"
+   },
+   "unit": {
+    "en": "reproducible benchmark runs",
+    "fr": "exécutions de référence reproductibles",
+    "ar": "عمليات القياس المرجعي القابلة لإعادة الإنتاج"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Algorithm comparison notes",
+    "fr": "Notes de comparaison d’algorithmes",
+    "ar": "مذكرات مقارنة الخوارزميات"
+   },
+   "unit": {
+    "en": "algorithm comparison notes",
+    "fr": "notes de comparaison d’algorithmes",
+    "ar": "مذكرات مقارنة الخوارزميات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Simulation notebooks",
+    "fr": "Carnets de simulation",
+    "ar": "دفاتر المحاكاة"
+   },
+   "unit": {
+    "en": "simulation notebooks",
+    "fr": "carnets de simulation",
+    "ar": "دفاتر المحاكاة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Teaching laboratories",
+    "fr": "Laboratoires pédagogiques",
+    "ar": "المختبرات التعليمية"
+   },
+   "unit": {
+    "en": "teaching laboratories",
+    "fr": "laboratoires pédagogiques",
+    "ar": "المختبرات التعليمية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `quantum` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the reproducible benchmark runs to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `quantum` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + du code et une configuration versionnés, des tests et des journaux de déploiement ou de récupération, qui relient les exécutions de référence reproductibles à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `quantum` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + شيفرة/إعدادات ذات إصدارات محددة، واختبارات، وسجلات النشر أو الاستعادة، تربط عمليات القياس المرجعي القابلة لإعادة الإنتاج بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted reproducible benchmark runs** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** remis ven. 12:00 ; **≥4 exécutions de référence reproductibles acceptées** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques liés à la sécurité ou à la confidentialité priment sur un résultat vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥4 عمليات قياس مرجعي قابلة لإعادة الإنتاج ومقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات/التعديلات المعتمدة المقام المؤهل، بينما تتجاوز العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي تقييم أخضر. وهذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "claims compare classical baselines and disclose hardware and noise assumptions",
+  "fr": "les affirmations comparent les résultats aux références classiques et précisent les hypothèses relatives au matériel et au bruit",
+  "ar": "تقارن الادعاءات بخطوط أساس للحوسبة التقليدية وتفصح عن افتراضات الأجهزة والضوضاء"
+ },
+ "depends": [
+  {
+   "slug": "math-modelling",
+   "id": 72
+  },
+  {
+   "slug": "science-policy",
+   "id": 74
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "stem-education",
+   "id": 76
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Quantum advantage claimed without baseline → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Avantage quantique revendiqué sans référence comparative → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitée avant l’acceptation.",
+   "ar": "الادعاء بتحقيق تفوق كمومي دون خط أساس → يُشترط إجراء فحوص مستقلة للمصادر، وتحديد عنصر للمقارنة، والإفصاح الصريح عن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Hardware access prevents reproducibility → reconcile source records with the reproducible benchmark runs acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’accès au matériel empêche la reproductibilité → rapprocher les registres des sources de la liste de contrôle d’acceptation des exécutions de référence reproductibles et désigner un responsable des mesures correctives.",
+   "ar": "يحول الوصول إلى الأجهزة دون إمكانية إعادة الإنتاج → تُطابق سجلات المصادر مع قائمة التحقق لقبول عمليات القياس المرجعي القابلة لإعادة الإنتاج، وتُحدّد الجهة المسؤولة عن الإجراء التصحيحي."
+  },
+  {
+   "en": "Speculative pilots consume specialist time without users → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Des projets pilotes spéculatifs mobilisent du temps de spécialistes sans utilisateurs → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitée avant l’acceptation.",
+   "ar": "تستهلك المشاريع التجريبية التخمينية وقت المختصين دون وجود مستخدمين → يُشترط إجراء فحوص مستقلة للمصادر، وتحديد عنصر للمقارنة، والإفصاح الصريح عن عدم اليقين قبل القبول."
+  }
+ ]
+}

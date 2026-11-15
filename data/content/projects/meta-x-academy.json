@@ -1,0 +1,89 @@
+{
+ "slug": "meta-x-academy",
+ "id": 2,
+ "order": 2,
+ "icon": "graduation-cap",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "MetaX Academy",
+  "fr": "MetaX Academy",
+  "ar": "MetaX Academy"
+ },
+ "tagline": {
+  "en": "The academy layer that forms capability for the services.",
+  "fr": "Le volet académique qui développe les compétences nécessaires aux services.",
+  "ar": "طبقة الأكاديمية التي تبني القدرات اللازمة للخدمات."
+ },
+ "outcome": [
+  {
+   "en": "MetaX Academy runs the programmes where capability is formed: task sets, review queues and certificates that precede any delivery.",
+   "fr": "MetaX Academy propose les programmes dans le cadre desquels les compétences se développent : ensembles de tâches, files de révision et certificats qui précèdent toute prestation.",
+   "ar": "تدير MetaX Academy البرامج التي تُبنى فيها القدرات: مجموعات المهام، وقوائم انتظار المراجعة، والشهادات التي تسبق تقديم أي خدمة."
+  },
+  {
+   "en": "It is one of five programmes on the public preview, each dated. It is the layer a graduate meets first.",
+   "fr": "C’est l’un des cinq programmes de l’aperçu public, chacun daté. C’est le premier volet auquel un diplômé est confronté.",
+   "ar": "وهي واحدة من خمسة برامج في المعاينة العامة، ولكل منها تاريخ. وهي أول طبقة يلتقي بها الخريج."
+  }
+ ],
+ "evidence": {
+  "en": "Public preview lists MetaX Academy as live; nine MetaX pillars are registered.",
+  "fr": "L’aperçu public indique que MetaX Academy est actif ; neuf piliers MetaX sont enregistrés.",
+  "ar": "تعرض المعاينة العامة MetaX Academy بوصفها نشطة؛ وقد سُجّلت تسع ركائز لـ MetaX."
+ },
+ "services": [
+  "stem-education",
+  "education-culture",
+  "construction-training",
+  "digital-storytelling",
+  "science-comm"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Live",
+    "fr": "Actif",
+    "ar": "نشط"
+   },
+   "body": {
+    "en": "Programme listed as live on the preview.",
+    "fr": "Programme indiqué comme actif dans l’aperçu.",
+    "ar": "البرنامج مدرج بوصفه نشطًا في المعاينة."
+   }
+  },
+  {
+   "when": {
+    "en": "2026-12-31",
+    "fr": "2026-12-31",
+    "ar": "2026-12-31"
+   },
+   "title": {
+    "en": "Programme clock end",
+    "fr": "Fin du calendrier du programme",
+    "ar": "موعد انتهاء البرنامج"
+   },
+   "body": {
+    "en": "Pricing and hiring window closes.",
+    "fr": "Clôture de la période de tarification et de recrutement.",
+    "ar": "تُغلق نافذة التسعير والتوظيف."
+   }
+  }
+ ],
+ "gradient": "sciences",
+ "needs": {
+  "en": "Course authors, reviewers, pilot cohorts.",
+  "fr": "Auteurs de cours, évaluateurs, cohortes pilotes.",
+  "ar": "مؤلفو المقررات، والمراجعون، والدفعات التجريبية."
+ }
+}

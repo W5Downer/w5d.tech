@@ -1,0 +1,167 @@
+{
+ "slug": "water-sanitation",
+ "id": 35,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Water & Sanitation Infrastructure",
+  "fr": "Infrastructures d’eau et d’assainissement",
+  "ar": "البنية التحتية للمياه والصرف الصحي"
+ },
+ "short": {
+  "en": "The service provides network design, leak detection, treatment.",
+  "fr": "Réduire les pertes et préparer les réseaux d'eau.",
+  "ar": "تقليص الفاقد وإعداد شبكات المياه."
+ },
+ "abstract": {
+  "en": "Water and sanitation infrastructure — network design, non-revenue-water reduction, treatment plant delivery, and operation and maintenance frameworks for utilities.",
+  "fr": "Infrastructures d’eau et d’assainissement — conception des réseaux, réduction de l’eau non facturée, réalisation de stations de traitement et cadres d’exploitation et de maintenance pour les services publics.",
+  "ar": "البنية التحتية للمياه والصرف الصحي — تصميم الشبكات، والحد من المياه غير المدرة للإيرادات، وتنفيذ محطات المعالجة، وأطر التشغيل والصيانة لمرافق الخدمات."
+ },
+ "long": [
+  {
+   "en": "The Water & Sanitation Infrastructure service organises a weekly work package around leak survey kilometres, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 leak survey kilometres; 100 network design packages; 100 water balance zones; 200 treatment condition inspections. Water and sanitation infrastructure — network design, non-revenue-water reduction, treatment plant delivery, and operation and maintenance frameworks for utilities. Specialists sequence those methods against the accepted weekly package. The governing boundary is that utility operators authorise shutdowns and verify measured loss baselines. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Infrastructures d’eau et d’assainissement organise un lot de travaux hebdomadaire autour des kilomètres de réseau inspectés pour détecter les fuites, plutôt que de considérer la présence comme le produit du service. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 kilomètres de réseau inspectés pour détecter les fuites ; 100 dossiers de conception de réseau ; 100 zones de bilan hydrique ; 200 inspections de l’état des installations de traitement. Infrastructures d’eau et d’assainissement — conception des réseaux, réduction de l’eau non facturée, réalisation de stations de traitement et cadres d’exploitation et de maintenance pour les services publics. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les exploitants des services publics autorisent les arrêts et vérifient les niveaux de pertes mesurés servant de référence. Il s’agit de résultats échelonnés issus de cas mis en service, et non d’un engagement à achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة البنية التحتية للمياه والصرف الصحي حزمة عمل أسبوعية تتمحور حول كيلومترات مسح التسربات، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 500 كيلومتر من مسح التسربات؛ و100 حزمة لتصميم الشبكات؛ و100 منطقة لموازنة المياه؛ و200 عملية تفتيش لحالة محطات المعالجة. البنية التحتية للمياه والصرف الصحي — تصميم الشبكات، والحد من المياه غير المدرة للإيرادات، وتنفيذ محطات المعالجة، وأطر التشغيل والصيانة لمرافق الخدمات. ويرتب المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. ويقضي الحد الفاصل المنظّم للعمل بأن مشغلي مرافق الخدمات هم من يصرحون بعمليات الإيقاف ويتحققون من خطوط الأساس للخسائر المقاسة. وتمثل هذه المخرجات مراحل مستمدة من حالات مُكلّف بها، ولا تشكل وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `water-sanitation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of leak survey kilometres, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui atteignaient 34 % en 2021. Cela met en évidence la nécessité d’interventions techniques fondées sur des mesures, et non l’existence d’une commande financée pour ce service particulier. La séparation entre les propriétaires des actifs, les budgets d’infrastructure et les responsabilités environnementales peut empêcher la mise en service de travaux pourtant utiles sur le plan technique. Pour `water-sanitation`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des kilomètres de réseau inspectés pour détecter les fuites, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 التحديات التي تواجهها تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك بلوغ خسائر التوزيع لدى SONEDE نسبة 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا وجود طلب ممول على هذه الخدمة بعينها. وقد يؤدي اختلاف مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية التقنية. لذلك، تتمثل الاستجابة المقترحة لخدمة `water-sanitation` في سير عمل تعاقدي يحدد جهة مستفيدة وتعريفًا مقبولًا لكيلومترات مسح التسربات، لا في التوظيف الذي يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the leak survey kilometres acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks network design packages before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted leak survey kilometres from rejected or deferred work and records blockers around water balance zones. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des kilomètres de réseau inspectés pour détecter les fuites ; 100 responsables les répartissent en équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de conception de réseau avant leur approbation. L’audit aléatoire proposé de 5 % revérifie les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les kilomètres de réseau inspectés pour détecter les fuites qui sont acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux zones de bilan hydrique. Les revues des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول كيلومترات مسح التسربات؛ ويحوّل 100 مدير هذه المعايير إلى مهام للفرق، يتألف كل منها من نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يراجع مراجع مؤهل حزم تصميم الشبكات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين كيلومترات مسح التسربات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمناطق موازنة المياه. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف الـ1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "hydraulic engineering, environmental engineering and water systems",
+  "fr": "génie hydraulique, génie de l’environnement et systèmes hydrauliques",
+  "ar": "الهندسة الهيدروليكية، والهندسة البيئية، ونظم المياه"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Kairouan, Kasserine and consenting utility/GDA service territories",
+  "fr": "Kairouan, Kasserine et territoires de service des opérateurs/GDA ayant donné leur accord",
+  "ar": "القيروان والقصرين ومناطق الخدمة التابعة لمرافق الخدمات/لـGDA، شريطة موافقتها"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Leak survey kilometres",
+    "fr": "Kilomètres de réseau inspectés pour détecter les fuites",
+    "ar": "كيلومترات مسح التسربات"
+   },
+   "unit": {
+    "en": "leak survey kilometres",
+    "fr": "kilomètres de réseau inspectés pour détecter les fuites",
+    "ar": "كيلومترات مسح التسربات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Network design packages",
+    "fr": "Dossiers de conception de réseau",
+    "ar": "حزم تصميم الشبكات"
+   },
+   "unit": {
+    "en": "network design packages",
+    "fr": "forfaits de conception de réseau",
+    "ar": "حزم تصميم الشبكات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Water balance zones",
+    "fr": "zones de bilan hydrique",
+    "ar": "مناطق موازنة المياه"
+   },
+   "unit": {
+    "en": "water balance zones",
+    "fr": "zones de bilan hydrique",
+    "ar": "مناطق موازنة المياه"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Treatment condition inspections",
+    "fr": "inspections de l’état des installations de traitement",
+    "ar": "فحوص حالة المعالجة"
+   },
+   "unit": {
+    "en": "treatment condition inspections",
+    "fr": "inspections de l’état des installations de traitement",
+    "ar": "فحوص حالة المعالجة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `water-sanitation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the leak survey kilometres to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `water-sanitation` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photo ou de conception géoréférencés, qui relient les kilomètres de détection des fuites à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `water-sanitation` المرتبطة بالحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات الفحص/الصور أو التصميم محددة جغرافيًا، وتربط كيلومترات مسح التسرب بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted leak survey kilometres** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici ven. 12:00 ; **≥4 kilomètres de détection des fuites acceptés** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés autorisés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥4 كيلومترات مقبولة من مسح التسرب** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "utility operators authorise shutdowns and verify measured loss baselines",
+  "fr": "les exploitants des services publics autorisent les arrêts et vérifient les niveaux de référence des pertes mesurées",
+  "ar": "يصرّح مشغّلو مرافق المياه بعمليات الإيقاف ويتحققون من خطوط الأساس للخسائر المقاسة"
+ },
+ "depends": [
+  {
+   "slug": "water-soil-labs",
+   "id": 55
+  },
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "water-treatment",
+   "id": 120
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "6",
+   "target": "6.3"
+  },
+  {
+   "goal": "6",
+   "target": "6.4"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Leaks mislocated by noisy sensors → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Des fuites mal localisées par des capteurs bruités → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "أخطاء تحديد مواقع التسرب بسبب تشويش المستشعرات → أعد إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Works contaminate potable water → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Des travaux contaminent l’eau potable → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "تؤدي الأعمال إلى تلوث مياه الشرب → أعد إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Design ignores intermittent supply pressure → reconcile source records with the leak survey kilometres acceptance checklist and assign corrective-action ownership.",
+   "fr": "La conception ne tient pas compte de la pression d’une alimentation intermittente → rapprocher les registres sources de la liste de contrôle d’acceptation des kilomètres de détection des fuites et attribuer la responsabilité des actions correctives.",
+   "ar": "يتجاهل التصميم ضغط الإمداد المتقطع → طابق سجلات المصدر مع قائمة التحقق لقبول كيلومترات مسح التسرب، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

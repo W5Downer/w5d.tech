@@ -1,0 +1,172 @@
+{
+ "slug": "projects",
+ "label": {
+  "en": "Projects",
+  "fr": "Projets",
+  "ar": "المشروعات"
+ },
+ "interval": 8500,
+ "height": "32rem",
+ "slides": [
+  {
+   "gradient": "technology",
+   "icon": "folder-kanban",
+   "eyebrow": {
+    "en": "Project register",
+    "fr": "Registre des projets",
+    "ar": "سجل المشاريع"
+   },
+   "title": {
+    "en": "**{{ counts.projects }} projects.** Each one dated, each one honest.",
+    "fr": "**{{ counts.projects }} projets.** Chacun est daté et présenté honnêtement.",
+    "ar": "**{{ counts.projects }} مشروعًا.** لكل مشروع تاريخ موثّق، ولكل مشروع وصف صادق."
+   },
+   "lead": {
+    "en": "Live, building, concept or draft: the status is on the page, with its date and its evidence. Nothing is presented as more finished than it is.",
+    "fr": "En cours, en développement, à l’état de concept ou d’ébauche : le statut est indiqué, avec sa date et ses éléments justificatifs. Rien n’est présenté comme plus abouti qu’il ne l’est.",
+    "ar": "سواء أكان المشروع مباشرًا أم قيد الإنشاء أم تصوريًا أم مسودة، فحالته موضّحة في الصفحة، مع تاريخها وأدلتها. ولا يُعرض أي مشروع على أنه أكثر اكتمالًا مما هو عليه."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the register",
+      "fr": "Consultez le registre",
+      "ar": "افتح السجل"
+     },
+     "href": "#prj-index",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Read the limits",
+      "fr": "Consultez les limites",
+      "ar": "اطّلع على الحدود"
+     },
+     "href": "/trust/statement/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "cultures",
+   "icon": "graduation-cap",
+   "eyebrow": {
+    "en": "MetaX Academy",
+    "fr": "MetaX Academy",
+    "ar": "MetaX Academy"
+   },
+   "title": {
+    "en": "The academy layer behind the **{{ counts.services }} services**.",
+    "fr": "La composante académique qui sous-tend les **{{ counts.services }} services**.",
+    "ar": "طبقة الأكاديمية التي تقف وراء **{{ counts.services }} خدمة**."
+   },
+   "lead": {
+    "en": "MetaX Academy forms the capability that the services consume: task sets, review queues and certificates.",
+    "fr": "MetaX Academy développe les compétences mobilisées par les services : ensembles de tâches, files de révision et certificats.",
+    "ar": "تُنشئ MetaX Academy القدرات التي تعتمد عليها الخدمات: مجموعات المهام، وقوائم المراجعة، والشهادات."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open MetaX Academy",
+      "fr": "Découvrez MetaX Academy",
+      "ar": "افتح MetaX Academy"
+     },
+     "href": "/projects/meta-x-academy/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "How certification works",
+      "fr": "Comment fonctionne la certification",
+      "ar": "كيف تتم الشهادة"
+     },
+     "href": "/how-it-works/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "governance",
+   "icon": "heart-handshake",
+   "eyebrow": {
+    "en": "2030B",
+    "fr": "2030B",
+    "ar": "2030B"
+   },
+   "title": {
+    "en": "Ten projects for the **whole human**.",
+    "fr": "Dix projets pour **l’être humain dans son intégralité**.",
+    "ar": "عشرة مشاريع من أجل **الإنسان بكل جوانبه**."
+   },
+   "lead": {
+    "en": "Be Smarter, Honester, Healthier, Creater, Kinder, Braver, Wiser, Fairer, Freer, Grateful: ten tools, one horizon.",
+    "fr": "Devenir plus intelligent, plus honnête, en meilleure santé, plus créatif, plus bienveillant, plus courageux, plus sage, plus équitable, plus libre et plus reconnaissant : dix outils, un même horizon.",
+    "ar": "كن أذكى، وأكثر صدقًا وصحةً وإبداعًا ولطفًا وشجاعةً وحكمةً وإنصافًا وحريةً وامتنانًا: عشر أدوات، وأفق واحد."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "See 2030B",
+      "fr": "Découvrez 2030B",
+      "ar": "اطّلع على 2030B"
+     },
+     "href": "/projects/2030b/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "All projects",
+      "fr": "Tous les projets",
+      "ar": "جميع المشاريع"
+     },
+     "href": "/projects/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "peak",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "Contribute",
+    "fr": "Contribuer",
+    "ar": "ساهم"
+   },
+   "title": {
+    "en": "Contribute to a project. **Today.**",
+    "fr": "Contribuez à un projet. **Dès aujourd’hui.**",
+    "ar": "ساهم في مشروع. **اليوم.**"
+   },
+   "lead": {
+    "en": "Join as an expert, become a client or take a part. Every project page shows the services it needs and the gaps that remain.",
+    "fr": "Rejoignez-nous en tant qu’expert, devenez client ou prenez part à un projet. Chaque page de projet présente les services nécessaires et les besoins qui restent à pourvoir.",
+    "ar": "انضم بصفة خبير، أو كن عميلاً، أو شارك. تعرض صفحة كل مشروع الخدمات التي يحتاج إليها والفجوات التي لا تزال قائمة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Join as an expert",
+      "fr": "Rejoignez-nous en tant qu’expert",
+      "ar": "انضم بصفة خبير"
+     },
+     "href": "/join/eligibility/",
+     "style": "ghost"
+    }
+   ]
+  }
+ ]
+}

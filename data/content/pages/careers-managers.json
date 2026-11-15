@@ -1,0 +1,239 @@
+{
+ "slug": "careers-managers",
+ "title": {
+  "en": "Apply as an expert team manager",
+  "fr": "Postuler en tant que responsable d’équipe d’experts",
+  "ar": "قدّم طلبك بصفتك مديرًا لفريق خبراء"
+ },
+ "description": {
+  "en": "Application form for expert team managers: experience, team size, scenario answer. You receive a reference and a score.",
+  "fr": "Formulaire de candidature pour les responsables d’équipe d’experts : expérience, taille de l’équipe, réponse à un scénario. Vous recevez une référence et un score.",
+  "ar": "استمارة التقديم لمديري فرق الخبراء: الخبرة، وحجم الفريق، والإجابة عن سيناريو. ستتلقى رقمًا مرجعيًا وتقييمًا."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "mgr-hero",
+   "variant": "classic",
+   "gradient": "governance",
+   "title": {
+    "en": "Apply as an **expert team manager.**",
+    "fr": "Postulez en tant que **responsable d’équipe d’experts.**",
+    "ar": "قدّم طلبك بصفتك **مديرًا لفريق خبراء.**"
+   },
+   "lead": {
+    "en": "Tell us what you have led and how you would handle a hard week. You get a reference immediately and a reviewer answers with your score.",
+    "fr": "Indiquez ce que vous avez dirigé et comment vous géreriez une semaine difficile. Vous recevez immédiatement une référence, puis un évaluateur vous répond avec votre score.",
+    "ar": "أخبرنا بما قدته وكيف ستتعامل مع أسبوع صعب. ستتلقى رقمًا مرجعيًا فورًا، وسيردّ عليك مراجع بنتيجتك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the form",
+      "fr": "Ouvrir le formulaire",
+      "ar": "افتح النموذج"
+     },
+     "href": "#mgr-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Managers",
+    "fr": "Responsables",
+    "ar": "المديرون"
+   },
+   "note": {
+    "en": "We do not promise a post. See the declared limits.",
+    "fr": "Nous ne garantissons pas de poste. Consultez les limites déclarées.",
+    "ar": "لا نعدك بمنصب. اطّلع على الحدود المعلنة."
+   }
+  },
+  {
+   "type": "form",
+   "id": "mgr-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/careers/managers/",
+   "title": {
+    "en": "Your application",
+    "fr": "Votre candidature",
+    "ar": "طلبك"
+   },
+   "submit": {
+    "en": "Send my application",
+    "fr": "Envoyer ma candidature",
+    "ar": "أرسل طلبي"
+   },
+   "fields": [
+    {
+     "name": "name",
+     "label": {
+      "en": "Full name",
+      "fr": "Nom complet",
+      "ar": "الاسم الكامل"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "email",
+     "label": {
+      "en": "Email",
+      "fr": "E-mail",
+      "ar": "البريد الإلكتروني"
+     },
+     "type": "email",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "phone",
+     "label": {
+      "en": "Phone",
+      "fr": "Téléphone",
+      "ar": "الهاتف"
+     },
+     "type": "tel",
+     "required": false,
+     "span": 1
+    },
+    {
+     "name": "region",
+     "label": {
+      "en": "Governorate",
+      "fr": "Gouvernorat",
+      "ar": "الولاية"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "": {
+       "en": "Choose…",
+       "fr": "Choisissez…",
+       "ar": "اختر…"
+      }
+     }
+    },
+    {
+     "name": "macro",
+     "label": {
+      "en": "Macro work you can lead in",
+      "fr": "Travaux macroéconomiques que vous pouvez diriger",
+      "ar": "مهام واسعة النطاق يمكنك قيادتها"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "cultures": {
+       "en": "Cultures / Humanities",
+       "fr": "Cultures / Sciences humaines",
+       "ar": "الثقافات / العلوم الإنسانية"
+      },
+      "built": {
+       "en": "Built Environment",
+       "fr": "Environnement bâti",
+       "ar": "البيئة المبنية"
+      },
+      "sciences": {
+       "en": "Sciences",
+       "fr": "Sciences",
+       "ar": "العلوم"
+      },
+      "governance": {
+       "en": "Governance",
+       "fr": "Gouvernance",
+       "ar": "الحوكمة"
+      },
+      "technology": {
+       "en": "Technology",
+       "fr": "Technologie",
+       "ar": "التكنولوجيا"
+      }
+     }
+    },
+    {
+     "name": "years",
+     "label": {
+      "en": "Years of experience",
+      "fr": "Années d’expérience",
+      "ar": "سنوات الخبرة"
+     },
+     "type": "number",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "team",
+     "label": {
+      "en": "Largest team led (people)",
+      "fr": "Équipe la plus importante dirigée (personnes)",
+      "ar": "أكبر فريق قدته (عدد الأشخاص)"
+     },
+     "type": "number",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "profile",
+     "label": {
+      "en": "Professional profile URL",
+      "fr": "URL du profil professionnel",
+      "ar": "رابط الملف المهني"
+     },
+     "type": "url",
+     "required": false,
+     "span": 1
+    },
+    {
+     "name": "motivation",
+     "label": {
+      "en": "Why this role?",
+      "fr": "Pourquoi ce poste ?",
+      "ar": "لماذا هذا الدور؟"
+     },
+     "type": "textarea",
+     "required": true,
+     "span": 2,
+     "rows": 4
+    },
+    {
+     "name": "scenario",
+     "label": {
+      "en": "Scenario: on Friday 11:30 two of your ten experts have not submitted and one report looks copied. What do you do before 12:00, and what do you sign?",
+      "fr": "Scénario : vendredi, à 11:30, deux de vos dix experts n’ont pas remis leur travail et un rapport semble copié. Que faites-vous avant 12:00 et que signez-vous ?",
+      "ar": "سيناريو: يوم الجمعة عند 11:30، لم يسلّم اثنان من خبرائك العشرة أعمالهما، ويبدو أن أحد التقارير منسوخ. ماذا تفعل قبل 12:00، وما الذي توقّعه؟"
+     },
+     "type": "textarea",
+     "required": true,
+     "span": 2,
+     "hint": {
+      "en": "Scored on judgement, evidence and honesty, not on length.",
+      "fr": "L’évaluation porte sur le discernement, les éléments probants et l’honnêteté, et non sur la longueur.",
+      "ar": "يُقيَّم أداؤك على أساس حسن التقدير والأدلة والصدق، لا على طول الإجابة."
+     },
+     "rows": 6
+    },
+    {
+     "name": "accept",
+     "label": {
+      "en": "I have read the [declared limits](/trust/statement/) and understand that no post is promised.",
+      "fr": "J’ai lu les [limites déclarées](/trust/statement/) et comprends qu’aucune publication n’est garantie.",
+      "ar": "قرأت [الحدود المعلنة](/trust/statement/) وأفهم أنه لا يُضمن نشر أي منشور."
+     },
+     "type": "checkbox",
+     "required": true,
+     "span": 2
+    }
+   ],
+   "lead": {
+    "en": "About 10 minutes.",
+    "fr": "Environ 10 minutes.",
+    "ar": "يستغرق نحو 10 دقائق."
+   }
+  }
+ ]
+}

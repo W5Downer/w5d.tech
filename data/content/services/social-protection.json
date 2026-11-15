@@ -1,0 +1,167 @@
+{
+ "slug": "social-protection",
+ "id": 88,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Social Protection Delivery",
+  "fr": "Prestation de la protection sociale",
+  "ar": "تقديم الحماية الاجتماعية"
+ },
+ "short": {
+  "en": "The service provides targeting, payments, grievance redress.",
+  "fr": "Améliorer l'accès aux prestations et aux recours.",
+  "ar": "تحسين النفاذ إلى المنافع وسبل التظلم."
+ },
+ "abstract": {
+  "en": "Social protection delivery — beneficiary targeting, payment rails, grievance-redress mechanisms, and interoperability with health and labour systems.",
+  "fr": "Prestation de la protection sociale — ciblage des bénéficiaires, circuits de paiement, mécanismes de traitement des réclamations et interopérabilité avec les systèmes de santé et du travail.",
+  "ar": "تقديم الحماية الاجتماعية — استهداف المستفيدين، وقنوات الدفع، وآليات معالجة التظلمات، والتشغيل البيني مع أنظمة الصحة والعمل."
+ },
+ "long": [
+  {
+   "en": "The Social Protection Delivery service organises a weekly work package around eligibility workflow audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 eligibility workflow audits; 2000 payment reconciliation checks; 1000 grievance file reviews; 200 accessibility test reports. Social protection delivery — beneficiary targeting, payment rails, grievance-redress mechanisms, and interoperability with health and labour systems. Specialists sequence those methods against the accepted weekly package. The governing boundary is that competent authorities decide benefits and maintain meaningful human review. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de prestation de la protection sociale organise un lot de travail hebdomadaire autour d’audits du processus d’éligibilité, plutôt que de considérer la présence comme le produit. À pleine capacité dotée des ressources nécessaires, son plan pilote prévoit 300 audits du processus d’éligibilité ; 2000 contrôles de rapprochement des paiements ; 1000 examens de dossiers de réclamation ; 200 rapports de tests d’accessibilité. Prestation de la protection sociale — ciblage des bénéficiaires, circuits de paiement, mécanismes de traitement des réclamations et interopérabilité avec les systèmes de santé et du travail. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les autorités compétentes décident des prestations et assurent un contrôle humain effectif. Il s’agit de livrables échelonnés issus de cas faisant l’objet d’un contrat, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة تقديم الحماية الاجتماعية حزمة عمل أسبوعية تتمحور حول تدقيقات سير عمل الأهلية، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر القدرة الكاملة والموارد اللازمة، 300 تدقيق لسير عمل الأهلية؛ و2000 عملية تحقق من مطابقة المدفوعات؛ و1000 مراجعة لملفات التظلمات؛ و200 تقرير لاختبارات إتاحة الوصول. تقديم الحماية الاجتماعية — استهداف المستفيدين، وقنوات الدفع، وآليات معالجة التظلمات، والتشغيل البيني مع أنظمة الصحة والعمل. ويُرتّب المختصون هذه الأساليب ضمن الحزمة الأسبوعية المقبولة. ويتمثل الحد الناظم في أن تتولى السلطات المختصة البتّ في الاستحقاقات، مع ضمان مراجعة بشرية فعلية. وهذه مخرجات مرحلية لحالات متعاقد عليها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `social-protection`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of eligibility workflow audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enquête auprès des entreprises étiquetées 2020 ou « dernière année disponible ». L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les résultats dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de mise en œuvre ; on ne peut supposer qu’un produit de conseil sans ces utilisateurs améliore une institution. Pour `social-protection`, la réponse proposée est donc un processus faisant l’objet d’un contrat, avec un bénéficiaire nommé et une définition acceptée des audits du processus d’éligibilité, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن نحو 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة بوصفه قيداً رئيسياً، استناداً إلى مقارنات Enterprise Survey الموسومة بعام 2020 أو بأحدث سنة تتوفر بياناتها. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، لا مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسّن مؤسسة ما من دون إشراك مستخدميه. لذلك، تتمثل الاستجابة المقترحة لـ`social-protection` في سير عمل تعاقدي له مستفيد محدد وتعريف مقبول لتدقيقات سير عمل الأهلية، لا في التوظيف الذي يُبرر حصراً بمعدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the eligibility workflow audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks payment reconciliation checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted eligibility workflow audits from rejected or deferred work and records blockers around grievance file reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits du processus d’éligibilité ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles de rapprochement des paiements avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les audits du processus d’éligibilité acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux examens de dossiers de réclamation. Les examens des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات سير عمل الأهلية؛ ويحوّل 100 مدير تلك المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات التحقق من مطابقة المدفوعات قبل الموافقة. وتعيد عملية تدقيق عشوائية مقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين تدقيقات سير عمل الأهلية المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمراجعات ملفات التظلمات. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "social policy, public administration, payment systems and applied statistics",
+  "fr": "politique sociale, administration publique, systèmes de paiement et statistiques appliquées",
+  "ar": "السياسة الاجتماعية، والإدارة العامة، وأنظمة الدفع، والإحصاء التطبيقي"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Eligibility workflow audits",
+    "fr": "Audits des processus d’admissibilité",
+    "ar": "عمليات تدقيق إجراءات الأهلية"
+   },
+   "unit": {
+    "en": "eligibility workflow audits",
+    "fr": "audits des processus d’admissibilité",
+    "ar": "عمليات تدقيق إجراءات الأهلية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Payment reconciliation checks",
+    "fr": "Vérifications du rapprochement des paiements",
+    "ar": "عمليات التحقق من مطابقة المدفوعات"
+   },
+   "unit": {
+    "en": "payment reconciliation checks",
+    "fr": "vérifications du rapprochement des paiements",
+    "ar": "عمليات التحقق من مطابقة المدفوعات"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Grievance file reviews",
+    "fr": "Examen des dossiers de réclamation",
+    "ar": "مراجعة ملفات التظلّم"
+   },
+   "unit": {
+    "en": "grievance file reviews",
+    "fr": "examen des dossiers de réclamation",
+    "ar": "مراجعة ملفات التظلّم"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Accessibility test reports",
+    "fr": "Rapports de tests d’accessibilité",
+    "ar": "تقارير اختبارات إمكانية الوصول"
+   },
+   "unit": {
+    "en": "accessibility test reports",
+    "fr": "rapports de tests d’accessibilité",
+    "ar": "تقارير اختبارات إمكانية الوصول"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `social-protection` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the eligibility workflow audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `social-protection` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des documents source et de consultation expurgés, qui relient les audits des processus d’admissibilité à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن مجال `social-protection` ملف قبول بصيغة PDF/A، وبيان مصادر بصيغة CSV/JSON، وسجلات منقحة للمصادر والاستشارات، مع ربط عمليات تدقيق إجراءات الأهلية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted eligibility workflow audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥3 audits des processus d’admissibilité acceptés** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥3 عمليات تدقيق مقبولة لإجراءات الأهلية** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالات؛ و**≤1 طلب لإعادة العمل بسبب مسائل تتعلق بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات أو التعديلات المعتمدة المقام المؤهل، فيما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "competent authorities decide benefits and maintain meaningful human review",
+  "fr": "les autorités compétentes statuent sur les prestations et maintiennent un contrôle humain réel",
+  "ar": "تتخذ السلطات المختصة قرارات الاستحقاق وتحافظ على مراجعة بشرية فعلية"
+ },
+ "depends": [
+  {
+   "slug": "rural-settlements",
+   "id": 43
+  },
+  {
+   "slug": "software-eng",
+   "id": 105
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "public-health",
+   "id": 54
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Registry errors exclude eligible households → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les erreurs de registre excluent des ménages admissibles → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de réclamation.",
+   "ar": "أخطاء السجل تستبعد الأسر المستحقة → إشراك مراجعة المستخدمين المتأثرين، ونشر افتراضات الاختيار، والإبقاء على مسار للتظلّم."
+  },
+  {
+   "en": "Payment matching leaks personal data → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Le rapprochement des paiements divulgue des données personnelles → limiter les accès, expurger les éléments probants communiqués et tester le processus à accès restreint.",
+   "ar": "مطابقة المدفوعات تسرّب بيانات شخصية → تقليل نطاق الوصول، وتنقيح الأدلة المنشورة، واختبار سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Grievances closed without remedy → reconcile source records with the eligibility workflow audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les réclamations sont clôturées sans réparation → rapprocher les dossiers sources de la liste de contrôle d’acceptation des audits des processus d’admissibilité et désigner un responsable des mesures correctives.",
+   "ar": "إغلاق التظلّمات دون معالجة → مطابقة سجلات المصادر مع قائمة التحقق لقبول عمليات تدقيق إجراءات الأهلية، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

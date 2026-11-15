@@ -1,0 +1,167 @@
+{
+ "slug": "health-governance",
+ "id": 97,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Health Governance",
+  "fr": "Gouvernance de la santé",
+  "ar": "حوكمة الصحة"
+ },
+ "short": {
+  "en": "The service provides insurance design, accreditation, quality.",
+  "fr": "Améliorer la qualité et la gouvernance des soins.",
+  "ar": "تحسين جودة الرعاية الصحية وحوكمتها."
+ },
+ "abstract": {
+  "en": "Health governance — insurance design, facility accreditation, and quality-of-care frameworks aligned with national health strategies.",
+  "fr": "Gouvernance de la santé — conception des régimes d’assurance, accréditation des établissements et cadres de qualité des soins alignés sur les stratégies nationales de santé.",
+  "ar": "حوكمة الصحة — تصميم التأمين، واعتماد المرافق، وأطر جودة الرعاية المتوافقة مع الاستراتيجيات الصحية الوطنية."
+ },
+ "long": [
+  {
+   "en": "The Health Governance service organises a weekly work package around facility governance reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 facility governance reviews; 500 quality indicator validations; 200 patient pathway assessments; 100 accreditation readiness files. Health governance — insurance design, facility accreditation, and quality-of-care frameworks aligned with national health strategies. Specialists sequence those methods against the accepted weekly package. The governing boundary is that health authorities and licensed professionals retain clinical and insurance decisions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Gouvernance de la santé organise un lot de travail hebdomadaire autour des examens de la gouvernance des établissements, plutôt que de faire de la présence la finalité du service. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens de la gouvernance des établissements ; 500 validations d’indicateurs de qualité ; 200 évaluations des parcours des patients ; 100 dossiers de préparation à l’accréditation. Gouvernance de la santé — conception des régimes d’assurance, accréditation des établissements et cadres de qualité des soins alignés sur les stratégies nationales de santé. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite fondamentale est que les autorités sanitaires et les professionnels agréés conservent la responsabilité des décisions cliniques et d’assurance. Il s’agit de résultats progressifs issus de dossiers commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة حوكمة الصحة حزمة عمل أسبوعية تتمحور حول مراجعات حوكمة المرافق، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند بلوغ الطاقة التشغيلية الكاملة وتوفير الموارد، إجراء 200 مراجعة لحوكمة المرافق؛ و500 عملية تحقق من مؤشرات الجودة؛ و200 تقييم لمسارات المرضى؛ وإعداد 100 ملف للجاهزية للاعتماد. حوكمة الصحة — تصميم التأمين، واعتماد المرافق، وأطر جودة الرعاية المتوافقة مع الاستراتيجيات الصحية الوطنية. ويُرتّب المختصون هذه الأساليب وفقاً لحزمة العمل الأسبوعية المقبولة. والحدّ الحاكم هنا هو احتفاظ السلطات الصحية والمهنيين المرخصين بقرارات الرعاية السريرية والتأمين. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `health-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of facility governance reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015–2020, tandis que l’INS estime le chômage des diplômés à 26.6% au Q2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne saurait remplacer des compétences vérifiées dans le domaine de la santé. Les activités de recherche en santé et les utilisateurs d’équipements ont besoin de personnel qualifié, de consentement, d’informations sécurisées et d’établissements habilités, et non d’un vivier de main-d’œuvre non agréée. Pour `health-governance`, la réponse proposée est donc un processus de travail contractuel, avec un bénéficiaire nommé et une définition acceptée des examens de la gouvernance des établissements, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، بينما يقدّر INS بطالة الخريجين بنسبة 26.6% في Q2 2026. وتوضح هذه الفئات السكانية المختلفة سبب عدم إمكان الاستعاضة عن التحقق من القدرات الصحية بتقديرات عامة لتوافر الخريجين. يحتاج مستخدمو الأبحاث الصحية والمعدات إلى موظفين مؤهلين، وموافقة، ومعلومات آمنة، ومرافق مخوّلة، لا إلى مجموعة عمالة غير مرخصة. لذلك، تتمثل الاستجابة المقترحة لخدمة `health-governance` في سير عمل تعاقدي يحدّد مستفيداً بالاسم وتعريفاً مقبولاً لمراجعات حوكمة المرافق، لا في التوظيف استناداً حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the facility governance reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks quality indicator validations before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted facility governance reviews from rejected or deferred work and records blockers around patient pathway assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des examens de la gouvernance des établissements ; 100 responsables répartissent les missions entre des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les validations d’indicateurs de qualité avant approbation. L’audit aléatoire proposé de 5% revérifie les pièces sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens de la gouvernance des établissements acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux évaluations des parcours des patients. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات حوكمة المرافق؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتُستخدم الهويات المرتبطة بـDyon لتحديد المساهمين المسؤولين، فيما يتحقق مراجع مختص من جودة عمليات التحقق من مؤشرات الجودة قبل الموافقة. وتعيد عملية تدقيق عشوائية مقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مراجعات حوكمة المرافق المقبولة والأعمال المرفوضة أو المؤجلة، ويسجّل العوائق المتعلقة بتقييمات مسارات المرضى. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "public health, health economics, quality management and health law",
+  "fr": "santé publique, économie de la santé, gestion de la qualité et droit de la santé",
+  "ar": "الصحة العامة، واقتصاديات الصحة، وإدارة الجودة، والقانون الصحي"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Facility governance reviews",
+    "fr": "Examens de la gouvernance des établissements",
+    "ar": "مراجعات حوكمة المرافق"
+   },
+   "unit": {
+    "en": "facility governance reviews",
+    "fr": "examens de la gouvernance des établissements",
+    "ar": "مراجعات حوكمة المرافق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Quality indicator validations",
+    "fr": "Validations d’indicateurs de qualité",
+    "ar": "عمليات التحقق من مؤشرات الجودة"
+   },
+   "unit": {
+    "en": "quality indicator validations",
+    "fr": "validations d’indicateurs de qualité",
+    "ar": "عمليات التحقق من مؤشرات الجودة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Patient pathway assessments",
+    "fr": "Évaluations des parcours des patients",
+    "ar": "تقييمات مسارات المرضى"
+   },
+   "unit": {
+    "en": "patient pathway assessments",
+    "fr": "évaluations des parcours des patients",
+    "ar": "تقييمات مسارات المرضى"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Accreditation readiness files",
+    "fr": "Dossiers de préparation à l’accréditation",
+    "ar": "ملفات الجاهزية للاعتماد"
+   },
+   "unit": {
+    "en": "accreditation readiness files",
+    "fr": "dossiers de préparation à l’accréditation",
+    "ar": "ملفات الجاهزية للاعتماد"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `health-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the facility governance reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `health-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des pièces sources et comptes rendus de consultation expurgés, reliant les examens de la gouvernance des établissements à la source, à l’évaluateur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `health-governance` ملف قبول بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + سجلات منقّحة للمصادر والمشاورات، وتربط مراجعات حوكمة المرافق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted facility governance reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici vendredi 12:00 ; **≥2 revues de gouvernance des établissements acceptées** par équipe-semaine, selon la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥2 مراجعتين مقبولتين لحوكمة المرافق** لكل فريق-أسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات أو التعديلات المعتمدة المقامَ المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أثر النتيجة الخضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "health authorities and licensed professionals retain clinical and insurance decisions",
+  "fr": "Les autorités sanitaires et les professionnels habilités conservent la responsabilité des décisions cliniques et d’assurance.",
+  "ar": "تحتفظ السلطات الصحية والمهنيون المرخصون بقرارات الرعاية السريرية والتأمين."
+ },
+ "depends": [
+  {
+   "slug": "clinical-research",
+   "id": 53
+  },
+  {
+   "slug": "medical-devices",
+   "id": 126
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "school-clinic",
+   "id": 49
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Indicators reward avoidance of complex patients → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les indicateurs incitent à éviter les patients présentant des cas complexes → limiter l’accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "تكافئ المؤشرات تجنب المرضى ذوي الحالات المعقدة → قلّلوا الوصول، واحجبوا الأدلة المنشورة، واختبروا سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Accreditation paperwork masks unsafe care → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les formalités d’accréditation masquent des soins dangereux → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تحجب الأوراق المطلوبة للاعتماد الرعاية غير الآمنة → اشترطوا اعتمادًا من جهة مختصة بالسلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Patient data shared beyond care purposes → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les données des patients sont communiquées au-delà des fins de soins → limiter l’accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "تُشارك بيانات المرضى خارج أغراض الرعاية → قلّلوا الوصول، واحجبوا الأدلة المنشورة، واختبروا سير العمل المقيّد الوصول."
+  }
+ ]
+}

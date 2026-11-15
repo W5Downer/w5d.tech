@@ -1,0 +1,167 @@
+{
+ "slug": "urban-planning",
+ "id": 28,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Urban Planning & Zoning",
+  "fr": "Planification urbaine et zonage",
+  "ar": "التخطيط الحضري وتقسيم المناطق"
+ },
+ "short": {
+  "en": "The service provides master plans, GIS, participatory design.",
+  "fr": "Planifier les usages urbains avec les habitants.",
+  "ar": "تخطيط الاستعمالات الحضرية مع السكان."
+ },
+ "abstract": {
+  "en": "Comprehensive urban planning — master plan drafting, GIS-based zoning analysis, participatory design methods, and statutory plan review for municipalities and regional authorities.",
+  "fr": "Planification urbaine intégrée — élaboration de plans directeurs, analyse du zonage fondée sur les SIG, méthodes de conception participative et examen réglementaire des plans pour les municipalités et les autorités régionales.",
+  "ar": "التخطيط الحضري الشامل — إعداد المخططات الرئيسية، وتحليل تقسيم المناطق القائم على نظم المعلومات الجغرافية، وأساليب التصميم التشاركي، ومراجعة الخطط وفقًا للمتطلبات القانونية للبلديات والسلطات الإقليمية."
+ },
+ "long": [
+  {
+   "en": "The Urban Planning & Zoning service organises a weekly work package around zoning layers, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 zoning layers; 2000 parcel checks; 100 consultation sessions; 50 plan review briefs. Comprehensive urban planning — master plan drafting, GIS-based zoning analysis, participatory design methods, and statutory plan review for municipalities and regional authorities. Specialists sequence those methods against the accepted weekly package. The governing boundary is that draft zoning remains advisory until the competent authority validates the plan. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de planification urbaine et de zonage organise un lot de travail hebdomadaire autour des couches de zonage, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 couches de zonage ; 2000 vérifications de parcelles ; 100 séances de consultation ; 50 notes d’examen de plans. Planification urbaine intégrée — élaboration de plans directeurs, analyse du zonage fondée sur les SIG, méthodes de conception participative et examen réglementaire des plans pour les municipalités et les autorités régionales. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les projets de zonage restent consultatifs jusqu’à la validation du plan par l’autorité compétente. Il s’agit de résultats échelonnés issus de cas commandés, et non d’un engagement à achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة التخطيط الحضري وتقسيم المناطق حزمة عمل أسبوعية حول طبقات تقسيم المناطق، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر كامل القدرة والموارد، إنجاز 100 طبقة لتقسيم المناطق؛ و2000 عملية تدقيق للقطع العقارية؛ و100 جلسة تشاور؛ و50 موجزًا لمراجعة الخطط. التخطيط الحضري الشامل — إعداد المخططات الرئيسية، وتحليل تقسيم المناطق القائم على نظم المعلومات الجغرافية، وأساليب التصميم التشاركي، ومراجعة الخطط وفقًا للمتطلبات القانونية للبلديات والسلطات الإقليمية. وينظم المختصون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المقبولة. والحد الناظم هنا هو أن تقسيم المناطق في المسودات يظل استشاريًا إلى أن تعتمد السلطة المختصة الخطة. وهذه مخرجات مرحلية لحالات مُكلَّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `urban-planning`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of zoning layers, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports limitent la mise en relation des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins d’infrastructure qui dépendent des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets implique des limites liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client habilité les commande. Pour `urban-planning`, la réponse proposée consiste donc en un processus contractuel assorti d’un bénéficiaire désigné et d’une définition acceptée des couches de zonage, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير دراسة تونس الصادرة عن OECD في أبريل 2022 إلى أن التركز الساحلي وتكاليف السكن وعوائق النقل تحد من مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا يُحصي أيٌّ من الاستنتاجين الوظائف المُكلَّف بها لهذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، ولذلك قد يظل العمل القابل للتنفيذ من الناحية الفنية مجزأً إلى أن تكلف به جهة عميلة على نحو قانوني. لذا، يتمثل النهج المقترح لخدمة `urban-planning` في سير عمل تعاقدي، بجهة مستفيدة محددة وتعريف مقبول لطبقات تقسيم المناطق، لا في التوظيف الذي يستند فقط إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the zoning layers acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks parcel checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted zoning layers from rejected or deferred work and records blockers around consultation sessions. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des couches de zonage ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les vérifications de parcelles avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les couches de zonage acceptées des travaux rejetés ou différés et consigne les obstacles liés aux séances de consultation. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1 000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول طبقات تقسيم المناطق؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات تدقيق القطع العقارية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين طبقات تقسيم المناطق المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بجلسات التشاور. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Zoning layers",
+    "fr": "Couches de zonage",
+    "ar": "طبقات تقسيم المناطق"
+   },
+   "unit": {
+    "en": "zoning layers",
+    "fr": "couches de zonage",
+    "ar": "طبقات تقسيم المناطق"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Parcel checks",
+    "fr": "Vérifications de parcelles",
+    "ar": "عمليات تدقيق القطع العقارية"
+   },
+   "unit": {
+    "en": "parcel checks",
+    "fr": "vérifications de parcelles",
+    "ar": "عمليات تدقيق القطع العقارية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Consultation sessions",
+    "fr": "Sessions de consultation",
+    "ar": "جلسات الاستشارة"
+   },
+   "unit": {
+    "en": "consultation sessions",
+    "fr": "sessions de consultation",
+    "ar": "جلسات الاستشارة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Plan review briefs",
+    "fr": "Notes de synthèse sur l’examen des plans",
+    "ar": "موجزات مراجعة الخطط"
+   },
+   "unit": {
+    "en": "plan review briefs",
+    "fr": "notes de synthèse sur l’examen des plans",
+    "ar": "موجزات مراجعة الخطط"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `urban-planning` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the zoning layers to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception lié à un cas d’`urban-planning` contient un dossier de réception au format PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photo ou de conception géoréférencés, qui relient les couches de zonage à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة في مجال `urban-planning` ملف قبول بصيغة PDF/A + بيانًا بمصادر البيانات بصيغة CSV/JSON + ملفات تفتيش/صور أو تصميم محددة جغرافيًا، مع ربط طبقات تقسيم المناطق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted zoning layers** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **≥1 couche de zonage acceptée** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité/confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من طبقات تقسيم المناطق** لكل فريق-أسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، فيما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. هذه أهداف تجريبية وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "draft zoning remains advisory until the competent authority validates the plan",
+  "fr": "le projet de zonage reste consultatif tant que l’autorité compétente n’a pas validé le plan",
+  "ar": "تظل مسودة تقسيم المناطق استشارية إلى أن تعتمد الجهة المختصة الخطة"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Outdated parcels distort zoning → reconcile source records with the zoning layers acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les parcelles obsolètes faussent le zonage → rapprocher les données sources de la liste de contrôle de réception des couches de zonage et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤدي بيانات القطع القديمة إلى تشويه تقسيم المناطق → طابِق سجلات المصادر مع قائمة التحقق لقبول طبقات تقسيم المناطق، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Consultations exclude tenants → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les consultations excluent les locataires → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تستبعد المشاورات المستأجرين → أدرج مراجعة المستخدمين المتأثرين، وانشر الافتراضات المتعلقة بالاختيار، وأبقِ مسارًا للشكاوى."
+  },
+  {
+   "en": "Plans displace informal livelihoods → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les plans déplacent les moyens de subsistance informels → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تؤدي الخطط إلى إزاحة سبل العيش غير الرسمية → أدرج مراجعة المستخدمين المتأثرين، وانشر الافتراضات المتعلقة بالاختيار، وأبقِ مسارًا للشكاوى."
+  }
+ ]
+}
