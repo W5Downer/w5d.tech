@@ -133,11 +133,13 @@ The progressive price is a **declared** curve, not a scarcity trick. It is shown
 | Progress `p` | Time `t` | Day price | Week price |
 |---:|---:|---:|---:|
 | 0.0 | 0.0 | 10.00 TND | 70.00 TND |
-| 0.25 | 0.25 | 10.09 TND | 70.64 TND |
-| 0.50 | 0.50 | 10.63 TND | 74.38 TND |
-| 0.75 | 0.75 | 12.23 TND | 85.63 TND |
-| 0.90 | 0.90 | 14.14 TND | 98.95 TND |
+| 0.25 | 0.25 | 11.29 TND | 79.02 TND |
+| 0.50 | 0.50 | 15.63 TND | 109.38 TND |
+| 0.75 | 0.75 | 24.41 TND | 170.90 TND |
+| 0.90 | 0.90 | 30.00 TND (capped at 3×) | 210.00 TND (capped) |
 | 1.00 | 1.00 | 30.00 TND (capped at 3×) | 210.00 TND (capped) |
+
+(Values are produced by `Pricing::perPart()` with the canonical defaults; `tests/flows.py` checks that `/api/price.json` and `/api/quote` agree.)
 
 The cap at 3× base means the price can never exceed **30 TND/day** or **210 TND/week** under the canonical defaults. The owner may change α, β, and the cap; the cap is the only protection against runaway pricing, and it is enforced in `config/variables.php` and in the linter.
 
@@ -581,6 +583,39 @@ Single SQLite file by default: `storage/w5d.sqlite`. Every table carries `countr
 
 ### Migration discipline
 One migration file per schema change under `db/migrations/`. SQLite‑compatible SQL only when `DB_DRIVER=sqlite`.
+
+---
+
+## Views, view cache, tests (current implementation)
+
+**Document root is `htdocs/`** (`index.php` front controller + `assets/`). Everything else (`src/`, `config/`, `data/`, `lang/`, `db/`, `bin/`, `storage/`, `views/`) lives outside the web root. Under PHP's built-in server (`php -S 0.0.0.0:8080 -t htdocs htdocs/index.php`), `index.php` passes existing static files through (the Apache `RewriteCond %{REQUEST_FILENAME} -f` equivalent), so CSS/JS are served with the right MIME type.
+
+**Templates.** One canonical template, `views/templates/w5d/` (`layouts/`, `partials/`, `components/`, `blocks/`, `pages/`, `admin/`), written in a Blade-style syntax compiled by `src/Blade.php`. The design DNA is the static source template in `views/static/w5d-main/` (dark ink `#070711`, grid background, blurred violet/cyan/pink orbs, glass nav, gradient text, Space Grotesk + Inter). Page content comes from `data/content/**.json` as `{en, fr, ar}` maps with `{{ token }}` variables from `config/variables.php`.
+
+**View cache (like Laravel's `view:cache`).** Compiled templates are stored in `storage/framework/views/`.
+
+```bash
+php bin/view.php cache    # clear + precompile every template (run on deploy)
+php bin/view.php clear    # delete compiled views
+php bin/view.php status   # location, size, mode
+```
+
+| `.env` | Effect |
+|---|---|
+| `VIEW_CACHE=true` (default) | write compiled views to disk; `false` compiles in memory (debugging) |
+| `VIEW_CACHE_CHECK=` (empty) | auto: recompile when the source is newer than the cache unless `APP_ENV=production` |
+| `VIEW_CACHE_CHECK=false` | trust the cache, no `stat()` on sources (production; run `view.php cache` on deploy) |
+
+`ViewCache::COMPILER` is part of the file name hash; bump it whenever `Blade.php` changes.
+
+**Tests and lint.**
+
+```bash
+bash tests/smoke.sh              # every public route x en/fr/ar must answer 200 (663 checks)
+python3 tests/flows.py           # CSRF, validation, honeypot, rate limit, checkout, subscription + key, API, pricing, admin login/seed/logout
+php bin/lint.php                 # tokens resolve, fr/ar complete, no hard-coded price/130,000/2027, no CDN, one peak CTA per section, templates compile
+cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)
+```
 
 ---
 

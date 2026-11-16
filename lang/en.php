@@ -3,7 +3,7 @@
 return [
     'brand' => ['tagline' => 'World Five Dimensions'],
     'nav' => [
-        'macro' => 'Five macro works', 'services' => '130 services', 'projects' => 'Projects', 'invest' => 'Invest', 'join' => 'Join',
+        'macro' => 'Five macro works', 'services' => '130 services', 'services_unit' => 'services', 'projects' => 'Projects', 'invest' => 'Invest', 'join' => 'Join',
         'company' => 'Company', 'developers' => 'Developers', 'agents' => 'AI agents', 'pricing' => 'Pricing', 'menu' => 'Menu',
         'theme' => 'Toggle theme', 'language' => 'Language', 'skip' => 'Skip to content', 'managers' => 'Become a manager',
         'trust' => 'Trust & limits', 'investors' => 'Investors', 'partners' => 'Partners', 'about' => 'About', 'careers' => 'Careers',
@@ -41,6 +41,7 @@ return [
         'start' => 'Start date', 'parts' => 'Parts per day', 'days' => 'Number of days', 'cadence' => 'Cadence', 'daily' => 'Daily', 'weekly' => 'Weekly',
         'kind' => 'Investor type', 'individual' => 'Individual', 'company' => 'Company', 'diploma' => 'Diploma level', 'field' => 'Field of study',
         'age' => 'Age band', 'accept' => 'I have read the declared limits', 'required' => 'Required', 'optional' => 'Optional', 'any' => 'Any',
+        'step_details' => 'Details', 'step_parts' => 'Parts', 'step_review' => 'Review',
         'step' => 'Step', 'of' => 'of', 'total' => 'Total', 'unit' => 'Unit price', 'schedule' => 'Daily schedule', 'date' => 'Date', 'amount' => 'Amount',
         'status' => 'Status', 'ref' => 'Reference', 'token' => 'Management key', 'pause' => 'Pause', 'resume' => 'Resume', 'cancel' => 'Cancel',
         'manage' => 'Manage', 'search' => 'Search', 'save' => 'Save', 'none' => 'Nothing here yet.',

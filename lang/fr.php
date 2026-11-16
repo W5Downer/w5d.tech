@@ -3,7 +3,7 @@
 return [
     'brand' => ['tagline' => 'World Five Dimensions'],
     'nav' => [
-        'macro' => 'Cinq macro-œuvres', 'services' => '130 services', 'projects' => 'Projets', 'invest' => 'Investir', 'join' => 'Rejoindre',
+        'macro' => 'Cinq macro-œuvres', 'services' => '130 services', 'services_unit' => 'services', 'projects' => 'Projets', 'invest' => 'Investir', 'join' => 'Rejoindre',
         'company' => 'Entreprise', 'developers' => 'Développeurs', 'agents' => 'Agents IA', 'pricing' => 'Tarifs', 'menu' => 'Menu',
         'theme' => 'Changer de thème', 'language' => 'Langue', 'skip' => 'Aller au contenu', 'managers' => 'Devenir manager',
         'trust' => 'Confiance et limites', 'investors' => 'Investisseurs', 'partners' => 'Partenaires', 'about' => 'À propos', 'careers' => 'Carrières',
@@ -41,6 +41,7 @@ return [
         'start' => 'Date de début', 'parts' => 'Parts par jour', 'days' => 'Nombre de jours', 'cadence' => 'Cadence', 'daily' => 'Quotidienne', 'weekly' => 'Hebdomadaire',
         'kind' => 'Type d’investisseur', 'individual' => 'Particulier', 'company' => 'Entreprise', 'diploma' => 'Niveau de diplôme', 'field' => 'Domaine d’études',
         'age' => 'Tranche d’âge', 'accept' => 'J’ai lu les limites déclarées', 'required' => 'Obligatoire', 'optional' => 'Facultatif', 'any' => 'Indifférent',
+        'step_details' => 'Coordonnées', 'step_parts' => 'Parts', 'step_review' => 'Vérification',
         'step' => 'Étape', 'of' => 'sur', 'total' => 'Total', 'unit' => 'Prix unitaire', 'schedule' => 'Calendrier quotidien', 'date' => 'Date', 'amount' => 'Montant',
         'status' => 'Statut', 'ref' => 'Référence', 'token' => 'Clé de gestion', 'pause' => 'Suspendre', 'resume' => 'Reprendre', 'cancel' => 'Annuler',
         'manage' => 'Gérer', 'search' => 'Rechercher', 'save' => 'Enregistrer', 'none' => 'Rien pour l’instant.',

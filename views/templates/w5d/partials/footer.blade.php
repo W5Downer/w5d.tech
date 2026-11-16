@@ -2,7 +2,7 @@
 <footer class="border-t border-slate-200/60 dark:border-white/5 mt-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
     @include('partials.limits')
-    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 mt-12">
+    <div class="grid gap-10 sm:grid-cols-3 lg:grid-cols-6 mt-12">
       <div class="lg:col-span-1">
         <a href="{{ url('/') }}" class="inline-flex items-center gap-2">
           <span class="inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center"><span class="font-display font-bold text-white text-sm">W5</span></span>

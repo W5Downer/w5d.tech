@@ -20,7 +20,7 @@
               {{ t($item['label']) }} {{ icon('chevron-down', 'w-4 h-4 opacity-60') }}
             </button>
             <div data-mega-panel class="hidden absolute top-full pt-3 {{ lang() === 'ar' ? 'right-0' : 'left-0' }} z-50">
-              <div class="glass rounded-2xl shadow-2xl p-5 grid gap-6 {{ !empty($item['promo']) ? 'grid-cols-[1fr_1fr_16rem]' : 'grid-cols-2' }} min-w-[34rem]">
+              <div class="glass rounded-2xl shadow-2xl p-5 grid gap-5 items-start {{ !empty($item['promo']) ? 'grid-cols-[minmax(13rem,1fr)_minmax(13rem,1fr)_13rem]' : 'grid-cols-2' }} w-[46rem] max-w-[calc(100vw-3rem)]">
                 @foreach($item['groups'] as $g)
                   <div>
                     <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mb-2 font-semibold">{{ t($g['heading']) }}</p>
@@ -45,7 +45,7 @@
                   </div>
                 @endforeach
                 @if(!empty($item['promo']))
-                  <a href="{{ link_to($item['promo']['href']) }}" class="rounded-xl p-4 text-white on-grad block" style="--grad: var(--g-{{ $item['promo']['gradient'] ?? 'technology' }})">
+                  <a href="{{ link_to($item['promo']['href']) }}" class="rounded-xl p-4 text-white on-grad block self-stretch" style="--grad: var(--g-{{ $item['promo']['gradient'] ?? 'technology' }})">
                     <span class="tier-badge">{{ t($item['promo']['tag']) }}</span>
                     <span class="block font-display font-bold text-lg mt-2">{{ t($item['promo']['title']) }}</span>
                     <span class="block text-sm mt-1 opacity-90">{{ t($item['promo']['body']) }}</span>

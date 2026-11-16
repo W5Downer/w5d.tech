@@ -38,15 +38,6 @@ final class View
 
     private function compiled(): string
     {
-        $dir = ROOT . '/storage/cache/views';
-        if (!is_dir($dir)) @mkdir($dir, 0775, true);
-        $file = $dir . '/' . sha1($this->path) . '.php';
-        if (!is_file($file) || filemtime($file) < filemtime($this->path)) {
-            $php = (new Blade())->compile((string)file_get_contents($this->path));
-            $tmp = $file . '.' . bin2hex(random_bytes(4));
-            file_put_contents($tmp, $php);
-            rename($tmp, $file);
-        }
-        return $file;
+        return ViewCache::compiled($this->path);
     }
 }

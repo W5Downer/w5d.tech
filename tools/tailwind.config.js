@@ -2,7 +2,8 @@
 module.exports = {
   darkMode: 'class',
   content: ['../views/**/*.php', '../src/**/*.php', '../htdocs/assets/_base/js/site.js', '../data/content/**/*.json'],
-  safelist: [{ pattern: /^(bg|text|border|from|to|via)-(emerald|rose|amber|sky|violet|cyan|indigo)-(300|400|500|600|700)(\/\d+)?$/ }],
+  safelist: [
+    { pattern: /^(sm:|md:|lg:)?grid-cols-(1|2|3|4|5|6)$/ },{ pattern: /^(bg|text|border|from|to|via)-(emerald|rose|amber|sky|violet|cyan|indigo)-(300|400|500|600|700)(\/\d+)?$/ }],
   theme: {
     extend: {
       colors: {
