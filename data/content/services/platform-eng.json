@@ -1,0 +1,167 @@
+{
+ "slug": "platform-eng",
+ "id": 112,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Platform Engineering",
+  "fr": "Ingénierie de plateforme",
+  "ar": "هندسة المنصات"
+ },
+ "short": {
+  "en": "The service provides internal developer platforms, SRE.",
+  "fr": "Fournir des plateformes de développement exploitables.",
+  "ar": "توفير منصات تطوير قابلة للتشغيل."
+ },
+ "abstract": {
+  "en": "Platform engineering — internal developer platforms, site reliability engineering, and golden-path tooling that accelerates delivery.",
+  "fr": "Ingénierie de plateforme — plateformes internes pour développeurs, ingénierie de la fiabilité des sites et outils de parcours de référence qui accélèrent la livraison.",
+  "ar": "هندسة المنصات — منصات المطورين الداخلية، وهندسة موثوقية المواقع، وأدوات مسارات العمل المعيارية التي تسرّع التسليم."
+ },
+ "long": [
+  {
+   "en": "The Platform Engineering service organises a weekly work package around platform service templates, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 platform service templates; 300 reliability test suites; 500 deployment workflow reviews; 200 runbook validations. Platform engineering — internal developer platforms, site reliability engineering, and golden-path tooling that accelerates delivery. Specialists sequence those methods against the accepted weekly package. The governing boundary is that golden paths include recovery, observability and an accountable service owner. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’ingénierie de plateforme organise un lot de travail hebdomadaire autour de modèles de services de plateforme, plutôt que de considérer la présence comme le produit. À pleine capacité dotée en ressources, son plan pilote prévoit 100 modèles de services de plateforme ; 300 suites de tests de fiabilité ; 500 examens de flux de déploiement ; 200 validations de procédures d’exploitation. Ingénierie de plateforme — plateformes internes pour développeurs, ingénierie de la fiabilité des sites et outils de parcours de référence qui accélèrent la livraison. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. Le principe directeur est que les parcours de référence comprennent des procédures de reprise, l’observabilité et un responsable de service clairement désigné. Il s’agit de livrables échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة هندسة المنصات حزمة عمل أسبوعية تتمحور حول قوالب خدمات المنصة، بدلًا من اعتبار الحضور هو المنتج. وعند بلوغ كامل الطاقة المدعومة بالموارد، تتضمن خطتها التجريبية 100 قالب لخدمات المنصة؛ و300 مجموعة لاختبارات الموثوقية؛ و500 مراجعة لسير عمل النشر؛ و200 عملية تحقق من أدلة التشغيل. هندسة المنصات — منصات المطورين الداخلية، وهندسة موثوقية المواقع، وأدوات مسارات العمل المعيارية التي تسرّع التسليم. يحدد الأخصائيون تسلسل هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المعتمدة. والحد الحاكم هو أن تشمل مسارات العمل المعيارية إمكانات الاستعادة والرصد، وأن يكون لكل خدمة مسؤول محدد وخاضع للمساءلة. هذه مخرجات مرحلية لحالات أُسندت بموجب تكليف، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `platform-eng`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of platform service templates, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale de 2026 sur les compétences numériques constate une demande de compétences techniques et hybrides dans les secteurs tunisiens, à partir principalement de données en ligne, formelles et urbaines couvrant la période jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes des employeurs en matière de compétences. Aucune de ces sources ne confirme un total national de postes vacants dans cette niche technique. L’intégration, la recette utilisateur et la maintenance continue nécessitent un responsable de système engagé ; affecter des développeurs isolés ne fournit pas cette coordination et ne garantit pas l’existence d’un acheteur. Pour `platform-eng`, la réponse proposée est donc un flux de travail sous contrat avec un bénéficiaire désigné et une définition approuvée des modèles de services de plateforme, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، مستندةً أساسًا إلى بيانات إلكترونية تتركز في القطاع الرسمي والمناطق الحضرية حتى عام 2025. وتوثّق مراجعة OECD الصادرة في يونيو 2024، على نحو منفصل، قيود المهارات التي يواجهها أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا المجال التقني المتخصص. ويتطلب التكامل وقبول المستخدمين والصيانة المستمرة التزامًا من مسؤول عن النظام؛ فتعيين مطورين بصورة منفردة لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، تتمثل الاستجابة المقترحة لمجال `platform-eng` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لقوالب خدمات المنصة، لا في توظيف يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the platform service templates acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks reliability test suites before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted platform service templates from rejected or deferred work and records blockers around deployment workflow reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des modèles de services de plateforme ; 100 responsables les déclinent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les suites de tests de fiabilité avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les modèles de services de plateforme acceptés des travaux rejetés ou reportés et consigne les blocages liés aux examens de flux de déploiement. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول قوالب خدمات المنصة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من مجموعات اختبارات الموثوقية قبل الموافقة عليها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين قوالب خدمات المنصة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمراجعات سير عمل النشر. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, engineering, applied mathematics and relevant technical disciplines",
+  "fr": "informatique, ingénierie, mathématiques appliquées et disciplines techniques pertinentes",
+  "ar": "علوم الحاسوب، والهندسة، والرياضيات التطبيقية، والتخصصات التقنية ذات الصلة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Platform service templates",
+    "fr": "Modèles de services de plateforme",
+    "ar": "قوالب خدمات المنصة"
+   },
+   "unit": {
+    "en": "platform service templates",
+    "fr": "modèles de services de plateforme",
+    "ar": "قوالب خدمات المنصة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Reliability test suites",
+    "fr": "Suites de tests de fiabilité",
+    "ar": "مجموعات اختبارات الموثوقية"
+   },
+   "unit": {
+    "en": "reliability test suites",
+    "fr": "suites de tests de fiabilité",
+    "ar": "مجموعات اختبارات الموثوقية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Deployment workflow reviews",
+    "fr": "Examens de flux de déploiement",
+    "ar": "مراجعات سير عمل النشر"
+   },
+   "unit": {
+    "en": "deployment workflow reviews",
+    "fr": "examens de flux de déploiement",
+    "ar": "مراجعات سير عمل النشر"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Runbook validations",
+    "fr": "Validations de procédures d’exploitation",
+    "ar": "عمليات التحقق من أدلة التشغيل"
+   },
+   "unit": {
+    "en": "runbook validations",
+    "fr": "validations de procédures d’exploitation",
+    "ar": "عمليات التحقق من أدلة التشغيل"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `platform-eng` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the platform service templates to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `platform-eng` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + du code et une configuration versionnés, des tests et des journaux de déploiement ou de reprise, reliant les modèles de services de plateforme à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `platform-eng` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بمصادر البيانات بصيغة CSV/JSON + الشيفرة/الإعدادات ذات الإصدارات المحددة، والاختبارات، وسجلات النشر أو الاستعادة؛ وتربط قوالب خدمات المنصة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted platform service templates** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** remis le vendredi à 12:00 ; **≥1 modèle de services de plateforme accepté** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** مقدمة بحلول الجمعة 12:00؛ **≥1 من قوالب خدمات المنصة المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب مشكلات في الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسهيلات المعتمدة المقام المستوفي للشروط، فيما تتغلب عيوب السلامة/الخصوصية الحرجة على أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا معتمدة في ملف README."
+ },
+ "boundary": {
+  "en": "golden paths include recovery, observability and an accountable service owner",
+  "fr": "les parcours de référence comprennent des procédures de reprise, l’observabilité et un responsable de service clairement désigné",
+  "ar": "تشمل مسارات العمل المعيارية إمكانات الاستعادة والرصد، ويكون لكل خدمة مسؤول محدد وخاضع للمساءلة"
+ },
+ "depends": [
+  {
+   "slug": "facilities-mgmt",
+   "id": 44
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Central platform becomes single point of failure → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "La plateforme centrale devient un point de défaillance unique → exiger une approbation compétente en matière de sécurité, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تحول المنصة المركزية إلى نقطة فشل وحيدة → اشترط موافقة مختص مؤهل في مجال السلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Standardisation blocks needed exceptions → reconcile source records with the platform service templates acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les blocages liés à la standardisation nécessitent des exceptions → rapprocher les dossiers sources des modèles de service de la plateforme et de la liste de contrôle d’acceptation, puis attribuer la responsabilité des actions correctives.",
+   "ar": "تستلزم عوائق التوحيد القياسي استثناءات → طابق السجلات المصدرية مع قائمة التحقق لقبول قوالب خدمات المنصة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Self-service enables unsafe configurations → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Le libre-service permet des configurations dangereuses → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "قد تؤدي الخدمة الذاتية إلى إعدادات غير آمنة → اشترط اعتماد السلامة من مختص مؤهل، وإجراء تجارب مضبوطة، وتوثيق معيار إيقاف العمل."
+  }
+ ]
+}

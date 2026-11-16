@@ -1,0 +1,310 @@
+{
+ "slug": "careers",
+ "title": {
+  "en": "Careers — expert team managers wanted",
+  "fr": "Carrières — recrutement de responsables d’équipes d’experts",
+  "ar": "الوظائف — مطلوب مديرو فرق من الخبراء"
+ },
+ "description": {
+  "en": "W5D recruits expert team managers first: leaders of about {{ experts.team_size }} experts, who turn a service rubric into weekly work and sign the report.",
+  "fr": "W5D recrute d’abord des responsables d’équipes d’experts : des personnes qui dirigent environ {{ experts.team_size }} experts, transforment une grille de service en travail hebdomadaire et signent le rapport.",
+  "ar": "تستقطب W5D مديري فرق الخبراء أولًا: قادةً لنحو {{ experts.team_size }} خبيرًا، يحوّلون معيار الخدمة إلى مهام أسبوعية ويوقّعون التقرير."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "car-hero",
+   "variant": "classic",
+   "gradient": "governance",
+   "title": {
+    "en": "Lead an expert team. **Sign the report.**",
+    "fr": "Dirigez une équipe d’experts. **Signez le rapport.**",
+    "ar": "قُد فريقًا من الخبراء. **وقّع التقرير.**"
+   },
+   "lead": {
+    "en": "We are recruiting managers first. A manager leads about {{ experts.team_size }} experts, turns a service leader's rubric into weekly assignments, and answers for the report.",
+    "fr": "Nous recrutons d’abord des responsables. Un responsable dirige environ {{ experts.team_size }} experts, transforme la grille d’un responsable de service en tâches hebdomadaires et répond du rapport.",
+    "ar": "نستقطب المديرين أولًا. يقود المدير نحو {{ experts.team_size }} خبيرًا، ويحوّل معيار قائد الخدمة إلى مهام أسبوعية، ويتحمل مسؤولية التقرير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the roles",
+      "fr": "Voir les postes",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "#car-roles",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Careers",
+    "fr": "Carrières",
+    "ar": "الوظائف"
+   },
+   "badges": [
+    {
+     "icon": "users",
+     "label": {
+      "en": "About {{ experts.team_size }} experts per team",
+      "fr": "Environ {{ experts.team_size }} experts par équipe",
+      "ar": "نحو {{ experts.team_size }} خبيرًا في كل فريق"
+     }
+    },
+    {
+     "icon": "calendar",
+     "label": {
+      "en": "Weekly cycle, Friday 12:00",
+      "fr": "Cycle hebdomadaire, vendredi à 12:00",
+      "ar": "دورة أسبوعية، الجمعة 12:00"
+     }
+    },
+    {
+     "icon": "badge-check",
+     "label": {
+      "en": "Dyon-linked accountability",
+      "fr": "Responsabilité liée à Dyon",
+      "ar": "مساءلة مرتبطة بـ Dyon"
+     }
+    }
+   ]
+  },
+  {
+   "type": "roster",
+   "id": "car-roles",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Three levels of leadership",
+    "fr": "Trois niveaux de leadership",
+    "ar": "ثلاثة مستويات قيادية"
+   },
+   "items": [
+    {
+     "icon": "crown",
+     "title": {
+      "en": "Service leader",
+      "fr": "Responsable de service",
+      "ar": "قائد الخدمة"
+     },
+     "body": {
+      "en": "Sets the acceptance rubric for one of {{ counts.services }} services and reviews the managers' reports.",
+      "fr": "Définit la grille d’acceptation pour l’un des {{ counts.services }} services et examine les rapports des responsables.",
+      "ar": "يضع معيار القبول لإحدى الخدمات البالغ عددها {{ counts.services }}، ويراجع تقارير المديرين."
+     },
+     "count": {
+      "en": "{{ d.leaders_target }} by design",
+      "fr": "{{ d.leaders_target }} par conception",
+      "ar": "{{ d.leaders_target }} وفق التصميم"
+     }
+    },
+    {
+     "icon": "users",
+     "title": {
+      "en": "Expert team manager",
+      "fr": "Responsable d’équipe d’experts",
+      "ar": "مدير فريق الخبراء"
+     },
+     "body": {
+      "en": "Leads about {{ experts.team_size }} experts: weekly assignments, review, sign-off. The first role we recruit.",
+      "fr": "Encadre environ {{ experts.team_size }} experts : répartition hebdomadaire des tâches, revue et validation. Le premier poste que nous recrutons.",
+      "ar": "يقود نحو {{ experts.team_size }} خبيرًا: توزيع المهام أسبوعيًا ومراجعتها واعتمادها. أول منصب نعمل على استقطابه."
+     },
+     "count": {
+      "en": "{{ d.managers_target }} by design",
+      "fr": "{{ d.managers_target }} par conception",
+      "ar": "{{ d.managers_target }} وفق التصميم"
+     }
+    },
+    {
+     "icon": "user-check",
+     "title": {
+      "en": "Certified expert",
+      "fr": "Expert certifié",
+      "ar": "خبير معتمد"
+     },
+     "body": {
+      "en": "Completes task sets L1 to L4, then delivers weekly units with a named reviewer.",
+      "fr": "Réalise les séries de tâches L1 à L4, puis livre des unités chaque semaine avec un évaluateur référent.",
+      "ar": "ينجز مجموعات المهام من L1 إلى L4، ثم يسلّم وحدات العمل أسبوعيًا إلى مراجع محدد بالاسم."
+     },
+     "count": {
+      "en": "{{ d.experts_current }} certified today",
+      "fr": "{{ d.experts_current }} certifiés à ce jour",
+      "ar": "{{ d.experts_current }} معتمدون اليوم"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "id": "car-process",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "How the manager selection works",
+    "fr": "Déroulement de la sélection du responsable",
+    "ar": "آلية اختيار المدير"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Apply",
+      "fr": "Candidater",
+      "ar": "التقديم"
+     },
+     "body": {
+      "en": "A short form: experience, largest team led, a scenario answer and a profile link.",
+      "fr": "Un formulaire court : expérience, plus grande équipe encadrée, réponse à une mise en situation et lien vers un profil.",
+      "ar": "نموذج موجز: الخبرة، وأكبر فريق توليت قيادته، وإجابة عن سيناريو، ورابط إلى ملفك الشخصي."
+     },
+     "meta": {
+      "en": "10 minutes",
+      "fr": "10 minutes",
+      "ar": "10 دقائق"
+     }
+    },
+    {
+     "title": {
+      "en": "Score",
+      "fr": "Évaluation",
+      "ar": "التقييم"
+     },
+     "body": {
+      "en": "The scenario is scored against a published rubric; the score is shown to the reviewer, not hidden from you.",
+      "fr": "La mise en situation est évaluée selon une grille publiée ; le résultat est communiqué à l’évaluateur et ne vous est pas caché.",
+      "ar": "تُقيَّم إجابة السيناريو وفق معايير منشورة؛ ويطّلع المراجع على النتيجة، وهي ليست مخفية عنك."
+     },
+     "meta": {
+      "en": "Within 5 days",
+      "fr": "Sous 5 jours",
+      "ar": "خلال 5 أيام"
+     }
+    },
+    {
+     "title": {
+      "en": "Interview",
+      "fr": "Entretien",
+      "ar": "المقابلة"
+     },
+     "body": {
+      "en": "A structured conversation about one real weekly report you would sign.",
+      "fr": "Un échange structuré autour d’un véritable rapport hebdomadaire que vous signeriez.",
+      "ar": "حوار منظّم حول تقرير أسبوعي حقيقي واحد ستعتمده."
+     },
+     "meta": {
+      "en": "45 minutes",
+      "fr": "45 minutes",
+      "ar": "45 دقيقة"
+     }
+    },
+    {
+     "title": {
+      "en": "Pilot",
+      "fr": "Projet pilote",
+      "ar": "فترة تجريبية"
+     },
+     "body": {
+      "en": "A one-month pilot with a small team, reviewed before any larger responsibility.",
+      "fr": "Un projet pilote d’un mois avec une petite équipe, évalué avant toute prise de responsabilité plus importante.",
+      "ar": "فترة تجريبية لمدة شهر واحد مع فريق صغير، تخضع للمراجعة قبل توليك أي مسؤوليات أكبر."
+     },
+     "meta": {
+      "en": "4 weeks",
+      "fr": "4 semaines",
+      "ar": "4 أسابيع"
+     }
+    }
+   ],
+   "lead": {
+    "en": "Selection is about judgement under load, not credentials alone.",
+    "fr": "La sélection porte sur le discernement en situation de forte charge, et pas uniquement sur les diplômes.",
+    "ar": "يعتمد الاختيار على حسن التقدير تحت ضغط العمل، لا على المؤهلات وحدها."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply now",
+      "fr": "Postuler maintenant",
+      "ar": "قدّم الآن"
+     },
+     "href": "/careers/managers/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "car-honest",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "What we promise, and what we do not",
+    "fr": "Ce que nous promettons, et ce que nous ne promettons pas",
+    "ar": "ما نتعهّد به وما لا نتعهّد به"
+   },
+   "paragraphs": [
+    {
+     "en": "We promise a clear rubric, a named reviewer and a transparent score. We do not promise a salary for a seat that does not exist yet.",
+     "fr": "Nous vous garantissons une grille d’évaluation claire, un évaluateur nommé et une note transparente. Nous ne promettons pas de salaire pour un poste qui n’existe pas encore.",
+     "ar": "نتعهّد بمعايير تقييم واضحة، ومراجع محدد بالاسم، ونتيجة شفافة. ولا نتعهّد براتب لوظيفة لم تُعتمد بعد."
+    },
+    {
+     "en": "Posts are created as certified headcount and funded capacity grow. Today {{ d.experts_current }} experts are certified and {{ experts.developers_today }} developers deliver.",
+     "fr": "Les postes sont créés à mesure que les effectifs certifiés et les capacités financées augmentent. Aujourd’hui, {{ d.experts_current }} experts sont certifiés et {{ experts.developers_today }} développeurs sont en poste.",
+     "ar": "تُستحدث الوظائف مع نمو عدد الكفاءات المعتمدة والقدرات الممولة. اليوم، {{ d.experts_current }} خبيرًا معتمدًا، و{{ experts.developers_today }} مطورًا يباشرون العمل."
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the declared limits",
+      "fr": "Consulter les limites déclarées",
+      "ar": "اطّلع على الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "car-final",
+   "gradient": "governance",
+   "title": {
+    "en": "If you can lead ten people, **we want to read your answer.**",
+    "fr": "Si vous pouvez diriger dix personnes, **nous voulons lire votre réponse.**",
+    "ar": "إذا كنت قادرًا على قيادة عشرة أشخاص، **فنرغب في الاطلاع على إجابتك.**"
+   },
+   "body": {
+    "en": "Applications are scored and answered with the score.",
+    "fr": "Les candidatures sont évaluées et une réponse indiquant la note est envoyée.",
+    "ar": "تُقيَّم الطلبات ويُردّ عليها مع بيان النتيجة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

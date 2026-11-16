@@ -1,0 +1,167 @@
+{
+ "slug": "official-stats",
+ "id": 100,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Statistics & Official Data",
+  "fr": "Statistiques et données officielles",
+  "ar": "الإحصاءات والبيانات الرسمية"
+ },
+ "short": {
+  "en": "The service provides survey design, dissemination, quality.",
+  "fr": "Produire des statistiques avec des méthodes publiées.",
+  "ar": "إنتاج إحصاءات بمنهجيات منشورة."
+ },
+ "abstract": {
+  "en": "Official statistics — survey design, data dissemination, and quality assurance aligned with the Fundamental Principles of Official Statistics.",
+  "fr": "Statistiques officielles — conception des enquêtes, diffusion des données et assurance qualité conformes aux Principes fondamentaux de la statistique officielle.",
+  "ar": "الإحصاءات الرسمية — تصميم المسوح، ونشر البيانات، وضمان الجودة بما يتماشى مع المبادئ الأساسية للإحصاءات الرسمية."
+ },
+ "long": [
+  {
+   "en": "The Statistics & Official Data service organises a weekly work package around survey instrument reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 survey instrument reviews; 2000 data quality checks; 500 disclosure control tests; 100 statistical release packages. Official statistics — survey design, data dissemination, and quality assurance aligned with the Fundamental Principles of Official Statistics. Specialists sequence those methods against the accepted weekly package. The governing boundary is that official status belongs to competent institutions, not the W5D service label. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Statistiques et données officielles organise un lot de travail hebdomadaire autour de l’examen des instruments d’enquête, plutôt que de considérer la présence comme le produit final. À pleine capacité, avec les ressources nécessaires, le plan pilote prévoit 100 examens d’instruments d’enquête ; 2000 contrôles de la qualité des données ; 500 tests de contrôle de la divulgation ; 100 dossiers de diffusion statistique. Statistiques officielles — conception des enquêtes, diffusion des données et assurance qualité conformes aux Principes fondamentaux de la statistique officielle. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La limite de principe est que le statut officiel relève des institutions compétentes, et non de l’appellation du service W5D. Il s’agit de résultats par étapes issus de missions commandées, et non d’un engagement à réaliser un programme national complet chaque semaine.",
+   "ar": "تنظّم خدمة الإحصاءات والبيانات الرسمية حزمة عمل أسبوعية تتمحور حول مراجعات أدوات المسوح، بدلاً من اعتبار الحضور هو الناتج. وتبلغ خطة المشروع التجريبي، عند توافر كامل الموارد والقدرة التشغيلية، 100 مراجعة لأدوات المسوح؛ و2000 فحص لجودة البيانات؛ و500 اختبار لضبط الإفصاح؛ و100 حزمة لإصدار الإحصاءات. الإحصاءات الرسمية — تصميم المسوح، ونشر البيانات، وضمان الجودة بما يتماشى مع المبادئ الأساسية للإحصاءات الرسمية. ويحدد الاختصاصيون تسلسل هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والحد الفاصل الحاكم هو أن الصفة الرسمية تعود إلى المؤسسات المختصة، لا إلى تسمية خدمة W5D. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `official-stats`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of survey instrument reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40 % des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon les comparaisons de l’Enterprise Survey désignées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, et non un problème qui se résumerait à la formation. Les bénéfices dépendent d’une autorité légitime, du partage des dossiers administratifs et de responsables de mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliorera le fonctionnement d’une institution. Pour `official-stats`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire désigné et d’une définition acceptée des examens d’instruments d’enquête, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يفيد استعراض OECD الصادر في يونيو 2024 بأن ما يقارب 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة بوصفه عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، لا مشكلة تقتصر على التدريب. وتتوقف المنافع على وجود صلاحيات مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً بلا هؤلاء المستخدمين سيحسّن أداء مؤسسة. لذلك، فإن الاستجابة المقترحة لـ `official-stats` هي سير عمل تعاقدي يضم مستفيداً محدداً وتعريفاً معتمداً لمراجعات أدوات المسوح، لا استقطاباً للمواهب يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the survey instrument reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks data quality checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted survey instrument reviews from rejected or deferred work and records blockers around disclosure control tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens d’instruments d’enquête ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles de la qualité des données avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments justificatifs provenant des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens d’instruments d’enquête acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux tests de contrôle de la divulgation. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات أدوات المسوح؛ ويحوّل 100 مدير تلك المعايير إلى إسنادات عمل لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من فحوصات جودة البيانات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مراجعات أدوات المسوح المقبولة والأعمال المرفوضة أو المؤجلة، ويسجّل المعوقات المتعلقة باختبارات ضبط الإفصاح. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "statistics, demography, survey methods and public information",
+  "fr": "statistiques, démographie, méthodes d’enquête et information publique",
+  "ar": "الإحصاء، والديموغرافيا، ومناهج المسوح، والمعلومات العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Survey instrument reviews",
+    "fr": "Examens d’instruments d’enquête",
+    "ar": "مراجعات أدوات المسوح"
+   },
+   "unit": {
+    "en": "survey instrument reviews",
+    "fr": "examens d’instruments d’enquête",
+    "ar": "مراجعات أدوات المسوح"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Data quality checks",
+    "fr": "Contrôles de la qualité des données",
+    "ar": "فحوصات جودة البيانات"
+   },
+   "unit": {
+    "en": "data quality checks",
+    "fr": "contrôles de la qualité des données",
+    "ar": "فحوصات جودة البيانات"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Disclosure control tests",
+    "fr": "Tests de contrôle de la divulgation",
+    "ar": "اختبارات ضبط الإفصاح"
+   },
+   "unit": {
+    "en": "disclosure control tests",
+    "fr": "tests de contrôle de la divulgation",
+    "ar": "اختبارات ضبط الإفصاح"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Statistical release packages",
+    "fr": "Dossiers de diffusion statistique",
+    "ar": "حزم إصدار الإحصاءات"
+   },
+   "unit": {
+    "en": "statistical release packages",
+    "fr": "dossiers de diffusion statistique",
+    "ar": "حزم إصدار الإحصاءات"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `official-stats` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the survey instrument reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `official-stats` lié à une mission comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des dossiers expurgés des sources et des consultations, reliant les examens d’instruments d’enquête à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لـ `official-stats` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، مع ربط مراجعات أدوات المسوح بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted survey instrument reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis d’ici ven. 12:00 ; **≥1 examen d’instrument d’enquête accepté** par équipe et par semaine, selon la complexité de la mission ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques touchant à la sécurité ou à la confidentialité l’emportent sur un résultat favorable. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم 9 تقارير أسبوعية مؤهلة على الأقل من أصل 10** بحلول الجمعة 12:00؛ **قبول مراجعة واحدة على الأقل لأدوات المسوح** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **طلب واحد على الأكثر لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات أو الترتيبات المعتمدة المقام المؤهل، بينما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي تقييم أخضر. هذه أهداف للمشروع التجريبي، وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "official status belongs to competent institutions, not the W5D service label",
+  "fr": "le statut officiel relève des institutions compétentes, et non de l’appellation du service W5D",
+  "ar": "الصفة الرسمية تعود إلى المؤسسات المختصة، لا إلى تسمية خدمة W5D"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "digital-humanities",
+   "id": 7
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Administrative registries mistaken for representative samples → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les registres administratifs sont pris à tort pour des échantillons représentatifs → refaire les contrôles critiques à partir de références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "الخلط بين السجلات الإدارية والعينات التمثيلية ← أعد إجراء الفحوصات الحرجة بالرجوع إلى مراجع قابلة للتتبّع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Disclosure identifies small groups → reconcile source records with the survey instrument reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "La divulgation révèle de petits groupes → rapprocher les dossiers sources de l’instrument d’enquête, examiner la liste de contrôle d’acceptation et attribuer la responsabilité des actions correctives.",
+   "ar": "تُظهر الإفصاحات مجموعات صغيرة → طابق سجلات المصدر مع أداة الاستبيان، وراجع قائمة التحقق من القبول، وأسند مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Revisions occur without version history → reconcile source records with the survey instrument reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des révisions ont lieu sans historique des versions → rapprocher les dossiers sources de l’instrument d’enquête, examiner la liste de contrôle d’acceptation et attribuer la responsabilité des actions correctives.",
+   "ar": "تُجرى التنقيحات من دون سجل للإصدارات → طابق سجلات المصدر مع أداة الاستبيان، وراجع قائمة التحقق من القبول، وأسند مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

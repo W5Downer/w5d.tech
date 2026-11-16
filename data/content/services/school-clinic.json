@@ -1,0 +1,167 @@
+{
+ "slug": "school-clinic",
+ "id": 49,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "School & Clinic Building Programs",
+  "fr": "Programmes de construction d’écoles et de cliniques",
+  "ar": "برامج بناء المدارس والعيادات"
+ },
+ "short": {
+  "en": "The service provides standardised designs, fast delivery.",
+  "fr": "Préparer des écoles et cliniques adaptées aux usages.",
+  "ar": "إعداد مدارس وعيادات ملائمة للاستعمال."
+ },
+ "abstract": {
+  "en": "School and clinic building programs — standardised design libraries, fast-track delivery, and quality assurance protocols for ministries of education and health.",
+  "fr": "Programmes de construction d’écoles et de cliniques — bibliothèques de conception standardisées, réalisation accélérée et protocoles d’assurance qualité pour les ministères de l’Éducation et de la Santé.",
+  "ar": "برامج بناء المدارس والعيادات — مكتبات تصميم موحدة، وتنفيذ سريع، وبروتوكولات لضمان الجودة لصالح وزارتي التعليم والصحة."
+ },
+ "long": [
+  {
+   "en": "The School & Clinic Building Programs service organises a weekly work package around facility condition audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 facility condition audits; 100 standard design adaptations; 300 site supervision reports; 200 accessibility checks. School and clinic building programs — standardised design libraries, fast-track delivery, and quality assurance protocols for ministries of education and health. Specialists sequence those methods against the accepted weekly package. The governing boundary is that education and health authorities approve layouts and infection-control requirements. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des programmes de construction d’écoles et de cliniques organise un lot de travail hebdomadaire autour des audits de l’état des établissements, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 audits de l’état des établissements ; 100 adaptations de conceptions standard ; 300 rapports de supervision de chantier ; 200 contrôles de l’accessibilité. Programmes de construction d’écoles et de cliniques — bibliothèques de conception standardisées, réalisation accélérée et protocoles d’assurance qualité pour les ministères de l’Éducation et de la Santé. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite de responsabilité est la suivante : les autorités chargées de l’éducation et de la santé approuvent les plans et les exigences de lutte contre les infections. Il s’agit de résultats progressifs issus de cas faisant l’objet d’une commande, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة برامج بناء المدارس والعيادات حزمة عمل أسبوعية تتمحور حول عمليات تدقيق حالة المرافق، بدلاً من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد اللازمة، تتضمن خطتها التجريبية 500 عملية تدقيق لحالة المرافق؛ و100 مواءمة للتصاميم القياسية؛ و300 تقرير للإشراف على المواقع؛ و200 عملية تحقق من إمكانية الوصول. برامج بناء المدارس والعيادات — مكتبات تصميم موحدة، وتنفيذ سريع، وبروتوكولات لضمان الجودة لصالح وزارتي التعليم والصحة. ويرتب الاختصاصيون تطبيق هذه الأساليب وفقاً لحزمة العمل الأسبوعية المقبولة. والحد الفاصل الحاكم هو أن سلطات التعليم والصحة تعتمد المخططات ومتطلبات مكافحة العدوى. وهذه مخرجات مرحلية ناتجة عن حالات تم التكليف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `school-clinic`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of facility condition audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève la concentration des activités sur le littoral, le coût du logement et les obstacles liés aux transports parmi les freins à la mise en adéquation des compétences avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures dépendant de l’investissement ; aucun de ces constats ne dénombre les postes pourvus par ce service. La préparation des projets concerne plusieurs propriétaires d’actifs et se heurte à des limites en matière d’accès local et de passation de marchés ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans le respect de la loi. Pour `school-clinic`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des audits de l’état des installations, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تحدد دراسة منظمة التعاون والتنمية الاقتصادية لتونس، الصادرة في أبريل 2022، تركزَ النشاط في المناطق الساحلية وتكاليفَ السكن وعوائقَ النقل بوصفها قيودًا تحول دون مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا يمثل أيٌّ من الاستنتاجين إحصاءً للوظائف التي كُلّف هذا البرنامج بتوفيرها. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد يظل العمل المجدي تقنيًا مجزأً إلى أن يكلّف به عميلٌ وفق الأصول القانونية. لذلك، فإن الاستجابة المقترحة لمشروع `school-clinic` هي سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لتدقيقات حالة المرافق، لا استقطابًا تبرره وحده نسبة البطالة الوطنية."
+  },
+  {
+   "en": "A service leader sets the facility condition audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks standard design adaptations before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted facility condition audits from rejected or deferred work and records blockers around site supervision reports. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des audits de l’état des installations ; 100 gestionnaires répartissent les tâches entre des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les adaptations des plans types avant leur approbation. L’audit aléatoire proposé de 5% réexamine les pièces justificatives et les exceptions ; il ne remplace pas l’examen par les gestionnaires de chaque rapport hebdomadaire. Le bilan du service distingue les audits de l’état des installations acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux rapports de supervision de chantier. Les évaluations des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات حالة المرافق؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفِرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من تكييفات التصاميم القياسية قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز الملخص الإجمالي للخدمة بين تدقيقات حالة المرافق المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المرتبطة بتقارير الإشراف على المواقع. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Facility condition audits",
+    "fr": "Audits de l’état des installations",
+    "ar": "تدقيقات حالة المرافق"
+   },
+   "unit": {
+    "en": "facility condition audits",
+    "fr": "audits de l’état des installations",
+    "ar": "تدقيقات حالة المرافق"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Standard design adaptations",
+    "fr": "Adaptations des plans types",
+    "ar": "تكييفات التصاميم القياسية"
+   },
+   "unit": {
+    "en": "standard design adaptations",
+    "fr": "adaptations des plans types",
+    "ar": "تكييفات التصاميم القياسية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Site supervision reports",
+    "fr": "Rapports de supervision de chantier",
+    "ar": "تقارير الإشراف على المواقع"
+   },
+   "unit": {
+    "en": "site supervision reports",
+    "fr": "rapports de supervision de chantier",
+    "ar": "تقارير الإشراف على المواقع"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Accessibility checks",
+    "fr": "Contrôles d’accessibilité",
+    "ar": "فحوصات إمكانية الوصول"
+   },
+   "unit": {
+    "en": "accessibility checks",
+    "fr": "contrôles d’accessibilité",
+    "ar": "فحوصات إمكانية الوصول"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `school-clinic` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the facility condition audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `school-clinic` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des fichiers d’inspection/photos ou de conception géoréférencés, qui relient les audits de l’état des installations à la source, à l’évaluateur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `school-clinic` ملف اعتماد بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات فحص أو تصميم محددة جغرافيًا، مثل الصور، وتربط تدقيقات حالة المرافق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted facility condition audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis ven. 12:00 ; **≥4 audits de l’état des installations acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux pièces justificatives** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité l’emportent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **≥9 من أصل 10 تقارير أسبوعية مستحقة** تُقدَّم بحلول الجمعة 12:00؛ **≥4 تدقيقات حالة مرافق مقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل مرتبط بالأدلة** لكل فريق في الأسبوع. ويؤدي الإجازة أو الترتيبات المعتمدة إلى تغيير المقام المستحق، فيما تتغلب عيوب السلامة أو الخصوصية الحرجة على أي تقييم أخضر. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "education and health authorities approve layouts and infection-control requirements",
+  "fr": "les autorités chargées de l’éducation et de la santé approuvent les plans et les exigences de lutte contre les infections",
+  "ar": "تعتمد سلطات التعليم والصحة المخططات ومتطلبات مكافحة العدوى"
+ },
+ "depends": [
+  {
+   "slug": "health-governance",
+   "id": 97
+  },
+  {
+   "slug": "education-governance",
+   "id": 98
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "medical-devices",
+   "id": 126
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Standard plans ignore local needs → reconcile source records with the facility condition audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les plans types ne tiennent pas compte des besoins locaux → rapprocher les dossiers sources de la liste de contrôle d’acceptation des audits de l’état des installations et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتجاهل المخططات القياسية الاحتياجات المحلية ← طابق السجلات المصدرية مع قائمة التحقق لقبول تدقيقات حالة المرافق، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Fast delivery hides safety defects → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Une exécution rapide masque des défauts de sécurité → exiger une approbation par une personne compétente en sécurité, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "يخفي التسليم السريع عيوب السلامة ← اشترط اعتمادًا من مختص بالسلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Buildings lack operating staff and utilities → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Les bâtiments ne disposent pas de personnel d’exploitation ni de services publics → vérifier le transfert à l’exploitant, les besoins en maintenance et l’existence d’une procédure de rétablissement.",
+   "ar": "تفتقر المباني إلى الموظفين التشغيليين والمرافق الأساسية ← اختبر تسليم التشغيل، ومتطلبات الصيانة، وإجراءً متاحًا للتعافي."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "mobility-planning",
+ "id": 37,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Transport & Mobility Planning",
+  "fr": "Planification des transports et de la mobilité",
+  "ar": "تخطيط النقل والتنقل"
+ },
+ "short": {
+  "en": "The service provides transit-oriented design, cycling networks.",
+  "fr": "Planifier des déplacements accessibles et sûrs.",
+  "ar": "تخطيط تنقل ميسر وآمن."
+ },
+ "abstract": {
+  "en": "Integrated mobility planning — transit-oriented development, cycling and pedestrian networks, demand modelling, and public transport operating frameworks.",
+  "fr": "Planification intégrée de la mobilité — aménagement axé sur les transports en commun, réseaux cyclables et piétonniers, modélisation de la demande et cadres d’exploitation des transports publics.",
+  "ar": "تخطيط متكامل للتنقل — تطوير موجّه نحو النقل العام، وشبكات ركوب الدراجات والمشاة، ونمذجة الطلب، وأطر تشغيل النقل العام."
+ },
+ "long": [
+  {
+   "en": "The Transport & Mobility Planning service organises a weekly work package around travel survey records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 10000 travel survey records; 500 route accessibility audits; 100 demand model scenarios; 100 mobility option briefs. Integrated mobility planning — transit-oriented development, cycling and pedestrian networks, demand modelling, and public transport operating frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that models separate observed travel from assumptions about suppressed demand. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de planification des transports et de la mobilité organise un lot de travail hebdomadaire axé sur les dossiers d’enquêtes sur les déplacements, plutôt que de considérer la présence comme le produit du service. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 10000 dossiers d’enquêtes sur les déplacements ; 500 audits de l’accessibilité des itinéraires ; 100 scénarios de modèles de demande ; 100 notes sur les options de mobilité. Planification intégrée de la mobilité — aménagement axé sur les transports en commun, réseaux cyclables et piétonniers, modélisation de la demande et cadres d’exploitation des transports publics. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle directrice est que les modèles distinguent les déplacements observés des hypothèses relatives à la demande non exprimée. Il s’agit de livrables échelonnés issus de mandats confiés, et non de la promesse d’achever chaque semaine l’intégralité d’un programme national.",
+   "ar": "تنظّم خدمة تخطيط النقل والتنقل حزمة عمل أسبوعية تتمحور حول سجلات استقصاء السفر، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند توافر كامل الطاقة الاستيعابية والموارد، 10000 سجل لاستقصاء السفر؛ و500 تدقيق لإمكانية الوصول إلى المسارات؛ و100 سيناريو لنماذج الطلب؛ و100 موجز لخيارات التنقل. تخطيط متكامل للتنقل — تطوير موجّه نحو النقل العام، وشبكات ركوب الدراجات والمشاة، ونمذجة الطلب، وأطر تشغيل النقل العام. ويرتّب الاختصاصيون هذه الأساليب ضمن حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن تفصل النماذج بين التنقل المرصود والافتراضات المتعلقة بالطلب غير الملبّى. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `mobility-planning`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of travel survey records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 identifie la concentration sur le littoral, le coût du logement et les obstacles liés aux transports comme des freins à la mise en adéquation des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures tributaires de l’investissement ; aucun de ces constats ne dénombre les postes confiés à ce service. La préparation des projets se heurte aux limites liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés tant qu’un client ne les mandate pas légalement. Pour `mobility-planning`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des dossiers d’enquêtes sur les déplacements, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "حدّد مسح OECD لتونس الصادر في أبريل 2022 تركز النشاط على الساحل، وتكاليف السكن، وعوائق النقل بوصفها قيوداً تحدّ من مواءمة ذوي المهارات مع فرص العمل. كما حدّد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تشير أي من النتيجتين إلى عدد الوظائف المكلّف بها لهذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول، وإمكانية الوصول المحلي، والمشتريات، لذا قد تظل الأعمال المجدية تقنياً مجزأة إلى أن يكلّف بها عميل مخوّل قانوناً. ولذلك، فإن الاستجابة المقترحة لخدمة `mobility-planning` هي سير عمل تعاقدي يحدّد مستفيداً بالاسم وتعريفاً معتمداً لسجلات استقصاء السفر، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the travel survey records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks route accessibility audits before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted travel survey records from rejected or deferred work and records blockers around demand model scenarios. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des dossiers d’enquêtes sur les déplacements ; 100 managers le traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les audits de l’accessibilité des itinéraires avant leur approbation. L’audit aléatoire proposé de 5% vérifie de nouveau les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un manager. La synthèse consolidée du service distingue les dossiers d’enquêtes sur les déplacements acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux scénarios de modèles de demande. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول سجلات استقصاء السفر؛ ويحوّل 100 مدير هذا المعيار إلى مهام لفرق تضم نحو عشرة خبراء. وتحدّد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مختص من تدقيقات إمكانية الوصول إلى المسارات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحلّ محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين سجلات استقصاء السفر المقبولة والعمل المرفوض أو المؤجل، ويسجّل العوائق المتعلقة بسيناريوهات نماذج الطلب. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "transport engineering, urban planning, geography and survey methods",
+  "fr": "ingénierie des transports, urbanisme, géographie et méthodes d’enquête",
+  "ar": "هندسة النقل، والتخطيط الحضري، والجغرافيا، ومناهج الاستقصاء"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Travel survey records",
+    "fr": "Dossiers d’enquêtes sur les déplacements",
+    "ar": "سجلات استقصاء السفر"
+   },
+   "unit": {
+    "en": "travel survey records",
+    "fr": "dossiers d’enquêtes sur les déplacements",
+    "ar": "سجلات استقصاء السفر"
+   },
+   "target": 10000
+  },
+  {
+   "name": {
+    "en": "Route accessibility audits",
+    "fr": "Audits de l’accessibilité des itinéraires",
+    "ar": "تدقيقات إمكانية الوصول إلى المسارات"
+   },
+   "unit": {
+    "en": "route accessibility audits",
+    "fr": "audits de l’accessibilité des itinéraires",
+    "ar": "تدقيقات إمكانية الوصول إلى المسارات"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Demand model scenarios",
+    "fr": "Scénarios de modèles de demande",
+    "ar": "سيناريوهات نماذج الطلب"
+   },
+   "unit": {
+    "en": "demand model scenarios",
+    "fr": "scénarios de modèles de demande",
+    "ar": "سيناريوهات نماذج الطلب"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Mobility option briefs",
+    "fr": "Notes sur les options de mobilité",
+    "ar": "موجزات خيارات التنقل"
+   },
+   "unit": {
+    "en": "mobility option briefs",
+    "fr": "notes sur les options de mobilité",
+    "ar": "موجزات خيارات التنقل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `mobility-planning` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the travel survey records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `mobility-planning` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des fichiers d’inspection ou de conception géoréférencés, qui relient les dossiers d’enquêtes sur les déplacements à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `mobility-planning` ملف PDF/A لملف القبول + بياناً بالمصادر بصيغة CSV/JSON + ملفات فحص/صور محددة جغرافياً أو ملفات تصميم، مع ربط سجلات استقصاء السفر بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥80 accepted travel survey records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis au plus tard le vendredi à 12:00 ; **≥80 dossiers d’enquêtes sur les déplacements acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **≥80 سجل استقصاء سفر مقبولاً** لكل فريق في الأسبوع، وفقاً لتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، فيما تتجاوز العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي تقييم أخضر. وهذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "models separate observed travel from assumptions about suppressed demand",
+  "fr": "les modèles distinguent les déplacements observés des hypothèses relatives à la demande non exprimée",
+  "ar": "تفصل النماذج بين التنقل المرصود والافتراضات المتعلقة بالطلب غير الملبّى"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "transport-tech",
+   "id": 128
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Surveys miss unpaid care journeys → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les enquêtes ne rendent pas compte des parcours liés aux soins non rémunérés → inclure l’examen par les personnes concernées, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تفوت الاستبيانات مسارات الرعاية غير مدفوعة الأجر → أدرجوا مراجعة من المستخدمين المتأثرين، وانشروا افتراضات الاختيار، وأبقوا قناة لتقديم التظلمات."
+  },
+  {
+   "en": "Cycling plans ignore dangerous junctions → reconcile source records with the travel survey records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les plans cyclables ne tiennent pas compte des carrefours dangereux → rapprocher les dossiers sources de la liste de contrôle d’acceptation des dossiers de l’enquête sur les déplacements et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتجاهل خطط ركوب الدراجات التقاطعات الخطرة → طابقوا سجلات المصادر مع قائمة التحقق من قبول سجلات استبيان التنقل، وحددوا مسؤولية تنفيذ الإجراءات التصحيحية."
+  },
+  {
+   "en": "Modelled demand treated as guaranteed ridership → reconcile source records with the travel survey records acceptance checklist and assign corrective-action ownership.",
+   "fr": "La demande modélisée est considérée comme une fréquentation garantie → rapprocher les dossiers sources de la liste de contrôle d’acceptation des dossiers de l’enquête sur les déplacements et attribuer la responsabilité des mesures correctives.",
+   "ar": "يُعامل الطلب المقدّر بالنماذج على أنه عدد مضمون من الركاب → طابقوا سجلات المصادر مع قائمة التحقق من قبول سجلات استبيان التنقل، وحددوا مسؤولية تنفيذ الإجراءات التصحيحية."
+  }
+ ]
+}

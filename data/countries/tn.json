@@ -1,0 +1,255 @@
+{
+ "iso": "tn",
+ "names": {
+  "en": "Tunisia",
+  "fr": "Tunisie",
+  "ar": "تونس"
+ },
+ "currency": "TND",
+ "timezone": "Africa/Tunis",
+ "locale": "ar_TN",
+ "default_languages": [
+  "ar",
+  "fr",
+  "en"
+ ],
+ "legal_profile": {
+  "law": "Organic Law 2004-63",
+  "authority": "INPDP",
+  "note": {
+   "en": "Personal-data processing on this site follows Organic Law 2004-63. Confirm with counsel before launch.",
+   "fr": "Le traitement des données personnelles sur ce site suit la loi organique 2004-63. À confirmer avec un conseil avant le lancement.",
+   "ar": "تتم معالجة المعطيات الشخصية في هذا الموقع وفق القانون الأساسي عدد 63 لسنة 2004. يجب التأكد من ذلك مع مستشار قانوني قبل الإطلاق."
+  }
+ },
+ "salary_model": {
+  "ref": "money.salary_monthly",
+  "note": "600 TND per post per 30-day month (see config/variables.php)"
+ },
+ "calendar": {
+  "weekly_report_due": "Fri 12:00",
+  "observances": [
+   "Ramadan",
+   "Eid al-Fitr",
+   "Eid al-Adha"
+  ]
+ },
+ "regions": [
+  {
+   "slug": "tunis",
+   "name": {
+    "en": "Tunis",
+    "fr": "Tunis",
+    "ar": "تونس"
+   },
+   "order": 1
+  },
+  {
+   "slug": "ariana",
+   "name": {
+    "en": "Ariana",
+    "fr": "Ariana",
+    "ar": "أريانة"
+   },
+   "order": 2
+  },
+  {
+   "slug": "ben-arous",
+   "name": {
+    "en": "Ben Arous",
+    "fr": "Ben Arous",
+    "ar": "بن عروس"
+   },
+   "order": 3
+  },
+  {
+   "slug": "manouba",
+   "name": {
+    "en": "Manouba",
+    "fr": "La Manouba",
+    "ar": "منوبة"
+   },
+   "order": 4
+  },
+  {
+   "slug": "nabeul",
+   "name": {
+    "en": "Nabeul",
+    "fr": "Nabeul",
+    "ar": "نابل"
+   },
+   "order": 5
+  },
+  {
+   "slug": "zaghouan",
+   "name": {
+    "en": "Zaghouan",
+    "fr": "Zaghouan",
+    "ar": "زغوان"
+   },
+   "order": 6
+  },
+  {
+   "slug": "bizerte",
+   "name": {
+    "en": "Bizerte",
+    "fr": "Bizerte",
+    "ar": "بنزرت"
+   },
+   "order": 7
+  },
+  {
+   "slug": "beja",
+   "name": {
+    "en": "Béja",
+    "fr": "Béja",
+    "ar": "باجة"
+   },
+   "order": 8
+  },
+  {
+   "slug": "jendouba",
+   "name": {
+    "en": "Jendouba",
+    "fr": "Jendouba",
+    "ar": "جندوبة"
+   },
+   "order": 9
+  },
+  {
+   "slug": "kef",
+   "name": {
+    "en": "Kef",
+    "fr": "Le Kef",
+    "ar": "الكاف"
+   },
+   "order": 10
+  },
+  {
+   "slug": "siliana",
+   "name": {
+    "en": "Siliana",
+    "fr": "Siliana",
+    "ar": "سليانة"
+   },
+   "order": 11
+  },
+  {
+   "slug": "sousse",
+   "name": {
+    "en": "Sousse",
+    "fr": "Sousse",
+    "ar": "سوسة"
+   },
+   "order": 12
+  },
+  {
+   "slug": "monastir",
+   "name": {
+    "en": "Monastir",
+    "fr": "Monastir",
+    "ar": "المنستير"
+   },
+   "order": 13
+  },
+  {
+   "slug": "mahdia",
+   "name": {
+    "en": "Mahdia",
+    "fr": "Mahdia",
+    "ar": "المهدية"
+   },
+   "order": 14
+  },
+  {
+   "slug": "sfax",
+   "name": {
+    "en": "Sfax",
+    "fr": "Sfax",
+    "ar": "صفاقس"
+   },
+   "order": 15
+  },
+  {
+   "slug": "kairouan",
+   "name": {
+    "en": "Kairouan",
+    "fr": "Kairouan",
+    "ar": "القيروان"
+   },
+   "order": 16
+  },
+  {
+   "slug": "kasserine",
+   "name": {
+    "en": "Kasserine",
+    "fr": "Kasserine",
+    "ar": "القصرين"
+   },
+   "order": 17
+  },
+  {
+   "slug": "sidi-bouzid",
+   "name": {
+    "en": "Sidi Bouzid",
+    "fr": "Sidi Bouzid",
+    "ar": "سيدي بوزيد"
+   },
+   "order": 18
+  },
+  {
+   "slug": "gabes",
+   "name": {
+    "en": "Gabès",
+    "fr": "Gabès",
+    "ar": "قابس"
+   },
+   "order": 19
+  },
+  {
+   "slug": "medenine",
+   "name": {
+    "en": "Médenine",
+    "fr": "Médenine",
+    "ar": "مدنين"
+   },
+   "order": 20
+  },
+  {
+   "slug": "tataouine",
+   "name": {
+    "en": "Tataouine",
+    "fr": "Tataouine",
+    "ar": "تطاوين"
+   },
+   "order": 21
+  },
+  {
+   "slug": "gafsa",
+   "name": {
+    "en": "Gafsa",
+    "fr": "Gafsa",
+    "ar": "قفصة"
+   },
+   "order": 22
+  },
+  {
+   "slug": "tozeur",
+   "name": {
+    "en": "Tozeur",
+    "fr": "Tozeur",
+    "ar": "توزر"
+   },
+   "order": 23
+  },
+  {
+   "slug": "kebili",
+   "name": {
+    "en": "Kébili",
+    "fr": "Kébili",
+    "ar": "قبلي"
+   },
+   "order": 24
+  }
+ ]
+}

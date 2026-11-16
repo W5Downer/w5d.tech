@@ -1,0 +1,167 @@
+{
+ "slug": "procurement-reform",
+ "id": 82,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Public Procurement Reform",
+  "fr": "Réforme de la commande publique",
+  "ar": "إصلاح المشتريات العمومية"
+ },
+ "short": {
+  "en": "The service provides transparency, e-tendering, audit.",
+  "fr": "Améliorer les règles et contrôles des achats publics.",
+  "ar": "تحسين قواعد المشتريات العامة ورقابتها."
+ },
+ "abstract": {
+  "en": "Public procurement reform — transparent tendering, e-procurement platforms, and procurement audit aligned with international standards.",
+  "fr": "Réforme de la commande publique — transparence des appels d’offres, plateformes de passation électronique et audit des marchés publics conformes aux normes internationales.",
+  "ar": "إصلاح المشتريات العمومية — مناقصات شفافة، ومنصات للمشتريات الإلكترونية، وتدقيق للمشتريات يتماشى مع المعايير الدولية."
+ },
+ "long": [
+  {
+   "en": "The Public Procurement Reform service organises a weekly work package around tender transparency audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 tender transparency audits; 100 process redesign notes; 500 e-tender workflow tests; 100 procurement training sessions. Public procurement reform — transparent tendering, e-procurement platforms, and procurement audit aligned with international standards. Specialists sequence those methods against the accepted weekly package. The governing boundary is that reform advice preserves competition and competent contracting authority. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de réforme de la commande publique organise chaque semaine un lot de travail axé sur les audits de transparence des appels d’offres, plutôt que de considérer la participation comme le produit. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 300 audits de transparence des appels d’offres ; 100 notes de refonte des processus ; 500 tests des flux de travail des appels d’offres électroniques ; 100 sessions de formation aux marchés publics. Réforme de la commande publique — transparence des appels d’offres, plateformes de passation électronique et audit des marchés publics conformes aux normes internationales. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les conseils en matière de réforme préservent la concurrence et les compétences de l’autorité contractante. Il s’agit de livrables échelonnés issus de dossiers commandés, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة إصلاح المشتريات العمومية حزمة عمل أسبوعية تتمحور حول عمليات تدقيق شفافية المناقصات، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند العمل بكامل الطاقة الاستيعابية وتوفير الموارد اللازمة، 300 عملية تدقيق لشفافية المناقصات؛ و100 مذكرة لإعادة تصميم العمليات؛ و500 اختبار لسير عمل المناقصات الإلكترونية؛ و100 دورة تدريبية في المشتريات. إصلاح المشتريات العمومية — مناقصات شفافة، ومنصات للمشتريات الإلكترونية، وتدقيق للمشتريات يتماشى مع المعايير الدولية. ويرتب المختصون هذه الأساليب وفقاً لحزمة العمل الأسبوعية المعتمدة. ويقضي الحد الناظم بأن تحافظ المشورة بشأن الإصلاح على المنافسة وعلى اختصاص الجهة المتعاقدة. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `procurement-reform`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of tender transparency audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’Enquête auprès des entreprises portant la mention 2020 ou la dernière année disponible. L’analyse juridique de Kotrane de 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent de l’existence d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil améliore une institution s’il n’est pas destiné à ces utilisateurs. Pour `procurement-reform`, la réponse proposée est donc un flux de travail contractuel assorti d’un bénéficiaire nommé et d’une définition acceptée des audits de transparence des appels d’offres, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يشير استعراض OECD الصادر في يونيو 2024 إلى أن ما يقرب من 40% من الشركات التونسية المشمولة تحدد نقص مهارات القوى العاملة بوصفه عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات المصنّفة على أنها لعام 2020 أو أحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، لا مشكلة تقتصر على التدريب. وتتوقف الفوائد على وجود صلاحية مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسّن أداء مؤسسة ما من دون هؤلاء المستخدمين. لذلك، تتمثل الاستجابة المقترحة لخدمة `procurement-reform` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لعمليات تدقيق شفافية المناقصات، لا في توظيف يُبرر فقط بمعدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the tender transparency audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks process redesign notes before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted tender transparency audits from rejected or deferred work and records blockers around e-tender workflow tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits de transparence des appels d’offres ; 100 responsables les traduisent en affectations au sein d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les notes de refonte des processus avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le récapitulatif du service distingue les audits de transparence des appels d’offres acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux tests des flux de travail des appels d’offres électroniques. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يحدد قائد الخدمة معايير قبول عمليات تدقيق شفافية المناقصات؛ ويحوّل 100 مدير تلك المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مختص مؤهل مذكرات إعادة تصميم العمليات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين عمليات تدقيق شفافية المناقصات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باختبارات سير عمل المناقصات الإلكترونية. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Tender transparency audits",
+    "fr": "Audits de transparence des appels d’offres",
+    "ar": "عمليات تدقيق شفافية المناقصات"
+   },
+   "unit": {
+    "en": "tender transparency audits",
+    "fr": "audits de transparence des appels d’offres",
+    "ar": "عمليات تدقيق شفافية المناقصات"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Process redesign notes",
+    "fr": "Notes de refonte des processus",
+    "ar": "مذكرات إعادة تصميم العمليات"
+   },
+   "unit": {
+    "en": "process redesign notes",
+    "fr": "notes de refonte des processus",
+    "ar": "مذكرات إعادة تصميم العمليات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "E-tender workflow tests",
+    "fr": "Tests des flux de travail des appels d’offres électroniques",
+    "ar": "اختبارات المناقصات الإلكترونية"
+   },
+   "unit": {
+    "en": "e-tender workflow tests",
+    "fr": "tests des flux de travail des appels d’offres électroniques",
+    "ar": "اختبارات المناقصات الإلكترونية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Procurement training sessions",
+    "fr": "Sessions de formation aux marchés publics",
+    "ar": "دورات تدريبية في المشتريات"
+   },
+   "unit": {
+    "en": "procurement training sessions",
+    "fr": "sessions de formation aux marchés publics",
+    "ar": "دورات تدريبية في المشتريات"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `procurement-reform` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the tender transparency audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation de `procurement-reform` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des dossiers sources et des comptes rendus de consultation expurgés, qui relient les audits de transparence des appels d’offres à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `procurement-reform` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط عمليات تدقيق شفافية المناقصات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted tender transparency audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥3 audits de transparence des appels d’offres acceptés** par équipe-semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité priment sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥3 عمليات تدقيق لشفافية المناقصات** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات أو التعديلات المعتمدة المقامَ المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تلغي التقييم الأخضر. هذه أهداف تجريبية، وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "reform advice preserves competition and competent contracting authority",
+  "fr": "les conseils en matière de réforme préservent la concurrence et les compétences de l’autorité contractante",
+  "ar": "تحافظ المشورة بشأن الإصلاح على المنافسة وعلى اختصاص الجهة المتعاقدة"
+ },
+ "depends": [
+  {
+   "slug": "procurement",
+   "id": 46
+  },
+  {
+   "slug": "software-eng",
+   "id": 105
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "manufacturing",
+   "id": 122
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Digitisation automates biased rules → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "La numérisation automatise des règles biaisées → prévoir l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une procédure de réclamation.",
+   "ar": "تؤدي رقمنة القواعد المتحيزة إلى أتمتتها → أشرك المتأثرين في المراجعة، وانشر افتراضات الاختيار، وأبقِ مساراً للتظلم متاحاً."
+  },
+  {
+   "en": "Smaller suppliers excluded by platform requirements → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les exigences des plateformes excluent les petits fournisseurs → prévoir l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une procédure de réclamation.",
+   "ar": "قد يُستبعد الموردون الأصغر بسبب متطلبات المنصة → أشرك المتأثرين في المراجعة، وانشر افتراضات الاختيار، وأبقِ مساراً للتظلم متاحاً."
+  },
+  {
+   "en": "Audit recommendations lack implementation owners → reconcile source records with the tender transparency audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les recommandations d’audit ne sont pas assorties de responsables de mise en œuvre → rapprocher les données sources de la liste de contrôle d’acceptation des audits de transparence des appels d’offres et attribuer la responsabilité des mesures correctives.",
+   "ar": "تفتقر توصيات التدقيق إلى جهات مسؤولة عن التنفيذ → طابق السجلات المصدرية مع قائمة التحقق لقبول عمليات تدقيق شفافية المناقصات، وأسند مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

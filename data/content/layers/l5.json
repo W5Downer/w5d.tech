@@ -1,0 +1,15 @@
+{
+ "slug": "l5",
+ "code": "L5",
+ "order": 5,
+ "name": {
+  "en": "Programme and horizon",
+  "fr": "Programme et horizon",
+  "ar": "البرنامج والأفق"
+ },
+ "body": {
+  "en": "The 2030B horizon and the weekly work engine: reports, approvals, 5% sampling, rollups and archive.",
+  "fr": "L’horizon 2030B et le moteur de travail hebdomadaire : rapports, approbations, échantillonnage à 5 %, consolidations et archivage.",
+  "ar": "أفق 2030B ومحرك العمل الأسبوعي: التقارير والموافقات وأخذ عينات بنسبة 5% وعمليات التجميع والأرشيف."
+ }
+}

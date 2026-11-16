@@ -1,0 +1,65 @@
+{
+ "slug": "macrolifetech-l2",
+ "id": 9,
+ "order": 9,
+ "icon": "layers",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "MacroLifeTech L2 programmes",
+  "fr": "Programmes MacroLifeTech L2",
+  "ar": "برامج MacroLifeTech من المستوى L2"
+ },
+ "tagline": {
+  "en": "The five macro works presented as five programmes.",
+  "fr": "Les cinq grands ouvrages présentés sous la forme de cinq programmes.",
+  "ar": "الأعمال الكبرى الخمسة المعروضة في صورة خمسة برامج."
+ },
+ "outcome": [
+  {
+   "en": "The five macro works are presented as five L2 programmes above the services. The register shows five programmes, each dated.",
+   "fr": "Les cinq grands ouvrages sont présentés ci-dessus, au-dessus des services, sous la forme de cinq programmes L2. Le registre fait état de cinq programmes, chacun daté.",
+   "ar": "تُعرض الأعمال الكبرى الخمسة أعلاه، فوق الخدمات، في صورة خمسة برامج من المستوى L2. ويُظهر السجل خمسة برامج، لكل منها تاريخ."
+  },
+  {
+   "en": "They are the programme layer an investor funds when they take a part.",
+   "fr": "Ce sont les programmes dans lesquels un investisseur investit en prenant une participation.",
+   "ar": "وهي طبقة البرامج التي يمولها المستثمر عند استحواذه على حصة."
+  }
+ ],
+ "evidence": {
+  "en": "Five programmes on the public preview.",
+  "fr": "Cinq programmes dans l’aperçu public.",
+  "ar": "خمسة برامج في المعاينة العامة."
+ },
+ "services": [
+  "regulatory-impact",
+  "official-stats",
+  "research-data"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Five programmes",
+    "fr": "Cinq programmes",
+    "ar": "خمسة برامج"
+   },
+   "body": {
+    "en": "Cultures, Built, Sciences, Governance, Technology.",
+    "fr": "Cultures, Bâti, Sciences, Gouvernance, Technologie.",
+    "ar": "الثقافات، والبيئة العمرانية، والعلوم، والحوكمة، والتكنولوجيا."
+   }
+  }
+ ],
+ "gradient": "technology"
+}

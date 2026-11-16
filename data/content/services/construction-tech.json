@@ -1,0 +1,167 @@
+{
+ "slug": "construction-tech",
+ "id": 31,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Construction Tech & Modular",
+  "fr": "Technologies de construction et modulaire",
+  "ar": "تقنيات البناء والإنشاءات المعيارية"
+ },
+ "short": {
+  "en": "The service provides prefab, 3D printing, lean construction.",
+  "fr": "Valider des méthodes constructives modulaires.",
+  "ar": "التحقق من طرق البناء المعياري."
+ },
+ "abstract": {
+  "en": "Modern construction methods — prefabrication and modular delivery, 3D-printed components, lean construction workflows, and site-safety systems for scaled programs.",
+  "fr": "Méthodes de construction modernes — préfabrication et construction modulaire, composants imprimés en 3D, processus de construction allégés et systèmes de sécurité sur chantier pour des programmes de grande envergure.",
+  "ar": "أساليب البناء الحديثة — التصنيع المسبق والتسليم المعياري، والمكونات المطبوعة ثلاثية الأبعاد، وسير عمل البناء الرشيق، وأنظمة السلامة في المواقع للبرامج واسعة النطاق."
+ },
+ "long": [
+  {
+   "en": "The Construction Tech & Modular service organises a weekly work package around component design reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 component design reviews; 100 prototype test dossiers; 100 production flow studies; 500 site safety checks. Modern construction methods — prefabrication and modular delivery, 3D-printed components, lean construction workflows, and site-safety systems for scaled programs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that prototype acceptance requires structural testing before replication. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Technologies de construction et modulaire organise un lot de travail hebdomadaire autour des revues de conception des composants, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 revues de conception de composants ; 100 dossiers d’essais de prototypes ; 100 études des flux de production ; 500 contrôles de sécurité sur chantier. Méthodes de construction modernes — préfabrication et construction modulaire, composants imprimés en 3D, processus de construction allégés et systèmes de sécurité sur chantier pour des programmes de grande envergure. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que l’acceptation d’un prototype exige des essais structurels avant toute réplication. Il s’agit de résultats échelonnés issus de cas faisant l’objet d’un mandat, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة تقنيات البناء والإنشاءات المعيارية حزمة عمل أسبوعية تتمحور حول مراجعات تصميم المكونات، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة التشغيلية الكاملة والمزودة بالموارد، 200 مراجعة لتصميم المكونات؛ و100 ملف اختبار للنماذج الأولية؛ و100 دراسة لتدفقات الإنتاج؛ و500 فحص لسلامة المواقع. أساليب البناء الحديثة — التصنيع المسبق والتسليم المعياري، والمكونات المطبوعة ثلاثية الأبعاد، وسير عمل البناء الرشيق، وأنظمة السلامة في المواقع للبرامج واسعة النطاق. ويُنسّق المختصون تطبيق هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. والشرط الحاكم هو أن يتطلب قبول النموذج الأولي إجراء اختبارات إنشائية قبل الاستنساخ. وهذه مخرجات مرحلية للحالات التي يجري التكليف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `construction-tech`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of component design reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 identifie la concentration côtière, le coût du logement et les obstacles liés aux transports comme des freins à la mise en adéquation des personnes qualifiées et des emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures qui dépendent des investissements ; aucun de ces constats ne comptabilise les postes pourvus par ce service. La préparation des projets implique des contraintes liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans un cadre légal. Pour `construction-tech`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des revues de conception des composants, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "حدّد المسح الذي أجرته OECD عن تونس في أبريل 2022 تركز النشاط في المناطق الساحلية، وتكاليف الإسكان، وعوائق النقل بوصفها قيودًا على مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تُحصي أي من النتيجتين الوظائف التي جرى التكليف بها لهذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، لذا قد يظل العمل المجدي من الناحية الفنية مجزأً إلى أن يكلّف به عميل مخوّل قانونًا. لذلك، تتمثل الاستجابة المقترحة لـ`construction-tech` في سير عمل تعاقدي يضم مستفيدًا محددًا وتعريفًا معتمدًا لمراجعات تصميم المكونات، لا في التوظيف الذي يستند وحده إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the component design reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks prototype test dossiers before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted component design reviews from rejected or deferred work and records blockers around production flow studies. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des revues de conception des composants ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers d’essais de prototypes avant approbation. L’audit aléatoire proposé de 5% réexamine les justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse consolidée du service distingue les revues de conception des composants acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux études des flux de production. Les revues des responsables de grappe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات تصميم المكونات؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من ملفات اختبار النماذج الأولية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين مراجعات تصميم المكونات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بدراسات تدفقات الإنتاج. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Component design reviews",
+    "fr": "Revues de conception des composants",
+    "ar": "مراجعات تصميم المكونات"
+   },
+   "unit": {
+    "en": "component design reviews",
+    "fr": "revues de conception des composants",
+    "ar": "مراجعات تصميم المكونات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Prototype test dossiers",
+    "fr": "Dossiers d’essais de prototypes",
+    "ar": "ملفات اختبار النماذج الأولية"
+   },
+   "unit": {
+    "en": "prototype test dossiers",
+    "fr": "dossiers d’essais de prototypes",
+    "ar": "ملفات اختبار النماذج الأولية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Production flow studies",
+    "fr": "Études des flux de production",
+    "ar": "دراسات تدفق الإنتاج"
+   },
+   "unit": {
+    "en": "production flow studies",
+    "fr": "études des flux de production",
+    "ar": "دراسات تدفق الإنتاج"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Site safety checks",
+    "fr": "Contrôles de sécurité du site",
+    "ar": "فحوصات سلامة الموقع"
+   },
+   "unit": {
+    "en": "site safety checks",
+    "fr": "contrôles de sécurité du site",
+    "ar": "فحوصات سلامة الموقع"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `construction-tech` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the component design reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception `construction-tech` lié à un cas comprend un dossier de réception PDF/A + un manifeste source CSV/JSON + des fichiers de conception ou d’inspection/photo géoréférencés, qui relient les revues de conception des composants à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن مجال `construction-tech` ملف قبول بصيغة PDF/A، وبيانًا بالمصادر بصيغة CSV/JSON، وملفات فحص/صور أو تصميم ذات إسناد جغرافي، تربط مراجعات تصميم المكونات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted component design reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis au plus tard le vendredi à 12:00 ; **≥2 revues de conception de composants acceptées** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥2 من مراجعات تصميم المكونات المقبولة** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ و**≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق في الأسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، كما أن عيوب السلامة/الخصوصية الحرجة تُبطل التقييم الأخضر. هذه أهداف تجريبية، وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "prototype acceptance requires structural testing before replication",
+  "fr": "la réception d’un prototype exige des essais structurels avant sa reproduction",
+  "ar": "يتطلب قبول النماذج الأولية إجراء اختبارات هيكلية قبل تكرارها"
+ },
+ "depends": [
+  {
+   "slug": "materials-science",
+   "id": 59
+  },
+  {
+   "slug": "manufacturing",
+   "id": 122
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "lab-accreditation",
+   "id": 75
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Untested components fail at connections → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les composants non testés présentent des défaillances au niveau des assemblages → exiger l’approbation d’un responsable compétent en sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "تتعطل المكونات غير المختبرة عند نقاط الاتصال → يُشترط اعتماد السلامة من مختص مؤهل، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Transport damage invalidates tolerances → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les dommages liés au transport invalident les tolérances → exiger l’approbation d’un responsable compétent en sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "يؤدي الضرر أثناء النقل إلى عدم صلاحية حدود التفاوت → يُشترط اعتماد السلامة من مختص مؤهل، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Automation shifts hazards to assembly workers → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "L’automatisation transfère les risques aux ouvriers chargés de l’assemblage → exiger l’approbation d’un responsable compétent en sécurité, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "تنقل الأتمتة المخاطر إلى عمال التجميع → يُشترط اعتماد السلامة من مختص مؤهل، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  }
+ ]
+}

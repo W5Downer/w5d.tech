@@ -1,0 +1,194 @@
+{
+ "slug": "app-register",
+ "title": {
+  "en": "Register as an expert applicant",
+  "fr": "S’inscrire comme candidat expert",
+  "ar": "سجّل بصفتك متقدمًا خبيرًا"
+ },
+ "description": {
+  "en": "Open an applicant file. Registration is not a job offer.",
+  "fr": "Ouvrez un dossier de candidature. L’inscription ne constitue pas une offre d’emploi.",
+  "ar": "افتح ملف متقدم. التسجيل ليس عرض عمل."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "reg-hero",
+   "variant": "classic",
+   "gradient": "technology",
+   "title": {
+    "en": "Open your **applicant file.**",
+    "fr": "Ouvrez votre **dossier de candidature.**",
+    "ar": "افتح **ملفك بصفتك متقدمًا.**"
+   },
+   "lead": {
+    "en": "One file, one identity. Registration starts certification; it is not a job offer.",
+    "fr": "Un dossier, une identité. L’inscription lance le processus de certification ; elle ne constitue pas une offre d’emploi.",
+    "ar": "ملف واحد، وهوية واحدة. يبدأ التسجيل إجراءات الاعتماد؛ وليس عرض عمل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the form",
+      "fr": "Ouvrir le formulaire",
+      "ar": "افتح النموذج"
+     },
+     "href": "#reg-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Register",
+    "fr": "S’inscrire",
+    "ar": "سجّل"
+   },
+   "note": {
+    "en": "A part is an investment in a path, not a job.",
+    "fr": "Une part est un investissement dans un parcours, pas un emploi.",
+    "ar": "المشاركة استثمار في مسار، وليست وظيفة."
+   }
+  },
+  {
+   "type": "form",
+   "id": "reg-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/app/register",
+   "title": {
+    "en": "Applicant file",
+    "fr": "Dossier de candidature",
+    "ar": "ملف المتقدم"
+   },
+   "submit": {
+    "en": "Register",
+    "fr": "S’inscrire",
+    "ar": "سجّل"
+   },
+   "fields": [
+    {
+     "name": "name",
+     "label": {
+      "en": "Full name",
+      "fr": "Nom complet",
+      "ar": "الاسم الكامل"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "email",
+     "label": {
+      "en": "Email",
+      "fr": "E-mail",
+      "ar": "البريد الإلكتروني"
+     },
+     "type": "email",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "phone",
+     "label": {
+      "en": "Phone",
+      "fr": "Téléphone",
+      "ar": "الهاتف"
+     },
+     "type": "tel",
+     "required": false,
+     "span": 1
+    },
+    {
+     "name": "region",
+     "label": {
+      "en": "Governorate",
+      "fr": "Gouvernorat",
+      "ar": "الولاية"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "": {
+       "en": "Choose…",
+       "fr": "Choisissez…",
+       "ar": "اختر…"
+      }
+     }
+    },
+    {
+     "name": "diploma",
+     "label": {
+      "en": "Diploma level",
+      "fr": "Niveau de diplôme",
+      "ar": "مستوى الشهادة"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "licence": {
+       "en": "Licence / Bachelor",
+       "fr": "Licence / Bachelor",
+       "ar": "الإجازة / البكالوريوس"
+      },
+      "maitrise": {
+       "en": "Maîtrise / Master",
+       "fr": "Maîtrise / Master",
+       "ar": "الماجستير"
+      },
+      "engineer": {
+       "en": "Engineer",
+       "fr": "Ingénieur",
+       "ar": "الهندسة"
+      },
+      "phd": {
+       "en": "Doctorate",
+       "fr": "Doctorat",
+       "ar": "الدكتوراه"
+      },
+      "other": {
+       "en": "Other",
+       "fr": "Autre",
+       "ar": "أخرى"
+      }
+     }
+    },
+    {
+     "name": "field",
+     "label": {
+      "en": "Field of study",
+      "fr": "Domaine d’études",
+      "ar": "مجال الدراسة"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "service",
+     "label": {
+      "en": "Service of interest (optional)",
+      "fr": "Service qui vous intéresse (facultatif)",
+      "ar": "الخدمة محل الاهتمام (اختياري)"
+     },
+     "type": "text",
+     "required": false,
+     "span": 1
+    },
+    {
+     "name": "accept",
+     "label": {
+      "en": "I have read the [declared limits](/trust/statement/).",
+      "fr": "J’ai lu les [limites déclarées](/trust/statement/).",
+      "ar": "لقد قرأت [الحدود المعلنة](/trust/statement/)."
+     },
+     "type": "checkbox",
+     "required": true,
+     "span": 2
+    }
+   ]
+  }
+ ]
+}

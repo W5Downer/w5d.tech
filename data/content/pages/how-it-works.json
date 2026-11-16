@@ -1,0 +1,256 @@
+{
+ "slug": "how-it-works",
+ "title": {
+  "en": "How it works — from diploma to weekly delivery",
+  "fr": "Comment ça marche — du diplôme aux livraisons hebdomadaires",
+  "ar": "كيف تسير العملية — من الشهادة إلى التسليم الأسبوعي"
+ },
+ "description": {
+  "en": "Four levels of certification, weekly reports due Friday 12:00, 5% random sampling, public rollups.",
+  "fr": "Quatre niveaux de certification, des rapports hebdomadaires à remettre le vendredi à 12:00, un échantillonnage aléatoire de 5 %, des synthèses agrégées publiques.",
+  "ar": "أربعة مستويات للاعتماد، وتقارير أسبوعية موعدها يوم الجمعة 12:00، وأخذ عينات عشوائية بنسبة 5%، وملخصات إجمالية علنية."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "how-hero",
+   "variant": "classic",
+   "gradient": "sciences",
+   "title": {
+    "en": "How it works, **step by step.**",
+    "fr": "Comment ça marche, **étape par étape.**",
+    "ar": "كيف تسير العملية، **خطوة بخطوة.**"
+   },
+   "lead": {
+    "en": "Four certification levels. A weekly cycle. A {{ quality.sampling_percent }}% random audit. A public rollup.",
+    "fr": "Quatre niveaux de certification. Un cycle hebdomadaire. Un audit aléatoire de {{ quality.sampling_percent }} %. Une synthèse agrégée publique.",
+    "ar": "أربعة مستويات للاعتماد. دورة أسبوعية. تدقيق عشوائي بنسبة {{ quality.sampling_percent }}%. وملخص إجمالي علني."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Start L1",
+      "fr": "Commencer au niveau L1",
+      "ar": "ابدأ L1"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Method",
+    "fr": "Méthode",
+    "ar": "المنهجية"
+   }
+  },
+  {
+   "type": "steps",
+   "id": "how-levels",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Four certification levels",
+    "fr": "Quatre niveaux de certification",
+    "ar": "أربعة مستويات للاعتماد"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "L1 Foundations",
+      "fr": "L1 Fondamentaux",
+      "ar": "L1 الأساسيات"
+     },
+     "body": {
+      "en": "Vocabulary, evidence rules and the boundary of your service.",
+      "fr": "Vocabulaire, règles de preuve et limites de votre service.",
+      "ar": "المفردات، وقواعد الأدلة، وحدود نطاق خدمتك."
+     }
+    },
+    {
+     "title": {
+      "en": "L2 Practice",
+      "fr": "L2 Pratique",
+      "ar": "L2 الممارسة"
+     },
+     "body": {
+      "en": "A supervised case with a real acceptance rubric.",
+      "fr": "Un cas supervisé avec une grille d’acceptation réelle.",
+      "ar": "حالة تحت الإشراف، مع معيار قبول فعلي."
+     }
+    },
+    {
+     "title": {
+      "en": "L3 Delivery",
+      "fr": "L3 Livraison",
+      "ar": "L3 التسليم"
+     },
+     "body": {
+      "en": "A full weekly unit with a named reviewer.",
+      "fr": "Une unité hebdomadaire complète avec un évaluateur désigné.",
+      "ar": "وحدة أسبوعية كاملة، مع مراجع محدد بالاسم."
+     }
+    },
+    {
+     "title": {
+      "en": "L4 Review",
+      "fr": "L4 Révision",
+      "ar": "L4 المراجعة"
+     },
+     "body": {
+      "en": "Reviewing others' units; eligibility to be a manager candidate.",
+      "fr": "Révision des unités des autres ; admissibilité au statut de candidat au poste de responsable.",
+      "ar": "مراجعة وحدات الآخرين؛ والأهلية للترشح لمنصب مدير."
+     }
+    }
+   ]
+  },
+  {
+   "type": "definitions",
+   "id": "how-week",
+   "tier": "i",
+   "focus": 2,
+   "title": {
+    "en": "The weekly cycle",
+    "fr": "Le cycle hebdomadaire",
+    "ar": "الدورة الأسبوعية"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "Monday",
+      "fr": "Lundi",
+      "ar": "الاثنين"
+     },
+     "def": {
+      "en": "Directives issued per team.",
+      "fr": "Consignes émises par équipe.",
+      "ar": "تُصدر التوجيهات لكل فريق."
+     }
+    },
+    {
+     "term": {
+      "en": "Friday 12:00",
+      "fr": "Vendredi 12:00",
+      "ar": "الجمعة 12:00"
+     },
+     "def": {
+      "en": "Reports due.",
+      "fr": "Rapports à remettre.",
+      "ar": "موعد تسليم التقارير."
+     }
+    },
+    {
+     "term": {
+      "en": "Friday–Sunday",
+      "fr": "Vendredi–dimanche",
+      "ar": "الجمعة–الأحد"
+     },
+     "def": {
+      "en": "Manager review and approvals.",
+      "fr": "Révision et approbations du responsable.",
+      "ar": "مراجعة المدير والموافقات."
+     }
+    },
+    {
+     "term": {
+      "en": "Lock",
+      "fr": "Verrouillage",
+      "ar": "الإقفال"
+     },
+     "def": {
+      "en": "The week is locked; edits become dated corrections.",
+      "fr": "La semaine est verrouillée ; les modifications deviennent des corrections datées.",
+      "ar": "يُقفل الأسبوع؛ وتُسجل التعديلات على هيئة تصحيحات مؤرخة."
+     }
+    },
+    {
+     "term": {
+      "en": "Rollup",
+      "fr": "Consolidation",
+      "ar": "التجميع"
+     },
+     "def": {
+      "en": "Counts and KPIs are written to the daily rollup.",
+      "fr": "Les nombres et les KPI sont consignés dans la consolidation quotidienne.",
+      "ar": "تُسجل الأعداد ومؤشرات KPI في التقرير التجميعي اليومي."
+     }
+    },
+    {
+     "term": {
+      "en": "Archive",
+      "fr": "Archive",
+      "ar": "الأرشيف"
+     },
+     "def": {
+      "en": "Evidence is archived with a manifest.",
+      "fr": "Les preuves sont archivées avec un manifeste.",
+      "ar": "تُؤرشف الأدلة مرفقةً ببيان محتويات."
+     }
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "how-sampling",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "{{ quality.sampling_percent }}% sampling, honestly",
+    "fr": "{{ quality.sampling_percent }}% d’échantillonnage, en toute transparence",
+    "ar": "أخذ عينات بنسبة {{ quality.sampling_percent }}%، بكل شفافية"
+   },
+   "paragraphs": [
+    {
+     "en": "A random {{ quality.sampling_percent }}% of reports is re-checked against source evidence each week. That is about {{ d.reviews_per_week }} reviews a week at the design ceiling.",
+     "fr": "Chaque semaine, un échantillon aléatoire de {{ quality.sampling_percent }}% des rapports est vérifié à nouveau à partir des preuves sources. Cela représente environ {{ d.reviews_per_week }} vérifications par semaine au plafond prévu.",
+     "ar": "تُعاد مراجعة عينة عشوائية بنسبة {{ quality.sampling_percent }}% من التقارير أسبوعيًا ومقارنتها بالأدلة المصدرية. ويعادل ذلك نحو {{ d.reviews_per_week }} مراجعة أسبوعيًا عند الحد الأقصى المعتمد في التصميم."
+    },
+    {
+     "en": "Sampling does not replace manager review of every report. It exists so that nobody knows which report will be re-checked.",
+     "fr": "L’échantillonnage ne remplace pas l’examen de chaque rapport par un responsable. Il permet que personne ne sache quel rapport sera vérifié à nouveau.",
+     "ar": "لا يحل أخذ العينات محل مراجعة المدير لكل تقرير. والغرض منه ضمان ألا يعرف أحد أي تقرير ستُعاد مراجعته."
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Sampling details",
+      "fr": "Détails de l’échantillonnage",
+      "ar": "تفاصيل أخذ العينات"
+     },
+     "href": "/trust/sampling/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "how-final",
+   "gradient": "sciences",
+   "title": {
+    "en": "Ready to start **L1?**",
+    "fr": "Prêt à commencer **L1?**",
+    "ar": "هل أنت مستعد للبدء في **L1؟**"
+   },
+   "body": {
+    "en": "Check your eligibility first.",
+    "fr": "Vérifiez d’abord votre admissibilité.",
+    "ar": "تحقّق أولًا من أهليتك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

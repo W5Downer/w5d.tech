@@ -1,0 +1,167 @@
+{
+ "slug": "eia",
+ "id": 78,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Environmental Impact Assessment",
+  "fr": "Évaluation de l’impact environnemental",
+  "ar": "تقييم الأثر البيئي"
+ },
+ "short": {
+  "en": "The service provides scoping, baseline, mitigation plans.",
+  "fr": "Évaluer les impacts environnementaux avant décision.",
+  "ar": "تقييم الآثار البيئية قبل اتخاذ القرار."
+ },
+ "abstract": {
+  "en": "Environmental impact assessment — scoping studies, baseline data collection, mitigation planning, and monitoring frameworks for major projects.",
+  "fr": "Évaluation de l’impact environnemental — études de cadrage, collecte de données de référence, planification des mesures d’atténuation et cadres de suivi pour les grands projets.",
+  "ar": "تقييم الأثر البيئي — دراسات تحديد النطاق، وجمع البيانات الأساسية، والتخطيط للتخفيف من الآثار، وأطر الرصد للمشاريع الكبرى."
+ },
+ "long": [
+  {
+   "en": "The Environmental Impact Assessment service organises a weekly work package around scoping assessments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 scoping assessments; 300 baseline field packages; 200 mitigation registers; 100 monitoring plans. Environmental impact assessment — scoping studies, baseline data collection, mitigation planning, and monitoring frameworks for major projects. Specialists sequence those methods against the accepted weekly package. The governing boundary is that assessment supports but does not replace legally required environmental authorisation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’évaluation de l’impact environnemental organise un lot de travail hebdomadaire autour des études de cadrage, plutôt que de faire de la présence une fin en soi. Avec une capacité pleinement dotée en ressources, son plan pilote prévoit 200 études de cadrage ; 300 lots de collecte de données de référence sur le terrain ; 200 registres des mesures d’atténuation ; 100 plans de suivi. Évaluation de l’impact environnemental — études de cadrage, collecte de données de référence, planification des mesures d’atténuation et cadres de suivi pour les grands projets. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire validé. Le principe directeur est que l’évaluation appuie l’autorisation environnementale légalement requise, sans s’y substituer. Il s’agit de résultats échelonnés issus de cas faisant l’objet d’un mandat, et non d’un engagement à achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة تقييم الأثر البيئي حزمة عمل أسبوعية تتمحور حول تقييمات تحديد النطاق، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توفر القدرة التشغيلية الكاملة والموارد اللازمة، إنجاز 200 تقييم لتحديد النطاق؛ و300 حزمة عمل ميدانية للبيانات الأساسية؛ و200 سجل لإجراءات التخفيف؛ و100 خطة رصد. تقييم الأثر البيئي — دراسات تحديد النطاق، وجمع البيانات الأساسية، والتخطيط للتخفيف من الآثار، وأطر الرصد للمشاريع الكبرى. ويُنسّق الاختصاصيون تلك الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. ويتمثل الحد الناظم في أن التقييم يدعم التفويض البيئي المطلوب قانونًا، لكنه لا يحل محله. وهذه مخرجات مرحلية لحالات جرى التكليف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `eia`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of scoping assessments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui atteignaient 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service en particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `eia`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire nommé et d’une définition validée des études de cadrage, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 تحديات تونس في المياه والسواحل والتحول في قطاع الطاقة، بما فيها فاقد التوزيع لدى SONEDE الذي بلغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول لهذه الخدمة بعينها. وقد تؤدي تعددية الجهات المالكة للأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنيًا. لذلك، تتمثل الاستجابة المقترحة لـ `eia` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا مقبولًا لتقييمات تحديد النطاق، لا في تبرير التوظيف بالاستناد حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the scoping assessments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks baseline field packages before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted scoping assessments from rejected or deferred work and records blockers around mitigation registers. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères de réception des études de cadrage ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les lots de collecte de données de référence sur le terrain avant leur approbation. L’audit aléatoire proposé de 5% revérifie les justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse consolidée du service distingue les études de cadrage acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux registres des mesures d’atténuation. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تقييمات تحديد النطاق؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، بينما يراجع مراجع مختص حزم العمل الميدانية للبيانات الأساسية قبل اعتمادها. وتعيد عملية التدقيق العشوائي المقترحة، بنسبة 5%، التحقق من أدلة المصدر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين تقييمات تحديد النطاق المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بسجلات إجراءات التخفيف. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "environmental sciences, ecology, environmental engineering and social assessment",
+  "fr": "sciences de l’environnement, écologie, génie environnemental et évaluation sociale",
+  "ar": "العلوم البيئية، وعلم البيئة، والهندسة البيئية، والتقييم الاجتماعي"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Scoping assessments",
+    "fr": "Études de cadrage",
+    "ar": "تقييمات تحديد النطاق"
+   },
+   "unit": {
+    "en": "scoping assessments",
+    "fr": "études de cadrage",
+    "ar": "تقييمات تحديد النطاق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Baseline field packages",
+    "fr": "Lots de collecte de données de référence sur le terrain",
+    "ar": "حزم العمل الميدانية للبيانات الأساسية"
+   },
+   "unit": {
+    "en": "baseline field packages",
+    "fr": "lots de collecte de données de référence sur le terrain",
+    "ar": "حزم العمل الميدانية للبيانات الأساسية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Mitigation registers",
+    "fr": "Registres des mesures d’atténuation",
+    "ar": "سجلات إجراءات التخفيف"
+   },
+   "unit": {
+    "en": "mitigation registers",
+    "fr": "registres des mesures d’atténuation",
+    "ar": "سجلات تدابير التخفيف"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Monitoring plans",
+    "fr": "Plans de suivi",
+    "ar": "خطط الرصد"
+   },
+   "unit": {
+    "en": "monitoring plans",
+    "fr": "plans de suivi",
+    "ar": "خطط الرصد"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `eia` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the scoping assessments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation d’`eia` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, qui relient les évaluations de cadrage à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `eia` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + معرّفات المنهجية/الإصدار والبيانات المصدرية القابلة لإعادة الإنتاج، وتربط التقييمات الأولية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted scoping assessments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant le vendredi à 12:00 ; **≥2 évaluations de cadrage acceptées** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité et de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥2 من التقييمات الأولية** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. يؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، وتتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على النتيجة الإيجابية. هذه أهداف تجريبية، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "assessment supports but does not replace legally required environmental authorisation",
+  "fr": "l’évaluation étaye l’autorisation environnementale, mais ne remplace pas celle requise par la loi",
+  "ar": "يدعم التقييم التفويض البيئي المطلوب قانونًا، لكنه لا يحل محله"
+ },
+ "depends": [
+  {
+   "slug": "urban-planning",
+   "id": 28
+  },
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "mining-tech",
+   "id": 127
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "15",
+   "target": "15.1"
+  },
+  {
+   "goal": "15",
+   "target": "15.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Baseline surveys omit seasonal habitats → reconcile source records with the scoping assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les études de référence omettent les habitats saisonniers → rapprocher les données sources de la liste de contrôle d’acceptation des évaluations de cadrage et désigner un responsable des mesures correctives.",
+   "ar": "إغفال المسوحات الأساسية للموائل الموسمية ← مطابقة السجلات المصدرية مع قائمة التحقق لقبول التقييمات الأولية وتحديد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Developer control suppresses negative findings → reconcile source records with the scoping assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le contrôle exercé par le développeur supprime les constats négatifs → rapprocher les données sources de la liste de contrôle d’acceptation des évaluations de cadrage et désigner un responsable des mesures correctives.",
+   "ar": "قيام المطوّر بحجب النتائج السلبية ← مطابقة السجلات المصدرية مع قائمة التحقق لقبول التقييمات الأولية وتحديد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Mitigation has no accountable operator → reconcile source records with the scoping assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Aucun opérateur responsable n’est désigné pour les mesures d’atténuation → rapprocher les données sources de la liste de contrôle d’acceptation des évaluations de cadrage et désigner un responsable des mesures correctives.",
+   "ar": "عدم وجود مشغّل مسؤول عن تدابير التخفيف ← مطابقة السجلات المصدرية مع قائمة التحقق لقبول التقييمات الأولية وتحديد المسؤول عن الإجراءات التصحيحية."
+  }
+ ]
+}

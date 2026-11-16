@@ -1,0 +1,167 @@
+{
+ "slug": "cold-chain",
+ "id": 129,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Cold Chain & Logistics Tech",
+  "fr": "Technologies de la chaîne du froid et de la logistique",
+  "ar": "تقنيات سلسلة التبريد والخدمات اللوجستية"
+ },
+ "short": {
+  "en": "The service provides refrigeration, tracking, last-mile.",
+  "fr": "Fiabiliser la chaîne du froid des produits sensibles.",
+  "ar": "تحسين موثوقية سلسلة تبريد المنتجات الحساسة."
+ },
+ "abstract": {
+  "en": "Cold chain and logistics — refrigeration, real-time tracking, and last-mile delivery systems for pharma, food, and perishables.",
+  "fr": "Chaîne du froid et logistique — réfrigération, suivi en temps réel et systèmes de livraison du dernier kilomètre pour les produits pharmaceutiques, les denrées alimentaires et les produits périssables.",
+  "ar": "سلسلة التبريد والخدمات اللوجستية — أنظمة التبريد والتتبع الآني والتوصيل في المرحلة الأخيرة للأدوية والأغذية والمواد سريعة التلف."
+ },
+ "long": [
+  {
+   "en": "The Cold Chain & Logistics Tech service organises a weekly work package around temperature logger checks, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 temperature logger checks; 300 route qualification files; 500 cold room inspections; 200 excursion investigation reports. Cold chain and logistics — refrigeration, real-time tracking, and last-mile delivery systems for pharma, food, and perishables. Specialists sequence those methods against the accepted weekly package. The governing boundary is that temperature excursions trigger product-specific qualified disposition, not automatic release. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Technologies de la chaîne du froid et de la logistique organise un lot de travail hebdomadaire autour des contrôles des enregistreurs de température, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 contrôles d’enregistreurs de température ; 300 dossiers de qualification des itinéraires ; 500 inspections de chambres froides ; 200 rapports d’enquête sur les excursions de température. Chaîne du froid et logistique — réfrigération, suivi en temps réel et systèmes de livraison du dernier kilomètre pour les produits pharmaceutiques, les denrées alimentaires et les produits périssables. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les excursions de température déclenchent une décision de disposition qualifiée, propre au produit, et non une libération automatique. Il s’agit de résultats échelonnés issus de cas commandés, et non d’un engagement à mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة تقنيات سلسلة التبريد والخدمات اللوجستية حزمة عمل أسبوعية تتمحور حول فحوصات مسجلات درجة الحرارة، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند العمل بكامل الطاقة الاستيعابية المزوّدة بالموارد، 2000 فحص لمسجلات درجة الحرارة؛ و300 ملف لتأهيل المسارات؛ و500 عملية تفتيش لغرف التبريد؛ و200 تقرير للتحقيق في حالات الانحراف. سلسلة التبريد والخدمات اللوجستية — أنظمة التبريد والتتبع الآني والتوصيل في المرحلة الأخيرة للأدوية والأغذية والمواد سريعة التلف. ويُنسّق المختصون هذه الأساليب وفقًا للحزمة الأسبوعية المعتمدة. والقاعدة الحاكمة هي أن حالات الانحراف في درجة الحرارة تستدعي قرارًا مؤهلًا بشأن التصرف في المنتج حسب نوعه، لا الإفراج عنه تلقائيًا. وهذه مخرجات مرحلية ناتجة عن حالات تم تكليف الفرق بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `cold-chain`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of temperature logger checks, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015–2020, tandis que l’INS estime le chômage des diplômés à 26.6% au T2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne peut remplacer des compétences en santé vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre non agréée. Pour `cold-chain`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des contrôles des enregistreurs de température, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، بينما يقدّر INS معدل بطالة الخريجين بـ26.6% في الربع الثاني من 2026. وتوضح هاتان الفئتان المختلفتان من السكان سبب عدم إمكانية الاستعاضة عن القدرات الصحية التي جرى التحقق منها بإتاحة الخريجين عمومًا. ويحتاج مستخدمو الأبحاث والمعدات الصحية إلى موظفين مؤهلين وموافقة مستنيرة ومعلومات آمنة ومرافق مرخصة، لا إلى قوة عاملة غير مرخصة. لذلك، تتمثل الاستجابة المقترحة لـ`cold-chain` في سير عمل تعاقدي ذي مستفيد محدد وتعريف معتمد لفحوصات مسجلات درجة الحرارة، لا في التوظيف الذي يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the temperature logger checks acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks route qualification files before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted temperature logger checks from rejected or deferred work and records blockers around cold room inspections. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des contrôles des enregistreurs de température ; 100 responsables traduisent ces critères en affectations d’équipes d’environ 10 experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de qualification des itinéraires avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le récapitulatif du service distingue les contrôles des enregistreurs de température acceptés des travaux rejetés ou différés, et consigne les obstacles concernant les inspections de chambres froides. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول فحوصات مسجلات درجة الحرارة؛ ويحوّل 100 مدير هذه المعايير إلى مهام للفرق، تضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، بينما يتحقق مراجع مختص من ملفات تأهيل المسارات قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين فحوصات مسجلات درجة الحرارة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بعمليات تفتيش غرف التبريد. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "refrigeration engineering, food science, logistics and quality management",
+  "fr": "ingénierie frigorifique, sciences alimentaires, logistique et gestion de la qualité",
+  "ar": "هندسة التبريد وعلوم الأغذية والخدمات اللوجستية وإدارة الجودة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Sfax, Sidi Bouzid and participating food/health logistics corridors",
+  "fr": "Sfax, Sidi Bouzid et les corridors logistiques alimentaires et sanitaires participants",
+  "ar": "صفاقس وسيدي بوزيد وممرات الخدمات اللوجستية للأغذية والصحة المشاركة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Temperature logger checks",
+    "fr": "Contrôles des enregistreurs de température",
+    "ar": "فحوصات مسجلات درجة الحرارة"
+   },
+   "unit": {
+    "en": "temperature logger checks",
+    "fr": "contrôles des enregistreurs de température",
+    "ar": "فحوصات مسجلات درجة الحرارة"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Route qualification files",
+    "fr": "Dossiers de qualification des itinéraires",
+    "ar": "ملفات تأهيل المسار"
+   },
+   "unit": {
+    "en": "route qualification files",
+    "fr": "dossiers de qualification des itinéraires",
+    "ar": "ملفات تأهيل المسار"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Cold room inspections",
+    "fr": "Inspections des chambres froides",
+    "ar": "عمليات تفتيش غرف التبريد"
+   },
+   "unit": {
+    "en": "cold room inspections",
+    "fr": "inspections des chambres froides",
+    "ar": "عمليات تفتيش غرف التبريد"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Excursion investigation reports",
+    "fr": "Rapports d’enquête sur les dépassements de température",
+    "ar": "تقارير التحقيق في حالات تجاوز درجات الحرارة"
+   },
+   "unit": {
+    "en": "excursion investigation reports",
+    "fr": "rapports d’enquête sur les dépassements de température",
+    "ar": "تقارير التحقيق في حالات تجاوز درجات الحرارة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cold-chain` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the temperature logger checks to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation de la `cold-chain` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + le code/la configuration versionnés, les tests et les journaux de déploiement ou de récupération, établissant le lien entre les contrôles des enregistreurs de température et la source, le réviseur, la version, le journal des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة قبول `cold-chain` مرتبطة بحالة معينة ملف قبول PDF/A + بيان مصدر CSV/JSON + الشيفرة/التهيئة ذات الإصدارات المحددة، والاختبارات، وسجلات النشر أو الاستعادة، مع ربط فحوصات مسجلات درجة الحرارة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted temperature logger checks** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant ven. 12:00 ; **≥16 contrôles acceptés des enregistreurs de température** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur éligible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score vert. Il s’agit de cibles pour le pilote, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ وإجراء **≥16 فحصًا مقبولًا لمسجلات درجة الحرارة** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالات؛ وتقديم **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. تؤدي الإجازات المعتمدة والتعديلات إلى تغيير المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أثرها أي تقييم أخضر. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "temperature excursions trigger product-specific qualified disposition, not automatic release",
+  "fr": "les dépassements de température déclenchent une décision de conformité qualifiée propre au produit, et non une libération automatique",
+  "ar": "يؤدي تجاوز درجات الحرارة إلى تحديد التصرف المناسب لكل منتج على حدة، ولا يعني الإفراج عنه تلقائيًا"
+ },
+ "depends": [
+  {
+   "slug": "food-safety",
+   "id": 69
+  },
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "agri-science",
+   "id": 56
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sensor placement misses warm zones → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Un mauvais positionnement des capteurs ne permet pas de détecter les zones chaudes → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "يؤدي عدم وضع المستشعرات في المناطق الأدفأ إلى إعادة إجراء الفحوصات الحرجة بالاستناد إلى مراجع قابلة للتتبع، وعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Records fabricated during outages → test operator handover, maintenance dependencies and an available recovery procedure.",
+   "fr": "Des dossiers fabriqués pendant les interruptions de service → tester le transfert entre opérateurs, les dépendances liées à la maintenance et l’existence d’une procédure de récupération.",
+   "ar": "تُختبر السجلات المُختلقة أثناء انقطاع الخدمة عبر التحقق من تسليم المهام بين المشغلين، والاعتماد على أعمال الصيانة، وتوافر إجراء للاستعادة."
+  },
+  {
+   "en": "Last-mile handling breaks validated conditions → reconcile source records with the temperature logger checks acceptance checklist and assign corrective-action ownership.",
+   "fr": "La manutention du dernier kilomètre compromet les conditions validées → rapprocher les dossiers sources de la liste de contrôle d’acceptation des contrôles des enregistreurs de température et attribuer la responsabilité des actions correctives.",
+   "ar": "يؤدي الإخلال بالشروط المعتمدة أثناء التعامل في المرحلة الأخيرة إلى مطابقة سجلات المصدر مع قائمة التحقق لقبول فحوصات مسجلات درجة الحرارة، وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "cybersecurity",
+ "id": 106,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Cybersecurity Operations",
+  "fr": "Opérations de cybersécurité",
+  "ar": "عمليات الأمن السيبراني"
+ },
+ "short": {
+  "en": "The service provides sOC, pentesting, incident response.",
+  "fr": "Détecter et traiter les incidents de cybersécurité.",
+  "ar": "كشف حوادث الأمن السيبراني ومعالجتها."
+ },
+ "abstract": {
+  "en": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001.",
+  "fr": "Opérations de cybersécurité — centre des opérations de sécurité (SOC), tests d’intrusion et réponse aux incidents conformes aux normes NIST et ISO 27001.",
+  "ar": "عمليات الأمن السيبراني — مركز العمليات الأمنية (SOC)، واختبار الاختراق، والاستجابة للحوادث، بما يتماشى مع NIST وISO 27001."
+ },
+ "long": [
+  {
+   "en": "The Cybersecurity Operations service organises a weekly work package around alert investigations, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 3000 alert investigations; 200 authorised security tests; 100 incident exercises; 500 remediation verifications. Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001. Specialists sequence those methods against the accepted weekly package. The governing boundary is that testing requires written scope and incident actions preserve evidence. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des opérations de cybersécurité organise un lot de travail hebdomadaire autour des investigations d’alertes, plutôt que de considérer la présence comme le produit. À pleine capacité et avec des ressources adéquates, son plan pilote prévoit 3000 investigations d’alertes ; 200 tests de sécurité autorisés ; 100 exercices de gestion des incidents ; 500 vérifications de remédiation. Opérations de cybersécurité — centre des opérations de sécurité (SOC), tests d’intrusion et réponse aux incidents conformes aux normes NIST et ISO 27001. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les tests nécessitent un périmètre écrit et que les interventions liées aux incidents préservent les éléments probants. Il s’agit de résultats progressifs issus de cas commandités, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة عمليات الأمن السيبراني حزمة عمل أسبوعية تتمحور حول التحقيق في التنبيهات، بدلًا من اعتبار الحضور هو المنتج. وتتضمن خطتها التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 3000 تحقيق في التنبيهات؛ و200 اختبار أمني مُصرّح به؛ و100 تمرين على الحوادث؛ و500 عملية تحقق من المعالجة. عمليات الأمن السيبراني — مركز العمليات الأمنية (SOC)، واختبار الاختراق، والاستجابة للحوادث، بما يتماشى مع NIST وISO 27001. ويرتب المختصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. ويقضي الضابط الحاكم بأن الاختبار يتطلب نطاقًا مكتوبًا، وأن إجراءات التعامل مع الحوادث تحافظ على الأدلة. وهذه مخرجات مرحلية ناتجة عن حالات جرى التكليف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `cybersecurity`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of alert investigations, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude 2026 de la Banque mondiale sur les compétences numériques relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne, formelles et urbaines jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes liées aux compétences rencontrées par les employeurs. Aucune de ces sources ne vérifie le nombre national de postes vacants dans ce créneau technique. L’intégration, la recette utilisateur et la maintenance continue nécessitent un responsable du système engagé ; affecter des développeurs isolément ne garantit ni cette coordination ni la présence d’un acheteur. Pour la `cybersecurity`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition validée des investigations d’alertes, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على المهارات التقنية والهجينة في مختلف القطاعات التونسية، مستندةً أساسًا إلى أدلة إلكترونية رسمية وحضرية حتى عام 2025. وتوثّق مراجعة منظمة التعاون الاقتصادي والتنمية (OECD) الصادرة في يونيو 2024، على نحو منفصل، قيود المهارات لدى أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدمين والصيانة المستمرة وجود مالك ملتزم للنظام؛ فتعيين مطورين كلٌّ على حدة لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، فإن الاستجابة المقترحة لـ`cybersecurity` هي سير عمل تعاقدي يضم جهة مستفيدة محددة وتعريفًا مقبولًا للتحقيقات في التنبيهات، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the alert investigations acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks authorised security tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted alert investigations from rejected or deferred work and records blockers around incident exercises. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des investigations d’alertes ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les tests de sécurité autorisés avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La consolidation du service distingue les investigations d’alertes acceptées du travail rejeté ou reporté et consigne les obstacles liés aux exercices de gestion des incidents. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول التحقيقات في التنبيهات؛ ويحوّل 100 مدير هذه المعايير إلى مهام فرق تضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مؤهل من الاختبارات الأمنية المُصرّح بها قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين التحقيقات المقبولة في التنبيهات والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتمارين الحوادث. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "cybersecurity, computer science and authorised incident response",
+  "fr": "cybersécurité, informatique et réponse autorisée aux incidents",
+  "ar": "الأمن السيبراني وعلوم الحاسوب والاستجابة للحوادث المُصرّح بها"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Alert investigations",
+    "fr": "Investigations d’alertes",
+    "ar": "التحقيقات في التنبيهات"
+   },
+   "unit": {
+    "en": "alert investigations",
+    "fr": "investigations d’alertes",
+    "ar": "التحقيقات في التنبيهات"
+   },
+   "target": 3000
+  },
+  {
+   "name": {
+    "en": "Authorised security tests",
+    "fr": "Tests de sécurité autorisés",
+    "ar": "اختبارات أمنية مصرّح بها"
+   },
+   "unit": {
+    "en": "authorised security tests",
+    "fr": "tests de sécurité autorisés",
+    "ar": "اختبارات أمنية مصرّح بها"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Incident exercises",
+    "fr": "Exercices de gestion des incidents",
+    "ar": "تمارين الاستجابة للحوادث"
+   },
+   "unit": {
+    "en": "incident exercises",
+    "fr": "exercices de gestion des incidents",
+    "ar": "تمارين الاستجابة للحوادث"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Remediation verifications",
+    "fr": "Vérifications des mesures correctives",
+    "ar": "عمليات التحقق من المعالجة"
+   },
+   "unit": {
+    "en": "remediation verifications",
+    "fr": "vérifications des mesures correctives",
+    "ar": "عمليات التحقق من المعالجة"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cybersecurity` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the alert investigations to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception de `cybersecurity` lié à un cas comprend un dossier de réception PDF/A + un manifeste source CSV/JSON + du code et des configurations versionnés, des tests et des journaux de déploiement ou de reprise, qui relient les investigations d’alertes à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `cybersecurity` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + شيفرة/تهيئة ذات إصدارات محددة، واختبارات وسجلات نشر أو استعادة، تربط التحقيقات في التنبيهات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥24 accepted alert investigations** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥24 investigations d’alertes acceptées** par équipe et par semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score positif. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم 9 من أصل 10 تقارير أسبوعية مؤهلة على الأقل** بحلول الجمعة 12:00؛ **24 تحقيقًا مقبولًا على الأقل في التنبيهات** لكل فريق أسبوعيًا، مع مراعاة تعقيد الحالة؛ **ما لا يزيد على طلب واحد لإعادة العمل مرتبط بالأدلة** لكل فريق أسبوعيًا. تؤدي الإجازات المعتمدة والتعديلات إلى تغيير المقام المؤهل، وتتقدم العيوب الحرجة المتعلقة بالسلامة/الخصوصية على النتيجة الخضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "testing requires written scope and incident actions preserve evidence",
+  "fr": "les tests exigent un périmètre écrit et les actions liées aux incidents préservent les éléments de preuve",
+  "ar": "يتطلب الاختبار نطاقًا مكتوبًا، وتحافظ إجراءات الاستجابة للحوادث على الأدلة"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "security-governance",
+   "id": 96
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "structural-monitoring",
+   "id": 47
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Unauthorised testing disrupts services → reconcile source records with the alert investigations acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des tests non autorisés perturbent les services → rapprocher les enregistrements sources de la liste de contrôle de réception des investigations d’alertes et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد يؤدي الاختبار غير المصرّح به إلى تعطيل الخدمات ← طابقوا سجلات المصدر مع قائمة التحقق لقبول التحقيقات في التنبيهات، وحددوا الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "False alerts exhaust analysts → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les fausses alertes épuisent les analystes → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitement formulée avant l’acceptation.",
+   "ar": "قد تستنزف التنبيهات الكاذبة جهود المحللين ← اشترطوا إجراء فحوص مستقلة للمصدر، واستخدام عنصر مقارنة، والإفصاح صراحةً عن مواطن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Containment destroys forensic evidence → reconcile source records with the alert investigations acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le confinement détruit les éléments de preuve forensiques → rapprocher les enregistrements sources de la liste de contrôle de réception des investigations d’alertes et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد يؤدي الاحتواء إلى إتلاف الأدلة الجنائية الرقمية ← طابقوا سجلات المصدر مع قائمة التحقق لقبول التحقيقات في التنبيهات، وحددوا الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "slug": "be-creater",
+ "id": 19,
+ "order": 19,
+ "icon": "palette",
+ "status": "concept",
+ "status_label": {
+  "en": "Concept",
+  "fr": "Concept",
+  "ar": "مفهوم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Be Creater",
+  "fr": "Sois plus créatif",
+  "ar": "كن أبدع"
+ },
+ "tagline": {
+  "en": "A 2030B project for the human dimension: the imagination. Concept.",
+  "fr": "Un projet 2030B pour la dimension humaine : l’imagination. Concept.",
+  "ar": "مشروع 2030B للبعد الإنساني: الخيال. تصوّري."
+ },
+ "outcome": [
+  {
+   "en": "Be Creater is one of the ten 2030B projects. Its human dimension is the imagination; its tool is \"Human imagination\"; its credit unit is INC (Innovation credit).",
+   "fr": "Be Creater est l’un des dix projets 2030B. Sa dimension humaine est l’imagination ; son outil est « Imagination humaine » ; son unité de crédit est INC (crédit d’innovation).",
+   "ar": "Be Creater أحد مشاريع 2030B العشرة. بُعده الإنساني هو الخيال؛ وأداته «الخيال الإنساني»؛ ووحدة رصيده هي INC (رصيد الابتكار)."
+  },
+  {
+   "en": "The Arabic index for this project is on file with three books: the guide for the person, the person and the machine, and the path from a skilled person to a self-training agent. The project is a concept: no product is live.",
+   "fr": "L’index arabe de ce projet est disponible et comprend trois livres : le guide destiné à la personne, la personne et la machine, et le parcours d’une personne qualifiée à un agent qui s’entraîne de manière autonome. Le projet est un concept : aucun produit n’est disponible.",
+   "ar": "فهرس المشروع باللغة العربية محفوظ، ويضم ثلاثة كتب: دليل الشخص، والشخص والآلة، والمسار من شخص ماهر إلى وكيل يتدرّب ذاتيًا. المشروع تصوّري: لا يوجد منتج متاح."
+  }
+ ],
+ "evidence": {
+  "en": "Arabic project index on file (completed 2026-11-15).",
+  "fr": "Index arabe du projet disponible (achevé le 2026-11-15).",
+  "ar": "فهرس المشروع باللغة العربية محفوظ (اكتمل في 2026-11-15)."
+ },
+ "services": [
+  "arts-economy",
+  "digital-storytelling",
+  "publishing"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Index completed",
+    "fr": "Index achevé",
+    "ar": "اكتمل الفهرس"
+   },
+   "body": {
+    "en": "Three-book index on file.",
+    "fr": "Index des trois livres disponible.",
+    "ar": "فهرس من ثلاثة كتب محفوظ."
+   }
+  },
+  {
+   "when": {
+    "en": "2030",
+    "fr": "2030",
+    "ar": "2030"
+   },
+   "title": {
+    "en": "Horizon",
+    "fr": "Horizon",
+    "ar": "الأفق"
+   },
+   "body": {
+    "en": "Target frame, not a delivery promise.",
+    "fr": "Cadre cible, et non engagement de livraison.",
+    "ar": "إطار مستهدف، وليس وعدًا بالتسليم."
+   }
+  }
+ ],
+ "gradient": "technology",
+ "code": "INC",
+ "dimension": "The imagination",
+ "parent": "2030b"
+}

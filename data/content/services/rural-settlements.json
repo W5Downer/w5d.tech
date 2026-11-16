@@ -1,0 +1,167 @@
+{
+ "slug": "rural-settlements",
+ "id": 43,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Rural Settlements & Housing",
+  "fr": "Implantations rurales et habitat",
+  "ar": "المستوطنات الريفية والإسكان"
+ },
+ "short": {
+  "en": "The service provides vernacular design, off-grid systems.",
+  "fr": "Adapter l'habitat rural aux services disponibles.",
+  "ar": "تكييف السكن الريفي مع الخدمات المتاحة."
+ },
+ "abstract": {
+  "en": "Rural settlements and housing — vernacular-informed design, off-grid water and energy systems, and community-managed construction delivery.",
+  "fr": "Implantations rurales et habitat — conception tenant compte des savoir-faire vernaculaires, systèmes d’eau et d’énergie hors réseau, et mise en œuvre de travaux gérée par les communautés.",
+  "ar": "المستوطنات الريفية والإسكان — تصميم يسترشد بالعمارة المحلية، وأنظمة المياه والطاقة المستقلة عن الشبكة، وتنفيذ أعمال البناء بإدارة المجتمع المحلي."
+ },
+ "long": [
+  {
+   "en": "The Rural Settlements & Housing service organises a weekly work package around settlement service audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 settlement service audits; 100 vernacular design packages; 100 off-grid option studies; 100 community delivery plans. Rural settlements and housing — vernacular-informed design, off-grid water and energy systems, and community-managed construction delivery. Specialists sequence those methods against the accepted weekly package. The governing boundary is that plans account for operating skills, seasonal access and secure tenure. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Implantations rurales et habitat organise un lot de travail hebdomadaire autour des audits des services dans les implantations, plutôt que de considérer la présence comme le produit. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 300 audits des services dans les implantations ; 100 dossiers de conception vernaculaire ; 100 études des options hors réseau ; 100 plans de mise en œuvre communautaire. Implantations rurales et habitat — conception tenant compte des savoir-faire vernaculaires, systèmes d’eau et d’énergie hors réseau, et mise en œuvre de travaux gérée par les communautés. Les spécialistes articulent ces méthodes autour du lot hebdomadaire accepté. La règle fondamentale est que les plans tiennent compte des compétences nécessaires à l’exploitation, de l’accès saisonnier et de la sécurité d’occupation foncière. Il s’agit de résultats échelonnés issus de missions commandées, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة المستوطنات الريفية والإسكان حزمة عمل أسبوعية تتمحور حول تدقيقات خدمات المستوطنات، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند بلوغ الطاقة التشغيلية الكاملة وتوفير الموارد اللازمة، تنفيذ 300 تدقيق لخدمات المستوطنات؛ و100 حزمة تصميم مسترشدة بالعمارة المحلية؛ و100 دراسة لخيارات الأنظمة المستقلة عن الشبكة؛ و100 خطة للتنفيذ المجتمعي. المستوطنات الريفية والإسكان — تصميم يسترشد بالعمارة المحلية، وأنظمة المياه والطاقة المستقلة عن الشبكة، وتنفيذ أعمال البناء بإدارة المجتمع المحلي. ويرتب المختصون تطبيق هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. ويتمثل الضابط الأساسي في أن تراعي الخطط مهارات التشغيل وإمكانية الوصول الموسمي وأمان حيازة الأراضي. وهذه مخرجات مرحلية من حالات متعاقد عليها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `rural-settlements`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of settlement service audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut laisser sans commande des travaux techniquement utiles. Pour `rural-settlements`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des audits des services dans les localités, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني مدروس، لا إلى طلب ممول لهذه الخدمة بعينها. وقد يؤدي انفصال مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى بقاء الأعمال المفيدة تقنياً من دون تكليف بتنفيذها. لذا، فإن الاستجابة المقترحة لـ `rural-settlements` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً مقبولاً لتدقيقات خدمات التجمعات السكنية، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the settlement service audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks vernacular design packages before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted settlement service audits from rejected or deferred work and records blockers around off-grid option studies. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit le référentiel d’acceptation des audits des services dans les localités ; 100 responsables répartissent les équipes d’environ dix experts entre les missions. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de conception vernaculaire avant approbation. L’audit aléatoire de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. La synthèse du service distingue les audits des services dans les localités acceptés des travaux rejetés ou différés et consigne les obstacles liés aux études d’options hors réseau. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات خدمات التجمعات السكنية؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم كل منها نحو عشرة خبراء. وتتيح الهويات المرتبطة بـ Dyon تحديد المساهمين المسؤولين، فيما يراجع مراجع مؤهل حزم التصميم المحلي قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز الملخص الإجمالي للخدمة بين تدقيقات خدمات التجمعات السكنية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق التي تواجه دراسات الخيارات غير المرتبطة بالشبكة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "north-west and centre-west rural settlements",
+  "fr": "localités rurales du nord-ouest et du centre-ouest",
+  "ar": "التجمعات الريفية في الشمال الغربي والوسط الغربي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Settlement service audits",
+    "fr": "Audits des services dans les localités",
+    "ar": "تدقيقات خدمات التجمعات السكنية"
+   },
+   "unit": {
+    "en": "settlement service audits",
+    "fr": "audits des services dans les localités",
+    "ar": "تدقيقات خدمات التجمعات السكنية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Vernacular design packages",
+    "fr": "Dossiers de conception vernaculaire",
+    "ar": "حزم التصميم المحلي"
+   },
+   "unit": {
+    "en": "vernacular design packages",
+    "fr": "dossiers de conception vernaculaire",
+    "ar": "حزم التصميم المحلي"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Off-grid option studies",
+    "fr": "Études d’options hors réseau",
+    "ar": "دراسات الخيارات غير المرتبطة بالشبكة"
+   },
+   "unit": {
+    "en": "off-grid option studies",
+    "fr": "études d’options hors réseau",
+    "ar": "دراسات الخيارات غير المرتبطة بالشبكة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Community delivery plans",
+    "fr": "Plans de mise en œuvre communautaire",
+    "ar": "خطط التنفيذ المجتمعي"
+   },
+   "unit": {
+    "en": "community delivery plans",
+    "fr": "plans de mise en œuvre communautaire",
+    "ar": "خطط التنفيذ المجتمعي"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `rural-settlements` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the settlement service audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `rural-settlements` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photos ou de conception géoréférencés, qui relient les audits des services dans les localités à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `rural-settlements` المرتبطة بحالة ملف قبول بصيغة PDF/A + بياناً بالمصادر بصيغتي CSV/JSON + ملفات فحص أو تصميم محددة الإسناد الجغرافي/صوراً، وتربط تدقيقات خدمات التجمعات السكنية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted settlement service audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant ven. 12:00 ; **≥3 audits des services dans les localités acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **≥9 من أصل 10 تقارير أسبوعية مؤهلة** مقدمة بحلول الجمعة 12:00؛ **≥3 تدقيقات مقبولة لخدمات التجمعات السكنية** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب مسائل تتعلق بالأدلة** لكل فريق في الأسبوع. وتؤثر الإجازات/التعديلات المعتمدة في المقام المؤهل، فيما تتقدم العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. هذه أهداف تجريبية، وليست حدوداً ثابتة في README."
+ },
+ "boundary": {
+  "en": "plans account for operating skills, seasonal access and secure tenure",
+  "fr": "les plans tiennent compte des compétences opérationnelles, de l’accès saisonnier et de la sécurité foncière",
+  "ar": "تراعي الخطط مهارات التشغيل وإمكانية الوصول الموسمية وحقوق الحيازة الآمنة"
+ },
+ "depends": [
+  {
+   "slug": "agri-science",
+   "id": 56
+  },
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "agri-tech",
+   "id": 123
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Off-grid systems fail without maintenance → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les systèmes hors réseau tombent en panne sans entretien → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تعطّل الأنظمة غير المرتبطة بالشبكة من دون صيانة → اشترط اعتماداً من مختص مؤهل للسلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Design ignores seasonal household use → reconcile source records with the settlement service audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "La conception ne tient pas compte de l’utilisation saisonnière des ménages → rapprocher les données sources de la liste de contrôle d’acceptation des audits des services dans les localités et désigner le responsable des mesures correctives.",
+   "ar": "يتجاهل التصميم الاستخدام المنزلي الموسمي → طابق السجلات المصدرية مع قائمة التحقق لقبول تدقيقات خدمات التجمعات السكنية، وحدد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Remote delivery raises safety exposure → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "La mise en œuvre à distance accroît les risques pour la sécurité → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "يزيد التنفيذ عن بُعد من مخاطر السلامة → قلل الوصول إلى الحد الأدنى، واحجب البيانات من الأدلة المصرح بنشرها، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

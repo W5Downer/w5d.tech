@@ -1,0 +1,167 @@
+{
+ "slug": "urban-heat",
+ "id": 51,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Urban Heat Island Mitigation",
+  "fr": "Atténuation des îlots de chaleur urbains",
+  "ar": "التخفيف من تأثير الجزر الحرارية الحضرية"
+ },
+ "short": {
+  "en": "The service provides shading, materials, green corridors.",
+  "fr": "Réduire l'exposition urbaine à la chaleur.",
+  "ar": "تقليص التعرض للحرارة في المدن."
+ },
+ "abstract": {
+  "en": "Urban heat island mitigation — shading strategies, reflective and permeable materials, green corridor design, and urban cooling measurement programs.",
+  "fr": "Atténuation des îlots de chaleur urbains — stratégies d’ombrage, matériaux réfléchissants et perméables, conception de corridors verts et programmes de mesure du rafraîchissement urbain.",
+  "ar": "التخفيف من تأثير الجزر الحرارية الحضرية — استراتيجيات التظليل، والمواد العاكسة والنفّاذة، وتصميم الممرات الخضراء، وبرامج قياس التبريد الحضري."
+ },
+ "long": [
+  {
+   "en": "The Urban Heat Island Mitigation service organises a weekly work package around temperature transects, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 temperature transects; 500 shade audits; 100 cooling design packages; 100 vegetation maintenance plans. Urban heat island mitigation — shading strategies, reflective and permeable materials, green corridor design, and urban cooling measurement programs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that heat measurements retain time, shade and weather conditions for comparison. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’atténuation des îlots de chaleur urbains organise un lot de travaux hebdomadaire autour des transects de température, plutôt que de faire de la présence le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 transects de température ; 500 audits de l’ombrage ; 100 dossiers de conception de solutions de rafraîchissement ; 100 plans d’entretien de la végétation. Atténuation des îlots de chaleur urbains — stratégies d’ombrage, matériaux réfléchissants et perméables, conception de corridors verts et programmes de mesure du rafraîchissement urbain. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est de conserver, pour les mesures de chaleur, les informations relatives à l’heure, à l’ombrage et aux conditions météorologiques afin de permettre les comparaisons. Il s’agit de livrables échelonnés issus de cas commandés, et non d’un engagement à mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة التخفيف من تأثير الجزر الحرارية الحضرية حزمة عمل أسبوعية تتمحور حول مسارات قياس درجات الحرارة، بدلًا من اعتبار الحضور هو الناتج. وتستهدف خطتها التجريبية، عند توافر كامل الموارد والقدرة، 500 مسار لقياس درجات الحرارة؛ و500 عملية تدقيق للتظليل؛ و100 حزمة لتصميم التبريد؛ و100 خطة لصيانة الغطاء النباتي. التخفيف من تأثير الجزر الحرارية الحضرية — استراتيجيات التظليل، والمواد العاكسة والنفّاذة، وتصميم الممرات الخضراء، وبرامج قياس التبريد الحضري. ويرتّب المتخصصون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. ويتمثل الضابط الحاكم في الاحتفاظ بتوقيت قياسات الحرارة وظروف التظليل والطقس، بما يتيح المقارنة. وهذه مخرجات مرحلية من حالات مكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `urban-heat`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of temperature transects, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui atteignaient 34% en 2021. Cela justifie la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service particulier. Des propriétaires d’actifs distincts, des budgets d’infrastructure et des responsabilités environnementales peuvent laisser sans commande des travaux techniquement utiles. Pour `urban-heat`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des transects de température, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في مجالات المياه والسواحل والتحول في مجال الطاقة، ومنها فاقد التوزيع لدى SONEDE الذي بلغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي اختلاف مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية التقنية. لذلك، يتمثل الرد المقترح لخدمة `urban-heat` في سير عمل تعاقدي يحدّد مستفيدًا وتعريفًا مقبولًا لمسارات قياس درجات الحرارة، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the temperature transects acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks shade audits before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted temperature transects from rejected or deferred work and records blockers around cooling design packages. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des transects de température ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les audits de l’ombrage avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les transects de température acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux dossiers de conception de solutions de rafraîchissement. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مسارات قياس درجات الحرارة؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتُستخدم الهويات المرتبطة بـ Dyon لتحديد المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من عمليات تدقيق التظليل قبل الموافقة عليها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مسارات قياس درجات الحرارة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بحزم تصميم التبريد. وتنسّق مراجعات قادة التجمعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and Gabès pilot neighbourhoods",
+  "fr": "quartiers pilotes de Tunis, Kairouan et Gabès",
+  "ar": "الأحياء التجريبية في تونس والقيروان وقابس"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Temperature transects",
+    "fr": "Transects de température",
+    "ar": "مسارات قياس درجات الحرارة"
+   },
+   "unit": {
+    "en": "temperature transects",
+    "fr": "transects de température",
+    "ar": "مسارات قياس درجات الحرارة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Shade audits",
+    "fr": "Audits de l’ombrage",
+    "ar": "عمليات تدقيق التظليل"
+   },
+   "unit": {
+    "en": "shade audits",
+    "fr": "audits de l’ombrage",
+    "ar": "تدقيقات التظليل"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Cooling design packages",
+    "fr": "Packages de conception de solutions de rafraîchissement",
+    "ar": "حزم تصميم التبريد"
+   },
+   "unit": {
+    "en": "cooling design packages",
+    "fr": "packages de conception de solutions de rafraîchissement",
+    "ar": "حزم تصميم التبريد"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Vegetation maintenance plans",
+    "fr": "Plans d’entretien de la végétation",
+    "ar": "خطط صيانة الغطاء النباتي"
+   },
+   "unit": {
+    "en": "vegetation maintenance plans",
+    "fr": "plans d’entretien de la végétation",
+    "ar": "خطط صيانة الغطاء النباتي"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `urban-heat` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the temperature transects to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `urban-heat` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/de photographie ou de conception géoréférencés, qui relient les transects de température à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `urban-heat` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + ملفات تفتيش/صور أو تصميم محددة جغرافيًا، تربط مسارات قياس درجات الحرارة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted temperature transects** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant le vendredi à 12:00 ; **≥4 transects de température acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques liés à la sécurité ou à la confidentialité priment sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥4 مسارات لقياس درجات الحرارة** لكل فريق في الأسبوع، وفقًا لتعقيد الحالة؛ **طلب ≤1 لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة/التعديلات المقامَ المستوفي للشروط، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "heat measurements retain time, shade and weather conditions for comparison",
+  "fr": "les mesures de chaleur conservent les informations relatives à l’heure, à l’ombrage et aux conditions météorologiques à des fins de comparaison",
+  "ar": "تحتفظ قياسات الحرارة ببيانات الوقت والظل والطقس لأغراض المقارنة"
+ },
+ "depends": [
+  {
+   "slug": "climate-modelling",
+   "id": 58
+  },
+  {
+   "slug": "biodiversity",
+   "id": 67
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Tree planting fails without water → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "La plantation d’arbres échoue en l’absence d’eau → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "قد تفشل زراعة الأشجار دون توفير المياه → اشترط اعتمادًا من مختص في السلامة، وتجارب مضبوطة، ومحفزًا موثقًا لإيقاف العمل."
+  },
+  {
+   "en": "Reflective surfaces increase pedestrian glare → reconcile source records with the temperature transects acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les surfaces réfléchissantes accentuent l’éblouissement des piétons → rapprocher les dossiers sources de la liste de contrôle d’acceptation des transects de température et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد تزيد الأسطح العاكسة من الوهج للمشاة → طابِق سجلات المصادر مع قائمة التحقق لقبول مسارات قياس درجات الحرارة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Cooling benefits bypass vulnerable streets → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les rues vulnérables ne bénéficient pas des effets du rafraîchissement → inclure l’examen par les usagers concernés, publier les critères de sélection et maintenir une voie de dépôt des réclamations.",
+   "ar": "قد لا تصل فوائد التبريد إلى الشوارع التي يسكنها أشخاص أكثر عرضة للمخاطر → أدرج مراجعة من المستخدمين المتأثرين، وانشر افتراضات الاختيار، وأبقِ قناة لتقديم الشكاوى."
+  }
+ ]
+}

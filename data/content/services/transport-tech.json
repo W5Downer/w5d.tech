@@ -1,0 +1,167 @@
+{
+ "slug": "transport-tech",
+ "id": 128,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Transportation Technology",
+  "fr": "Technologies des transports",
+  "ar": "تكنولوجيا النقل"
+ },
+ "short": {
+  "en": "The service provides eV charging, fleet telematics, ticketing.",
+  "fr": "Déployer des transports connectés accessibles.",
+  "ar": "نشر حلول نقل مترابطة وميسرة."
+ },
+ "abstract": {
+  "en": "Transportation technology — EV charging networks, fleet telematics, and integrated ticketing systems for public and private operators.",
+  "fr": "Technologies des transports — réseaux de recharge pour véhicules électriques, télématique de flotte et systèmes de billetterie intégrée pour les opérateurs publics et privés.",
+  "ar": "تكنولوجيا النقل — شبكات شحن المركبات الكهربائية، وأنظمة الاتصالات عن بُعد للأساطيل، وأنظمة التذاكر المتكاملة للمشغّلين من القطاعين العام والخاص."
+ },
+ "long": [
+  {
+   "en": "The Transportation Technology service organises a weekly work package around fleet device validation tests, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 1000 fleet device validation tests; 300 charging site assessments; 500 ticketing accessibility tests; 200 operator training sessions. Transportation technology — EV charging networks, fleet telematics, and integrated ticketing systems for public and private operators. Specialists sequence those methods against the accepted weekly package. The governing boundary is that transport operators validate interoperability, safety and non-digital access alternatives. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des technologies des transports organise un lot de travail hebdomadaire autour des tests de validation des appareils de flotte, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 1000 tests de validation des appareils de flotte ; 300 évaluations de sites de recharge ; 500 tests d’accessibilité de la billetterie ; 200 sessions de formation des opérateurs. Technologies des transports — réseaux de recharge pour véhicules électriques, télématique de flotte et systèmes de billetterie intégrée pour les opérateurs publics et privés. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les opérateurs de transport valident l’interopérabilité, la sécurité et les solutions d’accès non numériques. Il s’agit de livrables échelonnés issus de cas faisant l’objet d’un mandat, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة تكنولوجيا النقل حزمة عمل أسبوعية حول اختبارات التحقق من أجهزة الأسطول، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند التشغيل بكامل الطاقة مع توفير الموارد، 1000 اختبار للتحقق من أجهزة الأسطول؛ و300 تقييم لمواقع الشحن؛ و500 اختبار لإمكانية الوصول إلى أنظمة التذاكر؛ و200 جلسة تدريب للمشغّلين. تكنولوجيا النقل — شبكات شحن المركبات الكهربائية، وأنظمة الاتصالات عن بُعد للأساطيل، وأنظمة التذاكر المتكاملة للمشغّلين من القطاعين العام والخاص. ويرتّب الأخصائيون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويقضي الإطار الناظم بأن يتحقق مشغّلو النقل من قابلية التشغيل البيني والسلامة وبدائل الوصول غير الرقمية. وهذه مخرجات مرحلية لحالات تم التعاقد عليها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `transport-tech`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of fleet device validation tests, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude de la Banque mondiale de 2026 sur les compétences numériques relève une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne formelles et urbaines couvrant la période jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes des employeurs en matière de compétences. Aucune de ces sources ne vérifie le nombre national de postes vacants dans cette niche technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable de système engagé ; affecter des développeurs isolément ne fournit pas cette coordination et ne garantit pas la présence d’un acheteur. Pour `transport-tech`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des tests de validation des appareils de flotte, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 حول المهارات الرقمية إلى وجود طلب على المهارات التقنية والهجينة في مختلف القطاعات التونسية، استنادًا في الأساس إلى أدلة رسمية وحضرية مستمدة من الإنترنت حتى عام 2025. ويوثّق استعراض منظمة التعاون الاقتصادي والتنمية (OECD) الصادر في يونيو 2024، على نحو منفصل، قيود المهارات لدى أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا المجال التقني المتخصص. ويتطلب التكامل وقبول المستخدمين والصيانة المستمرة وجود جهة مالكة للنظام ملتزمة؛ فتعيين مطورين منفردين لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، يتمثل المقترح لـ`transport-tech` في سير عمل تعاقدي ذي جهة مستفيدة محددة وتعريف معتمد لاختبارات التحقق من أجهزة الأسطول، لا في توظيف يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the fleet device validation tests acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks charging site assessments before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted fleet device validation tests from rejected or deferred work and records blockers around ticketing accessibility tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des tests de validation des appareils de flotte ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les évaluations de sites de recharge avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les tests de validation des appareils de flotte acceptés des travaux rejetés ou différés et consigne les obstacles liés aux tests d’accessibilité de la billetterie. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول اختبارات التحقق من أجهزة الأسطول؛ ويحوّل 100 مدير هذا المعيار إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل تقييمات مواقع الشحن قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين اختبارات التحقق من أجهزة الأسطول المقبولة والعمل المرفوض أو المؤجل، ويسجّل العوائق المتعلقة باختبارات إمكانية الوصول إلى أنظمة التذاكر. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "transport engineering, electrical engineering, telecommunications and accessible service design",
+  "fr": "ingénierie des transports, génie électrique, télécommunications et conception de services accessibles",
+  "ar": "هندسة النقل، والهندسة الكهربائية، والاتصالات السلكية واللاسلكية، وتصميم الخدمات الميسّرة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Fleet device validation tests",
+    "fr": "Tests de validation des appareils de flotte",
+    "ar": "اختبارات التحقق من أجهزة الأسطول"
+   },
+   "unit": {
+    "en": "fleet device validation tests",
+    "fr": "tests de validation des appareils de la flotte",
+    "ar": "اختبارات التحقق من أجهزة الأسطول"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Charging site assessments",
+    "fr": "Évaluations des sites de recharge",
+    "ar": "تقييمات مواقع الشحن"
+   },
+   "unit": {
+    "en": "charging site assessments",
+    "fr": "évaluations des sites de recharge",
+    "ar": "تقييمات مواقع الشحن"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Ticketing accessibility tests",
+    "fr": "tests d’accessibilité de la billetterie",
+    "ar": "اختبارات إتاحة إصدار التذاكر"
+   },
+   "unit": {
+    "en": "ticketing accessibility tests",
+    "fr": "tests d’accessibilité de la billetterie",
+    "ar": "اختبارات إتاحة إصدار التذاكر"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Operator training sessions",
+    "fr": "Sessions de formation des opérateurs",
+    "ar": "جلسات تدريب المشغلين"
+   },
+   "unit": {
+    "en": "operator training sessions",
+    "fr": "sessions de formation des opérateurs",
+    "ar": "جلسات تدريب المشغلين"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `transport-tech` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the fleet device validation tests to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `transport-tech` lié à un cas comprend un dossier d’acceptation PDF/A, un manifeste source CSV/JSON et des fichiers géoréférencés d’inspection, de photos ou de conception. Il relie les tests de validation des appareils de la flotte à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `transport-tech` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات تصميم أو فحص/صور محددة جغرافيًا، وتربط اختبارات التحقق من أجهزة الأسطول بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥8 accepted fleet device validation tests** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard le ven. à 12:00 ; **≥8 tests de validation des appareils de la flotte acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés approuvés et les aménagements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité l’emportent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥8 اختبارات للتحقق من أجهزة الأسطول** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. تؤثر الإجازات أو التعديلات المعتمدة في مقام الأهلية، وتتجاوز عيوب السلامة/الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية، وليست حدودًا ثابتة في README."
+ },
+ "boundary": {
+  "en": "transport operators validate interoperability, safety and non-digital access alternatives",
+  "fr": "les opérateurs de transport valident l’interopérabilité, la sécurité et les solutions de remplacement accessibles aux personnes sans accès au numérique",
+  "ar": "يتحقق مشغّلو النقل من قابلية التشغيل البيني والسلامة وبدائل الوصول غير الرقمية"
+ },
+ "depends": [
+  {
+   "slug": "mobility-planning",
+   "id": 37
+  },
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "public-space",
+   "id": 41
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Ticketing excludes cash-dependent users → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "La billetterie exclut les usagers dépendant des paiements en espèces → inclure l’examen par les usagers concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "استبعاد التذاكر للمستخدمين المعتمدين على الدفع النقدي → تضمين مراجعة من المستخدمين المتأثرين، ونشر افتراضات الاختيار، والإبقاء على مسار للتظلمات."
+  },
+  {
+   "en": "Telematics exposes driver movements → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les données télématiques révèlent les déplacements des conducteurs → limiter les accès, caviarder les éléments justificatifs communiqués et tester le processus d’accès restreint.",
+   "ar": "كشوفات التليماتية لحركة السائقين → تقليل نطاق الوصول، وتنقيح الأدلة المُفصح عنها، واختبار سير العمل المقيّد الوصول."
+  },
+  {
+   "en": "Charging sites overload local connections → reconcile source records with the fleet device validation tests acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les sites de recharge surchargent les raccordements locaux → rapprocher les documents sources de la liste de contrôle d’acceptation des tests de validation des appareils de la flotte et désigner le responsable des mesures correctives.",
+   "ar": "تُحمّل مواقع الشحن الشبكات المحلية فوق طاقتها → مطابقة سجلات المصدر مع قائمة التحقق من قبول اختبارات التحقق من أجهزة الأسطول، وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

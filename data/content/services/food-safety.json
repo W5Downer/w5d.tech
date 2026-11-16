@@ -1,0 +1,167 @@
+{
+ "slug": "food-safety",
+ "id": 69,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Food Safety & Nutrition Science",
+  "fr": "Sécurité sanitaire et nutrition",
+  "ar": "علوم سلامة الأغذية والتغذية"
+ },
+ "short": {
+  "en": "The service provides hACCP, labelling, cohort analysis.",
+  "fr": "Renforcer la sécurité alimentaire et les analyses nutritionnelles.",
+  "ar": "تعزيز سلامة الغذاء والتحليل التغذوي."
+ },
+ "abstract": {
+  "en": "Food safety and nutrition science — HACCP implementation, labelling compliance, and cohort-based nutritional epidemiology for public health agencies.",
+  "fr": "Sécurité sanitaire des aliments et sciences de la nutrition — mise en œuvre de HACCP, conformité de l’étiquetage et épidémiologie nutritionnelle fondée sur des cohortes pour les organismes de santé publique.",
+  "ar": "علوم سلامة الأغذية والتغذية — تنفيذ HACCP، والامتثال لمتطلبات وضع الملصقات، والوبائيات التغذوية القائمة على الأفواج للهيئات المعنية بالصحة العامة."
+ },
+ "long": [
+  {
+   "en": "The Food Safety & Nutrition Science service organises a weekly work package around haccp process reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 haccp process reviews; 1000 label compliance checks; 1000 validated sample batches; 100 nutrition study protocols. Food safety and nutrition science — HACCP implementation, labelling compliance, and cohort-based nutritional epidemiology for public health agencies. Specialists sequence those methods against the accepted weekly package. The governing boundary is that food businesses and authorised laboratories retain accountability for safety decisions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Sécurité sanitaire des aliments et sciences de la nutrition organise un lot de travail hebdomadaire autour des revues des processus HACCP, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 revues des processus HACCP ; 1000 contrôles de conformité de l’étiquetage ; 1000 lots d’échantillons validés ; 100 protocoles d’études nutritionnelles. Sécurité sanitaire des aliments et sciences de la nutrition — mise en œuvre de HACCP, conformité de l’étiquetage et épidémiologie nutritionnelle fondée sur des cohortes pour les organismes de santé publique. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La responsabilité des décisions de sécurité reste du ressort des entreprises du secteur alimentaire et des laboratoires agréés. Il s’agit de résultats échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة علوم سلامة الأغذية والتغذية حزمة عمل أسبوعية تتمحور حول مراجعات عمليات HACCP، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند توافر الموارد والقدرة التشغيلية الكاملة، 300 مراجعة لعمليات HACCP؛ و1000 فحص للامتثال لمتطلبات وضع الملصقات؛ و1000 دفعة عينات معتمدة؛ و100 بروتوكول لدراسات التغذية. علوم سلامة الأغذية والتغذية — تنفيذ HACCP، والامتثال لمتطلبات وضع الملصقات، والوبائيات التغذوية القائمة على الأفواج للهيئات المعنية بالصحة العامة. وينسّق الاختصاصيون هذه الأساليب مع الحزمة الأسبوعية المقبولة. ويقضي الحدّ الحاكم بأن تظل مسؤولية قرارات السلامة على عاتق المنشآت الغذائية والمختبرات المعتمدة. وهذه مخرجات مرحلية لحالات مُسنَدة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `food-safety`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of haccp process reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015 et 2020, tandis que l’INS estime le chômage des diplômés à 26.6% au Q2 2026. Ces populations différentes montrent pourquoi la disponibilité générale des diplômés ne saurait remplacer des compétences dans le domaine de la santé dûment vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement requis, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre non agréé. Pour `food-safety`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des revues des processus HACCP, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يشير تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 إلى أن نحو 3,300 طبيب هاجروا خلال الفترة 2015–2020، بينما تقدّر INS بطالة الخريجين بـ26.6% في Q2 2026. وتُظهر هاتان الفئتان المختلفتان سبب عدم إمكانية الاستعاضة عن التحقق من القدرات الصحية بتقديرات عامة لتوافر الخريجين. يحتاج مستخدمو البحوث الصحية والمعدات إلى موظفين مؤهلين، وموافقة، ومعلومات آمنة، ومرافق معتمدة، لا إلى قوة عاملة غير مرخصة. لذلك، تتمثل الاستجابة المقترحة لخدمة `food-safety` في سير عمل تعاقدي ذي جهة مستفيدة محددة وتعريف مقبول لمراجعات عمليات HACCP، لا في التوظيف استنادًا حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the haccp process reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks label compliance checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted haccp process reviews from rejected or deferred work and records blockers around validated sample batches. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des revues des processus HACCP ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles de conformité de l’étiquetage avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les revues des processus HACCP acceptées des travaux rejetés ou reportés, et consigne les obstacles liés aux lots d’échantillons validés. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات عمليات HACCP؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من فحوص الامتثال لمتطلبات وضع الملصقات قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين مراجعات عمليات HACCP المقبولة والعمل المرفوض أو المؤجل، ويسجّل العوائق المتعلقة بدفعات العينات المعتمدة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "food science, microbiology, nutrition and public health",
+  "fr": "sciences alimentaires, microbiologie, nutrition et santé publique",
+  "ar": "علوم الأغذية، وعلم الأحياء الدقيقة، والتغذية، والصحة العامة"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "HACCP process reviews",
+    "fr": "Revues des processus HACCP",
+    "ar": "مراجعات عمليات HACCP"
+   },
+   "unit": {
+    "en": "haccp process reviews",
+    "fr": "revues des processus HACCP",
+    "ar": "مراجعات عمليات HACCP"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Label compliance checks",
+    "fr": "Contrôles de conformité de l’étiquetage",
+    "ar": "فحوص الامتثال لمتطلبات وضع الملصقات"
+   },
+   "unit": {
+    "en": "label compliance checks",
+    "fr": "contrôles de conformité de l’étiquetage",
+    "ar": "فحوص الامتثال لمتطلبات وضع الملصقات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Validated sample batches",
+    "fr": "Lots d’échantillons validés",
+    "ar": "دفعات عينات معتمدة"
+   },
+   "unit": {
+    "en": "validated sample batches",
+    "fr": "lots d’échantillons validés",
+    "ar": "دفعات عينات معتمدة"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Nutrition study protocols",
+    "fr": "Protocoles d’étude en nutrition",
+    "ar": "بروتوكولات دراسات التغذية"
+   },
+   "unit": {
+    "en": "nutrition study protocols",
+    "fr": "protocoles d’étude en nutrition",
+    "ar": "بروتوكولات دراسات التغذية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `food-safety` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the haccp process reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `food-safety` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, qui relient les revues du procédé HACCP à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة في مجال `food-safety` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات الطرق/الإصدارات وبيانات مصدر قابلة لإعادة الإنتاج، بما يربط مراجعات عمليات haccp بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted haccp process reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 sur 10 rapports hebdomadaires admissibles** soumis avant vendredi 12:00 ; **≥3 revues acceptées du procédé HACCP** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques touchant à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥3 مراجعات لعمليات haccp** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات المعتمدة/التعديلات مقام العدد المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تتجاوز أثرها أي نتيجة خضراء. هذه أهداف تجريبية، وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "food businesses and authorised laboratories retain accountability for safety decisions",
+  "fr": "les entreprises du secteur alimentaire et les laboratoires autorisés restent responsables des décisions en matière de sécurité",
+  "ar": "تظل شركات الأغذية والمختبرات المعتمدة مسؤولة عن قرارات السلامة"
+ },
+ "depends": [
+  {
+   "slug": "social-protection",
+   "id": 88
+  },
+  {
+   "slug": "cold-chain",
+   "id": 129
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Paper HACCP ignores actual process flow → reconcile source records with the haccp process reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les procédures HACCP papier ignorent le déroulement réel des procédés → rapprocher les registres sources de la liste de contrôle d’acceptation des revues du procédé HACCP et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتجاهل خطط HACCP الورقية تدفق العمليات الفعلي → طابِق سجلات المصدر مع قائمة التحقق لقبول مراجعات عمليات haccp، وحدد مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Labels conceal allergens → reconcile source records with the haccp process reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les étiquettes dissimulent les allergènes → rapprocher les registres sources de la liste de contrôle d’acceptation des revues du procédé HACCP et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد تخفي الملصقات مسببات الحساسية → طابِق سجلات المصدر مع قائمة التحقق لقبول مراجعات عمليات haccp، وحدد مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Nutrition cohorts misrepresent vulnerable households → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les cohortes nutritionnelles donnent une représentation erronée des ménages vulnérables → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de réclamation.",
+   "ar": "قد لا تمثل أفواج دراسات التغذية الأسرَ الأكثر عرضة للمخاطر تمثيلًا دقيقًا → أشرِك المستخدمين المتأثرين في المراجعة، وانشر افتراضات الاختيار، وأبقِ مسارًا لتقديم التظلمات."
+  }
+ ]
+}

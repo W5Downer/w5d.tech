@@ -1,0 +1,167 @@
+{
+ "slug": "legal-drafting",
+ "id": 80,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Legal Drafting & Legislative Review",
+  "fr": "Rédaction juridique et examen législatif",
+  "ar": "الصياغة القانونية والمراجعة التشريعية"
+ },
+ "short": {
+  "en": "The service provides statutes, decrees, plain-language versions.",
+  "fr": "Rédiger et consolider des textes juridiques clairs.",
+  "ar": "صياغة نصوص قانونية واضحة وتجميعها."
+ },
+ "abstract": {
+  "en": "Legal drafting and review — statutes, decrees, and executive orders in plain language with cross-reference validation and consolidated versions.",
+  "fr": "Rédaction et examen juridiques — lois, décrets et arrêtés exécutifs en langage clair, avec validation des renvois et versions consolidées.",
+  "ar": "الصياغة والمراجعة القانونية — صياغة القوانين والمراسيم والأوامر التنفيذية بلغة واضحة، مع التحقق من الإحالات المرجعية وإعداد نسخ موحّدة."
+ },
+ "long": [
+  {
+   "en": "The Legal Drafting & Legislative Review service organises a weekly work package around draft clause packages, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 draft clause packages; 2000 cross reference checks; 100 consolidated text reviews; 200 plain language summaries. Legal drafting and review — statutes, decrees, and executive orders in plain language with cross-reference validation and consolidated versions. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only authorised institutions adopt law and qualified counsel validate legal effects. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de rédaction juridique et d’examen législatif organise chaque semaine un lot de travail autour de dossiers de clauses de projet, plutôt que de considérer la participation comme le produit lui-même. À pleine capacité, avec les ressources nécessaires, le plan pilote prévoit 200 dossiers de clauses de projet ; 2000 vérifications de renvois ; 100 examens de textes consolidés ; 200 résumés en langage clair. Rédaction et examen juridiques — lois, décrets et arrêtés exécutifs en langage clair, avec validation des renvois et versions consolidées. Les spécialistes organisent ces travaux en fonction du lot hebdomadaire accepté. La limite à respecter est la suivante : seules les institutions habilitées adoptent les lois, et seuls des juristes qualifiés en valident les effets juridiques. Il s’agit de résultats échelonnés issus de dossiers confiés au service, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة الصياغة القانونية والمراجعة التشريعية حزمة عمل أسبوعية تتمحور حول حزم مواد قانونية مسوّدة، بدلاً من اعتبار الحضور هو المنتج. وفي ظل توافر كامل الموارد والقدرة، تتضمن الخطة التجريبية 200 حزمة مواد قانونية مسوّدة؛ و2000 عملية تحقق من الإحالات المرجعية؛ و100 مراجعة للنصوص الموحّدة؛ و200 ملخص بلغة واضحة. الصياغة والمراجعة القانونية — صياغة القوانين والمراسيم والأوامر التنفيذية بلغة واضحة، مع التحقق من الإحالات المرجعية وإعداد نسخ موحّدة. ويرتّب الاختصاصيون هذه الأساليب وفق الحزمة الأسبوعية المقبولة. والحدّ الناظم هو أن المؤسسات المخوّلة وحدها تعتمد القوانين، وأن المستشارين القانونيين المؤهلين وحدهم يتحققون من الآثار القانونية. هذه مخرجات مرحلية لقضايا مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `legal-drafting`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of draft clause packages, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’enquête auprès des entreprises portant la mention 2020 ou dernière année disponible. L’analyse juridique de Kotrane (2024) relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème qui se limiterait à la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil améliore une institution sans la participation de ces utilisateurs. Pour `legal-drafting`, la réponse proposée est donc un processus contractualisé avec un bénéficiaire désigné et une définition acceptée des dossiers de clauses de projet, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تحدد عدم كفاية مهارات القوى العاملة بوصفها عائقاً رئيسياً، بالاستناد إلى مقارنات مسح المؤسسات المصنّفة على أنها لعام 2020 أو أحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعدّه Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية، بدلاً من اعتبار المشكلة مقتصرة على التدريب. وتعتمد الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسّن أداء مؤسسة ما إذا لم يستخدمه المعنيون فيها. لذلك، فإن الاستجابة المقترحة ضمن `legal-drafting` هي سير عمل تعاقدي مع جهة مستفيدة محددة وتعريف مقبول لحزم المواد القانونية المسوّدة، وليس توظيفاً تبرّره البطالة الوطنية وحدها."
+  },
+  {
+   "en": "A service leader sets the draft clause packages acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks cross reference checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted draft clause packages from rejected or deferred work and records blockers around consolidated text reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit la grille d’acceptation des dossiers de clauses de projet ; 100 responsables la traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les renvois avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments de preuve à l’appui et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les dossiers de clauses de projet acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux examens de textes consolidés. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول حزم المواد القانونية المسوّدة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات للفرق، يتألف كل منها من نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من الإحالات المرجعية قبل الموافقة. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين حزم المواد القانونية المسوّدة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمراجعات النصوص الموحّدة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Draft clause packages",
+    "fr": "Dossiers de clauses de projet",
+    "ar": "حزم المواد القانونية المسوّدة"
+   },
+   "unit": {
+    "en": "draft clause packages",
+    "fr": "dossiers de clauses de projet",
+    "ar": "حزم المواد القانونية المسوّدة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Cross reference checks",
+    "fr": "Vérifications de renvois",
+    "ar": "عمليات التحقق من الإحالات المرجعية"
+   },
+   "unit": {
+    "en": "cross reference checks",
+    "fr": "vérifications de renvois",
+    "ar": "عمليات التحقق من الإحالات المرجعية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Consolidated text reviews",
+    "fr": "Examens de textes consolidés",
+    "ar": "مراجعات النصوص الموحّدة"
+   },
+   "unit": {
+    "en": "consolidated text reviews",
+    "fr": "examens de textes consolidés",
+    "ar": "مراجعات النصوص الموحّدة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Plain language summaries",
+    "fr": "Résumés en langage clair",
+    "ar": "ملخصات بلغة واضحة"
+   },
+   "unit": {
+    "en": "plain language summaries",
+    "fr": "résumés en langage clair",
+    "ar": "ملخصات بلغة واضحة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `legal-drafting` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the draft clause packages to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `legal-drafting` associé à un dossier comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + les sources et dossiers de consultation caviardés, reliant les dossiers de clauses de projet à la source, à l’examinateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بقضية ضمن `legal-drafting` ملف قبول بصيغة PDF/A + بياناً بمصادر البيانات بصيغة CSV/JSON + سجلات منقّحة للمصادر والمشاورات، وتربط حزم المواد القانونية المسوّدة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted draft clause packages** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis le ven. à 12:00 ; **≥2 dossiers de clauses de projet acceptés** par équipe et par semaine, sous réserve de la complexité du dossier ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité priment sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من حزم المواد القانونية المسوّدة** لكل فريق في الأسبوع، رهناً بتعقيد القضية؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. ويؤثر الإجازة المعتمدة أو التعديلات في المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تلغي احتساب النتيجة على أنها خضراء. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "only authorised institutions adopt law and qualified counsel validate legal effects",
+  "fr": "seules les institutions habilitées adoptent les lois et seuls des juristes qualifiés en valident les effets juridiques",
+  "ar": "المؤسسات المخوّلة وحدها تعتمد القوانين، والمستشارون القانونيون المؤهلون وحدهم يتحققون من الآثار القانونية"
+ },
+ "depends": [
+  {
+   "slug": "translation-hubs",
+   "id": 6
+  },
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "software-eng",
+   "id": 105
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Consolidation incorporates repealed provisions → reconcile source records with the draft clause packages acceptance checklist and assign corrective-action ownership.",
+   "fr": "La consolidation intègre des dispositions abrogées → rapprocher les sources des dossiers de clauses de projet à l’aide de la liste de contrôle d’acceptation et désigner les responsables des mesures correctives.",
+   "ar": "يؤدي التوحيد إلى إدراج أحكام ملغاة → طابق سجلات المصدر مع قائمة التحقق من قبول حزم المواد القانونية المسوّدة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Translation changes legal obligations → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les modifications apportées à la traduction créent des obligations juridiques → obtenir la validation d’une autorité juridique ou compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تؤدي تغييرات الترجمة إلى تغيير الالتزامات القانونية → يجب الحصول على اعتماد من جهة قانونية/مختصة، وحظر اتخاذ قرارات تشغيلية غير مصرّح بها."
+  },
+  {
+   "en": "Drafting support misrepresented as enacted law → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "La rédaction d’un texte d’appui est présentée à tort comme une loi promulguée → obtenir la validation d’une autorité juridique ou compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "يُعرض الدعم في الصياغة على أنه قانون نافذ → يجب الحصول على اعتماد من جهة قانونية/مختصة، وحظر اتخاذ قرارات تشغيلية غير مصرّح بها."
+  }
+ ]
+}

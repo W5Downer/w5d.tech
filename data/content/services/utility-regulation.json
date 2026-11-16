@@ -1,0 +1,167 @@
+{
+ "slug": "utility-regulation",
+ "id": 99,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Water & Energy Regulation",
+  "fr": "Réglementation de l’eau et de l’énergie",
+  "ar": "تنظيم المياه والطاقة"
+ },
+ "short": {
+  "en": "The service provides tariffs, licensing, consumer protection.",
+  "fr": "Examiner les tarifs et obligations des services essentiels.",
+  "ar": "دراسة تعريفات الخدمات الأساسية والتزاماتها."
+ },
+ "abstract": {
+  "en": "Water and energy regulation — tariff design, licensing, and consumer protection frameworks for utilities.",
+  "fr": "Réglementation de l’eau et de l’énergie — conception tarifaire, octroi de licences et cadres de protection des consommateurs pour les services publics.",
+  "ar": "تنظيم المياه والطاقة — أطر تصميم التعرفة والترخيص وحماية المستهلك لمرافق الخدمات."
+ },
+ "long": [
+  {
+   "en": "The Water & Energy Regulation service organises a weekly work package around tariff scenario analyses, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 tariff scenario analyses; 200 consumer impact reviews; 200 licence condition checks; 100 service quality dashboards. Water and energy regulation — tariff design, licensing, and consumer protection frameworks for utilities. Specialists sequence those methods against the accepted weekly package. The governing boundary is that only authorised regulators set tariffs and binding licence conditions. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Réglementation de l’eau et de l’énergie organise un lot de travail hebdomadaire autour des analyses de scénarios tarifaires, plutôt que de considérer la participation comme le produit en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 analyses de scénarios tarifaires ; 200 examens de l’incidence sur les consommateurs ; 200 vérifications des conditions de licence ; 100 tableaux de bord sur la qualité des services. Réglementation de l’eau et de l’énergie — conception tarifaire, octroi de licences et cadres de protection des consommateurs pour les services publics. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite de compétence est la suivante : seuls les régulateurs habilités fixent les tarifs et les conditions de licence contraignantes. Il s’agit de livrables échelonnés issus de cas commandités, et non d’un engagement à achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة تنظيم المياه والطاقة حزمة عمل أسبوعية تتمحور حول تحليلات سيناريوهات التعرفة، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند توافر كامل الموارد والقدرة، 100 تحليل لسيناريوهات التعرفة؛ و200 مراجعة لأثرها على المستهلكين؛ و200 تحقق من شروط التراخيص؛ و100 لوحة لمؤشرات جودة الخدمة. تنظيم المياه والطاقة — أطر تصميم التعرفة والترخيص وحماية المستهلك لمرافق الخدمات. ويحدد المختصون تسلسل هذه الأساليب وفقًا للحزمة الأسبوعية المعتمدة. والحد الفاصل الحاكم هو أن الجهات التنظيمية المخولة وحدها تحدد التعرفة وشروط التراخيص الملزمة. وهذه مخرجات مرحلية ناتجة عن حالات مكلف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `utility-regulation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of tariff scenario analyses, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’une intervention technique mesurée, mais ne constitue pas une commande financée pour ce service particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `utility-regulation`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire désigné et une définition acceptée des analyses de scénarios tarifaires, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في مجال الطاقة، بما فيها فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل فني مدروس، لا إلى أمر ممول لهذه الخدمة بعينها. وقد يؤدي اختلاف ملاك الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية الفنية. لذلك، يتمثل النهج المقترح لـ`utility-regulation` في سير عمل تعاقدي يحدد جهة مستفيدة بالاسم وتعريفًا معتمدًا لتحليلات سيناريوهات التعرفة، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the tariff scenario analyses acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks consumer impact reviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted tariff scenario analyses from rejected or deferred work and records blockers around licence condition checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères de réception des analyses de scénarios tarifaires ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les examens de l’incidence sur les consommateurs avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les analyses de scénarios tarifaires acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux vérifications des conditions de licence. Les examens des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تحليلات سيناريوهات التعرفة؛ ويترجمها 100 مدير إلى تكليفات للفرق، يضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص مراجعات أثرها على المستهلكين قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير التجميعي للخدمة بين تحليلات سيناريوهات التعرفة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل المعوقات المتعلقة بالتحقق من شروط التراخيص. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "utility economics, energy law, water regulation and consumer protection",
+  "fr": "économie des services publics, droit de l’énergie, réglementation de l’eau et protection des consommateurs",
+  "ar": "اقتصاديات المرافق، وقانون الطاقة، وتنظيم المياه، وحماية المستهلك"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Tariff scenario analyses",
+    "fr": "Analyses de scénarios tarifaires",
+    "ar": "تحليلات سيناريوهات التعرفة"
+   },
+   "unit": {
+    "en": "tariff scenario analyses",
+    "fr": "analyses de scénarios tarifaires",
+    "ar": "تحليلات سيناريوهات التعرفة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Consumer impact reviews",
+    "fr": "Examens de l’incidence sur les consommateurs",
+    "ar": "مراجعات الأثر على المستهلكين"
+   },
+   "unit": {
+    "en": "consumer impact reviews",
+    "fr": "examens de l’incidence sur les consommateurs",
+    "ar": "مراجعات الأثر على المستهلكين"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Licence condition checks",
+    "fr": "Vérifications des conditions de licence",
+    "ar": "التحقق من شروط الترخيص"
+   },
+   "unit": {
+    "en": "licence condition checks",
+    "fr": "vérifications des conditions de licence",
+    "ar": "التحقق من شروط الترخيص"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Service quality dashboards",
+    "fr": "Tableaux de bord de la qualité du service",
+    "ar": "لوحات معلومات جودة الخدمة"
+   },
+   "unit": {
+    "en": "service quality dashboards",
+    "fr": "tableaux de bord de la qualité du service",
+    "ar": "لوحات معلومات جودة الخدمة"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `utility-regulation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the tariff scenario analyses to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `utility-regulation` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des dossiers de consultation expurgés, qui relient les analyses de scénarios tarifaires à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `utility-regulation` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، وتربط تحليلات سيناريوهات التعرفة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted tariff scenario analyses** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici vendredi 12:00 ; **≥1 analyse de scénarios tarifaires acceptée** par équipe-semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥1 تحليل مقبول لسيناريوهات التعرفة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات المعتمدة أو التعديلات المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أثرها أي نتيجة خضراء. هذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "only authorised regulators set tariffs and binding licence conditions",
+  "fr": "seuls les régulateurs habilités fixent les tarifs et les conditions de licence contraignantes",
+  "ar": "الجهات التنظيمية المخولة وحدها هي التي تحدد التعرفات وشروط الترخيص الملزمة"
+ },
+ "depends": [
+  {
+   "slug": "water-sanitation",
+   "id": 35
+  },
+  {
+   "slug": "renewable-science",
+   "id": 68
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "renewable-systems",
+   "id": 119
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Cost recovery ignores poor households → reconcile source records with the tariff scenario analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le recouvrement des coûts ne tient pas compte des ménages à faibles revenus → rapprocher les documents sources de la liste de contrôle d’acceptation des analyses de scénarios tarifaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تجاهل استرداد التكاليف للأسر محدودة الدخل → طابق سجلات المصادر مع قائمة التحقق لقبول تحليلات سيناريوهات التعرفة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Cross-subsidies become opaque → reconcile source records with the tariff scenario analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les subventions croisées deviennent opaques → rapprocher les documents sources de la liste de contrôle d’acceptation des analyses de scénarios tarifaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تصبح الإعانات المتبادلة غير شفافة → طابق سجلات المصادر مع قائمة التحقق لقبول تحليلات سيناريوهات التعرفة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Performance indicators conceal service interruptions → reconcile source records with the tariff scenario analyses acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les indicateurs de performance masquent les interruptions de service → rapprocher les documents sources de la liste de contrôle d’acceptation des analyses de scénarios tarifaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تحجب مؤشرات الأداء انقطاعات الخدمة → طابق سجلات المصادر مع قائمة التحقق لقبول تحليلات سيناريوهات التعرفة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

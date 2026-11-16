@@ -1,0 +1,71 @@
+{
+ "slug": "ontology-department",
+ "id": 5,
+ "order": 5,
+ "icon": "network",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Ontology Department",
+  "fr": "Département de l’ontologie",
+  "ar": "إدارة الأنطولوجيا"
+ },
+ "tagline": {
+  "en": "The organisational home of the five macros and 130 services.",
+  "fr": "L’entité organisationnelle qui regroupe les cinq macro-ensembles et les 130 services.",
+  "ar": "الموطن التنظيمي للأعمال الخمسة الكبرى والخدمات الـ130."
+ },
+ "outcome": [
+  {
+   "en": "The Ontology Department maintains the vocabulary: five macro works, 130 services, six layers, and the rules that connect them.",
+   "fr": "Le Département de l’ontologie maintient le vocabulaire : cinq macro-ensembles, 130 services, six couches et les règles qui les relient.",
+   "ar": "تحافظ إدارة الأنطولوجيا على المفردات: خمسة أعمال كبرى، و130 خدمة، وست طبقات، والقواعد التي تربط بينها."
+  },
+  {
+   "en": "Every service declares at least one input provider from another macro and one downstream consumer, which forces cross-domain coordination.",
+   "fr": "Chaque service déclare au moins un fournisseur d’entrée appartenant à un autre macro-ensemble et un consommateur en aval, ce qui impose une coordination entre les domaines.",
+   "ar": "تحدد كل خدمة مزودًا واحدًا على الأقل لمدخلاتها من مجال رئيسي آخر، ومستهلكًا لاحقًا واحدًا، ما يفرض التنسيق بين المجالات."
+  }
+ ],
+ "evidence": {
+  "en": "Listed as live on the preview; 16 departments registered.",
+  "fr": "Indiqué comme actif dans l’aperçu ; 16 départements enregistrés.",
+  "ar": "مدرجة بوصفها نشطة في المعاينة؛ تم تسجيل 16 إدارة."
+ },
+ "services": [
+  "research-data",
+  "official-stats",
+  "archival-science",
+  "cultural-data"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Live",
+    "fr": "Actif",
+    "ar": "نشط"
+   },
+   "body": {
+    "en": "{{ counts.services }} services registered.",
+    "fr": "{{ counts.services }} services enregistrés.",
+    "ar": "تم تسجيل {{ counts.services }} خدمة."
+   }
+  }
+ ],
+ "gradient": "cultures",
+ "needs": {
+  "en": "Ontology editors, domain reviewers.",
+  "fr": "Éditeurs de l’ontologie, réviseurs de domaine.",
+  "ar": "محررو الأنطولوجيا، ومراجعو المجالات."
+ }
+}

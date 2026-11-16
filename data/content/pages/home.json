@@ -1,0 +1,687 @@
+{
+ "slug": "home",
+ "title": {
+  "en": "W5D — take a part today, lead an expert team",
+  "fr": "W5D — prenez une part dès aujourd’hui, dirigez une équipe d’experts",
+  "ar": "W5D — احصل على حصة اليوم، وقُد فريقًا من الخبراء"
+ },
+ "description": {
+  "en": "W5D is a company and a working ontology: five macro works, {{ counts.services }} services. Investors take a part every day; expert team managers are recruited first.",
+  "fr": "W5D est une entreprise et une ontologie opérationnelle : cinq macro-œuvres, {{ counts.services }} services. Les investisseurs prennent une part chaque jour ; les responsables d’équipes d’experts sont recrutés en premier.",
+  "ar": "W5D شركة وأنطولوجيا عملية: خمسة أعمال كبرى و{{ counts.services }} خدمة. يشتري المستثمرون حصة يوميًا؛ ويجري أولًا استقطاب مديري فرق الخبراء."
+ },
+ "sections": [
+  {
+   "type": "slider",
+   "id": "home-hero",
+   "source": "home"
+  },
+  {
+   "type": "kpis",
+   "id": "home-trust-strip",
+   "tier": "e",
+   "focus": 2,
+   "items": [
+    {
+     "value": "{{ counts.macros }}",
+     "label": {
+      "en": "macro works",
+      "fr": "macro-œuvres",
+      "ar": "الأعمال الكبرى"
+     }
+    },
+    {
+     "value": "{{ counts.services }}",
+     "label": {
+      "en": "registered services",
+      "fr": "services enregistrés",
+      "ar": "خدمات مسجّلة"
+     }
+    },
+    {
+     "value": "{{ experts.developers_today }}",
+     "label": {
+      "en": "developers delivering in Tunisia today",
+      "fr": "développeurs en activité en Tunisie aujourd’hui",
+      "ar": "مطوّرون يقدّمون خدماتهم في تونس اليوم"
+     },
+     "note": {
+      "en": "Dated {{ dates.as_of }}",
+      "fr": "Daté du {{ dates.as_of }}",
+      "ar": "مؤرّخ في {{ dates.as_of }}"
+     }
+    },
+    {
+     "value": "{{ d.experts_current }}",
+     "label": {
+      "en": "experts certified today",
+      "fr": "experts certifiés à ce jour",
+      "ar": "خبراء حاصلون على الاعتماد اليوم"
+     },
+     "note": {
+      "en": "Design ceiling: {{ d.experts_target }}",
+      "fr": "Plafond de conception : {{ d.experts_target }}",
+      "ar": "سقف التصميم: {{ d.experts_target }}"
+     }
+    },
+    {
+     "value": "{{ price.day }}",
+     "label": {
+      "en": "{{ money.currency }} per part per day, today",
+      "fr": "{{ money.currency }} par part et par jour, aujourd’hui",
+      "ar": "{{ money.currency }} لكل حصة يوميًا، اليوم"
+     },
+     "note": {
+      "en": "Cap {{ pricing.cap }}× base",
+      "fr": "Plafond : {{ pricing.cap }}× la base",
+      "ar": "الحد الأقصى {{ pricing.cap }}× الأساس"
+     },
+     "dec": 2
+    }
+   ]
+  },
+  {
+   "type": "investor-strip",
+   "id": "home-investors",
+   "tier": "e",
+   "focus": 4,
+   "eyebrow": {
+    "en": "Investors",
+    "fr": "Investisseurs",
+    "ar": "المستثمرون"
+   },
+   "title": {
+    "en": "One part a day is a **position in the path**, not a promise.",
+    "fr": "Une part par jour est une **étape du parcours**, pas une promesse.",
+    "ar": "حصة واحدة يوميًا هي **محطة على المسار**، وليست وعدًا."
+   },
+   "lead": {
+    "en": "Parts fund certification and delivery capacity. The price is a public function of programme progress and time. You see the whole schedule before you confirm, and you can pause or stop.",
+    "fr": "Les parts financent la certification et la capacité de réalisation. Le prix est une fonction publique de l’avancement du programme et du temps. Vous consultez le calendrier complet avant de confirmer et pouvez mettre en pause ou arrêter.",
+    "ar": "تُموّل الحصص الاعتماد والقدرة على تقديم الخدمات. ويُحدَّد السعر وفق معادلة معلنة تستند إلى تقدّم البرنامج والوقت. يمكنك الاطلاع على الجدول كاملًا قبل التأكيد، كما يمكنك الإيقاف مؤقتًا أو التوقف."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Daily subscription",
+      "fr": "Abonnement journalier",
+      "ar": "اشتراك يومي"
+     },
+     "href": "/subscription/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "home-problem",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Graduates are many. Verified, supervised work is scarce.",
+    "fr": "Les diplômés sont nombreux. Les missions vérifiées et supervisées sont rares.",
+    "ar": "الخريجون كثيرون. أما العمل الموثّق والخاضع للإشراف فنادر."
+   },
+   "paragraphs": [
+    {
+     "en": "The World Bank's 2022 overview compares 64,540 annual university graduates with 10,675 net additional high-end jobs a year. That gap is the reason the programme exists; it is not a claim about any single speciality.",
+     "fr": "La synthèse 2022 de la Banque mondiale compare 64,540 diplômés universitaires par an à 10,675 emplois hautement qualifiés nets supplémentaires par an. Cet écart explique la raison d’être du programme ; il ne constitue pas une affirmation sur une spécialité en particulier.",
+     "ar": "تقارن لمحة البنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا و10,675 وظيفة إضافية صافية سنويًا في المجالات عالية المهارة. وهذه الفجوة هي سبب وجود البرنامج، وليست ادعاءً بشأن أي تخصص بعينه."
+    },
+    {
+     "en": "W5D does not sell a job. It builds a supervised path: certification tasks first, then weekly deliverables with a named reviewer, then a rollup anyone can inspect.",
+     "fr": "W5D ne vend pas d’emploi. Le programme construit un parcours supervisé : d’abord des tâches de certification, puis des livrables hebdomadaires avec un responsable de révision nommé, et enfin une synthèse consolidée que chacun peut consulter.",
+     "ar": "لا تبيع W5D وظيفة. بل تبني مسارًا خاضعًا للإشراف: يبدأ بمهام الاعتماد، ثم مخرجات أسبوعية يراجعها مراجع محدد الاسم، ثم تقرير تجميعي يمكن لأي شخص الاطلاع عليه."
+    },
+    {
+     "en": "The path is funded in parts, and led by managers who each answer for about {{ experts.team_size }} experts. That is why managers are recruited first.",
+     "fr": "Le parcours est financé en parts et dirigé par des responsables qui répondent chacun d’environ {{ experts.team_size }} experts. C’est pourquoi les responsables sont recrutés en premier.",
+     "ar": "يُموّل المسار على شكل حصص، ويقوده مديرون يتحمل كل منهم مسؤولية نحو {{ experts.team_size }} خبيرًا. ولهذا يجري استقطاب المديرين أولًا."
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Is this me?",
+      "fr": "Est-ce fait pour moi ?",
+      "ar": "هل يناسبني هذا؟"
+     },
+     "href": "#home-fit",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "id": "home-fit",
+   "tier": "e",
+   "focus": 3,
+   "cols": 4,
+   "title": {
+    "en": "Four doors, one standard of evidence",
+    "fr": "Quatre voies, un même niveau d’exigence en matière de preuves",
+    "ar": "أربعة مسارات، ومعيار واحد للأدلة"
+   },
+   "items": [
+    {
+     "icon": "coins",
+     "title": {
+      "en": "I want to invest",
+      "fr": "Je souhaite investir",
+      "ar": "أريد الاستثمار"
+     },
+     "body": {
+      "en": "Take one part today or commit to one every day. See the price function and the full schedule first.",
+      "fr": "Prenez une part aujourd’hui ou engagez-vous à en prendre une chaque jour. Consultez d’abord la fonction de prix et le calendrier complet.",
+      "ar": "خذ حصة واحدة اليوم، أو التزم بحصة واحدة كل يوم. اطّلع أولًا على معادلة السعر والجدول كاملًا."
+     },
+     "href": "/checkout/",
+     "cta": {
+      "en": "Take a part",
+      "fr": "Prenez une part",
+      "ar": "احصل على حصة"
+     }
+    },
+    {
+     "icon": "users",
+     "title": {
+      "en": "I can lead a team",
+      "fr": "Je peux diriger une équipe",
+      "ar": "أستطيع قيادة فريق"
+     },
+     "body": {
+      "en": "Apply as an expert team manager: about {{ experts.team_size }} experts, a weekly rubric, a report you sign.",
+      "fr": "Candidatez comme responsable d’une équipe d’experts : environ {{ experts.team_size }} experts, une grille d’évaluation hebdomadaire et un rapport que vous signez.",
+      "ar": "تقدّم بطلب لتصبح مدير فريق خبراء: نحو {{ experts.team_size }} خبيرًا، ومعايير تقييم أسبوعية، وتقرير توقّعه."
+     },
+     "href": "/careers/managers/",
+     "cta": {
+      "en": "Apply as manager",
+      "fr": "Candidater comme responsable",
+      "ar": "تقدّم بطلب لتصبح مديرًا"
+     }
+    },
+    {
+     "icon": "graduation-cap",
+     "title": {
+      "en": "I hold a diploma",
+      "fr": "Je possède un diplôme",
+      "ar": "لديّ شهادة دبلوم"
+     },
+     "body": {
+      "en": "Check which of the {{ counts.services }} services fits your field in thirty seconds.",
+      "fr": "Vérifiez en trente secondes lequel des {{ counts.services }} services correspond à votre domaine.",
+      "ar": "تحقّق في ثلاثين ثانية من الخدمات الـ{{ counts.services }} التي تناسب مجال عملك."
+     },
+     "href": "/join/eligibility/",
+     "cta": {
+      "en": "Check eligibility",
+      "fr": "Vérifier l’admissibilité",
+      "ar": "تحقق من الأهلية"
+     }
+    },
+    {
+     "icon": "handshake",
+     "title": {
+      "en": "I need work delivered",
+      "fr": "J’ai besoin d’une prestation",
+      "ar": "أحتاج إلى إنجاز عمل"
+     },
+     "body": {
+      "en": "Commission a scoped delivery from a service team, with a named beneficiary and an acceptance rule.",
+      "fr": "Commandez une prestation au périmètre défini auprès d’une équipe de service, avec un bénéficiaire nommé et un critère de validation.",
+      "ar": "كلّف فريق خدمات بإنجاز عمل محدد النطاق، مع تحديد مستفيد وقاعدة قبول."
+     },
+     "href": "/partners/",
+     "cta": {
+      "en": "Book a scoping call",
+      "fr": "Réserver un appel de cadrage",
+      "ar": "احجز مكالمة لتحديد النطاق"
+     }
+    }
+   ],
+   "lead": {
+    "en": "Pick the door that matches you.",
+    "fr": "Choisissez l’option qui vous correspond.",
+    "ar": "اختر المسار الذي يناسبك."
+   }
+  },
+  {
+   "type": "pipeline",
+   "id": "home-pipeline",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "From part to proof in four steps",
+    "fr": "De l’unité à la preuve en quatre étapes",
+    "ar": "من الجزء إلى إثباته في أربع خطوات"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Parts are bought",
+      "fr": "Les unités sont achetées",
+      "ar": "تُشترى الأجزاء"
+     },
+     "body": {
+      "en": "Each part is priced by the published function and recorded with its date, price and progress.",
+      "fr": "Chaque unité est tarifée selon la fonction publiée et enregistrée avec sa date, son prix et son avancement.",
+      "ar": "يُحدَّد سعر كل جزء وفق الوظيفة المنشورة، ويُسجَّل تاريخه وسعره ومدى تقدّمه."
+     },
+     "meta": {
+      "en": "Every day",
+      "fr": "Chaque jour",
+      "ar": "كل يوم"
+     }
+    },
+    {
+     "title": {
+      "en": "Experts are certified",
+      "fr": "Les experts sont certifiés",
+      "ar": "يُعتمَد الخبراء"
+     },
+     "body": {
+      "en": "Task sets L1 to L4 are reviewed by a competent reviewer before any delivery.",
+      "fr": "Les ensembles de tâches L1 à L4 sont examinés par un évaluateur compétent avant toute prestation.",
+      "ar": "يراجع مراجع مؤهل مجموعات المهام من L1 إلى L4 قبل أي عملية تسليم."
+     },
+     "meta": {
+      "en": "Weeks",
+      "fr": "Semaines",
+      "ar": "أسابيع"
+     }
+    },
+    {
+     "title": {
+      "en": "Teams deliver weekly",
+      "fr": "Les équipes livrent chaque semaine",
+      "ar": "تُنجز الفرق العمل أسبوعيًا"
+     },
+     "body": {
+      "en": "About {{ experts.team_size }} experts per manager; reports are due Friday 12:00.",
+      "fr": "Environ {{ experts.team_size }} experts par responsable ; les rapports sont attendus le vendredi à 12:00.",
+      "ar": "نحو {{ experts.team_size }} خبيرًا لكل مدير؛ والتقارير مستحقة يوم الجمعة الساعة 12:00."
+     },
+     "meta": {
+      "en": "Weekly",
+      "fr": "Chaque semaine",
+      "ar": "أسبوعيًا"
+     }
+    },
+    {
+     "title": {
+      "en": "Evidence is sampled",
+      "fr": "Les preuves font l’objet d’un échantillonnage",
+      "ar": "تُؤخذ عيّنة من الأدلة"
+     },
+     "body": {
+      "en": "{{ quality.sampling_percent }}% of reports are re-checked at random and the rollup is public.",
+      "fr": "{{ quality.sampling_percent }}% des rapports sont revérifiés au hasard et la synthèse est publique.",
+      "ar": "تُعاد مراجعة {{ quality.sampling_percent }}% من التقارير عشوائيًا، ويُنشر الملخص الإجمالي."
+     },
+     "meta": {
+      "en": "Weekly",
+      "fr": "Chaque semaine",
+      "ar": "أسبوعيًا"
+     }
+    }
+   ],
+   "lead": {
+    "en": "The pipeline is deliberately boring: every step leaves a dated record.",
+    "fr": "Le processus est volontairement sobre : chaque étape laisse une trace datée.",
+    "ar": "صُمّم سير العمل ليكون مباشرًا وواضحًا؛ إذ تخلّف كل خطوة سجلًا مؤرخًا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "See the certification path",
+      "fr": "Voir le parcours de certification",
+      "ar": "اطّلع على مسار الاعتماد"
+     },
+     "href": "/how-it-works/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "macro-cards",
+   "id": "home-macros",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Five macro works, {{ experts.services_per_macro }} services each",
+    "fr": "Cinq macro-chantiers, {{ experts.services_per_macro }} services chacun",
+    "ar": "خمسة أعمال كبرى، {{ experts.services_per_macro }} خدمة لكل منها"
+   },
+   "lead": {
+    "en": "The top-level demand map. Choose the one that matches your field or your thesis.",
+    "fr": "La cartographie des besoins au niveau supérieur. Choisissez le domaine ou la thèse qui vous correspond.",
+    "ar": "خريطة الطلب على المستوى الأعلى. اختر المجال الذي يناسب تخصصك أو أطروحتك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Explore all macro works",
+      "fr": "Explorer tous les macro-chantiers",
+      "ar": "استكشف جميع الأعمال الكبرى"
+     },
+     "href": "/macro-works/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "home-mid-cta",
+   "gradient": "peak",
+   "title": {
+    "en": "Take your first part **today**.",
+    "fr": "Prenez votre première part **aujourd’hui**.",
+    "ar": "احصل على حصتك الأولى **اليوم**."
+   },
+   "body": {
+    "en": "It takes three steps. In demo mode no money moves; your pledge and your reference are recorded.",
+    "fr": "Trois étapes suffisent. En mode démo, aucun mouvement d’argent n’a lieu ; votre engagement et votre référence sont enregistrés.",
+    "ar": "تتم العملية في ثلاث خطوات. في الوضع التجريبي، لا تُحوَّل أي أموال؛ ويُسجَّل تعهّدك والمرجع الخاص بك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See today's price",
+      "fr": "Voir le prix du jour",
+      "ar": "اطّلع على سعر اليوم"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "A part is an investment in a path, not a job. No return is promised.",
+    "fr": "Une part est un investissement dans une trajectoire, pas un emploi. Aucun rendement n’est garanti.",
+    "ar": "الحصة استثمار في مسار، وليست وظيفة. ولا يُضمن أي عائد."
+   }
+  },
+  {
+   "type": "gov-map",
+   "id": "home-gov-map",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "{{ counts.governorates }} governorates, one standard",
+    "fr": "{{ counts.governorates }} gouvernorats, une norme",
+    "ar": "{{ counts.governorates }} ولاية، ومعيار واحد"
+   },
+   "lead": {
+    "en": "Experts register from their governorate. Hubs, universities and coordinators are listed per region as they are confirmed.",
+    "fr": "Les experts s’inscrivent depuis leur gouvernorat. Les pôles, universités et coordinateurs sont répertoriés par région au fur et à mesure de leur confirmation.",
+    "ar": "يسجّل الخبراء من ولاياتهم. وتُدرج المراكز والجامعات والمنسقون لكل منطقة عند تأكيدهم."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the Tunisia hub",
+      "fr": "Accéder au pôle tunisien",
+      "ar": "افتح مركز تونس"
+     },
+     "href": "/countries/tunisia/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "id": "home-stack",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "The ontology in six layers",
+    "fr": "L’ontologie en six couches",
+    "ar": "الأنطولوجيا في ست طبقات"
+   },
+   "lead": {
+    "en": "From doctrine (L0) to programme horizon (L5). Every service sits at L2 and every page says which layer it speaks about.",
+    "fr": "De la doctrine (L0) à l’horizon du programme (L5). Chaque service se situe au niveau L2 et chaque page précise la couche dont elle traite.",
+    "ar": "من العقيدة (L0) إلى أفق البرنامج (L5). تقع كل خدمة في L2، وتوضح كل صفحة الطبقة التي تتناولها."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "See the ontology",
+      "fr": "Voir l’ontologie",
+      "ar": "اطّلع على الأنطولوجيا"
+     },
+     "href": "/ontology/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "project-cards",
+   "id": "home-projects",
+   "tier": "i",
+   "focus": 2,
+   "title": {
+    "en": "Projects: live, building, concept, draft",
+    "fr": "Projets : en cours, en développement, à l’état de concept, à l’état de projet",
+    "ar": "المشاريع: قائمة، قيد الإنشاء، تصورية، مسودة"
+   },
+   "lead": {
+    "en": "Status and date are on every card.",
+    "fr": "Le statut et la date figurent sur chaque fiche.",
+    "ar": "تظهر الحالة والتاريخ على كل بطاقة."
+   },
+   "only": [
+    "meta-x-academy",
+    "ontology-department",
+    "studio",
+    "kernid",
+    "selfai",
+    "2030b"
+   ],
+   "limit": 6,
+   "ctas": [
+    {
+     "label": {
+      "en": "All {{ counts.projects }} projects",
+      "fr": "Tous les {{ counts.projects }} projets",
+      "ar": "جميع المشاريع وعددها {{ counts.projects }}"
+     },
+     "href": "/projects/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "id": "home-founder",
+   "tier": "e",
+   "focus": 2,
+   "gradient": "warm",
+   "text": {
+    "en": "No page asserts more than its evidence supports.",
+    "fr": "Aucune page n’affirme davantage que ce que les éléments disponibles permettent d’étayer.",
+    "ar": "لا تجزم أي صفحة بأكثر مما تدعمه أدلتها."
+   },
+   "by": {
+    "en": "The rule of Sidq, W5D doctrine",
+    "fr": "La règle de Sidq, doctrine W5D",
+    "ar": "قاعدة الصدق، عقيدة W5D"
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the declarations",
+      "fr": "Lire les déclarations",
+      "ar": "اقرأ الإقرارات"
+     },
+     "href": "/about/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "notice",
+   "id": "home-limits",
+   "tier": "i",
+   "focus": 1
+  },
+  {
+   "type": "faq",
+   "id": "home-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Questions investors and managers ask first",
+    "fr": "Les questions que les investisseurs et les dirigeants posent en premier",
+    "ar": "أسئلة يطرحها المستثمرون والمديرون أولاً"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "What exactly am I buying when I take a part?",
+      "fr": "Qu’est-ce que j’achète exactement lorsque je prends une part ?",
+      "ar": "ما الذي أشتريه تحديدًا عندما أشتري حصة؟"
+     },
+     "a": {
+      "en": "A part is a dated contribution to the programme that funds certification and delivery capacity. It is not equity, a loan, a salary or a promise of return. The price function and your schedule are shown before you confirm.",
+      "fr": "Une part est une contribution datée au programme qui finance la certification et la capacité de livraison. Ce n’est ni une participation au capital, ni un prêt, ni un salaire, ni une promesse de rendement. La fonction de prix et votre échéancier sont affichés avant votre confirmation.",
+      "ar": "الحصة مساهمة مؤرخة في البرنامج، تموّل الاعتماد والقدرة على تقديم الخدمات. وهي ليست أسهمًا أو قرضًا أو راتبًا أو وعدًا بعائد. تُعرض معادلة السعر وجدولك قبل التأكيد."
+     }
+    },
+    {
+     "q": {
+      "en": "Why does the price rise?",
+      "fr": "Pourquoi le prix augmente-t-il ?",
+      "ar": "لماذا يرتفع السعر؟"
+     },
+     "a": {
+      "en": "The price per part rises with programme progress (p) and elapsed time (t), capped at {{ pricing.cap }}× the base. Earlier parts cost less. The formula is public on the pricing page.",
+      "fr": "Le prix par part augmente en fonction de l’avancement du programme (p) et du temps écoulé (t), dans la limite de {{ pricing.cap }}× le prix de base. Les premières parts coûtent moins cher. La formule est publiée sur la page des tarifs.",
+      "ar": "يرتفع سعر الحصة مع تقدم البرنامج (p) والوقت المنقضي (t)، على ألا يتجاوز {{ pricing.cap }}× السعر الأساسي. تكون تكلفة الحصص المبكرة أقل. المعادلة منشورة على صفحة الأسعار."
+     }
+    },
+    {
+     "q": {
+      "en": "Can I stop a daily subscription?",
+      "fr": "Puis-je arrêter un abonnement quotidien ?",
+      "ar": "هل يمكنني إيقاف اشتراك يومي؟"
+     },
+     "a": {
+      "en": "Yes. Every subscription has a management key. Pause, resume or cancel at any time; future days are not charged after you cancel.",
+      "fr": "Oui. Chaque abonnement est associé à une clé de gestion. Vous pouvez le suspendre, le reprendre ou l’annuler à tout moment ; après l’annulation, aucun jour ultérieur ne vous sera facturé.",
+      "ar": "نعم. لكل اشتراك مفتاح إدارة. يمكنك إيقافه مؤقتًا أو استئنافه أو إلغاؤه في أي وقت؛ ولن تُحتسب رسوم الأيام اللاحقة بعد الإلغاء."
+     }
+    },
+    {
+     "q": {
+      "en": "Is the {{ d.experts_target }} figure real?",
+      "fr": "Le chiffre de {{ d.experts_target }} est-il réel ?",
+      "ar": "هل رقم {{ d.experts_target }} حقيقي؟"
+     },
+     "a": {
+      "en": "It is a design equation ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Today {{ experts.developers_today }} developers deliver and {{ d.experts_current }} experts are certified.",
+      "fr": "Il s’agit d’une équation de conception ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Aujourd’hui, {{ experts.developers_today }} développeurs assurent les prestations et {{ d.experts_current }} experts sont certifiés.",
+      "ar": "إنها معادلة تصميمية ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). اليوم، يقدم الخدمات {{ experts.developers_today }} مطورًا، وحصل {{ d.experts_current }} خبيرًا على الاعتماد."
+     }
+    },
+    {
+     "q": {
+      "en": "Why are managers recruited first?",
+      "fr": "Pourquoi recrute-t-on d’abord des responsables ?",
+      "ar": "لماذا يُستقطب المديرون أولًا؟"
+     },
+     "a": {
+      "en": "Because a team of about {{ experts.team_size }} needs an accountable person before it needs more members. Managers set the pace and sign the report.",
+      "fr": "Parce qu’une équipe d’environ {{ experts.team_size }} personnes a besoin d’un responsable qui en assume la responsabilité avant d’accueillir davantage de membres. Les responsables définissent le rythme et signent le rapport.",
+      "ar": "لأن فريقًا يضم نحو {{ experts.team_size }} يحتاج إلى شخص مسؤول قبل أن يحتاج إلى مزيد من الأعضاء. يحدد المديرون وتيرة العمل ويوقّعون التقرير."
+     }
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Ask us",
+      "fr": "Contactez-nous",
+      "ar": "تواصلوا معنا"
+     },
+     "href": "/contact/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "home-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Start with one part. **Or lead a team.**",
+    "fr": "Commencez par une part. **Ou dirigez une équipe.**",
+    "ar": "ابدأ بحصة واحدة. **أو تولَّ قيادة فريق.**"
+   },
+   "body": {
+    "en": "Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first.",
+    "fr": "Les investisseurs prennent une part. Les responsables postulent. Les diplômés vérifient leur admissibilité. Tout le monde connaît d’abord les limites.",
+    "ar": "يشتري المستثمرون حصة. ويتقدم المديرون بطلب. ويتحقق الخريجون من استيفاء شروط الأهلية. ويطّلع الجميع على الحدود أولًا."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "type": "sticky-cta",
+   "id": "sticky",
+   "href": "/checkout/",
+   "label": {
+    "en": "Take a part today",
+    "fr": "Prendre une part aujourd’hui",
+    "ar": "احصل على حصة اليوم"
+   }
+  }
+ ]
+}

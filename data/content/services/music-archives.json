@@ -1,0 +1,167 @@
+{
+ "slug": "music-archives",
+ "id": 11,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Music & Sound Archives",
+  "fr": "Archives musicales et sonores",
+  "ar": "أرشيف الموسيقى والصوت"
+ },
+ "short": {
+  "en": "The service provides recording, rights management, distribution.",
+  "fr": "Préserver les archives musicales et leurs droits.",
+  "ar": "حفظ الأرشيف الموسيقي وحقوقه."
+ },
+ "abstract": {
+  "en": "Music and sound archive services — professional recording, metadata and rights management, and streaming distribution agreements that respect performers' and composers' rights.",
+  "fr": "Services d’archives musicales et sonores — enregistrement professionnel, gestion des métadonnées et des droits, et accords de distribution en streaming respectant les droits des interprètes et des compositeurs.",
+  "ar": "خدمات أرشفة الموسيقى والصوت — التسجيل الاحترافي، وإدارة البيانات الوصفية والحقوق، واتفاقيات التوزيع عبر البث التي تحترم حقوق المؤدين والملحنين."
+ },
+ "long": [
+  {
+   "en": "The Music & Sound Archives service organises a weekly work package around preserved audio hours, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 preserved audio hours; 5000 track metadata records; 250 performer agreements; 500 quality control logs. Music and sound archive services — professional recording, metadata and rights management, and streaming distribution agreements that respect performers' and composers' rights. Specialists sequence those methods against the accepted weekly package. The governing boundary is that recording provenance and performer permissions remain attached to each master. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des Archives musicales et sonores organise un lot de travail hebdomadaire autour des heures d’audio préservées, plutôt que de considérer la fréquentation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 heures d’audio préservées ; 5000 enregistrements de métadonnées de pistes ; 250 accords avec des interprètes ; 500 journaux de contrôle qualité. Services d’archives musicales et sonores — enregistrement professionnel, gestion des métadonnées et des droits, et accords de distribution en streaming respectant les droits des interprètes et des compositeurs. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que la provenance de l’enregistrement et les autorisations des interprètes restent associées à chaque master. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة أرشيف الموسيقى والصوت حزمة عمل أسبوعية حول ساعات الصوت المحفوظة، بدلًا من اعتبار الحضور هو الناتج. وتبلغ الخطة التجريبية، عند اكتمال القدرة وتوفير الموارد، 500 ساعة صوتية محفوظة؛ و5000 سجل بيانات وصفية للمقاطع الصوتية؛ و250 اتفاقية مع مؤدين؛ و500 سجل لمراقبة الجودة. خدمات أرشفة الموسيقى والصوت — التسجيل الاحترافي، وإدارة البيانات الوصفية والحقوق، واتفاقيات التوزيع عبر البث التي تحترم حقوق المؤدين والملحنين. ويرتب المختصون تطبيق هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. ويقضي الضابط الحاكم بأن تظل بيانات مصدر التسجيل وأذونات المؤدين مرفقة بكل نسخة أصلية. وهذه مخرجات مرحلية لحالات تم التكليف بها، وليست وعدًا بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `music-archives`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of preserved audio hours, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La présentation générale de la Banque mondiale de 2022 compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois qualifiés nets supplémentaires par an entre 2011 et 2017. Ce décalage historique étaye une hypothèse plus large en matière de commande de prestations ; il ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les responsables de fonds et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un commanditaire payeur et un accord de réutilisation. Pour `music-archives`, la réponse proposée est donc un flux de travail contractuel avec un bénéficiaire désigné et une définition acceptée des heures d’audio préservées, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن لمحة للبنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا خلال الأعوام الأكاديمية 2012/13–2017/18، و10,675 وظيفة جديدة صافية سنويًا في الفئة العليا خلال 2011–2017. ويدعم هذا التباين التاريخي فرضية أوسع بشأن التكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القيمون على المجموعات والمجتمعات من الخدمة من دون أن تكون لديهم ميزانية أو جهة تعاقد واحدة، لذا يجب تحديد جهة راعية تدفع التكلفة واتفاقية لإعادة الاستخدام. لذلك، فإن الاستجابة المقترحة لـ`music-archives` هي سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لساعات الصوت المحفوظة، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the preserved audio hours acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks track metadata records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted preserved audio hours from rejected or deferred work and records blockers around performer agreements. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des heures d’audio préservées ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les enregistrements de métadonnées des pistes avant approbation. L’audit aléatoire proposé de 5% revérifie les pièces justificatives et les exceptions ; il ne remplace pas l’examen par le responsable de chaque rapport hebdomadaire. Le bilan du service distingue les heures d’audio préservées acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux accords avec les interprètes. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول ساعات الصوت المحفوظة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من سجلات البيانات الوصفية للمقاطع الصوتية قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين ساعات الصوت المحفوظة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باتفاقيات المؤدين. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "musicology, ethnomusicology, archival science and audio production",
+  "fr": "musicologie, ethnomusicologie, archivistique et production audio",
+  "ar": "علم الموسيقى، والإثنوموسيقى، وعلوم الأرشيف، والإنتاج الصوتي"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Preserved audio hours",
+    "fr": "Heures d’audio préservées",
+    "ar": "ساعات صوتية محفوظة"
+   },
+   "unit": {
+    "en": "preserved audio hours",
+    "fr": "heures d’audio préservées",
+    "ar": "ساعات صوتية محفوظة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Track metadata records",
+    "fr": "Enregistrements de métadonnées de pistes",
+    "ar": "سجلات البيانات الوصفية للمقاطع الصوتية"
+   },
+   "unit": {
+    "en": "track metadata records",
+    "fr": "enregistrements de métadonnées de pistes",
+    "ar": "سجلات البيانات الوصفية للمقاطع الصوتية"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Performer agreements",
+    "fr": "Accords avec les interprètes",
+    "ar": "اتفاقيات المؤدين"
+   },
+   "unit": {
+    "en": "performer agreements",
+    "fr": "accords avec les interprètes",
+    "ar": "اتفاقيات المؤدين"
+   },
+   "target": 250
+  },
+  {
+   "name": {
+    "en": "Quality control logs",
+    "fr": "Journaux de contrôle qualité",
+    "ar": "سجلات مراقبة الجودة"
+   },
+   "unit": {
+    "en": "quality control logs",
+    "fr": "journaux de contrôle qualité",
+    "ar": "سجلات مراقبة الجودة"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `music-archives` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + WAV/MP4 master and time-coded annotations, linking the preserved audio hours to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `music-archives` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + un master WAV/MP4 et des annotations avec codes temporels, qui relient les heures d’audio préservées à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `music-archives` المرتبطة بحالة ما ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + نسخة أصلية بصيغة WAV/MP4 وشروحًا محددة بالرموز الزمنية، تربط ساعات الصوت المحفوظة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted preserved audio hours** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant ven. 12:00 ; **≥4 heures d’audio préservées acceptées** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux pièces justificatives** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستحقة** بحلول الجمعة 12:00؛ و**قبول ≥4 ساعات صوتية محفوظة** لكل فريق في الأسبوع، بحسب تعقيد الحالة؛ و**≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات والتسويات المعتمدة مقام التقارير المستحقة، بينما تتجاوز عيوب السلامة أو الخصوصية الحرجة التقييم الأخضر. وهذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "recording provenance and performer permissions remain attached to each master",
+  "fr": "la provenance de l’enregistrement et les autorisations des interprètes restent associées à chaque master",
+  "ar": "تظل بيانات مصدر التسجيل وأذونات المؤدين مرفقة بكل نسخة أصلية"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Noise removal removes musical detail → reconcile source records with the preserved audio hours acceptance checklist and assign corrective-action ownership.",
+   "fr": "La réduction du bruit supprime des détails musicaux → rapprocher les pièces justificatives de la liste de contrôle d’acceptation des heures d’audio préservées et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤدي إزالة الضوضاء إلى حذف تفاصيل موسيقية → طابقوا السجلات المصدرية مع قائمة التحقق من قبول ساعات الصوت المحفوظة، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Traditional material assigned false ownership → document permissions and obtain qualified rights review before release.",
+   "fr": "Attribution erronée de la propriété de matériel traditionnel → documentez les autorisations et faites examiner les droits par un spécialiste qualifié avant toute diffusion.",
+   "ar": "إسناد ملكية زائفة إلى مواد تقليدية → توثيق الأذونات والحصول على مراجعة حقوقية من مختصين قبل الإصدار."
+  },
+  {
+   "en": "Royalty recipients misidentified → document permissions and obtain qualified rights review before release.",
+   "fr": "Mauvaise identification des bénéficiaires de redevances → documentez les autorisations et faites examiner les droits par un spécialiste qualifié avant toute diffusion.",
+   "ar": "تحديد مستحقي الإتاوات على نحو خاطئ → توثيق الأذونات والحصول على مراجعة حقوقية من مختصين قبل الإصدار."
+  }
+ ]
+}

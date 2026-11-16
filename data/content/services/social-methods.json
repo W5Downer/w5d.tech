@@ -1,0 +1,167 @@
+{
+ "slug": "social-methods",
+ "id": 73,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Social Science Research Methods",
+  "fr": "Méthodes de recherche en sciences sociales",
+  "ar": "مناهج البحث في العلوم الاجتماعية"
+ },
+ "short": {
+  "en": "The service provides surveys, qualitative coding, ethics.",
+  "fr": "Concevoir des enquêtes sociales éthiques.",
+  "ar": "تصميم مسوح اجتماعية أخلاقية."
+ },
+ "abstract": {
+  "en": "Social science research methods — survey design, qualitative coding frameworks, and research ethics that support rigorous social inquiry.",
+  "fr": "Méthodes de recherche en sciences sociales — conception d’enquêtes, cadres de codage qualitatif et éthique de la recherche au service d’une enquête sociale rigoureuse.",
+  "ar": "مناهج البحث في العلوم الاجتماعية — تصميم الاستبيانات، وأطر الترميز النوعي، وأخلاقيات البحث التي تدعم الاستقصاء الاجتماعي الدقيق."
+ },
+ "long": [
+  {
+   "en": "The Social Science Research Methods service organises a weekly work package around survey instruments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 survey instruments; 5000 quality checked interviews; 500 qualitative coding batches; 100 methodology notes. Social science research methods — survey design, qualitative coding frameworks, and research ethics that support rigorous social inquiry. Specialists sequence those methods against the accepted weekly package. The governing boundary is that sampling frames and non-response limitations remain visible in every estimate. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de méthodes de recherche en sciences sociales organise un lot de travail hebdomadaire autour des instruments d’enquête, plutôt que de considérer la présence comme un résultat. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 instruments d’enquête ; 5000 entretiens soumis à un contrôle qualité ; 500 lots de codage qualitatif ; 100 notes méthodologiques. Méthodes de recherche en sciences sociales — conception d’enquêtes, cadres de codage qualitatif et éthique de la recherche au service d’une enquête sociale rigoureuse. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les plans d’échantillonnage et les limites liées à la non-réponse restent visibles dans chaque estimation. Il s’agit de livrables échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة مناهج البحث في العلوم الاجتماعية حزمة عمل أسبوعية تتمحور حول أدوات الاستبيان، بدلًا من اعتبار الحضور ناتجًا بحد ذاته. وتبلغ الخطة التجريبية، عند توافر القدرة الكاملة والموارد اللازمة، 100 أداة استبيان؛ و5000 مقابلة خضعت لفحص الجودة؛ و500 دفعة ترميز نوعي؛ و100 مذكرة منهجية. مناهج البحث في العلوم الاجتماعية — تصميم الاستبيانات، وأطر الترميز النوعي، وأخلاقيات البحث التي تدعم الاستقصاء الاجتماعي الدقيق. ويرتب الاختصاصيون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويتمثل القيد الناظم في إبقاء أطر أخذ العينات وقيود عدم الاستجابة واضحة في كل تقدير. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `social-methods`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of survey instruments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active tunisienne diplômée était au chômage au Q2 2026, tandis que l’analyse publiée par l’OCDE en avril 2022 décrit la faiblesse des liens entre les qualifications et les exigences pratiques des employeurs. Aucun de ces chiffres ne permet d’établir le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, les méthodes encadrées et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne constitue pas un substitut complet à un service partagé responsable de ses résultats. Pour `social-methods`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des instruments d’enquête, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من القوى العاملة التونسية من حملة الشهادات العليا كانوا عاطلين عن العمل في الربع الثاني من 2026، فيما يصف تحليل OECD الصادر في أبريل 2022 ضعف الروابط بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا يحدد أي من الرقمين عدد الاختصاصيين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل الوصول إلى المختبرات، والإشراف على الأساليب، واستمرارية تمويل الأبحاث، مجموعة العاملين المستقلين غير كافية بوصفها بديلًا عن خدمة مشتركة خاضعة للمساءلة. لذلك، يتمثل المقترح لـ`social-methods` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لأدوات الاستبيان، لا في تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the survey instruments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks quality checked interviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted survey instruments from rejected or deferred work and records blockers around qualitative coding batches. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des instruments d’enquête ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les entretiens soumis à un contrôle qualité avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants à la source et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les instruments d’enquête acceptés des travaux rejetés ou différés et consigne les obstacles liés aux lots de codage qualitatif. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول أدوات الاستبيان؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من المقابلات التي خضعت لفحص الجودة قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير التجميعي للخدمة بين أدوات الاستبيان المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بدفعات الترميز النوعي. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف الخبراء البالغ 1,000."
+  }
+ ],
+ "fields": {
+  "en": "sociology, anthropology, survey statistics and qualitative methods",
+  "fr": "sociologie, anthropologie, statistiques d’enquête et méthodes qualitatives",
+  "ar": "علم الاجتماع، والأنثروبولوجيا، وإحصاءات المسوح، والأساليب النوعية"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Survey instruments",
+    "fr": "Instruments d’enquête",
+    "ar": "أدوات المسح"
+   },
+   "unit": {
+    "en": "survey instruments",
+    "fr": "instruments d’enquête",
+    "ar": "أدوات المسح"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Quality checked interviews",
+    "fr": "Entretiens contrôlés pour en vérifier la qualité",
+    "ar": "مقابلات خضعت لفحص الجودة"
+   },
+   "unit": {
+    "en": "quality checked interviews",
+    "fr": "entretiens contrôlés pour en vérifier la qualité",
+    "ar": "مقابلات خضعت لفحص الجودة"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Qualitative coding batches",
+    "fr": "Lots de codage qualitatif",
+    "ar": "دفعات الترميز النوعي"
+   },
+   "unit": {
+    "en": "qualitative coding batches",
+    "fr": "lots de codage qualitatif",
+    "ar": "دفعات الترميز النوعي"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Methodology notes",
+    "fr": "Notes méthodologiques",
+    "ar": "ملاحظات المنهجية"
+   },
+   "unit": {
+    "en": "methodology notes",
+    "fr": "notes méthodologiques",
+    "ar": "ملاحظات المنهجية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `social-methods` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the survey instruments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `social-methods` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les instruments d’enquête à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `social-methods` مرتبطة بحالة ملف قبول بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط أدوات المسح بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted survey instruments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici ven. 12:00 ; **≥1 instrument d’enquête accepté** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité/confidentialité l’emportent sur un score favorable. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥1 من أدوات المسح** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقامَ المستوفي للشروط، كما أن عيوب السلامة/الخصوصية الحرجة تتجاوز أثرها أي نتيجة خضراء. هذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "sampling frames and non-response limitations remain visible in every estimate",
+  "fr": "les cadres d’échantillonnage et les limites liées à la non-réponse restent visibles dans chaque estimation",
+  "ar": "تظل أطر المعاينة وقيود عدم الاستجابة ظاهرة في كل تقدير"
+ },
+ "depends": [
+  {
+   "slug": "indigenous-studies",
+   "id": 19
+  },
+  {
+   "slug": "official-stats",
+   "id": 100
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "urban-planning",
+   "id": 28
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sampling excludes remote households → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "L’échantillonnage exclut les ménages éloignés → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir un mécanisme de recours.",
+   "ar": "استبعاد الأسر في المناطق النائية من المعاينة → تضمين مراجعة المستخدمين المتأثرين، ونشر افتراضات الاختيار، والإبقاء على قناة لتقديم التظلمات."
+  },
+  {
+   "en": "Interviewers induce preferred answers → reconcile source records with the survey instruments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les enquêteurs orientent les réponses vers celles qu’ils privilégient → rapprocher les documents sources de la liste de contrôle d’acceptation des instruments d’enquête et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤثر المقابِلات/المقابِلون في الإجابات لتوافق ما يُفضّل → مطابقة سجلات المصدر مع قائمة التحقق لقبول أدوات المسح، وإسناد مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Small cells reveal sensitive identities → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les petits groupes révèlent des identités sensibles → limiter les accès, expurger les éléments probants diffusés et tester le processus d’accès restreint.",
+   "ar": "تكشف المجموعات الصغيرة هويات حساسة → تقليص نطاق الوصول، وحجب الأدلة عند نشرها، واختبار سير عمل الوصول المقيّد."
+  }
+ ]
+}

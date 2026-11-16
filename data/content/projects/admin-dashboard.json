@@ -1,0 +1,70 @@
+{
+ "slug": "admin-dashboard",
+ "id": 15,
+ "order": 15,
+ "icon": "layout-dashboard",
+ "status": "building",
+ "status_label": {
+  "en": "Building",
+  "fr": "En construction",
+  "ar": "قيد البناء"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "W5D Admin Dashboard",
+  "fr": "Tableau de bord d’administration W5D",
+  "ar": "لوحة تحكم إدارة W5D"
+ },
+ "tagline": {
+  "en": "The owner portal, licensed at {{ money.license_hour }} {{ money.currency }} per hour of work.",
+  "fr": "Le portail propriétaire, concédé sous licence au tarif de {{ money.license_hour }} {{ money.currency }} par heure de travail.",
+  "ar": "بوابة المالك، مرخصة بسعر {{ money.license_hour }} {{ money.currency }} لكل ساعة عمل."
+ },
+ "outcome": [
+  {
+   "en": "The owner portal brings together 28 menus under eight roles: command center, pricing, investors, managers, subscriptions and the inbox.",
+   "fr": "Le portail propriétaire regroupe 28 menus répartis entre huit rôles : centre de pilotage, tarification, investisseurs, gestionnaires, abonnements et boîte de réception.",
+   "ar": "تجمع بوابة المالك 28 قائمة ضمن ثمانية أدوار: مركز القيادة، والتسعير، والمستثمرون، والمديرون، والاشتراكات، وصندوق الوارد."
+  },
+  {
+   "en": "It is licensed at {{ money.license_hour }} {{ money.currency }} per hour of work. The promotional offer is valid before {{ dates.offer_year }}.",
+   "fr": "La licence est facturée {{ money.license_hour }} {{ money.currency }} par heure de travail. L’offre promotionnelle est valable avant {{ dates.offer_year }}.",
+   "ar": "تُرخّص بسعر {{ money.license_hour }} {{ money.currency }} لكل ساعة عمل. يسري العرض الترويجي قبل {{ dates.offer_year }}."
+  }
+ ],
+ "evidence": {
+  "en": "First menus live in this build: command center, pricing, subscriptions, managers, inbox.",
+  "fr": "Les premiers menus sont disponibles dans cette version : centre de commande, tarification, abonnements, responsables, boîte de réception.",
+  "ar": "القوائم الأولى متاحة في هذا الإصدار: مركز الأوامر، التسعير، الاشتراكات، المديرون، صندوق الوارد."
+ },
+ "services": [
+  "software-eng",
+  "platform-eng",
+  "it-governance"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "First menus live",
+    "fr": "Premiers menus disponibles",
+    "ar": "القوائم الأولى متاحة"
+   },
+   "body": {
+    "en": "Others show a read-only preview.",
+    "fr": "Les autres affichent un aperçu en lecture seule.",
+    "ar": "تُظهر القوائم الأخرى معاينة للقراءة فقط."
+   }
+  }
+ ],
+ "gradient": "cultures",
+ "needs": {
+  "en": "Product engineers, UX reviewers.",
+  "fr": "Ingénieurs produit, spécialistes de l’évaluation UX.",
+  "ar": "مهندسو المنتجات، ومراجعو تجربة المستخدم."
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "medical-devices",
+ "id": 126,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Medical Device & Diagnostics Tech",
+  "fr": "Technologie des dispositifs médicaux et du diagnostic",
+  "ar": "تقنيات الأجهزة الطبية والتشخيص"
+ },
+ "short": {
+  "en": "The service provides installation, maintenance, training.",
+  "fr": "Maintenir les dispositifs médicaux de façon sûre.",
+  "ar": "صيانة الأجهزة الطبية بأمان."
+ },
+ "abstract": {
+  "en": "Medical devices and diagnostics — installation, maintenance, and training for hospitals and laboratories with reliability SLAs.",
+  "fr": "Dispositifs médicaux et diagnostic — installation, maintenance et formation pour les hôpitaux et les laboratoires, avec des SLA de fiabilité.",
+  "ar": "الأجهزة الطبية والتشخيص — التركيب والصيانة والتدريب للمستشفيات والمختبرات، مع اتفاقيات مستوى خدمة لضمان الموثوقية."
+ },
+ "long": [
+  {
+   "en": "The Medical Device & Diagnostics Tech service organises a weekly work package around device condition inspections, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 1000 device condition inspections; 1000 preventive maintenance tasks; 1000 calibration checks; 200 clinical user training sessions. Medical devices and diagnostics — installation, maintenance, and training for hospitals and laboratories with reliability SLAs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that authorised biomedical personnel verify safety and clinical users approve return to service. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Technologie des dispositifs médicaux et du diagnostic organise un lot de travail hebdomadaire axé sur les inspections de l’état des dispositifs, plutôt que de considérer la présence comme le produit. À pleine capacité dotée des ressources nécessaires, son plan pilote prévoit 1000 inspections de l’état des dispositifs ; 1000 tâches de maintenance préventive ; 1000 contrôles d’étalonnage ; 200 sessions de formation des utilisateurs cliniques. Dispositifs médicaux et diagnostic — installation, maintenance et formation pour les hôpitaux et les laboratoires, avec des SLA de fiabilité. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. La règle fondamentale est que le personnel biomédical autorisé vérifie la sécurité et que les utilisateurs cliniques approuvent la remise en service. Il s’agit de résultats échelonnés issus de cas mis en service, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة تقنيات الأجهزة الطبية والتشخيص حزمة عمل أسبوعية تتمحور حول فحوصات حالة الأجهزة، بدلاً من اعتبار الحضور هو المنتج. وتبلغ خطة المشروع التجريبي، عند توافر كامل الموارد والقدرة التشغيلية، 1000 فحص لحالة الأجهزة؛ و1000 مهمة صيانة وقائية؛ و1000 فحص معايرة؛ و200 جلسة تدريب للمستخدمين السريريين. الأجهزة الطبية والتشخيص — التركيب والصيانة والتدريب للمستشفيات والمختبرات، مع اتفاقيات مستوى خدمة لضمان الموثوقية. ويُنسّق المتخصصون تنفيذ هذه الأساليب وفقاً لحزمة العمل الأسبوعية المعتمدة. والضابط الحاكم هو أن يتحقق الموظفون المختصون في الهندسة الطبية الحيوية من السلامة، وأن يوافق المستخدمون السريريين على إعادة الأجهزة إلى الخدمة. هذه مخرجات مرحلية ناتجة عن حالات موضوعة قيد التشغيل، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `medical-devices`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of device condition inspections, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015 et 2020, tandis que l’INS estime le chômage des diplômés à 26.6% au T2 2026. Ces populations différentes montrent pourquoi la disponibilité générale des diplômés ne peut remplacer des compétences en santé vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, de consentement, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre sans licence. Pour `medical-devices`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition approuvée des inspections de l’état des dispositifs, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، بينما يقدّر INS بطالة الخريجين بنسبة 26.6% في الربع الثاني من 2026. وتوضح هذه الفئات السكانية المختلفة سبب عدم إمكان الاستعاضة عن القدرات الصحية التي جرى التحقق منها بتوافر الخريجين عموماً. فالباحثون في المجال الصحي ومستخدمو المعدات يحتاجون إلى موظفين مؤهلين، وموافقة مستنيرة، ومعلومات آمنة، ومنشآت مرخّصة، لا إلى قوة عاملة غير مرخّصة. لذلك، تتمثل الاستجابة المقترحة لـ `medical-devices` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لفحوصات حالة الأجهزة، لا في التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the device condition inspections acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks preventive maintenance tasks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted device condition inspections from rejected or deferred work and records blockers around calibration checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des inspections de l’état des dispositifs ; 100 responsables le traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon identifient les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les tâches de maintenance préventive avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen par un responsable de chaque rapport hebdomadaire. La consolidation du service distingue les inspections de l’état des dispositifs acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux contrôles d’étalonnage. Les évaluations des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول فحوصات حالة الأجهزة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مراجع مختص مهام الصيانة الوقائية قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين فحوصات حالة الأجهزة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المرتبطة بفحوصات المعايرة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "biomedical engineering, electronics, metrology and medical equipment maintenance",
+  "fr": "génie biomédical, électronique, métrologie et maintenance des équipements médicaux",
+  "ar": "الهندسة الطبية الحيوية، والإلكترونيات، وعلم القياس، وصيانة المعدات الطبية"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Device condition inspections",
+    "fr": "Inspections de l’état des dispositifs",
+    "ar": "فحوصات حالة الأجهزة"
+   },
+   "unit": {
+    "en": "device condition inspections",
+    "fr": "inspections de l’état des dispositifs",
+    "ar": "فحوصات حالة الأجهزة"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Preventive maintenance tasks",
+    "fr": "Tâches de maintenance préventive",
+    "ar": "مهام الصيانة الوقائية"
+   },
+   "unit": {
+    "en": "preventive maintenance tasks",
+    "fr": "tâches de maintenance préventive",
+    "ar": "مهام الصيانة الوقائية"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Calibration checks",
+    "fr": "Contrôles d’étalonnage",
+    "ar": "فحوصات المعايرة"
+   },
+   "unit": {
+    "en": "calibration checks",
+    "fr": "contrôles d’étalonnage",
+    "ar": "فحوصات المعايرة"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Clinical user training sessions",
+    "fr": "Sessions de formation des utilisateurs cliniques",
+    "ar": "جلسات تدريب المستخدمين السريريين"
+   },
+   "unit": {
+    "en": "clinical user training sessions",
+    "fr": "sessions de formation des utilisateurs cliniques",
+    "ar": "جلسات تدريب المستخدمين السريريين"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `medical-devices` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the device condition inspections to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `medical-devices` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photos ou de conception géoréférencés, qui relient les inspections de l’état des dispositifs à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة ضمن `medical-devices` ملف قبول PDF/A + بيان مصادر CSV/JSON + ملفات فحص/صور أو تصميمات محددة الإسناد الجغرافي، مع ربط فحوصات حالة الأجهزة بالمصدر، والمراجع، والإصدار، وسجل الاستثناءات، والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥8 accepted device condition inspections** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant vendredi 12:00 ; **≥8 inspections de l’état des dispositifs acceptées** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur éligible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستحقة** بحلول Fri 12:00؛ و**قبول ≥8 فحوصات لحالة الأجهزة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل لأسباب متعلقة بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات أو الترتيبات المعتمدة العددَ الإجمالي للتقارير المستحقة، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتقدم على أي تقييم أخضر. هذه أهداف للمشروع التجريبي، وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "authorised biomedical personnel verify safety and clinical users approve return to service",
+  "fr": "le personnel biomédical autorisé vérifie la sécurité et les utilisateurs cliniques approuvent la remise en service",
+  "ar": "يتحقق الموظفون المختصون في الهندسة الطبية الحيوية من السلامة، ويوافق المستخدمون السريريين على إعادة الأجهزة إلى الخدمة"
+ },
+ "depends": [
+  {
+   "slug": "metrology",
+   "id": 64
+  },
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "school-clinic",
+   "id": 49
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Calibration drift harms diagnosis → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "La dérive d’étalonnage nuit au diagnostic → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "انحراف المعايرة يضر بالتشخيص → أعد إجراء الفحوصات الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Unauthorised repair invalidates device safety → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Une réparation non autorisée compromet la sécurité de l’appareil → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "الإصلاح غير المصرّح به يُبطل سلامة الجهاز → اشترط اعتماداً للسلامة من جهة مختصة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Spare-part substitutes fail in clinical use → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les pièces de rechange de substitution ne conviennent pas à un usage clinique → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "القطع البديلة غير المطابقة تفشل في الاستخدام السريري → اشترط اعتماداً للسلامة من جهة مختصة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  }
+ ]
+}

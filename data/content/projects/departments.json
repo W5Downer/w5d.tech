@@ -1,0 +1,70 @@
+{
+ "slug": "departments",
+ "id": 12,
+ "order": 12,
+ "icon": "building",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "Departments registry",
+  "fr": "Registre des départements",
+  "ar": "سجل الإدارات"
+ },
+ "tagline": {
+  "en": "{{ experts.departments }} departments around the ontology.",
+  "fr": "{{ experts.departments }} départements autour de l’ontologie.",
+  "ar": "{{ experts.departments }} إدارة حول الأنطولوجيا."
+ },
+ "outcome": [
+  {
+   "en": "{{ experts.departments }} departments form the administrative structure around the ontology.",
+   "fr": "{{ experts.departments }} départements forment la structure administrative autour de l’ontologie.",
+   "ar": "{{ experts.departments }} إدارة تشكّل الهيكل الإداري حول الأنطولوجيا."
+  },
+  {
+   "en": "Department leads are the first managers the programme recruits.",
+   "fr": "Les responsables de département sont les premiers gestionnaires recrutés par le programme.",
+   "ar": "قادة الإدارات هم أول المديرين الذين يستقطبهم البرنامج."
+  }
+ ],
+ "evidence": {
+  "en": "Sixteen departments in the registry.",
+  "fr": "Seize départements dans le registre.",
+  "ar": "ست عشرة إدارة في السجل."
+ },
+ "services": [
+  "decentralisation",
+  "it-governance",
+  "official-stats"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "{{ experts.departments }} departments",
+    "fr": "{{ experts.departments }} départements",
+    "ar": "{{ experts.departments }} إدارة"
+   },
+   "body": {
+    "en": "Registry count.",
+    "fr": "Nombre inscrit au registre.",
+    "ar": "عدد السجل."
+   }
+  }
+ ],
+ "gradient": "sciences",
+ "needs": {
+  "en": "Department coordinators.",
+  "fr": "Coordinateurs de département.",
+  "ar": "منسقو الإدارات."
+ }
+}

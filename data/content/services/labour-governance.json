@@ -1,0 +1,167 @@
+{
+ "slug": "labour-governance",
+ "id": 94,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Labour Market Governance",
+  "fr": "Gouvernance du marché du travail",
+  "ar": "حوكمة سوق العمل"
+ },
+ "short": {
+  "en": "The service provides inspection, tripartite dialogue, ALMPs.",
+  "fr": "Améliorer la gouvernance du travail et les transitions.",
+  "ar": "تحسين حوكمة العمل والانتقالات المهنية."
+ },
+ "abstract": {
+  "en": "Labour market governance — labour inspection, tripartite dialogue, and active labour market programs for employment outcomes.",
+  "fr": "Gouvernance du marché du travail — inspection du travail, dialogue tripartite et programmes actifs du marché du travail visant des résultats en matière d’emploi.",
+  "ar": "حوكمة سوق العمل — تفتيش العمل، والحوار الثلاثي الأطراف، وبرامج سوق العمل النشطة لتحقيق نتائج في مجال التوظيف."
+ },
+ "long": [
+  {
+   "en": "The Labour Market Governance service organises a weekly work package around almp design reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 almp design reviews; 500 employment contract checks; 100 social dialogue sessions; 200 inspection support dossiers. Labour market governance — labour inspection, tripartite dialogue, and active labour market programs for employment outcomes. Specialists sequence those methods against the accepted weekly package. The governing boundary is that W5D supports evidence and referrals but cannot exercise statutory labour inspection. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance du marché du travail organise un lot de travail hebdomadaire autour des examens de conception des programmes actifs du marché du travail, plutôt que de considérer la participation comme un produit en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 examens de conception des programmes actifs du marché du travail ; 500 vérifications de contrats de travail ; 100 séances de dialogue social ; 200 dossiers d’appui à l’inspection. Gouvernance du marché du travail — inspection du travail, dialogue tripartite et programmes actifs du marché du travail visant des résultats en matière d’emploi. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire approuvé. La limite à respecter est que W5D apporte un appui en matière de preuves et d’orientations, mais ne peut exercer les fonctions légales d’inspection du travail. Il s’agit de résultats échelonnés issus de dossiers commandités, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة حوكمة سوق العمل حزمة عمل أسبوعية تتمحور حول مراجعات تصميم برامج سوق العمل النشطة، بدلاً من اعتبار الحضور هو الناتج. وتبلغ خطة المرحلة التجريبية، عند العمل بكامل الطاقة الممولة بالموارد، 100 مراجعة لتصميم برامج سوق العمل النشطة؛ و500 عملية تدقيق لعقود العمل؛ و100 جلسة حوار اجتماعي؛ و200 ملف دعم للتفتيش. حوكمة سوق العمل — تفتيش العمل، والحوار الثلاثي الأطراف، وبرامج سوق العمل النشطة لتحقيق نتائج في مجال التوظيف. وينسق المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والحد الفاصل الحاكم هو أن W5D يدعم الأدلة والإحالات، لكنه لا يملك صلاحية ممارسة التفتيش العمالي بموجب القانون. وهذه نواتج مرحلية لحالات مكلّف بها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `labour-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of almp design reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, d’après les comparaisons de l’Enterprise Survey indiquées comme datant de 2020 ou de la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un simple problème de formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de mise en œuvre ; on ne peut présumer qu’un produit de conseil dépourvu de ces utilisateurs améliorera une institution. Pour `labour-governance`, la réponse proposée consiste donc en un processus de travail contractuel avec un bénéficiaire désigné et une définition approuvée des examens de conception des programmes actifs du marché du travail, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تعتبر قصور مهارات القوى العاملة عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات المصنفة على أنها تعود إلى 2020 أو إلى أحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية باعتبارهما مشكلتين، لا مجرد مشكلة تدريب. وتتوقف الفوائد على وجود صلاحية مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً بلا مستخدمين من هذه الجهات سيحسن أداء مؤسسة. لذلك، يتمثل المقترح الخاص بـ `labour-governance` في سير عمل تعاقدي ذي جهة مستفيدة محددة وتعريف معتمد لمراجعات تصميم برامج سوق العمل النشطة، لا في التوظيف الذي لا يستند إلا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the almp design reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks employment contract checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted almp design reviews from rejected or deferred work and records blockers around social dialogue sessions. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des examens de conception des programmes actifs du marché du travail ; 100 responsables les déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les contrôles des contrats de travail avant approbation. L’audit aléatoire proposé à hauteur de 5% vérifie à nouveau les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les examens de conception des programmes actifs du marché du travail acceptés des travaux rejetés ou différés et consigne les obstacles liés aux séances de dialogue social. Les examens des responsables de grappe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات تصميم برامج سوق العمل النشطة؛ ويحوّلها 100 مدير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات تدقيق عقود العمل قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين مراجعات تصميم برامج سوق العمل النشطة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بجلسات الحوار الاجتماعي. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "labour law, economics, occupational safety and industrial relations",
+  "fr": "droit du travail, économie, santé et sécurité au travail et relations professionnelles",
+  "ar": "قانون العمل، والاقتصاد، والسلامة المهنية، وعلاقات العمل"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "ALMP design reviews",
+    "fr": "Examens de conception des programmes actifs du marché du travail",
+    "ar": "مراجعات تصميم برامج سوق العمل النشطة"
+   },
+   "unit": {
+    "en": "almp design reviews",
+    "fr": "examens de conception des programmes actifs du marché du travail",
+    "ar": "مراجعات تصميم برامج سوق العمل النشطة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Employment contract checks",
+    "fr": "Vérifications de contrats de travail",
+    "ar": "عمليات تدقيق عقود العمل"
+   },
+   "unit": {
+    "en": "employment contract checks",
+    "fr": "vérifications de contrats de travail",
+    "ar": "عمليات تدقيق عقود العمل"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Social dialogue sessions",
+    "fr": "Séances de dialogue social",
+    "ar": "جلسات الحوار الاجتماعي"
+   },
+   "unit": {
+    "en": "social dialogue sessions",
+    "fr": "séances de dialogue social",
+    "ar": "جلسات الحوار الاجتماعي"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Inspection support dossiers",
+    "fr": "Dossiers d’appui à l’inspection",
+    "ar": "ملفات دعم التفتيش"
+   },
+   "unit": {
+    "en": "inspection support dossiers",
+    "fr": "dossiers d’appui à l’inspection",
+    "ar": "ملفات دعم التفتيش"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `labour-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the almp design reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `labour-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des comptes rendus de consultation caviardés, qui relient les examens de conception des programmes actifs du marché du travail aux sources, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `labour-governance` ملف قبول PDF/A + بيان مصادر CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات تصميم برامج سوق العمل النشطة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted almp design reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant ven. 12:00 ; **≥1 examen de conception des programmes actifs du marché du travail accepté** par équipe et par semaine, selon la complexité du dossier ; **≤1 demande de reprise liée aux preuves** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من مراجعات تصميم برامج سوق العمل النشطة** لكل فريق في الأسبوع، وفقاً لتعقيد الحالة؛ **≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، كما تتغلب عيوب السلامة/الخصوصية الحرجة على أي تقييم أخضر. هذه أهداف للمرحلة التجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "W5D supports evidence and referrals but cannot exercise statutory labour inspection",
+  "fr": "W5D apporte un appui en matière de preuves et d’orientations, mais ne peut exercer les fonctions légales d’inspection du travail",
+  "ar": "يدعم W5D الأدلة والإحالات، لكنه لا يملك صلاحية ممارسة التفتيش العمالي بموجب القانون"
+ },
+ "depends": [
+  {
+   "slug": "construction-training",
+   "id": 39
+  },
+  {
+   "slug": "social-methods",
+   "id": 73
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "agri-science",
+   "id": 56
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Programme labels hide insecure work → reconcile source records with the almp design reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les intitulés des programmes masquent le travail précaire → rapprocher les sources de la liste de contrôle d’acceptation des examens de conception des programmes actifs du marché du travail et attribuer la responsabilité des actions correctives.",
+   "ar": "إخفاء التسميات للعمالة غير المستقرة → طابق سجلات المصادر مع قائمة التحقق لقبول مراجعات تصميم برامج سوق العمل النشطة، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Employer claims replace worker testimony → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les déclarations de l’employeur se substituent aux témoignages des travailleurs → exiger des vérifications auprès de sources indépendantes, un élément de comparaison et une incertitude explicitement reconnue avant toute acceptation.",
+   "ar": "تحل ادعاءات أصحاب العمل محل شهادات العمال → اشترط التحقق من المصادر المستقلة، ووجود معيار للمقارنة، والتصريح الواضح بحالات عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Inspection support confused with enforcement authority → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Confusion entre l’appui à l’inspection et le pouvoir de faire appliquer la loi → obtenir la validation juridique et institutionnelle compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "الخلط بين دعم التفتيش وسلطة الإنفاذ → الحصول على تصديق قانوني ومن الجهة المختصة، وحظر اتخاذ قرارات تشغيلية غير مصرّح بها."
+  }
+ ]
+}

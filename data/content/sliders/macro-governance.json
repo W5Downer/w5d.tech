@@ -1,0 +1,137 @@
+{
+ "slug": "macro-governance",
+ "label": {
+  "en": "Governance",
+  "fr": "Gouvernance",
+  "ar": "الحوكمة"
+ },
+ "interval": 9000,
+ "height": "34rem",
+ "slides": [
+  {
+   "gradient": "governance",
+   "icon": "scale",
+   "eyebrow": {
+    "en": "Rules and accountability",
+    "fr": "Règles et responsabilité",
+    "ar": "القواعد والمساءلة"
+   },
+   "title": {
+    "en": "Prepare the options. Let the authority decide.",
+    "fr": "Préparez les options. L’autorité décide.",
+    "ar": "أَعِدّ الخيارات، ودَع الجهة المختصة تتخذ القرار."
+   },
+   "lead": {
+    "en": "Twenty-six services for lawyers, economists and administrators: option briefs, clause packages, integrity reviews, with named public beneficiaries.",
+    "fr": "Vingt-six services pour les juristes, les économistes et les administrateurs : notes d’options, ensembles de clauses, examens d’intégrité, avec des bénéficiaires publics nommément désignés.",
+    "ar": "ستة وعشرون خدمة للمحامين والاقتصاديين والإداريين: موجزات للخيارات، وحزم بنود، ومراجعات للنزاهة، مع تحديد المستفيدين من القطاع العام بالاسم."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Find my service here",
+      "fr": "Trouver mon service ici",
+      "ar": "اعثر على خدمتي هنا"
+     },
+     "href": "#mw-catalog",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "governance",
+   "icon": "users",
+   "eyebrow": {
+    "en": "Governance · leaders",
+    "fr": "Gouvernance · dirigeants",
+    "ar": "الحوكمة · القادة"
+   },
+   "title": {
+    "en": "Lead a **{{ experts.team_size }}-expert** team in Governance.",
+    "fr": "Dirigez une équipe de **{{ experts.team_size }} experts** en gouvernance.",
+    "ar": "قُد فريقًا من **{{ experts.team_size }} خبيرًا** في مجال الحوكمة."
+   },
+   "lead": {
+    "en": "{{ experts.managers_per_service }} managers per service by design. Managers translate a service leader's rubric into weekly assignments and sign the report.",
+    "fr": "{{ experts.managers_per_service }} responsables par service, selon la conception du programme. Les responsables traduisent le référentiel du chef de service en tâches hebdomadaires et signent le rapport.",
+    "ar": "{{ experts.managers_per_service }} مديرًا لكل خدمة وفق التصميم. يحوّل المديرون معايير قائد الخدمة إلى مهام أسبوعية ويوقّعون التقرير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Open careers",
+      "fr": "Consulter les offres d’emploi",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "governance",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "Governance · investors",
+    "fr": "Gouvernance · investisseurs",
+    "ar": "الحوكمة · المستثمرون"
+   },
+   "title": {
+    "en": "Fund the path into **Governance**.",
+    "fr": "Financez le parcours vers la **gouvernance**.",
+    "ar": "موّل مسار العمل في **الحوكمة**."
+   },
+   "lead": {
+    "en": "A part funds certification and delivery capacity across the programme at a published, capped price. No return is promised.",
+    "fr": "Une part finance la certification et la capacité de prestation dans l’ensemble du programme, à un prix publié et plafonné. Aucun rendement n’est promis.",
+    "ar": "يسهم جزء من التمويل في تغطية تكاليف الاعتماد والقدرة على تقديم الخدمات في البرنامج، بسعر معلن ومحدّد بسقف. لا يوجد أي عائد مضمون."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/?macro=governance",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the price",
+      "fr": "Voir le prix",
+      "ar": "اطّلع على السعر"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  }
+ ]
+}

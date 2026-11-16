@@ -1,0 +1,167 @@
+{
+ "slug": "agri-tech",
+ "id": 123,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Agricultural Technology",
+  "fr": "Technologies agricoles",
+  "ar": "التكنولوجيا الزراعية"
+ },
+ "short": {
+  "en": "The service provides precision irrigation, drones, sensors.",
+  "fr": "Adapter les technologies aux contraintes agricoles.",
+  "ar": "تكييف التقنيات مع القيود الزراعية."
+ },
+ "abstract": {
+  "en": "Agricultural technology — precision irrigation, drones, and sensor networks that optimize yields and reduce water use.",
+  "fr": "Technologies agricoles — irrigation de précision, drones et réseaux de capteurs qui optimisent les rendements et réduisent la consommation d’eau.",
+  "ar": "التكنولوجيا الزراعية — الري الدقيق والطائرات المسيّرة وشبكات المستشعرات التي تحسّن الغلال وتقلل استخدام المياه."
+ },
+ "long": [
+  {
+   "en": "The Agricultural Technology service organises a weekly work package around irrigation diagnostic visits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 irrigation diagnostic visits; 2000 sensor calibration checks; 200 drone survey packages; 200 farmer operating plans. Agricultural technology — precision irrigation, drones, and sensor networks that optimize yields and reduce water use. Specialists sequence those methods against the accepted weekly package. The governing boundary is that farmers receive maintenance instructions and water-budget limits before deployment. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des Technologies agricoles organise un lot de travail hebdomadaire autour des visites de diagnostic de l’irrigation, au lieu de considérer la présence comme le produit fourni. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 visites de diagnostic de l’irrigation ; 2000 contrôles d’étalonnage de capteurs ; 200 lots de relevés par drone ; 200 plans d’exploitation destinés aux agriculteurs. Technologies agricoles — irrigation de précision, drones et réseaux de capteurs qui optimisent les rendements et réduisent la consommation d’eau. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La condition essentielle est que les agriculteurs reçoivent des consignes de maintenance et des limites de consommation d’eau avant le déploiement. Il s’agit de résultats progressifs issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة التكنولوجيا الزراعية حزمة عمل أسبوعية تتمحور حول الزيارات التشخيصية للري، بدلاً من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الكاملة المدعومة بالموارد، تتضمن خطتها التجريبية 500 زيارة تشخيصية للري؛ و2000 عملية فحص لمعايرة المستشعرات؛ و200 حزمة مسح بالطائرات المسيّرة؛ و200 خطة تشغيل للمزارعين. التكنولوجيا الزراعية — الري الدقيق والطائرات المسيّرة وشبكات المستشعرات التي تحسّن الغلال وتقلل استخدام المياه. ويرتب المختصون هذه الأساليب وفق الحزمة الأسبوعية المقبولة. ويتمثل الشرط الحاكم في تزويد المزارعين بتعليمات الصيانة وحدود ميزانية المياه قبل التنفيذ. وهذه مخرجات مرحلية للحالات التي أُسندت بموجب تكليف، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `agri-tech`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of irrigation diagnostic visits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui atteignaient 34% en 2021. Cela confirme la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la mise en commande de travaux pourtant utiles sur le plan technique. Pour `agri-tech`, la réponse proposée est donc un processus de travail contractuel avec un bénéficiaire désigné et une définition acceptée des visites de diagnostic de l’irrigation, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 قيود تونس المتعلقة بالمياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قابل للقياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي اختلاف مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم إسناد أعمال مفيدة من الناحية التقنية. لذلك، تتمثل الاستجابة المقترحة في `agri-tech` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً مقبولاً للزيارات التشخيصية للري، لا في تبرير التوظيف استناداً إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the irrigation diagnostic visits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks sensor calibration checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted irrigation diagnostic visits from rejected or deferred work and records blockers around drone survey packages. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des visites de diagnostic de l’irrigation ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles d’étalonnage des capteurs avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les visites de diagnostic de l’irrigation acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux lots de relevés par drone. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول الزيارات التشخيصية للري؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مختص مؤهل عمليات فحص معايرة المستشعرات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين الزيارات التشخيصية للري المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بحزم المسح بالطائرات المسيّرة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "agricultural engineering, agronomy, geomatics and embedded systems",
+  "fr": "génie agricole, agronomie, géomatique et systèmes embarqués",
+  "ar": "الهندسة الزراعية وعلوم المحاصيل والمساحة والأنظمة المضمنة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Jendouba, Le Kef, Kairouan and Sidi Bouzid host farms",
+  "fr": "exploitations agricoles à Jendouba, Le Kef, Kairouan et Sidi Bouzid",
+  "ar": "مزارع مضيفة في جندوبة والكاف والقيروان وسيدي بوزيد"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Irrigation diagnostic visits",
+    "fr": "Visites de diagnostic de l’irrigation",
+    "ar": "الزيارات التشخيصية للري"
+   },
+   "unit": {
+    "en": "irrigation diagnostic visits",
+    "fr": "visites de diagnostic de l’irrigation",
+    "ar": "الزيارات التشخيصية للري"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Sensor calibration checks",
+    "fr": "Contrôles d’étalonnage des capteurs",
+    "ar": "فحوص معايرة المستشعرات"
+   },
+   "unit": {
+    "en": "sensor calibration checks",
+    "fr": "contrôles d’étalonnage des capteurs",
+    "ar": "فحوص معايرة المستشعرات"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Drone survey packages",
+    "fr": "Forfaits de relevés par drone",
+    "ar": "حزم المسح بالطائرات المسيّرة"
+   },
+   "unit": {
+    "en": "drone survey packages",
+    "fr": "forfaits de relevés par drone",
+    "ar": "حزم المسح بالطائرات المسيّرة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Farmer operating plans",
+    "fr": "Plans d’exploitation des agriculteurs",
+    "ar": "خطط تشغيل المزارعين"
+   },
+   "unit": {
+    "en": "farmer operating plans",
+    "fr": "plans d’exploitation des agriculteurs",
+    "ar": "خطط تشغيل المزارعين"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `agri-tech` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the irrigation diagnostic visits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `agri-tech` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des fichiers d’inspection/photo géoréférencés ou des fichiers de conception, qui relient les visites de diagnostic d’irrigation à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة اعتماد `agri-tech` المرتبطة بحالة ملف اعتماد بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات فحص/صور أو تصميم محددة الإسناد الجغرافي، وتربط زيارات تشخيص الري بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted irrigation diagnostic visits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥4 visites de diagnostic d’irrigation acceptées** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥4 زيارات تشخيص ري مقبولة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات/التعديلات المعتمدة المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تتجاوز أثرها أي تقييم أخضر. هذه أهداف تجريبية وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "farmers receive maintenance instructions and water-budget limits before deployment",
+  "fr": "les agriculteurs reçoivent des consignes de maintenance et des limites de budget hydrique avant le déploiement",
+  "ar": "يتلقى المزارعون تعليمات الصيانة وحدود ميزانية المياه قبل النشر"
+ },
+ "depends": [
+  {
+   "slug": "water-soil-labs",
+   "id": 55
+  },
+  {
+   "slug": "agri-science",
+   "id": 56
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "rural-settlements",
+   "id": 43
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sensors promote over-irrigation → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les capteurs favorisent la surirrigation → refaire les vérifications critiques en s’appuyant sur des références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "تؤدي المستشعرات إلى زيادة الري عن الحاجة → أَعِد إجراء الفحوص الحرجة بالرجوع إلى مراجع قابلة للتتبع واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Drone use breaches permissions → reconcile source records with the irrigation diagnostic visits acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’utilisation de drones enfreint les autorisations → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des visites de diagnostic d’irrigation et attribuer la responsabilité des mesures correctives.",
+   "ar": "يحدث استخدام للطائرات المسيّرة بما يخالف الأذونات → طابق سجلات المصدر مع قائمة التحقق لقبول زيارات تشخيص الري وحدد مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Smallholders cannot service proprietary equipment → reconcile source records with the irrigation diagnostic visits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les petits exploitants ne peuvent pas assurer la maintenance des équipements propriétaires → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des visites de diagnostic d’irrigation et attribuer la responsabilité des mesures correctives.",
+   "ar": "لا يستطيع صغار المزارعين صيانة المعدات المملوكة حصرياً → طابق سجلات المصدر مع قائمة التحقق لقبول زيارات تشخيص الري وحدد مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

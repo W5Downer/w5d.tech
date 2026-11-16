@@ -1,0 +1,137 @@
+{
+ "slug": "macro-technology",
+ "label": {
+  "en": "Technology",
+  "fr": "Technologie",
+  "ar": "التكنولوجيا"
+ },
+ "interval": 9000,
+ "height": "34rem",
+ "slides": [
+  {
+   "gradient": "technology",
+   "icon": "cpu",
+   "eyebrow": {
+    "en": "Build, secure, deploy",
+    "fr": "Concevoir, sécuriser, déployer",
+    "ar": "طوّر، وأمّن، وانشر"
+   },
+   "title": {
+    "en": "From {{ experts.developers_today }} developers today to a deliverable-based programme.",
+    "fr": "De {{ experts.developers_today }} développeurs aujourd’hui à un programme fondé sur des livrables.",
+    "ar": "من {{ experts.developers_today }} مطوّرًا اليوم إلى برنامج قائم على المخرجات."
+   },
+   "lead": {
+    "en": "Twenty-six services from software and security to deployed devices in water plants, farms and clinics, with human approval of every change.",
+    "fr": "Vingt-six services, des logiciels et de la sécurité aux appareils déployés dans des stations de traitement des eaux, des fermes et des cliniques, avec validation humaine de chaque changement.",
+    "ar": "ستة وعشرون خدمة، من البرمجيات والأمن إلى الأجهزة المركّبة في محطات المياه والمزارع والعيادات، مع موافقة بشرية على كل تغيير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Find my service here",
+      "fr": "Trouver mon service ici",
+      "ar": "اعثر على خدمتي هنا"
+     },
+     "href": "#mw-catalog",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "technology",
+   "icon": "users",
+   "eyebrow": {
+    "en": "Technology · leaders",
+    "fr": "Technologie · dirigeants",
+    "ar": "التكنولوجيا · القيادات"
+   },
+   "title": {
+    "en": "Lead a **{{ experts.team_size }}-expert** team in Technology.",
+    "fr": "Dirigez une équipe de **{{ experts.team_size }} experts** en technologie.",
+    "ar": "قُد فريقًا يضم **{{ experts.team_size }} خبيرًا** في مجال التكنولوجيا."
+   },
+   "lead": {
+    "en": "{{ experts.managers_per_service }} managers per service by design. Managers translate a service leader's rubric into weekly assignments and sign the report.",
+    "fr": "{{ experts.managers_per_service }} responsables par service, selon la conception du programme. Les responsables traduisent le référentiel du chef de service en tâches hebdomadaires et signent le rapport.",
+    "ar": "{{ experts.managers_per_service }} مديرًا لكل خدمة وفق التصميم. يحوّل المديرون معايير قائد الخدمة إلى مهام أسبوعية ويوقّعون التقرير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Open careers",
+      "fr": "Consulter les offres d’emploi",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "technology",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "Technology · investors",
+    "fr": "Technologie · investisseurs",
+    "ar": "التكنولوجيا · المستثمرون"
+   },
+   "title": {
+    "en": "Fund the path into **Technology**.",
+    "fr": "Financez le développement de la **technologie**.",
+    "ar": "موّل مسار التقدّم في **التكنولوجيا**."
+   },
+   "lead": {
+    "en": "A part funds certification and delivery capacity across the programme at a published, capped price. No return is promised.",
+    "fr": "Une part finance la certification et la capacité de prestation dans l’ensemble du programme, à un prix publié et plafonné. Aucun rendement n’est promis.",
+    "ar": "يسهم جزء من التمويل في تغطية تكاليف الاعتماد والقدرة على تقديم الخدمات في البرنامج، بسعر معلن ومحدّد بسقف. لا يوجد أي عائد مضمون."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/?macro=technology",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the price",
+      "fr": "Voir le prix",
+      "ar": "اطّلع على السعر"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "slug": "countries-tunisia",
+ "title": {
+  "en": "Tunisia hub — 24 governorates",
+  "fr": "Pôle tunisien — 24 gouvernorats",
+  "ar": "مركز تونس — 24 ولاية"
+ },
+ "description": {
+  "en": "Tunisia country hub: legal profile, salary model, calendar and the 24 governorates.",
+  "fr": "Portail pays de la Tunisie : profil juridique, modèle salarial, calendrier et les 24 gouvernorats.",
+  "ar": "مركز تونس: الملف القانوني ونموذج الرواتب والتقويم والولايات الـ24."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "tn-hero",
+   "variant": "classic",
+   "gradient": "built",
+   "title": {
+    "en": "Tunisia, **governorate by governorate.**",
+    "fr": "La Tunisie, **gouvernorat par gouvernorat.**",
+    "ar": "تونس، **ولايةً تلو الأخرى.**"
+   },
+   "lead": {
+    "en": "Register from your governorate. Hubs, universities and coordinators are listed as they are confirmed, not before.",
+    "fr": "Inscrivez-vous depuis votre gouvernorat. Les pôles, universités et coordinateurs sont répertoriés au fur et à mesure de leur confirmation, pas avant.",
+    "ar": "سجّل من ولايتك. تُدرج المراكز والجامعات والمنسقون بعد تأكيدهم، لا قبل ذلك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Find my governorate",
+      "fr": "Trouver mon gouvernorat",
+      "ar": "اعثر على ولايتي"
+     },
+     "href": "#tn-map",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Country hub",
+    "fr": "Espace pays",
+    "ar": "مركز الدولة"
+   }
+  },
+  {
+   "type": "gov-map",
+   "id": "tn-map",
+   "tier": "e",
+   "focus": 4,
+   "title": {
+    "en": "{{ counts.governorates }} governorates",
+    "fr": "{{ counts.governorates }} gouvernorats",
+    "ar": "{{ counts.governorates }} محافظة"
+   }
+  },
+  {
+   "type": "definitions",
+   "id": "tn-profile",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "Country profile",
+    "fr": "Profil du pays",
+    "ar": "الملف التعريفي للدولة"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "Currency",
+      "fr": "Devise",
+      "ar": "العملة"
+     },
+     "def": {
+      "en": "{{ money.currency }}",
+      "fr": "{{ money.currency }}",
+      "ar": "{{ money.currency }}"
+     }
+    },
+    {
+     "term": {
+      "en": "Timezone",
+      "fr": "Fuseau horaire",
+      "ar": "المنطقة الزمنية"
+     },
+     "def": {
+      "en": "Africa/Tunis",
+      "fr": "Africa/Tunis",
+      "ar": "Africa/Tunis"
+     }
+    },
+    {
+     "term": {
+      "en": "Salary model",
+      "fr": "Modèle de rémunération",
+      "ar": "نموذج الأجور"
+     },
+     "def": {
+      "en": "{{ money.salary_monthly }} {{ money.currency }} per expert post per 30-day month",
+      "fr": "{{ money.salary_monthly }} {{ money.currency }} par poste d’expert et par mois de 30 jours",
+      "ar": "{{ money.salary_monthly }} {{ money.currency }} لكل منصب خبير في الشهر المؤلف من 30 يومًا"
+     }
+    },
+    {
+     "term": {
+      "en": "Data protection",
+      "fr": "Protection des données",
+      "ar": "حماية البيانات"
+     },
+     "def": {
+      "en": "Organic Law 2004-63; INPDP",
+      "fr": "Loi organique 2004-63 ; INPDP",
+      "ar": "القانون الأساسي 2004-63؛ INPDP"
+     }
+    },
+    {
+     "term": {
+      "en": "Languages",
+      "fr": "Langues",
+      "ar": "اللغات"
+     },
+     "def": {
+      "en": "Arabic, French, English",
+      "fr": "Arabe, français, anglais",
+      "ar": "العربية، الفرنسية، الإنجليزية"
+     }
+    }
+   ],
+   "lead": {
+    "en": "Profile data comes from the country file.",
+    "fr": "Les données du profil proviennent du dossier du pays.",
+    "ar": "تأتي بيانات الملف التعريفي من ملف الدولة."
+   }
+  },
+  {
+   "type": "cta",
+   "id": "tn-final",
+   "gradient": "built",
+   "title": {
+    "en": "Register from **your** governorate.",
+    "fr": "Inscrivez-vous depuis **votre** gouvernorat.",
+    "ar": "سجّل من **ولايتك**."
+   },
+   "body": {
+    "en": "",
+    "fr": "",
+    "ar": ""
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Register now",
+      "fr": "Inscrivez-vous maintenant",
+      "ar": "سجّل الآن"
+     },
+     "href": "/app/register",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

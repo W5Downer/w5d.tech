@@ -1,0 +1,167 @@
+{
+ "slug": "science-policy",
+ "id": 74,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Science Policy & Foresight",
+  "fr": "Politiques scientifiques et prospective",
+  "ar": "سياسات العلوم واستشراف المستقبل"
+ },
+ "short": {
+  "en": "The service provides horizon scanning, evidence synthesis.",
+  "fr": "Synthétiser les preuves pour les politiques scientifiques.",
+  "ar": "تلخيص الأدلة للسياسات العلمية."
+ },
+ "abstract": {
+  "en": "Science policy and foresight — horizon scanning, evidence synthesis, and policy briefs that translate research into decision-grade intelligence.",
+  "fr": "Politiques scientifiques et prospective — veille prospective, synthèse des éléments probants et notes d’orientation qui transforment la recherche en informations utiles à la prise de décision.",
+  "ar": "سياسات العلوم واستشراف المستقبل — مسح الاتجاهات المستقبلية، وتركيب الأدلة، وموجزات السياسات التي تحوّل الأبحاث إلى معلومات تدعم اتخاذ القرارات."
+ },
+ "long": [
+  {
+   "en": "The Science Policy & Foresight service organises a weekly work package around horizon scans, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 horizon scans; 100 evidence synthesis notes; 100 research portfolio maps; 100 foresight workshops. Science policy and foresight — horizon scanning, evidence synthesis, and policy briefs that translate research into decision-grade intelligence. Specialists sequence those methods against the accepted weekly package. The governing boundary is that recommendations distinguish established capability from speculative technology opportunity. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Politiques scientifiques et prospective organise le travail hebdomadaire sous la forme d’un lot de travaux axé sur la veille prospective, plutôt que de considérer la présence comme le produit attendu. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 veilles prospectives ; 100 notes de synthèse des éléments probants ; 100 cartographies des portefeuilles de recherche ; 100 ateliers de prospective. Politiques scientifiques et prospective — veille prospective, synthèse des éléments probants et notes d’orientation qui transforment la recherche en informations utiles à la prise de décision. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les recommandations distinguent les capacités établies des perspectives technologiques spéculatives. Il s’agit de livrables échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة سياسات العلوم واستشراف المستقبل حزمة العمل الأسبوعية حول مسح الاتجاهات المستقبلية، بدلاً من اعتبار الحضور مخرجاً بحد ذاته. وتتمثل خطتها التجريبية عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد في إعداد 100 مسح للاتجاهات المستقبلية؛ و100 مذكرة لتركيب الأدلة؛ و100 خريطة لمحافظ الأبحاث؛ و100 ورشة لاستشراف المستقبل. سياسات العلوم واستشراف المستقبل — مسح الاتجاهات المستقبلية، وتركيب الأدلة، وموجزات السياسات التي تحوّل الأبحاث إلى معلومات تدعم اتخاذ القرارات. ويرتب الاختصاصيون هذه الأساليب وفق الحزمة الأسبوعية المعتمدة. والضابط الأساسي هو أن تميز التوصيات بين القدرات الراسخة والفرص التقنية الافتراضية. هذه مخرجات مرحلية لحالات بتكليف، وليست وعداً باستكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `science-policy`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of horizon scans, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population tunisienne active diplômée était au chômage au T2 2026, tandis que l’analyse de l’OCDE d’avril 2022 décrit la faiblesse des liens entre les qualifications et les exigences pratiques des employeurs. Aucune de ces statistiques ne permet d’établir le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, les méthodes encadrées et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne constitue pas un substitut complet à un service partagé dont les responsabilités sont clairement définies. Pour `science-policy`, la réponse proposée est donc un processus de travail sous contrat, avec un bénéficiaire nommé et une définition acceptée de la veille prospective, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من القوى العاملة التونسية من خريجي الجامعات كانوا عاطلين عن العمل في الربع الثاني من 2026، فيما يصف تحليل OECD الصادر في أبريل 2022 ضعف الروابط بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا تثبت أي من الإحصائيتين عدد الاختصاصيين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل الوصول إلى المختبرات، واستخدام الأساليب تحت الإشراف، واستمرارية تمويل الأبحاث من مجموعة المستقلين الأفراد بديلاً غير مكتمل عن خدمة مشتركة خاضعة للمساءلة. لذلك، يتمثل الرد المقترح في `science-policy` في سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لمسح الاتجاهات المستقبلية، لا في توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the horizon scans acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks evidence synthesis notes before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted horizon scans from rejected or deferred work and records blockers around research portfolio maps. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des analyses prospectives ; 100 responsables traduisent celle-ci en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un relecteur qualifié vérifie les notes de synthèse des éléments probants avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse consolidée du service distingue les analyses prospectives acceptées des travaux rejetés ou différés et consigne les obstacles liés aux cartographies du portefeuille de recherche. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans relever le plafond de 1,000 experts.",
+   "ar": "يحدد قائد الخدمة معايير قبول مسوح الأفق؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من مذكرات تركيب الأدلة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين مسوح الأفق المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بخرائط محفظة البحوث. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "science policy, economics, evaluation and technology assessment",
+  "fr": "politique scientifique, économie, évaluation et évaluation des technologies",
+  "ar": "السياسات العلمية، والاقتصاد، والتقييم، وتقييم التكنولوجيا"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Horizon scans",
+    "fr": "Analyses prospectives",
+    "ar": "مسوح الأفق"
+   },
+   "unit": {
+    "en": "horizon scans",
+    "fr": "analyses prospectives",
+    "ar": "مسوح الأفق"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Evidence synthesis notes",
+    "fr": "Notes de synthèse des éléments probants",
+    "ar": "مذكرات تركيب الأدلة"
+   },
+   "unit": {
+    "en": "evidence synthesis notes",
+    "fr": "notes de synthèse des éléments probants",
+    "ar": "مذكرات تركيب الأدلة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Research portfolio maps",
+    "fr": "Cartographies du portefeuille de recherche",
+    "ar": "خرائط محفظة البحوث"
+   },
+   "unit": {
+    "en": "research portfolio maps",
+    "fr": "cartographies du portefeuille de recherche",
+    "ar": "خرائط محفظة البحوث"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Foresight workshops",
+    "fr": "Ateliers de prospective",
+    "ar": "ورش استشراف المستقبل"
+   },
+   "unit": {
+    "en": "foresight workshops",
+    "fr": "ateliers de prospective",
+    "ar": "ورش استشراف المستقبل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `science-policy` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the horizon scans to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation lié à un cas `science-policy` comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, qui relient les analyses prospectives à la source, au relecteur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة في مجال `science-policy` ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات المنهج/الإصدار وبيانات مصدرية قابلة لإعادة الإنتاج، وتربط مسوح الأفق بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted horizon scans** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis d’ici vendredi 12:00 ; **≥1 analyse prospective acceptée** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥1 من مسوح الأفق** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **طلب إعادة عمل واحد أو أقل متعلق بالأدلة** لكل فريق في الأسبوع. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، فيما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على النتيجة الخضراء. وهذه أهداف تجريبية، وليست عتبات معتمدة في ملف README."
+ },
+ "boundary": {
+  "en": "recommendations distinguish established capability from speculative technology opportunity",
+  "fr": "les recommandations distinguent les capacités établies des possibilités technologiques spéculatives",
+  "ar": "تميّز التوصيات بين القدرات الراسخة والفرص التكنولوجية الافتراضية"
+ },
+ "depends": [
+  {
+   "slug": "cultural-policy",
+   "id": 12
+  },
+  {
+   "slug": "pfm",
+   "id": 91
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "treaty-cooperation",
+   "id": 104
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Novelty bias diverts scarce research capacity → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Un biais en faveur de la nouveauté détourne des capacités de recherche limitées → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "يؤدي الانحياز إلى الجِدة إلى تحويل قدرة بحثية محدودة عن وجهتها → أدرج مراجعة المستخدمين المتأثرين، وانشر افتراضات الاختيار، وأبقِ مسارًا للتظلم."
+  },
+  {
+   "en": "Lobbying shapes priorities → reconcile source records with the horizon scans acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le lobbying influe sur les priorités → rapprocher les dossiers sources de la liste de contrôle d’acceptation des analyses prospectives et désigner les responsables des mesures correctives.",
+   "ar": "يؤثر الضغط على تحديد الأولويات → طابق السجلات المصدرية مع قائمة التحقق لقبول مسوح الأفق، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Scenario language mistaken for prediction → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Le langage des scénarios est pris pour une prédiction → exiger des vérifications indépendantes des sources, un élément de comparaison et une explicitation de l’incertitude avant acceptation.",
+   "ar": "قد تُفهم لغة السيناريوهات على أنها تنبؤات → اشترط التحقق المستقل من المصادر، ووجود معيار للمقارنة، والتصريح الواضح بعدم اليقين قبل القبول."
+  }
+ ]
+}

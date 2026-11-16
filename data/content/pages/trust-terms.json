@@ -1,0 +1,76 @@
+{
+ "slug": "trust-terms",
+ "title": {
+  "en": "Terms",
+  "fr": "Conditions",
+  "ar": "الشروط"
+ },
+ "description": {
+  "en": "Demo-mode terms for pledges and subscriptions.",
+  "fr": "Conditions en mode démo pour les engagements et les abonnements.",
+  "ar": "شروط الوضع التجريبي للتعهدات والاشتراكات."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "tm-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Terms, **demo mode.**",
+    "fr": "Conditions, **mode démo.**",
+    "ar": "الشروط، **في الوضع التجريبي.**"
+   },
+   "lead": {
+    "en": "These terms apply while no payment provider is connected.",
+    "fr": "Ces conditions s’appliquent tant qu’aucun fournisseur de paiement n’est connecté.",
+    "ar": "تسري هذه الشروط ما دام مزوّد الدفع غير متصل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Declared limits",
+      "fr": "Limites déclarées",
+      "ar": "الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Terms",
+    "fr": "Conditions",
+    "ar": "الشروط"
+   }
+  },
+  {
+   "type": "prose",
+   "id": "tm-body",
+   "tier": "i",
+   "focus": 2,
+   "title": {
+    "en": "Pledges and subscriptions",
+    "fr": "Engagements et abonnements",
+    "ar": "التعهدات والاشتراكات"
+   },
+   "paragraphs": [
+    {
+     "en": "A pledge records an intention at a dated price. No payment is taken and no money moves in demo mode.",
+     "fr": "Un engagement consigne une intention à un prix daté. En mode démo, aucun paiement n’est prélevé et aucun argent ne circule.",
+     "ar": "يسجّل التعهد نيةً بالسعر المحدد في التاريخ. لا تُحصّل أي مدفوعات ولا تُحوّل أي أموال في الوضع التجريبي."
+    },
+    {
+     "en": "You may pause, resume or cancel with your management key at any time. Cancelling stops all future days.",
+     "fr": "Vous pouvez mettre en pause, reprendre ou annuler à tout moment à l’aide de votre clé de gestion. L’annulation met fin à tous les jours futurs.",
+     "ar": "يمكنك إيقاف الاشتراك مؤقتًا أو استئنافه أو إلغاءه في أي وقت باستخدام مفتاح الإدارة. ويؤدي الإلغاء إلى إيقاف جميع الأيام اللاحقة."
+    },
+    {
+     "en": "Real-payment terms will be published and shown before any charge.",
+     "fr": "Les conditions applicables aux paiements réels seront publiées et présentées avant tout prélèvement.",
+     "ar": "ستُنشر شروط الدفع الفعلي وتُعرض قبل تحصيل أي مبلغ."
+    }
+   ]
+  }
+ ]
+}

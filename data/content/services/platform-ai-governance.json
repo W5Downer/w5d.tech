@@ -1,0 +1,167 @@
+{
+ "slug": "platform-ai-governance",
+ "id": 93,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Platform & AI Governance",
+  "fr": "Gouvernance des plateformes et de l’IA",
+  "ar": "حوكمة المنصات والذكاء الاصطناعي"
+ },
+ "short": {
+  "en": "The service provides transparency, audits, redress mechanisms.",
+  "fr": "Évaluer les plateformes et systèmes d'IA.",
+  "ar": "تقييم المنصات وأنظمة الذكاء الاصطناعي."
+ },
+ "abstract": {
+  "en": "Platform and AI governance — transparency reporting, algorithmic audits, and redress mechanisms for users of digital platforms.",
+  "fr": "Gouvernance des plateformes et de l’IA — rapports de transparence, audits algorithmiques et mécanismes de recours pour les utilisateurs des plateformes numériques.",
+  "ar": "حوكمة المنصات والذكاء الاصطناعي — تقارير الشفافية، وعمليات تدقيق الخوارزميات، وآليات الانتصاف لمستخدمي المنصات الرقمية."
+ },
+ "long": [
+  {
+   "en": "The Platform & AI Governance service organises a weekly work package around algorithm impact reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 algorithm impact reviews; 500 transparency record checks; 500 redress workflow tests; 100 bias assessment protocols. Platform and AI governance — transparency reporting, algorithmic audits, and redress mechanisms for users of digital platforms. Specialists sequence those methods against the accepted weekly package. The governing boundary is that audits distinguish model performance from lawful authority and provide contestability. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance des plateformes et de l’IA organise un lot de travail hebdomadaire autour des examens de l’impact des algorithmes, au lieu de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 examens de l’impact des algorithmes ; 500 contrôles des registres de transparence ; 500 tests des processus de recours ; 100 protocoles d’évaluation des biais. Gouvernance des plateformes et de l’IA — rapports de transparence, audits algorithmiques et mécanismes de recours pour les utilisateurs des plateformes numériques. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La limite à respecter est que les audits distinguent les performances du modèle de l’autorité légale et garantissent la possibilité de contester les décisions. Il s’agit de livrables progressifs issus de cas commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة حوكمة المنصات والذكاء الاصطناعي حزمة عمل أسبوعية تتمحور حول مراجعات أثر الخوارزميات، بدلاً من اعتبار الحضور هو المنتج. وتبلغ خطة المشروع التجريبي، عند توافر كامل الموارد والقدرة الاستيعابية، 100 مراجعة لأثر الخوارزميات؛ و500 فحص لسجلات الشفافية؛ و500 اختبار لسير عمل الانتصاف؛ و100 بروتوكول لتقييم التحيز. حوكمة المنصات والذكاء الاصطناعي — تقارير الشفافية، وعمليات تدقيق الخوارزميات، وآليات الانتصاف لمستخدمي المنصات الرقمية. ويحدد المختصون ترتيب هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويتمثل الحد الحاكم في أن تميّز عمليات التدقيق بين أداء النموذج والسلطة القانونية، وأن تتيح إمكانية الطعن. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `platform-ai-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of algorithm impact reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons de l’Enterprise Survey portant la mention 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut pas présumer qu’un produit de conseil sans ces utilisateurs améliorera une institution. Pour `platform-ai-governance`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire désigné et une définition acceptée des examens de l’impact des algorithmes, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يفيد استعراض OECD الصادر في يونيو 2024 بأن نحو 40% من الشركات التونسية المشمولة ترى أن قصور مهارات القوى العاملة يمثل عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات المشار إليها بسنة 2020 أو بأحدث البيانات المتاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها مشكلات، لا مجرد مشكلة تدريب. وتتوقف الفوائد على وجود سلطة مشروعة، وسجلات إدارية مشتركة، ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً سيحسن أداء مؤسسة إذا لم يستخدمه أصحاب المصلحة فيها. لذلك، تتمثل الاستجابة المقترحة لـ`platform-ai-governance` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لمراجعات أثر الخوارزميات، لا في توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the algorithm impact reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks transparency record checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted algorithm impact reviews from rejected or deferred work and records blockers around redress workflow tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens de l’impact des algorithmes ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les contrôles des registres de transparence avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants des sources et les exceptions ; il ne remplace pas l’examen par le responsable de chaque rapport hebdomadaire. Le bilan du service distingue les examens de l’impact des algorithmes acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux tests des processus de recours. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات أثر الخوارزميات؛ ويترجم 100 مدير هذه المعايير إلى مهام للفرق، يضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من فحوص سجلات الشفافية قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مراجعات أثر الخوارزميات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باختبارات سير عمل الانتصاف. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, AI ethics, statistics and platform governance",
+  "fr": "droit, éthique de l’IA, statistiques et gouvernance des plateformes",
+  "ar": "القانون، وأخلاقيات الذكاء الاصطناعي، والإحصاء، وحوكمة المنصات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Algorithm impact reviews",
+    "fr": "Examens de l’impact des algorithmes",
+    "ar": "مراجعات أثر الخوارزميات"
+   },
+   "unit": {
+    "en": "algorithm impact reviews",
+    "fr": "examens de l’impact des algorithmes",
+    "ar": "مراجعات أثر الخوارزميات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Transparency record checks",
+    "fr": "Contrôles des registres de transparence",
+    "ar": "فحوص سجلات الشفافية"
+   },
+   "unit": {
+    "en": "transparency record checks",
+    "fr": "contrôles des registres de transparence",
+    "ar": "فحوص سجلات الشفافية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Redress workflow tests",
+    "fr": "Tests des processus de recours",
+    "ar": "اختبارات سير عمل الانتصاف"
+   },
+   "unit": {
+    "en": "redress workflow tests",
+    "fr": "tests des processus de recours",
+    "ar": "اختبارات سير عمل الانتصاف"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Bias assessment protocols",
+    "fr": "Protocoles d’évaluation des biais",
+    "ar": "بروتوكولات تقييم التحيز"
+   },
+   "unit": {
+    "en": "bias assessment protocols",
+    "fr": "protocoles d’évaluation des biais",
+    "ar": "بروتوكولات تقييم التحيز"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `platform-ai-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the algorithm impact reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `platform-ai-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des comptes rendus de consultation expurgés ; il relie les examens de l’impact des algorithmes à la source, à l’évaluateur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `platform-ai-governance` ملف قبول PDF/A + بياناً بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات أثر الخوارزميات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted algorithm impact reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis d’ici vendredi 12:00 ; **≥1 examen de l’impact des algorithmes accepté** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**قبول ≥1 من مراجعات أثر الخوارزميات** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسهيلات المعتمدة المقام المؤهل، كما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. وهذه أهداف للمشروع التجريبي، وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "audits distinguish model performance from lawful authority and provide contestability",
+  "fr": "les audits distinguent les performances du modèle de l’autorité légale et garantissent la possibilité de contester les décisions",
+  "ar": "تميّز عمليات التدقيق بين أداء النموذج والسلطة القانونية، وتتيح إمكانية الطعن"
+ },
+ "depends": [
+  {
+   "slug": "philosophy-ethics",
+   "id": 14
+  },
+  {
+   "slug": "ai-ml",
+   "id": 109
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "software-eng",
+   "id": 105
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Proxy variables reproduce discrimination → reconcile source records with the algorithm impact reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les variables de substitution reproduisent la discrimination → réconcilier les dossiers sources avec la liste de contrôle d’acceptation des examens d’impact algorithmique et attribuer la responsabilité des mesures correctives.",
+   "ar": "تُعيد المتغيرات البديلة إنتاج التمييز → طابِق سجلات المصدر مع مراجعات أثر الخوارزمية وقائمة التحقق من القبول، وأسند مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Audit scope excludes deployed model changes → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Le périmètre de l’audit exclut les modifications apportées aux modèles déployés → inclure l’examen des utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "يستثني نطاق التدقيق التغييرات التي أُدخلت على النموذج بعد نشره → أدرج مراجعة المستخدمين المتأثرين، وانشر الافتراضات المتعلقة بالاختيار، وأبقِ قناة للتظلمات."
+  },
+  {
+   "en": "Redress mechanisms provide no actual remedy → reconcile source records with the algorithm impact reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les mécanismes de réparation n’apportent aucun remède concret → réconcilier les dossiers sources avec la liste de contrôle d’acceptation des examens d’impact algorithmique et attribuer la responsabilité des mesures correctives.",
+   "ar": "لا توفر آليات المعالجة سبيلًا فعليًا للإنصاف → طابِق سجلات المصدر مع مراجعات أثر الخوارزمية وقائمة التحقق من القبول، وأسند مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

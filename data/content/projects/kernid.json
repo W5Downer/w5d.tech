@@ -1,0 +1,70 @@
+{
+ "slug": "kernid",
+ "id": 3,
+ "order": 3,
+ "icon": "fingerprint",
+ "status": "concept",
+ "status_label": {
+  "en": "Concept",
+  "fr": "Concept",
+  "ar": "مفهوم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "KernID",
+  "fr": "KernID",
+  "ar": "KernID"
+ },
+ "tagline": {
+  "en": "Identity and credential layer, closest to the Dyon account system.",
+  "fr": "Couche d’identité et d’attestations, la plus proche du système de comptes Dyon.",
+  "ar": "طبقة الهوية وبيانات الاعتماد، وهي الأقرب إلى نظام حسابات Dyon."
+ },
+ "outcome": [
+  {
+   "en": "KernID is a concept: an identity and credential layer so that each contributor, reviewer and certificate can be traced to one accountable person.",
+   "fr": "KernID est un concept : une couche d’identité et d’attestations permettant de relier chaque contributeur, réviseur et certificat à une personne responsable identifiable.",
+   "ar": "KernID مفهوم لطبقة الهوية وبيانات الاعتماد، تتيح تتبع كل مساهم ومراجع وشهادة إلى شخص واحد محدد المسؤولية."
+  },
+  {
+   "en": "It is the nearest relative of the Dyon-linked accounts that the platform uses today. Nothing here is live yet; the page exists so the concept is dated and inspectable.",
+   "fr": "C’est le concept le plus proche des comptes liés à Dyon que la plateforme utilise aujourd’hui. Rien n’est encore opérationnel ; cette page existe pour que le concept soit daté et consultable.",
+   "ar": "وهو الأقرب إلى الحسابات المرتبطة بـ Dyon التي تستخدمها المنصة اليوم. لا شيء هنا قيد التشغيل بعد؛ أُنشئت هذه الصفحة لتوثيق المفهوم بتاريخ محدد وإتاحة الاطلاع عليه."
+  }
+ ],
+ "evidence": {
+  "en": "Listed as a concept with a dated status.",
+  "fr": "Répertorié comme concept avec un statut daté.",
+  "ar": "مدرج كمفهوم ذي حالة مؤرخة."
+ },
+ "services": [
+  "digital-identity",
+  "data-protection",
+  "cybersecurity"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Concept registered",
+    "fr": "Concept enregistré",
+    "ar": "مفهوم مسجل"
+   },
+   "body": {
+    "en": "Dated entry in the project register.",
+    "fr": "Entrée datée dans le registre du projet.",
+    "ar": "قيد مؤرخ في سجل المشروع."
+   }
+  }
+ ],
+ "gradient": "governance",
+ "needs": {
+  "en": "Security reviewers, privacy counsel, identity engineers.",
+  "fr": "Évaluateurs de sécurité, conseillers en protection de la vie privée, ingénieurs en identité.",
+  "ar": "مراجعو الأمن، ومستشارو الخصوصية، ومهندسو الهوية."
+ }
+}

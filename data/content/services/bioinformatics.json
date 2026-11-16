@@ -1,0 +1,167 @@
+{
+ "slug": "bioinformatics",
+ "id": 60,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Bioinformatics & Genomics",
+  "fr": "Bioinformatique et génomique",
+  "ar": "المعلوماتية الحيوية وعلم الجينوم"
+ },
+ "short": {
+  "en": "The service provides sequencing pipelines, variant analysis.",
+  "fr": "Produire des analyses génomiques reproductibles.",
+  "ar": "إنتاج تحليلات جينومية قابلة لإعادة التنفيذ."
+ },
+ "abstract": {
+  "en": "Bioinformatics and genomics — sequencing pipelines, variant analysis, comparative genomics, and reproducible-analysis platforms for research groups.",
+  "fr": "Bioinformatique et génomique — pipelines de séquençage, analyse de variants, génomique comparative et plateformes d’analyse reproductible pour les équipes de recherche.",
+  "ar": "المعلوماتية الحيوية وعلم الجينوم — خطوط أنابيب التسلسل، وتحليل المتغيرات، وعلم الجينوم المقارن، ومنصات التحليل القابل لإعادة الإنتاج للمجموعات البحثية."
+ },
+ "long": [
+  {
+   "en": "The Bioinformatics & Genomics service organises a weekly work package around pipeline validation runs, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 pipeline validation runs; 2000 research sample qc records; 200 variant review dossiers; 100 reproducibility packages. Bioinformatics and genomics — sequencing pipelines, variant analysis, comparative genomics, and reproducible-analysis platforms for research groups. Specialists sequence those methods against the accepted weekly package. The governing boundary is that research analyses cannot become clinical diagnoses without authorised validation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Bioinformatique et génomique organise le lot de travail hebdomadaire autour de cycles de validation de pipelines, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 cycles de validation de pipelines ; 2000 dossiers de contrôle qualité d’échantillons de recherche ; 200 dossiers d’examen de variants ; 100 dossiers de reproductibilité. Bioinformatique et génomique — pipelines de séquençage, analyse de variants, génomique comparative et plateformes d’analyse reproductible pour les équipes de recherche. Les spécialistes alignent ces méthodes sur le lot hebdomadaire accepté. La limite à respecter est que les analyses de recherche ne peuvent pas devenir des diagnostics cliniques sans validation autorisée. Il s’agit de livrables échelonnés issus de cas mandatés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة المعلوماتية الحيوية وعلم الجينوم حزمة عمل أسبوعية تتمحور حول عمليات التحقق من صحة خطوط الأنابيب، بدلًا من اعتبار الحضور هو المنتج. ووفق الخطة التجريبية، تبلغ الطاقة الاستيعابية الكاملة المدعومة بالموارد 200 عملية تحقق من صحة خطوط الأنابيب؛ و2000 سجل لضبط جودة عينات البحث؛ و200 ملف لمراجعة المتغيرات؛ و100 حزمة لقابلية إعادة الإنتاج. المعلوماتية الحيوية وعلم الجينوم — خطوط أنابيب التسلسل، وتحليل المتغيرات، وعلم الجينوم المقارن، ومنصات التحليل القابل لإعادة الإنتاج للمجموعات البحثية. ويتولى المختصون تنفيذ تلك الأساليب ضمن الحزمة الأسبوعية المعتمدة. والحد الحاكم هو عدم تحويل التحليلات البحثية إلى تشخيصات سريرية من دون اعتماد مصرح به. هذه مخرجات مرحلية من حالات مُكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `bioinformatics`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of pipeline validation runs, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015–2020, tandis que l’INS estime le chômage des diplômés à 26.6% au T2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne peut remplacer des compétences en santé vérifiées. Les chercheurs en santé et les utilisateurs d’équipements ont besoin de personnel qualifié, de consentement, d’informations sécurisées et d’installations autorisées, plutôt que d’un vivier de main-d’œuvre non agréé. Pour `bioinformatics`, la réponse proposée est donc un processus contractualisé avec un bénéficiaire nommé et une définition acceptée des cycles de validation de pipelines, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال الفترة 2015–2020، بينما يقدّر INS معدل بطالة الخريجين بـ26.6% في الربع الثاني من 2026. وتوضح هاتان الفئتان المختلفتان سبب عدم إمكان الاستعاضة عن القدرة الصحية المتحققة بكفاءة عامة للخريجين المتاحين. يحتاج مستخدمو البحوث الصحية والمعدات إلى موظفين مؤهلين وموافقة ومعلومات آمنة ومنشآت مصرح بها، لا إلى مجموعة عمالة غير مرخصة. لذلك، يتمثل النهج المقترح في `bioinformatics` في سير عمل تعاقدي ذي مستفيد مسمى وتعريف معتمد لعمليات التحقق من صحة خطوط الأنابيب، لا في التوظيف الذي يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the pipeline validation runs acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks research sample qc records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted pipeline validation runs from rejected or deferred work and records blockers around variant review dossiers. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des cycles de validation de pipelines ; 100 gestionnaires les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les dossiers de contrôle qualité des échantillons de recherche avant leur approbation. L’audit aléatoire proposé de 5% revérifie les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un gestionnaire. La consolidation du service distingue les cycles de validation de pipelines acceptés des travaux rejetés ou reportés et consigne les blocages liés aux dossiers d’examen de variants. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول عمليات التحقق من صحة خطوط الأنابيب؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفِرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من سجلات ضبط جودة عينات البحث قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين عمليات التحقق من صحة خطوط الأنابيب المقبولة والعمل المرفوض أو المؤجل، ويسجل المعوقات المتعلقة بملفات مراجعة المتغيرات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "bioinformatics, genomics, biology and statistics",
+  "fr": "bioinformatique, génomique, biologie et statistiques",
+  "ar": "المعلوماتية الحيوية، وعلم الجينوم، وعلم الأحياء، والإحصاء"
+ },
+ "diploma": "maîtrise | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Pipeline validation runs",
+    "fr": "Exécutions de validation de pipeline",
+    "ar": "عمليات التحقق من صحة مسارات العمل"
+   },
+   "unit": {
+    "en": "pipeline validation runs",
+    "fr": "exécutions de validation de pipeline",
+    "ar": "عمليات التحقق من صحة مسارات العمل"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Research sample QC records",
+    "fr": "Dossiers de contrôle qualité des échantillons de recherche",
+    "ar": "سجلات ضبط جودة العينات البحثية"
+   },
+   "unit": {
+    "en": "research sample qc records",
+    "fr": "dossiers de contrôle qualité des échantillons de recherche",
+    "ar": "سجلات ضبط جودة العينات البحثية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Variant review dossiers",
+    "fr": "Dossiers d’examen des variants",
+    "ar": "ملفات مراجعة المتغيرات الجينية"
+   },
+   "unit": {
+    "en": "variant review dossiers",
+    "fr": "dossiers d’examen des variants",
+    "ar": "ملفات مراجعة المتغيرات الجينية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Reproducibility packages",
+    "fr": "Ensembles de reproductibilité",
+    "ar": "حزم قابلية إعادة الإنتاج"
+   },
+   "unit": {
+    "en": "reproducibility packages",
+    "fr": "ensembles de reproductibilité",
+    "ar": "حزم قابلية إعادة الإنتاج"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `bioinformatics` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the pipeline validation runs to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `bioinformatics` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les exécutions de validation de pipeline à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة في مجال `المعلوماتية الحيوية` ملف قبول PDF/A + بيان مصدر CSV/JSON + معرّفات الطريقة/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط عمليات التحقق من صحة مسارات العمل بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض والجهة المُعِدّة."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted pipeline validation runs** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant vendredi 12:00 ; **≥2 exécutions de validation de pipeline acceptées** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité/confidentialité prévalent sur un score positif. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥2 من عمليات التحقق من صحة مسارات العمل** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي نتيجة خضراء. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "research analyses cannot become clinical diagnoses without authorised validation",
+  "fr": "les analyses de recherche ne peuvent pas devenir des diagnostics cliniques sans validation autorisée",
+  "ar": "لا يمكن أن تصبح التحليلات البحثية تشخيصات سريرية من دون تحقق معتمد"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "medical-devices",
+   "id": 126
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Reference bias changes variant interpretation → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Un biais de référence modifie l’interprétation des variants → prévoir l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "قد يؤدي التحيز المرجعي إلى تغيير تفسير المتغيرات الجينية ← اشركوا المستخدمين المتأثرين في المراجعة، وانشروا افتراضات الاختيار، وأبقوا مساراً لتقديم التظلمات."
+  },
+  {
+   "en": "Genetic data re-identifies families → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les données génétiques permettent de réidentifier des familles → limiter les accès, caviarder les éléments probants diffusés et tester le processus d’accès restreint.",
+   "ar": "قد تكشف البيانات الجينية هوية العائلات مجدداً ← قللوا نطاق الوصول، واحجبوا الأدلة المنشورة، واختبروا سير عمل الوصول المقيّد."
+  },
+  {
+   "en": "Software updates silently alter results → reconcile source records with the pipeline validation runs acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les mises à jour logicielles modifient les résultats sans signalement → rapprocher les dossiers sources de la liste de contrôle d’acceptation des exécutions de validation de pipeline et désigner les responsables des mesures correctives.",
+   "ar": "قد تغيّر تحديثات البرمجيات النتائج من دون إشعار ← طابقوا سجلات المصدر مع قائمة التحقق لقبول عمليات التحقق من صحة مسارات العمل، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

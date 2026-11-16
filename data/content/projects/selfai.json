@@ -1,0 +1,70 @@
+{
+ "slug": "selfai",
+ "id": 4,
+ "order": 4,
+ "icon": "bot",
+ "status": "concept",
+ "status_label": {
+  "en": "Concept",
+  "fr": "Concept",
+  "ar": "مفهوم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "SelfAI",
+  "fr": "SelfAI",
+  "ar": "SelfAI"
+ },
+ "tagline": {
+  "en": "A meta-solution for self-training agents. Concept.",
+  "fr": "Une méta-solution pour des agents qui s’entraînent eux-mêmes. Concept.",
+  "ar": "حلّ فوقي لوكلاء يتدرّبون ذاتيًا. مفهوم."
+ },
+ "outcome": [
+  {
+   "en": "SelfAI is listed as a concept: a meta-solution for agents that train themselves under human supervision. An external research framework with a similar name exists; W5D does not claim it.",
+   "fr": "SelfAI est répertorié comme un concept : une méta-solution pour des agents qui s’entraînent eux-mêmes sous supervision humaine. Il existe un cadre de recherche externe portant un nom similaire ; W5D ne revendique aucun lien avec celui-ci.",
+   "ar": "يُدرج SelfAI بوصفه مفهومًا: حلًّا فوقيًا لوكلاء يتدرّبون ذاتيًا تحت إشراف بشري. يوجد إطار بحثي خارجي يحمل اسمًا مشابهًا؛ ولا تدّعي W5D تبعيته لها."
+  },
+  {
+   "en": "Any deployment would need a defined use case, a baseline comparison and human escalation, as the Technology macro requires.",
+   "fr": "Tout déploiement nécessiterait un cas d’usage défini, une comparaison avec une référence de base et une procédure d’escalade vers un humain, comme l’exige la macro Technologie.",
+   "ar": "يتطلب أي نشر تحديد حالة استخدام، وإجراء مقارنة بخط أساس، وإتاحة التصعيد إلى البشر، وفق ما يقتضيه محور التكنولوجيا."
+  }
+ ],
+ "evidence": {
+  "en": "Listed as a concept; not yet mapped to a specific service.",
+  "fr": "Répertorié comme un concept ; pas encore rattaché à un service spécifique.",
+  "ar": "مُدرج بوصفه مفهومًا؛ ولم يُربط بعد بخدمة محددة."
+ },
+ "services": [
+  "ai-ml",
+  "platform-ai-governance",
+  "data-engineering"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Concept registered",
+    "fr": "Concept enregistré",
+    "ar": "مفهوم مسجل"
+   },
+   "body": {
+    "en": "Not yet mapped to a service.",
+    "fr": "Pas encore rattaché à un service.",
+    "ar": "لم يُربط بعد بخدمة."
+   }
+  }
+ ],
+ "gradient": "technology",
+ "needs": {
+  "en": "ML engineers, evaluation leads.",
+  "fr": "Ingénieurs en ML, responsables de l’évaluation.",
+  "ar": "مهندسو تعلم الآلة، ومسؤولو التقييم."
+ }
+}

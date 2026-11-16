@@ -1,0 +1,167 @@
+{
+ "slug": "renewable-science",
+ "id": 68,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Renewable Energy Science",
+  "fr": "Sciences des énergies renouvelables",
+  "ar": "علوم الطاقة المتجددة"
+ },
+ "short": {
+  "en": "The service provides pV testing, storage chemistry, grid studies.",
+  "fr": "Tester les solutions énergétiques renouvelables.",
+  "ar": "اختبار حلول الطاقة المتجددة."
+ },
+ "abstract": {
+  "en": "Renewable energy science — PV performance testing, battery storage chemistry, and grid-integration studies informing national energy strategy.",
+  "fr": "Sciences des énergies renouvelables — essais de performance PV, chimie du stockage par batterie et études d’intégration au réseau contribuant à la stratégie énergétique nationale.",
+  "ar": "علوم الطاقة المتجددة — اختبارات أداء الطاقة الكهروضوئية، وكيمياء تخزين البطاريات، ودراسات دمج الطاقة في الشبكة، بما يدعم استراتيجية الطاقة الوطنية."
+ },
+ "long": [
+  {
+   "en": "The Renewable Energy Science service organises a weekly work package around pv performance tests, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 pv performance tests; 1000 storage test cycles; 200 grid study scenarios; 100 technical evidence reviews. Renewable energy science — PV performance testing, battery storage chemistry, and grid-integration studies informing national energy strategy. Specialists sequence those methods against the accepted weekly package. The governing boundary is that testing is distinguished from certified grid connection or installation approval. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des sciences des énergies renouvelables organise un lot de travail hebdomadaire autour des essais de performance PV, au lieu de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 essais de performance PV ; 1000 cycles d’essai de chimie des batteries de stockage ; 200 scénarios d’étude du réseau ; 100 examens des éléments techniques probants. Sciences des énergies renouvelables — essais de performance PV, chimie du stockage par batterie et études d’intégration au réseau contribuant à la stratégie énergétique nationale. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est de distinguer les essais de la certification du raccordement au réseau ou de l’approbation de l’installation. Il s’agit de livrables progressifs issus de cas commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة علوم الطاقة المتجددة حزمة عمل أسبوعية تتمحور حول اختبارات أداء الطاقة الكهروضوئية، بدلاً من اعتبار الحضور هو المنتج. وتتمثل الخطة التجريبية عند اكتمال القدرة المموّلة والمزوّدة بالموارد في إجراء 500 اختبار لأداء الطاقة الكهروضوئية؛ و1000 دورة اختبار للتخزين؛ و200 سيناريو لدراسات الشبكة؛ و100 مراجعة للأدلة الفنية. علوم الطاقة المتجددة — اختبارات أداء الطاقة الكهروضوئية، وكيمياء تخزين البطاريات، ودراسات دمج الطاقة في الشبكة، بما يدعم استراتيجية الطاقة الوطنية. ويرتّب المتخصصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو التمييز بين الاختبارات واعتماد الربط بالشبكة أو الموافقة على التركيب. وهذه مخرجات مرحلية لحالات مُكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `renewable-science`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of pv performance tests, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui atteignaient 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service précis. La séparation entre propriétaires d’actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la mise en commande de travaux pourtant utiles sur le plan technique. Pour `renewable-science`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des tests de performance PV, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "توثّق دراسة CCDR الصادرة في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود عقد ممول لهذه الخدمة بعينها. وقد يؤدي انفصال مالكي الأصول عن ميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية التقنية. لذلك، يتمثل الرد المقترح في `renewable-science` في سير عمل تعاقدي، له مستفيد محدد وتعريف معتمد لاختبارات أداء الأنظمة الكهروضوئية، وليس في تبرير التوظيف بالاستناد حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the pv performance tests acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks storage test cycles before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted pv performance tests from rejected or deferred work and records blockers around grid study scenarios. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des tests de performance PV ; 100 responsables traduisent cette grille en missions confiées à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les cycles d’essais de stockage avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les tests de performance PV acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux scénarios d’étude du réseau. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول اختبارات أداء الأنظمة الكهروضوئية؛ ويترجم 100 مدير هذه المعايير إلى تكليفات فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من دورات اختبار التخزين قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين اختبارات أداء الأنظمة الكهروضوئية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بسيناريوهات دراسات الشبكة. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "electrical engineering, energy physics, electrochemistry and power systems",
+  "fr": "génie électrique, physique de l’énergie, électrochimie et systèmes électriques",
+  "ar": "الهندسة الكهربائية، وفيزياء الطاقة، والكيمياء الكهربائية، وأنظمة الطاقة"
+ },
+ "diploma": "maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "PV performance tests",
+    "fr": "Tests de performance PV",
+    "ar": "اختبارات أداء الأنظمة الكهروضوئية"
+   },
+   "unit": {
+    "en": "pv performance tests",
+    "fr": "tests de performance PV",
+    "ar": "اختبارات أداء الأنظمة الكهروضوئية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Storage test cycles",
+    "fr": "Cycles d’essais de stockage",
+    "ar": "دورات اختبار التخزين"
+   },
+   "unit": {
+    "en": "storage test cycles",
+    "fr": "cycles d’essais de stockage",
+    "ar": "دورات اختبار التخزين"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Grid study scenarios",
+    "fr": "Scénarios d’étude du réseau",
+    "ar": "سيناريوهات دراسات الشبكة"
+   },
+   "unit": {
+    "en": "grid study scenarios",
+    "fr": "scénarios d’étude du réseau",
+    "ar": "سيناريوهات دراسات الشبكة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Technical evidence reviews",
+    "fr": "Examens des éléments probants techniques",
+    "ar": "مراجعات الأدلة التقنية"
+   },
+   "unit": {
+    "en": "technical evidence reviews",
+    "fr": "examens des éléments probants techniques",
+    "ar": "مراجعات الأدلة التقنية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `renewable-science` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the pv performance tests to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `renewable-science` lié au cas contient un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les tests de performance PV à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لـ `renewable-science` ملف قبول PDF/A + سجلّاً بيانياً للمصادر بصيغتي CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، بما يربط اختبارات أداء الأنظمة الكهروضوئية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted pv performance tests** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant ven. 12:00 ; **≥4 tests de performance PV acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur des rapports éligibles, et les défauts critiques en matière de sécurité ou de confidentialité annulent tout score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستحقة** بحلول الجمعة 12:00؛ **≥4 اختبارات أداء مقبولة للأنظمة الكهروضوئية** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. ويؤدي احتساب الإجازات/التعديلات المعتمدة إلى تغيير المقام المستحق، فيما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "testing is distinguished from certified grid connection or installation approval",
+  "fr": "les essais se distinguent d’une certification de raccordement au réseau ou d’une autorisation d’installation",
+  "ar": "يُميَّز الاختبار عن اعتماد الربط بالشبكة أو الموافقة على التركيب"
+ },
+ "depends": [
+  {
+   "slug": "energy-retrofits",
+   "id": 36
+  },
+  {
+   "slug": "renewable-systems",
+   "id": 119
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "7",
+   "target": "7.2"
+  },
+  {
+   "goal": "7",
+   "target": "7.3"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Laboratory performance overstated in field heat → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Des performances en laboratoire surestimées dans les conditions de chaleur sur le terrain → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicite avant acceptation.",
+   "ar": "المبالغة في تقدير الأداء المختبري في حرارة الظروف الميدانية ← اشتراط فحوص مستقلة للمصدر، ومرجع للمقارنة، وتحديد صريح لعدم اليقين قبل القبول."
+  },
+  {
+   "en": "Battery tests omit fire hazards → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les essais de batterie omettent les risques d’incendie → exiger l’approbation d’un responsable compétent en sécurité, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "إغفال اختبارات البطاريات لمخاطر الحريق ← اشتراط اعتماد مسؤول سلامة مؤهل، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Grid studies use obsolete network assumptions → reconcile source records with the pv performance tests acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les études du réseau reposent sur des hypothèses obsolètes concernant celui-ci → rapprocher les documents sources de la liste de vérification pour l’acceptation des tests de performance PV et attribuer la responsabilité des mesures correctives.",
+   "ar": "استناد دراسات الشبكة إلى افتراضات قديمة بشأن الشبكة ← مطابقة السجلات المصدرية مع قائمة التحقق لقبول اختبارات أداء الأنظمة الكهروضوئية، وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "slug": "webbooks",
+ "id": 7,
+ "order": 7,
+ "icon": "book-marked",
+ "status": "concept",
+ "status_label": {
+  "en": "Concept",
+  "fr": "Concept",
+  "ar": "مفهوم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "WebBooks",
+  "fr": "WebBooks",
+  "ar": "WebBooks"
+ },
+ "tagline": {
+  "en": "A publication layer for books that are read on the web.",
+  "fr": "Une couche de publication pour des livres qui se lisent sur le Web.",
+  "ar": "طبقة نشر للكتب التي تُقرأ عبر الويب."
+ },
+ "outcome": [
+  {
+   "en": "WebBooks is listed next to the project register. It may connect to the Publishing and WebBooks service (#009) or to a broader publication layer.",
+   "fr": "WebBooks figure à côté du registre des projets. Il pourrait être lié au service Publishing and WebBooks (#009) ou à une couche de publication plus large.",
+   "ar": "يُدرج WebBooks إلى جانب سجل المشاريع. وقد يرتبط بخدمة النشر وWebBooks (#009) أو بطبقة نشر أوسع."
+  },
+  {
+   "en": "Status: concept. The reading template already exists in the site design (read-webbook).",
+   "fr": "Statut : concept. Le modèle de lecture existe déjà dans la conception du site (read-webbook).",
+   "ar": "الحالة: مفهوم. قالب القراءة موجود بالفعل في تصميم الموقع (read-webbook)."
+  }
+ ],
+ "evidence": {
+  "en": "Listed alongside the register; service #009 exists.",
+  "fr": "Répertorié aux côtés du registre ; le service #009 existe.",
+  "ar": "مُدرج إلى جانب السجل؛ والخدمة #009 قائمة."
+ },
+ "services": [
+  "publishing",
+  "digital-storytelling",
+  "library-modernisation"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Concept registered",
+    "fr": "Concept enregistré",
+    "ar": "مفهوم مسجل"
+   },
+   "body": {
+    "en": "Linked to service #009.",
+    "fr": "Lié au service #009.",
+    "ar": "مرتبط بالخدمة #009."
+   }
+  }
+ ],
+ "gradient": "sciences",
+ "needs": {
+  "en": "Editors, typesetters, rights reviewers.",
+  "fr": "Rédacteurs, typographes, responsables de la vérification des droits.",
+  "ar": "المحررون، ومصففو النصوص، ومراجعو الحقوق."
+ }
+}

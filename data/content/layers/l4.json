@@ -1,0 +1,15 @@
+{
+ "slug": "l4",
+ "code": "L4",
+ "order": 4,
+ "name": {
+  "en": "Projects",
+  "fr": "Projets",
+  "ar": "المشروعات"
+ },
+ "body": {
+  "en": "{{ counts.projects }} projects that consume services and publish dated status: live, building, concept or draft.",
+  "fr": "{{ counts.projects }} projets qui mobilisent des services et publient un statut daté : en cours, en développement, à l’état de concept ou à l’état de projet.",
+  "ar": "{{ counts.projects }} مشروعًا يستخدم الخدمات وينشر حالة مؤرخة: جارٍ، أو قيد الإنشاء، أو تصوري، أو مسودة."
+ }
+}

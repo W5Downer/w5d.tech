@@ -1,0 +1,167 @@
+{
+ "slug": "education-governance",
+ "id": 98,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Education Governance",
+  "fr": "Gouvernance de l’éducation",
+  "ar": "حوكمة التعليم"
+ },
+ "short": {
+  "en": "The service provides school mapping, teacher deployment, QA.",
+  "fr": "Relier la carte scolaire aux besoins réels.",
+  "ar": "ربط الخريطة المدرسية بالحاجات الفعلية."
+ },
+ "abstract": {
+  "en": "Education governance — school mapping, teacher deployment optimization, and quality assurance frameworks for ministries of education.",
+  "fr": "Gouvernance de l’éducation — cartographie des établissements scolaires, optimisation du déploiement des enseignants et cadres d’assurance qualité pour les ministères de l’Éducation.",
+  "ar": "حوكمة التعليم — رسم خرائط المدارس، وتحسين توزيع المعلمين، وأطر ضمان الجودة لصالح وزارات التعليم."
+ },
+ "long": [
+  {
+   "en": "The Education Governance service organises a weekly work package around school data validations, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 1000 school data validations; 200 teacher deployment scenarios; 200 quality assurance reviews; 100 access planning notes. Education governance — school mapping, teacher deployment optimization, and quality assurance frameworks for ministries of education. Specialists sequence those methods against the accepted weekly package. The governing boundary is that deployment scenarios respect current education authority, pupil needs and staff rights. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Gouvernance de l’éducation organise un lot de travail hebdomadaire autour de la validation des données scolaires, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 1000 validations de données scolaires ; 200 scénarios de déploiement des enseignants ; 200 examens d’assurance qualité ; 100 notes de planification de l’accès. Gouvernance de l’éducation — cartographie des établissements scolaires, optimisation du déploiement des enseignants et cadres d’assurance qualité pour les ministères de l’Éducation. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite applicable est que les scénarios de déploiement respectent l’autorité éducative en vigueur, les besoins des élèves et les droits du personnel. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة حوكمة التعليم حزمة عمل أسبوعية تتمحور حول التحقق من بيانات المدارس، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند توافر كامل الموارد والقدرة التشغيلية، إجراء 1000 عملية تحقق من بيانات المدارس؛ وإعداد 200 سيناريو لتوزيع المعلمين؛ وإجراء 200 مراجعة لضمان الجودة؛ وإعداد 100 مذكرة لتخطيط الإتاحة. حوكمة التعليم — رسم خرائط المدارس، وتحسين توزيع المعلمين، وأطر ضمان الجودة لصالح وزارات التعليم. ويحدد المتخصصون تسلسل هذه الأساليب وفقاً لحزمة العمل الأسبوعية المقبولة. ويقضي الضابط الناظم بأن تراعي سيناريوهات التوزيع الصلاحيات الحالية للجهات المعنية بالتعليم، واحتياجات التلاميذ، وحقوق الموظفين. وهذه مخرجات مرحلية لحالات مُكلّف بها، وليست وعداً باستكمال برنامج وطني بأكمله كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `education-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of school data validations, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons de l’Enterprise Survey étiquetées 2020 ou portant sur la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 souligne également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliore une institution. Pour `education-governance`, la réponse proposée est donc un flux de travail contractuel avec un bénéficiaire désigné et une définition acceptée de la validation des données scolaires, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تفيد مراجعة OECD الصادرة في يونيو 2024 بأن نحو 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة بوصفه قيداً رئيسياً، استناداً إلى مقارنات Enterprise Survey الموسومة بعام 2020 أو بأحدث سنة متاحة. كما يشير التحليل القانوني الذي أعده Kotrane في 2024 إلى ندرة الوظائف الرسمية والقيود المؤسسية، لا إلى مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود صلاحيات مشروعة وسجلات إدارية مشتركة وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً من دون هؤلاء المستخدمين سيحسن أداء مؤسسة ما. لذلك، يتمثل النهج المقترح لمجال `education-governance` في سير عمل تعاقدي يحدد جهة مستفيدة ويضع تعريفاً مقبولاً لعمليات التحقق من بيانات المدارس، لا في التوظيف الذي يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the school data validations acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks teacher deployment scenarios before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted school data validations from rejected or deferred work and records blockers around quality assurance reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des validations de données scolaires ; 100 responsables traduisent ces critères en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les scénarios de déploiement des enseignants avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les validations de données scolaires acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux examens d’assurance qualité. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول عمليات التحقق من بيانات المدارس؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من سيناريوهات توزيع المعلمين قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين عمليات التحقق من بيانات المدارس المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمراجعات ضمان الجودة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "education policy, educational planning and statistics",
+  "fr": "politique éducative, planification et statistiques de l’éducation",
+  "ar": "سياسة التعليم والتخطيط التربوي والإحصاءات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "School data validations",
+    "fr": "Validations de données scolaires",
+    "ar": "عمليات التحقق من بيانات المدارس"
+   },
+   "unit": {
+    "en": "school data validations",
+    "fr": "validations de données scolaires",
+    "ar": "عمليات التحقق من بيانات المدارس"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Teacher deployment scenarios",
+    "fr": "Scénarios de déploiement des enseignants",
+    "ar": "سيناريوهات توزيع المعلمين"
+   },
+   "unit": {
+    "en": "teacher deployment scenarios",
+    "fr": "scénarios de déploiement des enseignants",
+    "ar": "سيناريوهات توزيع المعلمين"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Quality assurance reviews",
+    "fr": "Examens d’assurance qualité",
+    "ar": "مراجعات ضمان الجودة"
+   },
+   "unit": {
+    "en": "quality assurance reviews",
+    "fr": "revues d’assurance qualité",
+    "ar": "مراجعات ضمان الجودة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Access planning notes",
+    "fr": "Notes de planification de l’accès",
+    "ar": "ملاحظات تخطيط الوصول"
+   },
+   "unit": {
+    "en": "access planning notes",
+    "fr": "notes de planification de l’accès",
+    "ar": "ملاحظات تخطيط الوصول"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `education-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the school data validations to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception `education-governance` lié à un cas comprend un dossier de réception PDF/A + un manifeste des sources CSV/JSON + des sources expurgées et des comptes rendus de consultation, qui relient les validations des données scolaires à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة اعتماد مرتبطة بحالة ضمن مجال `education-governance` ملف اعتماد بصيغة PDF/A + بيانًا بالمصادر بصيغتي CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط عمليات التحقق من بيانات المدارس بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥8 accepted school data validations** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥8 validations des données scolaires acceptées** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité l’emportent sur un score au vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥8 عمليات تحقق من بيانات المدارس** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **طلب واحد كحد أقصى لإعادة العمل بسبب مسائل متعلقة بالأدلة** لكل فريق في الأسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، بينما تتجاوز العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا ثابتة في ملف README."
+ },
+ "boundary": {
+  "en": "deployment scenarios respect current education authority, pupil needs and staff rights",
+  "fr": "les scénarios de déploiement respectent l’autorité éducative compétente, les besoins des élèves et les droits du personnel",
+  "ar": "تراعي سيناريوهات النشر السلطة التعليمية الحالية واحتياجات التلاميذ وحقوق الموظفين"
+ },
+ "depends": [
+  {
+   "slug": "education-culture",
+   "id": 23
+  },
+  {
+   "slug": "stem-education",
+   "id": 76
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "school-clinic",
+   "id": 49
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Optimisation increases rural travel distances → reconcile source records with the school data validations acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’optimisation accroît les distances à parcourir en zone rurale → rapprocher les sources des données de la liste de contrôle de réception des validations des données scolaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤدي التحسينات إلى زيادة مسافات التنقل في المناطق الريفية → طابِقوا سجلات المصادر مع قائمة التحقق لقبول عمليات التحقق من بيانات المدارس، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "School closure assumptions ignore communities → reconcile source records with the school data validations acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les hypothèses de fermeture des écoles ne tiennent pas compte des communautés → rapprocher les sources des données de la liste de contrôle de réception des validations des données scolaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتجاهل افتراضات إغلاق المدارس المجتمعات المحلية → طابِقوا سجلات المصادر مع قائمة التحقق لقبول عمليات التحقق من بيانات المدارس، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Administrative data omits out-of-school children → reconcile source records with the school data validations acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les données administratives omettent les enfants non scolarisés → rapprocher les sources des données de la liste de contrôle de réception des validations des données scolaires et attribuer la responsabilité des mesures correctives.",
+   "ar": "تغفل البيانات الإدارية الأطفال غير الملتحقين بالمدارس → طابِقوا سجلات المصادر مع قائمة التحقق لقبول عمليات التحقق من بيانات المدارس، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

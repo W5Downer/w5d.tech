@@ -1,0 +1,175 @@
+{
+ "slug": "ontology",
+ "title": {
+  "en": "Ontology — six layers, five macros, 130 services",
+  "fr": "Ontologie — six couches, cinq macro-projets, 130 services",
+  "ar": "الأنطولوجيا — ست طبقات، وخمسة أعمال كبرى، و130 خدمة"
+ },
+ "description": {
+  "en": "The W5D ontology: six layers from doctrine to programme, five macro works and {{ counts.services }} services.",
+  "fr": "L’ontologie W5D : six couches, de la doctrine au programme, cinq macro-projets et {{ counts.services }} services.",
+  "ar": "أنطولوجيا W5D: ست طبقات من العقيدة إلى البرنامج، وخمسة أعمال كبرى، و{{ counts.services }} خدمة."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "ont-hero",
+   "variant": "classic",
+   "gradient": "sciences",
+   "title": {
+    "en": "Six layers. Five macros. **{{ counts.services }} services.**",
+    "fr": "Six couches. Cinq macro-projets. **{{ counts.services }} services.**",
+    "ar": "ست طبقات. خمسة أعمال كبرى. **{{ counts.services }} خدمة.**"
+   },
+   "lead": {
+    "en": "The ontology is the structure behind every page. Layers L0 to L5 say what kind of statement a page makes.",
+    "fr": "L’ontologie est la structure qui sous-tend chaque page. Les couches L0 à L5 indiquent la nature de l’énoncé formulé sur une page.",
+    "ar": "الأنطولوجيا هي البنية التي تستند إليها كل صفحة. وتحدد الطبقات من L0 إلى L5 نوع العبارة التي تعرضها الصفحة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Browse the services",
+      "fr": "Parcourir les services",
+      "ar": "تصفّح الخدمات"
+     },
+     "href": "/services/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Ontology",
+    "fr": "Ontologie",
+    "ar": "الأنطولوجيا"
+   }
+  },
+  {
+   "type": "stack",
+   "id": "ont-stack",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "The six layers",
+    "fr": "Les six couches",
+    "ar": "الطبقات الست"
+   },
+   "lead": {
+    "en": "Every claim on the site belongs to exactly one layer.",
+    "fr": "Chaque affirmation du site relève d’une seule et même couche.",
+    "ar": "ينتمي كل ادعاء على الموقع إلى طبقة واحدة بالضبط."
+   }
+  },
+  {
+   "type": "macro-cards",
+   "id": "ont-macros",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "The five macro works (L3)",
+    "fr": "Les cinq macro-projets (L3)",
+    "ar": "الأعمال الكبرى الخمسة (L3)"
+   }
+  },
+  {
+   "type": "definitions",
+   "id": "ont-rules",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "Rules that keep it coherent",
+    "fr": "Règles de cohérence",
+    "ar": "قواعد لضمان الاتساق"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "One service, one unit",
+      "fr": "Un service, une unité",
+      "ar": "وحدة واحدة لكل خدمة"
+     },
+     "def": {
+      "en": "Every service defines its deliverable unit and weekly target.",
+      "fr": "Chaque service définit son unité livrable et son objectif hebdomadaire.",
+      "ar": "تحدد كل خدمة وحدة مخرجاتها والهدف الأسبوعي."
+     }
+    },
+    {
+     "term": {
+      "en": "Cross-macro dependency",
+      "fr": "Dépendance entre macro-projets",
+      "ar": "الاعتماد المتبادل بين الأعمال الكبرى"
+     },
+     "def": {
+      "en": "Every service names at least one input provider and one downstream consumer.",
+      "fr": "Chaque service désigne au moins un fournisseur d’intrants et un utilisateur en aval.",
+      "ar": "تحدد كل خدمة جهة واحدة على الأقل توفر أحد المدخلات وجهةً لاحقةً مستفيدة."
+     }
+    },
+    {
+     "term": {
+      "en": "Evidence rule",
+      "fr": "Règle relative aux preuves",
+      "ar": "قاعدة الأدلة"
+     },
+     "def": {
+      "en": "Every service states what an accepted package contains.",
+      "fr": "Chaque service précise le contenu d’un lot accepté.",
+      "ar": "توضح كل خدمة ما تتضمنه الحزمة المقبولة."
+     }
+    },
+    {
+     "term": {
+      "en": "Boundary",
+      "fr": "Périmètre",
+      "ar": "النطاق"
+     },
+     "def": {
+      "en": "Every service declares what it will not substitute for.",
+      "fr": "Chaque service précise ce qu’il ne remplace pas.",
+      "ar": "تحدد كل خدمة ما لا تحل محله."
+     }
+    },
+    {
+     "term": {
+      "en": "No rename",
+      "fr": "Pas de renommage",
+      "ar": "لا تغيير للأسماء"
+     },
+     "def": {
+      "en": "Services, macros and projects keep their slugs.",
+      "fr": "Les services, macros et projets conservent leurs slugs.",
+      "ar": "تحتفظ الخدمات ووحدات الماكرو والمشاريع بمعرّفاتها المختصرة."
+     }
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "ont-final",
+   "gradient": "sciences",
+   "title": {
+    "en": "Find **your** service.",
+    "fr": "Trouvez le service qui **vous** convient.",
+    "ar": "اعثر على الخدمة **التي تناسبك**."
+   },
+   "body": {
+    "en": "",
+    "fr": "",
+    "ar": ""
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Browse the services",
+      "fr": "Parcourir les services",
+      "ar": "تصفّح الخدمات"
+     },
+     "href": "/services/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

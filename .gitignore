@@ -1,0 +1,10 @@
+# secrets & runtime state
+.env
+storage/*
+!storage/.gitkeep
+node_modules/
+tools/node_modules/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.log

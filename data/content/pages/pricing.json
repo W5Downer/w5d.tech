@@ -1,0 +1,282 @@
+{
+ "slug": "pricing",
+ "title": {
+  "en": "Progressive price — one public function",
+  "fr": "Tarif progressif — une seule fonction publique",
+  "ar": "سعر تصاعدي — دالة عامة واحدة"
+ },
+ "description": {
+  "en": "The price per part rises with programme progress and time, capped at {{ pricing.cap }}× base. The curve, the constants and the grid are public.",
+  "fr": "Le prix par unité augmente avec l’avancement du programme et le temps écoulé, dans la limite de {{ pricing.cap }}× le tarif de base. La courbe, les constantes et la grille tarifaire sont publiques.",
+  "ar": "يرتفع سعر الجزء مع تقدّم البرنامج ومرور الوقت، بحد أقصى {{ pricing.cap }}× السعر الأساسي. والمنحنى والثوابت والجدول منشورة للعموم."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "pricing-hero",
+   "variant": "classic",
+   "gradient": "technology",
+   "title": {
+    "en": "One price function. **Public.**",
+    "fr": "Une seule fonction de prix. **Publique.**",
+    "ar": "دالة واحدة للسعر. **منشورة للعموم.**"
+   },
+   "lead": {
+    "en": "Today a part costs {{ price.day }} {{ money.currency }} per day or {{ price.week }} per week. It rises as the programme progresses and as time passes, and it never exceeds {{ pricing.cap }}× base.",
+    "fr": "Aujourd’hui, une unité coûte {{ price.day }} {{ money.currency }} par jour ou {{ price.week }} par semaine. Son prix augmente avec l’avancement du programme et le temps écoulé, sans jamais dépasser {{ pricing.cap }}× le tarif de base.",
+    "ar": "يبلغ سعر الجزء اليوم {{ price.day }} {{ money.currency }} لليوم أو {{ price.week }} للأسبوع. ويرتفع مع تقدّم البرنامج ومرور الوقت، ولا يتجاوز أبدًا {{ pricing.cap }}× السعر الأساسي."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "See the progressive price",
+      "fr": "Voir le tarif progressif",
+      "ar": "اطّلع على السعر التصاعدي"
+     },
+     "href": "#pricing-chart",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Take a part",
+      "fr": "Prenez une part",
+      "ar": "احصل على حصة"
+     },
+     "href": "/checkout/",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Pricing",
+    "fr": "Tarification",
+    "ar": "التسعير"
+   }
+  },
+  {
+   "type": "price-chart",
+   "id": "pricing-chart",
+   "tier": "i",
+   "focus": 4,
+   "title": {
+    "en": "Live curve",
+    "fr": "Courbe en temps réel",
+    "ar": "المنحنى المباشر"
+   },
+   "lead": {
+    "en": "Day and week price while p and t move together from 0 to 100%. The dot is today.",
+    "fr": "Prix à la journée et à la semaine lorsque p et t évoluent ensemble de 0 à 100 %. Le point indique la valeur actuelle.",
+    "ar": "سعر اليوم والأسبوع مع تغيّر p وt معًا من 0 إلى 100%. تمثّل النقطة سعر اليوم."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "price-table",
+   "id": "pricing-grid",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Price grid per part per day",
+    "fr": "Grille tarifaire par unité et par jour",
+    "ar": "جدول سعر الجزء لليوم الواحد"
+   },
+   "lead": {
+    "en": "Rows are progress p, columns are time t.",
+    "fr": "Les lignes correspondent à l’avancement p, les colonnes au temps t.",
+    "ar": "تمثّل الصفوف التقدّم p، وتمثّل الأعمدة الوقت t."
+   }
+  },
+  {
+   "type": "definitions",
+   "id": "pricing-constants",
+   "tier": "x",
+   "focus": 1,
+   "title": {
+    "en": "Published constants",
+    "fr": "Constantes publiées",
+    "ar": "الثوابت المنشورة"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "Base per day",
+      "fr": "Tarif de base par jour",
+      "ar": "السعر الأساسي لليوم"
+     },
+     "def": {
+      "en": "{{ money.base_day }} {{ money.currency }}",
+      "fr": "{{ money.base_day }} {{ money.currency }}",
+      "ar": "{{ money.base_day }} {{ money.currency }}"
+     }
+    },
+    {
+     "term": {
+      "en": "Base per week",
+      "fr": "Tarif de base par semaine",
+      "ar": "السعر الأساسي للأسبوع"
+     },
+     "def": {
+      "en": "{{ money.base_week }} {{ money.currency }}",
+      "fr": "{{ money.base_week }} {{ money.currency }}",
+      "ar": "{{ money.base_week }} {{ money.currency }}"
+     }
+    },
+    {
+     "term": {
+      "en": "α (progress weight)",
+      "fr": "α (poids de l’avancement)",
+      "ar": "α (وزن التقدّم)"
+     },
+     "def": {
+      "en": "{{ pricing.alpha }}",
+      "fr": "{{ pricing.alpha }}",
+      "ar": "{{ pricing.alpha }}"
+     }
+    },
+    {
+     "term": {
+      "en": "β (time weight)",
+      "fr": "β (poids du temps)",
+      "ar": "β (وزن الوقت)"
+     },
+     "def": {
+      "en": "{{ pricing.beta }}",
+      "fr": "{{ pricing.beta }}",
+      "ar": "{{ pricing.beta }}"
+     }
+    },
+    {
+     "term": {
+      "en": "k (progress exponent)",
+      "fr": "k (exposant de progression)",
+      "ar": "k (أسّ التقدّم)"
+     },
+     "def": {
+      "en": "{{ pricing.p_prog }}",
+      "fr": "{{ pricing.p_prog }}",
+      "ar": "{{ pricing.p_prog }}"
+     }
+    },
+    {
+     "term": {
+      "en": "m (time exponent)",
+      "fr": "m (exposant temporel)",
+      "ar": "m (أسّ الوقت)"
+     },
+     "def": {
+      "en": "{{ pricing.p_time }}",
+      "fr": "{{ pricing.p_time }}",
+      "ar": "{{ pricing.p_time }}"
+     }
+    },
+    {
+     "term": {
+      "en": "Cap",
+      "fr": "Plafond",
+      "ar": "السقف"
+     },
+     "def": {
+      "en": "{{ pricing.cap }}× base",
+      "fr": "{{ pricing.cap }}× base",
+      "ar": "{{ pricing.cap }}× الأساس"
+     }
+    },
+    {
+     "term": {
+      "en": "Clock",
+      "fr": "Horloge",
+      "ar": "الساعة"
+     },
+     "def": {
+      "en": "{{ dates.start }} to {{ dates.deadline }} (Africa/Tunis)",
+      "fr": "{{ dates.start }} au {{ dates.deadline }} (Africa/Tunis)",
+      "ar": "{{ dates.start }} إلى {{ dates.deadline }} (Africa/Tunis)"
+     }
+    }
+   ],
+   "lead": {
+    "en": "Changing any constant is a dated, logged event.",
+    "fr": "Tout changement de constante est un événement daté et consigné.",
+    "ar": "يُسجَّل تغيير أي ثابت بتاريخ وسجلّ."
+   }
+  },
+  {
+   "type": "prose",
+   "id": "pricing-why",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Why a rising price is fair, and what it is not",
+    "fr": "Pourquoi une hausse de prix est équitable, et ce qu’elle n’est pas",
+    "ar": "لماذا يُعدّ ارتفاع السعر منصفًا، وما الذي لا يعنيه"
+   },
+   "paragraphs": [
+    {
+     "en": "A rising price rewards earlier support: the first parts fund the hardest stage, when the programme has the least evidence. It is a declared curve, not a scarcity trick.",
+     "fr": "Une hausse de prix récompense les premiers soutiens : les premières parts financent l’étape la plus difficile, lorsque le programme dispose du moins d’éléments probants. Il s’agit d’une courbe déclarée, pas d’un stratagème fondé sur la rareté.",
+     "ar": "يكافئ ارتفاع السعر الداعمين الأوائل: إذ تموّل الوحدات الأولى المرحلة الأصعب، حين تكون أدلة البرنامج أقل ما تكون. إنه منحنى معلن، وليس حيلة لخلق شعور بالندرة."
+    },
+    {
+     "en": "It is also not a promise that the part will be worth more later. Parts carry no return, dividend or resale value.",
+     "fr": "Ce n’est pas non plus une promesse que la part vaudra davantage plus tard. Les parts ne donnent droit à aucun rendement, dividende ou valeur de revente.",
+     "ar": "ولا يُعدّ ذلك وعدًا بأن قيمة الوحدة سترتفع لاحقًا. لا تمنح الوحدات أي عائد أو توزيعات أرباح أو قيمة لإعادة البيع."
+    },
+    {
+     "en": "The same function is available as JSON at `/api/price.json`, so you can verify any quote independently.",
+     "fr": "La même fonction est disponible au format JSON à l’adresse `/api/price.json`, afin que vous puissiez vérifier chaque prix indicatif de manière indépendante.",
+     "ar": "تتوفر الدالة نفسها بصيغة JSON على `/api/price.json`، حتى تتمكن من التحقق من أي عرض سعر بشكل مستقل."
+    }
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the declared limits",
+      "fr": "Consulter les limites déclarées",
+      "ar": "اطّلع على الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "pricing-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Lock in today's unit price **with a daily schedule.**",
+    "fr": "Verrouillez le prix unitaire d’aujourd’hui **avec un échéancier quotidien.**",
+    "ar": "ثبّت سعر الوحدة اليوم **وفق جدول يومي.**"
+   },
+   "body": {
+    "en": "The schedule shows each day's forecast price. The price on the day is recomputed from the live function.",
+    "fr": "L’échéancier indique le prix prévisionnel de chaque jour. Le prix du jour est recalculé à partir de la fonction en vigueur.",
+    "ar": "يعرض الجدول السعر المتوقع لكل يوم. ويُعاد احتساب سعر اليوم وفق الدالة الحالية."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Start a daily subscription",
+      "fr": "Commencer un abonnement quotidien",
+      "ar": "ابدأ اشتراكًا يوميًا"
+     },
+     "href": "/subscription/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

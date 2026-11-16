@@ -1,0 +1,167 @@
+{
+ "slug": "pfm",
+ "id": 91,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Public Financial Management",
+  "fr": "Gestion des finances publiques",
+  "ar": "الإدارة المالية العامة"
+ },
+ "short": {
+  "en": "The service provides mTEF, cash management, internal audit.",
+  "fr": "Fiabiliser la programmation et le suivi budgétaires.",
+  "ar": "تحسين موثوقية البرمجة والمتابعة الميزانيتية."
+ },
+ "abstract": {
+  "en": "Public financial management — medium-term expenditure frameworks, cash management, and internal audit strengthening across government.",
+  "fr": "Gestion des finances publiques — cadres de dépenses à moyen terme, gestion de trésorerie et renforcement de l’audit interne au sein de l’administration publique.",
+  "ar": "الإدارة المالية العامة — أطر الإنفاق متوسطة الأجل، وإدارة النقد، وتعزيز التدقيق الداخلي على مستوى الحكومة."
+ },
+ "long": [
+  {
+   "en": "The Public Financial Management service organises a weekly work package around cash forecast reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 cash forecast reviews; 1000 expenditure control tests; 100 budget programme notes; 200 internal audit files. Public financial management — medium-term expenditure frameworks, cash management, and internal audit strengthening across government. Specialists sequence those methods against the accepted weekly package. The governing boundary is that public expenditure approvals remain statutory and commitments are distinguished from payments. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gestion des finances publiques organise un lot de travail hebdomadaire autour des examens des prévisions de trésorerie, au lieu de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens des prévisions de trésorerie ; 1000 tests de contrôle des dépenses ; 100 notes de programme budgétaire ; 200 dossiers d’audit interne. Gestion des finances publiques — cadres de dépenses à moyen terme, gestion de trésorerie et renforcement de l’audit interne au sein de l’administration publique. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle directrice est que les approbations des dépenses publiques restent régies par la loi et que les engagements sont distingués des paiements. Il s’agit de résultats échelonnés issus de dossiers confiés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة الإدارة المالية العامة حزمة عمل أسبوعية تتمحور حول مراجعات التنبؤات النقدية، بدلًا من اعتبار الحضور هو الناتج. وتبلغ الخطة التجريبية، عند توافر الطاقة الاستيعابية الكاملة والموارد اللازمة، 200 مراجعة للتنبؤات النقدية؛ و1000 اختبار لضوابط الإنفاق؛ و100 مذكرة للبرامج الموازنية؛ و200 ملف للتدقيق الداخلي. الإدارة المالية العامة — أطر الإنفاق متوسطة الأجل، وإدارة النقد، وتعزيز التدقيق الداخلي على مستوى الحكومة. ويرتّب الاختصاصيون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. ويقضي الحد الناظم بأن تظل الموافقات على الإنفاق العام خاضعة للأحكام القانونية، وأن تُميّز الالتزامات عن المدفوعات. وهذه مخرجات مرحلية من حالات مُكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `pfm`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of cash forecast reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, selon des comparaisons de l’enquête auprès des entreprises portant la mention 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut pas supposer qu’une offre de conseil dépourvue de ces utilisateurs améliorera une institution. Pour `pfm`, la réponse proposée est donc un processus de travail contractuel avec un bénéficiaire désigné et une définition acceptée des examens des prévisions de trésorerie, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة تحدد قصور مهارات القوى العاملة بوصفه قيدًا رئيسيًا، استنادًا إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفهما عاملين، وليس المشكلة مجرد نقص في التدريب. وتعتمد الفوائد على وجود صلاحيات مشروعة، وسجلات إدارية مشتركة، وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسّن مؤسسةً ما من دون هؤلاء المستخدمين. لذلك، فإن الاستجابة المقترحة لـ `pfm` هي سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لمراجعات التنبؤات النقدية، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the cash forecast reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks expenditure control tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted cash forecast reviews from rejected or deferred work and records blockers around budget programme notes. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens des prévisions de trésorerie ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les tests de contrôle des dépenses avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les examens des prévisions de trésorerie acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux notes de programme budgétaire. Les examens des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات التنبؤات النقدية؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من اختبارات ضوابط الإنفاق قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مراجعات التنبؤات النقدية المقبولة والأعمال المرفوضة أو المؤجلة، ويوثّق العوائق المتعلقة بمذكرات البرامج الموازنية. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "public finance, accounting, economics and audit",
+  "fr": "finances publiques, comptabilité, économie et audit",
+  "ar": "المالية العامة والمحاسبة والاقتصاد والتدقيق"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Cash forecast reviews",
+    "fr": "Examens des prévisions de trésorerie",
+    "ar": "مراجعات التنبؤات النقدية"
+   },
+   "unit": {
+    "en": "cash forecast reviews",
+    "fr": "examens des prévisions de trésorerie",
+    "ar": "مراجعات التنبؤات النقدية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Expenditure control tests",
+    "fr": "Tests de contrôle des dépenses",
+    "ar": "اختبارات ضوابط الإنفاق"
+   },
+   "unit": {
+    "en": "expenditure control tests",
+    "fr": "tests de contrôle des dépenses",
+    "ar": "اختبارات ضوابط الإنفاق"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Budget programme notes",
+    "fr": "Notes de programme budgétaire",
+    "ar": "مذكرات البرامج الموازنية"
+   },
+   "unit": {
+    "en": "budget programme notes",
+    "fr": "notes de programme budgétaire",
+    "ar": "مذكرات البرامج الموازنية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Internal audit files",
+    "fr": "Dossiers d’audit interne",
+    "ar": "ملفات التدقيق الداخلي"
+   },
+   "unit": {
+    "en": "internal audit files",
+    "fr": "dossiers d’audit interne",
+    "ar": "ملفات التدقيق الداخلي"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `pfm` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the cash forecast reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `pfm` lié à un dossier contient un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des documents sources et de consultation expurgés, établissant le lien entre les examens des prévisions de trésorerie et la source, le réviseur, la version, le registre des exceptions et l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `pfm` ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، تربط مراجعات التنبؤات النقدية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted cash forecast reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** remis ven. à 12:00 ; **≥2 examens des prévisions de trésorerie acceptés** par équipe-semaine, sous réserve de la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés/ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من مراجعات التنبؤات النقدية** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة والتسويات المقام المؤهل، كما تتغلب العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على أي تقييم أخضر. وهذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "public expenditure approvals remain statutory and commitments are distinguished from payments",
+  "fr": "les approbations des dépenses publiques restent régies par la loi et les engagements sont distingués des paiements",
+  "ar": "تظل الموافقات على الإنفاق العام خاضعة للأحكام القانونية، وتُميّز الالتزامات عن المدفوعات"
+ },
+ "depends": [
+  {
+   "slug": "real-estate",
+   "id": 45
+  },
+  {
+   "slug": "math-modelling",
+   "id": 72
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "affordable-housing",
+   "id": 27
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Optimistic forecasts conceal arrears → reconcile source records with the cash forecast reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des prévisions optimistes masquent des arriérés → rapprocher les données sources à l’aide de la liste de contrôle d’acceptation des revues des prévisions de trésorerie et attribuer la responsabilité des mesures correctives.",
+   "ar": "التوقعات المتفائلة تخفي المتأخرات → طابقوا السجلات المصدرية مع توقعات التدفقات النقدية، وراجعوا قائمة التحقق من القبول، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Off-budget liabilities omitted → reconcile source records with the cash forecast reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Engagements hors budget omis → rapprocher les données sources à l’aide de la liste de contrôle d’acceptation des revues des prévisions de trésorerie et attribuer la responsabilité des mesures correctives.",
+   "ar": "الالتزامات خارج الميزانية غير المدرجة → طابقوا السجلات المصدرية مع توقعات التدفقات النقدية، وراجعوا قائمة التحقق من القبول، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Audit independence compromised by reporting lines → reconcile source records with the cash forecast reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Indépendance de l’audit compromise par les liens hiérarchiques → rapprocher les données sources à l’aide de la liste de contrôle d’acceptation des revues des prévisions de trésorerie et attribuer la responsabilité des mesures correctives.",
+   "ar": "تضرر استقلالية التدقيق بسبب خطوط الإبلاغ → طابقوا السجلات المصدرية مع توقعات التدفقات النقدية، وراجعوا قائمة التحقق من القبول، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

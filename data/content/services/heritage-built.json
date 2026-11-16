@@ -1,0 +1,167 @@
+{
+ "slug": "heritage-built",
+ "id": 33,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Heritage Built Environment",
+  "fr": "Environnement bâti patrimonial",
+  "ar": "البيئة العمرانية التراثية"
+ },
+ "short": {
+  "en": "The service provides adaptive reuse, conservation engineering.",
+  "fr": "Adapter les bâtiments historiques sans les dénaturer.",
+  "ar": "تكييف المباني التاريخية دون تشويهها."
+ },
+ "abstract": {
+  "en": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works.",
+  "fr": "Travaux sur l’environnement bâti axés sur la conservation — réaffectation adaptative de structures historiques, ingénierie de la conservation structurelle et évaluation de l’impact patrimonial de nouvelles constructions.",
+  "ar": "أعمال في البيئة العمرانية تقودها مبادئ الحفاظ — إعادة الاستخدام التكيفي للهياكل التاريخية، والهندسة الإنشائية للحفاظ، وتقييم أثر الأعمال الجديدة على التراث."
+ },
+ "long": [
+  {
+   "en": "The Heritage Built Environment service organises a weekly work package around condition surveys, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 condition surveys; 100 adaptive reuse options; 200 conservation details; 100 heritage impact notes. Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works. Specialists sequence those methods against the accepted weekly package. The governing boundary is that structural interventions respect conservation consent and existing fabric. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Environnement bâti patrimonial organise un lot de travail hebdomadaire autour des relevés d’état, plutôt que de considérer la présence comme un résultat en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 relevés d’état ; 100 options de réaffectation adaptative ; 200 détails de conservation ; 100 notes d’impact patrimonial. Travaux sur l’environnement bâti axés sur la conservation — réaffectation adaptative de structures historiques, ingénierie de la conservation structurelle et évaluation de l’impact patrimonial de nouvelles constructions. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les interventions structurelles respectent les autorisations de conservation et le bâti existant. Il s’agit de résultats échelonnés issus de dossiers commandés, et non d’une promesse d’achever chaque semaine l’intégralité d’un programme national.",
+   "ar": "تنظّم خدمة البيئة العمرانية التراثية حزمة عمل أسبوعية تتمحور حول مسوحات الحالة، بدلًا من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة والمموّلة، تتضمن خطتها التجريبية 300 مسح للحالة؛ و100 خيار لإعادة الاستخدام التكيفي؛ و200 تفصيل للحفاظ؛ و100 مذكرة عن الأثر على التراث. أعمال في البيئة العمرانية تقودها مبادئ الحفاظ — إعادة الاستخدام التكيفي للهياكل التاريخية، والهندسة الإنشائية للحفاظ، وتقييم أثر الأعمال الجديدة على التراث. ويرتب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المقبولة. والضابط الأساسي هو أن تحترم التدخلات الإنشائية موافقات الحفاظ والنسيج القائم. وهذه مخرجات مرحلية ناتجة عن حالات مُكلّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `heritage-built`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of condition surveys, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève la concentration sur le littoral, le coût du logement et les obstacles liés aux transports parmi les contraintes qui compliquent la mise en correspondance des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures tributaires des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets implique plusieurs propriétaires d’actifs, l’accès local et les règles de passation des marchés ; des travaux techniquement viables peuvent donc rester fragmentés tant qu’un client habilité ne les commande pas. Pour `heritage-built`, la réponse proposée est ainsi un processus contractuel avec un bénéficiaire désigné et une définition acceptée des relevés d’état, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يشير مسح تونس الذي أجرته OECD في أبريل 2022 إلى تركز الأنشطة على الساحل، وتكاليف الإسكان، ومعوقات النقل بوصفها قيودًا على مواءمة ذوي المهارات مع فرص العمل. كما يشير CCDR الصادر في نوفمبر 2023 إلى احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تحصي أي من النتيجتين الوظائف التي كُلّفت بها هذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول، وإمكانية الوصول المحلي، والمشتريات؛ لذا قد يظل العمل القابل للتنفيذ من الناحية الفنية مجزّأً إلى أن يكلّف به عميلٌ بموجب الأصول القانونية. لذلك، يتمثل النهج المقترح لـ `heritage-built` في سير عمل تعاقدي له مستفيد محدد وتعريف مقبول لمسوح الحالة، لا في توظيف تبرره حصريًا نسبة البطالة الوطنية."
+  },
+  {
+   "en": "A service leader sets the condition surveys acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks adaptive reuse options before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted condition surveys from rejected or deferred work and records blockers around conservation details. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des relevés d’état ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent examine les options de réaffectation adaptative avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les relevés d’état acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux détails de conservation. Les revues des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول مسوح الحالة؛ ويحوّل 100 مدير هذا المعيار إلى مهام موزعة على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص خيارات إعادة الاستخدام التكيفي قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مسوح الحالة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتفاصيل الحفاظ. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Condition surveys",
+    "fr": "Relevés d’état",
+    "ar": "مسوح الحالة"
+   },
+   "unit": {
+    "en": "condition surveys",
+    "fr": "relevés d’état",
+    "ar": "مسوح الحالة"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Adaptive reuse options",
+    "fr": "Options de réaffectation adaptative",
+    "ar": "خيارات إعادة الاستخدام التكيفي"
+   },
+   "unit": {
+    "en": "adaptive reuse options",
+    "fr": "options de réaffectation adaptative",
+    "ar": "خيارات إعادة الاستخدام التكيفي"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Conservation details",
+    "fr": "Détails de conservation",
+    "ar": "تفاصيل الحفاظ"
+   },
+   "unit": {
+    "en": "conservation details",
+    "fr": "détails de conservation",
+    "ar": "تفاصيل الحفاظ"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Heritage impact notes",
+    "fr": "Notes d’impact patrimonial",
+    "ar": "مذكرات عن الأثر على التراث"
+   },
+   "unit": {
+    "en": "heritage impact notes",
+    "fr": "notes d’impact patrimonial",
+    "ar": "مذكرات عن الأثر على التراث"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `heritage-built` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + TIFF/3D or material-test source files as applicable, linking the condition surveys to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `heritage-built` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + les fichiers sources TIFF/3D ou les fichiers des essais de matériaux, selon le cas ; il relie les relevés d’état à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `heritage-built` ملف PDF/A لملف القبول + بيانًا بالمصادر بصيغة CSV/JSON + ملفات مصدر بصيغة TIFF/3D أو ملفات اختبارات المواد حسب الاقتضاء، مع ربط مسوح الحالة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted condition surveys** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici vendredi 12:00 ; **≥3 relevés d’état acceptés** par équipe-semaine, selon la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **≥3 مسوح حالة مقبولة** لكل فريق-أسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات أو التعديلات المعتمدة المقامَ المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتجاوز أثر النتيجة الخضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "structural interventions respect conservation consent and existing fabric",
+  "fr": "les interventions structurelles respectent les exigences de conservation, le consentement et le bâti existant",
+  "ar": "تحترم التدخلات الإنشائية متطلبات صون التراث وموافقة المعنيين والعناصر المادية القائمة"
+ },
+ "depends": [
+  {
+   "slug": "heritage-digitisation",
+   "id": 1
+  },
+  {
+   "slug": "heritage-conservation",
+   "id": 25
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "eia",
+   "id": 78
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Modern strengthening damages historic fabric → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Le renforcement moderne endommage le bâti historique → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "قد تؤدي أعمال التدعيم الحديثة إلى إتلاف العناصر التاريخية القائمة → اشترط اعتماد السلامة من جهة مختصة، وإجراء تجارب مضبوطة، وتحديد محفّز موثّق لإيقاف العمل."
+  },
+  {
+   "en": "New use excludes local occupants → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les nouveaux usages excluent les occupants locaux → inclure l’examen par les personnes concernées, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "قد يستبعد الاستخدام الجديد الشاغلين المحليين → أدرج مراجعة من المستخدمين المتأثرين، وانشر الافتراضات التي يستند إليها الاختيار، وأبقِ آلية للشكاوى."
+  },
+  {
+   "en": "Missing surveys conceal structural risk → reconcile source records with the condition surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’absence de relevés dissimule des risques structurels → rapprocher les dossiers sources des relevés d’état, de la liste de contrôle d’acceptation et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد تحجب المسوحات الناقصة المخاطر الإنشائية → طابق السجلات المرجعية مع قوائم التحقق من مسوحات الحالة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

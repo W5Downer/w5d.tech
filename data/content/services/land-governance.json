@@ -1,0 +1,167 @@
+{
+ "slug": "land-governance",
+ "id": 34,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Land-Use & Property Governance",
+  "fr": "Gouvernance foncière et immobilière",
+  "ar": "حوكمة استخدام الأراضي والملكية"
+ },
+ "short": {
+  "en": "The service provides cadastre, titling, dispute resolution.",
+  "fr": "Clarifier les parcelles et les droits d'usage.",
+  "ar": "توضيح القطع العقارية وحقوق الانتفاع."
+ },
+ "abstract": {
+  "en": "Land-use governance — cadastral mapping, property titling, land dispute resolution frameworks, and public registries for transparent land administration.",
+  "fr": "Gouvernance foncière — cartographie cadastrale, titrage foncier, cadres de résolution des litiges fonciers et registres publics au service d’une administration foncière transparente.",
+  "ar": "حوكمة استخدام الأراضي — رسم الخرائط المساحية، وتسجيل الملكية، وأطر تسوية النزاعات على الأراضي، والسجلات العامة لإدارة الأراضي بشفافية."
+ },
+ "long": [
+  {
+   "en": "The Land-Use & Property Governance service organises a weekly work package around parcel survey files, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 parcel survey files; 500 tenure evidence packs; 200 dispute referral files; 100 registry reconciliation notes. Land-use governance — cadastral mapping, property titling, land dispute resolution frameworks, and public registries for transparent land administration. Specialists sequence those methods against the accepted weekly package. The governing boundary is that field parcel evidence does not itself confer or extinguish legal title. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gouvernance foncière et immobilière organise un lot de travaux hebdomadaire autour des dossiers de levés parcellaires, plutôt que de considérer la présence comme un résultat. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 dossiers de levés parcellaires ; 500 dossiers de preuves des droits fonciers ; 200 dossiers de saisine pour litiges ; 100 notes de rapprochement du registre. Gouvernance foncière — cartographie cadastrale, titrage foncier, cadres de résolution des litiges fonciers et registres publics au service d’une administration foncière transparente. Les spécialistes ordonnancent ces méthodes en fonction du lot hebdomadaire accepté. La limite à respecter est que les éléments de preuve issus des levés parcellaires sur le terrain ne confèrent ni n’éteignent en soi un titre juridique. Il s’agit de résultats échelonnés issus de dossiers faisant l’objet d’un mandat, et non d’une promesse de mener à bien chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة حوكمة استخدام الأراضي والملكية حزمة عمل أسبوعية تتمحور حول ملفات مسح القطع، بدلاً من اعتبار الحضور ناتجاً بحد ذاته. وتبلغ الخطة التجريبية، عند بلوغ كامل الطاقة المزوّدة بالموارد، 2000 ملف مسح قطع؛ و500 حزمة أدلة حيازة؛ و200 ملف إحالة نزاع؛ و100 مذكرة مطابقة للسجل. حوكمة استخدام الأراضي — رسم الخرائط المساحية، وتسجيل الملكية، وأطر تسوية النزاعات على الأراضي، والسجلات العامة لإدارة الأراضي بشفافية. ويرتّب الأخصائيون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المقبولة. والحدّ الحاكم هنا هو أن أدلة القطع الميدانية لا تمنح سند الملكية القانوني ولا تسقطه بحد ذاتها. وهذه مخرجات مرحلية من حالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `land-governance`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of parcel survey files, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports freinent la mise en adéquation des personnes qualifiées avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures dépendant des investissements ; aucune de ces constatations ne dénombre les postes faisant l’objet d’un mandat pour ce service. La préparation des projets touche à la propriété des actifs, à l’accès local et aux règles de passation des marchés ; ainsi, des travaux viables sur le plan technique peuvent rester fragmentés tant qu’un client ne les a pas commandés dans un cadre légal. Pour `land-governance`, la réponse proposée est donc un processus de travail contractuel, avec un bénéficiaire désigné et une définition acceptée des dossiers de levés parcellaires, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير دراسة OECD عن تونس الصادرة في أبريل 2022 إلى تركز الأنشطة على الساحل، وتكاليف الإسكان، والعوائق المتعلقة بالنقل، بوصفها قيوداً على مواءمة ذوي المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تمثل أي من النتيجتين إحصاءً للوظائف المكلّف بها في هذه الخدمة. ويتجاوز إعداد المشاريع حدود ملكية الأصول، وإمكانية الوصول المحلي، والمشتريات، ولذلك قد يظل العمل المجدي من الناحية التقنية مجزّأً إلى أن يكلّف به عميل مخوّل قانوناً. لذا، فإن الاستجابة المقترحة لـ `land-governance` هي سير عمل تعاقدي، بمستفيد محدد وتعريف مقبول لملفات مسح القطع، لا توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the parcel survey files acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks tenure evidence packs before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted parcel survey files from rejected or deferred work and records blockers around dispute referral files. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des dossiers de levés parcellaires ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de preuves des droits fonciers avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments de preuve sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. Le bilan consolidé du service distingue les dossiers de levés parcellaires acceptés des travaux rejetés ou reportés et consigne les blocages concernant les dossiers de saisine pour litiges. Les revues des responsables de pôles coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول ملفات مسح القطع؛ ويترجمها 100 مدير إلى مهام فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، بينما يتحقق مراجع مختص من حزم أدلة الحيازة قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين ملفات مسح القطع المقبولة والعمل المرفوض أو المؤجل، ويسجّل العوائق المتعلقة بملفات إحالة النزاعات. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "surveying, land administration, geography and property law",
+  "fr": "arpentage, administration foncière, géographie et droit immobilier",
+  "ar": "المساحة وإدارة الأراضي والجغرافيا وقانون الملكية"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Parcel survey files",
+    "fr": "Dossiers de levés parcellaires",
+    "ar": "ملفات مسح القطع"
+   },
+   "unit": {
+    "en": "parcel survey files",
+    "fr": "dossiers de levés parcellaires",
+    "ar": "ملفات مسح القطع"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Tenure evidence packs",
+    "fr": "Dossiers de preuves des droits fonciers",
+    "ar": "حزم أدلة الحيازة"
+   },
+   "unit": {
+    "en": "tenure evidence packs",
+    "fr": "dossiers de preuves des droits fonciers",
+    "ar": "حزم أدلة الحيازة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Dispute referral files",
+    "fr": "Dossiers de saisine pour litiges",
+    "ar": "ملفات إحالة النزاعات"
+   },
+   "unit": {
+    "en": "dispute referral files",
+    "fr": "dossiers de saisine pour litiges",
+    "ar": "ملفات إحالة النزاعات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Registry reconciliation notes",
+    "fr": "Notes de rapprochement du registre",
+    "ar": "مذكرات مطابقة السجل"
+   },
+   "unit": {
+    "en": "registry reconciliation notes",
+    "fr": "notes de rapprochement du registre",
+    "ar": "مذكرات مطابقة السجل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `land-governance` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the parcel survey files to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `land-governance` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/de photos ou de conception géoréférencés, reliant les dossiers de levés parcellaires à leur source, leur réviseur, leur version, leur journal des exceptions et leur autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `land-governance` ملف قبول بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + ملفات معاينة/صور أو تصميم ذات إسناد جغرافي، وتربط ملفات مسح القطع بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted parcel survey files** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis ven. 12:00 ; **≥16 dossiers de levés parcellaires acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés/ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥16 ملف مسح قطع** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل لأسباب متعلقة بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات/التعديلات المعتمدة مقام العدد المؤهل، كما تتغلب عيوب السلامة/الخصوصية الحرجة على التقييم الأخضر. وهذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "field parcel evidence does not itself confer or extinguish legal title",
+  "fr": "les éléments de preuve issus des levés parcellaires sur le terrain ne confèrent ni n’éteignent en soi un titre juridique",
+  "ar": "الأدلة الميدانية للقطع لا تمنح سند الملكية القانوني ولا تسقطه بحد ذاتها"
+ },
+ "depends": [
+  {
+   "slug": "land-cadastre",
+   "id": 95
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "official-stats",
+   "id": 100
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Survey boundaries inflame disputes → reconcile source records with the parcel survey files acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les limites des levés parcellaires attisent les litiges → recoupez les documents sources avec la liste de contrôle d’acceptation des dossiers de levés parcellaires et attribuez la responsabilité des mesures correctives.",
+   "ar": "تؤجّج حدود المسح النزاعات → طابِق سجلات المصدر مع قائمة التحقق الخاصة بقبول ملفات مسح القطع، وأسند مسؤولية الإجراءات التصحيحية."
+  },
+  {
+   "en": "Informal occupants disappear from records → reconcile source records with the parcel survey files acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les occupants informels disparaissent des registres → rapprochez les registres sources de la liste de contrôle d’acceptation des fichiers de levé parcellaire et attribuez la responsabilité des mesures correctives.",
+   "ar": "يختفي الشاغلون غير الرسميين من السجلات → طابقوا السجلات المصدرية مع قائمة التحقق من قبول ملفات مسح القطع، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unauthorised disclosure exposes ownership data → document permissions and obtain qualified rights review before release.",
+   "fr": "Une divulgation non autorisée expose les données de propriété → documentez les autorisations et obtenez un examen des droits par une personne qualifiée avant toute diffusion.",
+   "ar": "يكشف الإفصاح غير المصرح به بيانات الملكية → وثّقوا الأذونات واحصلوا على مراجعة مختصة للحقوق قبل النشر."
+  }
+ ]
+}

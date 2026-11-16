@@ -1,0 +1,167 @@
+{
+ "slug": "forensics",
+ "id": 70,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Forensic Science Support",
+  "fr": "Appui en criminalistique",
+  "ar": "دعم علوم الأدلة الجنائية"
+ },
+ "short": {
+  "en": "The service provides dNA, ballistics, digital forensics.",
+  "fr": "Soutenir des expertises judiciaires traçables.",
+  "ar": "دعم خبرات قضائية قابلة للتتبع."
+ },
+ "abstract": {
+  "en": "Forensic science support — DNA analysis, ballistics, digital forensics, and quality-management frameworks aligned with international forensic standards.",
+  "fr": "Appui en criminalistique — analyse ADN, balistique, criminalistique numérique et cadres de gestion de la qualité alignés sur les normes internationales de criminalistique.",
+  "ar": "دعم علوم الأدلة الجنائية — تحليل الحمض النووي، والمقذوفات، والأدلة الجنائية الرقمية، وأطر إدارة الجودة المتوافقة مع المعايير الدولية للأدلة الجنائية."
+ },
+ "long": [
+  {
+   "en": "The Forensic Science Support service organises a weekly work package around custody audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 custody audits; 200 method validation runs; 100 authorised case support files; 200 quality assurance reviews. Forensic science support — DNA analysis, ballistics, digital forensics, and quality-management frameworks aligned with international forensic standards. Specialists sequence those methods against the accepted weekly package. The governing boundary is that casework is performed only under competent judicial authority and laboratory scope. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’appui en criminalistique organise un lot de travail hebdomadaire autour des audits de chaîne de conservation, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 audits de chaîne de conservation ; 200 essais de validation de méthodes ; 100 dossiers d’appui autorisé aux cas ; 200 revues d’assurance qualité. Appui en criminalistique — analyse ADN, balistique, criminalistique numérique et cadres de gestion de la qualité alignés sur les normes internationales de criminalistique. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite de référence est que les travaux sur les cas ne sont effectués que sous l’autorité judiciaire compétente et dans le cadre du champ d’accréditation du laboratoire. Il s’agit de résultats échelonnés issus des cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة دعم علوم الأدلة الجنائية حزمة عمل أسبوعية تتمحور حول تدقيقات سلسلة الحيازة، بدلًا من اعتبار الحضور هو المنتج. وتبلغ خطة الخدمة التجريبية، عند العمل بكامل الطاقة الاستيعابية المزوّدة بالموارد، 500 تدقيق لسلسلة الحيازة؛ و200 عملية للتحقق من صحة الطرق؛ و100 ملف دعم لقضايا معتمدة؛ و200 مراجعة لضمان الجودة. دعم علوم الأدلة الجنائية — تحليل الحمض النووي، والمقذوفات، والأدلة الجنائية الرقمية، وأطر إدارة الجودة المتوافقة مع المعايير الدولية للأدلة الجنائية. ويحدد المتخصصون تسلسل هذه الطرق وفق حزمة العمل الأسبوعية المعتمدة. ويقضي الحد الحاكم بأن تُنفذ أعمال القضايا بموجب سلطة قضائية مختصة وضمن نطاق المختبر فقط. وهذه مخرجات مرحلية لقضايا مُسندة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `forensics`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of custody audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015 et 2020, tandis que l’INS estime le chômage des diplômés à 26.6% au Q2 2026. Ces populations différentes montrent pourquoi la disponibilité générale des diplômés ne peut se substituer à des compétences vérifiées en santé. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre non agréé. Pour `forensics`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des audits de chaîne de conservation, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، بينما يقدّر INS معدل بطالة الخريجين بـ26.6% في Q2 2026. وتُظهر هذه الفئات السكانية المختلفة سبب عدم صلاحية توافر الخريجين عمومًا بديلًا عن القدرات الصحية التي جرى التحقق منها. يحتاج مستخدمو البحوث الصحية والمعدات إلى موظفين مؤهلين، وموافقة، ومعلومات آمنة، ومرافق معتمدة، لا إلى مجموعة عمالة غير مرخصة. لذا فإن الاستجابة المقترحة في مجال `forensics` هي سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لتدقيقات سلسلة الحيازة، لا توظيف يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the custody audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks method validation runs before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted custody audits from rejected or deferred work and records blockers around authorised case support files. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits de chaîne de conservation ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon désignent les contributeurs responsables, tandis qu’un réviseur compétent vérifie les essais de validation de méthodes avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants à la source et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les audits de chaîne de conservation acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux dossiers d’appui autorisé aux cas. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات سلسلة الحيازة؛ ويحوّلها 100 مدير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، بينما يتحقق مراجع مختص من عمليات التحقق من صحة الطرق قبل اعتمادها. وتعيد مراجعة عشوائية مقترحة بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين تدقيقات سلسلة الحيازة المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بملفات دعم القضايا المعتمدة. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "forensic science, biology, analytical chemistry and authorised digital forensics",
+  "fr": "criminalistique, biologie, chimie analytique et criminalistique numérique autorisée",
+  "ar": "علوم الأدلة الجنائية، وعلم الأحياء، والكيمياء التحليلية، والأدلة الجنائية الرقمية المعتمدة"
+ },
+ "diploma": "maîtrise | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Custody audits",
+    "fr": "Audits de chaîne de conservation",
+    "ar": "تدقيقات سلسلة الحيازة"
+   },
+   "unit": {
+    "en": "custody audits",
+    "fr": "audits de chaîne de conservation",
+    "ar": "تدقيقات سلسلة الحيازة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Method validation runs",
+    "fr": "Essais de validation de méthodes",
+    "ar": "عمليات التحقق من صحة الطرق"
+   },
+   "unit": {
+    "en": "method validation runs",
+    "fr": "essais de validation de méthodes",
+    "ar": "عمليات التحقق من صحة الطرق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Authorised case support files",
+    "fr": "Dossiers d’appui autorisé aux cas",
+    "ar": "ملفات دعم القضايا المعتمدة"
+   },
+   "unit": {
+    "en": "authorised case support files",
+    "fr": "dossiers d’appui autorisé aux cas",
+    "ar": "ملفات دعم القضايا المعتمدة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Quality assurance reviews",
+    "fr": "Examens d’assurance qualité",
+    "ar": "مراجعات ضمان الجودة"
+   },
+   "unit": {
+    "en": "quality assurance reviews",
+    "fr": "revues d’assurance qualité",
+    "ar": "مراجعات ضمان الجودة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `forensics` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the custody audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de validation de `forensics` lié à une affaire contient un dossier de réception PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les audits de la chaîne de conservation à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `forensics` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، بما يربط عمليات تدقيق سلسلة الحيازة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted custody audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard le vendredi à 12:00 ; **≥4 audits de chaîne de conservation acceptés** par équipe et par semaine, sous réserve de la complexité des affaires ; **≤1 demande de reprise liée aux éléments de preuve** par équipe et par semaine. Les congés autorisés et les ajustements modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥4 عمليات تدقيق مقبولة لسلسلة الحيازة** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، بينما تتجاوز عيوب السلامة/الخصوصية الحرجة التقييم الأخضر. هذه أهداف تجريبية، وليست حدودًا مقررة في README."
+ },
+ "boundary": {
+  "en": "casework is performed only under competent judicial authority and laboratory scope",
+  "fr": "les travaux sur les affaires ne sont réalisés que sous l’autorité judiciaire compétente et dans le périmètre du laboratoire",
+  "ar": "لا يُنفّذ العمل على الحالات إلا بموجب سلطة قضائية مختصة وضمن نطاق عمل المختبر"
+ },
+ "depends": [
+  {
+   "slug": "rule-of-law",
+   "id": 86
+  },
+  {
+   "slug": "cybersecurity",
+   "id": 106
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "security-governance",
+   "id": 96
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Broken custody makes evidence unusable → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Une chaîne de conservation rompue rend les éléments de preuve inutilisables → refaire les contrôles critiques à partir de références traçables et mettre les résultats invalides en quarantaine.",
+   "ar": "يؤدي انقطاع سلسلة الحيازة إلى جعل الأدلة غير صالحة للاستخدام → أعد إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Analysts overstate match certainty → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les analystes surestiment la certitude d’une correspondance → exiger des vérifications indépendantes des sources, un élément de comparaison et une incertitude explicitée avant acceptation.",
+   "ar": "يبالغ المحللون في تقدير درجة اليقين بشأن التطابق → اشترط إجراء فحوص مستقلة للمصدر، واستخدام عنصر للمقارنة، والتصريح بوضوح عن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Sensitive case data leaks to unauthorised users → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Des données sensibles liées à une affaire sont divulguées à des utilisateurs non autorisés → limiter les accès, caviarder les éléments de preuve communiqués et tester le processus d’accès restreint.",
+   "ar": "تتسرب بيانات الحالات الحساسة إلى مستخدمين غير مخولين → قلّل نطاق الوصول، واحجب الأدلة التي يجري الإفصاح عنها، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

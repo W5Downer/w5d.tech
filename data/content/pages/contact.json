@@ -1,0 +1,247 @@
+{
+ "slug": "contact",
+ "title": {
+  "en": "Contact — write to the right desk",
+  "fr": "Contact — écrivez au bon service",
+  "ar": "تواصل — اكتب إلى القسم المناسب"
+ },
+ "description": {
+  "en": "Contact desks: investors, managers, partners, press, corrections.",
+  "fr": "Services de contact : investisseurs, dirigeants, partenaires, presse, corrections.",
+  "ar": "أقسام التواصل: المستثمرون، والمديرون، والشركاء، والصحافة، والتصحيحات."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "con-hero",
+   "variant": "classic",
+   "gradient": "warm",
+   "title": {
+    "en": "Write to the **right desk.**",
+    "fr": "Écrivez au **bon service.**",
+    "ar": "اكتب إلى **القسم المناسب.**"
+   },
+   "lead": {
+    "en": "Pick a desk so the right person answers. Investors and manager candidates get a reply within five working days.",
+    "fr": "Choisissez un service pour recevoir une réponse de la bonne personne. Les investisseurs et les candidats à des postes de direction reçoivent une réponse sous cinq jours ouvrés.",
+    "ar": "اختر قسمًا ليجيبك الشخص المناسب. يتلقى المستثمرون والمرشحون لمناصب إدارية ردًا خلال خمسة أيام عمل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open the form",
+      "fr": "Ouvrir le formulaire",
+      "ar": "افتح النموذج"
+     },
+     "href": "#con-form",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Contact",
+    "fr": "Contact",
+    "ar": "اتصل بنا"
+   }
+  },
+  {
+   "type": "contact-desks",
+   "id": "con-desks",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Desks",
+    "fr": "Services",
+    "ar": "الأقسام"
+   },
+   "items": [
+    {
+     "icon": "coins",
+     "title": {
+      "en": "Investors",
+      "fr": "Investisseurs",
+      "ar": "المستثمرون"
+     },
+     "body": {
+      "en": "Dossier, schedule and legal questions.",
+      "fr": "Dossier, calendrier et questions juridiques.",
+      "ar": "الملف والجدول الزمني والأسئلة القانونية."
+     },
+     "href": "/contact/?desk=investors"
+    },
+    {
+     "icon": "users",
+     "title": {
+      "en": "Managers",
+      "fr": "Responsables",
+      "ar": "المديرون"
+     },
+     "body": {
+      "en": "Application status and scoring.",
+      "fr": "État d’avancement des candidatures et évaluation.",
+      "ar": "حالة الطلب والتقييم."
+     },
+     "href": "/careers/managers/"
+    },
+    {
+     "icon": "handshake",
+     "title": {
+      "en": "Partners",
+      "fr": "Partenaires",
+      "ar": "الشركاء"
+     },
+     "body": {
+      "en": "Scoping a delivery.",
+      "fr": "Cadrage d’une prestation.",
+      "ar": "تحديد نطاق التنفيذ."
+     },
+     "href": "/contact/?desk=partners"
+    },
+    {
+     "icon": "newspaper",
+     "title": {
+      "en": "Press",
+      "fr": "Presse",
+      "ar": "الصحافة"
+     },
+     "body": {
+      "en": "Facts, dates, figures.",
+      "fr": "Des faits, des dates, des chiffres.",
+      "ar": "الحقائق والتواريخ والأرقام."
+     },
+     "href": "/contact/?desk=press"
+    },
+    {
+     "icon": "file-pen",
+     "title": {
+      "en": "Corrections",
+      "fr": "Corrections",
+      "ar": "التصحيحات"
+     },
+     "body": {
+      "en": "Report an error. Answered in 14 days.",
+      "fr": "Signaler une erreur. Réponse sous 14 jours.",
+      "ar": "أبلغ عن خطأ. نرد خلال 14 يومًا."
+     },
+     "href": "/trust/corrections/"
+    },
+    {
+     "icon": "mail",
+     "title": {
+      "en": "Direct",
+      "fr": "Contact direct",
+      "ar": "مباشر"
+     },
+     "body": {
+      "en": "{{ investor.contact }}",
+      "fr": "{{ investor.contact }}",
+      "ar": "{{ investor.contact }}"
+     },
+     "href": "mailto:{{ investor.contact }}"
+    }
+   ]
+  },
+  {
+   "type": "form",
+   "id": "con-form",
+   "tier": "e",
+   "focus": 4,
+   "action": "/contact/",
+   "title": {
+    "en": "Your message",
+    "fr": "Votre message",
+    "ar": "رسالتك"
+   },
+   "submit": {
+    "en": "Send",
+    "fr": "Envoyer",
+    "ar": "إرسال"
+   },
+   "fields": [
+    {
+     "name": "name",
+     "label": {
+      "en": "Full name",
+      "fr": "Nom complet",
+      "ar": "الاسم الكامل"
+     },
+     "type": "text",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "email",
+     "label": {
+      "en": "Email",
+      "fr": "E-mail",
+      "ar": "البريد الإلكتروني"
+     },
+     "type": "email",
+     "required": true,
+     "span": 1
+    },
+    {
+     "name": "desk",
+     "label": {
+      "en": "Desk",
+      "fr": "Assistance",
+      "ar": "مكتب"
+     },
+     "type": "select",
+     "required": true,
+     "span": 1,
+     "options": {
+      "investors": {
+       "en": "Investors",
+       "fr": "Investisseurs",
+       "ar": "المستثمرون"
+      },
+      "managers": {
+       "en": "Managers",
+       "fr": "Responsables",
+       "ar": "المديرون"
+      },
+      "partners": {
+       "en": "Partners",
+       "fr": "Partenaires",
+       "ar": "الشركاء"
+      },
+      "press": {
+       "en": "Press",
+       "fr": "Presse",
+       "ar": "الصحافة"
+      },
+      "general": {
+       "en": "General",
+       "fr": "Général",
+       "ar": "عام"
+      }
+     }
+    },
+    {
+     "name": "subject",
+     "label": {
+      "en": "Subject",
+      "fr": "Objet",
+      "ar": "الموضوع"
+     },
+     "type": "text",
+     "required": false,
+     "span": 1
+    },
+    {
+     "name": "message",
+     "label": {
+      "en": "Message",
+      "fr": "Message",
+      "ar": "الرسالة"
+     },
+     "type": "textarea",
+     "required": true,
+     "span": 2,
+     "rows": 6
+    }
+   ]
+  }
+ ]
+}

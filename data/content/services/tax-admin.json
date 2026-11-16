@@ -1,0 +1,167 @@
+{
+ "slug": "tax-admin",
+ "id": 87,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Tax Administration Modernisation",
+  "fr": "Modernisation de l'administration fiscale",
+  "ar": "تحديث الإدارة الضريبية"
+ },
+ "short": {
+  "en": "The service provides filing, risk scoring, taxpayer services.",
+  "fr": "Simplifier les démarches fiscales sous contrôle légal.",
+  "ar": "تبسيط الإجراءات الجبائية تحت رقابة قانونية."
+ },
+ "abstract": {
+  "en": "Tax administration modernisation — electronic filing, risk scoring, and taxpayer services that reduce compliance cost while raising revenue integrity.",
+  "fr": "Modernisation de l'administration fiscale — dépôt électronique, notation des risques et services aux contribuables qui réduisent les coûts de conformité tout en renforçant l'intégrité des recettes.",
+  "ar": "تحديث الإدارة الضريبية — الإيداع الإلكتروني، وتقييم المخاطر، وخدمات دافعي الضرائب التي تخفض كلفة الامتثال مع تعزيز نزاهة الإيرادات."
+ },
+ "long": [
+  {
+   "en": "The Tax Administration Modernisation service organises a weekly work package around taxpayer journey reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 taxpayer journey reviews; 1000 filing test cases; 100 risk model assessments; 200 plain language guidance notes. Tax administration modernisation — electronic filing, risk scoring, and taxpayer services that reduce compliance cost while raising revenue integrity. Specialists sequence those methods against the accepted weekly package. The governing boundary is that risk scoring is advisory and cannot override lawful taxpayer rights. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de modernisation de l'administration fiscale organise un lot de travail hebdomadaire autour de l'examen des parcours des contribuables, plutôt que de considérer la présence comme un résultat en soi. À pleine capacité dotée des ressources nécessaires, son plan pilote prévoit 200 examens de parcours des contribuables ; 1000 cas de test de dépôt ; 100 évaluations de modèles de risque ; 200 notes d'orientation en langage clair. Modernisation de l'administration fiscale — dépôt électronique, notation des risques et services aux contribuables qui réduisent les coûts de conformité tout en renforçant l'intégrité des recettes. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La limite de principe est que la notation des risques est consultative et ne peut prévaloir sur les droits légaux des contribuables. Il s'agit de résultats échelonnés issus de cas commandés, et non d'une promesse de mener à bien chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة تحديث الإدارة الضريبية حزمة عمل أسبوعية حول مراجعات رحلة دافعي الضرائب، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند التشغيل بكامل الطاقة والموارد، 200 مراجعة لرحلة دافعي الضرائب؛ و1000 حالة اختبار للإيداع؛ و100 تقييم لنماذج المخاطر؛ و200 مذكرة إرشادية بلغة واضحة. تحديث الإدارة الضريبية — الإيداع الإلكتروني، وتقييم المخاطر، وخدمات دافعي الضرائب التي تخفض كلفة الامتثال مع تعزيز نزاهة الإيرادات. وينسق الاختصاصيون هذه الأساليب مع حزمة العمل الأسبوعية المعتمدة. والحدّ الناظم هو أن تقييم المخاطر استشاري ولا يجوز له تجاوز الحقوق القانونية لدافعي الضرائب. هذه مخرجات مرحلية لحالات مُسندة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `tax-admin`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of taxpayer journey reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L'examen de l'OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent l'insuffisance des compétences de la main-d'œuvre comme une contrainte majeure, sur la base de comparaisons des enquêtes auprès des entreprises portant la mention 2020 ou dernière année disponible. L'analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu'un problème relevant uniquement de la formation. Les bénéfices dépendent d'une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu'un produit consultatif améliore une institution sans ces utilisateurs. Pour `tax-admin`, la réponse proposée consiste donc en un processus contractuel avec un bénéficiaire désigné et une définition acceptée des examens de parcours des contribuables, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تفيد مراجعة OECD الصادرة في يونيو 2024 بأن نحو 40% من الشركات التونسية المشمولة تعتبر قصور مهارات القوى العاملة عائقًا رئيسيًا، استنادًا إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث سنة متاحة. كما يشير التحليل القانوني الذي أعده Kotrane في 2024 إلى ندرة الوظائف الرسمية والقيود المؤسسية، لا إلى مشكلة تدريب فحسب. وتعتمد الفوائد على وجود سلطة مشروعة وسجلات إدارية مشتركة ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجًا استشاريًا سيحسّن مؤسسة من دون وجود مستخدمين له فيها. لذلك، يتمثل الرد المقترح ضمن `tax-admin` في سير عمل تعاقدي يحدد جهة مستفيدة وتعريفًا معتمدًا لمراجعات رحلة دافعي الضرائب، لا في التوظيف الذي يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the taxpayer journey reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks filing test cases before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted taxpayer journey reviews from rejected or deferred work and records blockers around risk model assessments. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d'acceptation des examens de parcours des contribuables ; 100 responsables les traduisent en affectations à des équipes d'environ dix experts. Les identités liées à Dyon permettent d'identifier les contributeurs responsables, tandis qu'un réviseur compétent vérifie les cas de test de dépôt avant leur approbation. L'audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l'examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les examens de parcours des contribuables acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux évaluations des modèles de risque. Les examens des responsables de groupe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات رحلة دافعي الضرائب؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص حالات اختبار الإيداع قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص الإجمالي للخدمة بين مراجعات رحلة دافعي الضرائب المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتقييمات نماذج المخاطر. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "tax law, public finance, accounting and data analysis",
+  "fr": "droit fiscal, finances publiques, comptabilité et analyse de données",
+  "ar": "قانون الضرائب، والمالية العامة، والمحاسبة، وتحليل البيانات"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Taxpayer journey reviews",
+    "fr": "Examens des parcours des contribuables",
+    "ar": "مراجعات رحلة دافعي الضرائب"
+   },
+   "unit": {
+    "en": "taxpayer journey reviews",
+    "fr": "examens du parcours des contribuables",
+    "ar": "مراجعات رحلة دافعي الضرائب"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Filing test cases",
+    "fr": "Cas de test de déclaration",
+    "ar": "حالات اختبار تقديم الإقرارات"
+   },
+   "unit": {
+    "en": "filing test cases",
+    "fr": "cas de test de déclaration",
+    "ar": "حالات اختبار تقديم الإقرارات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Risk model assessments",
+    "fr": "Évaluations des modèles de risque",
+    "ar": "تقييمات نماذج المخاطر"
+   },
+   "unit": {
+    "en": "risk model assessments",
+    "fr": "évaluations des modèles de risque",
+    "ar": "تقييمات نماذج المخاطر"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Plain language guidance notes",
+    "fr": "Notes d’orientation en langage clair",
+    "ar": "مذكرات إرشادية بلغة مبسطة"
+   },
+   "unit": {
+    "en": "plain language guidance notes",
+    "fr": "notes d’orientation en langage clair",
+    "ar": "مذكرات إرشادية بلغة مبسطة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `tax-admin` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the taxpayer journey reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de validation `tax-admin` lié à un dossier comprend un dossier de validation PDF/A + un manifeste des sources CSV/JSON + des documents sources et des comptes rendus de consultation expurgés, reliant les examens du parcours des contribuables à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `tax-admin` مرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والمشاورات، وتربط مراجعات رحلة دافعي الضرائب بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted taxpayer journey reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 examens du parcours des contribuables acceptés** par équipe et par semaine, sous réserve de la complexité des dossiers ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول Fri 12:00؛ و**قبول ≥2 من مراجعات رحلة دافعي الضرائب** لكل فريق في الأسبوع، وفقًا لتعقيد الحالة؛ و**≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات والتسويات المعتمدة المقام المؤهل، فيما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "risk scoring is advisory and cannot override lawful taxpayer rights",
+  "fr": "la notation des risques est consultative et ne peut prévaloir sur les droits légaux des contribuables",
+  "ar": "تقييم المخاطر استشاري ولا يجوز أن ينتقص من الحقوق القانونية لدافعي الضرائب"
+ },
+ "depends": [
+  {
+   "slug": "math-modelling",
+   "id": 72
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "real-estate",
+   "id": 45
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Models target vulnerable firms unfairly → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Les modèles désavantagent injustement les entreprises vulnérables → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تستهدف النماذج الشركات الضعيفة على نحو مجحف → إشراك المستخدمين المتأثرين في المراجعة، ونشر الافتراضات المتعلقة بالاختيار، والإبقاء على مسار للتظلم."
+  },
+  {
+   "en": "Wrong guidance creates penalties → reconcile source records with the taxpayer journey reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des conseils erronés entraînent des pénalités → rapprocher les documents sources de la liste de contrôle de validation des examens du parcours des contribuables et attribuer la responsabilité des mesures correctives.",
+   "ar": "تؤدي الإرشادات الخاطئة إلى فرض غرامات → مطابقة سجلات المصادر مع قائمة التحقق لقبول مراجعات رحلة دافعي الضرائب، وتحديد المسؤول عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Interoperability exposes financial records → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "L’interopérabilité expose des dossiers financiers → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "يؤدي التشغيل البيني إلى كشف السجلات المالية → تقليص نطاق الوصول، وتنقيح الأدلة التي يجري الإفصاح عنها، واختبار سير العمل المقيّد الوصول."
+  }
+ ]
+}

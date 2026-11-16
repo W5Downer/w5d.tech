@@ -1,0 +1,155 @@
+{
+ "slug": "subscription",
+ "title": {
+  "en": "Daily subscription — at least one part every day",
+  "fr": "Abonnement quotidien — au moins une partie par jour",
+  "ar": "اشتراك يومي — جزء واحد على الأقل كل يوم"
+ },
+ "description": {
+  "en": "Commit to at least one part per day. Choose parts, start date and number of days, review the schedule, confirm. Pause or cancel with your key.",
+  "fr": "Engagez-vous à suivre au moins une partie par jour. Choisissez les parties, la date de début et le nombre de jours, consultez le calendrier, puis confirmez. Mettez en pause ou résiliez avec votre clé.",
+  "ar": "التزم بجزء واحد على الأقل يوميًا. اختر الأجزاء وتاريخ البدء وعدد الأيام، وراجع الجدول ثم أكّد. أوقف الاشتراك مؤقتًا أو ألغِه باستخدام مفتاحك."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "sub-hero",
+   "variant": "classic",
+   "gradient": "cultures",
+   "title": {
+    "en": "At least one part, **every day.**",
+    "fr": "Au moins une partie, **chaque jour.**",
+    "ar": "جزء واحد على الأقل، **كل يوم.**"
+   },
+   "lead": {
+    "en": "Backing a programme steadily beats a single large gesture. Choose a rhythm, see every day's forecast price, and keep control with a management key.",
+    "fr": "Soutenir régulièrement un programme est plus efficace qu’un geste unique de grande ampleur. Choisissez un rythme, consultez le prix prévisionnel de chaque journée et gardez le contrôle grâce à une clé de gestion.",
+    "ar": "دعم برنامج بانتظام أجدى من تقديم مساهمة كبيرة لمرة واحدة. اختر وتيرة، واطّلع على السعر التقديري لكل يوم، واحتفظ بالتحكم باستخدام مفتاح الإدارة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Build my schedule",
+      "fr": "Créer mon échéancier",
+      "ar": "أنشئ جدولي"
+     },
+     "href": "#sub-wizard",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Manage an existing subscription",
+      "fr": "Gérer un abonnement existant",
+      "ar": "إدارة اشتراك قائم"
+     },
+     "href": "/subscription/manage/",
+     "style": "ghost"
+    }
+   ],
+   "eyebrow": {
+    "en": "Daily subscription",
+    "fr": "Abonnement journalier",
+    "ar": "اشتراك يومي"
+   },
+   "badges": [
+    {
+     "icon": "calendar-check",
+     "label": {
+      "en": "Full schedule before you confirm",
+      "fr": "Consulter l’échéancier complet avant de confirmer",
+      "ar": "الجدول الكامل قبل التأكيد"
+     }
+    },
+    {
+     "icon": "pause",
+     "label": {
+      "en": "Pause or cancel",
+      "fr": "Mettre en pause ou annuler",
+      "ar": "إيقاف مؤقت أو إلغاء"
+     }
+    },
+    {
+     "icon": "lock",
+     "label": {
+      "en": "Management key",
+      "fr": "Clé de gestion",
+      "ar": "مفتاح الإدارة"
+     }
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken until the provider is connected.",
+    "fr": "Mode démo : aucun paiement n’est prélevé tant que le prestataire n’est pas connecté.",
+    "ar": "الوضع التجريبي: لن يُستوفى أي مبلغ حتى يتم ربط مزوّد الخدمة."
+   }
+  },
+  {
+   "type": "wizard",
+   "id": "sub-wizard",
+   "mode": "subscription",
+   "tier": "e",
+   "focus": 4,
+   "title": {
+    "en": "Build your daily schedule",
+    "fr": "Créer votre échéancier quotidien",
+    "ar": "أنشئ جدولك اليومي"
+   }
+  },
+  {
+   "type": "notice",
+   "id": "sub-limits",
+   "tier": "i",
+   "focus": 1
+  },
+  {
+   "type": "faq",
+   "id": "sub-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Subscription questions",
+    "fr": "Questions sur l’abonnement",
+    "ar": "أسئلة حول الاشتراك"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "What happens if the price changes during my schedule?",
+      "fr": "Que se passe-t-il si le prix change pendant mon échéancier ?",
+      "ar": "ماذا يحدث إذا تغيّر السعر أثناء سريان الجدول؟"
+     },
+     "a": {
+      "en": "The schedule shows a forecast using today's progress and each day's time share. The price on each day is recomputed from the live function, and every charge records the unit price used.",
+      "fr": "L’échéancier présente une prévision fondée sur la progression du jour et la part de temps de chaque journée. Le prix de chaque jour est recalculé à partir de la fonction en temps réel, et chaque prélèvement indique le prix unitaire appliqué.",
+      "ar": "يعرض الجدول توقّعًا استنادًا إلى التقدّم المحرز اليوم والحصّة الزمنية لكل يوم. ويُعاد احتساب سعر كل يوم باستخدام الدالة الفعلية، كما تُسجَّل في كل عملية خصم قيمة سعر الوحدة المستخدم."
+     }
+    },
+    {
+     "q": {
+      "en": "How do I cancel?",
+      "fr": "Comment annuler ?",
+      "ar": "كيف يمكنني الإلغاء؟"
+     },
+     "a": {
+      "en": "Open the manage page with your reference and management key. Cancelling stops all future days.",
+      "fr": "Ouvrez la page de gestion à l’aide de votre référence et de votre clé de gestion. L’annulation met fin à tous les jours à venir.",
+      "ar": "افتح صفحة الإدارة باستخدام رقمك المرجعي ومفتاح الإدارة. يؤدي الإلغاء إلى إيقاف جميع الأيام القادمة."
+     }
+    },
+    {
+     "q": {
+      "en": "Is anything charged now?",
+      "fr": "Un montant est-il prélevé maintenant ?",
+      "ar": "هل سيُخصم أي مبلغ الآن؟"
+     },
+     "a": {
+      "en": "No. In demo mode no payment is taken. When a payment provider is connected, the payment terms will be shown before you confirm.",
+      "fr": "Non. En mode démo, aucun paiement n’est prélevé. Lorsqu’un prestataire de paiement sera connecté, les modalités de paiement seront affichées avant votre confirmation.",
+      "ar": "لا. لا يُستوفى أي مبلغ في الوضع التجريبي. وعند ربط مزوّد للدفع، ستُعرض شروط الدفع قبل التأكيد."
+     }
+    }
+   ]
+  }
+ ]
+}

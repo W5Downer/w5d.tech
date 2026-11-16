@@ -1,0 +1,167 @@
+{
+ "slug": "neuroscience",
+ "id": 61,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Neuroscience & Cognition Labs",
+  "fr": "Laboratoires de neurosciences et de cognition",
+  "ar": "مختبرات علم الأعصاب والإدراك"
+ },
+ "short": {
+  "en": "The service provides experimental design, neuroimaging analysis.",
+  "fr": "Soutenir des expériences cognitives rigoureuses.",
+  "ar": "دعم تجارب معرفية دقيقة."
+ },
+ "abstract": {
+  "en": "Neuroscience and cognition labs — experimental design, neuroimaging analysis, behavioural paradigms, and data-management standards for reproducible research.",
+  "fr": "Laboratoires de neurosciences et de cognition — conception expérimentale, analyse de neuroimagerie, paradigmes comportementaux et normes de gestion des données pour une recherche reproductible.",
+  "ar": "مختبرات علم الأعصاب والإدراك — تصميم التجارب، وتحليل التصوير العصبي، والنماذج السلوكية، ومعايير إدارة البيانات لضمان قابلية إعادة إنتاج الأبحاث."
+ },
+ "long": [
+  {
+   "en": "The Neuroscience & Cognition Labs service organises a weekly work package around protocol reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 100 protocol reviews; 500 anonymised session records; 500 imaging qc reports; 100 reproducible analysis packs. Neuroscience and cognition labs — experimental design, neuroimaging analysis, behavioural paradigms, and data-management standards for reproducible research. Specialists sequence those methods against the accepted weekly package. The governing boundary is that participant consent, power calculations and preregistration precede experiments. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des laboratoires de neurosciences et de cognition organise un lot de travail hebdomadaire autour des revues de protocoles, au lieu de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 100 revues de protocoles ; 500 dossiers de séance anonymisés ; 500 rapports de contrôle qualité de l’imagerie ; 100 dossiers d’analyse reproductibles. Laboratoires de neurosciences et de cognition — conception expérimentale, analyse de neuroimagerie, paradigmes comportementaux et normes de gestion des données pour une recherche reproductible. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que le consentement des participants, les calculs de puissance et la préinscription précèdent les expériences. Il s’agit de livrables par étapes issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة مختبرات علم الأعصاب والإدراك حزمة عمل أسبوعية تتمحور حول مراجعات البروتوكولات، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 100 مراجعة للبروتوكولات؛ و500 سجل جلسات مجهّل الهوية؛ و500 تقرير لمراقبة جودة التصوير؛ و100 حزمة تحليل قابلة لإعادة الإنتاج. مختبرات علم الأعصاب والإدراك — تصميم التجارب، وتحليل التصوير العصبي، والنماذج السلوكية، ومعايير إدارة البيانات لضمان قابلية إعادة إنتاج الأبحاث. ويحدّد الاختصاصيون تسلسل هذه الأساليب وفق الحزمة الأسبوعية المعتمدة. ويقتضي الحدّ الناظم الحصول على موافقة المشاركين، وإجراء حسابات القدرة الإحصائية، والتسجيل المسبق قبل التجارب. وهذه مخرجات مرحلية مستمدة من حالات مكلّف بها، وليست وعداً بإكمال برنامج وطني بأكمله كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `neuroscience`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of protocol reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de décembre 2021 de l’INS/ONM estime qu’environ 3,300 médecins ont émigré entre 2015 et 2020, tandis que l’INS estime le chômage des diplômés à 26.6% au Q2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne saurait remplacer des compétences en santé vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement des participants, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre sans qualification. Pour `neuroscience`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire nommé et d’une définition acceptée des revues de protocoles, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، فيما يقدّر INS معدل بطالة الخريجين بـ26.6% في Q2 2026. وتُظهر هاتان الفئتان المختلفتان سبب عدم إمكان الاستعاضة عن القدرة الصحية المتحقق منها بتوافر الخريجين بوجه عام. فالباحثون في المجال الصحي ومستخدمو المعدات يحتاجون إلى موظفين مؤهلين، وموافقات، ومعلومات مؤمّنة، ومرافق مرخّصة، لا إلى قوة عاملة غير مرخّصة. لذا، فإن الاستجابة المقترحة في مجال `neuroscience` هي سير عمل تعاقدي يضم جهة مستفيدة مسماة وتعريفاً معتمداً لمراجعات البروتوكولات، وليس توظيفاً تبرره البطالة الوطنية وحدها."
+  },
+  {
+   "en": "A service leader sets the protocol reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks anonymised session records before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted protocol reviews from rejected or deferred work and records blockers around imaging qc reports. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des revues de protocoles ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les dossiers de séance anonymisés avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants à l’appui et les exceptions ; il ne remplace pas l’examen, par le responsable, de chaque rapport hebdomadaire. Le bilan du service distingue les revues de protocoles acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux rapports de contrôle qualité de l’imagerie. Les revues des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات البروتوكولات؛ ويحوّل 100 مدير هذه المعايير إلى مهام مسندة لفرق تضم نحو عشرة خبراء. وتُستخدم الهويات المرتبطة بـDyon لتحديد المساهمين المسؤولين، فيما يتحقق مراجع مختص من سجلات الجلسات مجهّلة الهوية قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مراجعات البروتوكولات المقبولة والأعمال المرفوضة أو المؤجلة، ويسجّل المعوقات المتعلقة بتقارير مراقبة جودة التصوير. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "neuroscience, psychology, biomedical sciences and statistics",
+  "fr": "neurosciences, psychologie, sciences biomédicales et statistiques",
+  "ar": "علم الأعصاب، وعلم النفس، والعلوم الطبية الحيوية، والإحصاء"
+ },
+ "diploma": "maîtrise | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Protocol reviews",
+    "fr": "Revues de protocoles",
+    "ar": "مراجعات البروتوكولات"
+   },
+   "unit": {
+    "en": "protocol reviews",
+    "fr": "revues de protocoles",
+    "ar": "مراجعات البروتوكولات"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Anonymised session records",
+    "fr": "Dossiers de séance anonymisés",
+    "ar": "سجلات جلسات مجهّلة الهوية"
+   },
+   "unit": {
+    "en": "anonymised session records",
+    "fr": "dossiers de séance anonymisés",
+    "ar": "سجلات جلسات مجهّلة الهوية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Imaging QC reports",
+    "fr": "Rapports de contrôle qualité de l’imagerie",
+    "ar": "تقارير مراقبة جودة التصوير"
+   },
+   "unit": {
+    "en": "imaging qc reports",
+    "fr": "rapports de contrôle qualité de l’imagerie",
+    "ar": "تقارير مراقبة جودة التصوير"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Reproducible analysis packs",
+    "fr": "Dossiers d’analyse reproductibles",
+    "ar": "حزم تحليل قابلة لإعادة الإنتاج"
+   },
+   "unit": {
+    "en": "reproducible analysis packs",
+    "fr": "dossiers d’analyse reproductibles",
+    "ar": "حزم تحليل قابلة لإعادة الإنتاج"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `neuroscience` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the protocol reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `neuroscience` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, qui relient les revues de protocoles à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة في مجال `neuroscience` ملف قبول بصيغة PDF/A + بياناً بالمصادر بصيغة CSV/JSON + معرّفات الطريقة/الإصدار وبيانات مصدرية قابلة لإعادة الإنتاج، وتربط مراجعات البروتوكولات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted protocol reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **≥1 revue de protocole acceptée** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité/confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **≥9 من كل 10 تقارير أسبوعية مستوفية للشروط** تُقدَّم بحلول الجمعة 12:00؛ **≥1 مراجعة مقبولة للبروتوكولات** لكل فريق في الأسبوع، بحسب تعقيد الحالة؛ **≤1 طلب إعادة عمل مرتبط بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات/التعديلات المعتمدة المقام المستوفي للشروط، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تتقدم على النتيجة الخضراء. وهذه أهداف تجريبية، وليست حدوداً مقررة في README."
+ },
+ "boundary": {
+  "en": "participant consent, power calculations and preregistration precede experiments",
+  "fr": "le consentement des participants, les calculs de puissance et la préinscription précèdent les expériences",
+  "ar": "تسبق موافقة المشاركين وحسابات القدرة الإحصائية والتسجيل المسبق التجارب"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "ai-ml",
+   "id": 109
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Small samples generate unstable claims → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "De petits échantillons produisent des conclusions instables → exiger des vérifications indépendantes des sources, un comparateur et une incertitude explicitement indiquée avant l’acceptation.",
+   "ar": "تؤدي العينات الصغيرة إلى استنتاجات غير مستقرة → لذا يلزم التحقق المستقل من المصادر، ومجموعة مقارنة، والتصريح الواضح بعدم اليقين قبل القبول."
+  },
+  {
+   "en": "Incidental findings lack referral pathways → reconcile source records with the protocol reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’absence de parcours d’orientation pour les résultats fortuits → rapprocher les dossiers sources de la liste de contrôle d’acceptation des revues de protocoles et attribuer la responsabilité des mesures correctives.",
+   "ar": "لا تتوفر مسارات إحالة للنتائج العرضية → طابِق السجلات المصدرية مع قائمة التحقق الخاصة بقبول مراجعات البروتوكولات، وحدّد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Neuroimaging data exposes identity → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les données de neuro-imagerie révèlent l’identité → limitez l’accès, caviardez les éléments probants diffusés et testez le processus d’accès restreint.",
+   "ar": "تكشف بيانات التصوير العصبي الهوية → قلّل الوصول إليها، واحجب البيانات الدالة على الهوية من الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

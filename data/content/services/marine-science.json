@@ -1,0 +1,167 @@
+{
+ "slug": "marine-science",
+ "id": 57,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Marine & Coastal Science",
+  "fr": "Sciences marines et côtières",
+  "ar": "علوم البحار والسواحل"
+ },
+ "short": {
+  "en": "The service provides biodiversity surveys, blue economy.",
+  "fr": "Observer les milieux marins et côtiers.",
+  "ar": "رصد الأوساط البحرية والساحلية."
+ },
+ "abstract": {
+  "en": "Marine and coastal science — biodiversity surveys, blue-economy assessment, and integrated coastal-zone management grounded in field data.",
+  "fr": "Sciences marines et côtières — inventaires de biodiversité, évaluation de l’économie bleue et gestion intégrée des zones côtières fondés sur des données de terrain.",
+  "ar": "علوم البحار والسواحل — مسوحات التنوع البيولوجي، وتقييم الاقتصاد الأزرق، والإدارة المتكاملة للمناطق الساحلية استنادًا إلى البيانات الميدانية."
+ },
+ "long": [
+  {
+   "en": "The Marine & Coastal Science service organises a weekly work package around biodiversity transects, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 biodiversity transects; 2000 water observations; 200 habitat map tiles; 100 coastal assessment notes. Marine and coastal science — biodiversity surveys, blue-economy assessment, and integrated coastal-zone management grounded in field data. Specialists sequence those methods against the accepted weekly package. The governing boundary is that field teams use repeatable sampling stations and lawful collection permits. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Sciences marines et côtières organise un lot de travail hebdomadaire autour des transects de biodiversité, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 transects de biodiversité ; 2000 observations de l’eau ; 200 carreaux de cartes d’habitats ; 100 notes d’évaluation côtière. Sciences marines et côtières — inventaires de biodiversité, évaluation de l’économie bleue et gestion intégrée des zones côtières fondés sur des données de terrain. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. La règle de base est que les équipes de terrain utilisent des stations d’échantillonnage reproductibles et des permis de collecte conformes à la loi. Il s’agit de livrables échelonnés issus de mandats, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة علوم البحار والسواحل حزمة عمل أسبوعية تتمحور حول مقاطع مسح التنوع البيولوجي، بدلًا من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة المزوّدة بالموارد، تتضمن الخطة التجريبية 500 مقطع لمسح التنوع البيولوجي؛ و2000 رصد للمياه؛ و200 مربعًا لخرائط الموائل؛ و100 مذكرة لتقييم المناطق الساحلية. علوم البحار والسواحل — مسوحات التنوع البيولوجي، وتقييم الاقتصاد الأزرق، والإدارة المتكاملة للمناطق الساحلية استنادًا إلى البيانات الميدانية. ويرتّب المختصون هذه الأساليب ضمن حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن تستخدم الفرق الميدانية محطات أخذ عينات قابلة للتكرار، وأن تحصل على تصاريح جمع قانونية. هذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا بإتمام برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `marine-science`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of biodiversity transects, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment des pertes de distribution de 34% pour la SONEDE en 2021. Cela met en évidence un besoin d’intervention technique mesurée, et non une commande financée pour ce service particulier. La séparation entre les propriétaires des actifs, les budgets d’infrastructure et les responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `marine-science`, la réponse proposée est donc un processus contractuel avec un bénéficiaire nommé et une définition acceptée des transects de biodiversité, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والانتقال في قطاع الطاقة، بما فيها خسائر التوزيع لدى SONEDE التي بلغت 34% في 2021. ويثبت ذلك الحاجة إلى تدخل تقني قائم على القياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي تعدد مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنيًا. لذلك، يتمثل المقترح لـ`marine-science` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لمقاطع مسح التنوع البيولوجي، لا في تبرير التوظيف اعتمادًا حصرًا على معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the biodiversity transects acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks water observations before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted biodiversity transects from rejected or deferred work and records blockers around habitat map tiles. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des transects de biodiversité ; 100 managers les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les observations de l’eau avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments justificatifs et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les managers. Le bilan du service distingue les transects de biodiversité acceptés des travaux rejetés ou différés et consigne les obstacles liés aux carreaux de cartes d’habitats. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مقاطع مسح التنوع البيولوجي؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص رصد المياه قبل اعتماده. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والحالات الاستثنائية؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز الملخص التجميعي للخدمة بين مقاطع مسح التنوع البيولوجي المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل المعوقات المتعلقة بمربعات خرائط الموائل. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "marine biology, oceanography, ecology and coastal geography",
+  "fr": "biologie marine, océanographie, écologie et géographie côtière",
+  "ar": "علم الأحياء البحرية، وعلوم المحيطات، وعلم البيئة، والجغرافيا الساحلية"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "Bizerte, Sfax and the Gulf of Gabès field stations",
+  "fr": "stations de terrain de Bizerte, Sfax et du golfe de Gabès",
+  "ar": "محطات العمل الميداني في بنزرت وصفاقس وخليج قابس"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Biodiversity transects",
+    "fr": "Transects de biodiversité",
+    "ar": "مقاطع مسح التنوع البيولوجي"
+   },
+   "unit": {
+    "en": "biodiversity transects",
+    "fr": "transects de biodiversité",
+    "ar": "مقاطع مسح التنوع البيولوجي"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Water observations",
+    "fr": "Observations de l’eau",
+    "ar": "عمليات رصد المياه"
+   },
+   "unit": {
+    "en": "water observations",
+    "fr": "observations de l’eau",
+    "ar": "عمليات رصد المياه"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Habitat map tiles",
+    "fr": "Carreaux de cartes d’habitats",
+    "ar": "مربعات خرائط الموائل"
+   },
+   "unit": {
+    "en": "habitat map tiles",
+    "fr": "carreaux de cartes d’habitats",
+    "ar": "مربعات خرائط الموائل"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Coastal assessment notes",
+    "fr": "Notes d’évaluation côtière",
+    "ar": "مذكرات تقييم المناطق الساحلية"
+   },
+   "unit": {
+    "en": "coastal assessment notes",
+    "fr": "notes d’évaluation côtière",
+    "ar": "مذكرات تقييم المناطق الساحلية"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `marine-science` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the biodiversity transects to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation associé à un cas `marine-science` comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les transects de biodiversité à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `marine-science` المرتبطة بالحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات المنهج/الإصدار والبيانات المصدرية القابلة لإعادة الإنتاج، وتربط مقاطع مسح التنوع البيولوجي بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted biodiversity transects** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** soumis avant ven. 12:00 ; **≥4 transects de biodiversité acceptés** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur éligible, et les défauts critiques de sécurité/confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥4 مقاطع لمسح التنوع البيولوجي** لكل فريق-أسبوع، بحسب تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق-أسبوع. ويؤدي احتساب الإجازات/التعديلات المعتمدة إلى تغيير المقام المستوفي للشروط، كما تتجاوز عيوب السلامة/الخصوصية الحرجة أي تقييم أخضر. هذه أهداف تجريبية، وليست عتبات مثبتة في README."
+ },
+ "boundary": {
+  "en": "field teams use repeatable sampling stations and lawful collection permits",
+  "fr": "les équipes de terrain utilisent des stations d’échantillonnage reproductibles et des permis de collecte conformes à la loi",
+  "ar": "تستخدم الفرق الميدانية محطات أخذ عينات قابلة للتكرار وتصاريح جمع قانونية"
+ },
+ "depends": [
+  {
+   "slug": "flood-defence",
+   "id": 48
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "14",
+   "target": "14"
+  },
+  {
+   "goal": "14",
+   "target": "14.2"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Inconsistent transects fabricate trends → reconcile source records with the biodiversity transects acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des transects incohérents fabriquent des tendances → rapprochez les données sources de la liste de contrôle d’acceptation des transects de biodiversité et attribuez la responsabilité des mesures correctives.",
+   "ar": "تؤدي المقاطع غير المتسقة إلى اختلاق اتجاهات → طابق السجلات المصدرية مع قائمة التحقق لقبول مقاطع مسح التنوع البيولوجي، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Sampling harms protected habitats → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "L’échantillonnage nuit aux habitats protégés → exiger l’approbation d’une personne compétente en matière de sécurité, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "أخذ العينات يضر بالموائل المحمية → يتطلب اعتماداً من مسؤول سلامة مختص، وتجارب مضبوطة، ومؤشراً موثقاً لإيقاف العمل."
+  },
+  {
+   "en": "Sensitive species locations enable exploitation → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "La localisation d’espèces sensibles facilite leur exploitation → limiter l’accès, expurger les éléments de preuve diffusés et tester le processus d’accès restreint.",
+   "ar": "إتاحة مواقع الأنواع الحساسة قد تُمكّن من استغلالها → قلّلوا إمكانية الوصول، واحجبوا الأدلة المنشورة، واختبروا سير العمل الخاص بإمكانية الوصول المقيّد."
+  }
+ ]
+}

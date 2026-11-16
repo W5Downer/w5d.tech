@@ -1,0 +1,167 @@
+{
+ "slug": "bim",
+ "id": 40,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Building Information Modelling",
+  "fr": "Modélisation des informations du bâtiment",
+  "ar": "نمذجة معلومات البناء"
+ },
+ "short": {
+  "en": "The service provides coordination, clash detection, asset handover.",
+  "fr": "Coordonner des maquettes de bâtiment exploitables.",
+  "ar": "تنسيق نماذج مبان قابلة للاستخدام."
+ },
+ "abstract": {
+  "en": "BIM delivery — federated model coordination, clash detection, construction sequencing, and digital asset handover to facility management.",
+  "fr": "Livraison BIM — coordination de modèles fédérés, détection des conflits, séquencement de la construction et transfert numérique des actifs à la gestion des installations.",
+  "ar": "تسليم BIM — تنسيق النماذج المجمّعة، واكتشاف التعارضات، وتسلسل أعمال الإنشاء، والتسليم الرقمي للأصول إلى إدارة المرافق."
+ },
+ "long": [
+  {
+   "en": "The Building Information Modelling service organises a weekly work package around federated model checks, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 federated model checks; 2000 clash resolutions; 5000 asset handover records; 100 sequencing reviews. BIM delivery — federated model coordination, clash detection, construction sequencing, and digital asset handover to facility management. Specialists sequence those methods against the accepted weekly package. The governing boundary is that model acceptance requires coordinate consistency and traceable issue closure. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de modélisation des informations du bâtiment organise un lot de travail hebdomadaire autour des vérifications de modèles fédérés, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 vérifications de modèles fédérés ; 2000 résolutions de conflits ; 5000 enregistrements de transfert d’actifs ; 100 revues de séquencement. Livraison BIM — coordination de modèles fédérés, détection des conflits, séquencement de la construction et transfert numérique des actifs à la gestion des installations. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que l’acceptation d’un modèle exige la cohérence des coordonnées et la clôture traçable des problèmes. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة نمذجة معلومات البناء حزمة عمل أسبوعية تتمحور حول فحوصات النماذج المجمّعة، بدلاً من اعتبار الحضور هو الناتج. وتبلغ الخطة التجريبية عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد اللازمة 200 فحص للنماذج المجمّعة؛ و2000 عملية لمعالجة التعارضات؛ و5000 سجل لتسليم الأصول؛ و100 مراجعة لتسلسل الأعمال. تسليم BIM — تنسيق النماذج المجمّعة، واكتشاف التعارضات، وتسلسل أعمال الإنشاء، والتسليم الرقمي للأصول إلى إدارة المرافق. ويرتّب المختصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويشترط الحد الناظم لقبول النماذج اتساق الإحداثيات وإغلاق المسائل على نحو قابل للتتبع. وهذه مخرجات مرحلية من حالات مفوّضة، وليست وعداً باستكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `bim`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of federated model checks, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 identifie la concentration côtière, le coût du logement et les obstacles liés aux transports comme des freins à la mise en adéquation des compétences avec les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures qui dépendent des investissements ; aucun de ces constats ne dénombre les postes commandés pour ce service. La préparation des projets met en jeu la propriété des actifs, l’accès local et les règles de passation des marchés ; des travaux techniquement viables peuvent donc rester fragmentés jusqu’à ce qu’un client les commande dans le respect de la loi. Pour `bim`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des vérifications de modèles fédérés, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تحدد دراسة OECD عن تونس الصادرة في أبريل 2022 تمركز الأنشطة على الساحل وتكاليف السكن وعوائق النقل بوصفها قيوداً على مواءمة أصحاب المهارات مع فرص العمل. كما يحدد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا تحصي أي من النتيجتين الوظائف المفوّضة لهذه الخدمة. وتتجاوز تهيئة المشاريع حدود ملكية الأصول وإمكانية الوصول المحلي والمشتريات، ولذلك قد يظل العمل المجدي من الناحية التقنية مجزأً إلى أن يفوّضه عميل بموجب عقد قانوني. لذا، فإن الاستجابة المقترحة لـ`bim` هي سير عمل تعاقدي يحدد مستفيداً وتعريفاً معتمداً لفحوصات النماذج المجمّعة، لا التوظيف الذي يُبرر بالاستناد حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the federated model checks acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks clash resolutions before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted federated model checks from rejected or deferred work and records blockers around asset handover records. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des vérifications de modèles fédérés ; 100 responsables le déclinent en affectations pour des équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les résolutions de conflits avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par le responsable. Le bilan du service distingue les vérifications de modèles fédérés acceptées des travaux rejetés ou reportés et consigne les blocages liés aux enregistrements de transfert d’actifs. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول فحوصات النماذج المجمّعة؛ ويترجم 100 مدير هذه المعايير إلى مهام للفرق تضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من عمليات معالجة التعارضات قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين فحوصات النماذج المجمّعة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بسجلات تسليم الأصول. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "architecture, engineering and building information management",
+  "fr": "architecture, ingénierie et gestion des informations du bâtiment",
+  "ar": "الهندسة المعمارية والهندسة وإدارة معلومات البناء"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Federated model checks",
+    "fr": "Vérifications du modèle fédéré",
+    "ar": "عمليات التحقق من النماذج الموحّدة"
+   },
+   "unit": {
+    "en": "federated model checks",
+    "fr": "vérifications du modèle fédéré",
+    "ar": "عمليات التحقق من النماذج الموحّدة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Clash resolutions",
+    "fr": "Résolution des conflits",
+    "ar": "تسويات التعارضات"
+   },
+   "unit": {
+    "en": "clash resolutions",
+    "fr": "résolution des conflits",
+    "ar": "تسويات التعارضات"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Asset handover records",
+    "fr": "Dossiers de transfert des actifs",
+    "ar": "سجلات تسليم الأصول"
+   },
+   "unit": {
+    "en": "asset handover records",
+    "fr": "dossiers de transfert des actifs",
+    "ar": "سجلات تسليم الأصول"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Sequencing reviews",
+    "fr": "Revues du séquençage",
+    "ar": "مراجعات التسلسل"
+   },
+   "unit": {
+    "en": "sequencing reviews",
+    "fr": "revues du séquençage",
+    "ar": "مراجعات التسلسل"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `bim` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the federated model checks to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `bim` lié à un cas contient un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photos géoréférencés ou des fichiers de conception, reliant les vérifications du modèle fédéré à la source, à la personne chargée de la revue, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `bim` المرتبطة بحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات معاينة أو تصميم محددة جغرافيًا، وتربط عمليات التحقق من النماذج الموحّدة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted federated model checks** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis avant ven. 12:00 ; **≥2 vérifications acceptées du modèle fédéré** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ **قبول ≥2 من عمليات التحقق من النماذج الموحّدة** لكل فريق في الأسبوع، بحسب مدى تعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. تؤدي الإجازات أو التعديلات المعتمدة إلى تغيير المقام المؤهل، وتتغلب العيوب الحرجة المتعلقة بالسلامة أو الخصوصية على التقييم الإيجابي. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "model acceptance requires coordinate consistency and traceable issue closure",
+  "fr": "l’acceptation du modèle exige la cohérence des coordonnées et la clôture traçable des problèmes",
+  "ar": "يتطلب قبول النموذج اتساق الإحداثيات وإغلاقًا قابلًا للتتبع للمسائل"
+ },
+ "depends": [
+  {
+   "slug": "research-data",
+   "id": 63
+  },
+  {
+   "slug": "construction-tech-deploy",
+   "id": 118
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "metrology",
+   "id": 64
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Model versions diverge across disciplines → reconcile source records with the federated model checks acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les versions du modèle divergent entre les disciplines → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des vérifications du modèle fédéré et attribuer la responsabilité des mesures correctives.",
+   "ar": "تتباين إصدارات النموذج بين التخصصات → طابق سجلات المصدر مع قائمة التحقق من قبول عمليات التحقق من النماذج الموحّدة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Clash counts reward trivial fixes → reconcile source records with the federated model checks acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le nombre de conflits favorise les corrections triviales → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des vérifications du modèle fédéré et attribuer la responsabilité des mesures correctives.",
+   "ar": "تكافئ أعداد التعارضات الإصلاحات البسيطة → طابق سجلات المصدر مع قائمة التحقق من قبول عمليات التحقق من النماذج الموحّدة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Asset data cannot migrate to maintenance systems → reconcile source records with the federated model checks acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les données sur les actifs ne peuvent pas être transférées aux systèmes de maintenance → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des vérifications du modèle fédéré et attribuer la responsabilité des mesures correctives.",
+   "ar": "يتعذر نقل بيانات الأصول إلى أنظمة الصيانة → طابق سجلات المصدر مع قائمة التحقق من قبول عمليات التحقق من النماذج الموحّدة، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

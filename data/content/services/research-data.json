@@ -1,0 +1,167 @@
+{
+ "slug": "research-data",
+ "id": 63,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Research Data Management",
+  "fr": "Gestion des données de recherche",
+  "ar": "إدارة بيانات البحوث"
+ },
+ "short": {
+  "en": "The service provides fAIR data, repositories, DMPs.",
+  "fr": "Organiser des données de recherche réutilisables.",
+  "ar": "تنظيم بيانات بحث قابلة لإعادة الاستخدام."
+ },
+ "abstract": {
+  "en": "Research data management — FAIR data practices, institutional repositories, data-management plans, and long-term preservation of research outputs.",
+  "fr": "Gestion des données de recherche — pratiques de données FAIR, dépôts institutionnels, plans de gestion des données et conservation à long terme des résultats de recherche.",
+  "ar": "إدارة بيانات البحوث — ممارسات البيانات FAIR، والمستودعات المؤسسية، وخطط إدارة البيانات، والحفظ طويل الأمد لمخرجات البحوث."
+ },
+ "long": [
+  {
+   "en": "The Research Data Management service organises a weekly work package around data management plans, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 data management plans; 500 repository deposits; 1000 metadata validation reports; 200 access review files. Research data management — FAIR data practices, institutional repositories, data-management plans, and long-term preservation of research outputs. Specialists sequence those methods against the accepted weekly package. The governing boundary is that FAIR stewardship does not mean unrestricted release of sensitive data. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gestion des données de recherche organise un lot de travail hebdomadaire autour des plans de gestion des données, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 plans de gestion des données ; 500 dépôts dans des référentiels ; 1000 rapports de validation des métadonnées ; 200 dossiers d’examen des accès. Gestion des données de recherche — pratiques de données FAIR, dépôts institutionnels, plans de gestion des données et conservation à long terme des résultats de recherche. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que la gestion responsable des données FAIR ne signifie pas la diffusion sans restriction de données sensibles. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national entier.",
+   "ar": "تنظم خدمة إدارة بيانات البحوث حزمة عمل أسبوعية تتمحور حول خطط إدارة البيانات، بدلًا من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة مع توفير الموارد اللازمة، تستهدف خطتها التجريبية إعداد 200 خطة لإدارة البيانات؛ و500 عملية إيداع في المستودعات؛ و1000 تقرير للتحقق من البيانات الوصفية؛ و200 ملف لمراجعة الوصول. إدارة بيانات البحوث — ممارسات البيانات FAIR، والمستودعات المؤسسية، وخطط إدارة البيانات، والحفظ طويل الأمد لمخرجات البحوث. ويرتب المختصون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المعتمدة. ويتمثل الحد الناظم في أن الإشراف على البيانات وفق مبادئ FAIR لا يعني إتاحة البيانات الحساسة دون قيود. وهذه مخرجات مرحلية لحالات مُسندة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS estimates that 26.6% of the Tunisian graduate labour force was unemployed in Q2 2026, while OECD's April 2022 analysis describes weak links between qualifications and employers' practical requirements. Neither statistic establishes the number of experienced specialists available for this scientific task. Laboratory access, supervised methods and continuity of research finance make a collection of individual freelancers an incomplete substitute for an accountable shared service. For `research-data`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of data management plans, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’INS estime que 26.6% de la population active tunisienne diplômée était au chômage au T2 2026, tandis que l’analyse de l’OCDE publiée en avril 2022 décrit le faible lien entre les qualifications et les exigences pratiques des employeurs. Aucune de ces statistiques ne permet d’établir le nombre de spécialistes expérimentés disponibles pour cette tâche scientifique. L’accès aux laboratoires, les méthodes encadrées et la continuité du financement de la recherche font qu’un ensemble de travailleurs indépendants ne constitue pas un substitut complet à un service partagé dont la responsabilité est clairement établie. Pour `research-data`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des plans de gestion des données, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقدّر INS أن 26.6% من قوة العمل التونسية من خريجي الجامعات كانت عاطلة عن العمل في Q2 2026، بينما يصف تحليل OECD الصادر في أبريل 2022 ضعف الروابط بين المؤهلات والمتطلبات العملية لأصحاب العمل. ولا تثبت أي من الإحصائيتين عدد الاختصاصيين ذوي الخبرة المتاحين لهذه المهمة العلمية. ويجعل إتاحة المختبرات، والأساليب الخاضعة للإشراف، واستمرارية تمويل الأبحاث، مجموعةً من المستقلين الأفراد بديلاً غير مكتمل عن خدمة مشتركة خاضعة للمساءلة. لذلك، يتمثل الرد المقترح على `research-data` في سير عمل تعاقدي ذي مستفيد محدد وتعريف معتمد لخطط إدارة البيانات، لا في التوظيف استناداً حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the data management plans acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks repository deposits before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted data management plans from rejected or deferred work and records blockers around metadata validation reports. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit le référentiel d’acceptation des plans de gestion des données ; 100 responsables traduisent ce référentiel en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les dépôts dans les référentiels avant approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les plans de gestion des données acceptés des travaux rejetés ou différés et consigne les blocages liés aux rapports de validation des métadonnées. Les examens par les responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول خطط إدارة البيانات؛ ويحوّل 100 مدير هذا المعيار إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين الخاضعين للمساءلة، بينما يتحقق مراجع مؤهل من إيداعات المستودع قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين خطط إدارة البيانات المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بتقارير التحقق من صحة البيانات الوصفية. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "information science, research methods, data management and statistics",
+  "fr": "sciences de l’information, méthodes de recherche, gestion des données et statistiques",
+  "ar": "علم المعلومات، وأساليب البحث، وإدارة البيانات، والإحصاء"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Data management plans",
+    "fr": "Plans de gestion des données",
+    "ar": "خطط إدارة البيانات"
+   },
+   "unit": {
+    "en": "data management plans",
+    "fr": "plans de gestion des données",
+    "ar": "خطط إدارة البيانات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Repository deposits",
+    "fr": "Dépôts dans les référentiels",
+    "ar": "إيداعات المستودع"
+   },
+   "unit": {
+    "en": "repository deposits",
+    "fr": "dépôts dans les référentiels",
+    "ar": "إيداعات المستودع"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Metadata validation reports",
+    "fr": "Rapports de validation des métadonnées",
+    "ar": "تقارير التحقق من صحة البيانات الوصفية"
+   },
+   "unit": {
+    "en": "metadata validation reports",
+    "fr": "rapports de validation des métadonnées",
+    "ar": "تقارير التحقق من صحة البيانات الوصفية"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Access review files",
+    "fr": "Dossiers d’examen des accès",
+    "ar": "ملفات مراجعة الوصول"
+   },
+   "unit": {
+    "en": "access review files",
+    "fr": "dossiers d’examen des accès",
+    "ar": "ملفات مراجعة الوصول"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `research-data` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the data management plans to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `research-data` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version, ainsi que des données sources reproductibles, et relie les plans de gestion des données à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن `research-data` ملف اعتماد بصيغة PDF/A + بياناً بمصادر البيانات بصيغة CSV/JSON + معرّفات الطريقة/الإصدار والبيانات المصدرية القابلة لإعادة الإنتاج، بما يربط خطط إدارة البيانات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted data management plans** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant vendredi 12:00 ; **≥2 plans de gestion des données acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur des rapports admissibles, et les défauts critiques de sécurité ou de confidentialité prévalent sur un résultat favorable. Il s’agit d’objectifs pour le projet pilote, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥2 من خطط إدارة البيانات المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات/التسويات المعتمدة المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تتجاوز أثرها أي تقييم أخضر. هذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "FAIR stewardship does not mean unrestricted release of sensitive data",
+  "fr": "La gestion responsable selon les principes FAIR ne signifie pas la diffusion sans restriction de données sensibles",
+  "ar": "لا تعني الإدارة الرشيدة للبيانات وفق مبادئ FAIR إتاحة البيانات الحساسة بلا قيود"
+ },
+ "depends": [
+  {
+   "slug": "archival-science",
+   "id": 16
+  },
+  {
+   "slug": "cloud-infra",
+   "id": 107
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "official-stats",
+   "id": 100
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "4",
+   "target": "4.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Open deposit exposes protected participants → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Le dépôt en libre accès expose des participants protégés → limiter les accès, expurger les éléments probants diffusés et tester le processus d’accès restreint.",
+   "ar": "إيداع مفتوح يكشف بيانات مشاركين محمية ← قلّل نطاق الوصول، واحجب الأدلة المنشورة، واختبر سير عمل الوصول المقيّد."
+  },
+  {
+   "en": "Metadata omits essential methods → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Les métadonnées omettent des méthodes essentielles → refaire les contrôles critiques à partir de références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "إغفال البيانات الوصفية للأساليب الأساسية ← أعد إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، واعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Repository links fail after grants end → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les liens vers les référentiels cessent de fonctionner à la fin des subventions → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur documenté d’arrêt des travaux.",
+   "ar": "تعطل روابط المستودع بعد انتهاء المنح ← اشترط اعتماداً للسلامة من مختص، وتجارب مضبوطة، ومحفزاً موثقاً لإيقاف العمل."
+  }
+ ]
+}

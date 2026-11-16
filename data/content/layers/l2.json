@@ -1,0 +1,15 @@
+{
+ "slug": "l2",
+ "code": "L2",
+ "order": 2,
+ "name": {
+  "en": "Services",
+  "fr": "Services",
+  "ar": "الخدمات"
+ },
+ "body": {
+  "en": "{{ counts.services }} registered services, each with a deliverable unit, an evidence rule and a declared boundary.",
+  "fr": "{{ counts.services }} services enregistrés, chacun doté d’une unité livrable, d’une règle de preuve et d’un périmètre déclaré.",
+  "ar": "{{ counts.services }} خدمة مسجلة، لكل منها وحدة قابلة للتسليم، وقاعدة للأدلة، وحدود معلنة."
+ }
+}

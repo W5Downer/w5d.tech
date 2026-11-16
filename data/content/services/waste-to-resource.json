@@ -1,0 +1,167 @@
+{
+ "slug": "waste-to-resource",
+ "id": 125,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Waste-to-Resource Technology",
+  "fr": "Technologie de valorisation des déchets",
+  "ar": "تكنولوجيا تحويل النفايات إلى موارد"
+ },
+ "short": {
+  "en": "The service provides sorting, composting, anaerobic digestion.",
+  "fr": "Transformer les déchets en ressources contrôlées.",
+  "ar": "تحويل النفايات إلى موارد خاضعة للرقابة."
+ },
+ "abstract": {
+  "en": "Waste-to-resource technology — automated sorting, composting, and anaerobic digestion for municipal and industrial waste streams.",
+  "fr": "Technologie de valorisation des déchets — tri automatisé, compostage et digestion anaérobie des flux de déchets municipaux et industriels.",
+  "ar": "تكنولوجيا تحويل النفايات إلى موارد — الفرز الآلي والتسميد والهضم اللاهوائي لتدفقات النفايات البلدية والصناعية."
+ },
+ "long": [
+  {
+   "en": "The Waste-to-Resource Technology service organises a weekly work package around feedstock characterisations, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 feedstock characterisations; 1000 compost quality tests; 200 digester operating reviews; 200 material balance studies. Waste-to-resource technology — automated sorting, composting, and anaerobic digestion for municipal and industrial waste streams. Specialists sequence those methods against the accepted weekly package. The governing boundary is that resource claims require contaminant testing and lawful emissions control. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de technologie de valorisation des déchets organise un lot de travail hebdomadaire autour des caractérisations des intrants, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 caractérisations des intrants ; 1000 tests de qualité du compost ; 200 revues de fonctionnement des digesteurs ; 200 études de bilan matière. Technologie de valorisation des déchets — tri automatisé, compostage et digestion anaérobie des flux de déchets municipaux et industriels. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle de fond est que les allégations de valorisation des ressources nécessitent des analyses des contaminants et un contrôle réglementaire des émissions. Il s’agit de résultats échelonnés issus de dossiers commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة تكنولوجيا تحويل النفايات إلى موارد حزمة عمل أسبوعية تتمحور حول توصيفات المواد الأولية، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد اللازمة، 500 توصيف للمواد الأولية؛ و1000 اختبار لجودة السماد؛ و200 مراجعة لتشغيل وحدات الهضم؛ و200 دراسة لموازنة المواد. تكنولوجيا تحويل النفايات إلى موارد — الفرز الآلي والتسميد والهضم اللاهوائي لتدفقات النفايات البلدية والصناعية. ويرتب المتخصصون هذه الأساليب وفقاً لحزمة العمل الأسبوعية المعتمدة. ويشترط الإطار الناظم إجراء اختبارات للملوثات والتحكم في الانبعاثات وفقاً للقانون قبل تقديم أي ادعاءات بشأن استرداد الموارد. وهذه مخرجات مرحلية مستمدة من الحالات التي كُلّف بها الفريق، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `waste-to-resource`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of feedstock characterisations, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service en particulier. La séparation entre propriétaires d’actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la mise en commande de travaux techniquement utiles. Pour `waste-to-resource`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire désigné et d’une définition acceptée des caractérisations des intrants, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 قيود تونس المتعلقة بالمياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE، الذي بلغ 34% في عام 2021. وهذا يثبت الحاجة إلى تدخلات فنية قائمة على القياس، لا وجود طلب ممول لهذه الخدمة تحديداً. وقد يحول الفصل بين مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية دون تكليف جهات بتنفيذ أعمال مفيدة من الناحية الفنية. لذا، تتمثل الاستجابة المقترحة لخدمة `waste-to-resource` في سير عمل تعاقدي يحدد مستفيداً وتعريفاً معتمداً لتوصيفات المواد الأولية، لا في تبرير التوظيف استناداً إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the feedstock characterisations acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks compost quality tests before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted feedstock characterisations from rejected or deferred work and records blockers around digester operating reviews. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des caractérisations des intrants ; 100 responsables les traduisent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les tests de qualité du compost avant approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les caractérisations des intrants acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux revues de fonctionnement des digesteurs. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول توصيفات المواد الأولية؛ ويترجمها 100 مدير إلى مهام موزعة على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مختص مؤهل اختبارات جودة السماد قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين توصيفات المواد الأولية المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمراجعات تشغيل وحدات الهضم. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "environmental engineering, process engineering, microbiology and waste management",
+  "fr": "génie de l’environnement, génie des procédés, microbiologie et gestion des déchets",
+  "ar": "الهندسة البيئية، وهندسة العمليات، وعلم الأحياء الدقيقة، وإدارة النفايات"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Feedstock characterisations",
+    "fr": "Caractérisations des intrants",
+    "ar": "توصيفات المواد الأولية"
+   },
+   "unit": {
+    "en": "feedstock characterisations",
+    "fr": "caractérisations des intrants",
+    "ar": "توصيفات المواد الأولية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Compost quality tests",
+    "fr": "Tests de qualité du compost",
+    "ar": "اختبارات جودة السماد"
+   },
+   "unit": {
+    "en": "compost quality tests",
+    "fr": "tests de qualité du compost",
+    "ar": "اختبارات جودة السماد"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Digester operating reviews",
+    "fr": "Revues opérationnelles des digesteurs",
+    "ar": "مراجعات تشغيل وحدات الهضم"
+   },
+   "unit": {
+    "en": "digester operating reviews",
+    "fr": "revues opérationnelles des digesteurs",
+    "ar": "مراجعات تشغيل وحدات الهضم"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Material balance studies",
+    "fr": "Études de bilan matière",
+    "ar": "دراسات موازنة المواد"
+   },
+   "unit": {
+    "en": "material balance studies",
+    "fr": "études de bilan matière",
+    "ar": "دراسات موازنة المواد"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `waste-to-resource` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the feedstock characterisations to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `waste-to-resource` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + le code/la configuration versionnés, les tests et les journaux de déploiement ou de reprise, qui relient les caractérisations des matières entrantes à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `waste-to-resource` المرتبطة بحالة ما ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + الشيفرة/الإعدادات ذات الإصدارات المحددة، والاختبارات وسجلات النشر أو الاستعادة، بما يربط توصيفات المواد الداخلة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted feedstock characterisations** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard le vendredi à 12 h ; **≥4 caractérisations acceptées des matières entrantes** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments justificatifs** par équipe et par semaine. Les congés approuvés et les aménagements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un résultat favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ **قبول ≥4 توصيفات للمواد الداخلة** لكل فريق في الأسبوع، مع مراعاة مدى تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب مشكلات الأدلة** لكل فريق في الأسبوع. وتُعدّل الإجازات المعتمدة والتسويات المقابلة مقامَ الأهلية، فيما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "resource claims require contaminant testing and lawful emissions control",
+  "fr": "les allégations relatives aux ressources nécessitent des tests de contamination et un contrôle réglementaire des émissions",
+  "ar": "تتطلب ادعاءات تحقيق منافع الموارد إجراء اختبارات للملوثات وضبط الانبعاثات وفقًا للقانون"
+ },
+ "depends": [
+  {
+   "slug": "circular-construction",
+   "id": 42
+  },
+  {
+   "slug": "chemical-safety",
+   "id": 65
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "construction-waste",
+   "id": 50
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Contamination makes compost unsafe → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "La contamination rend le compost dangereux → refaire les contrôles critiques en s’appuyant sur des références traçables et mettre en quarantaine les résultats invalides.",
+   "ar": "يؤدي التلوث إلى جعل السماد غير آمن ← إعادة إجراء الفحوص الحرجة بالاستناد إلى مراجع قابلة للتتبع، وعزل النتائج غير الصالحة."
+  },
+  {
+   "en": "Methane leaks negate climate benefits → reconcile source records with the feedstock characterisations acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les fuites de méthane annulent les bénéfices climatiques → rapprocher les registres sources de la liste de contrôle d’acceptation des caractérisations des matières entrantes et attribuer la responsabilité des mesures correctives.",
+   "ar": "تُفقد الفوائد المناخية بسبب تسرب الميثان ← مطابقة سجلات المصدر مع قائمة التحقق لقبول توصيفات المواد الداخلة، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unstable feedstocks disrupt digesters → reconcile source records with the feedstock characterisations acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’instabilité des matières entrantes perturbe le fonctionnement des digesteurs → rapprocher les registres sources de la liste de contrôle d’acceptation des caractérisations des matières entrantes et attribuer la responsabilité des mesures correctives.",
+   "ar": "تُعرقل المواد الداخلة غير المستقرة عمل وحدات الهضم ← مطابقة سجلات المصدر مع قائمة التحقق لقبول توصيفات المواد الداخلة، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

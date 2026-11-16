@@ -1,0 +1,167 @@
+{
+ "slug": "anti-corruption",
+ "id": 81,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Anti-Corruption & Integrity",
+  "fr": "Lutte contre la corruption et intégrité",
+  "ar": "مكافحة الفساد والنزاهة"
+ },
+ "short": {
+  "en": "The service provides risk mapping, whistleblowing channels.",
+  "fr": "Identifier les risques d'intégrité sans exposer les témoins.",
+  "ar": "تحديد مخاطر النزاهة دون تعريض الشهود للخطر."
+ },
+ "abstract": {
+  "en": "Anti-corruption and integrity programs — corruption risk mapping, whistleblowing channels, and procurement integrity frameworks.",
+  "fr": "Programmes de lutte contre la corruption et de promotion de l’intégrité — cartographie des risques de corruption, canaux de signalement et cadres d’intégrité des marchés publics.",
+  "ar": "برامج مكافحة الفساد وتعزيز النزاهة — رسم خرائط مخاطر الفساد، وقنوات الإبلاغ عن المخالفات، وأطر نزاهة المشتريات."
+ },
+ "long": [
+  {
+   "en": "The Anti-Corruption & Integrity service organises a weekly work package around integrity risk reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 integrity risk reviews; 1000 procurement red flag checks; 100 protected channel tests; 100 control improvement plans. Anti-corruption and integrity programs — corruption risk mapping, whistleblowing channels, and procurement integrity frameworks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that allegations remain protected, unproven and subject to lawful investigation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Lutte contre la corruption et intégrité organise un lot de travail hebdomadaire autour des examens des risques liés à l’intégrité, plutôt que de faire de la présence le produit lui-même. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens des risques liés à l’intégrité ; 1000 vérifications des signaux d’alerte dans les marchés publics ; 100 tests de canaux protégés ; 100 plans d’amélioration des contrôles. Programmes de lutte contre la corruption et de promotion de l’intégrité — cartographie des risques de corruption, canaux de signalement et cadres d’intégrité des marchés publics. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les allégations restent protégées, non établies et soumises à une enquête menée conformément à la loi. Il s’agit de résultats échelonnés issus de cas faisant l’objet d’un mandat, et non d’un engagement à achever chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة مكافحة الفساد والنزاهة حزمة عمل أسبوعية تتمحور حول مراجعات مخاطر النزاهة، بدلاً من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند بلوغ كامل القدرة التشغيلية والموارد اللازمة، إجراء 200 مراجعة لمخاطر النزاهة؛ و1000 فحص لمؤشرات الإنذار المبكر في المشتريات؛ و100 اختبار لقنوات الإبلاغ المحمية؛ و100 خطة لتحسين الضوابط. برامج مكافحة الفساد وتعزيز النزاهة — رسم خرائط مخاطر الفساد، وقنوات الإبلاغ عن المخالفات، وأطر نزاهة المشتريات. ويرتّب المتخصصون تطبيق هذه الأساليب وفقاً لحزمة العمل الأسبوعية المقبولة. والضابط الحاكم هو أن تظل الادعاءات محمية وغير مثبتة وخاضعة لتحقيق قانوني. وهذه مخرجات مرحلية لحالات مُسندة، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `anti-corruption`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of integrity risk reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de l’OCDE de juin 2024 indique que près de 40% des entreprises tunisiennes couvertes considèrent le manque de compétences de la main-d’œuvre comme une contrainte majeure, d’après des comparaisons des enquêtes auprès des entreprises portant la mention 2020 ou la dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème qui relèverait uniquement de la formation. Les bénéfices dépendent d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliorera une institution. Pour `anti-corruption`, la réponse proposée est donc un processus de travail contractuel avec un bénéficiaire désigné et une définition acceptée des examens des risques liés à l’intégrité, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقرب من 40% من الشركات التونسية المشمولة تعتبر نقص مهارات القوى العاملة عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بسنة 2020 أو بأحدث سنة تتوفر عنها بيانات. كما يحدد التحليل القانوني الذي أعده Kotrane في 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها مشكلات، لا مشكلة تقتصر على التدريب. وتعتمد الفوائد على وجود صلاحيات مشروعة وسجلات إدارية مشتركة وجهات مسؤولة عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً من دون هذه الجهات سيحسن أداء مؤسسة ما. لذا فإن الاستجابة المقترحة في مجال `anti-corruption` هي سير عمل تعاقدي يحدد جهة مستفيدة وتعريفاً مقبولاً لمراجعات مخاطر النزاهة، لا توظيفاً تبرره حصراً نسبة البطالة الوطنية."
+  },
+  {
+   "en": "A service leader sets the integrity risk reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks procurement red flag checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted integrity risk reviews from rejected or deferred work and records blockers around protected channel tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des examens des risques liés à l’intégrité ; 100 responsables traduisent ces critères en missions d’équipe d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles des signaux d’alerte dans les marchés publics avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les examens des risques liés à l’intégrité acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux tests des canaux protégés. Les examens menés par les responsables de pôles coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات مخاطر النزاهة؛ ويوزع 100 مدير المهام على فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مختص مؤهل فحوص مؤشرات الإنذار المبكر في المشتريات قبل اعتمادها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين مراجعات مخاطر النزاهة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باختبارات قنوات الإبلاغ المحمية. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Integrity risk reviews",
+    "fr": "Examens des risques liés à l’intégrité",
+    "ar": "مراجعات مخاطر النزاهة"
+   },
+   "unit": {
+    "en": "integrity risk reviews",
+    "fr": "examens des risques liés à l’intégrité",
+    "ar": "مراجعات مخاطر النزاهة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Procurement red flag checks",
+    "fr": "Vérifications des signaux d’alerte en matière de marchés publics",
+    "ar": "فحوص مؤشرات الخطر في المشتريات"
+   },
+   "unit": {
+    "en": "procurement red flag checks",
+    "fr": "vérifications des signaux d’alerte en matière de marchés publics",
+    "ar": "فحوص مؤشرات الخطر في المشتريات"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Protected channel tests",
+    "fr": "Tests des canaux protégés",
+    "ar": "اختبارات القنوات المحمية"
+   },
+   "unit": {
+    "en": "protected channel tests",
+    "fr": "tests des canaux protégés",
+    "ar": "اختبارات القنوات المحمية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Control improvement plans",
+    "fr": "Plans d’amélioration des contrôles",
+    "ar": "خطط تحسين الضوابط"
+   },
+   "unit": {
+    "en": "control improvement plans",
+    "fr": "plans d’amélioration des contrôles",
+    "ar": "خطط تحسين الضوابط"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `anti-corruption` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the integrity risk reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `anticorruption` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des pièces sources et des comptes rendus de consultation expurgés, qui relient les examens des risques d’intégrité aux sources, aux évaluateurs, aux versions, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول لمكافحة الفساد مرتبطة بالحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقحة للمصادر والاستشارات، وتربط مراجعات مخاطر النزاهة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted integrity risk reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant vendredi 12:00 ; **≥2 examens des risques d’intégrité acceptés** par équipe-semaine, en fonction de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول Fri 12:00؛ **قبول ≥2 من مراجعات مخاطر النزاهة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات المعتمدة والتعديلات المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة والخصوصية تتقدم على النتيجة الخضراء. هذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "allegations remain protected, unproven and subject to lawful investigation",
+  "fr": "les allégations restent protégées, non prouvées et soumises à une enquête menée conformément à la loi",
+  "ar": "تظل الادعاءات محمية وغير مثبتة وخاضعة لتحقيق قانوني"
+ },
+ "depends": [
+  {
+   "slug": "procurement",
+   "id": 46
+  },
+  {
+   "slug": "cybersecurity",
+   "id": 106
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "procurement",
+   "id": 46
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Whistleblower identity exposed → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Identité du lanceur d’alerte exposée → limiter les accès, expurger les éléments probants communiqués et tester le processus d’accès restreint.",
+   "ar": "انكشاف هوية المبلّغ → قلّلوا نطاق الوصول، ونقّحوا الأدلة التي يجري الإفصاح عنها، واختبروا سير عمل الوصول المقيّد."
+  },
+  {
+   "en": "False positives damage reputations → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les faux positifs nuisent aux réputations → exiger des vérifications indépendantes des sources, un élément de comparaison et une explicitation de l’incertitude avant l’acceptation.",
+   "ar": "تضر النتائج الإيجابية الكاذبة بالسمعة → اشترطوا التحقق المستقل من المصدر، ومرجعاً للمقارنة، وتوضيحاً صريحاً لعدم اليقين قبل القبول."
+  },
+  {
+   "en": "Conflicted reviewers suppress findings → reconcile source records with the integrity risk reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des évaluateurs en situation de conflit d’intérêts étouffent les constats → rapprocher les documents sources de la liste de contrôle d’acceptation des examens des risques d’intégrité et désigner les responsables des mesures correctives.",
+   "ar": "يحجب المراجعون الذين لديهم تضارب في المصالح النتائج → طابقوا سجلات المصدر مع قائمة التحقق لقبول مراجعات مخاطر النزاهة، وأسندوا مسؤولية الإجراءات التصحيحية."
+  }
+ ]
+}

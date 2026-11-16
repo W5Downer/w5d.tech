@@ -1,0 +1,167 @@
+{
+ "slug": "neighbourhood-upgrading",
+ "id": 52,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Participatory Neighbourhood Upgrading",
+  "fr": "Amélioration participative des quartiers",
+  "ar": "الارتقاء بالأحياء بمشاركة السكان"
+ },
+ "short": {
+  "en": "The service provides co-design, tenure, phased works.",
+  "fr": "Améliorer les quartiers avec leurs habitants.",
+  "ar": "تحسين الأحياء بالشراكة مع سكانها."
+ },
+ "abstract": {
+  "en": "Participatory neighbourhood upgrading — co-design with residents, tenure regularization, and phased infrastructure works that respect community priorities and existing social networks.",
+  "fr": "Amélioration participative des quartiers — concevoir avec les habitants, régulariser l’occupation foncière et réaliser des travaux d’infrastructure par phases, dans le respect des priorités de la communauté et des réseaux sociaux existants.",
+  "ar": "الارتقاء بالأحياء بمشاركة السكان — التصميم المشترك مع السكان، وتسوية أوضاع الحيازة، وتنفيذ أعمال البنية التحتية على مراحل بما يراعي أولويات المجتمع المحلي وشبكاته الاجتماعية القائمة."
+ },
+ "long": [
+  {
+   "en": "The Participatory Neighbourhood Upgrading service organises a weekly work package around household service records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 5000 household service records; 100 neighbourhood consultations; 100 phased improvement plans; 200 tenure referral dossiers. Participatory neighbourhood upgrading — co-design with residents, tenure regularization, and phased infrastructure works that respect community priorities and existing social networks. Specialists sequence those methods against the accepted weekly package. The governing boundary is that upgrading protects existing residents and records grievance routes before works. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’amélioration participative des quartiers organise un lot de travail hebdomadaire autour des dossiers de services aux ménages, plutôt que de considérer la participation comme un résultat en soi. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 5000 dossiers de services aux ménages ; 100 consultations de quartier ; 100 plans d’amélioration par phases ; 200 dossiers d’orientation en matière foncière. Amélioration participative des quartiers — concevoir avec les habitants, régulariser l’occupation foncière et réaliser des travaux d’infrastructure par phases, dans le respect des priorités de la communauté et des réseaux sociaux existants. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que l’amélioration protège les habitants en place et consigne les voies de recours avant le début des travaux. Il s’agit de résultats échelonnés issus de dossiers commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة الارتقاء بالأحياء بمشاركة السكان حزمة عمل أسبوعية تتمحور حول سجلات خدمات الأسر، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد اللازمة 5000 سجل لخدمات الأسر؛ و100 استشارة للأحياء؛ و100 خطة تحسين مرحلية؛ و200 ملف إحالة لتسوية أوضاع الحيازة. الارتقاء بالأحياء بمشاركة السكان — التصميم المشترك مع السكان، وتسوية أوضاع الحيازة، وتنفيذ أعمال البنية التحتية على مراحل بما يراعي أولويات المجتمع المحلي وشبكاته الاجتماعية القائمة. ويرتّب المختصون تنفيذ هذه الأساليب وفقاً لحزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن يحمي الارتقاء السكان القائمين، وأن يوثّق مسارات تقديم الشكاوى قبل بدء الأعمال. وهذه مخرجات مرحلية ناتجة عن حالات مكلّف بها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's April 2022 Tunisia survey identifies coastal concentration, housing costs and transport barriers as constraints on matching skilled people to work. The November 2023 CCDR also identifies investment-dependent infrastructure needs; neither finding counts commissioned posts for this service. Project preparation crosses asset ownership, local access and procurement boundaries, so technically viable work can remain fragmented until a lawful client commissions it. For `neighbourhood-upgrading`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of household service records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’enquête de l’OCDE sur la Tunisie d’avril 2022 relève que la concentration sur le littoral, le coût du logement et les obstacles liés aux transports limitent l’adéquation entre les compétences disponibles et les emplois. Le CCDR de novembre 2023 relève également des besoins en infrastructures qui dépendent des investissements ; aucun de ces constats ne quantifie les postes commandités pour ce service. La préparation des projets implique des limites liées à la propriété des actifs, à l’accès local et aux marchés publics ; des travaux techniquement viables peuvent donc rester fragmentés tant qu’un client ne les a pas commandités légalement. Pour `neighbourhood-upgrading`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des dossiers de services aux ménages, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "حدّد مسح تونس الذي أجرته OECD في أبريل 2022 تركز النشاط على السواحل، وتكاليف السكن، وعوائق النقل بوصفها قيوداً على مواءمة ذوي المهارات مع فرص العمل. كما حدّد تقرير CCDR الصادر في نوفمبر 2023 احتياجات البنية التحتية المعتمدة على الاستثمار؛ ولا يحصي أي من الاستنتاجين الوظائف المكلّف بها لهذه الخدمة. ويتطلب إعداد المشاريع التنسيق بين ملكية الأصول وإمكانية الوصول المحلي وإجراءات المشتريات، لذلك قد تظل الأعمال القابلة للتنفيذ من الناحية الفنية مجزأة إلى أن يكلّف بها عميل مخوّل قانوناً. وعليه، فإن الاستجابة المقترحة لـ `neighbourhood-upgrading` هي سير عمل تعاقدي له مستفيد محدد وتعريف معتمد لسجلات خدمات الأسر، لا توظيف يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the household service records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks neighbourhood consultations before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted household service records from rejected or deferred work and records blockers around phased improvement plans. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des dossiers de services aux ménages ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un examinateur compétent vérifie les consultations de quartier avant approbation. L’audit aléatoire proposé de 5% réexamine les justificatifs sources et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. Le bilan consolidé du service distingue les dossiers de services aux ménages acceptés des travaux rejetés ou différés et consigne les obstacles liés aux plans d’amélioration par phases. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول سجلات خدمات الأسر؛ ويحوّل 100 مدير هذه المعايير إلى إسنادات عمل لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يراجع مراجع مختص استشارات الأحياء قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين سجلات خدمات الأسر المقبولة والعمل المرفوض أو المؤجل، ويوثّق العوائق المتعلقة بخطط التحسين المرحلية. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Household service records",
+    "fr": "Dossiers de services aux ménages",
+    "ar": "سجلات خدمات الأسر"
+   },
+   "unit": {
+    "en": "household service records",
+    "fr": "dossiers de services aux ménages",
+    "ar": "سجلات خدمات الأسر"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Neighbourhood consultations",
+    "fr": "Consultations de quartier",
+    "ar": "استشارات الأحياء"
+   },
+   "unit": {
+    "en": "neighbourhood consultations",
+    "fr": "consultations de quartier",
+    "ar": "استشارات الأحياء"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Phased improvement plans",
+    "fr": "Plans d’amélioration par phases",
+    "ar": "خطط التحسين المرحلية"
+   },
+   "unit": {
+    "en": "phased improvement plans",
+    "fr": "plans d’amélioration par phases",
+    "ar": "خطط التحسين المرحلية"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Tenure referral dossiers",
+    "fr": "Dossiers d’orientation en matière foncière",
+    "ar": "ملفات إحالة لتسوية أوضاع الحيازة"
+   },
+   "unit": {
+    "en": "tenure referral dossiers",
+    "fr": "dossiers d’orientation en matière foncière",
+    "ar": "ملفات إحالة لتسوية أوضاع الحيازة"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `neighbourhood-upgrading` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the household service records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation lié à un cas pour `neighbourhood-upgrading` comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/photos ou de conception géoréférencés, reliant les dossiers de services aux ménages à la source, à l’examinateur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `neighbourhood-upgrading` المرتبطة بالحالة ملف قبول بصيغة PDF/A + بياناً بالمصادر بصيغة CSV/JSON + ملفات معاينة/صور أو تصميم ذات إسناد جغرافي، تربط سجلات خدمات الأسر بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥40 accepted household service records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis d’ici vendredi 12:00 ; **≥40 dossiers de services aux ménages acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux justificatifs** par équipe et par semaine. Les congés approuvés et les ajustements modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥40 سجلّاً مقبولاً لخدمات الأسر** لكل فريق في الأسبوع، وفقاً لتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات/التعديلات المعتمدة مقام العدد المؤهل، بينما تتجاوز العيوب الحرجة المتعلقة بالسلامة/الخصوصية أي تقييم أخضر. وهذه أهداف تجريبية وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "upgrading protects existing residents and records grievance routes before works",
+  "fr": "l’amélioration protège les habitants en place et consigne les voies de recours avant le début des travaux",
+  "ar": "يحمي الارتقاء السكان القائمين ويوثّق مسارات تقديم الشكاوى قبل بدء الأعمال"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "municipal-capacity",
+   "id": 85
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "social-protection",
+   "id": 88
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Upgrading increases displacement pressure → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "L’amélioration accentue les pressions au déplacement → incluez un examen par les utilisateurs concernés, publiez les critères de sélection et maintenez une voie de recours.",
+   "ar": "يزيد الارتقاء ضغوط التهجير → إدراج مراجعة من المستخدمين المتأثرين، ونشر افتراضات الاختيار، والإبقاء على مسار لتقديم الشكاوى."
+  },
+  {
+   "en": "Landlords capture tenant benefits → reconcile source records with the household service records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les propriétaires captent les bénéfices destinés aux locataires → rapprochez les dossiers sources de la liste de contrôle d’acceptation des dossiers de services aux ménages et attribuez la responsabilité des mesures correctives.",
+   "ar": "يستأثر المُلّاك بمنافع المستأجرين → مطابقة السجلات المصدرية مع قائمة التحقق لقبول سجلات خدمات الأسر، وتحديد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Consultation ignores women and informal occupants → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "La consultation ignore les femmes et les occupants informels → inclure un examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir un mécanisme de réclamation.",
+   "ar": "تتجاهل المشاورات النساء والشاغلين غير الرسميين → أدرجوا مراجعةً من المستخدمين المتأثرين، وانشروا افتراضات الاختيار، وأبقوا مسارًا لتقديم الشكاوى."
+  }
+ ]
+}

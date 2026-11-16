@@ -1,0 +1,167 @@
+{
+ "slug": "cultural-impact",
+ "id": 22,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Cultural Impact Assessment",
+  "fr": "Évaluation de l’impact culturel",
+  "ar": "تقييم الأثر الثقافي"
+ },
+ "short": {
+  "en": "The service provides sROI, community consultation, reporting.",
+  "fr": "Mesurer les effets culturels sans les surestimer.",
+  "ar": "قياس الأثر الثقافي دون مبالغة."
+ },
+ "abstract": {
+  "en": "Social return on investment (SROI) and cultural impact assessment — community consultation protocols, outcome measurement, and publication of assessment reports for funders and policymakers.",
+  "fr": "Retour social sur investissement (SROI) et évaluation de l’impact culturel — protocoles de consultation communautaire, mesure des résultats et publication de rapports d’évaluation à l’intention des bailleurs de fonds et des décideurs publics.",
+  "ar": "العائد الاجتماعي على الاستثمار (SROI) وتقييم الأثر الثقافي — بروتوكولات التشاور المجتمعي، وقياس النتائج، ونشر تقارير التقييم للجهات الممولة وصانعي السياسات."
+ },
+ "long": [
+  {
+   "en": "The Cultural Impact Assessment service organises a weekly work package around assessment protocols, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 50 assessment protocols; 500 community interviews; 100 outcome datasets; 25 evaluation reports. Social return on investment (SROI) and cultural impact assessment — community consultation protocols, outcome measurement, and publication of assessment reports for funders and policymakers. Specialists sequence those methods against the accepted weekly package. The governing boundary is that evaluations publish assumptions, attribution limits and negative findings. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service d’évaluation de l’impact culturel organise un lot de travail hebdomadaire autour des protocoles d’évaluation, plutôt que de considérer la présence comme le produit. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 50 protocoles d’évaluation ; 500 entretiens avec les communautés ; 100 jeux de données sur les résultats ; 25 rapports d’évaluation. Retour social sur investissement (SROI) et évaluation de l’impact culturel — protocoles de consultation communautaire, mesure des résultats et publication de rapports d’évaluation à l’intention des bailleurs de fonds et des décideurs publics. Les spécialistes planifient ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les évaluations publient leurs hypothèses, les limites de l’attribution et les résultats négatifs. Il s’agit de livrables échelonnés issus de cas commandités, et non de la promesse de réaliser chaque semaine un programme national entier.",
+   "ar": "تنظّم خدمة تقييم الأثر الثقافي حزمة عمل أسبوعية تتمحور حول بروتوكولات التقييم، بدلًا من اعتبار الحضور هو الناتج. وفي ظل القدرة التشغيلية الكاملة والمدعومة بالموارد، تتضمن خطتها التجريبية 50 بروتوكول تقييم؛ و500 مقابلة مجتمعية؛ و100 مجموعة بيانات للنتائج؛ و25 تقرير تقييم. العائد الاجتماعي على الاستثمار (SROI) وتقييم الأثر الثقافي — بروتوكولات التشاور المجتمعي، وقياس النتائج، ونشر تقارير التقييم للجهات الممولة وصانعي السياسات. وينسق المختصون هذه الأساليب بما يتوافق مع حزمة العمل الأسبوعية المقبولة. ويقضي المبدأ الحاكم بأن تنشر التقييمات الافتراضات وحدود إسناد النتائج والنتائج السلبية. وهذه مخرجات مرحلية لحالات موكلة، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `cultural-impact`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of assessment protocols, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La vue d’ensemble publiée par la Banque mondiale en 2022 compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois haut de gamme nets supplémentaires par an entre 2011 et 2017. Ce décalage historique étaye une hypothèse plus générale en matière de commande de prestations ; il ne permet pas d’établir le nombre actuel de postes vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un commanditaire payeur et conclure un accord de réutilisation. Pour `cultural-impact`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des protocoles d’évaluation, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا في الأعوام الدراسية 2012/13–2017/18 و10,675 وظيفة إضافية صافية سنويًا في الفئات الوظيفية العليا خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع للتكليف، لكنه لا يثبت وجود شواغر حالية في هذا التخصص. وقد يستفيد القيّمون والمجتمعات من الخدمة دون أن تكون لديهم ميزانية أو جهة تعاقد واحدة؛ لذا يجب تحديد جهة راعية تدفع التكلفة واتفاقية لإعادة الاستخدام. وعليه، فإن الاستجابة المقترحة لـ `cultural-impact` هي سير عمل تعاقدي مع مستفيد محدد وتعريف مقبول لبروتوكولات التقييم، لا توظيفًا يستند حصريًا إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the assessment protocols acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks community interviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted assessment protocols from rejected or deferred work and records blockers around outcome datasets. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des protocoles d’évaluation ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les entretiens avec les communautés avant leur approbation. L’audit aléatoire proposé de 5% revérifie les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. La consolidation du service distingue les protocoles d’évaluation acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux jeux de données sur les résultats. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول بروتوكولات التقييم؛ ويحوّل 100 مدير ذلك إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يراجع مراجع مؤهل المقابلات المجتمعية قبل اعتمادها. وتعيد عملية التدقيق العشوائي المقترحة بنسبة 5% التحقق من أدلة المصادر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين بروتوكولات التقييم المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بمجموعات بيانات النتائج. وينسق قادة المجموعات مراجعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "evaluation, cultural economics, sociology and statistics",
+  "fr": "évaluation, économie de la culture, sociologie et statistiques",
+  "ar": "التقييم والاقتصاد الثقافي وعلم الاجتماع والإحصاء"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Assessment protocols",
+    "fr": "Protocoles d’évaluation",
+    "ar": "بروتوكولات التقييم"
+   },
+   "unit": {
+    "en": "assessment protocols",
+    "fr": "protocoles d’évaluation",
+    "ar": "بروتوكولات التقييم"
+   },
+   "target": 50
+  },
+  {
+   "name": {
+    "en": "Community interviews",
+    "fr": "Entretiens avec les communautés",
+    "ar": "المقابلات المجتمعية"
+   },
+   "unit": {
+    "en": "community interviews",
+    "fr": "entretiens avec les communautés",
+    "ar": "مقابلات مجتمعية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Outcome datasets",
+    "fr": "jeux de données sur les résultats",
+    "ar": "مجموعات بيانات النتائج"
+   },
+   "unit": {
+    "en": "outcome datasets",
+    "fr": "jeux de données sur les résultats",
+    "ar": "مجموعات بيانات النتائج"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Evaluation reports",
+    "fr": "Rapports d’évaluation",
+    "ar": "تقارير التقييم"
+   },
+   "unit": {
+    "en": "evaluation reports",
+    "fr": "rapports d’évaluation",
+    "ar": "تقارير التقييم"
+   },
+   "target": 25
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `cultural-impact` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the assessment protocols to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `cultural-impact` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des pièces justificatives et comptes rendus de consultation expurgés, qui relient les protocoles d’évaluation aux sources, aux évaluateurs, aux versions, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `cultural-impact` المرتبطة بحالة ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + سجلات منقّحة للمصادر والمشاورات، وتربط بروتوكولات التقييم بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥1 accepted assessment protocols** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis au plus tard le ven. à 12:00 ; **≥1 protocole d’évaluation accepté** par équipe-semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥1 من بروتوكولات التقييم** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **عدم تجاوز طلب واحد لإعادة العمل** لكل فريق في الأسبوع بسبب مسائل متعلقة بالأدلة. ويؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المستوفي للشروط، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تتقدم على التقييم الأخضر. هذه أهداف تجريبية وليست عتبات مُثبتة في README."
+ },
+ "boundary": {
+  "en": "evaluations publish assumptions, attribution limits and negative findings",
+  "fr": "les évaluations publient les hypothèses, les limites d’attribution et les constats négatifs",
+  "ar": "تنشر التقييمات الافتراضات وحدود الإسناد والنتائج السلبية"
+ },
+ "depends": [
+  {
+   "slug": "social-methods",
+   "id": 73
+  },
+  {
+   "slug": "pfm",
+   "id": 91
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "municipal-capacity",
+   "id": 85
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "SROI assumptions inflate returns → reconcile source records with the assessment protocols acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les hypothèses du SROI gonflent les rendements → rapprocher les pièces justificatives de la liste de contrôle d’acceptation des protocoles d’évaluation et attribuer la responsabilité des mesures correctives.",
+   "ar": "افتراضات SROI تضخّم العوائد ← طابِق سجلات المصادر مع قائمة التحقق لقبول بروتوكولات التقييم، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Beneficiaries selected to flatter results → reconcile source records with the assessment protocols acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des bénéficiaires sont sélectionnés pour embellir les résultats → rapprocher les pièces justificatives de la liste de contrôle d’acceptation des protocoles d’évaluation et attribuer la responsabilité des mesures correctives.",
+   "ar": "اختيار المستفيدين لإظهار النتائج بصورة أفضل ← طابِق سجلات المصادر مع قائمة التحقق لقبول بروتوكولات التقييم، وحدّد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Short follow-up hides displacement → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Un suivi de courte durée masque les effets de déplacement → inclure l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir un mécanisme de réclamation.",
+   "ar": "قد تخفي المتابعة القصيرة الأمد آثار الإزاحة ← أدرج مراجعة المستخدمين المتأثرين، وانشر افتراضات الاختيار، وأبقِ قناة للتظلّم متاحة."
+  }
+ ]
+}

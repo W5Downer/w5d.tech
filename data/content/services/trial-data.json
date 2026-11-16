@@ -1,0 +1,167 @@
+{
+ "slug": "trial-data",
+ "id": 77,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Clinical Trials Data Management",
+  "fr": "Gestion des données d’essais cliniques",
+  "ar": "إدارة بيانات التجارب السريرية"
+ },
+ "short": {
+  "en": "The service provides eDC, query resolution, reporting.",
+  "fr": "Fiabiliser les données des essais cliniques.",
+  "ar": "تحسين موثوقية بيانات التجارب السريرية."
+ },
+ "abstract": {
+  "en": "Clinical trials data management — electronic data capture, query resolution workflows, and analysis-ready datasets for sponsors and regulators.",
+  "fr": "Gestion des données d’essais cliniques — saisie électronique des données, processus de résolution des demandes de clarification et jeux de données prêts à l’analyse pour les promoteurs et les autorités de réglementation.",
+  "ar": "إدارة بيانات التجارب السريرية — التقاط البيانات إلكترونيًا، وسير عمل معالجة الاستفسارات، ومجموعات بيانات جاهزة للتحليل للجهات الراعية والهيئات التنظيمية."
+ },
+ "long": [
+  {
+   "en": "The Clinical Trials Data Management service organises a weekly work package around validated edc forms, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 validated edc forms; 5000 resolved data queries; 200 dataset validation runs; 100 lock readiness reports. Clinical trials data management — electronic data capture, query resolution workflows, and analysis-ready datasets for sponsors and regulators. Specialists sequence those methods against the accepted weekly package. The governing boundary is that data changes retain authorised source verification and an immutable trial audit trail. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de gestion des données d’essais cliniques organise un lot de travail hebdomadaire autour de formulaires EDC validés, plutôt que de considérer la participation comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 formulaires EDC validés ; 5000 demandes de clarification résolues ; 200 exécutions de validation de jeux de données ; 100 rapports de préparation au verrouillage de la base. Gestion des données d’essais cliniques — saisie électronique des données, processus de résolution des demandes de clarification et jeux de données prêts à l’analyse pour les promoteurs et les autorités de réglementation. Les spécialistes planifient ces activités en fonction du lot hebdomadaire accepté. La règle fondamentale est que les modifications des données conservent une vérification des sources autorisée et une piste d’audit immuable de l’essai. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة إدارة بيانات التجارب السريرية حزمة عمل أسبوعية حول نماذج التقاط البيانات إلكترونيًا المعتمدة، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند استغلال كامل الطاقة الاستيعابية مع توافر الموارد، 500 نموذج معتمد لالتقاط البيانات إلكترونيًا؛ و5000 استفسار بيانات تمت معالجتها؛ و200 عملية للتحقق من مجموعات البيانات؛ و100 تقرير عن الجاهزية لإقفال البيانات. إدارة بيانات التجارب السريرية — التقاط البيانات إلكترونيًا، وسير عمل معالجة الاستفسارات، ومجموعات بيانات جاهزة للتحليل للجهات الراعية والهيئات التنظيمية. وينسق الاختصاصيون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المقبولة. ويقضي الضابط الناظم بأن تحتفظ تغييرات البيانات بالتحقق من المصدر المصرح به وبسجل تدقيق غير قابل للتغيير للتجربة. وهذه مخرجات مرحلية للحالات التي جرى التكليف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "INS/ONM's December 2021 HIMS report estimates that approximately 3,300 medical doctors emigrated during 2015–2020, while INS estimates graduate unemployment at 26.6% in Q2 2026. These different populations show why generic graduate availability cannot substitute for verified health capability. Health research and equipment users need qualified staff, consent, secure information and authorised facilities rather than an unlicensed labour pool. For `trial-data`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of validated edc forms, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le rapport HIMS de l’INS/ONM de décembre 2021 estime qu’environ 3,300 médecins ont émigré entre 2015 et 2020, tandis que l’INS estime le chômage des diplômés à 26.6% au T2 2026. Ces populations différentes montrent pourquoi la disponibilité générale de diplômés ne saurait remplacer des compétences en santé vérifiées. Les utilisateurs de la recherche en santé et des équipements ont besoin de personnel qualifié, du consentement requis, d’informations sécurisées et d’installations autorisées, et non d’un vivier de main-d’œuvre sans agrément. Pour `trial-data`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des formulaires EDC validés, plutôt qu’un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يقدّر تقرير HIMS الصادر عن INS/ONM في ديسمبر 2021 أن نحو 3,300 طبيب هاجروا خلال 2015–2020، بينما يقدّر INS معدل بطالة الخريجين بـ26.6% في الربع الثاني من 2026. وتُظهر هاتان الفئتان المختلفتان سبب عدم إمكان اعتبار توافر الخريجين عمومًا بديلًا عن التحقق من الكفاءة الصحية. فمستخدمو البحوث الصحية والمعدات يحتاجون إلى موظفين مؤهلين، وموافقة، ومعلومات آمنة، ومرافق مرخصة، لا إلى قوة عاملة غير مرخصة. لذلك، يتمثل الرد المقترح لخدمة `trial-data` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا مقبولًا لنماذج التقاط البيانات إلكترونيًا المعتمدة، لا في استقطاب يُبرر بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the validated edc forms acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks resolved data queries before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted validated edc forms from rejected or deferred work and records blockers around dataset validation runs. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des formulaires EDC validés ; 100 managers les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les demandes de clarification résolues avant approbation. L’audit aléatoire proposé de 5% revérifie les justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un manager. Le récapitulatif du service distingue les formulaires EDC validés acceptés des travaux rejetés ou reportés, et consigne les obstacles liés aux exécutions de validation des jeux de données. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول نماذج التقاط البيانات إلكترونيًا المعتمدة؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من استفسارات البيانات التي تمت معالجتها قبل الموافقة. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص الخدمة بين نماذج التقاط البيانات إلكترونيًا المعتمدة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بعمليات التحقق من مجموعات البيانات. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "biostatistics, clinical data management and health information systems",
+  "fr": "biostatistique, gestion des données cliniques et systèmes d’information de santé",
+  "ar": "الإحصاء الحيوي، وإدارة البيانات السريرية، ونظم المعلومات الصحية"
+ },
+ "diploma": "maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
+  "fr": "pôles régionaux universitaires et de laboratoire reliés à Kairouan, Sfax et au nord-ouest ; les lieux de terrain sont définis selon des protocoles approuvés",
+  "ar": "مراكز جامعية ومختبرية إقليمية مرتبطة بالقيروان وصفاقس والشمال الغربي؛ وتتبع مواقع العمل الميداني البروتوكولات المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Validated EDC forms",
+    "fr": "Formulaires EDC validés",
+    "ar": "نماذج EDC المعتمدة"
+   },
+   "unit": {
+    "en": "validated edc forms",
+    "fr": "formulaires EDC validés",
+    "ar": "نماذج EDC المعتمدة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Resolved data queries",
+    "fr": "Demandes de clarification résolues",
+    "ar": "استفسارات البيانات التي تمت معالجتها"
+   },
+   "unit": {
+    "en": "resolved data queries",
+    "fr": "requêtes de données résolues",
+    "ar": "استفسارات البيانات المحسومة"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Dataset validation runs",
+    "fr": "exécutions de validation des jeux de données",
+    "ar": "عمليات التحقق من صحة مجموعة البيانات"
+   },
+   "unit": {
+    "en": "dataset validation runs",
+    "fr": "exécutions de validation des jeux de données",
+    "ar": "عمليات التحقق من صحة مجموعة البيانات"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Lock readiness reports",
+    "fr": "rapports de préparation au verrouillage",
+    "ar": "تقارير الجاهزية للإقفال"
+   },
+   "unit": {
+    "en": "lock readiness reports",
+    "fr": "rapports de préparation au verrouillage",
+    "ar": "تقارير الجاهزية للإقفال"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `trial-data` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the validated edc forms to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `trial-data` lié à un cas comprend un dossier d’acceptation PDF/A, un manifeste des sources CSV/JSON, des identifiants de méthode/version et des données sources reproductibles, reliant les formulaires edc validés à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `trial-data` مرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بمصادر البيانات بصيغتي CSV/JSON + معرّفات المنهجية/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط نماذج edc المعتمدة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted validated edc forms** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant vendredi 12:00 ; **≥4 formulaires edc validés et acceptés** par équipe-semaine, sous réserve de la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés autorisés et les ajustements modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score favorable. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥4 نماذج edc معتمدة** لكل فريق-أسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة/الخصوصية تلغي التقييم الأخضر. هذه أهداف تجريبية وليست حدودًا ثابتة في README."
+ },
+ "boundary": {
+  "en": "data changes retain authorised source verification and an immutable trial audit trail",
+  "fr": "les modifications de données préservent la vérification autorisée des sources et une piste d’audit d’essai immuable",
+  "ar": "تحتفظ تغييرات البيانات بالتحقق المعتمد من المصدر وبسجل تدقيق غير قابل للتغيير للتجربة"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "data-engineering",
+   "id": 108
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "health-governance",
+   "id": 97
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "3",
+   "target": "3"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Queries resolved by guessing values → reconcile source records with the validated edc forms acceptance checklist and assign corrective-action ownership.",
+   "fr": "Requêtes résolues en devinant les valeurs → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des formulaires edc validés et attribuer la responsabilité des mesures correctives.",
+   "ar": "تسوية الاستفسارات بالتخمين → طابِق سجلات المصدر مع قائمة التحقق لقبول نماذج edc المعتمدة، وحدّد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Unblinding compromises trial integrity → reconcile source records with the validated edc forms acceptance checklist and assign corrective-action ownership.",
+   "fr": "La levée de l’aveugle compromet l’intégrité de l’essai → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des formulaires edc validés et attribuer la responsabilité des mesures correctives.",
+   "ar": "الإخلال بالتعمية يهدد نزاهة التجربة → طابِق سجلات المصدر مع قائمة التحقق لقبول نماذج edc المعتمدة، وحدّد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Database lock precedes source reconciliation → reconcile source records with the validated edc forms acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le verrouillage de la base de données précède le rapprochement des sources → rapprocher les enregistrements sources de la liste de contrôle d’acceptation des formulaires edc validés et attribuer la responsabilité des mesures correctives.",
+   "ar": "يحدث إقفال قاعدة البيانات قبل تسوية المصادر → طابِق سجلات المصدر مع قائمة التحقق لقبول نماذج edc المعتمدة، وحدّد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

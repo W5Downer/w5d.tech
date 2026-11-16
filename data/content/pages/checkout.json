@@ -1,0 +1,71 @@
+{
+ "slug": "checkout",
+ "title": {
+  "en": "Checkout — take a part today",
+  "fr": "Paiement — prenez une part dès aujourd’hui",
+  "ar": "إتمام الشراء — احصل على حصة اليوم"
+ },
+ "description": {
+  "en": "Three-step checkout wizard: your details, your parts, review and confirm. Demo mode.",
+  "fr": "Parcours de paiement en trois étapes : vos coordonnées, vos parts, puis vérification et confirmation. Mode démo.",
+  "ar": "معالج إتمام شراء من ثلاث خطوات: بياناتك، وحصصك، ثم المراجعة والتأكيد. الوضع التجريبي."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "co-top",
+   "variant": "classic",
+   "gradient": "peak",
+   "title": {
+    "en": "Take a part. **Three steps.**",
+    "fr": "Prenez une part. **Trois étapes.**",
+    "ar": "احصل على حصة. **ثلاث خطوات.**"
+   },
+   "lead": {
+    "en": "Details, parts and schedule, review. The live price is shown before every decision.",
+    "fr": "Coordonnées, parts et échéancier, puis vérification. Le prix en vigueur est affiché avant chaque décision.",
+    "ar": "البيانات، والحصص والجدول الزمني، ثم المراجعة. يُعرض السعر الحالي قبل كل قرار."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Start",
+      "fr": "Commencer",
+      "ar": "ابدأ"
+     },
+     "href": "#chk-wizard",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Checkout",
+    "fr": "Paiement",
+    "ar": "إتمام الشراء"
+   },
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  },
+  {
+   "type": "wizard",
+   "id": "chk-wizard",
+   "mode": "checkout",
+   "tier": "e",
+   "focus": 4,
+   "title": {
+    "en": "Your part",
+    "fr": "Votre part",
+    "ar": "حصتك"
+   }
+  },
+  {
+   "type": "notice",
+   "id": "chk-limits",
+   "tier": "i",
+   "focus": 1
+  }
+ ]
+}

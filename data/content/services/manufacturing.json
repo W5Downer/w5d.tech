@@ -1,0 +1,167 @@
+{
+ "slug": "manufacturing",
+ "id": 122,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Advanced Manufacturing",
+  "fr": "Fabrication avancée",
+  "ar": "التصنيع المتقدم"
+ },
+ "short": {
+  "en": "The service provides cNC, additive, lean production.",
+  "fr": "Moderniser la production avec contrôle qualité.",
+  "ar": "تحديث الإنتاج مع ضبط الجودة."
+ },
+ "abstract": {
+  "en": "Advanced manufacturing — CNC, additive manufacturing, and lean production systems for industrial modernization.",
+  "fr": "Fabrication avancée — CNC, fabrication additive et systèmes de production au plus juste au service de la modernisation industrielle.",
+  "ar": "التصنيع المتقدم — أنظمة CNC والتصنيع بالإضافة والإنتاج الرشيق لتحديث القطاع الصناعي."
+ },
+ "long": [
+  {
+   "en": "The Advanced Manufacturing service organises a weekly work package around manufacturing process audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 manufacturing process audits; 200 cnc validation programmes; 500 additive prototype checks; 200 lean improvement trials. Advanced manufacturing — CNC, additive manufacturing, and lean production systems for industrial modernization. Specialists sequence those methods against the accepted weekly package. The governing boundary is that first-article verification and machine safety precede production changes. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de fabrication avancée organise un lot de travail hebdomadaire autour d’audits des processus de fabrication, plutôt que de faire de la présence le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 audits des processus de fabrication ; 200 programmes de validation CNC ; 500 contrôles de prototypes issus de la fabrication additive ; 200 essais d’amélioration au plus juste. Fabrication avancée — CNC, fabrication additive et systèmes de production au plus juste au service de la modernisation industrielle. Les spécialistes ordonnent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que la vérification du premier article et la sécurité des machines priment sur les modifications de production. Il s’agit de résultats échelonnés issus de cas commandités, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة التصنيع المتقدم حزمة عمل أسبوعية تتمحور حول تدقيق عمليات التصنيع، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند توافر الموارد والقدرة التشغيلية الكاملة، 200 تدقيق لعمليات التصنيع؛ و200 برنامج للتحقق من CNC؛ و500 فحص للنماذج الأولية المصنّعة بالإضافة؛ و200 تجربة للتحسين الرشيق. التصنيع المتقدم — أنظمة CNC والتصنيع بالإضافة والإنتاج الرشيق لتحديث القطاع الصناعي. ويرتّب المختصون هذه الأساليب ضمن الحزمة الأسبوعية المعتمدة. والضابط الأساسي هو أن التحقق من القطعة الأولى وسلامة الآلات يسبقان أي تغييرات في الإنتاج. وهذه مخرجات مرحلية لحالات جرى تكليفها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `manufacturing`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of manufacturing process audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude 2026 de la Banque mondiale sur les compétences numériques constate une demande de compétences techniques et hybrides dans les secteurs tunisiens, en s’appuyant principalement sur des données en ligne formelles et urbaines allant jusqu’en 2025. L’examen de l’OCDE de juin 2024 documente séparément les contraintes liées aux compétences des employeurs. Aucune de ces sources ne vérifie le nombre national de postes vacants dans cette spécialité technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable du système qui s’engage à assumer ce rôle ; affecter des développeurs isolément n’assure ni cette coordination ni la présence d’un acheteur. Pour `manufacturing`, la réponse proposée consiste donc en un flux de travail sous contrat, avec un bénéficiaire désigné et une définition acceptée des audits des processus de fabrication, et non en un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، استناداً أساساً إلى بيانات إلكترونية رسمية وحضرية حتى عام 2025. ويوثّق استعراض OECD الصادر في يونيو 2024، على نحو منفصل، القيود التي يواجهها أصحاب العمل في مجال المهارات. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا التخصص التقني الدقيق. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة وجود مسؤول نظام ملتزم؛ فتعيين مطورين أفراد لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، فإن الاستجابة المقترحة في مجال `manufacturing` هي سير عمل تعاقدي يضم جهة مستفيدة محددة وتعريفاً معتمداً لتدقيق عمليات التصنيع، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the manufacturing process audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks cnc validation programmes before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted manufacturing process audits from rejected or deferred work and records blockers around additive prototype checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits des processus de fabrication ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les programmes de validation CNC avant approbation. L’audit aléatoire proposé de 5 % revérifie les éléments probants à la source et les exceptions ; il ne remplace pas l’examen, par les responsables, de chaque rapport hebdomadaire. Le bilan du service distingue les audits des processus de fabrication acceptés des travaux rejetés ou reportés et consigne les blocages liés aux contrôles de prototypes issus de la fabrication additive. Les examens des responsables de pôle coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيق عمليات التصنيع؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من برامج التحقق من CNC قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص الأدلة المصدرية والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين تدقيق عمليات التصنيع المقبول والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بفحوص النماذج الأولية المصنّعة بالإضافة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "industrial engineering, mechanical engineering, materials and quality control",
+  "fr": "génie industriel, génie mécanique, matériaux et contrôle qualité",
+  "ar": "الهندسة الصناعية، والهندسة الميكانيكية، وعلوم المواد، ومراقبة الجودة"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Manufacturing process audits",
+    "fr": "Audits des processus de fabrication",
+    "ar": "تدقيق عمليات التصنيع"
+   },
+   "unit": {
+    "en": "manufacturing process audits",
+    "fr": "audits des processus de fabrication",
+    "ar": "تدقيق عمليات التصنيع"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "CNC validation programmes",
+    "fr": "Programmes de validation CNC",
+    "ar": "برامج التحقق من CNC"
+   },
+   "unit": {
+    "en": "cnc validation programmes",
+    "fr": "programmes de validation CNC",
+    "ar": "برامج التحقق من CNC"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Additive prototype checks",
+    "fr": "Contrôles de prototypes issus de la fabrication additive",
+    "ar": "فحوص النماذج الأولية المصنّعة بالإضافة"
+   },
+   "unit": {
+    "en": "additive prototype checks",
+    "fr": "contrôles de prototypes issus de la fabrication additive",
+    "ar": "فحوص النماذج الأولية المصنّعة بالإضافة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Lean improvement trials",
+    "fr": "Essais d’amélioration au plus juste",
+    "ar": "تجارب التحسين الرشيق"
+   },
+   "unit": {
+    "en": "lean improvement trials",
+    "fr": "essais d’amélioration au plus juste",
+    "ar": "تجارب التحسين الرشيق"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `manufacturing` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the manufacturing process audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `manufacturing` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + du code/de la configuration versionnés, des tests et des journaux de déploiement ou de récupération, reliant les audits des processus de fabrication à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `manufacturing` المرتبطة بالحالة ملف قبول PDF/A + بياناً للمصادر بصيغتي CSV/JSON + الشيفرة/الإعدادات ذات الإصدارات المحددة والاختبارات وسجلات النشر أو الاستعادة، مع ربط تدقيق عمليات التصنيع بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted manufacturing process audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis d’ici ven. 12:00 ; **≥2 audits des processus de fabrication acceptés** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un résultat vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ و**≥2 من تدقيقات عمليات التصنيع المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، فيما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. وهذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "first-article verification and machine safety precede production changes",
+  "fr": "la vérification du premier article et la sécurité des machines priment sur les modifications de production",
+  "ar": "يسبق التحقق من القطعة الأولى وسلامة الآلات أي تغييرات في الإنتاج"
+ },
+ "depends": [
+  {
+   "slug": "materials-science",
+   "id": 59
+  },
+  {
+   "slug": "metrology",
+   "id": 64
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "construction-tech",
+   "id": 31
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Programme errors damage machines → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les erreurs de programme endommagent les machines → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "أخطاء البرمجة تضر بالآلات → يُشترط اعتماد السلامة من مختص مؤهل، وإجراء تجارب مضبوطة، وتوثيق معيار لإيقاف العمل."
+  },
+  {
+   "en": "Additive parts fail outside tested conditions → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les pièces issues de la fabrication additive échouent en dehors des conditions testées → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تعطّل القطع المصنّعة بالإضافة خارج الظروف المختبرة → يُشترط اعتماد السلامة من مختص مؤهل، وإجراء تجارب مضبوطة، وتوثيق معيار لإيقاف العمل."
+  },
+  {
+   "en": "Lean changes remove safety buffers → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les modifications au plus juste suppriment les marges de sécurité → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "تؤدي التغييرات الرشيقة إلى إزالة هوامش السلامة → يُشترط اعتماد السلامة من مختص مؤهل، وإجراء تجارب مضبوطة، وتوثيق معيار لإيقاف العمل."
+  }
+ ]
+}

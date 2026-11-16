@@ -1,0 +1,167 @@
+{
+ "slug": "water-treatment",
+ "id": 120,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Water Treatment Technology",
+  "fr": "Technologies de traitement de l’eau",
+  "ar": "تقنيات معالجة المياه"
+ },
+ "short": {
+  "en": "The service provides desalination, filtration, reuse.",
+  "fr": "Mettre en service des traitements d'eau contrôlés.",
+  "ar": "تشغيل معالجة مياه خاضعة للرقابة."
+ },
+ "abstract": {
+  "en": "Water treatment technology — desalination, advanced filtration, and industrial and municipal water reuse systems.",
+  "fr": "Technologies de traitement de l’eau — dessalement, filtration avancée et systèmes de réutilisation de l’eau à usage industriel et municipal.",
+  "ar": "تقنيات معالجة المياه — التحلية والترشيح المتقدم وأنظمة إعادة استخدام المياه الصناعية والبلدية."
+ },
+ "long": [
+  {
+   "en": "The Water Treatment Technology service organises a weekly work package around process readiness reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 process readiness reviews; 1000 water quality verification sets; 200 treatment pilot logs; 500 operator competence checks. Water treatment technology — desalination, advanced filtration, and industrial and municipal water reuse systems. Specialists sequence those methods against the accepted weekly package. The governing boundary is that potable and reuse claims require authorised laboratory results and operator approval. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Technologies de traitement de l’eau organise un lot de travail hebdomadaire autour des revues de préparation des processus, plutôt que de considérer la présence comme le produit fourni. À pleine capacité, avec des ressources adéquates, son plan pilote prévoit 200 revues de préparation des processus ; 1000 ensembles de vérification de la qualité de l’eau ; 200 journaux d’essais pilotes de traitement ; 500 contrôles des compétences des opérateurs. Technologies de traitement de l’eau — dessalement, filtration avancée et systèmes de réutilisation de l’eau à usage industriel et municipal. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle de fond est que toute affirmation concernant l’eau potable et la réutilisation de l’eau doit s’appuyer sur des résultats de laboratoire autorisés et être approuvée par un opérateur. Il s’agit de produits intermédiaires issus de dossiers commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة تقنيات معالجة المياه حزمة عمل أسبوعية تتمحور حول مراجعات الجاهزية التشغيلية، بدلاً من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية عند اكتمال القدرة والموارد 200 مراجعة للجاهزية التشغيلية؛ و1000 مجموعة للتحقق من جودة المياه؛ و200 سجل للتجارب التشغيلية للمعالجة؛ و500 فحص لكفاءة المشغلين. تقنيات معالجة المياه — التحلية والترشيح المتقدم وأنظمة إعادة استخدام المياه الصناعية والبلدية. وينسق المختصون هذه الأساليب وفقاً للحزمة الأسبوعية المعتمدة. ويتمثل الضابط الحاكم في أن ادعاءات صلاحية المياه للشرب وإعادة استخدامها تتطلب نتائج مختبرية معتمدة وموافقة المشغل. وهذه مخرجات مرحلية لحالات كُلّف بتنفيذها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `water-treatment`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of process readiness reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie liées à l’eau, au littoral et à la transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela démontre un besoin d’intervention technique mesurée, et non l’existence d’une commande financée pour ce service en particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la mise en commande de travaux techniquement utiles. Pour `water-treatment`, la réponse proposée est donc un flux de travail contractualisé, avec un bénéficiaire désigné et une définition acceptée des revues de préparation des processus, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE الذي بلغ 34% في 2021. ويثبت ذلك الحاجة إلى تدخل تقني قائم على القياس، لا وجود طلب ممول لهذه الخدمة بعينها. وقد يؤدي تعدد مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة تقنياً. لذلك، فإن الاستجابة المقترحة لخدمة `water-treatment` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لمراجعات الجاهزية التشغيلية، لا توظيفاً يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the process readiness reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks water quality verification sets before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted process readiness reviews from rejected or deferred work and records blockers around treatment pilot logs. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des revues de préparation des processus ; 100 responsables les déclinent en affectations pour des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un relecteur compétent vérifie les ensembles de vérification de la qualité de l’eau avant leur approbation. L’audit aléatoire proposé, à hauteur de 5%, revérifie les preuves sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les revues de préparation des processus acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux journaux d’essais pilotes de traitement. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1 000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مراجعات الجاهزية التشغيلية؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon هوية المساهمين المسؤولين، فيما يراجع مراجع مؤهل مجموعات التحقق من جودة المياه قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصدر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز ملخص أداء الخدمة بين مراجعات الجاهزية التشغيلية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المرتبطة بسجلات التجارب التشغيلية للمعالجة. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون زيادة الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "chemical engineering, water engineering and environmental process control",
+  "fr": "génie chimique, ingénierie de l’eau et maîtrise des procédés environnementaux",
+  "ar": "الهندسة الكيميائية وهندسة المياه والتحكم في العمليات البيئية"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Process readiness reviews",
+    "fr": "Revues de préparation des processus",
+    "ar": "مراجعات الجاهزية التشغيلية"
+   },
+   "unit": {
+    "en": "process readiness reviews",
+    "fr": "revues de préparation des processus",
+    "ar": "مراجعات الجاهزية التشغيلية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Water quality verification sets",
+    "fr": "Ensembles de vérification de la qualité de l’eau",
+    "ar": "مجموعات التحقق من جودة المياه"
+   },
+   "unit": {
+    "en": "water quality verification sets",
+    "fr": "ensembles de vérification de la qualité de l’eau",
+    "ar": "مجموعات التحقق من جودة المياه"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Treatment pilot logs",
+    "fr": "Journaux de suivi des projets pilotes de traitement",
+    "ar": "سجلات التجارب الأولية للمعالجة"
+   },
+   "unit": {
+    "en": "treatment pilot logs",
+    "fr": "journaux de suivi des projets pilotes de traitement",
+    "ar": "سجلات التجارب الأولية للمعالجة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Operator competence checks",
+    "fr": "Vérifications des compétences des opérateurs",
+    "ar": "عمليات التحقق من كفاءة المشغلين"
+   },
+   "unit": {
+    "en": "operator competence checks",
+    "fr": "vérifications des compétences des opérateurs",
+    "ar": "عمليات التحقق من كفاءة المشغلين"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `water-treatment` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the process readiness reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier de réception de traitement de l’eau `water-treatment` lié à un cas comprend un dossier de réception PDF/A, un manifeste source CSV/JSON et des fichiers d’inspection ou de conception géoréférencés (photos comprises). Il relie les revues de préparation du procédé aux sources, aux réviseurs, aux versions, au journal des exceptions et aux autorisations.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `water-treatment` ملف قبول PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات تفتيش أو صورًا أو تصاميم محددة جغرافيًا، وتربط مراجعات جاهزية العمليات بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted process readiness reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant ven. 12:00 ; **≥2 revues de préparation du procédé acceptées** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés approuvés et les aménagements modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ إجراء **≥2 من مراجعات جاهزية العمليات المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل مرتبط بالأدلة** لكل فريق في الأسبوع. وتغيّر الإجازات المعتمدة أو التعديلات المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تلغي التقييم الأخضر. هذه أهداف تجريبية وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "potable and reuse claims require authorised laboratory results and operator approval",
+  "fr": "les allégations concernant l’eau potable et la réutilisation nécessitent des résultats de laboratoire autorisés et l’approbation d’un opérateur",
+  "ar": "تتطلب الادعاءات المتعلقة بمياه الشرب وإعادة الاستخدام نتائج مختبرية معتمدة وموافقة المشغل"
+ },
+ "depends": [
+  {
+   "slug": "water-sanitation",
+   "id": 35
+  },
+  {
+   "slug": "water-soil-labs",
+   "id": 55
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "utility-regulation",
+   "id": 99
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "6",
+   "target": "6.3"
+  },
+  {
+   "goal": "6",
+   "target": "6.4"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Membrane fouling defeats designed output → reconcile source records with the process readiness reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’encrassement des membranes compromet le rendement prévu → rapprochez les registres sources de la liste de contrôle des revues de préparation du procédé et attribuez la responsabilité des mesures correctives.",
+   "ar": "يؤدي تلوث الأغشية إلى تعذّر تحقيق الإنتاج المصمم → طابِق سجلات المصدر مع قائمة التحقق لقبول مراجعات جاهزية العمليات، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Brine disposal harms receiving waters → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "L’élimination de la saumure nuit aux eaux réceptrices → exigez une validation de sécurité par une personne compétente, des essais contrôlés et un critère documenté d’arrêt des travaux.",
+   "ar": "يضرّ التخلص من المحلول الملحي بالمياه المستقبِلة → اشترط اعتماداً من مختص مؤهل في السلامة، وتجارب مضبوطة، ومؤشراً موثقاً لإيقاف العمل."
+  },
+  {
+   "en": "Untested reuse exposes consumers to pathogens → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "La réutilisation sans essais expose les consommateurs à des agents pathogènes → limitez les accès, masquez les éléments probants communiqués et testez le processus à accès restreint.",
+   "ar": "يعرّض إعادة الاستخدام غير المختبرة المستهلكين لمسببات الأمراض → قلّل الوصول إلى الحد الأدنى، واحجب المعلومات في الأدلة المنشورة، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

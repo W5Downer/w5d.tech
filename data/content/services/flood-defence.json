@@ -1,0 +1,167 @@
+{
+ "slug": "flood-defence",
+ "id": 48,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Coastal & Flood Defence",
+  "fr": "Littoral et défense contre les inondations",
+  "ar": "الحماية الساحلية من الفيضانات"
+ },
+ "short": {
+  "en": "The service provides breakwaters, dunes, early warning.",
+  "fr": "Préparer des défenses côtières et contre les crues.",
+  "ar": "إعداد حماية السواحل والوقاية من الفيضانات."
+ },
+ "abstract": {
+  "en": "Coastal and flood defence infrastructure — breakwaters, dune restoration, flood barriers, and early-warning systems integrated with municipal emergency response.",
+  "fr": "Infrastructures de protection du littoral et de lutte contre les inondations — brise-lames, restauration des dunes, barrières anti-inondation et systèmes d’alerte précoce intégrés aux interventions d’urgence municipales.",
+  "ar": "البنية التحتية للحماية الساحلية من الفيضانات — حواجز الأمواج، واستعادة الكثبان الرملية، والحواجز ضد الفيضانات، وأنظمة الإنذار المبكر المتكاملة مع الاستجابة البلدية للطوارئ."
+ },
+ "long": [
+  {
+   "en": "The Coastal & Flood Defence service organises a weekly work package around coastal profile surveys, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 coastal profile surveys; 300 flood defence inspections; 100 adaptation option studies; 100 warning protocol tests. Coastal and flood defence infrastructure — breakwaters, dune restoration, flood barriers, and early-warning systems integrated with municipal emergency response. Specialists sequence those methods against the accepted weekly package. The governing boundary is that studies assess sediment movement and downstream impacts before recommending works. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Littoral et défense contre les inondations organise un lot de travaux hebdomadaire autour des levés de profils côtiers, plutôt que de considérer la présence comme le produit. À pleine capacité et avec les ressources nécessaires, son plan pilote prévoit 300 levés de profils côtiers ; 300 inspections des dispositifs de défense contre les inondations ; 100 études des options d’adaptation ; 100 tests des protocoles d’alerte. Infrastructures de protection du littoral et de lutte contre les inondations — brise-lames, restauration des dunes, barrières anti-inondation et systèmes d’alerte précoce intégrés aux interventions d’urgence municipales. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que les études évaluent les mouvements sédimentaires et les impacts en aval avant de recommander des travaux. Il s’agit de résultats échelonnés issus de dossiers commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة الحماية الساحلية من الفيضانات حزمة عمل أسبوعية تتمحور حول مسوحات المقاطع الساحلية، بدلًا من اعتبار الحضور هو المنتج. وعند توافر كامل الموارد والقدرات، تتضمن خطتها التجريبية 300 مسح للمقاطع الساحلية؛ و300 عملية تفتيش لمنشآت الحماية من الفيضانات؛ و100 دراسة لخيارات التكيف؛ و100 اختبار لبروتوكولات الإنذار. البنية التحتية للحماية الساحلية من الفيضانات — حواجز الأمواج، واستعادة الكثبان الرملية، والحواجز ضد الفيضانات، وأنظمة الإنذار المبكر المتكاملة مع الاستجابة البلدية للطوارئ. ويُنسّق الاختصاصيون هذه الأساليب ضمن حزمة العمل الأسبوعية المعتمدة. ويقضي الضابط المنظّم بتقييم حركة الرواسب والآثار على المناطق الواقعة في اتجاه مجرى المياه قبل التوصية بتنفيذ الأعمال. وهذه مخرجات مرحلية لحالات مكلّف بها، وليست وعدًا باستكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `flood-defence`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of coastal profile surveys, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes dans le réseau de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela met en évidence un besoin d’interventions techniques mesurées, et non une commande financée pour ce service en particulier. La séparation entre propriétaires d’actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `flood-defence`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des levés de profils côtiers, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما فيها فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخلات فنية مدروسة، لا إلى وجود طلب ممول لهذه الخدمة بعينها. وقد تحول الجهات المالكة للأصول وميزانيات البنية التحتية والمسؤوليات البيئية المنفصلة دون إسناد أعمال مفيدة من الناحية الفنية. لذلك، تتمثل الاستجابة المقترحة لخدمة `flood-defence` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لمسوح المقاطع الساحلية، لا في تبرير التوظيف بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the coastal profile surveys acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks flood defence inspections before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted coastal profile surveys from rejected or deferred work and records blockers around adaptation option studies. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit la grille d’acceptation des levés de profils côtiers ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les inspections des dispositifs de défense contre les inondations avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les levés de profils côtiers acceptés des travaux rejetés ou différés et consigne les obstacles liés aux études des options d’adaptation. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول مسوح المقاطع الساحلية؛ ويترجمها 100 مدير إلى مهام لفِرق تضم نحو عشرة خبراء. وتتيح الهويات المرتبطة بـDyon تحديد المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من عمليات تفتيش منشآت الحماية من الفيضانات قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات، لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين مسوح المقاطع الساحلية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل المعوقات التي تواجه دراسات خيارات التكيف. وتنسّق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "coastal engineering, hydraulics and geomorphology",
+  "fr": "génie côtier, hydraulique et géomorphologie",
+  "ar": "الهندسة الساحلية والهيدروليكا والجيومورفولوجيا"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Bizerte, the Gulf of Gabès and partner coastal municipalities",
+  "fr": "Bizerte, le golfe de Gabès et les municipalités côtières partenaires",
+  "ar": "بنزرت وخليج قابس والبلديات الساحلية الشريكة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Coastal profile surveys",
+    "fr": "Levés de profils côtiers",
+    "ar": "مسوحات المقاطع الساحلية"
+   },
+   "unit": {
+    "en": "coastal profile surveys",
+    "fr": "levés de profils côtiers",
+    "ar": "مسوحات المقاطع الساحلية"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Flood defence inspections",
+    "fr": "Inspections des dispositifs de défense contre les inondations",
+    "ar": "عمليات تفتيش منشآت الحماية من الفيضانات"
+   },
+   "unit": {
+    "en": "flood defence inspections",
+    "fr": "inspections des dispositifs de défense contre les inondations",
+    "ar": "عمليات تفتيش منشآت الحماية من الفيضانات"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Adaptation option studies",
+    "fr": "Études des options d’adaptation",
+    "ar": "دراسات خيارات التكيف"
+   },
+   "unit": {
+    "en": "adaptation option studies",
+    "fr": "études des options d’adaptation",
+    "ar": "دراسات خيارات التكيف"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Warning protocol tests",
+    "fr": "Tests des protocoles d’alerte",
+    "ar": "اختبارات بروتوكول التحذير"
+   },
+   "unit": {
+    "en": "warning protocol tests",
+    "fr": "tests des protocoles d’alerte",
+    "ar": "اختبارات بروتوكول التحذير"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `flood-defence` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the coastal profile surveys to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `flood-defence` lié à un cas comprend un dossier d’acceptation PDF/A, un manifeste source CSV/JSON, ainsi que des fichiers de conception ou d’inspection et des photos géoréférencés. Il relie les levés du profil côtier à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ومخصصة لـ`flood-defence` ملف قبول بصيغة PDF/A، وبيانًا بمصادر البيانات بصيغتي CSV/JSON، وملفات الفحص/الصور أو التصميم ذات الإسناد الجغرافي، بما يربط مسوحات المقاطع الساحلية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted coastal profile surveys** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis avant le vendredi à 12:00 ; **≥3 levés du profil côtier acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés et ajustements approuvés modifient le dénominateur des rapports admissibles, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**قبول ≥3 مسوحات للمقاطع الساحلية** لكل فريق في الأسبوع، وفقًا لتعقيد الحالة؛ و**≤1 طلب إعادة عمل متعلق بالأدلة** لكل فريق في الأسبوع. ويُعدّل الإجازة المعتمدة أو الترتيبات التيسيرية المقامَ المؤهل، كما أن عيوب السلامة/الخصوصية الحرجة تتغلب على أي نتيجة خضراء. هذه أهداف تجريبية وليست عتبات مثبتة في ملف README."
+ },
+ "boundary": {
+  "en": "studies assess sediment movement and downstream impacts before recommending works",
+  "fr": "les études évaluent les mouvements de sédiments et les impacts en aval avant de recommander des travaux",
+  "ar": "تقيّم الدراسات حركة الرواسب والآثار اللاحقة قبل التوصية بالأعمال"
+ },
+ "depends": [
+  {
+   "slug": "marine-science",
+   "id": 57
+  },
+  {
+   "slug": "climate-modelling",
+   "id": 58
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "disaster-tech",
+   "id": 130
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "11",
+   "target": "11"
+  },
+  {
+   "goal": "13",
+   "target": "13.1"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Hard defences transfer erosion → reconcile source records with the coastal profile surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les ouvrages de protection rigides transfèrent l’érosion → rapprocher les dossiers sources de la liste de contrôle d’acceptation des levés du profil côtier et attribuer la responsabilité des mesures correctives.",
+   "ar": "تنقل المنشآت الصلبة الواقية التعرية → طابق سجلات المصادر مع قائمة التحقق لقبول مسوحات المقاطع الساحلية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Design floods assume obsolete climate patterns → reconcile source records with the coastal profile surveys acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les crues de conception reposent sur des régimes climatiques obsolètes → rapprocher les dossiers sources de la liste de contrôle d’acceptation des levés du profil côtier et attribuer la responsabilité des mesures correctives.",
+   "ar": "تفترض سيناريوهات الفيضانات التصميمية أنماطًا مناخية متقادمة → طابق سجلات المصادر مع قائمة التحقق لقبول مسوحات المقاطع الساحلية، وحدد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Warning messages do not reach exposed residents → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "Les messages d’alerte ne parviennent pas aux résidents exposés → limiter les accès, expurger les éléments probants diffusés et tester le processus à accès restreint.",
+   "ar": "لا تصل رسائل التحذير إلى السكان المعرضين للخطر → قلّل نطاق الوصول، واحجب الأدلة المُفصح عنها، واختبر سير العمل المقيّد الوصول."
+  }
+ ]
+}

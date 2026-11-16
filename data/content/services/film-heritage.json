@@ -1,0 +1,167 @@
+{
+ "slug": "film-heritage",
+ "id": 10,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Film & Audiovisual Heritage",
+  "fr": "Patrimoine cinématographique et audiovisuel",
+  "ar": "تراث الأفلام والوسائط السمعية البصرية"
+ },
+ "short": {
+  "en": "The service provides restoration, subtitling, archival streaming.",
+  "fr": "Restaurer et rendre accessible le patrimoine filmé.",
+  "ar": "ترميم التراث المصور وإتاحته."
+ },
+ "abstract": {
+  "en": "Audiovisual heritage services — film and video restoration, frame-accurate subtitling, archival streaming infrastructure, and rights management for heritage footage.",
+  "fr": "Services dédiés au patrimoine audiovisuel — restauration de films et de vidéos, sous-titrage à l’image près, infrastructures de diffusion en continu pour les archives et gestion des droits sur les images du patrimoine.",
+  "ar": "خدمات التراث السمعي البصري — ترميم الأفلام ومقاطع الفيديو، وإعداد ترجمات متزامنة بدقة الإطار، وبنية تحتية للبث الأرشيفي، وإدارة حقوق اللقطات التراثية."
+ },
+ "long": [
+  {
+   "en": "The Film & Audiovisual Heritage service organises a weekly work package around restored footage minutes, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 restored footage minutes; 3000 subtitle minutes; 200 rights dossiers; 100 archive ingest packages. Audiovisual heritage services — film and video restoration, frame-accurate subtitling, archival streaming infrastructure, and rights management for heritage footage. Specialists sequence those methods against the accepted weekly package. The governing boundary is that restoration retains an untouched master and documents every intervention. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Patrimoine cinématographique et audiovisuel organise un lot de travail hebdomadaire autour des minutes de séquences restaurées, plutôt que de considérer la présence comme le résultat à atteindre. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 minutes de séquences restaurées ; 3000 minutes de sous-titrage ; 200 dossiers de droits ; 100 lots d’ingestion d’archives. Services dédiés au patrimoine audiovisuel — restauration de films et de vidéos, sous-titrage à l’image près, infrastructures de diffusion en continu pour les archives et gestion des droits sur les images du patrimoine. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que la restauration conserve un master intact et documente chaque intervention. Il s’agit de livrables échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة التراث السينمائي والسمعي البصري حزمة عمل أسبوعية حول دقائق اللقطات المُرمَّمة، بدلًا من اعتبار الحضور هو المنتج. وتبلغ الخطة التجريبية، عند بلوغ الطاقة الاستيعابية الكاملة وتوفير الموارد، 2000 دقيقة من اللقطات المُرمَّمة؛ و3000 دقيقة من الترجمة؛ و200 ملف للحقوق؛ و100 حزمة لإدخال المواد إلى الأرشيف. خدمات التراث السمعي البصري — ترميم الأفلام ومقاطع الفيديو، وإعداد ترجمات متزامنة بدقة الإطار، وبنية تحتية للبث الأرشيفي، وإدارة حقوق اللقطات التراثية. ويرتب المتخصصون هذه الأساليب ضمن حزمة العمل الأسبوعية المقبولة. والضابط الأساسي هو الاحتفاظ بنسخة أصلية غير معدّلة من المادة المُرمَّمة وتوثيق كل تدخل. هذه مخرجات مرحلية لحالات مُكلَّف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2022 overview compares 64,540 annual university graduates in academic years 2012/13–2017/18 with 10,675 net additional high-end jobs annually in 2011–2017. That historical mismatch supports a broader commissioning hypothesis; it does not establish current vacancies in this speciality. Custodians and communities may benefit without having a budget or a single contracting organisation, so a paying sponsor and reuse agreement must be identified. For `film-heritage`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of restored footage minutes, not recruitment justified solely by the national unemployment rate.",
+   "fr": "La synthèse de 2022 de la Banque mondiale compare 64,540 diplômés universitaires par an au cours des années universitaires 2012/13–2017/18 à 10,675 emplois nets supplémentaires hautement qualifiés par an entre 2011–2017. Ce décalage historique étaye une hypothèse plus large de mise en commande ; il ne permet pas d’établir les postes actuellement vacants dans cette spécialité. Les dépositaires et les communautés peuvent en bénéficier sans disposer d’un budget ni d’un organisme contractant unique ; il faut donc identifier un sponsor payeur et un accord de réutilisation. Pour `film-heritage`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des minutes de séquences restaurées, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تقارن النظرة العامة للبنك الدولي لعام 2022 بين 64,540 خريجًا جامعيًا سنويًا خلال الأعوام الأكاديمية 2012/13–2017/18، و10,675 وظيفة إضافية صافية سنويًا في القطاعات عالية القيمة خلال 2011–2017. ويدعم هذا التفاوت التاريخي فرضية أوسع للتكليف بالأعمال، لكنه لا يثبت وجود شواغر حاليًا في هذا التخصص. وقد يستفيد القائمون على حفظ التراث والمجتمعات من الخدمة دون أن تتوفر لهم ميزانية أو جهة تعاقد واحدة؛ لذا يجب تحديد جهة راعية ممولة واتفاقية لإعادة الاستخدام. ومن ثم، تتمثل الاستجابة المقترحة لـ `film-heritage` في سير عمل تعاقدي له مستفيد محدد وتعريف مقبول لدقائق اللقطات المُرمَّمة، لا في توظيف يُبرَّر بمعدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the restored footage minutes acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks subtitle minutes before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted restored footage minutes from rejected or deferred work and records blockers around rights dossiers. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des minutes de séquences restaurées ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les minutes de sous-titrage avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les minutes de séquences restaurées acceptées des travaux rejetés ou reportés et consigne les obstacles liés aux dossiers de droits. Les examens menés par les responsables de grappe coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول دقائق اللقطات المُرمَّمة؛ ويحوّل 100 مدير هذه المعايير إلى مهام للفرق، يضم كل منها نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من دقائق الترجمة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز تقرير الخدمة بين دقائق اللقطات المُرمَّمة المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بملفات الحقوق. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "film studies, audiovisual preservation and sound engineering",
+  "fr": "études cinématographiques, préservation audiovisuelle et ingénierie du son",
+  "ar": "دراسات الأفلام، وحفظ المواد السمعية البصرية، وهندسة الصوت"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
+  "fr": "Tunis, Kairouan et établissements partenaires régionaux, avec une préparation à distance lorsque cela est compatible avec un placement réel",
+  "ar": "تونس والقيروان والمؤسسات الشريكة في الجهات، مع التحضير عن بُعد حيثما يتوافق ذلك مع التعيين الميداني"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Restored footage minutes",
+    "fr": "Minutes de séquences restaurées",
+    "ar": "دقائق اللقطات المُرمَّمة"
+   },
+   "unit": {
+    "en": "restored footage minutes",
+    "fr": "minutes de séquences restaurées",
+    "ar": "دقائق اللقطات المُرمَّمة"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Subtitle minutes",
+    "fr": "Minutes de sous-titrage",
+    "ar": "دقائق الترجمة"
+   },
+   "unit": {
+    "en": "subtitle minutes",
+    "fr": "minutes de sous-titrage",
+    "ar": "دقائق الترجمة"
+   },
+   "target": 3000
+  },
+  {
+   "name": {
+    "en": "Rights dossiers",
+    "fr": "Dossiers de droits",
+    "ar": "ملفات الحقوق"
+   },
+   "unit": {
+    "en": "rights dossiers",
+    "fr": "dossiers de droits",
+    "ar": "ملفات الحقوق"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Archive ingest packages",
+    "fr": "Lots d’ingestion d’archives",
+    "ar": "حزم إدخال المواد إلى الأرشيف"
+   },
+   "unit": {
+    "en": "archive ingest packages",
+    "fr": "packages d’ingestion d’archives",
+    "ar": "حزم إدخال الأرشيف"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `film-heritage` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + WAV/MP4 master and time-coded annotations, linking the restored footage minutes to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `film-heritage` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + un master WAV/MP4 et des annotations avec codes temporels, reliant les minutes de séquences restaurées à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `film-heritage` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيان مصادر بصيغة CSV/JSON + النسخة الرئيسية بصيغة WAV/MP4 وتعليقات توضيحية محددة بالتوقيت، تربط دقائق اللقطات المستعادة بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted restored footage minutes** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant Fri 12:00 ; **≥16 minutes de séquences restaurées acceptées** par équipe-semaine, sous réserve de la complexité du dossier ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur des éléments admissibles, et les défauts critiques de sécurité ou de confidentialité priment sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **قبول ≥16 دقيقة من اللقطات المستعادة** لكل فريق في الأسبوع، مع مراعاة تعقيد الحالة؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. تُعدّل الإجازات والتسويات المعتمدة مقام التقارير المستوفية للشروط، وتُبطل العيوب الحرجة المتعلقة بالسلامة أو الخصوصية أي نتيجة خضراء. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "restoration retains an untouched master and documents every intervention",
+  "fr": "la restauration conserve un master intact et documente chaque intervention",
+  "ar": "تحافظ عملية الترميم على نسخة رئيسية دون أي تعديل، وتوثّق كل تدخل"
+ },
+ "depends": [
+  {
+   "slug": "data-protection",
+   "id": 84
+  },
+  {
+   "slug": "cloud-infra",
+   "id": 107
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "research-data",
+   "id": 63
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Restoration erases original features → reconcile source records with the restored footage minutes acceptance checklist and assign corrective-action ownership.",
+   "fr": "La restauration efface des caractéristiques originales → rapprocher les dossiers source de la liste de contrôle d’acceptation des minutes de séquences restaurées et attribuer la responsabilité des mesures correctives.",
+   "ar": "محو السمات الأصلية أثناء الترميم → مطابقة سجلات المصدر مع قائمة التحقق لقبول دقائق اللقطات المستعادة، وتحديد المسؤولية عن الإجراء التصحيحي."
+  },
+  {
+   "en": "Subtitle timing distorts dialogue → reconcile source records with the restored footage minutes acceptance checklist and assign corrective-action ownership.",
+   "fr": "Le minutage des sous-titres déforme les dialogues → rapprocher les dossiers source de la liste de contrôle d’acceptation des minutes de séquences restaurées et attribuer la responsabilité des mesures correctives.",
+   "ar": "اختلال توقيت الترجمة النصية يشوّه الحوار → مطابقة سجلات المصدر مع قائمة التحقق لقبول دقائق اللقطات المستعادة، وتحديد المسؤولية عن الإجراء التصحيحي."
+  },
+  {
+   "en": "Streaming rights differ from archive rights → document permissions and obtain qualified rights review before release.",
+   "fr": "Les droits de diffusion diffèrent des droits d’archivage → documenter les autorisations et obtenir l’avis d’un spécialiste qualifié en matière de droits avant la diffusion.",
+   "ar": "تختلف حقوق البث عن حقوق الأرشيف → توثيق الأذونات والحصول على مراجعة مختصة للحقوق قبل النشر."
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "slug": "about",
+ "title": {
+  "en": "About W5D — a company and a working ontology",
+  "fr": "À propos de W5D — une entreprise et une ontologie de travail",
+  "ar": "نبذة عن W5D — شركة وأنطولوجيا عملية"
+ },
+ "description": {
+  "en": "W5D is a company and a working ontology: the fourth dimension is information and structure, the fifth is possibility and modality.",
+  "fr": "W5D est une entreprise et une ontologie de travail : la quatrième dimension est l’information et la structure, la cinquième, la possibilité et la modalité.",
+  "ar": "W5D شركة وأنطولوجيا عملية: البعد الرابع هو المعلومات والبنية، والبعد الخامس هو الإمكانية والكيفية."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "abt-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "A company and a **working ontology.**",
+    "fr": "Une entreprise et une **ontologie de travail.**",
+    "ar": "شركة و**أنطولوجيا عملية.**"
+   },
+   "lead": {
+    "en": "W5D is World Five Dimensions: a company that publishes its own structure, its dated status and its limits.",
+    "fr": "W5D signifie World Five Dimensions : une entreprise qui publie sa propre structure, son état daté et ses limites.",
+    "ar": "W5D هي World Five Dimensions: شركة تنشر بنيتها الخاصة، ووضعها المؤرَّخ، وحدودها."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the declared limits",
+      "fr": "Consulter les limites déclarées",
+      "ar": "اطّلع على الحدود المعلنة"
+     },
+     "href": "/trust/statement/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "About",
+    "fr": "À propos",
+    "ar": "نبذة عنا"
+   }
+  },
+  {
+   "type": "prose",
+   "id": "abt-story",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "What W5D is, and is not",
+    "fr": "Ce qu’est W5D, et ce qu’elle n’est pas",
+    "ar": "ما هي W5D وما ليست عليه"
+   },
+   "paragraphs": [
+    {
+     "en": "W5D organises demand for expert work into five macro works and {{ counts.services }} services, and a path by which graduates become supervised contributors.",
+     "fr": "W5D organise la demande de travail expert en cinq grands chantiers et {{ counts.services }} services, et propose un parcours permettant aux diplômés de devenir des contributeurs encadrés.",
+     "ar": "تنظّم W5D الطلب على عمل الخبراء ضمن خمسة أعمال كبرى و{{ counts.services }} خدمة، وتوفّر مسارًا يصبح عبره الخريجون مساهمين تحت الإشراف."
+    },
+    {
+     "en": "It is status-transparent to the point of self-limitation: it lists drafts, concepts and live items with dates, and says \"awaiting\" where there is no evidence yet.",
+     "fr": "Sa transparence sur son état va jusqu’à l’autolimitation : elle répertorie les brouillons, les concepts et les éléments en cours en les datant, et indique « en attente » lorsqu’il n’existe pas encore de preuve.",
+     "ar": "تتسم بالشفافية بشأن وضعها إلى حدّ تقييد ادعاءاتها: فهي تدرج المسودات والمفاهيم والعناصر الجارية مع تواريخها، وتذكر «بانتظار» حيث لا تتوفر أدلة بعد."
+    },
+    {
+     "en": "It does not claim that {{ d.experts_target }} experts are active. {{ experts.developers_today }} developers deliver in Tunisia today.",
+     "fr": "Elle ne prétend pas que {{ d.experts_target }} experts sont actifs. {{ experts.developers_today }} développeurs travaillent aujourd’hui en Tunisie.",
+     "ar": "لا تدّعي أن {{ d.experts_target }} خبيرًا نشطون. ويقدّم {{ experts.developers_today }} مطوّرًا خدماتهم في تونس اليوم."
+    }
+   ]
+  },
+  {
+   "type": "project-cards",
+   "id": "abt-projects",
+   "tier": "i",
+   "focus": 2,
+   "title": {
+    "en": "What exists, with dates",
+    "fr": "Ce qui existe, avec des dates",
+    "ar": "ما هو قائم، مع التواريخ"
+   },
+   "limit": 6,
+   "only": [
+    "meta-x-academy",
+    "ontology-department",
+    "studio",
+    "developers-tunisia",
+    "departments",
+    "dyon"
+   ],
+   "ctas": [
+    {
+     "label": {
+      "en": "All projects",
+      "fr": "Tous les projets",
+      "ar": "جميع المشاريع"
+     },
+     "href": "/projects/",
+     "style": "link",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "abt-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Join the work, **or fund it.**",
+    "fr": "Rejoignez le travail, **ou financez-le.**",
+    "ar": "انضم إلى العمل، **أو موّله.**"
+   },
+   "body": {
+    "en": "Both start from the same page of limits.",
+    "fr": "Dans les deux cas, tout commence par la même page, qui expose les limites.",
+    "ar": "ينطلق كلا الخيارين من الصفحة نفسها التي توضّح الحدود."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "ghost"
+    }
+   ]
+  }
+ ]
+}

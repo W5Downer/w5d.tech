@@ -1,0 +1,167 @@
+{
+ "slug": "disaster-tech",
+ "id": 130,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Real instantiation",
+ "title": {
+  "en": "Disaster Response Technology",
+  "fr": "Technologies d’intervention en cas de catastrophe",
+  "ar": "تكنولوجيا الاستجابة للكوارث"
+ },
+ "short": {
+  "en": "The service provides early warning, drones, portable comms.",
+  "fr": "Tester les technologies de réponse aux catastrophes.",
+  "ar": "اختبار تقنيات الاستجابة للكوارث."
+ },
+ "abstract": {
+  "en": "Disaster response technology — early-warning systems, drones, and portable communications for emergency responders.",
+  "fr": "Technologies d’intervention en cas de catastrophe — systèmes d’alerte précoce, drones et communications portatives pour les intervenants d’urgence.",
+  "ar": "تكنولوجيا الاستجابة للكوارث — أنظمة الإنذار المبكر والطائرات المسيّرة والاتصالات المحمولة لفرق الاستجابة للطوارئ."
+ },
+ "long": [
+  {
+   "en": "The Disaster Response Technology service organises a weekly work package around warning channel tests, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 500 warning channel tests; 200 portable communication drills; 300 drone readiness checks; 200 responder equipment training sessions. Disaster response technology — early-warning systems, drones, and portable communications for emergency responders. Specialists sequence those methods against the accepted weekly package. The governing boundary is that emergency authorities control deployment and public warnings, with safe fallback channels. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Technologies d’intervention en cas de catastrophe organise un lot de travail hebdomadaire autour des tests des canaux d’alerte, plutôt que de considérer la présence comme un produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 500 tests des canaux d’alerte ; 200 exercices de communications portatives ; 300 contrôles de disponibilité des drones ; 200 sessions de formation des intervenants à l’utilisation de l’équipement. Technologies d’intervention en cas de catastrophe — systèmes d’alerte précoce, drones et communications portatives pour les intervenants d’urgence. Les spécialistes organisent ces activités selon le lot hebdomadaire accepté. La règle fondamentale est que les autorités d’urgence contrôlent le déploiement et les alertes publiques, avec des canaux de secours sûrs. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظّم خدمة تكنولوجيا الاستجابة للكوارث حزمة عمل أسبوعية تتمحور حول اختبارات قنوات الإنذار، بدلاً من اعتبار الحضور هو المنتج. وتبلغ أهداف خطتها التجريبية، عند بلوغ كامل الطاقة الاستيعابية المدعومة بالموارد، 500 اختبار لقنوات الإنذار؛ و200 تمرين للاتصالات المحمولة؛ و300 فحص لجاهزية الطائرات المسيّرة؛ و200 جلسة تدريب على معدات الاستجابة. تكنولوجيا الاستجابة للكوارث — أنظمة الإنذار المبكر والطائرات المسيّرة والاتصالات المحمولة لفرق الاستجابة للطوارئ. ينسّق المختصون هذه الأساليب وفقاً للحزمة الأسبوعية المعتمدة. ويقضي الضابط الحاكم بأن تتولى سلطات الطوارئ التحكم في الانتشار والتحذيرات العامة، مع توفير قنوات احتياطية آمنة. هذه مخرجات مرحلية لحالات مكلّف بها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `disaster-tech`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of warning channel tests, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie liées à l’eau, au littoral et à la transition énergétique, notamment les pertes du réseau de distribution de SONEDE, qui atteignaient 34% en 2021. Cela établit la nécessité d’interventions techniques mesurables, et non l’existence d’une commande financée pour ce service en particulier. La séparation entre propriétaires des actifs, budgets d’infrastructure et responsabilités environnementales peut laisser des travaux techniquement utiles sans commande. Pour `disaster-tech`, la réponse proposée est donc un processus contractuel avec un bénéficiaire désigné et une définition acceptée des tests des canaux d’alerte, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في المياه والسواحل والتحول في مجال الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول على هذه الخدمة بعينها. وقد يؤدي تعدد مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى بقاء الأعمال المفيدة تقنياً دون تكليف. لذا، فإن الاستجابة المقترحة لخدمة `disaster-tech` هي سير عمل تعاقدي يضم مستفيداً محدداً وتعريفاً معتمداً لاختبارات قنوات الإنذار، لا توظيفاً تبرره وحده نسبة البطالة الوطنية."
+  },
+  {
+   "en": "A service leader sets the warning channel tests acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks portable communication drills before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted warning channel tests from rejected or deferred work and records blockers around drone readiness checks. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des tests des canaux d’alerte ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les exercices de communications portatives avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments de preuve sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. La synthèse du service distingue les tests des canaux d’alerte acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux contrôles de disponibilité des drones. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول اختبارات قنوات الإنذار؛ ويحوّل 100 مدير هذه المعايير إلى مهام مسندة إلى فرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من تمارين الاتصالات المحمولة قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصادر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين اختبارات قنوات الإنذار المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بفحوص جاهزية الطائرات المسيّرة. وتنسّق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "emergency communications, electronics, robotics and disaster engineering",
+  "fr": "communications d’urgence, électronique, robotique et ingénierie des catastrophes",
+  "ar": "الاتصالات في حالات الطوارئ والإلكترونيات والروبوتات وهندسة الكوارث"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Warning channel tests",
+    "fr": "Tests des canaux d’alerte",
+    "ar": "اختبارات قنوات الإنذار"
+   },
+   "unit": {
+    "en": "warning channel tests",
+    "fr": "tests des canaux d’alerte",
+    "ar": "اختبارات قنوات الإنذار"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Portable communication drills",
+    "fr": "Exercices de communications portatives",
+    "ar": "تمارين الاتصالات المحمولة"
+   },
+   "unit": {
+    "en": "portable communication drills",
+    "fr": "exercices de communications portatives",
+    "ar": "تمارين الاتصالات المحمولة"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Drone readiness checks",
+    "fr": "Contrôles de disponibilité des drones",
+    "ar": "فحوص جاهزية الطائرات المسيّرة"
+   },
+   "unit": {
+    "en": "drone readiness checks",
+    "fr": "contrôles de préparation des drones",
+    "ar": "فحوص جاهزية الطائرات المسيّرة"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Responder equipment training sessions",
+    "fr": "sessions de formation aux équipements des intervenants de secours",
+    "ar": "جلسات تدريب على معدات مستجيبي الطوارئ"
+   },
+   "unit": {
+    "en": "responder equipment training sessions",
+    "fr": "sessions de formation aux équipements des intervenants de secours",
+    "ar": "جلسات تدريب على معدات مستجيبي الطوارئ"
+   },
+   "target": 200
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `disaster-tech` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the warning channel tests to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `disaster-tech` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection, de photographie ou de conception géoréférencés, qui relient les tests des canaux d’alerte à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة ضمن مجال `disaster-tech` ملف قبول PDF/A، وبيانًا بالمصادر بصيغة CSV/JSON، وملفات فحص أو صور أو تصميم ذات مرجعية جغرافية، وتربط اختبارات قنوات الإنذار بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥4 accepted warning channel tests** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis avant vendredi 12:00 ; **≥4 tests de canaux d’alerte acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés autorisés et les aménagements modifient le dénominateur des éléments admissibles, et les défauts critiques de sécurité/confidentialité priment sur un score positif. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "العتبات المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥4 اختبارات مقبولة لقنوات الإنذار** لكل فريق في الأسبوع، وفقًا لتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب مشكلات في الأدلة** لكل فريق في الأسبوع. يؤدي الإجازة المعتمدة أو التعديلات إلى تغيير المقام المؤهل، بينما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي نتيجة خضراء. هذه أهداف تجريبية، وليست عتبات معتمدة في README."
+ },
+ "boundary": {
+  "en": "emergency authorities control deployment and public warnings, with safe fallback channels",
+  "fr": "les autorités d’urgence contrôlent le déploiement et les alertes publiques, avec des canaux de secours sûrs",
+  "ar": "تتحكم سلطات الطوارئ في النشر والتحذيرات العامة، مع توفير قنوات بديلة آمنة"
+ },
+ "depends": [
+  {
+   "slug": "ocean-monitoring",
+   "id": 71
+  },
+  {
+   "slug": "crisis-governance",
+   "id": 101
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "flood-defence",
+   "id": 48
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "11",
+   "target": "11"
+  },
+  {
+   "goal": "13",
+   "target": "13.1"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "False alarms erode public trust → require independent source checks, a comparator and explicit uncertainty before acceptance.",
+   "fr": "Les fausses alertes érodent la confiance du public → exiger des vérifications indépendantes des sources, une référence comparative et une incertitude explicitement indiquée avant l’acceptation.",
+   "ar": "الإنذارات الكاذبة تقوض ثقة الجمهور ← اشترط إجراء فحوص مستقلة للمصادر، واستخدام مصدر للمقارنة، والتصريح بوضوح عن مواطن عدم اليقين قبل القبول."
+  },
+  {
+   "en": "Communications fail during power loss → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les communications tombent en panne en cas de coupure de courant → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un critère documenté déclenchant l’arrêt des travaux.",
+   "ar": "تعطل الاتصالات أثناء انقطاع الكهرباء ← اشترط اعتمادًا من مختص مؤهل بالسلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  },
+  {
+   "en": "Drones interfere with rescue aircraft → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Les drones interfèrent avec les aéronefs de secours → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un critère documenté déclenchant l’arrêt des travaux.",
+   "ar": "تتداخل الطائرات المسيّرة مع طائرات الإنقاذ ← اشترط اعتمادًا من مختص مؤهل بالسلامة، وتجارب مضبوطة، وآلية موثقة لإيقاف العمل."
+  }
+ ]
+}

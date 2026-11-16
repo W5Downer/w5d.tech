@@ -1,0 +1,167 @@
+{
+ "slug": "digital-identity",
+ "id": 111,
+ "macro": "technology",
+ "placement": "Real 0.5 / Virtual 0.5",
+ "placement_note": "Virtual core",
+ "title": {
+  "en": "Digital Identity & Authentication",
+  "fr": "Identité numérique et authentification",
+  "ar": "الهوية الرقمية والمصادقة"
+ },
+ "short": {
+  "en": "The service provides sSO, eKYC, credential wallets.",
+  "fr": "Vérifier les identités en limitant les données collectées.",
+  "ar": "التحقق من الهوية مع الحد من جمع البيانات."
+ },
+ "abstract": {
+  "en": "Digital identity — single sign-on, eKYC, and verifiable credential wallets with privacy-preserving design.",
+  "fr": "Identité numérique — authentification unique, eKYC et portefeuilles de justificatifs vérifiables, selon une conception respectueuse de la vie privée.",
+  "ar": "الهوية الرقمية — تسجيل الدخول الموحد، وeKYC، ومحافظ بيانات الاعتماد القابلة للتحقق، بتصميم يحافظ على الخصوصية."
+ },
+ "long": [
+  {
+   "en": "The Digital Identity & Authentication service organises a weekly work package around identity workflow test cases, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 2000 identity workflow test cases; 200 credential lifecycle reviews; 500 recovery pathway tests; 100 access integration packages. Digital identity — single sign-on, eKYC, and verifiable credential wallets with privacy-preserving design. Specialists sequence those methods against the accepted weekly package. The governing boundary is that identity proofing, revocation and recovery are separate from QR presentation. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Identité numérique et authentification organise un lot de travail hebdomadaire autour de cas de test des workflows d’identité, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 2000 cas de test des workflows d’identité ; 200 examens du cycle de vie des justificatifs ; 500 tests des parcours de récupération ; 100 dossiers d’intégration des accès. Identité numérique — authentification unique, eKYC et portefeuilles de justificatifs vérifiables, selon une conception respectueuse de la vie privée. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que la vérification de l’identité, la révocation et la récupération sont distinctes de la présentation d’un QR code. Il s’agit de livrables échelonnés issus de cas commandités, et non de la promesse de mener à bien un programme national entier chaque semaine.",
+   "ar": "تنظم خدمة الهوية الرقمية والمصادقة حزمة عمل أسبوعية تتمحور حول حالات اختبار سير عمل الهوية، بدلاً من اعتبار الحضور هو المنتج. وتبلغ خطة الخدمة التجريبية عند استغلال الطاقة الاستيعابية كاملةً وتوفير الموارد اللازمة 2000 حالة اختبار لسير عمل الهوية؛ و200 مراجعة لدورة حياة بيانات الاعتماد؛ و500 اختبار لمسارات الاسترداد؛ و100 حزمة لتكامل الوصول. الهوية الرقمية — تسجيل الدخول الموحد، وeKYC، ومحافظ بيانات الاعتماد القابلة للتحقق، بتصميم يحافظ على الخصوصية. ويحدد المتخصصون تسلسل هذه الأساليب بما يتوافق مع الحزمة الأسبوعية المقبولة. وتتمثل الحدود الناظمة في الفصل بين إثبات الهوية وإلغاء بيانات الاعتماد واستردادها، من جهة، وعرض QR من جهة أخرى. وهذه مخرجات مرحلية ناتجة عن حالات مفوضة، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The World Bank's 2026 digital-skills study finds demand for technical and hybrid capabilities across Tunisian industries, using mainly formal, urban online evidence through 2025. OECD's June 2024 review separately documents employer skills constraints. Neither source verifies a national vacancy total for this technical niche. Integration, user acceptance and ongoing maintenance require a committed system owner; assigning isolated developers does not supply that coordination or guarantee a buyer. For `digital-identity`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of identity workflow test cases, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’étude sur les compétences numériques publiée en 2026 par la Banque mondiale relève une demande de compétences techniques et hybrides dans différents secteurs tunisiens, à partir de données principalement en ligne, formelles et urbaines, couvrant la période jusqu’en 2025. L’examen publié séparément par l’OCDE en juin 2024 documente les contraintes des employeurs en matière de compétences. Aucune de ces sources ne confirme un total national de postes vacants dans cette niche technique. L’intégration, l’acceptation par les utilisateurs et la maintenance continue nécessitent un responsable de système dûment mandaté ; affecter des développeurs isolés ne fournit pas cette coordination et ne garantit pas la présence d’un acheteur. Pour `digital-identity`, la réponse proposée est donc un workflow contractualisé, avec un bénéficiaire désigné et une définition acceptée des cas de test des workflows d’identité, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تخلص دراسة البنك الدولي لعام 2026 بشأن المهارات الرقمية إلى وجود طلب على القدرات التقنية والهجينة في مختلف القطاعات التونسية، مستندةً أساساً إلى أدلة إلكترونية رسمية وحضرية حتى عام 2025. وتوثّق مراجعة OECD الصادرة في يونيو 2024، على نحو مستقل، قيود المهارات التي يواجهها أصحاب العمل. ولا يتحقق أي من المصدرين من إجمالي وطني للوظائف الشاغرة في هذا التخصص التقني. ويتطلب التكامل وقبول المستخدم والصيانة المستمرة وجود جهة مالكة للنظام ملتزمة؛ فتعيين مطورين منفردين لا يوفر هذا التنسيق ولا يضمن وجود مشترٍ. لذلك، يتمثل المقترح لـ`digital-identity` في سير عمل تعاقدي ذي مستفيد محدد وتعريف معتمد لحالات اختبار سير عمل الهوية، لا في توظيف يبرره معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the identity workflow test cases acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks credential lifecycle reviews before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted identity workflow test cases from rejected or deferred work and records blockers around recovery pathway tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des cas de test des workflows d’identité ; 100 responsables les traduisent en affectations à des équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les examens du cycle de vie des justificatifs avant leur approbation. L’audit aléatoire proposé de 5% revérifie les éléments probants issus des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par les responsables. Le bilan du service distingue les cas de test des workflows d’identité acceptés des travaux rejetés ou différés, et consigne les obstacles liés aux tests des parcours de récupération. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول حالات اختبار سير عمل الهوية؛ ويحوّل 100 مدير هذا المعيار إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon المساهمين الخاضعين للمساءلة، فيما يتحقق مراجع مؤهل من مراجعات دورة حياة بيانات الاعتماد قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من أدلة المصادر والاستثناءات؛ ولا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين حالات اختبار سير عمل الهوية المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة باختبارات مسارات الاسترداد. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "computer science, identity systems, privacy engineering and information security",
+  "fr": "informatique, systèmes d’identité, ingénierie de la protection de la vie privée et sécurité de l’information",
+  "ar": "علوم الحاسوب، وأنظمة الهوية، وهندسة الخصوصية، وأمن المعلومات"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
+  "fr": "Pôles de prestation à Tunis, Sfax et Sousse, avec un accès facilité aux régions intérieures ; les postes sur le terrain sont soumis à la préparation des structures d’accueil",
+  "ar": "مراكز تنفيذ في تونس وصفاقس وسوسة، مع إتاحة مدعومة للمناطق الداخلية؛ وتتبع مواقع العمل الميداني مدى جاهزية الجهات المضيفة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Identity workflow test cases",
+    "fr": "Cas de test des workflows d’identité",
+    "ar": "حالات اختبار سير عمل الهوية"
+   },
+   "unit": {
+    "en": "identity workflow test cases",
+    "fr": "cas de test des workflows d’identité",
+    "ar": "حالات اختبار سير عمل الهوية"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Credential lifecycle reviews",
+    "fr": "Examens du cycle de vie des justificatifs",
+    "ar": "مراجعات دورة حياة بيانات الاعتماد"
+   },
+   "unit": {
+    "en": "credential lifecycle reviews",
+    "fr": "examens du cycle de vie des justificatifs",
+    "ar": "مراجعات دورة حياة بيانات الاعتماد"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Recovery pathway tests",
+    "fr": "Tests des parcours de rétablissement",
+    "ar": "اختبارات مسار الاستعادة"
+   },
+   "unit": {
+    "en": "recovery pathway tests",
+    "fr": "tests des parcours de rétablissement",
+    "ar": "اختبارات مسار الاستعادة"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Access integration packages",
+    "fr": "Packages d’intégration des accès",
+    "ar": "حزم تكامل الوصول"
+   },
+   "unit": {
+    "en": "access integration packages",
+    "fr": "packages d’intégration des accès",
+    "ar": "حزم تكامل الوصول"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `digital-identity` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + versioned code/configuration, tests and deployment or recovery logs, linking the identity workflow test cases to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un package d’acceptation `digital-identity` lié à un dossier comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + du code/de la configuration versionnés, des tests et des journaux de déploiement ou de rétablissement, reliant les cas de test du workflow d’identité à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `digital-identity` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + شيفرة/تهيئة ذات إصدارات محددة، واختبارات وسجلات للنشر أو الاستعادة، وتربط حالات اختبار سير عمل الهوية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥16 accepted identity workflow test cases** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires éligibles sur 10** remis ven. à 12:00 ; **≥16 cas de test acceptés du workflow d’identité** par équipe-semaine, selon la complexité des dossiers ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés approuvés et les ajustements modifient le dénominateur éligible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un score favorable. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥16 حالة اختبار لسير عمل الهوية** لكل فريق في الأسبوع، رهناً بتعقيد الحالات؛ **≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتؤثر الإجازات/التعديلات المعتمدة في مقام العدد المؤهل، كما تتغلب عيوب السلامة/الخصوصية الحرجة على التقييم الأخضر. هذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "identity proofing, revocation and recovery are separate from QR presentation",
+  "fr": "la vérification de l’identité, la révocation et le rétablissement sont distincts de la présentation par QR",
+  "ar": "إثبات الهوية وإلغاؤها واستعادتها أمور منفصلة عن عرض رمز QR"
+ },
+ "depends": [
+  {
+   "slug": "cultural-data",
+   "id": 26
+  },
+  {
+   "slug": "data-protection",
+   "id": 84
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "digital-governance",
+   "id": 83
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.5"
+  },
+  {
+   "goal": "9",
+   "target": "9.4"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Stolen QR codes impersonate members → reconcile source records with the identity workflow test cases acceptance checklist and assign corrective-action ownership.",
+   "fr": "Des codes QR volés permettent d’usurper l’identité de membres → rapprocher les dossiers sources de la liste de contrôle d’acceptation des cas de test du workflow d’identité et attribuer la responsabilité des actions correctives.",
+   "ar": "تُستخدم رموز QR المسروقة لانتحال صفة الأعضاء → طابقوا سجلات المصدر مع قائمة التحقق من قبول حالات اختبار سير عمل الهوية، وحددوا المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Recovery excludes users without devices → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Le rétablissement exclut les utilisateurs sans appareil → inclure l’examen des utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "تستثني الاستعادة المستخدمين الذين لا يملكون أجهزة → أدرجوا مراجعة المستخدمين المتأثرين، وانشروا افتراضات الاختيار، واحتفظوا بمسار للتظلمات."
+  },
+  {
+   "en": "Identity matching exposes excessive personal data → minimise access, redact released evidence and test the restricted-access workflow.",
+   "fr": "La vérification de l’identité expose une quantité excessive de données personnelles → limiter les accès, caviarder les éléments probants diffusés et tester le workflow à accès restreint.",
+   "ar": "تكشف مطابقة الهوية بيانات شخصية مفرطة → قللوا نطاق الوصول، واحجبوا الأدلة المنشورة، واختبروا سير العمل ذي الوصول المقيّد."
+  }
+ ]
+}

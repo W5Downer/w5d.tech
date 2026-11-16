@@ -1,0 +1,137 @@
+{
+ "slug": "macro-sciences",
+ "label": {
+  "en": "Sciences",
+  "fr": "Sciences",
+  "ar": "العلوم"
+ },
+ "interval": 9000,
+ "height": "34rem",
+ "slides": [
+  {
+   "gradient": "sciences",
+   "icon": "flask-conical",
+   "eyebrow": {
+    "en": "Evidence you can cite",
+    "fr": "Des éléments probants que vous pouvez citer",
+    "ar": "أدلة يمكنك الاستشهاد بها"
+   },
+   "title": {
+    "en": "Measure carefully. Publish the method limit.",
+    "fr": "Mesurez avec rigueur. Publiez les limites méthodologiques.",
+    "ar": "قِس بدقة، وانشر حدود المنهجية."
+   },
+   "lead": {
+    "en": "Twenty-six services for scientists: accessioned samples, validated assays, calibration and field records, each with its chain of custody.",
+    "fr": "Vingt-six services pour les scientifiques : échantillons catalogués, essais validés, dossiers d’étalonnage et de terrain, chacun avec sa chaîne de traçabilité.",
+    "ar": "ستة وعشرون خدمة للعلماء: عينات مسجّلة، واختبارات مُعتمدة، وسجلات للمعايرة والعمل الميداني، لكل منها سلسلة حيازة موثّقة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Find my service here",
+      "fr": "Trouver mon service ici",
+      "ar": "اعثر على خدمتي هنا"
+     },
+     "href": "#mw-catalog",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقّق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "sciences",
+   "icon": "users",
+   "eyebrow": {
+    "en": "Sciences · leaders",
+    "fr": "Sciences · dirigeants",
+    "ar": "العلوم · القادة"
+   },
+   "title": {
+    "en": "Lead a **{{ experts.team_size }}-expert** team in Sciences.",
+    "fr": "Dirigez une équipe de **{{ experts.team_size }} experts** en sciences.",
+    "ar": "قُد فريقًا من **{{ experts.team_size }} خبيرًا** في مجال العلوم."
+   },
+   "lead": {
+    "en": "{{ experts.managers_per_service }} managers per service by design. Managers translate a service leader's rubric into weekly assignments and sign the report.",
+    "fr": "{{ experts.managers_per_service }} responsables par service, selon la conception du programme. Les responsables traduisent le référentiel du chef de service en tâches hebdomadaires et signent le rapport.",
+    "ar": "{{ experts.managers_per_service }} مديرًا لكل خدمة وفق التصميم. يحوّل المديرون معايير قائد الخدمة إلى مهام أسبوعية ويوقّعون التقرير."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply as a manager",
+      "fr": "Postuler comme responsable",
+      "ar": "تقدّم بطلبك لمنصب مدير"
+     },
+     "href": "/careers/managers/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Open careers",
+      "fr": "Consulter les offres d’emploi",
+      "ar": "اطّلع على الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "gradient": "sciences",
+   "icon": "coins",
+   "eyebrow": {
+    "en": "Sciences · investors",
+    "fr": "Sciences · investisseurs",
+    "ar": "العلوم · المستثمرون"
+   },
+   "title": {
+    "en": "Fund the path into **Sciences**.",
+    "fr": "Financez le parcours vers les **sciences**.",
+    "ar": "موّل مسار العمل في **العلوم**."
+   },
+   "lead": {
+    "en": "A part funds certification and delivery capacity across the programme at a published, capped price. No return is promised.",
+    "fr": "Une part finance la certification et la capacité de prestation dans l’ensemble du programme, à un prix publié et plafonné. Aucun rendement n’est promis.",
+    "ar": "يسهم جزء من التمويل في تغطية تكاليف الاعتماد والقدرة على تقديم الخدمات في البرنامج، بسعر معلن ومحدّد بسقف. لا يوجد أي عائد مضمون."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take a part today",
+      "fr": "Prendre une part aujourd’hui",
+      "ar": "احصل على حصة اليوم"
+     },
+     "href": "/checkout/?macro=sciences",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "See the price",
+      "fr": "Voir le prix",
+      "ar": "اطّلع على السعر"
+     },
+     "href": "/pricing/",
+     "style": "ghost"
+    }
+   ],
+   "note": {
+    "en": "Demo mode: no payment is taken.",
+    "fr": "Mode démo : aucun paiement n’est effectué.",
+    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+   }
+  }
+ ]
+}

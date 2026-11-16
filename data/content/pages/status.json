@@ -1,0 +1,204 @@
+{
+ "slug": "status",
+ "title": {
+  "en": "Status — dated and sourced",
+  "fr": "Statut — daté et sourcé",
+  "ar": "الحالة — مؤرخة وموثّقة المصادر"
+ },
+ "description": {
+  "en": "Public status of the programme: figures, dates and sources.",
+  "fr": "Statut public du programme : chiffres, dates et sources.",
+  "ar": "الحالة العامة للبرنامج: الأرقام والتواريخ والمصادر."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "st-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "title": {
+    "en": "Status, **with dates.**",
+    "fr": "Statut, **avec dates.**",
+    "ar": "الحالة، **مع التواريخ.**"
+   },
+   "lead": {
+    "en": "Every figure carries its date and its source. Awaiting means awaiting.",
+    "fr": "Chaque chiffre est accompagné de sa date et de sa source. En attente signifie en attente.",
+    "ar": "لكل رقم تاريخه ومصدره. و«قيد الانتظار» تعني أنه ما زال قيد الانتظار."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Read the limits",
+      "fr": "Consultez les limites",
+      "ar": "اطّلع على الحدود"
+     },
+     "href": "/trust/statement/",
+     "style": "peak",
+     "arrow": true
+    }
+   ],
+   "eyebrow": {
+    "en": "Status",
+    "fr": "État",
+    "ar": "الحالة"
+   }
+  },
+  {
+   "type": "status-live",
+   "id": "st-live",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "Live figures",
+    "fr": "Chiffres en temps réel",
+    "ar": "الأرقام الحالية"
+   }
+  },
+  {
+   "type": "register",
+   "id": "st-register",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "Register",
+    "fr": "S’inscrire",
+    "ar": "سجّل"
+   },
+   "rows": [
+    {
+     "status": {
+      "en": "Live",
+      "fr": "Actif",
+      "ar": "نشط"
+     },
+     "name": {
+      "en": "MetaX Academy",
+      "fr": "MetaX Academy",
+      "ar": "MetaX Academy"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "Listed on the public preview.",
+      "fr": "Répertorié dans l’aperçu public.",
+      "ar": "مدرج في المعاينة العامة."
+     }
+    },
+    {
+     "status": {
+      "en": "Live",
+      "fr": "Actif",
+      "ar": "نشط"
+     },
+     "name": {
+      "en": "Ontology Department",
+      "fr": "Département de l’ontologie",
+      "ar": "إدارة الأنطولوجيا"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "{{ counts.services }} services registered.",
+      "fr": "{{ counts.services }} services enregistrés.",
+      "ar": "تم تسجيل {{ counts.services }} خدمة."
+     }
+    },
+    {
+     "status": {
+      "en": "Live",
+      "fr": "Actif",
+      "ar": "نشط"
+     },
+     "name": {
+      "en": "Developers (Tunisia)",
+      "fr": "Développeurs (Tunisie)",
+      "ar": "المطورون (تونس)"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "{{ experts.developers_today }} developers.",
+      "fr": "{{ experts.developers_today }} développeurs.",
+      "ar": "{{ experts.developers_today }} مطوّرًا."
+     }
+    },
+    {
+     "status": {
+      "en": "Awaiting",
+      "fr": "En attente",
+      "ar": "قيد الانتظار"
+     },
+     "name": {
+      "en": "First certified experts",
+      "fr": "Premiers experts certifiés",
+      "ar": "أول الخبراء المعتمدين"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "No certification cohort has completed yet.",
+      "fr": "Aucune cohorte de certification n’a encore terminé.",
+      "ar": "لم تُكمل أي دفعة من دفعات الاعتماد بعد."
+     }
+    },
+    {
+     "status": {
+      "en": "Awaiting",
+      "fr": "En attente",
+      "ar": "قيد الانتظار"
+     },
+     "name": {
+      "en": "First reviews",
+      "fr": "Premiers avis",
+      "ar": "أولى المراجعات"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "Awaiting the first review.",
+      "fr": "En attente du premier avis.",
+      "ar": "بانتظار المراجعة الأولى."
+     }
+    },
+    {
+     "status": {
+      "en": "Pending",
+      "fr": "En attente",
+      "ar": "قيد الانتظار"
+     },
+     "name": {
+      "en": "Payment provider",
+      "fr": "Prestataire de paiement",
+      "ar": "مزوّد خدمة الدفع"
+     },
+     "date": {
+      "en": "{{ dates.as_of }}",
+      "fr": "{{ dates.as_of }}",
+      "ar": "{{ dates.as_of }}"
+     },
+     "evidence": {
+      "en": "Demo mode. No payment is taken.",
+      "fr": "Mode démo. Aucun paiement n’est effectué.",
+      "ar": "وضع تجريبي. لا تُحصّل أي مدفوعات."
+     }
+    }
+   ]
+  }
+ ]
+}

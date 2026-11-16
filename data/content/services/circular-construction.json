@@ -1,0 +1,167 @@
+{
+ "slug": "circular-construction",
+ "id": 42,
+ "macro": "built",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Waste & Circular Construction",
+  "fr": "Déchets et construction circulaire",
+  "ar": "النفايات والبناء الدائري"
+ },
+ "short": {
+  "en": "The service provides material reuse, demolition auditing.",
+  "fr": "Réemployer les matériaux de construction en sécurité.",
+  "ar": "إعادة استعمال مواد البناء بأمان."
+ },
+ "abstract": {
+  "en": "Circular construction — pre-demolition material audits, salvage and reuse strategies, and life-cycle assessment for major construction and demolition projects.",
+  "fr": "Construction circulaire — audits des matériaux avant démolition, stratégies de récupération et de réemploi, et analyse du cycle de vie pour les grands projets de construction et de démolition.",
+  "ar": "البناء الدائري — تدقيقات ما قبل الهدم، واستراتيجيات استرداد المواد وإعادة استخدامها، وتقييم دورة الحياة لمشاريع البناء والهدم الكبرى."
+ },
+ "long": [
+  {
+   "en": "The Waste & Circular Construction service organises a weekly work package around pre-demolition audits, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 pre-demolition audits; 2000 material passports; 100 reuse feasibility studies; 100 lifecycle comparisons. Circular construction — pre-demolition material audits, salvage and reuse strategies, and life-cycle assessment for major construction and demolition projects. Specialists sequence those methods against the accepted weekly package. The governing boundary is that reuse suitability requires contamination and structural fitness checks. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Déchets et construction circulaire organise un lot de travaux hebdomadaire autour des audits avant démolition, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 audits avant démolition ; 2000 passeports de matériaux ; 100 études de faisabilité du réemploi ; 100 comparaisons de cycle de vie. Construction circulaire — audits des matériaux avant démolition, stratégies de récupération et de réemploi, et analyse du cycle de vie pour les grands projets de construction et de démolition. Les spécialistes séquencent ces méthodes en fonction du lot hebdomadaire accepté. La règle de fond est que l’aptitude au réemploi nécessite des contrôles de contamination et d’intégrité structurelle. Il s’agit de résultats échelonnés issus de cas commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة النفايات والبناء الدائري حزمة عمل أسبوعية تتمحور حول تدقيقات ما قبل الهدم، بدلاً من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة التشغيلية الكاملة وتوفير الموارد اللازمة، تتضمن خطتها التجريبية 200 تدقيق لما قبل الهدم؛ و2000 جواز للمواد؛ و100 دراسة جدوى لإعادة الاستخدام؛ و100 مقارنة لدورة الحياة. البناء الدائري — تدقيقات ما قبل الهدم، واستراتيجيات استرداد المواد وإعادة استخدامها، وتقييم دورة الحياة لمشاريع البناء والهدم الكبرى. ويرتب المختصون هذه المنهجيات وفق حزمة العمل الأسبوعية المقبولة. ويشترط الحد الناظم التحقق من التلوث والسلامة الإنشائية للتأكد من ملاءمة المواد لإعادة الاستخدام. وهذه مخرجات مرحلية للحالات المتعاقد عليها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `circular-construction`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of pre-demolition audits, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, et non l’existence d’une commande financée pour ce service particulier. Des propriétaires d’actifs, des budgets d’infrastructure et des responsabilités environnementales distincts peuvent empêcher la commande de travaux techniquement utiles. Pour `circular-construction`, la réponse proposée est donc un processus contractuel assorti d’un bénéficiaire désigné et d’une définition acceptée des audits avant démolition, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجه تونس في مجالات المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول على هذه الخدمة تحديداً. وقد يؤدي تفرق الجهات المالكة للأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التعاقد على أعمال مفيدة من الناحية التقنية. لذلك، فإن الاستجابة المقترحة لخدمة `circular-construction` هي سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لتدقيقات ما قبل الهدم، لا استقطاباً للموظفين يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the pre-demolition audits acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks material passports before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted pre-demolition audits from rejected or deferred work and records blockers around reuse feasibility studies. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des audits avant démolition ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités associées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les passeports de matériaux avant approbation. L’audit aléatoire proposé de 5% revérifie les éléments justificatifs sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les audits avant démolition acceptés des travaux rejetés ou différés et consigne les obstacles liés aux études de faisabilité du réemploi. Les examens des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تدقيقات ما قبل الهدم؛ ويحوّل 100 مدير هذه المعايير إلى تكليفات لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، بينما يراجع مراجع مؤهل جوازات المواد قبل الموافقة عليها. وتعيد المراجعة العشوائية المقترحة بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنها لا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميز التقرير الإجمالي للخدمة بين تدقيقات ما قبل الهدم المقبولة والعمل المرفوض أو المؤجل، ويسجل العوائق المتعلقة بدراسات جدوى إعادة الاستخدام. وتنسق مراجعات قادة المجموعات الموارد المشتركة دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "civil engineering, architecture, urban planning, surveying and building services",
+  "fr": "génie civil, architecture, urbanisme, topographie et techniques du bâtiment",
+  "ar": "الهندسة المدنية، والهندسة المعمارية، والتخطيط الحضري، والمساحة، وخدمات المباني"
+ },
+ "diploma": "licence | maîtrise | ingénieur",
+ "cohort": "30–40",
+ "region": {
+  "en": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
+  "fr": "Kasserine, Kairouan, Gafsa et sites de projets autorisés sur le littoral, sous réserve d’une commande locale",
+  "ar": "القصرين والقيروان وقفصة ومواقع المشاريع الساحلية المصرّح بها، رهناً بالتكليف المحلي"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Pre-demolition audits",
+    "fr": "Audits avant démolition",
+    "ar": "عمليات التدقيق قبل الهدم"
+   },
+   "unit": {
+    "en": "pre-demolition audits",
+    "fr": "audits avant démolition",
+    "ar": "عمليات التدقيق قبل الهدم"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Material passports",
+    "fr": "Passeports des matériaux",
+    "ar": "جوازات المواد"
+   },
+   "unit": {
+    "en": "material passports",
+    "fr": "passeports des matériaux",
+    "ar": "جوازات المواد"
+   },
+   "target": 2000
+  },
+  {
+   "name": {
+    "en": "Reuse feasibility studies",
+    "fr": "Études de faisabilité du réemploi",
+    "ar": "دراسات جدوى إعادة الاستخدام"
+   },
+   "unit": {
+    "en": "reuse feasibility studies",
+    "fr": "études de faisabilité du réemploi",
+    "ar": "دراسات جدوى إعادة الاستخدام"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Lifecycle comparisons",
+    "fr": "Comparaisons sur le cycle de vie",
+    "ar": "مقارنات دورة الحياة"
+   },
+   "unit": {
+    "en": "lifecycle comparisons",
+    "fr": "comparaisons sur le cycle de vie",
+    "ar": "مقارنات دورة الحياة"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `circular-construction` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + georeferenced inspection/photo or design files, linking the pre-demolition audits to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `circular-construction` associé à un cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers d’inspection/de photographie ou de conception géoréférencés, qui relient les audits avant démolition à la source, au réviseur, à la version, au registre des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة اعتماد مرتبطة بحالة لـ`circular-construction` ملف اعتماد PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + ملفات فحص أو تصميم محددة جغرافيًا، وتربط عمليات التدقيق قبل الهدم بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted pre-demolition audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis au plus tard le vendredi à 12:00 ; **≥2 audits avant démolition acceptés** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux justificatifs** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques liés à la sécurité ou à la confidentialité prévalent sur un score vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم ≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ **قبول ≥2 من عمليات التدقيق قبل الهدم** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. وتغيّر الإجازات أو الترتيبات المعتمدة المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تلغي التقييم الأخضر. هذه أهداف تجريبية وليست حدوداً مقررة في ملف README."
+ },
+ "boundary": {
+  "en": "reuse suitability requires contamination and structural fitness checks",
+  "fr": "l’aptitude au réemploi nécessite des contrôles de contamination et d’intégrité structurelle",
+  "ar": "يتطلب التحقق من ملاءمة إعادة الاستخدام فحوصاً للتلوث والسلامة الإنشائية"
+ },
+ "depends": [
+  {
+   "slug": "materials-science",
+   "id": 59
+  },
+  {
+   "slug": "waste-to-resource",
+   "id": 125
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "eia",
+   "id": 78
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.3"
+  },
+  {
+   "goal": "9",
+   "target": "9.1"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Hazardous salvage enters reuse markets → require competent safety sign-off, controlled trials and a documented stop-work trigger.",
+   "fr": "Des matériaux de récupération dangereux entrent sur les marchés du réemploi → exiger une validation de sécurité par une personne compétente, des essais contrôlés et un déclencheur d’arrêt des travaux documenté.",
+   "ar": "دخول مواد مستخلصة خطرة إلى أسواق إعادة الاستخدام → اشتراط اعتماد سلامة من مختص مؤهل، وتجارب مضبوطة، وسبب موثق لإيقاف العمل."
+  },
+  {
+   "en": "Material passports exaggerate remaining life → reconcile source records with the pre-demolition audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les passeports des matériaux exagèrent la durée de vie restante → rapprocher les dossiers sources de la liste de contrôle d’acceptation des audits avant démolition et attribuer la responsabilité des mesures correctives.",
+   "ar": "المبالغة في تقدير العمر المتبقي في جوازات المواد → مطابقة سجلات المصادر مع قائمة التحقق لاعتماد عمليات التدقيق قبل الهدم وتحديد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Demolition proceeds before recovery planning → reconcile source records with the pre-demolition audits acceptance checklist and assign corrective-action ownership.",
+   "fr": "La démolition commence avant la planification de la récupération → rapprocher les dossiers sources de la liste de contrôle d’acceptation des audits avant démolition et attribuer la responsabilité des mesures correctives.",
+   "ar": "بدء الهدم قبل التخطيط للاسترداد → مطابقة سجلات المصادر مع قائمة التحقق لاعتماد عمليات التدقيق قبل الهدم وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

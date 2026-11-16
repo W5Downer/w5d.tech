@@ -1,0 +1,5 @@
+/* rtl.css — additive RTL rules loaded only when lang=ar (most direction handling is logical-property based in attention.css) */
+[dir=rtl] body{text-align:right}
+[dir=rtl] .space-x-reverse{--tw-space-x-reverse:1}
+[dir=rtl] input[type=email],[dir=rtl] input[type=url],[dir=rtl] input[type=tel],[dir=rtl] input[type=number],[dir=rtl] .ltr-field{direction:ltr;text-align:right}
+[dir=rtl] .code-block,[dir=rtl] pre,[dir=rtl] code{direction:ltr;text-align:left}

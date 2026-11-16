@@ -1,0 +1,65 @@
+{
+ "slug": "metax-pillars",
+ "id": 10,
+ "order": 10,
+ "icon": "columns-3",
+ "status": "live",
+ "status_label": {
+  "en": "Live",
+  "fr": "En service",
+  "ar": "قائم"
+ },
+ "status_date": "2026-11-15",
+ "name": {
+  "en": "MetaX pillars",
+  "fr": "Piliers de MetaX",
+  "ar": "ركائز MetaX"
+ },
+ "tagline": {
+  "en": "Nine cross-cutting pillars of the organisation.",
+  "fr": "Neuf piliers transversaux de l’organisation.",
+  "ar": "تسع ركائز عابرة لمجالات المنظمة."
+ },
+ "outcome": [
+  {
+   "en": "Nine pillars are listed on the preview as cross-cutting organisational and ontological dimensions.",
+   "fr": "Neuf piliers sont présentés dans l’aperçu comme des dimensions transversales de l’organisation et de l’ontologie.",
+   "ar": "تُدرج الركائز التسع في المعاينة بوصفها أبعادًا تنظيمية وأنطولوجية عابرة للمجالات."
+  },
+  {
+   "en": "They are documentation and governance structure, not a product.",
+   "fr": "Il s’agit d’une structure de documentation et de gouvernance, et non d’un produit.",
+   "ar": "إنها بنية للتوثيق والحوكمة، وليست منتجًا."
+  }
+ ],
+ "evidence": {
+  "en": "Nine pillars listed.",
+  "fr": "Neuf piliers répertoriés.",
+  "ar": "إدراج تسع ركائز."
+ },
+ "services": [
+  "philosophy-ethics",
+  "cultural-policy",
+  "science-policy"
+ ],
+ "timeline": [
+  {
+   "when": {
+    "en": "2026-11-15",
+    "fr": "2026-11-15",
+    "ar": "2026-11-15"
+   },
+   "title": {
+    "en": "Nine pillars listed",
+    "fr": "Neuf piliers répertoriés",
+    "ar": "إدراج تسع ركائز"
+   },
+   "body": {
+    "en": "Register entry.",
+    "fr": "Entrée du registre.",
+    "ar": "إدخال في السجل."
+   }
+  }
+ ],
+ "gradient": "cultures"
+}

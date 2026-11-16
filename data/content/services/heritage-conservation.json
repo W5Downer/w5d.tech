@@ -1,0 +1,167 @@
+{
+ "slug": "heritage-conservation",
+ "id": 25,
+ "macro": "cultures",
+ "placement": "Real 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Heritage Conservation Science",
+  "fr": "Science de la conservation du patrimoine",
+  "ar": "علوم صون التراث"
+ },
+ "short": {
+  "en": "The service provides materials analysis, climate control, restoration.",
+  "fr": "Analyser et stabiliser les matériaux patrimoniaux.",
+  "ar": "تحليل مواد التراث وتثبيتها."
+ },
+ "abstract": {
+  "en": "Scientific conservation of heritage materials — analytical materials science, environmental control engineering, restoration planning, and monitoring protocols for preventive conservation.",
+  "fr": "Conservation scientifique des matériaux patrimoniaux — science analytique des matériaux, ingénierie du contrôle environnemental, planification de la restauration et protocoles de suivi pour la conservation préventive.",
+  "ar": "الصون العلمي لمواد التراث — علوم المواد التحليلية، وهندسة التحكم البيئي، والتخطيط للترميم، وبروتوكولات الرصد للصون الوقائي."
+ },
+ "long": [
+  {
+   "en": "The Heritage Conservation Science service organises a weekly work package around material assessments, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 300 material assessments; 1000 microclimate logs; 100 treatment plans; 50 conservation trial reports. Scientific conservation of heritage materials — analytical materials science, environmental control engineering, restoration planning, and monitoring protocols for preventive conservation. Specialists sequence those methods against the accepted weekly package. The governing boundary is that sampling is minimally destructive and treatments need qualified conservation approval. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service Science de la conservation du patrimoine organise un lot de travail hebdomadaire autour des évaluations des matériaux, plutôt que de considérer la présence comme le produit. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 300 évaluations des matériaux ; 1000 relevés du microclimat ; 100 plans de traitement ; 50 rapports d’essais de conservation. Conservation scientifique des matériaux patrimoniaux — science analytique des matériaux, ingénierie du contrôle environnemental, planification de la restauration et protocoles de suivi pour la conservation préventive. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les prélèvements doivent être peu destructifs et que les traitements nécessitent l’approbation de spécialistes qualifiés en conservation. Il s’agit de résultats échelonnés issus de dossiers commandés, et non d’une promesse d’achever chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة علوم صون التراث حزمة عمل أسبوعية تتمحور حول تقييمات المواد، بدلاً من اعتبار الحضور هو المنتج. وعند بلوغ الطاقة الاستيعابية الكاملة مع توفير الموارد، تتضمن خطتها التجريبية 300 تقييم للمواد؛ و1000 سجل للمناخ المحلي؛ و100 خطة معالجة؛ و50 تقريراً عن تجارب الصون. الصون العلمي لمواد التراث — علوم المواد التحليلية، وهندسة التحكم البيئي، والتخطيط للترميم، وبروتوكولات الرصد للصون الوقائي. ويرتّب المتخصصون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. والضابط الأساسي هو أن تكون العينات مأخوذة بأقل قدر ممكن من الإتلاف، وأن تحظى المعالجات بموافقة مختص مؤهل في الصون. وهذه مخرجات مرحلية لحالات جرى التعاقد بشأنها، وليست وعداً بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `heritage-conservation`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of material assessments, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 documente les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de la SONEDE, qui atteignaient 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, et non l’existence d’une commande financée pour ce service particulier. La séparation entre propriétaires d’actifs, budgets d’infrastructure et responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `heritage-conservation`, la réponse proposée est donc un processus contractuel avec un bénéficiaire identifié et une définition acceptée des évaluations des matériaux, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثّق تقرير CCDR الصادر في نوفمبر 2023 تحديات تونس المتعلقة بالمياه والسواحل والتحول في قطاع الطاقة، ومنها بلوغ فاقد التوزيع لدى SONEDE نسبة 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لا إلى وجود طلب ممول على هذه الخدمة بعينها. وقد تؤدي تعددية مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التعاقد على أعمال مفيدة من الناحية التقنية. لذلك، فإن الاستجابة المقترحة لخدمة `heritage-conservation` هي سير عمل تعاقدي يحدد جهة مستفيدة بالاسم وتعريفاً معتمداً لتقييمات المواد، لا استقطاب موظفين يستند حصراً إلى معدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the material assessments acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks microclimate logs before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted material assessments from rejected or deferred work and records blockers around treatment plans. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des évaluations des matériaux ; 100 responsables les traduisent en affectations à des équipes d’environ dix spécialistes. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un évaluateur compétent vérifie les relevés du microclimat avant leur approbation. L’audit aléatoire de 5% vérifie à nouveau les éléments justificatifs et les exceptions ; il ne remplace pas l’examen par les responsables de chaque rapport hebdomadaire. Le bilan du service distingue les évaluations des matériaux acceptées des travaux rejetés ou différés, et consigne les obstacles liés aux plans de traitement. Les examens par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول تقييمات المواد؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء لكل فريق. وتحدد الهويات المرتبطة بـDyon هوية المساهمين الخاضعين للمساءلة، بينما يتحقق مراجع مختص من سجلات المناخ المحلي قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% التحقق من الأدلة المصدرية والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز التقرير الإجمالي للخدمة بين تقييمات المواد المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بخطط المعالجة. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "conservation, analytical chemistry and heritage materials",
+  "fr": "conservation, chimie analytique et matériaux patrimoniaux",
+  "ar": "الصون، والكيمياء التحليلية، ومواد التراث"
+ },
+ "diploma": "maîtrise | doctorat",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis, Kairouan and authorised heritage conservation sites",
+  "fr": "Tunis, Kairouan et sites de conservation du patrimoine autorisés",
+  "ar": "تونس والقيروان ومواقع صون التراث المعتمدة"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Material assessments",
+    "fr": "Évaluations des matériaux",
+    "ar": "تقييمات المواد"
+   },
+   "unit": {
+    "en": "material assessments",
+    "fr": "évaluations des matériaux",
+    "ar": "تقييمات المواد"
+   },
+   "target": 300
+  },
+  {
+   "name": {
+    "en": "Microclimate logs",
+    "fr": "Relevés du microclimat",
+    "ar": "سجلات المناخ المحلي"
+   },
+   "unit": {
+    "en": "microclimate logs",
+    "fr": "relevés du microclimat",
+    "ar": "سجلات المناخ المحلي"
+   },
+   "target": 1000
+  },
+  {
+   "name": {
+    "en": "Treatment plans",
+    "fr": "Plans de traitement",
+    "ar": "خطط المعالجة"
+   },
+   "unit": {
+    "en": "treatment plans",
+    "fr": "plans de traitement",
+    "ar": "خطط المعالجة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Conservation trial reports",
+    "fr": "Rapports d’essais de conservation",
+    "ar": "تقارير تجارب الصون"
+   },
+   "unit": {
+    "en": "conservation trial reports",
+    "fr": "rapports d’essais de conservation",
+    "ar": "تقارير تجارب الصون"
+   },
+   "target": 50
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `heritage-conservation` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + TIFF/3D or material-test source files as applicable, linking the material assessments to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `heritage-conservation` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des fichiers sources TIFF/3D ou des fichiers d’essais de matériaux, selon le cas, et relie les évaluations des matériaux à la source, à l’évaluateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بالحالة لخدمة `heritage-conservation` ملف قبول بصيغة PDF/A + بياناً بالمصادر بصيغة CSV/JSON + ملفات المصدر بصيغة TIFF/3D أو ملفات اختبارات المواد، حسب الاقتضاء، مع ربط تقييمات المواد بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥3 accepted material assessments** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis d’ici ven. 12:00 ; **≥3 évaluations matérielles substantielles acceptées** par équipe-semaine, selon la complexité des cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils README établis.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مؤهلة** بحلول الجمعة 12:00؛ و**≥3 تقييمات جوهرية مقبولة** لكل فريق-أسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب مسائل الأدلة** لكل فريق-أسبوع. وتغيّر الإجازات أو التعديلات المعتمدة المقام المؤهل، كما أن العيوب الحرجة المتعلقة بالسلامة أو الخصوصية تلغي أثر النتيجة الخضراء. هذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+ },
+ "boundary": {
+  "en": "sampling is minimally destructive and treatments need qualified conservation approval",
+  "fr": "l’échantillonnage est peu destructif et les traitements nécessitent l’approbation d’un spécialiste qualifié en conservation",
+  "ar": "أخذ العينات محدود الإتلاف، وتتطلب المعالجات موافقة اختصاصي مؤهل في صون التراث."
+ },
+ "depends": [
+  {
+   "slug": "materials-science",
+   "id": 59
+  },
+  {
+   "slug": "metrology",
+   "id": 64
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "heritage-built",
+   "id": 33
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "11",
+   "target": "11.4"
+  },
+  {
+   "goal": "4",
+   "target": "4.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Destructive sampling consumes rare material → reconcile source records with the material assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "L’échantillonnage destructif consomme des matériaux rares → rapprocher les dossiers sources de la liste de contrôle d’acceptation des évaluations matérielles et attribuer la responsabilité des actions correctives.",
+   "ar": "يؤدي أخذ العينات الإتلافي إلى استهلاك مواد نادرة → طابقوا سجلات المصدر مع قائمة التحقق لقبول تقييمات المواد، وحددوا الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Treatment reactions accelerate decay → reconcile source records with the material assessments acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les réactions aux traitements accélèrent la dégradation → rapprocher les dossiers sources de la liste de contrôle d’acceptation des évaluations matérielles et attribuer la responsabilité des actions correctives.",
+   "ar": "تُسرّع تفاعلات المعالجة التدهور → طابقوا سجلات المصدر مع قائمة التحقق لقبول تقييمات المواد، وحددوا الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Uncalibrated sensors conceal deterioration → re-perform critical checks against traceable references and quarantine invalid results.",
+   "fr": "Des capteurs non étalonnés masquent la détérioration → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats non valides.",
+   "ar": "قد تخفي المستشعرات غير المعايرة مظاهر التدهور → أعيدوا إجراء الفحوص الحرجة بالرجوع إلى مراجع قابلة للتتبع، وضعوا النتائج غير الصالحة قيد العزل."
+  }
+ ]
+}

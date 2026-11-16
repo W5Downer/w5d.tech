@@ -1,0 +1,167 @@
+{
+ "slug": "biodiversity",
+ "id": 67,
+ "macro": "sciences",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Biodiversity & Conservation Science",
+  "fr": "Sciences de la biodiversité et de la conservation",
+  "ar": "علم التنوع البيولوجي والحفاظ عليه"
+ },
+ "short": {
+  "en": "The service provides species monitoring, habitat restoration.",
+  "fr": "Mesurer les espèces et préparer leur conservation.",
+  "ar": "رصد الأنواع وإعداد حمايتها."
+ },
+ "abstract": {
+  "en": "Biodiversity and conservation science — species monitoring, habitat restoration planning, and conservation effectiveness assessment across protected areas.",
+  "fr": "Sciences de la biodiversité et de la conservation — suivi des espèces, planification de la restauration des habitats et évaluation de l’efficacité des mesures de conservation dans les aires protégées.",
+  "ar": "علم التنوع البيولوجي والحفاظ عليه — رصد الأنواع، والتخطيط لاستعادة الموائل، وتقييم فعالية جهود الحفاظ عليها في المناطق المحمية."
+ },
+ "long": [
+  {
+   "en": "The Biodiversity & Conservation Science service organises a weekly work package around species observation records, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 5000 species observation records; 500 habitat plots; 100 restoration plans; 500 monitoring quality checks. Biodiversity and conservation science — species monitoring, habitat restoration planning, and conservation effectiveness assessment across protected areas. Specialists sequence those methods against the accepted weekly package. The governing boundary is that repeat surveys document season, sampling effort and identification confidence. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service des sciences de la biodiversité et de la conservation organise un lot de travail hebdomadaire autour des relevés d’espèces, plutôt que de considérer la présence comme le produit attendu. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 5000 relevés d’espèces ; 500 parcelles d’habitat ; 100 plans de restauration ; 500 contrôles de la qualité du suivi. Sciences de la biodiversité et de la conservation — suivi des espèces, planification de la restauration des habitats et évaluation de l’efficacité des mesures de conservation dans les aires protégées. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. La règle fondamentale est que les relevés répétés consignent la saison, l’effort d’échantillonnage et le degré de confiance de l’identification. Il s’agit de résultats par étapes issus de cas commandés, et non de la promesse de mener à bien chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظم خدمة علم التنوع البيولوجي والحفاظ عليه حزمة عمل أسبوعية تتمحور حول سجلات رصد الأنواع، بدلًا من اعتبار الحضور هو المنتج. وتستهدف خطتها التجريبية، عند العمل بكامل الطاقة الاستيعابية والموارد، 5000 سجل لرصد الأنواع؛ و500 قطعة موئل؛ و100 خطة لاستعادة الموائل؛ و500 عملية تحقق من جودة الرصد. علم التنوع البيولوجي والحفاظ عليه — رصد الأنواع، والتخطيط لاستعادة الموائل، وتقييم فعالية جهود الحفاظ عليها في المناطق المحمية. ويرتب الاختصاصيون هذه الأساليب وفقًا لحزمة العمل الأسبوعية المعتمدة. ويقتضي الضابط الأساسي أن توثق المسوحات المتكررة الموسم وجهد أخذ العينات ومستوى الثقة في تحديد الأنواع. وهذه مخرجات مرحلية لحالات تم التكليف بها، وليست وعدًا بإنجاز برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "The November 2023 CCDR documents Tunisia's water, coastal and energy-transition constraints, including SONEDE distribution losses of 34% in 2021. This establishes a need for measured technical intervention, not a funded order for this particular service. Separate asset owners, infrastructure budgets and environmental responsibilities can leave technically useful work uncommissioned. For `biodiversity`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of species observation records, not recruitment justified solely by the national unemployment rate.",
+   "fr": "Le CCDR de novembre 2023 décrit les contraintes de la Tunisie en matière d’eau, de littoral et de transition énergétique, notamment les pertes de distribution de SONEDE, qui s’élevaient à 34% en 2021. Cela établit la nécessité d’interventions techniques mesurées, mais ne constitue pas une commande financée pour ce service particulier. La séparation entre les propriétaires des actifs, les budgets d’infrastructure et les responsabilités environnementales peut empêcher la commande de travaux techniquement utiles. Pour `biodiversity`, la réponse proposée est donc un processus de travail contractuel avec un bénéficiaire désigné et une définition acceptée des relevés d’espèces, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "يوثق تقرير CCDR الصادر في نوفمبر 2023 القيود التي تواجهها تونس في المياه والسواحل والتحول في قطاع الطاقة، بما في ذلك فاقد التوزيع لدى SONEDE البالغ 34% في 2021. وهذا يثبت الحاجة إلى تدخل تقني قائم على القياس، لكنه لا يشكل طلبًا ممولًا لهذه الخدمة بعينها. وقد يؤدي تباين مالكي الأصول وميزانيات البنية التحتية والمسؤوليات البيئية إلى عدم التكليف بأعمال مفيدة من الناحية التقنية. لذلك، يتمثل النهج المقترح لـ`biodiversity` في سير عمل تعاقدي يحدد مستفيدًا بالاسم وتعريفًا معتمدًا لسجلات رصد الأنواع، لا في تبرير التوظيف استنادًا إلى معدل البطالة الوطني وحده."
+  },
+  {
+   "en": "A service leader sets the species observation records acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks habitat plots before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted species observation records from rejected or deferred work and records blockers around restoration plans. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable de service définit les critères d’acceptation des relevés d’espèces ; 100 responsables les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les parcelles d’habitat avant leur approbation. L’audit aléatoire proposé de 5% réexamine les éléments probants à la source et les exceptions ; il ne remplace pas la revue de chaque rapport hebdomadaire par un responsable. Le bilan du service distingue les relevés d’espèces acceptés des travaux rejetés ou reportés et consigne les obstacles liés aux plans de restauration. Les revues des responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1,000 experts.",
+   "ar": "يضع قائد الخدمة معايير قبول سجلات رصد الأنواع؛ ويحوّل 100 مدير هذه المعايير إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـDyon هوية المساهمين المسؤولين، فيما يتحقق مراجع مؤهل من قطع الموائل قبل اعتمادها. ويعيد التدقيق العشوائي المقترح بنسبة 5% فحص أدلة المصدر والاستثناءات؛ لكنه لا يحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين سجلات رصد الأنواع المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة بخطط استعادة الموائل. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز الحد الأقصى البالغ 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "ecology, biology, conservation science and environmental monitoring",
+  "fr": "écologie, biologie, sciences de la conservation et suivi environnemental",
+  "ar": "علم البيئة، وعلم الأحياء، وعلم الحفاظ على البيئة، والرصد البيئي"
+ },
+ "diploma": "licence | maîtrise | ingénieur | doctorat",
+ "cohort": "30–40",
+ "region": {
+  "en": "north-west habitats and authorised southern/coastal conservation areas",
+  "fr": "habitats du nord-ouest et zones de conservation autorisées du sud et du littoral",
+  "ar": "الموائل في الشمال الغربي ومناطق الحماية الجنوبية/الساحلية المصرح بها"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Species observation records",
+    "fr": "Fiches d’observation des espèces",
+    "ar": "سجلات رصد الأنواع"
+   },
+   "unit": {
+    "en": "species observation records",
+    "fr": "fiches d’observation des espèces",
+    "ar": "سجلات رصد الأنواع"
+   },
+   "target": 5000
+  },
+  {
+   "name": {
+    "en": "Habitat plots",
+    "fr": "Parcelles d’habitat",
+    "ar": "قطع الموائل"
+   },
+   "unit": {
+    "en": "habitat plots",
+    "fr": "parcelles d’habitat",
+    "ar": "قطع الموائل"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "Restoration plans",
+    "fr": "Plans de restauration",
+    "ar": "خطط الاستعادة"
+   },
+   "unit": {
+    "en": "restoration plans",
+    "fr": "plans de restauration",
+    "ar": "خطط الاستعادة"
+   },
+   "target": 100
+  },
+  {
+   "name": {
+    "en": "Monitoring quality checks",
+    "fr": "Contrôles qualité du suivi",
+    "ar": "فحوصات جودة الرصد"
+   },
+   "unit": {
+    "en": "monitoring quality checks",
+    "fr": "contrôles qualité du suivi",
+    "ar": "فحوصات جودة الرصد"
+   },
+   "target": 500
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `biodiversity` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + method/version identifiers and reproducible source data, linking the species observation records to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `biodiversity` lié au cas comprend un dossier d’acceptation PDF/A + un manifeste source CSV/JSON + des identifiants de méthode/version et des données sources reproductibles, reliant les fiches d’observation des espèces à la source, à l’examinateur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول `biodiversity` المرتبطة بحالة ملف قبول بصيغة PDF/A + بيانًا بالمصادر بصيغة CSV/JSON + معرّفات المنهج/الإصدار وبيانات مصدر قابلة لإعادة الإنتاج، وتربط سجلات رصد الأنواع بالمصدر والمراجع والإصدار وسجل الاستثناءات والتصريح."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥40 accepted species observation records** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** remis le vendredi à 12:00 ; **≥40 fiches d’observation des espèces acceptées** par équipe et par semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux preuves** par équipe et par semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité l’emportent sur un score vert. Il s’agit de cibles pour le projet pilote, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ **≥40 سجلًا مقبولًا لرصد الأنواع** لكل فريق-أسبوع، وفقًا لتعقيد الحالة؛ **≤1 طلب لإعادة العمل متعلق بالأدلة** لكل فريق-أسبوع. تؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، وتتقدم عيوب السلامة/الخصوصية الحرجة على التقييم الأخضر. هذه أهداف تجريبية وليست حدودًا معتمدة في README."
+ },
+ "boundary": {
+  "en": "repeat surveys document season, sampling effort and identification confidence",
+  "fr": "les relevés répétés documentent la saison, l’effort d’échantillonnage et le degré de confiance de l’identification",
+  "ar": "توثّق المسوحات المتكررة الموسم وجهد أخذ العينات ومستوى الثقة في تحديد الهوية"
+ },
+ "depends": [
+  {
+   "slug": "public-space",
+   "id": 41
+  },
+  {
+   "slug": "geospatial",
+   "id": 113
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "climate-governance",
+   "id": 90
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "15",
+   "target": "15.1"
+  },
+  {
+   "goal": "15",
+   "target": "15.5"
+  },
+  {
+   "goal": "8",
+   "target": "8.5"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Sampling bias mimics population change → include affected-user review, publish selection assumptions and retain a grievance route.",
+   "fr": "Le biais d’échantillonnage est confondu avec une variation de la population → prévoir l’examen par les utilisateurs concernés, publier les hypothèses de sélection et maintenir une voie de recours.",
+   "ar": "قد يحاكي تحيز أخذ العينات تغيرًا في أعداد الجماعات الحيوية → تضمين مراجعة من المستخدمين المتأثرين، ونشر افتراضات الاختيار، والإبقاء على مسار لتقديم التظلمات."
+  },
+  {
+   "en": "Restoration introduces invasive species → reconcile source records with the species observation records acceptance checklist and assign corrective-action ownership.",
+   "fr": "La restauration introduit des espèces invasives → rapprocher les données sources de la liste de contrôle d’acceptation des fiches d’observation des espèces et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد تؤدي الاستعادة إلى إدخال أنواع غازية → مطابقة سجلات المصدر مع قائمة التحقق لقبول سجلات رصد الأنواع وتحديد المسؤولية عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Rare species locations are disclosed → reconcile source records with the species observation records acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les emplacements d’espèces rares sont divulgués → rapprocher les données sources de la liste de contrôle d’acceptation des fiches d’observation des espèces et attribuer la responsabilité des mesures correctives.",
+   "ar": "قد يُفصح عن مواقع الأنواع النادرة → مطابقة سجلات المصدر مع قائمة التحقق لقبول سجلات رصد الأنواع وتحديد المسؤولية عن الإجراءات التصحيحية."
+  }
+ ]
+}

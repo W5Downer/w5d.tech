@@ -1,0 +1,167 @@
+{
+ "slug": "municipal-capacity",
+ "id": 85,
+ "macro": "governance",
+ "placement": "Between 1.0",
+ "placement_note": "",
+ "title": {
+  "en": "Municipal Capacity Building",
+  "fr": "Renforcement des capacités municipales",
+  "ar": "بناء قدرات البلديات"
+ },
+ "short": {
+  "en": "The service provides budgeting, HR, service delivery.",
+  "fr": "Renforcer les capacités de gestion locale.",
+  "ar": "تعزيز قدرات الإدارة المحلية."
+ },
+ "abstract": {
+  "en": "Municipal capacity building — budgeting, HR systems, and service-delivery improvement for local governments.",
+  "fr": "Renforcement des capacités municipales — budgétisation, systèmes de ressources humaines et amélioration de la prestation de services pour les collectivités locales.",
+  "ar": "بناء قدرات البلديات — إعداد الميزانيات، ونظم الموارد البشرية، وتحسين تقديم الخدمات للحكومات المحلية."
+ },
+ "long": [
+  {
+   "en": "The Municipal Capacity Building service organises a weekly work package around municipal process reviews, rather than treating attendance as the product. At full, resourced capacity, its pilot plan is 200 municipal process reviews; 500 budget execution checks; 200 hr workflow tests; 100 service improvement plans. Municipal capacity building — budgeting, HR systems, and service-delivery improvement for local governments. Specialists sequence those methods against the accepted weekly package. The governing boundary is that assistance fits the current lawful distribution of local responsibilities. These are staged outputs from commissioned cases, not a promise to complete an entire national programme each week.",
+   "fr": "Le service de renforcement des capacités municipales organise un lot de travail hebdomadaire autour de l’examen des processus municipaux, plutôt que de considérer la participation comme le résultat attendu. À pleine capacité, avec les ressources nécessaires, son plan pilote prévoit 200 examens des processus municipaux ; 500 contrôles de l’exécution budgétaire ; 200 tests des flux de travail RH ; 100 plans d’amélioration des services. Renforcement des capacités municipales — budgétisation, systèmes de ressources humaines et amélioration de la prestation de services pour les collectivités locales. Les spécialistes organisent ces méthodes en fonction du lot hebdomadaire accepté. Le principe directeur est que l’assistance respecte la répartition légale actuelle des responsabilités locales. Il s’agit de résultats échelonnés issus de mandats confiés, et non d’une promesse de mener à bien chaque semaine un programme national dans son intégralité.",
+   "ar": "تنظّم خدمة بناء قدرات البلديات حزمة عمل أسبوعية تتمحور حول مراجعات العمليات البلدية، بدلاً من اعتبار الحضور هو الناتج. وعند بلوغ الطاقة الكاملة المزوّدة بالموارد، تتضمن خطة التجربة 200 مراجعة للعمليات البلدية؛ و500 عملية تحقق من تنفيذ الميزانية؛ و200 اختبار لسير عمل الموارد البشرية؛ و100 خطة لتحسين الخدمات. بناء قدرات البلديات — إعداد الميزانيات، ونظم الموارد البشرية، وتحسين تقديم الخدمات للحكومات المحلية. ويرتّب الاختصاصيون هذه الأساليب وفق حزمة العمل الأسبوعية المعتمدة. ويقضي القيد الناظم بأن تتوافق المساعدة مع التوزيع القانوني الحالي للمسؤوليات المحلية. وهذه مخرجات مرحلية مستمدة من الحالات المتعاقد عليها، وليست وعداً بإكمال برنامج وطني كامل كل أسبوع."
+  },
+  {
+   "en": "OECD's June 2024 review reports that nearly 40% of covered Tunisian firms identify inadequate workforce skills as a major constraint, using Enterprise Survey comparisons labelled 2020 or latest available. Kotrane's 2024 legal analysis also identifies formal-job scarcity and institutional limits rather than a training-only problem. Benefits depend on legitimate authority, shared administrative records and implementation owners; an advisory product without those users cannot be assumed to improve an institution. For `municipal-capacity`, the proposed response is therefore a contracted workflow with a named beneficiary and an accepted definition of municipal process reviews, not recruitment justified solely by the national unemployment rate.",
+   "fr": "L’examen de juin 2024 de l’OCDE indique que près de 40% des entreprises tunisiennes couvertes considèrent l’insuffisance des compétences de la main-d’œuvre comme une contrainte majeure, sur la base de comparaisons de l’enquête auprès des entreprises libellées 2020 ou dernière année disponible. L’analyse juridique de Kotrane publiée en 2024 relève également la rareté des emplois formels et les limites institutionnelles, plutôt qu’un problème relevant uniquement de la formation. Les bénéfices dépendent de l’existence d’une autorité légitime, de dossiers administratifs partagés et de responsables de la mise en œuvre ; on ne peut présumer qu’un produit de conseil sans ces utilisateurs améliore une institution. Pour `municipal-capacity`, la réponse proposée est donc un processus de travail contractualisé, avec un bénéficiaire désigné et une définition acceptée des examens des processus municipaux, et non un recrutement justifié uniquement par le taux de chômage national.",
+   "ar": "تشير مراجعة OECD الصادرة في يونيو 2024 إلى أن ما يقارب 40% من الشركات التونسية المشمولة ترى أن قصور مهارات القوى العاملة يشكل عائقاً رئيسياً، استناداً إلى مقارنات مسح المؤسسات الموسومة بعام 2020 أو بأحدث بيانات متاحة. كما يحدد التحليل القانوني الذي أعدّه Kotrane عام 2024 ندرة الوظائف الرسمية والقيود المؤسسية بوصفها عوامل مؤثرة، لا مشكلة تقتصر على التدريب. وتتوقف الفوائد على وجود صلاحية مشروعة، وسجلات إدارية مشتركة، ومسؤولين عن التنفيذ؛ ولا يمكن افتراض أن منتجاً استشارياً لا يستخدمه هؤلاء سيحسّن أداء مؤسسة. لذلك، تتمثل الاستجابة المقترحة لـ `municipal-capacity` في سير عمل تعاقدي يحدد مستفيداً بالاسم وتعريفاً معتمداً لمراجعات العمليات البلدية، لا في توظيف يُبرر حصراً بمعدل البطالة الوطني."
+  },
+  {
+   "en": "A service leader sets the municipal process reviews acceptance rubric; 100 managers translate it into approximately ten-expert team assignments. Dyon-linked identities identify accountable contributors, while a competent reviewer checks budget execution checks before approval. The proposed 5% random audit rechecks source evidence and exceptions; it does not replace manager review of every weekly report. The service rollup distinguishes accepted municipal process reviews from rejected or deferred work and records blockers around hr workflow tests. Cluster-lead reviews coordinate shared resources without increasing the 1,000-expert cap.",
+   "fr": "Un responsable du service définit les critères d’acceptation des examens des processus municipaux ; 100 gestionnaires les traduisent en affectations d’équipes d’environ dix experts. Les identités liées à Dyon permettent d’identifier les contributeurs responsables, tandis qu’un réviseur compétent vérifie les contrôles de l’exécution budgétaire avant leur approbation. L’audit aléatoire proposé de 5% vérifie à nouveau les éléments probants issus des sources et les exceptions ; il ne remplace pas l’examen de chaque rapport hebdomadaire par un gestionnaire. Le bilan du service distingue les examens des processus municipaux acceptés des travaux rejetés ou différés et consigne les obstacles liés aux tests des flux de travail RH. Les examens menés par les responsables de cluster coordonnent les ressources partagées sans dépasser le plafond de 1 000 experts.",
+   "ar": "يضع قائد الخدمة معيار قبول مراجعات العمليات البلدية؛ ويحوّل 100 مدير هذا المعيار إلى مهام لفرق تضم نحو عشرة خبراء. وتحدد الهويات المرتبطة بـ Dyon المساهمين المسؤولين، فيما يتحقق مراجع مختص من عمليات التحقق من تنفيذ الميزانية قبل اعتمادها. وتعيد عملية التدقيق العشوائي المقترحة بنسبة 5% فحص أدلة المصادر والاستثناءات؛ ولا تحل محل مراجعة المدير لكل تقرير أسبوعي. ويميّز ملخص الخدمة بين مراجعات العمليات البلدية المقبولة والأعمال المرفوضة أو المؤجلة، ويسجل العوائق المتعلقة باختبارات سير عمل الموارد البشرية. وتنسق مراجعات قادة المجموعات الموارد المشتركة من دون تجاوز سقف 1,000 خبير."
+  }
+ ],
+ "fields": {
+  "en": "law, public administration, economics, management and public policy",
+  "fr": "droit, administration publique, économie, gestion et politiques publiques",
+  "ar": "القانون، والإدارة العامة، والاقتصاد، والإدارة، والسياسة العامة"
+ },
+ "diploma": "licence | maîtrise",
+ "cohort": "40–50",
+ "region": {
+  "en": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
+  "fr": "Tunis et partenaires des services publics des régions de l’intérieur participants ; les affectations respectent les mandats légaux en vigueur",
+  "ar": "تونس وشركاء الخدمة العامة المشاركون في المناطق الداخلية؛ وتتم عمليات الإلحاق وفقاً للصلاحيات القانونية السارية"
+ },
+ "deliverables": [
+  {
+   "name": {
+    "en": "Municipal process reviews",
+    "fr": "Examens des processus municipaux",
+    "ar": "مراجعات العمليات البلدية"
+   },
+   "unit": {
+    "en": "municipal process reviews",
+    "fr": "examens des processus municipaux",
+    "ar": "مراجعات العمليات البلدية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Budget execution checks",
+    "fr": "Contrôles de l’exécution budgétaire",
+    "ar": "عمليات التحقق من تنفيذ الميزانية"
+   },
+   "unit": {
+    "en": "budget execution checks",
+    "fr": "contrôles de l’exécution budgétaire",
+    "ar": "عمليات التحقق من تنفيذ الميزانية"
+   },
+   "target": 500
+  },
+  {
+   "name": {
+    "en": "HR workflow tests",
+    "fr": "Tests des flux de travail RH",
+    "ar": "اختبارات سير عمل الموارد البشرية"
+   },
+   "unit": {
+    "en": "hr workflow tests",
+    "fr": "tests des flux de travail RH",
+    "ar": "اختبارات سير عمل الموارد البشرية"
+   },
+   "target": 200
+  },
+  {
+   "name": {
+    "en": "Service improvement plans",
+    "fr": "Plans d’amélioration des services",
+    "ar": "خطط تحسين الخدمات"
+   },
+   "unit": {
+    "en": "service improvement plans",
+    "fr": "plans d’amélioration des services",
+    "ar": "خطط تحسين الخدمات"
+   },
+   "target": 100
+  }
+ ],
+ "evidence": {
+  "en": "A case-linked `municipal-capacity` acceptance package contains PDF/A acceptance dossier + CSV/JSON source manifest + redacted source and consultation records, linking the municipal process reviews to the source, reviewer, version, exception log and authorisation.",
+  "fr": "Un dossier d’acceptation `municipal-capacity` lié à un cas comprend un dossier d’acceptation PDF/A + un manifeste des sources CSV/JSON + des dossiers sources et de consultation expurgés, qui relient les examens des processus municipaux à la source, au réviseur, à la version, au journal des exceptions et à l’autorisation.",
+  "ar": "تتضمن حزمة قبول مرتبطة بحالة `municipal-capacity` ملف قبول PDF/A + بياناً لمصادر CSV/JSON + سجلات مصادر ومشاورات منقحة، وتربط مراجعات العمليات البلدية بالمصدر والمراجع والإصدار وسجل الاستثناءات والتفويض."
+ },
+ "kpi": {
+  "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted municipal process reviews** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
+  "fr": "Seuils proposés : **≥9 rapports hebdomadaires admissibles sur 10** soumis le ven. à 12:00 ; **≥2 examens des processus municipaux acceptés** par équipe et par semaine, sous réserve de la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe et par semaine. Les congés ou ajustements approuvés modifient le dénominateur admissible, et les défauts critiques en matière de sécurité ou de confidentialité prévalent sur un score vert. Il s’agit de cibles pilotes, et non de seuils établis dans le README.",
+  "ar": "الحدود المقترحة: **تقديم 9 من أصل 10 تقارير أسبوعية مستوفية للشروط بحلول الجمعة 12:00**؛ **قبول مراجعتين على الأقل للعمليات البلدية لكل فريق في الأسبوع**، مع مراعاة تعقيد الحالة؛ **طلب إعادة عمل واحد بحد أقصى لأسباب تتعلق بالأدلة لكل فريق في الأسبوع**. وتغيّر الإجازات أو التعديلات المعتمدة المقامَ المؤهل، بينما تتجاوز عيوب السلامة أو الخصوصية الحرجة أي تقييم أخضر. وهذه أهداف تجريبية، وليست حدوداً مثبتة في README."
+ },
+ "boundary": {
+  "en": "assistance fits the current lawful distribution of local responsibilities",
+  "fr": "l’assistance respecte la répartition légale actuelle des responsabilités locales",
+  "ar": "تتوافق المساعدة مع التوزيع القانوني الحالي للمسؤوليات المحلية"
+ },
+ "depends": [
+  {
+   "slug": "neighbourhood-upgrading",
+   "id": 52
+  },
+  {
+   "slug": "social-methods",
+   "id": 73
+  }
+ ],
+ "feeds": [
+  {
+   "slug": "urban-planning",
+   "id": 28
+  }
+ ],
+ "sdg": [
+  {
+   "goal": "8",
+   "target": "8.5"
+  },
+  {
+   "goal": "16",
+   "target": "16.6"
+  },
+  {
+   "goal": "16",
+   "target": "16.7"
+  }
+ ],
+ "risks": [
+  {
+   "en": "Advice assumes obsolete municipal mandates → obtain competent legal/authority validation and prohibit unauthorised operational decisions.",
+   "fr": "Les conseils reposent sur des mandats municipaux obsolètes → obtenir la validation d’une autorité compétente et interdire toute décision opérationnelle non autorisée.",
+   "ar": "تستند المشورة إلى صلاحيات بلدية تجاوزها الزمن → اطلبوا التحقق القانوني والتحقق من الصلاحيات من جهة مختصة، واحظروا اتخاذ قرارات تشغيلية غير مصرح بها."
+  },
+  {
+   "en": "Software outpaces staff capacity → reconcile source records with the municipal process reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "La capacité du personnel ne suit pas le rythme des logiciels → rapprochez les dossiers sources de la liste de contrôle d’acceptation des examens des processus municipaux et attribuez la responsabilité des mesures correctives.",
+   "ar": "تتجاوز وتيرة تطوير البرمجيات قدرة الموظفين → طابِق سجلات المصدر مع قائمة التحقق لقبول مراجعات العمليات البلدية، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  },
+  {
+   "en": "Revenue plans ignore household affordability → reconcile source records with the municipal process reviews acceptance checklist and assign corrective-action ownership.",
+   "fr": "Les plans de revenus ne tiennent pas compte de la capacité financière des ménages → rapprochez les dossiers sources de la liste de contrôle d’acceptation des examens des processus municipaux et attribuez la responsabilité des mesures correctives.",
+   "ar": "تتجاهل خطط الإيرادات القدرة على تحمل الأسر للتكاليف → طابِق سجلات المصدر مع قائمة التحقق لقبول مراجعات العمليات البلدية، وحدد الجهة المسؤولة عن الإجراءات التصحيحية."
+  }
+ ]
+}

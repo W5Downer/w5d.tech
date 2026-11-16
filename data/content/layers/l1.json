@@ -1,0 +1,15 @@
+{
+ "slug": "l1",
+ "code": "L1",
+ "order": 1,
+ "name": {
+  "en": "Meta solutions",
+  "fr": "Solutions Meta",
+  "ar": "حلول Meta"
+ },
+ "body": {
+  "en": "Cross-cutting tools used by every service: identity (KernID, Dyon), training (MetaX Academy), self-training agents (SelfAI), publishing (WebBooks).",
+  "fr": "Outils transversaux utilisés par chaque service : identité (KernID, Dyon), formation (MetaX Academy), agents d’autoformation (SelfAI), publication (WebBooks).",
+  "ar": "أدوات مشتركة بين جميع الخدمات: الهوية (KernID, Dyon)، والتدريب (MetaX Academy)، ووكلاء التدريب الذاتي (SelfAI)، والنشر (WebBooks)."
+ }
+}
