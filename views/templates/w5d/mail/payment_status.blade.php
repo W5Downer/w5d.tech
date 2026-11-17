@@ -1,11 +1,19 @@
 @extends('mail.layout')
+@php $ok = ($status ?? '') === 'verified'; @endphp
+@section('preheader', ($ok ? tr3('Payment verified', 'Paiement vérifié', 'تم التحقق من الدفعة') : tr3('Payment could not be verified', 'Paiement non vérifié', 'تعذّر التحقق من الدفعة')) . ' — ' . ($ref ?? ''))
 @section('content')
 @php $ok = ($status ?? '') === 'verified'; @endphp
-<h1 style="font-size:22px;margin:0 0 12px;color:#fff;">{{ $ok ? tr3('Payment verified', 'Paiement vérifié', 'تم التحقق من الدفعة') : tr3('Payment could not be verified', 'Paiement non vérifié', 'تعذّر التحقق من الدفعة') }}</h1>
-<p>{{ tr3('Hello', 'Bonjour', 'مرحبا') }} {{ $name ?? '' }},</p>
-<p>{{ tr3('Payment', 'Le paiement', 'الدفعة') }} <strong>{{ $ref }}</strong> ({{ tr3('order', 'commande', 'الطلب') }} {{ $order_ref }}, {{ number_format((float)$amount, 2) }} {{ $currency }}) :
-  <strong>{{ $ok ? tr3('verified by an administrator.', 'vérifié par un administrateur.', 'تحقق منه مسؤول.') : tr3('rejected.', 'rejeté.', 'مرفوضة.') }}</strong></p>
-@if(!empty($note))<p style="background:#1a1a2e;border-radius:10px;padding:10px 12px;">{{ $note }}</p>@endif
-@if(!$ok)<p>{{ tr3('Check the transaction reference and the sender number, then submit the payment again from the payment page.', 'Vérifiez la référence de transaction et le numéro émetteur, puis soumettez à nouveau le paiement depuis la page de paiement.', 'تحقق من مرجع العملية ورقم المرسل ثم أعد إرسال الدفعة من صفحة الدفع.') }}</p>
-<x-mail-button :href="$pay_url" :label="tr3('Open the payment page', 'Ouvrir la page de paiement', 'افتح صفحة الدفع')" />@endif
+<x-mail-title>{{ $ok ? tr3('Payment verified', 'Paiement vérifié', 'تم التحقق من الدفعة') : tr3('Payment could not be verified', 'Paiement non vérifié', 'تعذّر التحقق من الدفعة') }}</x-mail-title>
+<x-mail-p>{{ tr3('Hello', 'Bonjour', 'مرحبا') }}{{ !empty($name) ? ' ' . $name : '' }},</x-mail-p>
+<x-mail-note :tone="$ok ? 'ok' : 'bad'"><strong>{{ $ok ? tr3('Verified by an administrator.', 'Vérifié par un administrateur.', 'تحقق منه مسؤول.') : tr3('Rejected.', 'Rejeté.', 'مرفوضة.') }}</strong></x-mail-note>
+<x-mail-box :rows="[
+  [tr3('Payment', 'Paiement', 'الدفعة'), $ref],
+  [tr3('Order', 'Commande', 'الطلب'), $order_ref],
+  [tr3('Amount', 'Montant', 'المبلغ'), number_format((float)$amount, 2) . ' ' . $currency],
+]" />
+@if(!empty($note))<x-mail-p>{{ tr3('Note from the reviewer:', 'Note du relecteur :', 'ملاحظة المراجع:') }} <em>{{ $note }}</em></x-mail-p>@endif
+@if(!$ok)
+<x-mail-p>{{ tr3('Check the transaction reference and the sender number, then submit the payment again from the payment page.', 'Vérifiez la référence de transaction et le numéro émetteur, puis soumettez à nouveau le paiement depuis la page de paiement.', 'تحقق من مرجع العملية ورقم المرسل ثم أعد إرسال الدفعة من صفحة الدفع.') }}</x-mail-p>
+<x-mail-button :href="$pay_url" :label="tr3('Open the payment page', 'Ouvrir la page de paiement', 'افتح صفحة الدفع')" />
+@endif
 @endsection

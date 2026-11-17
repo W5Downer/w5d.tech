@@ -1,0 +1,222 @@
+{
+  "slug": "for-leader",
+  "title": {
+    "en": "For team leaders — W5D",
+    "fr": "Pour les chefs d’équipe — W5D",
+    "ar": "لقادة الفرق — W5D"
+  },
+  "description": {
+    "en": "Leaders read the weekly work of experts in one macro work, review a fixed {{ quality.sampling_percent }}% random sample, and report what they found.",
+    "fr": "Les leaders lisent le travail hebdomadaire des experts d’une macro-œuvre, relisent un échantillon aléatoire fixe de {{ quality.sampling_percent }} % et rapportent ce qu’ils trouvent.",
+    "ar": "يقرأ القادة العمل الأسبوعي للخبراء في عمل كبير واحد، ويراجعون عينة عشوائية ثابتة نسبتها {{ quality.sampling_percent }}٪ ويبلّغون بما وجدوه."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-leader-hero",
+      "variant": "classic",
+      "gradient": "technology",
+      "eyebrow": {
+        "en": "Leader",
+        "fr": "Leader",
+        "ar": "القائد"
+      },
+      "title": {
+        "en": "Lead a macro work. **Read, review, certify.**",
+        "fr": "Dirigez une macro-œuvre. **Lire, relire, certifier.**",
+        "ar": "قُد عملا كبيرا. **اقرأ وراجع واعتمد.**"
+      },
+      "lead": {
+        "en": "Leaders read the weekly work of experts in one macro work, review a fixed {{ quality.sampling_percent }}% random sample, and report what they found.",
+        "fr": "Les leaders lisent le travail hebdomadaire des experts d’une macro-œuvre, relisent un échantillon aléatoire fixe de {{ quality.sampling_percent }} % et rapportent ce qu’ils trouvent.",
+        "ar": "يقرأ القادة العمل الأسبوعي للخبراء في عمل كبير واحد، ويراجعون عينة عشوائية ثابتة نسبتها {{ quality.sampling_percent }}٪ ويبلّغون بما وجدوه."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Apply as a manager",
+            "fr": "Postuler comme manager",
+            "ar": "قدّم كمدير"
+          },
+          "href": "/careers/managers/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "تسجيل الدخول"
+          },
+          "href": "/account/login/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-leader-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "graduation-cap",
+          "title": {
+            "en": "Applications read by people",
+            "fr": "Candidatures lues par des personnes",
+            "ar": "طلبات يقرؤها أشخاص"
+          },
+          "body": {
+            "en": "Your application is read in full. Ranking only sets the reading order; no automatic rejection.",
+            "fr": "Votre candidature est lue en entier. Le classement fixe seulement l’ordre de lecture ; aucun rejet automatique.",
+            "ar": "يُقرأ طلبك كاملا. الترتيب لأولوية القراءة فقط ولا رفض آلي."
+          }
+        },
+        {
+          "icon": "scale",
+          "title": {
+            "en": "A fixed audit rule",
+            "fr": "Une règle d’audit fixe",
+            "ar": "قاعدة تدقيق ثابتة"
+          },
+          "body": {
+            "en": "The sample is {{ quality.sampling_percent }}% and random. It is not tuned per person.",
+            "fr": "L’échantillon est de {{ quality.sampling_percent }} % et aléatoire. Il n’est pas ajusté par personne.",
+            "ar": "العينة {{ quality.sampling_percent }}٪ وعشوائية. لا تُضبط حسب الشخص."
+          }
+        },
+        {
+          "icon": "briefcase",
+          "title": {
+            "en": "A role, not a promise",
+            "fr": "Un rôle, pas une promesse",
+            "ar": "دور وليس وعدا"
+          },
+          "body": {
+            "en": "Management is a responsibility inside the programme. It is not an employment contract.",
+            "fr": "Manager est une responsabilité dans le programme, pas un contrat de travail.",
+            "ar": "الإدارة مسؤولية داخل البرنامج وليست عقد عمل."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-leader-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Apply",
+            "fr": "Postuler",
+            "ar": "قدّم"
+          },
+          "body": {
+            "en": "Fill the manager form with your largest team led and a scenario answer.",
+            "fr": "Remplissez le formulaire manager avec votre plus grande équipe dirigée et une réponse de mise en situation.",
+            "ar": "املأ نموذج المدير مع أكبر فريق قدته وإجابة سيناريو."
+          }
+        },
+        {
+          "title": {
+            "en": "Be read",
+            "fr": "Être lu",
+            "ar": "يُقرأ طلبك"
+          },
+          "body": {
+            "en": "A human reader reviews your file and may write back.",
+            "fr": "Un lecteur humain examine votre dossier et peut vous répondre.",
+            "ar": "يراجع قارئ بشري ملفك وقد يراسلك."
+          }
+        },
+        {
+          "title": {
+            "en": "Start with a sample",
+            "fr": "Commencer par un échantillon",
+            "ar": "ابدأ بعينة"
+          },
+          "body": {
+            "en": "You review a small, dated sample before anything else.",
+            "fr": "Vous relisez d’abord un petit échantillon daté.",
+            "ar": "تراجع عينة صغيرة مؤرخة قبل أي شيء."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-leader-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is this a job offer?",
+            "fr": "Est-ce une offre d’emploi ?",
+            "ar": "هل هذا عرض عمل؟"
+          },
+          "a": {
+            "en": "No. A part is an investment in a path, not a job. W5D does not promise employment.",
+            "fr": "Non. Une part est un investissement dans un parcours, pas un emploi.",
+            "ar": "لا. الحصة مساهمة في مسار وليست وظيفة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-leader-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-leader-final",
+      "gradient": "technology",
+      "title": {
+        "en": "Lead with evidence.",
+        "fr": "Dirigez avec des preuves.",
+        "ar": "قُد بالأدلة."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Apply as a manager",
+            "fr": "Postuler comme manager",
+            "ar": "قدّم كمدير"
+          },
+          "href": "/careers/managers/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

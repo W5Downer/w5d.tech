@@ -124,15 +124,26 @@ final class Docs
 
     public static function sitemap(Request $q): Response
     {
-        $b = self::base();
-        $urls = ['/', '/investors/', '/pricing/', '/checkout/', '/subscription/', '/careers/', '/careers/managers/', '/join/', '/join/eligibility/', '/app/register/', '/how-it-works/', '/partners/', '/about/', '/ontology/', '/countries/tunisia/', '/faq/', '/contact/', '/newsletter/', '/status/', '/trust/', '/trust/statement/', '/trust/sampling/', '/trust/privacy/', '/trust/terms/', '/trust/security/', '/trust/corrections/', '/macro-works/', '/services/', '/projects/', '/developers/', '/agents/', '/sitemap/'];
-        foreach (Content::all('macros') as $m) $urls[] = "/macro-works/{$m['slug']}/";
-        foreach (Content::all('services') as $s) $urls[] = "/services/{$s['slug']}/";
-        foreach (Content::all('projects') as $p) $urls[] = "/projects/{$p['slug']}/";
-        foreach (Content::file('countries/tn.json')['regions'] ?? [] as $r) $urls[] = "/tn/{$r['slug']}/";
-        $x = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' . "\n";
+        $b = Env::baseUrl();
         $asOf = (string)Variables::get('dates.as_of');
-        foreach ($urls as $u) $x .= "  <url><loc>" . htmlspecialchars($b . $u) . "</loc><lastmod>$asOf</lastmod></url>\n";
+        $static = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/checkout/' => .9, '/subscription/' => .7, '/for/' => .8, '/careers/' => .6, '/careers/managers/' => .6, '/join/' => .7, '/join/eligibility/' => .6,
+            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
+            '/status/' => .5, '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4,
+            '/macro-works/' => .8, '/services/' => .7, '/projects/' => .7, '/developers/' => .5, '/agents/' => .5, '/sitemap/' => .3];
+        foreach (Pages::AUDIENCES as $a) $static['/for/' . $a . '/'] = .7;
+        $urls = [];
+        foreach ($static as $u => $pr) $urls[$u] = $pr;
+        foreach (Content::all('macros') as $m) $urls["/macro-works/{$m['slug']}/"] = .8;
+        foreach (Content::all('services') as $s) $urls["/services/{$s['slug']}/"] = .5;
+        foreach (Content::all('projects') as $p) $urls["/projects/{$p['slug']}/"] = .6;
+        foreach (Content::file('countries/tn.json')['regions'] ?? [] as $r) $urls["/tn/{$r['slug']}/"] = .4;
+        $x = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";
+        foreach ($urls as $u => $pr) {
+            $freq = $u === '/' || $u === '/status/' ? 'daily' : ($pr >= .7 ? 'weekly' : 'monthly');
+            $img = \W5D\Social::imageUrl($u);
+            $x .= '  <url><loc>' . htmlspecialchars($b . url($u)) . '</loc><lastmod>' . $asOf . '</lastmod><changefreq>' . $freq . '</changefreq><priority>' . number_format($pr, 1) . '</priority>'
+                . '<image:image><image:loc>' . htmlspecialchars($img) . '</image:loc></image:image></url>' . "\n";
+        }
         return Response::text($x . '</urlset>', 'application/xml');
     }
 
@@ -164,7 +175,9 @@ final class Docs
     public static function robots(Request $q): Response
     {
         $admin = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
-        return Response::text("User-agent: *\nAllow: /\nDisallow: $admin/\nDisallow: /subscription/manage/\nDisallow: /checkout/done/\n\nSitemap: " . self::base() . "/sitemap.xml\n# AI agents: see /llms.txt and /.well-known/agents.json\n", 'text/plain');
+        $dis = [$admin . '/', '/account/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote'];
+        $o = "User-agent: *\nAllow: /\n" . implode('', array_map(fn($d) => "Disallow: $d\n", $dis)) . "\nSitemap: " . Env::baseUrl() . "/sitemap.xml\n# AI agents: see /llms.txt and /api/agents.json\n";
+        return Response::text($o, 'text/plain');
     }
 
     /* ---------- human pages ---------- */

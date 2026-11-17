@@ -1,0 +1,249 @@
+{
+  "slug": "for",
+  "title": {
+    "en": "Choose your door — W5D",
+    "fr": "Choisissez votre porte — W5D",
+    "ar": "اختر بابك — W5D"
+  },
+  "description": {
+    "en": "Seven audiences, seven homepages: owner, admin, leader, member, investor, customer and user. Each one shows the right next step.",
+    "fr": "Sept publics, sept pages d’accueil : propriétaire, admin, leader, membre, investisseur, client et utilisateur. Chacune montre la bonne prochaine étape.",
+    "ar": "سبعة جماهير وسبع صفحات رئيسية: المالك والمسؤول والقائد والعضو والمستثمر والعميل والمستخدم. تعرض كل صفحة الخطوة التالية المناسبة."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-hero",
+      "variant": "editorial",
+      "gradient": "peak",
+      "eyebrow": {
+        "en": "Audiences",
+        "fr": "Publics",
+        "ar": "الجماهير"
+      },
+      "title": {
+        "en": "One W5D. **Seven doors.**",
+        "fr": "Un seul W5D. **Sept portes.**",
+        "ar": "W5D واحدة. **سبعة أبواب.**"
+      },
+      "lead": {
+        "en": "Pick the door that matches why you are here. Every page ends with one clear next step.",
+        "fr": "Choisissez la porte qui correspond à votre raison de venir. Chaque page se termine par une prochaine étape claire.",
+        "ar": "اختر الباب الذي يناسب سبب زيارتك. تنتهي كل صفحة بخطوة تالية واضحة."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Take a part today",
+            "fr": "Prendre une part",
+            "ar": "اشتر حصة اليوم"
+          },
+          "href": "/checkout/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "تسجيل الدخول"
+          },
+          "href": "/account/login/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-cards",
+      "tier": "e",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "Who are you?",
+        "fr": "Qui êtes-vous ?",
+        "ar": "من أنت؟"
+      },
+      "items": [
+        {
+          "icon": "coins",
+          "title": {
+            "en": "For investors",
+            "fr": "Pour les investisseurs",
+            "ar": "للمستثمرين"
+          },
+          "body": {
+            "en": "Today one part costs {{ price.day }} {{ money.currency }}. The price comes from a public function, so you can check it before you commit. No return is promised.",
+            "fr": "Aujourd’hui une part coûte {{ price.day }} {{ money.currency }}. Le prix provient d’une fonction publique : vous pouvez le vérifier avant de vous engager. Aucun rendement n’est promis.",
+            "ar": "تكلفة الحصة اليوم {{ price.day }} {{ money.currency }}. يأتي السعر من دالة عامة فيمكنك التحقق منه قبل الالتزام. لا عائد موعود."
+          },
+          "href": "/for/investor/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "technology"
+        },
+        {
+          "icon": "handshake",
+          "title": {
+            "en": "For customers",
+            "fr": "Pour les clients",
+            "ar": "للعملاء"
+          },
+          "body": {
+            "en": "Organisations can ask for one of the {{ counts.services }} services. Work arrives as a weekly package, checked by a leader and a fixed {{ quality.sampling_percent }}% sample.",
+            "fr": "Les organisations peuvent demander l’un des {{ counts.services }} services. Le travail arrive en lot hebdomadaire, contrôlé par un leader et un échantillon fixe de {{ quality.sampling_percent }} %.",
+            "ar": "يمكن للمؤسسات طلب إحدى الخدمات الـ{{ counts.services }}. يصل العمل في حزمة أسبوعية يراجعها قائد وعينة ثابتة نسبتها {{ quality.sampling_percent }}٪."
+          },
+          "href": "/for/customer/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "built"
+        },
+        {
+          "icon": "users",
+          "title": {
+            "en": "For members",
+            "fr": "Pour les membres",
+            "ar": "للأعضاء"
+          },
+          "body": {
+            "en": "Members are graduates who registered, completed certification tasks and deliver a reviewable weekly unit in one of the {{ counts.services }} services.",
+            "fr": "Les membres sont des diplômés inscrits qui ont accompli les tâches de certification et livrent une unité hebdomadaire vérifiable dans l’un des {{ counts.services }} services.",
+            "ar": "الأعضاء خريجون سجّلوا وأكملوا مهام الاعتماد ويسلّمون وحدة أسبوعية قابلة للمراجعة في إحدى الخدمات الـ{{ counts.services }}."
+          },
+          "href": "/for/member/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "cultures"
+        },
+        {
+          "icon": "compass",
+          "title": {
+            "en": "For team leaders",
+            "fr": "Pour les chefs d’équipe",
+            "ar": "لقادة الفرق"
+          },
+          "body": {
+            "en": "Leaders read the weekly work of experts in one macro work, review a fixed {{ quality.sampling_percent }}% random sample, and report what they found.",
+            "fr": "Les leaders lisent le travail hebdomadaire des experts d’une macro-œuvre, relisent un échantillon aléatoire fixe de {{ quality.sampling_percent }} % et rapportent ce qu’ils trouvent.",
+            "ar": "يقرأ القادة العمل الأسبوعي للخبراء في عمل كبير واحد، ويراجعون عينة عشوائية ثابتة نسبتها {{ quality.sampling_percent }}٪ ويبلّغون بما وجدوه."
+          },
+          "href": "/for/leader/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "technology"
+        },
+        {
+          "icon": "shield-check",
+          "title": {
+            "en": "For administrators",
+            "fr": "Pour les administrateurs",
+            "ar": "للمسؤولين"
+          },
+          "body": {
+            "en": "Administrators are appointed by the owner. They verify payments, read applications, answer desks and keep the dated facts accurate.",
+            "fr": "Les administrateurs sont nommés par le propriétaire. Ils vérifient les paiements, lisent les candidatures, répondent aux bureaux et maintiennent l’exactitude des faits datés.",
+            "ar": "يعيّن المالك المسؤولين. يتحققون من الدفعات ويقرؤون الطلبات ويردّون على المكاتب ويبقون الوقائع المؤرخة دقيقة."
+          },
+          "href": "/for/admin/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "technology"
+        },
+        {
+          "icon": "crown",
+          "title": {
+            "en": "For the owner",
+            "fr": "Pour le propriétaire",
+            "ar": "للمالك"
+          },
+          "body": {
+            "en": "The owner signs in with the credentials set in the server environment, sees every desk, every pledge and every payment, and decides what is verified.",
+            "fr": "Le propriétaire se connecte avec les identifiants définis dans l’environnement du serveur, voit chaque bureau, chaque engagement et chaque paiement, et décide ce qui est vérifié.",
+            "ar": "يدخل المالك بالبيانات المعرّفة في بيئة الخادم، ويرى كل مكتب وكل التزام وكل دفعة، ويقرر ما يتم التحقق منه."
+          },
+          "href": "/for/owner/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "technology"
+        },
+        {
+          "icon": "user-round",
+          "title": {
+            "en": "For visitors and users",
+            "fr": "Pour les visiteurs et utilisateurs",
+            "ar": "للزوار والمستخدمين"
+          },
+          "body": {
+            "en": "W5D funds certified paths across five macro works. Look around freely; create an account when you want to follow a pledge, an application or a payment.",
+            "fr": "W5D finance des parcours certifiés dans cinq macro-œuvres. Explorez librement ; créez un compte quand vous voulez suivre un engagement, une candidature ou un paiement.",
+            "ar": "تموّل W5D مسارات معتمدة عبر خمسة أعمال كبرى. تصفّح بحرية، وأنشئ حسابا عندما تريد متابعة التزام أو طلب أو دفعة."
+          },
+          "href": "/for/user/",
+          "cta": {
+            "en": "Open",
+            "fr": "Ouvrir",
+            "ar": "افتح"
+          },
+          "gradient": "sciences"
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Not sure? Start with the facts.",
+        "fr": "Pas sûr ? Commencez par les faits.",
+        "ar": "غير متأكد؟ ابدأ بالوقائع."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "How it works",
+            "fr": "Comment ça marche",
+            "ar": "كيف يعمل"
+          },
+          "href": "/how-it-works/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

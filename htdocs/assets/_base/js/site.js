@@ -22,58 +22,96 @@
   });
   syncThemeIcons();
 
-  /* ---------- mobile menu ---------- */
+  /* ---------- menus: one open/close animation (.menu-panel.is-open) for mobile menu + desktop mega panels ---------- */
+  function setPanel(p, on) {
+    if (!p) return;
+    p.classList.toggle('is-open', on);
+    p.setAttribute('aria-hidden', on ? 'false' : 'true');
+  }
   var mt = $('[data-mobile-toggle]'), mm = $('#mobileMenu');
   if (mt && mm) {
     mt.addEventListener('click', function () {
-      var open = mm.classList.toggle('hidden') === false;
+      var open = !mm.classList.contains('is-open');
+      setPanel(mm, open);
       mt.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    mm.addEventListener('click', function (e) { if (e.target.closest('a')) mm.classList.add('hidden'); });
+    mm.addEventListener('click', function (e) { if (e.target.closest('a')) { setPanel(mm, false); mt.setAttribute('aria-expanded', 'false'); } });
+    window.addEventListener('resize', function () { if (window.innerWidth >= 1024) { setPanel(mm, false); mt.setAttribute('aria-expanded', 'false'); } });
   }
 
-  /* ---------- mega menu (hover with delay bridge + click/keyboard) ---------- */
+  /* mega menu: hover (with a delay bridge) + click + keyboard */
   var triggers = $$('[data-mega-trigger]'), closeT;
   function closeAll(except) {
     triggers.forEach(function (t) {
       if (t === except) return;
-      var p = $('[data-mega-panel]', t), b = $('button', t);
-      if (p) p.classList.add('hidden');
+      var b = $('button', t);
+      setPanel($('[data-mega-panel]', t), false);
       if (b) b.setAttribute('aria-expanded', 'false');
     });
   }
   function openOne(t) {
     clearTimeout(closeT);
     closeAll(t);
-    var p = $('[data-mega-panel]', t), b = $('button', t);
-    if (p) { p.classList.remove('hidden'); p.classList.add('mega-panel-enter'); }
+    var b = $('button', t);
+    setPanel($('[data-mega-panel]', t), true);
     if (b) b.setAttribute('aria-expanded', 'true');
   }
+  var finePointer = window.matchMedia && window.matchMedia('(hover: hover)').matches;
   triggers.forEach(function (t) {
-    t.addEventListener('mouseenter', function () { openOne(t); });
-    t.addEventListener('mouseleave', function () { closeT = setTimeout(function () { closeAll(); }, 180); });
-    var b = $('button', t);
+    if (finePointer) {
+      t.addEventListener('mouseenter', function () { openOne(t); });
+      t.addEventListener('mouseleave', function () { closeT = setTimeout(function () { closeAll(); }, 220); });
+    }
+    var b = $('button', t), p = $('[data-mega-panel]', t);
+    if (p && finePointer) {
+      p.addEventListener('mouseenter', function () { clearTimeout(closeT); });
+      p.addEventListener('mouseleave', function () { closeT = setTimeout(function () { closeAll(); }, 220); });
+    }
     if (b) b.addEventListener('click', function () {
-      var p = $('[data-mega-panel]', t);
-      if (p && p.classList.contains('hidden')) openOne(t); else closeAll();
+      if (p && p.classList.contains('is-open')) closeAll(); else openOne(t);
     });
     t.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAll(); if (b) b.focus(); } });
   });
   document.addEventListener('click', function (e) { if (!e.target.closest('[data-mega-trigger]')) closeAll(); });
 
-  /* ---------- aside (language / account panels) ---------- */
-  var backdrop = $('.w5d-aside-backdrop');
+  /* ---------- asides (language / share / user) ---------- */
+  var backdrop = $('.w5d-aside-backdrop'), lastFocus = null;
+  function closeAsides() { $$('.w5d-aside.is-open').forEach(function (a) { toggleAside(a.id, false); }); }
   function toggleAside(id, on) {
     var a = document.getElementById(id);
     if (!a) return;
+    if (on) { $$('.w5d-aside.is-open').forEach(function (o) { if (o !== a) toggleAside(o.id, false); }); lastFocus = document.activeElement; }
     a.classList.toggle('is-open', on);
     a.setAttribute('aria-hidden', on ? 'false' : 'true');
-    if (backdrop) backdrop.classList.toggle('is-open', on);
+    $$('[data-aside-open="' + id + '"]').forEach(function (b) { b.setAttribute('aria-expanded', on ? 'true' : 'false'); });
+    if (backdrop) backdrop.classList.toggle('is-open', !!$('.w5d-aside.is-open'));
+    if (on) { var f = $('a[href],button,input', a); setTimeout(function () { if (f) f.focus(); }, 60); }
+    else if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (e) {} }
   }
-  $$('[data-aside-open]').forEach(function (b) { b.addEventListener('click', function () { toggleAside(b.getAttribute('data-aside-open'), true); }); });
-  $$('[data-aside-close]').forEach(function (b) { b.addEventListener('click', function () { $$('.w5d-aside').forEach(function (a) { toggleAside(a.id, false); }); }); });
-  if (backdrop) backdrop.addEventListener('click', function () { $$('.w5d-aside').forEach(function (a) { toggleAside(a.id, false); }); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $$('.w5d-aside').forEach(function (a) { toggleAside(a.id, false); }); });
+  $$('[data-aside-open]').forEach(function (b) { b.addEventListener('click', function () { closeAll(); toggleAside(b.getAttribute('data-aside-open'), true); }); });
+  $$('[data-aside-close]').forEach(function (b) { b.addEventListener('click', closeAsides); });
+  if (backdrop) backdrop.addEventListener('click', closeAsides);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAsides(); closeAll(); } });
+  $$('.w5d-aside a[href]').forEach(function (a) { a.addEventListener('click', function () { if (!a.hasAttribute('target')) closeAsides(); }); });
+
+  /* ---------- share aside: native Web Share (when supported) + copy link ---------- */
+  $$('[data-share-native]').forEach(function (b) {
+    if (!navigator.share) { b.classList.add('hidden'); return; }
+    b.addEventListener('click', function () {
+      navigator.share({ title: b.getAttribute('data-share-title') || document.title, text: b.getAttribute('data-share-text') || '', url: b.getAttribute('data-share-url') || location.href }).catch(function () {});
+    });
+  });
+  $$('[data-share-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var url = b.getAttribute('data-share-copy') || location.href, lab = $('[data-share-label]', b), old = lab ? lab.textContent : '';
+      function ok() { if (lab) { lab.textContent = b.getAttribute('data-copied') || '✓'; setTimeout(function () { lab.textContent = old; }, 1600); } }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(ok, fallback); else fallback();
+      function fallback() {
+        var t = document.createElement('textarea'); t.value = url; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select(); try { document.execCommand('copy'); ok(); } catch (e) {} document.body.removeChild(t);
+      }
+    });
+  });
 
   /* ---------- FAQ ---------- */
   $$('[data-faq]').forEach(function (item) {

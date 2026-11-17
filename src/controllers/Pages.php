@@ -14,6 +14,7 @@ final class Pages
     public static function render(Request $q, array $page, int $status = 200): Response
     {
         ViewEnv::share('canonicalPath', $q->path === '/' ? '/' : rtrim($q->path, '/') . '/');
+        \W5D\Seo::page(['sections' => $page['sections'] ?? [], 'title_short' => t($page['title'] ?? '')]);
         $html = view('pages.page', [
             'title' => t($page['title'] ?? 'W5D') . ' — W5D',
             'description' => t($page['description'] ?? ''),
@@ -36,6 +37,16 @@ final class Pages
         $slug = str_replace('/', '-', trim($slug, '/'));
         $p = Content::page($slug);
         return $p ? self::render($q, $p) : self::notFound($q);
+    }
+
+    public const AUDIENCES = ['owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user'];
+
+    /** Audience homepage /for/{audience}/ (owner, admin, leader, member, investor, customer, user). */
+    public static function audience(Request $q): Response
+    {
+        $a = (string)($q->params['aud'] ?? '');
+        if (!in_array($a, self::AUDIENCES, true)) return self::notFound($q);
+        return self::page($q, 'for-' . $a);
     }
 
     public static function trust(Request $q): Response { return self::page($q, 'trust-' . ($q->params['page'] ?? '')); }
@@ -245,7 +256,7 @@ final class Pages
     {
         $L = [self::class, 'L'];
         $links = fn(array $a) => array_map(fn($x) => ['title' => $x[1], 'href' => $x[0], 'icon' => 'arrow-right'], $a);
-        $core = [['/', $L('Home', 'Accueil', 'الرئيسية')], ['/investors/', $L('Investors', 'Investisseurs', 'المستثمرون')], ['/pricing/', $L('Pricing', 'Tarification', 'الأسعار')], ['/checkout/', $L('Checkout', 'Paiement', 'الدفع')], ['/subscription/', $L('Daily subscription', 'Abonnement quotidien', 'اشتراك يومي')], ['/careers/managers/', $L('Become a manager', 'Devenir manager', 'كن مديرا')], ['/join/', $L('Join', 'Rejoindre', 'انضم')], ['/how-it-works/', $L('How it works', 'Comment ça marche', 'كيف يعمل')], ['/status/', $L('Status', 'Statut', 'الحالة')], ['/trust/', $L('Trust', 'Confiance', 'الثقة')], ['/about/', $L('About', 'À propos', 'من نحن')], ['/contact/', $L('Contact', 'Contact', 'اتصل')], ['/developers/', $L('Developers', 'Développeurs', 'المطورون')], ['/agents/', $L('AI agents', 'Agents IA', 'وكلاء الذكاء الاصطناعي')]];
+        $core = [['/', $L('Home', 'Accueil', 'الرئيسية')], ['/for/', $L('Choose your door', 'Choisissez votre porte', 'اختر بابك')], ['/investors/', $L('Investors', 'Investisseurs', 'المستثمرون')], ['/pricing/', $L('Pricing', 'Tarification', 'الأسعار')], ['/checkout/', $L('Checkout', 'Paiement', 'الدفع')], ['/subscription/', $L('Daily subscription', 'Abonnement quotidien', 'اشتراك يومي')], ['/careers/managers/', $L('Become a manager', 'Devenir manager', 'كن مديرا')], ['/join/', $L('Join', 'Rejoindre', 'انضم')], ['/how-it-works/', $L('How it works', 'Comment ça marche', 'كيف يعمل')], ['/status/', $L('Status', 'Statut', 'الحالة')], ['/trust/', $L('Trust', 'Confiance', 'الثقة')], ['/about/', $L('About', 'À propos', 'من نحن')], ['/contact/', $L('Contact', 'Contact', 'اتصل')], ['/developers/', $L('Developers', 'Développeurs', 'المطورون')], ['/agents/', $L('AI agents', 'Agents IA', 'وكلاء الذكاء الاصطناعي')]];
         $macros = array_map(fn($m) => ['title' => $m['name'], 'href' => '/macro-works/' . $m['slug'] . '/', 'icon' => $m['icon']], array_values(Content::all('macros')));
         $svcs = array_map(fn($s) => ['title' => $s['title'], 'href' => '/services/' . $s['slug'] . '/', 'icon' => 'layers'], array_values(Content::all('services')));
         $prjs = array_map(fn($p) => ['title' => $p['name'], 'href' => '/projects/' . $p['slug'] . '/', 'icon' => $p['icon'] ?? 'folder'], array_values(Content::all('projects')));

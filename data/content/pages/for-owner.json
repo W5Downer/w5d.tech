@@ -1,0 +1,222 @@
+{
+  "slug": "for-owner",
+  "title": {
+    "en": "For the owner — W5D",
+    "fr": "Pour le propriétaire — W5D",
+    "ar": "للمالك — W5D"
+  },
+  "description": {
+    "en": "The owner signs in with the credentials set in the server environment, sees every desk, every pledge and every payment, and decides what is verified.",
+    "fr": "Le propriétaire se connecte avec les identifiants définis dans l’environnement du serveur, voit chaque bureau, chaque engagement et chaque paiement, et décide ce qui est vérifié.",
+    "ar": "يدخل المالك بالبيانات المعرّفة في بيئة الخادم، ويرى كل مكتب وكل التزام وكل دفعة، ويقرر ما يتم التحقق منه."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-owner-hero",
+      "variant": "classic",
+      "gradient": "peak",
+      "eyebrow": {
+        "en": "Owner",
+        "fr": "Propriétaire",
+        "ar": "المالك"
+      },
+      "title": {
+        "en": "Run W5D from **one console.**",
+        "fr": "Pilotez W5D depuis **une seule console.**",
+        "ar": "أدِر W5D من **لوحة واحدة.**"
+      },
+      "lead": {
+        "en": "The owner signs in with the credentials set in the server environment, sees every desk, every pledge and every payment, and decides what is verified.",
+        "fr": "Le propriétaire se connecte avec les identifiants définis dans l’environnement du serveur, voit chaque bureau, chaque engagement et chaque paiement, et décide ce qui est vérifié.",
+        "ar": "يدخل المالك بالبيانات المعرّفة في بيئة الخادم، ويرى كل مكتب وكل التزام وكل دفعة، ويقرر ما يتم التحقق منه."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Open the owner sign-in",
+            "fr": "Ouvrir la connexion propriétaire",
+            "ar": "افتح دخول المالك"
+          },
+          "href": "/account/login/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Read the declared limits",
+            "fr": "Lire les limites déclarées",
+            "ar": "اقرأ الحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-owner-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "layout-dashboard",
+          "title": {
+            "en": "One dashboard",
+            "fr": "Un tableau de bord",
+            "ar": "لوحة واحدة"
+          },
+          "body": {
+            "en": "Pledges, payments, applicants, managers, messages and the mail outbox in one place.",
+            "fr": "Engagements, paiements, candidats, managers, messages et boîte d’envoi au même endroit.",
+            "ar": "الالتزامات والدفعات والمتقدمون والمديرون والرسائل وصندوق البريد في مكان واحد."
+          }
+        },
+        {
+          "icon": "smartphone",
+          "title": {
+            "en": "Verify D17 payments by hand",
+            "fr": "Vérifier les paiements D17 à la main",
+            "ar": "تحقق من دفعات D17 يدويا"
+          },
+          "body": {
+            "en": "Every D17 transfer waits for an explicit human check before a pledge is confirmed.",
+            "fr": "Chaque virement D17 attend une vérification humaine explicite avant la confirmation.",
+            "ar": "تنتظر كل حوالة D17 تحققا بشريا صريحا قبل تأكيد الالتزام."
+          }
+        },
+        {
+          "icon": "shield-check",
+          "title": {
+            "en": "Control access",
+            "fr": "Contrôler les accès",
+            "ar": "التحكم في الصلاحيات"
+          },
+          "body": {
+            "en": "Roles and permissions are declared in one file. Nothing is hidden in code paths.",
+            "fr": "Les rôles et permissions sont déclarés dans un seul fichier.",
+            "ar": "تُعرَّف الأدوار والصلاحيات في ملف واحد."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-owner-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "سجّل الدخول"
+          },
+          "body": {
+            "en": "Use the owner credentials from the server environment.",
+            "fr": "Utilisez les identifiants propriétaire de l’environnement du serveur.",
+            "ar": "استخدم بيانات المالك من بيئة الخادم."
+          }
+        },
+        {
+          "title": {
+            "en": "Review the queue",
+            "fr": "Relire la file",
+            "ar": "راجع القائمة"
+          },
+          "body": {
+            "en": "Payments to verify, applications to read, messages to answer.",
+            "fr": "Paiements à vérifier, candidatures à lire, messages à traiter.",
+            "ar": "دفعات للتحقق وطلبات للقراءة ورسائل للرد."
+          }
+        },
+        {
+          "title": {
+            "en": "Publish the facts",
+            "fr": "Publier les faits",
+            "ar": "انشر الوقائع"
+          },
+          "body": {
+            "en": "Update dated figures and corrections; nothing is promised before evidence.",
+            "fr": "Mettez à jour les chiffres datés et les corrections ; rien n’est promis avant preuve.",
+            "ar": "حدّث الأرقام المؤرخة والتصحيحات؛ لا وعود قبل الدليل."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-owner-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Where are the owner credentials set?",
+            "fr": "Où sont définis les identifiants propriétaire ?",
+            "ar": "أين تُعرَّف بيانات المالك؟"
+          },
+          "a": {
+            "en": "In the server environment file, never in the website content. The password is stored as a hash.",
+            "fr": "Dans le fichier d’environnement du serveur, jamais dans le contenu du site. Le mot de passe est stocké haché.",
+            "ar": "في ملف بيئة الخادم وليس في محتوى الموقع. تُخزَّن كلمة المرور مجزأة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-owner-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-owner-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Your console is one sign-in away.",
+        "fr": "Votre console est à une connexion.",
+        "ar": "لوحتك على بعد تسجيل دخول واحد."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Open the owner sign-in",
+            "fr": "Ouvrir la connexion propriétaire",
+            "ar": "افتح دخول المالك"
+          },
+          "href": "/account/login/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

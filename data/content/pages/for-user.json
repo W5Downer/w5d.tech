@@ -1,0 +1,222 @@
+{
+  "slug": "for-user",
+  "title": {
+    "en": "For visitors and users — W5D",
+    "fr": "Pour les visiteurs et utilisateurs — W5D",
+    "ar": "للزوار والمستخدمين — W5D"
+  },
+  "description": {
+    "en": "W5D funds certified paths across five macro works. Look around freely; create an account when you want to follow a pledge, an application or a payment.",
+    "fr": "W5D finance des parcours certifiés dans cinq macro-œuvres. Explorez librement ; créez un compte quand vous voulez suivre un engagement, une candidature ou un paiement.",
+    "ar": "تموّل W5D مسارات معتمدة عبر خمسة أعمال كبرى. تصفّح بحرية، وأنشئ حسابا عندما تريد متابعة التزام أو طلب أو دفعة."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-user-hero",
+      "variant": "classic",
+      "gradient": "sciences",
+      "eyebrow": {
+        "en": "User",
+        "fr": "Utilisateur",
+        "ar": "المستخدم"
+      },
+      "title": {
+        "en": "New here? **Start with the facts.**",
+        "fr": "Nouveau ici ? **Commencez par les faits.**",
+        "ar": "جديد هنا؟ **ابدأ بالوقائع.**"
+      },
+      "lead": {
+        "en": "W5D funds certified paths across five macro works. Look around freely; create an account when you want to follow a pledge, an application or a payment.",
+        "fr": "W5D finance des parcours certifiés dans cinq macro-œuvres. Explorez librement ; créez un compte quand vous voulez suivre un engagement, une candidature ou un paiement.",
+        "ar": "تموّل W5D مسارات معتمدة عبر خمسة أعمال كبرى. تصفّح بحرية، وأنشئ حسابا عندما تريد متابعة التزام أو طلب أو دفعة."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Create an account",
+            "fr": "Créer un compte",
+            "ar": "إنشاء حساب"
+          },
+          "href": "/account/register/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "How it works",
+            "fr": "Comment ça marche",
+            "ar": "كيف يعمل"
+          },
+          "href": "/how-it-works/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-user-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "book-open",
+          "title": {
+            "en": "Understand",
+            "fr": "Comprendre",
+            "ar": "افهم"
+          },
+          "body": {
+            "en": "How a part becomes a certified path, in plain words.",
+            "fr": "Comment une part devient un parcours certifié, en mots simples.",
+            "ar": "كيف تصبح الحصة مسارا معتمدا بكلمات بسيطة."
+          }
+        },
+        {
+          "icon": "user-round",
+          "title": {
+            "en": "One account, three roles",
+            "fr": "Un compte, trois rôles",
+            "ar": "حساب واحد وثلاثة أدوار"
+          },
+          "body": {
+            "en": "Choose investor, customer or learner when you register. You can follow everything in one dashboard.",
+            "fr": "Choisissez investisseur, client ou apprenant à l’inscription. Tout se suit dans un seul tableau de bord.",
+            "ar": "اختر مستثمرا أو عميلا أو متعلما عند التسجيل وتابع كل شيء في لوحة واحدة."
+          }
+        },
+        {
+          "icon": "shield-check",
+          "title": {
+            "en": "Your data, your choice",
+            "fr": "Vos données, votre choix",
+            "ar": "بياناتك واختيارك"
+          },
+          "body": {
+            "en": "Sign in with e-mail or a social account, and unsubscribe from non-essential mail at any time.",
+            "fr": "Connectez-vous par e-mail ou compte social, et désinscrivez-vous des e-mails non essentiels à tout moment.",
+            "ar": "سجّل الدخول بالبريد أو حساب اجتماعي وألغِ الاشتراك في الرسائل غير الأساسية متى شئت."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-user-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Look around",
+            "fr": "Explorer",
+            "ar": "تجوّل"
+          },
+          "body": {
+            "en": "Read how it works and the declared limits.",
+            "fr": "Lisez le fonctionnement et les limites déclarées.",
+            "ar": "اقرأ طريقة العمل والحدود المعلنة."
+          }
+        },
+        {
+          "title": {
+            "en": "Create an account",
+            "fr": "Créer un compte",
+            "ar": "أنشئ حسابا"
+          },
+          "body": {
+            "en": "Confirm your e-mail to activate it.",
+            "fr": "Confirmez votre e-mail pour l’activer.",
+            "ar": "أكّد بريدك لتفعيله."
+          }
+        },
+        {
+          "title": {
+            "en": "Pick your door",
+            "fr": "Choisir sa porte",
+            "ar": "اختر بابك"
+          },
+          "body": {
+            "en": "Invest, apply, or order work, whichever fits you.",
+            "fr": "Investir, candidater ou commander du travail, selon votre cas.",
+            "ar": "استثمر أو قدّم أو اطلب عملا حسب حالتك."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-user-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Does an account cost anything?",
+            "fr": "Un compte est-il payant ?",
+            "ar": "هل الحساب مدفوع؟"
+          },
+          "a": {
+            "en": "No. Creating an account is free. Taking a part is a separate, explicit step.",
+            "fr": "Non. Créer un compte est gratuit. Prendre une part est une étape distincte et explicite.",
+            "ar": "لا. إنشاء الحساب مجاني. شراء حصة خطوة منفصلة وصريحة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-user-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-user-final",
+      "gradient": "sciences",
+      "title": {
+        "en": "Create your free account.",
+        "fr": "Créez votre compte gratuit.",
+        "ar": "أنشئ حسابك المجاني."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Create an account",
+            "fr": "Créer un compte",
+            "ar": "إنشاء حساب"
+          },
+          "href": "/account/register/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

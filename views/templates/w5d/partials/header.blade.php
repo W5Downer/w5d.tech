@@ -5,7 +5,7 @@
 @endphp
 <header class="fixed top-0 inset-x-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3">
-    <nav class="glass rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3" aria-label="Primary">
+    <nav class="nav-solid rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3" aria-label="Primary">
       <a href="{{ url('/') }}" class="flex items-center gap-2" aria-label="W5D">
         <span class="relative inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center shadow-lg shadow-brand-500/30">
           <span class="font-display font-bold text-white text-sm">W5</span>
@@ -15,12 +15,13 @@
 
       <ul data-mega-host class="hidden lg:flex items-center gap-7 text-sm font-medium">
         @foreach($nav['items'] as $item)
-          <li class="relative" data-mega-trigger @if(!empty($item['active_prefix']) && str_starts_with($here, $item['active_prefix'])) data-active @endif>
+          <li data-mega-trigger @if(!empty($item['active_prefix']) && str_starts_with($here, $item['active_prefix'])) data-active @endif>
             <button type="button" class="inline-flex items-center gap-1 py-2 hover:text-brand-500 transition" aria-expanded="false" aria-haspopup="true">
               {{ t($item['label']) }} {{ icon('chevron-down', 'w-4 h-4 opacity-60') }}
             </button>
-            <div data-mega-panel class="hidden absolute top-full pt-3 {{ lang() === 'ar' ? 'right-0' : 'left-0' }} z-50">
-              <div class="glass rounded-2xl shadow-2xl p-5 grid gap-5 items-start {{ !empty($item['promo']) ? 'grid-cols-[minmax(13rem,1fr)_minmax(13rem,1fr)_13rem]' : 'grid-cols-2' }} w-[46rem] max-w-[calc(100vw-3rem)]">
+            <div data-mega-panel class="menu-panel mega-panel absolute inset-x-0 top-full pt-2 z-50" aria-hidden="true">
+              <div class="mega-surface shadow-2xl">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 grid gap-8 items-start {{ !empty($item['promo']) ? 'grid-cols-[minmax(0,1fr)_minmax(0,1fr)_16rem]' : 'grid-cols-2' }}">
                 @foreach($item['groups'] as $g)
                   <div>
                     <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mb-2 font-semibold">{{ t($g['heading']) }}</p>
@@ -52,12 +53,26 @@
                   </a>
                 @endif
               </div>
+              </div>
             </div>
           </li>
         @endforeach
       </ul>
 
-      <div class="flex items-center gap-2">
+      @php
+        $acctUser = \W5D\Account::user();
+        $ownerIn = \W5D\Auth::check();
+        $signedIn = $acctUser !== null || $ownerIn;
+        $unread = \W5D\Account::unread();
+      @endphp
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        @if(\W5D\Social::enabled())
+        <button type="button" data-aside-open="aside-share" class="btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center" aria-label="{{ __('share.open') }}" aria-controls="aside-share" aria-haspopup="dialog">{{ icon('share-2', 'w-5 h-5') }}</button>
+        @endif
+        <button type="button" data-aside-open="aside-user" class="btn-ghost relative rounded-lg w-10 h-10 inline-flex items-center justify-center {{ $signedIn ? 'text-brand-500' : '' }}" aria-label="{{ __('nav.user') }}" aria-controls="aside-user" aria-haspopup="dialog">
+          {{ icon($signedIn ? 'circle-user' : 'user-round', 'w-5 h-5') }}
+          @if($unread > 0)<span class="absolute -top-0.5 -end-0.5 min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-pink-500 text-white text-[0.65rem] font-bold leading-[1.1rem] text-center">{{ $unread > 9 ? '9+' : $unread }}</span>@elseif($signedIn)<span class="absolute top-1.5 end-1.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-ink-900"></span>@endif
+        </button>
         <button type="button" data-aside-open="aside-lang" class="btn-ghost rounded-lg h-10 px-3 inline-flex items-center gap-1.5 text-sm" aria-label="{{ __('nav.language') }}">
           {{ icon('languages', 'w-5 h-5') }}<span class="uppercase text-xs font-bold">{{ lang() }}</span>
         </button>
@@ -70,7 +85,7 @@
       </div>
     </nav>
 
-    <div id="mobileMenu" class="hidden lg:hidden glass rounded-2xl mt-2 p-4 max-h-[75vh] overflow-y-auto">
+    <div id="mobileMenu" class="menu-panel lg:hidden nav-solid rounded-2xl mt-2 p-4 max-h-[75vh] overflow-y-auto" aria-hidden="true">
       @foreach($nav['items'] as $item)
         <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mt-3 mb-1 font-semibold">{{ t($item['label']) }}</p>
         @foreach($item['groups'] as $g)
