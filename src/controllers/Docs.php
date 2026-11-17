@@ -8,7 +8,7 @@ use W5D\{Content, Env, Request, Response, Variables};
 /** Documentation: one API for developers (OpenAPI + HTML), one for AI agents (manifest, tools, llms.txt). */
 final class Docs
 {
-    private static function base(): string { return rtrim((string)Env::get('APP_URL', ''), '/') . url(''); }
+    private static function base(): string { return Env::baseUrl() . rtrim(url(''), '/'); }
 
     /** Single source of truth for the public API surface. */
     public static function endpoints(): array
@@ -90,7 +90,7 @@ final class Docs
         $b = self::base();
         return Response::json(['schema_version' => '1', 'name' => 'W5D', 'description' => 'World Five Dimensions: five macro works, ' . Variables::get('counts.services') . ' services. Investors take a daily part; experts and managers join a certified path.',
             'languages' => ['en', 'fr', 'ar'], 'contact' => Variables::get('investor.contact'),
-            'api' => ['base_url' => $b . '/api', 'openapi' => $b . '/openapi.json', 'index' => $b . '/api/index.json', 'auth' => 'none (public, rate-limited)'],
+            'api' => ['base_url' => $b . '/api', 'openapi' => $b . '/api/openapi.json', 'index' => $b . '/api/index.json', 'auth' => 'none (public, rate-limited)'],
             'tools_url' => $b . '/api/docs/agents/tools.json', 'llms_txt' => $b . '/llms.txt', 'llms_full' => $b . '/llms-full.txt',
             'rules' => self::rules(), 'tools' => array_map(fn($t) => ['name' => $t['name'], 'description' => $t['description']], self::agentTools())]);
     }
@@ -106,7 +106,7 @@ final class Docs
         $o = "# W5D — World Five Dimensions\n\n> Five macro works, " . Variables::get('counts.services') . " services, one weekly work engine. Investors take at least a part of W5D every day; experts and team managers join a certified path. A part is an investment in a path, not a job. No return is promised.\n\n";
         $o .= "## Rules for AI agents\n" . implode("\n", array_map(fn($r) => '- ' . $r, self::rules())) . "\n\n";
         $o .= "## Key pages\n- [Investors]($b/investors/)\n- [Pricing]($b/pricing/)\n- [Checkout]($b/checkout/)\n- [Daily subscription]($b/subscription/)\n- [Become a manager]($b/careers/managers/)\n- [How it works]($b/how-it-works/)\n- [Trust and declared limits]($b/trust/statement/)\n- [Status]($b/status/)\n- [Sitemap]($b/sitemap/)\n\n";
-        $o .= "## Machine interfaces\n- [OpenAPI]($b/openapi.json)\n- [Agent manifest]($b/.well-known/agents.json)\n- [Agent tools]($b/api/docs/agents/tools.json)\n- [API index]($b/api/index.json)\n- [Full text]($b/llms-full.txt)\n";
+        $o .= "## Machine interfaces\n- [OpenAPI]($b/api/openapi.json)\n- [Agent manifest]($b/api/agents.json)\n- [Agent tools]($b/api/docs/agents/tools.json)\n- [API index]($b/api/index.json)\n- [Full text]($b/llms-full.txt)\n";
         return Response::text($o, 'text/plain');
     }
 
@@ -136,6 +136,31 @@ final class Docs
         return Response::text($x . '</urlset>', 'application/xml');
     }
 
+    public static function securityTxt(Request $q): Response
+    {
+        $mail = (string)Env::get('SEO_ORG_EMAIL', Env::get('CONTACT_EMAIL', 'owner@w5d.tech'));
+        $exp = (new \DateTimeImmutable('+1 year'))->format('Y-m-d\TH:i:s\Z');
+        return Response::text("Contact: mailto:$mail\nExpires: $exp\nPreferred-Languages: en, fr, ar\nCanonical: " . self::base() . "/.well-known/security.txt\nPolicy: " . self::base() . "/trust/security/\n", 'text/plain');
+    }
+
+    public static function humans(Request $q): Response
+    {
+        $o = "/* TEAM */\nSite: " . Env::get('SEO_ORG_NAME', 'W5D TECH') . "\nContact: " . Env::get('SEO_ORG_EMAIL', 'owner@w5d.tech') . "\nLocation: Tunisia\n\n/* SITE */\nLast update: " . Variables::get('dates.as_of') . "\nStandards: HTML5, CSS3, PHP 8.4, SQLite\nNo third-party scripts, fonts or trackers.\n";
+        return Response::text($o, 'text/plain');
+    }
+
+    public static function manifest(Request $q): Response
+    {
+        $i = fn(string $f, string $sz, string $purpose = 'any') => ['src' => url('assets/_base/images/' . $f), 'sizes' => $sz, 'type' => 'image/png', 'purpose' => $purpose];
+        $j = json_encode([
+            'name' => 'W5D — World Five Dimensions', 'short_name' => 'W5D', 'description' => t(__('brand.tagline')), 'id' => url('/'), 'start_url' => url('/'), 'scope' => url('/'),
+            'display' => 'standalone', 'background_color' => '#070711', 'theme_color' => '#070711', 'lang' => lang(), 'dir' => dir_attr(),
+            'icons' => [$i('icon-192.png', '192x192'), $i('icon-512.png', '512x512'), $i('icon-maskable-512.png', '512x512', 'maskable')],
+            'shortcuts' => [['name' => __('cta.invest'), 'url' => url('/checkout/')], ['name' => __('acct.account'), 'url' => url('/account/')]],
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        return Response::text((string)$j, 'application/manifest+json');
+    }
+
     public static function robots(Request $q): Response
     {
         $admin = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
@@ -157,7 +182,7 @@ final class Docs
             ['type' => 'hero', 'id' => 'dev-hero', 'variant' => 'classic', 'gradient' => 'technology', 'icon' => 'code', 'eyebrow' => $L('For developers', 'Pour les développeurs', 'للمطورين'),
                 'title' => $L('One public API. **Same data as the site.**', 'Une API publique. **Les mêmes données que le site.**', 'واجهة عامة واحدة. **بيانات الموقع نفسها.**'),
                 'lead' => $L('Read endpoints are public, cached for 60 seconds and available in English, French and Arabic. Write endpoints are rate-limited and guarded.', 'Les points de lecture sont publics, mis en cache 60 secondes et disponibles en anglais, français et arabe. Les points d’écriture sont limités et protégés.', 'نقاط القراءة عامة ومخزنة 60 ثانية ومتاحة بالإنجليزية والفرنسية والعربية. نقاط الكتابة محدودة ومحمية.'),
-                'ctas' => [['label' => $L('OpenAPI JSON', 'OpenAPI JSON', 'OpenAPI JSON'), 'href' => '/openapi.json', 'style' => 'peak', 'arrow' => true], ['label' => $L('AI-agent docs', 'Docs agents IA', 'وثائق الوكلاء'), 'href' => '/agents/', 'style' => 'ghost']]],
+                'ctas' => [['label' => $L('OpenAPI JSON', 'OpenAPI JSON', 'OpenAPI JSON'), 'href' => '/api/openapi.json', 'style' => 'peak', 'arrow' => true], ['label' => $L('AI-agent docs', 'Docs agents IA', 'وثائق الوكلاء'), 'href' => '/agents/', 'style' => 'ghost']]],
             ['type' => 'steps', 'id' => 'dev-start', 'tier' => 'i', 'focus' => 2, 'title' => $L('Quick start', 'Démarrage rapide', 'بداية سريعة'), 'items' => [
                 ['title' => $L('Read the price', 'Lire le prix', 'اقرأ السعر'), 'body' => ['en' => '`curl ' . $b . '/api/price.json`']],
                 ['title' => $L('Quote a commitment', 'Chiffrer un engagement', 'احسب التزاما'), 'body' => ['en' => '`curl "' . $b . '/api/quote?parts=3&days=30"`']],
@@ -183,11 +208,11 @@ final class Docs
             ['type' => 'hero', 'id' => 'ag-hero', 'variant' => 'classic', 'gradient' => 'governance', 'icon' => 'bot', 'eyebrow' => $L('For AI agents', 'Pour les agents IA', 'للوكلاء الأذكياء'),
                 'title' => $L('Machine-readable. **Honest by rule.**', 'Lisible par machine. **Honnête par règle.**', 'مقروء آليا. **صادق بالقاعدة.**'),
                 'lead' => $L('A manifest, a tool list and seven rules. Agents may quote the price, compute a schedule and relay a human\'s request, but may never promise a return or a job.', 'Un manifeste, une liste d’outils et sept règles. Les agents peuvent citer le prix, calculer un calendrier et relayer une demande humaine, mais jamais promettre un rendement ou un emploi.', 'بيان وقائمة أدوات وسبع قواعد. يمكن للوكلاء ذكر السعر وحساب جدول ونقل طلب إنسان، لكن لا يعدون بعائد أو وظيفة.'),
-                'ctas' => [['label' => $L('Agent manifest', 'Manifeste', 'البيان'), 'href' => '/.well-known/agents.json', 'style' => 'peak', 'arrow' => true], ['label' => 'llms.txt', 'href' => '/llms.txt', 'style' => 'ghost']]],
+                'ctas' => [['label' => $L('Agent manifest', 'Manifeste', 'البيان'), 'href' => '/api/agents.json', 'style' => 'peak', 'arrow' => true], ['label' => 'llms.txt', 'href' => '/llms.txt', 'style' => 'ghost']]],
             ['type' => 'cards', 'id' => 'ag-rules', 'tier' => 'i', 'focus' => 3, 'cols' => 3, 'title' => $L('Rules every agent follows', 'Règles de tout agent', 'قواعد كل وكيل'), 'items' => array_map(fn($r) => ['icon' => 'shield-check', 'title' => ['en' => $r]], self::rules())],
             ['type' => 'table', 'id' => 'ag-tools', 'tier' => 'i', 'focus' => 2, 'title' => $L('Tools', 'Outils', 'الأدوات'), 'columns' => [$L('Tool', 'Outil', 'الأداة'), $L('Call', 'Appel', 'الاستدعاء'), $L('Purpose', 'Usage', 'الغرض')], 'rows' => $tools],
             ['type' => 'definitions', 'id' => 'ag-urls', 'tier' => 'i', 'focus' => 2, 'title' => $L('Discovery', 'Découverte', 'الاكتشاف'), 'items' => [
-                ['term' => ['en' => 'Manifest'], 'def' => ['en' => '`' . $b . '/.well-known/agents.json`']], ['term' => ['en' => 'Tools'], 'def' => ['en' => '`' . $b . '/api/docs/agents/tools.json`']],
+                ['term' => ['en' => 'Manifest'], 'def' => ['en' => '`' . $b . '/api/agents.json` (also `/.well-known/agents.json`)']], ['term' => ['en' => 'Tools'], 'def' => ['en' => '`' . $b . '/api/docs/agents/tools.json`']],
                 ['term' => ['en' => 'llms.txt'], 'def' => ['en' => '`' . $b . '/llms.txt`']], ['term' => ['en' => 'llms-full.txt'], 'def' => ['en' => '`' . $b . '/llms-full.txt`']], ['term' => ['en' => 'OpenAPI'], 'def' => ['en' => '`' . $b . '/openapi.json`']]]],
             ['type' => 'notice', 'id' => 'ag-limits'],
         ]]);

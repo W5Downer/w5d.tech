@@ -28,6 +28,37 @@
     <p class="text-xs text-slate-500 mt-2">{{ count($v['rows']) }} {{ __('admin.rows') }}</p>
   @endif
 
+@elseif($v['kind'] === 'payments')
+  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">D17 (Tunisia only) · {{ $v['enabled'] ? 'enabled → ' . $v['gsm'] : 'DISABLED: set PAYMENT_D17_ENABLED=true and PAYMENT_D17_GSM in .env' }}. Check the transfer in your D17 app, then verify or reject. The buyer is e-mailed.</p>
+  @if(!empty($v['error']))<p class="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm">{{ $v['error'] }}</p>@endif
+  @if(empty($v['rows']))<p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-500">{{ __('lbl.none') }}</p>
+  @else
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
+    <table class="w5-table"><thead><tr><th>Payment</th><th>Order</th><th>Buyer</th><th class="text-end">Amount</th><th>Sender GSM</th><th>D17 txn</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    @foreach($v['rows'] as $p)
+      <tr>
+        <td class="font-mono text-xs">{{ $p['ref'] }}<br><span class="text-slate-500">{{ $p['created_at'] }}</span></td>
+        <td class="font-mono text-xs">{{ $p['order_ref'] }}</td>
+        <td>{{ $p['full_name'] }}<br><span class="text-xs text-slate-500">{{ $p['email'] }}</span></td>
+        <td class="text-end tabular-nums">{{ number_format((float)$p['amount'], 2) }} {{ $p['currency'] }}</td>
+        <td dir="ltr">{{ $p['sender_gsm'] ?: '—' }}</td>
+        <td class="font-mono text-xs">{{ $p['txn_ref'] ?: '—' }}</td>
+        <td><span class="tier-badge">{{ $p['status'] }}</span>@if($p['note'])<br><span class="text-xs">{{ $p['note'] }}</span>@endif @if($p['verified_by'])<br><span class="text-xs text-slate-500">{{ $p['verified_by'] }}</span>@endif</td>
+        <td>
+          @if($p['status'] !== 'verified')
+          <form method="post" action="{{ admin_url('payments/review') }}" class="flex flex-col gap-1 min-w-[10rem]">
+            {!! csrf_field() !!}<input type="hidden" name="id" value="{{ $p['id'] }}">
+            <input class="field !py-1 !text-xs" name="note" maxlength="300" placeholder="Note (optional, sent to buyer)" aria-label="Note">
+            <div class="flex gap-1"><button class="btn-focus !py-1 !px-2 text-xs" name="do" value="verify" type="submit" @if(!$p['txn_ref']) disabled title="No transaction reference yet" @endif>Verify</button><button class="btn-ghost !py-1 !px-2 text-xs" name="do" value="reject" type="submit">Reject</button></div>
+          </form>
+          @else — @endif
+        </td>
+      </tr>
+    @endforeach
+    </tbody></table>
+  </div>
+  @endif
+
 @elseif($v['kind'] === 'pricing')
   @php $k = $v['k']; $snap = $v['snap']; @endphp
   <div class="grid gap-6 lg:grid-cols-3">

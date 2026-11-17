@@ -96,6 +96,8 @@ final class Admin
             'progressive-pricing' => self::vPricing(),
             'manager-applications' => self::vTable('SELECT id, ref, full_name, email, macro_slug AS macro, years, team_size_led AS team, region_slug AS region, score, status, created_at FROM manager_applications ORDER BY score DESC, id DESC LIMIT 300', 'manager_applications'),
             'subscriptions' => self::vTable('SELECT s.id, s.order_ref AS ref, i.full_name, i.email, s.parts_per_day AS parts, s.macro_slug AS macro, s.next_charge_on AS next_charge, s.status, s.created_at FROM investor_subscriptions s JOIN investors i ON i.id=s.investor_id ORDER BY s.id DESC LIMIT 300', 'investor_subscriptions'),
+            'payments-d17' => self::vPayments(),
+            'mail-outbox' => self::vTable('SELECT id, to_email AS "to", template, lang, driver, status, substr(COALESCE(error, \'\'),1,120) AS error, created_at FROM mail_outbox ORDER BY id DESC LIMIT 300'),
             'inbox' => self::vTable('SELECT id, desk, name, email, subject, substr(body,1,160) AS message, status, created_at FROM contact_messages ORDER BY id DESC LIMIT 300', 'contact_messages'),
             'investors' => self::vTable('SELECT i.id, i.full_name, i.email, i.kind, i.organisation, COUNT(o.id) AS orders, COALESCE(SUM(o.total),0) AS pledged, i.created_at FROM investors i LEFT JOIN investor_orders o ON o.investor_id=i.id GROUP BY i.id ORDER BY pledged DESC LIMIT 300'),
             'applicants' => self::vTable('SELECT id, full_name, email, macro_slug AS macro, service_slug AS service, diploma, status, created_at FROM applicants ORDER BY id DESC LIMIT 300'),
@@ -118,6 +120,22 @@ final class Admin
         return ['kind' => 'table', 'rows' => $rows, 'status_table' => $statusTable, 'statuses' => $statusTable ? self::STATUSES[$statusTable] : []];
     }
 
+    private static function vPayments(): array
+    {
+        try {
+            $rows = DB::available() ? DB::all('SELECT p.id, p.ref, p.order_ref, i.full_name, i.email, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.verified_by, p.created_at FROM payments p LEFT JOIN investors i ON i.id = p.investor_id ORDER BY (p.status = \'pending\' AND p.txn_ref IS NOT NULL) DESC, p.id DESC LIMIT 300') : [];
+        } catch (\Throwable $e) { return ['kind' => 'payments', 'rows' => [], 'error' => $e->getMessage()]; }
+        return ['kind' => 'payments', 'rows' => $rows, 'enabled' => \W5D\Payments::enabled(), 'gsm' => \W5D\Payments::gsm()];
+    }
+
+    /** Verify or reject a D17 payment (permission: payments). Audited; the buyer is e-mailed and notified. */
+    public static function reviewPayment(Request $q): Response
+    {
+        if ($r = Auth::require('payments')) return $r;
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect(admin_url('payments-d17/')); }
+        return Accounts::review($q, fn(string $a, string $s = '', string $d = '') => self::audit($a, $s, $d));
+    }
+
     private static function vList(array $rows, array $extra = []): array { return ['kind' => 'table', 'rows' => $rows, 'readonly' => true] + $extra; }
 
     private static function vVariables(): array
@@ -136,7 +154,7 @@ final class Admin
         $dbFile = ROOT . '/storage/' . basename((string)Env::get('DB_DATABASE', 'w5d.sqlite'));
         $rows = [
             ['check' => 'PHP', 'value' => PHP_VERSION], ['check' => 'Database', 'value' => DB::available() ? 'connected (' . Env::get('DB_DRIVER', 'sqlite') . ')' : 'unavailable'],
-            ['check' => 'Migrations', 'value' => implode(', ', $mig) ?: 'none'], ['check' => 'Payment mode', 'value' => (string)Env::get('PAYMENT_MODE', 'demo')],
+            ['check' => 'Migrations', 'value' => implode(', ', $mig) ?: 'none'], ['check' => 'Payment mode', 'value' => (string)Env::get('PAYMENT_MODE', 'demo')], ['check' => 'D17 (Tunisia)', 'value' => \W5D\Payments::enabled() ? 'enabled → ' . \W5D\Payments::gsm() : 'disabled'], ['check' => 'Mail driver', 'value' => (string)Env::get('MAIL_DRIVER', 'log') . (Env::get('MAIL_DRIVER', 'log') === 'smtp' ? ' → ' . Env::get('MAIL_HOST', '?') : '')], ['check' => 'APP_URL', 'value' => (string)(Env::get('APP_URL') ?: 'EMPTY (derived from request)')], ['check' => 'APP_ENV', 'value' => (string)Env::get('APP_ENV', '?')],
             ['check' => 'storage/ writable', 'value' => is_writable(ROOT . '/storage') ? 'yes' : 'NO'], ['check' => 'Content', 'value' => Content::count('services') . ' services · ' . Content::count('projects') . ' projects · ' . Content::count('pages') . ' pages'],
             ['check' => 'Compiled assets', 'value' => is_file(ROOT . '/htdocs/assets/_base/css/tailwind.css') ? 'present' : 'missing (run tools/build.mjs)'],
         ];

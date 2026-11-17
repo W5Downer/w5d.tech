@@ -7,7 +7,7 @@
   <meta name="description" content="@yield('description', __('brand.tagline'))">
   <meta name="theme-color" content="#070711">
   <meta name="robots" content="@yield('robots', 'index,follow')">
-  <link rel="canonical" href="{{ rtrim((string) \W5D\Env::get('APP_URL', ''), '/') . $canonicalPath }}">
+  <link rel="canonical" href="{{ \W5D\Env::baseUrl() . $canonicalPath }}">
   <meta property="og:title" content="@yield('title', 'W5D')">
   <meta property="og:description" content="@yield('description', __('brand.tagline'))">
   <meta property="og:type" content="website">

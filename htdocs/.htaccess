@@ -11,7 +11,8 @@ DirectoryIndex index.php
 </IfModule>
 
 # Never serve dotfiles / data files even if one ever lands in htdocs/
-<FilesMatch "(^\.|\.(env|sqlite|sqlite-wal|sqlite-shm|sql|log|md|bak|json5?)$)">
+# NB: *.json and /.well-known/ must stay reachable (openapi.json, agents.json, security.txt are served by PHP).
+<FilesMatch "(^\.(?!well-known)|\.(env|sqlite|sqlite-wal|sqlite-shm|sql|log|md|bak)$|^(icons|brands)\.json$)">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>

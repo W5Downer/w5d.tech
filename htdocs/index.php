@@ -8,6 +8,7 @@ if (PHP_SAPI === 'cli-server') {
     if ($f !== __FILE__ && is_file($f) && !preg_match('/\.(php|env|sqlite|sql|log|md|json5?)$/i', $f)) return false;
 }
 define('ROOT', dirname(__DIR__));
+if (!function_exists('str_starts_with')) { http_response_code(500); exit('PHP 8.1+ required'); }
 require ROOT . '/src/autoload.php';
 
 use W5D\{App};

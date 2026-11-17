@@ -32,7 +32,7 @@
       </nav>
       <div class="px-5 pb-6 flex items-center gap-3 text-xs">
         <a class="btn-link" href="{{ url('/') }}">{{ icon('external-link', 'w-3.5 h-3.5') }} Site</a>
-        @foreach(['en', 'fr', 'ar'] as $l)<a class="{{ lang() === $l ? 'font-bold' : 'text-slate-500' }}" href="{{ url('/lang/' . $l . '?r=/' . trim((string)\W5D\Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/') . '/') }}">{{ strtoupper($l) }}</a>@endforeach
+        @foreach(['en', 'fr', 'ar'] as $l)<a class="{{ lang() === $l ? 'font-bold' : 'text-slate-500' }}" href="{{ url('/language/' . $l . '?r=/' . trim((string)\W5D\Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/') . '/') }}">{{ strtoupper($l) }}</a>@endforeach
         <form method="post" action="{{ admin_url('logout') }}" class="ms-auto">{!! csrf_field() !!}<button class="btn-link" type="submit">{{ __('admin.logout') }}</button></form>
       </div>
     </aside>

@@ -38,4 +38,15 @@ final class Env
         $v = self::get($key);
         return $v === null ? $default : in_array(strtolower($v), ['1', 'true', 'yes', 'on'], true);
     }
+
+    /** Public origin without trailing slash: APP_URL, else derived from the request (never empty on a web request). */
+    public static function baseUrl(): string
+    {
+        $u = rtrim((string)self::get('APP_URL', ''), '/');
+        if ($u !== '') return $u;
+        $host = $_SERVER['HTTP_HOST'] ?? '';
+        if ($host === '' || !preg_match('/^[A-Za-z0-9.\-:\[\]]+$/', $host)) return '';
+        $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https';
+        return ($https ? 'https' : 'http') . '://' . $host;
+    }
 }

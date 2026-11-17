@@ -55,7 +55,7 @@ final class Forms
         return null;
     }
 
-    private static function fail(Request $q, string $back, array $errors, string $kind = 'validation'): Response
+    public static function fail(Request $q, string $back, array $errors, string $kind = 'validation'): Response
     {
         if ($q->wantsJson()) return Response::json(['ok' => false, 'error' => $kind, 'errors' => $errors], $kind === 'rate' ? 429 : 422);
         $_SESSION['_errors'] = $errors;
@@ -64,14 +64,14 @@ final class Forms
         return Response::redirect(url($back));
     }
 
-    private static function done(Request $q, array $data, string $kind): Response
+    public static function done(Request $q, array $data, string $kind): Response
     {
         if ($q->wantsJson()) return Response::json(['ok' => true] + $data, 201);
         $_SESSION['_thanks'] = ['kind' => $kind] + $data;
         return Response::redirect(url('/join/thanks/'));
     }
 
-    private static function check(Request $q, string $back, string $bucket): ?Response
+    public static function check(Request $q, string $back, string $bucket): ?Response
     {
         if (!$q->isPost()) return null;
         if (!$q->wantsJson() && !Csrf::check($q)) return self::fail($q, $back, ['_form' => self::err('Session expired. Reload and try again.', 'Session expirée. Rechargez et réessayez.', 'انتهت الجلسة. أعد التحميل وحاول مجددا.')], 'csrf');
@@ -92,7 +92,10 @@ final class Forms
         if (!in_array($desk, self::DESKS, true)) $e['desk'] = self::err('Unknown desk.', 'Bureau inconnu.', 'مكتب غير معروف.');
         if ($e) return ['ok' => false, 'errors' => $e];
         $id = DB::insert('contact_messages', ['country_id' => 'tn', 'desk' => $desk, 'name' => self::str($in, 'name', 120), 'email' => $email, 'subject' => self::str($in, 'subject', 160), 'body' => self::str($in, 'message', 4000)]);
-        return ['ok' => true, 'errors' => [], 'data' => ['ref' => 'MSG-' . $id, 'desk' => $desk]];
+        $ref = 'MSG-' . $id;
+        \W5D\Mail::send($email, 'form_ack', ['kind' => 'contact', 'name' => self::str($in, 'name', 120), 'ref' => $ref]);
+        \W5D\Mail::staff('Contact desk: ' . $desk, ['ref' => $ref, 'from' => self::str($in, 'name', 120) . ' <' . $email . '>', 'subject' => self::str($in, 'subject', 160), 'message' => self::str($in, 'message', 1500)]);
+        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'desk' => $desk]];
     }
 
     public static function contact(Request $q): Response
@@ -113,7 +116,7 @@ final class Forms
         self::accepted($q->post, $e);
         if ($e) return self::fail($q, '/newsletter/', $e);
         if (!DB::one('SELECT id FROM newsletter_subscribers WHERE country_id = ? AND email = ?', ['tn', $email]))
-            DB::insert('newsletter_subscribers', ['country_id' => 'tn', 'email' => $email, 'lang' => lang()]);
+            { DB::insert('newsletter_subscribers', ['country_id' => 'tn', 'email' => $email, 'lang' => lang()]); \W5D\Mail::send($email, 'form_ack', ['kind' => 'newsletter', 'name' => '', 'ref' => '']); }
         return self::done($q, ['ref' => 'NL'], 'newsletter');
     }
 
@@ -135,7 +138,10 @@ final class Forms
             return ['ok' => false, 'errors' => ['email' => self::err('This email is already registered.', 'Cet e-mail est déjà inscrit.', 'هذا البريد مسجل مسبقا.')]];
         $id = DB::insert('applicants', ['country_id' => 'tn', 'cin' => 'PRE-' . strtoupper(bin2hex(random_bytes(5))), 'full_name' => self::str($in, 'name', 120), 'email' => $email,
             'phone' => self::str($in, 'phone', 40), 'macro_slug' => $svc['macro'] ?? null, 'service_slug' => $svc['slug'] ?? null, 'diploma' => $dip, 'status' => 'registered', 'lang' => lang()]);
-        return ['ok' => true, 'errors' => [], 'data' => ['ref' => 'REG-' . str_pad((string)$id, 6, '0', STR_PAD_LEFT), 'next' => 'verification']];
+        $ref = 'REG-' . str_pad((string)$id, 6, '0', STR_PAD_LEFT);
+        \W5D\Mail::send($email, 'form_ack', ['kind' => 'register', 'name' => self::str($in, 'name', 120), 'ref' => $ref]);
+        \W5D\Mail::staff('New applicant', ['ref' => $ref, 'name' => self::str($in, 'name', 120), 'email' => $email, 'service' => (string)($svc['slug'] ?? '')]);
+        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'next' => 'verification']];
     }
 
     public static function register(Request $q): Response
@@ -236,6 +242,8 @@ final class Forms
         DB::insert('manager_applications', ['country_id' => 'tn', 'ref' => $ref, 'full_name' => self::str($in, 'name', 120), 'email' => $email, 'phone' => self::str($in, 'phone', 40),
             'macro_slug' => $macro, 'years' => (int)$in['years'], 'team_size_led' => (int)$in['team'], 'region_slug' => self::str($in, 'region', 60), 'profile_url' => $profile,
             'motivation' => self::str($in, 'motivation', 5000), 'scenario_answer' => self::str($in, 'scenario', 5000), 'score' => $sc['score'], 'status' => 'received', 'lang' => lang()]);
+        \W5D\Mail::send($email, 'form_ack', ['kind' => 'manager', 'name' => self::str($in, 'name', 120), 'ref' => $ref]);
+        \W5D\Mail::staff('New manager application', ['ref' => $ref, 'name' => self::str($in, 'name', 120), 'email' => $email, 'macro' => $macro, 'score' => (string)$sc['score']]);
         return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'status' => 'received']];
     }
 

@@ -33,7 +33,7 @@ final class Api
 
     public static function index(Request $q): Response
     {
-        $b = rtrim((string)\W5D\Env::get('APP_URL', ''), '/');
+        $b = \W5D\Env::baseUrl();
         $e = fn(string $p) => $b . url($p);
         return Response::json(['name' => 'W5D public API', 'version' => '1', 'docs' => ['developers' => $e('/developers/'), 'openapi' => $e('/openapi.json'), 'agents' => $e('/agents/'), 'agent_manifest' => $e('/.well-known/agents.json'), 'llms' => $e('/llms.txt')],
             'languages' => ['en', 'fr', 'ar'], 'note' => 'Append ?lang=fr|ar to any GET. Read endpoints are public and cached 60s.',
