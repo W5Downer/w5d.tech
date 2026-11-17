@@ -3,7 +3,7 @@
 return [
     'roles' => [
         'owner'    => ['*'],
-        'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read'],
+        'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments'],
         'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports'],
         'manager'  => ['dashboard', 'teams', 'weekly'],
         'member'   => ['dashboard'],
@@ -40,6 +40,8 @@ return [
         // Additions required by the demo flows (managers hiring + checkout/subscription management)
         ['n' => 26, 'slug' => 'manager-applications','icon' => 'user-check',       'perm' => 'managers',    'label' => ['en' => 'Manager Applications', 'fr' => 'Candidatures de managers', 'ar' => 'طلبات المديرين']],
         ['n' => 27, 'slug' => 'subscriptions',       'icon' => 'repeat',           'perm' => 'investors.read','label' => ['en' => 'Daily Subscriptions', 'fr' => 'Abonnements quotidiens', 'ar' => 'الاشتراكات اليومية']],
+        ['n' => 29, 'slug' => 'payments-d17',        'icon' => 'smartphone',       'perm' => 'payments',    'label' => ['en' => 'Payments (D17)', 'fr' => 'Paiements (D17)', 'ar' => 'المدفوعات (D17)']],
+        ['n' => 30, 'slug' => 'mail-outbox',         'icon' => 'mail',             'perm' => 'messages',    'label' => ['en' => 'Mail outbox', 'fr' => 'Boîte d’envoi', 'ar' => 'صندوق الصادر']],
         ['n' => 28, 'slug' => 'inbox',               'icon' => 'inbox',            'perm' => 'messages',    'label' => ['en' => 'Contact Inbox', 'fr' => 'Boîte de contact', 'ar' => 'صندوق الرسائل']],
     ],
 ];

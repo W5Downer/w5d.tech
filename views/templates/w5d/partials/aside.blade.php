@@ -7,7 +7,7 @@
   <div class="aside-body">
     <div class="lang-grid">
       @foreach(\W5D\Lang::names() as $code => $name)
-        <a class="lang-item" href="{{ url('/lang/' . $code) }}?r={{ rawurlencode($canonicalPath ?? '/') }}" aria-selected="{{ $code === lang() ? 'true' : 'false' }}" hreflang="{{ $code }}" lang="{{ $code }}">
+        <a class="lang-item" href="{{ url('/language/' . $code) }}?r={{ rawurlencode($canonicalPath ?? '/') }}" aria-selected="{{ $code === lang() ? 'true' : 'false' }}" hreflang="{{ $code }}" lang="{{ $code }}">
           <span class="font-bold uppercase text-xs">{{ $code }}</span><span>{{ $name }}</span>
         </a>
       @endforeach

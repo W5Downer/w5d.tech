@@ -135,3 +135,19 @@ function numval(mixed $v): float
     $s = Variables::resolve((string)$v);
     return (float)str_replace([',', ' '], '', $s);
 }
+
+/** Inline 3-language literal for the active language. */
+function tr3(string $en, string $fr, string $ar): string { return t(['en' => $en, 'fr' => $fr, 'ar' => $ar]); }
+
+/** Inline brand SVG (simple-icons subset, vendored locally). */
+function brand(string $name, string $class = 'w-5 h-5'): Html
+{
+    static $set = null;
+    $set ??= is_file(ROOT . '/htdocs/assets/_base/brands.json') ? json_decode((string)file_get_contents(ROOT . '/htdocs/assets/_base/brands.json'), true) : [];
+    $d = $set[$name] ?? null;
+    if ($d === null) return icon('circle', $class);
+    return new Html('<svg xmlns="http://www.w3.org/2000/svg" class="' . e($class) . '" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="' . e($d) . '"/></svg>');
+}
+
+/** Absolute URL for a site path. */
+function abs_url(string $path = ''): string { return W5D\Env::baseUrl() . url($path); }

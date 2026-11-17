@@ -1,12 +1,44 @@
-# Safety net for hosts whose document root is the repository root instead of htdocs/.
-# Preferred setup: point the document root at htdocs/. This file denies everything
-# that must never be public and forwards the rest to htdocs/.
-Options -Indexes
+# w5d.tech — root-level front controller.
+# Use this when the hosting panel forces the document root to the repository root.
+# (Preferred: point the document root at htdocs/ and this file is never read.)
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteRule ^(src|config|data|lang|db|bin|storage|docs|views|tools|tests)(/|$) - [F,L]
-  RewriteRule ^\.(env|git) - [F,L]
-  RewriteRule \.(env|sqlite|sql|log|md)$ - [F,L]
-  RewriteCond %{REQUEST_URI} !^/htdocs/
-  RewriteRule ^(.*)$ htdocs/$1 [L]
+
+  # 0. Legacy language switch (a real /lang/ folder exists on disk -> route these to PHP explicitly)
+  RewriteRule ^lang/(en|fr|ar)/?$ index.php [L]
+
+  # 0b. /.well-known/* and root machine files are answered by PHP
+  RewriteRule ^\.well-known/ index.php [L]
+
+  # 1. Never expose application internals
+  RewriteRule ^(src|config|data|db|lang|storage|tests|tools|views|bin|docs|node_modules|\.git)(/|$) - [R=404,L]
+  RewriteRule ^(\.env|README\.md|LICENSE|\.gitignore|composer\.(json|lock)) - [R=404,L]
+
+  # 2. Public assets live in htdocs/assets
+  RewriteCond %{DOCUMENT_ROOT}/htdocs/assets/$1 -f
+  RewriteRule ^assets/(.*)$ htdocs/assets/$1 [L]
+
+  # 3. Public root files (favicon.ico, manifest, images ...) from htdocs/
+  RewriteCond %{DOCUMENT_ROOT}/htdocs/$1 -f
+  RewriteRule ^(favicon\.ico|apple-touch-icon\.png|manifest\.webmanifest|browserconfig\.xml|humans\.txt)$ htdocs/$1 [L]
+
+  # 4. Everything else -> front controller
+  RewriteCond %{REQUEST_URI} !^/index\.php$
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+# NB: *.json and /.well-known/ must stay reachable (openapi.json, agents.json, security.txt are served by PHP).
+<FilesMatch "(^\.(?!well-known)|\.(env|sqlite|sqlite-wal|sqlite-shm|sql|log|md|bak)$|^(icons|brands)\.json$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

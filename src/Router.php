@@ -24,7 +24,7 @@ final class Router
 
         // Canonical trailing slash for page routes (not files, not API)
         if ($req->method === 'GET' && $req->path !== '/' && !str_ends_with($req->path, '/')
-            && !preg_match('#\.[a-z0-9]{2,5}$#i', $req->path) && !str_starts_with($req->path, '/api/')) {
+            && !preg_match('#\.[a-z0-9]{2,12}$#i', $req->path) && !str_starts_with($req->path, '/api/') && !str_starts_with($req->path, '/lang/') && !str_starts_with($req->path, '/language/')) {
             $q = $_SERVER['QUERY_STRING'] ?? '';
             return Response::redirect(url($req->path . '/') . ($q ? '?' . $q : ''), 301);
         }

@@ -38,6 +38,16 @@ for (const n of [...names].sort()) {
 fs.writeFileSync(path.join(out, 'icons.json'), JSON.stringify(icons));
 console.log(`icons: ${Object.keys(icons).length} vendored; missing: ${missing.join(', ') || 'none'}`);
 
+/* 1b. Brand marks (simple-icons subset) for social share + social login ------------------- */
+{
+  const si = await import('simple-icons');
+  const want = { facebook: 'siFacebook', x: 'siX', linkedin: 'siLinkedin', whatsapp: 'siWhatsapp', telegram: 'siTelegram', github: 'siGithub', google: 'siGoogle', instagram: 'siInstagram', youtube: 'siYoutube', reddit: 'siReddit' };
+  const brands = {};
+  for (const [k, v] of Object.entries(want)) if (si[v]) brands[k] = si[v].path;
+  fs.writeFileSync(path.join(out, 'brands.json'), JSON.stringify(brands));
+  console.log(`brands: ${Object.keys(brands).join(', ')}`);
+}
+
 /* 2. Fonts (self-hosted, latin + arabic subsets only) ------------------------------------ */
 const fp = (pkg, file) => path.join(here, 'node_modules/@fontsource-variable', pkg, 'files', file);
 const fonts = [

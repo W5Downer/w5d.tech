@@ -31,6 +31,14 @@ final class Lang
         setcookie('w5d_lang', $code, ['expires' => time() + 31536000, 'path' => '/', 'samesite' => 'Lax', 'httponly' => false]);
     }
 
+    /** Run $fn with another language active (used to render e-mails in the recipient's language). */
+    public static function using(string $code, callable $fn): mixed
+    {
+        $prev = self::$cur;
+        self::$cur = in_array($code, self::SUPPORTED, true) ? $code : 'en';
+        try { return $fn(); } finally { self::$cur = $prev; }
+    }
+
     public static function dir(): string { return self::current() === 'ar' ? 'rtl' : 'ltr'; }
 
     public static function line(string $key, ?string $l = null): string

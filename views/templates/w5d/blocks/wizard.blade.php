@@ -62,6 +62,14 @@
       <aside class="rounded-2xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm space-y-1" role="note">
         <p>{{ __('limits.jobs') }}</p><p>{{ __('limits.returns') }}</p><p class="font-semibold">{{ __('msg.demo') }}</p>
       </aside>
+      @if(\W5D\Payments::enabled())
+      <fieldset class="rounded-2xl border border-slate-200 dark:border-white/10 p-4 text-sm">
+        <legend class="px-2 font-semibold">{{ __('acct.payments') }}</legend>
+        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="" class="mt-1" @if(old('payment_method') === '') checked @endif @if(old('payment_method', 'x') === 'x') checked @endif><span>{{ __('msg.demo') }}</span></label>
+        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="d17" class="mt-1" @if(old('payment_method') === 'd17') checked @endif><span><strong>D17</strong> · {{ __('acct.pay_title') }}<br><span class="text-xs text-slate-500">{{ __('acct.pay_steps') }}</span></span></label>
+        @if(!empty($errors['payment_method']))<p class="text-xs mt-1 text-red-500" role="alert">{{ t($errors['payment_method']) }}</p>@endif
+      </fieldset>
+      @endif
       <x-form-field name="accept" type="checkbox" :label="'[' . __('lbl.accept') . '](' . __('limits.link') . ')'" :required="true" :errors="$errors" />
       <div class="flex justify-between items-center"><button type="button" class="btn-ghost" data-wz-prev>{{ icon('arrow-left', 'w-4 h-4 rtl:rotate-180') }} {{ __('cta.back') }}</button><button type="submit" class="btn-peak">{{ __('cta.confirm') }}</button></div>
     </div>

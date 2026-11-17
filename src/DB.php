@@ -23,6 +23,7 @@ final class DB
             foreach (['journal_mode = WAL', 'foreign_keys = ON', 'busy_timeout = 5000', 'synchronous = NORMAL', 'wal_autocheckpoint = 1000'] as $p) {
                 $pdo->exec('PRAGMA ' . $p);
             }
+            if (Env::get('DB_AUTO_MIGRATE', 'true') !== 'false') Migrator::run($pdo);
         } elseif ($driver === 'mysql' || $driver === 'pgsql') {
             $dsn = sprintf('%s:host=%s;port=%s;dbname=%s%s', $driver, Env::get('DB_HOST', 'localhost'),
                 Env::get('DB_PORT', $driver === 'mysql' ? '3306' : '5432'), Env::get('DB_DATABASE', 'w5d'),
@@ -31,7 +32,9 @@ final class DB
         } else {
             throw new \RuntimeException("Unsupported DB_DRIVER: $driver");
         }
-        return self::$pdo = $pdo;
+        self::$pdo = $pdo;
+        if (Migrator::$pending) { Migrator::$pending = false; RefData::sync(); }
+        return $pdo;
     }
 
     public static function available(): bool

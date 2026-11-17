@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts};
 
 final class App
 {
@@ -14,6 +14,7 @@ final class App
         mb_internal_encoding('UTF-8');
         if (PHP_SAPI !== 'cli') Session::start();
         else $_SESSION = $_SESSION ?? [];
+        if (PHP_SAPI !== 'cli') { try { Account::restore(); } catch (\Throwable $e) { /* DB not ready: stay a guest */ } }
         ViewEnv::share('currentLang', Lang::current());
     }
 
@@ -76,6 +77,22 @@ final class App
         $r->any('/subscription/manage', [Checkout::class, 'manage']);
         $r->post('/subscription/action', [Checkout::class, 'action']);
 
+        // ---- accounts ----
+        $r->any('/account/login', [Accounts::class, 'login']);
+        $r->post('/account/logout', [Accounts::class, 'logout']);
+        $r->any('/account/register', [Accounts::class, 'register']);
+        $r->post('/account/resend', [Accounts::class, 'resend']);
+        $r->get('/account/verify/{token}', [Accounts::class, 'verify']);
+        $r->any('/account/forgot', [Accounts::class, 'forgot']);
+        $r->any('/account/reset/{token}', [Accounts::class, 'reset']);
+        $r->get('/account/social/{provider}', [Accounts::class, 'social']);
+        $r->get('/account/social/{provider}/callback', [Accounts::class, 'socialCallback']);
+        $r->post('/account/profile', [Accounts::class, 'profile']);
+        $r->post('/account/security', [Accounts::class, 'security']);
+        $r->get('/account', [Accounts::class, 'panel']);
+        $r->get('/account/{panel}', [Accounts::class, 'panel']);
+        $r->any('/pay/{ref}', [Accounts::class, 'pay']);
+
         // ---- docs (human) ----
         $r->get('/developers', [Docs::class, 'developers']);
         $r->get('/agents', [Docs::class, 'agents']);
@@ -106,6 +123,12 @@ final class App
         $r->get('/api/docs/agents.json', [Docs::class, 'agentManifest']);
         $r->get('/api/docs/agents/tools.json', [Docs::class, 'agentToolsJson']);
         $r->get('/openapi.json', [Docs::class, 'openapi']);
+        $r->get('/api/openapi.json', [Docs::class, 'openapi']);
+        $r->get('/api/agents.json', [Docs::class, 'agentManifest']);
+        $r->get('/security.txt', [Docs::class, 'securityTxt']);
+        $r->get('/.well-known/security.txt', [Docs::class, 'securityTxt']);
+        $r->get('/humans.txt', [Docs::class, 'humans']);
+        $r->get('/manifest.webmanifest', [Docs::class, 'manifest']);
         $r->get('/.well-known/agents.json', [Docs::class, 'agentManifest']);
         $r->get('/llms.txt', [Docs::class, 'llms']);
         $r->get('/llms-full.txt', [Docs::class, 'llmsFull']);
@@ -113,12 +136,16 @@ final class App
         $r->get('/robots.txt', [Docs::class, 'robots']);
 
         // ---- language ----
-        $r->get('/lang/{code}', function (Request $q) {
-            Lang::set($q->params['code']);
+        // /language/{code} is the canonical URL: a top-level /lang/ folder exists on disk (translations) and some Apache setups
+        // answer /lang/* themselves (403/404). /lang/{code} stays as a legacy alias for the setups where it reaches PHP.
+        $setLang = function (Request $q) {
+            Lang::set((string)$q->params['code']);
             $to = (string)($q->query['r'] ?? '/');
-            if ($to === '' || $to[0] !== '/' || str_starts_with($to, '//') || str_contains($to, '\\')) $to = '/';
-            return Response::redirect($to);
-        });
+            if ($to === '' || $to[0] !== '/' || str_starts_with($to, '//') || str_contains($to, '\\') || preg_match('#^/(language|lang)/#', $to)) $to = '/';
+            return Response::redirect(url($to));
+        };
+        $r->get('/language/{code}', $setLang);
+        $r->get('/lang/{code}', $setLang);
 
         // ---- owner portal (obfuscated mount) ----
         $m = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
@@ -128,6 +155,7 @@ final class App
         $r->post($m . '/progressive-pricing/publish', [Admin::class, 'publishPricing']);
         $r->post($m . '/status', [Admin::class, 'setStatus']);
         $r->post($m . '/seed', [Admin::class, 'seed']);
+        $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
         $r->get($m . '/{menu}', [Admin::class, 'menu']);
         return $r;
     }
