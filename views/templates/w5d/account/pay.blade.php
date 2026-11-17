@@ -17,7 +17,7 @@
       @if(!empty($errors['_form']))<p class="mt-4 rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ t($errors['_form']) }}</p>@endif
 
       <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
-        <dt class="text-slate-500">{{ __('acct.pay_to') }}</dt><dd class="font-mono font-semibold" dir="ltr">{{ $d17['gsm'] }} <button type="button" class="btn-link text-xs ms-2" data-copy="{{ $d17['gsm'] }}">{{ __('cta.copy') }}</button></dd>
+        <dt class="text-slate-500">{{ __('acct.pay_to') }}</dt><dd class="font-mono font-semibold" dir="ltr">{{ $d17['gsm'] }} <button type="button" class="btn-link text-xs ms-2" data-copy-text="{{ $d17['gsm'] }}">{{ __('cta.copy') }}</button></dd>
         <dt class="text-slate-500">{{ __('acct.pay_holder') }}</dt><dd>{{ $d17['name'] }}</dd>
         <dt class="text-slate-500">{{ __('acct.pay_amount') }}</dt><dd class="font-semibold">{{ number_format((float)$d17['amount'], 2) }} {{ $p['currency'] }}</dd>
         <dt class="text-slate-500">{{ __('acct.status') }}</dt><dd><span class="rounded-full px-2 py-0.5 text-xs {{ $stl }}">{{ $stx }}</span>@if($p['status'] === 'rejected' && $p['note']) <span class="text-xs">{{ $p['note'] }}</span>@endif</dd>

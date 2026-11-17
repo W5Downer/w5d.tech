@@ -1,0 +1,222 @@
+{
+  "slug": "for-customer",
+  "title": {
+    "en": "For customers — W5D",
+    "fr": "Pour les clients — W5D",
+    "ar": "للعملاء — W5D"
+  },
+  "description": {
+    "en": "Organisations can ask for one of the {{ counts.services }} services. Work arrives as a weekly package, checked by a leader and a fixed {{ quality.sampling_percent }}% sample.",
+    "fr": "Les organisations peuvent demander l’un des {{ counts.services }} services. Le travail arrive en lot hebdomadaire, contrôlé par un leader et un échantillon fixe de {{ quality.sampling_percent }} %.",
+    "ar": "يمكن للمؤسسات طلب إحدى الخدمات الـ{{ counts.services }}. يصل العمل في حزمة أسبوعية يراجعها قائد وعينة ثابتة نسبتها {{ quality.sampling_percent }}٪."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-customer-hero",
+      "variant": "classic",
+      "gradient": "built",
+      "eyebrow": {
+        "en": "Customer",
+        "fr": "Client",
+        "ar": "العميل"
+      },
+      "title": {
+        "en": "Order reviewable work. **Weekly, certified.**",
+        "fr": "Commandez un travail vérifiable. **Hebdomadaire, certifié.**",
+        "ar": "اطلب عملا قابلا للمراجعة. **أسبوعيا ومعتمدا.**"
+      },
+      "lead": {
+        "en": "Organisations can ask for one of the {{ counts.services }} services. Work arrives as a weekly package, checked by a leader and a fixed {{ quality.sampling_percent }}% sample.",
+        "fr": "Les organisations peuvent demander l’un des {{ counts.services }} services. Le travail arrive en lot hebdomadaire, contrôlé par un leader et un échantillon fixe de {{ quality.sampling_percent }} %.",
+        "ar": "يمكن للمؤسسات طلب إحدى الخدمات الـ{{ counts.services }}. يصل العمل في حزمة أسبوعية يراجعها قائد وعينة ثابتة نسبتها {{ quality.sampling_percent }}٪."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Write to the partners desk",
+            "fr": "Écrire au bureau partenaires",
+            "ar": "اكتب لمكتب الشركاء"
+          },
+          "href": "/contact/?desk=partners",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Browse the services",
+            "fr": "Parcourir les services",
+            "ar": "تصفح الخدمات"
+          },
+          "href": "/services/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-customer-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "layers",
+          "title": {
+            "en": "Five macro works",
+            "fr": "Cinq macro-œuvres",
+            "ar": "خمسة أعمال كبرى"
+          },
+          "body": {
+            "en": "Built environment, cultures, governance, sciences and technology.",
+            "fr": "Cadre bâti, cultures, gouvernance, sciences et technologie.",
+            "ar": "البيئة المبنية والثقافات والحوكمة والعلوم والتقنية."
+          }
+        },
+        {
+          "icon": "scale",
+          "title": {
+            "en": "Honest scope",
+            "fr": "Périmètre honnête",
+            "ar": "نطاق صادق"
+          },
+          "body": {
+            "en": "We answer with a public source when one exists, and say plainly what we cannot do.",
+            "fr": "Nous répondons avec une source publique quand elle existe et disons clairement ce que nous ne pouvons pas faire.",
+            "ar": "نجيب بمصدر عام عند وجوده ونقول بوضوح ما لا نستطيعه."
+          }
+        },
+        {
+          "icon": "mail",
+          "title": {
+            "en": "A real desk",
+            "fr": "Un vrai bureau",
+            "ar": "مكتب حقيقي"
+          },
+          "body": {
+            "en": "Your message reaches a named desk and you get a reference by e-mail.",
+            "fr": "Votre message arrive à un bureau nommé et vous recevez une référence par e-mail.",
+            "ar": "تصل رسالتك إلى مكتب محدد وتحصل على مرجع بالبريد."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-customer-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Describe the need",
+            "fr": "Décrire le besoin",
+            "ar": "صف الحاجة"
+          },
+          "body": {
+            "en": "Tell the partners desk which service or domain you need.",
+            "fr": "Indiquez au bureau partenaires le service ou le domaine voulu.",
+            "ar": "أخبر مكتب الشركاء بالخدمة أو المجال."
+          }
+        },
+        {
+          "title": {
+            "en": "Get a scoped answer",
+            "fr": "Recevoir une réponse cadrée",
+            "ar": "احصل على رد محدد"
+          },
+          "body": {
+            "en": "A person answers with scope, calendar and limits.",
+            "fr": "Une personne répond avec périmètre, calendrier et limites.",
+            "ar": "يرد شخص بالنطاق والجدول والحدود."
+          }
+        },
+        {
+          "title": {
+            "en": "Receive weekly packages",
+            "fr": "Recevoir des lots hebdomadaires",
+            "ar": "استلم حزما أسبوعية"
+          },
+          "body": {
+            "en": "Each package is reviewed before it reaches you.",
+            "fr": "Chaque lot est relu avant de vous parvenir.",
+            "ar": "تُراجع كل حزمة قبل وصولها إليك."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-customer-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is there a fixed price list?",
+            "fr": "Existe-t-il une grille de prix fixe ?",
+            "ar": "هل توجد قائمة أسعار ثابتة؟"
+          },
+          "a": {
+            "en": "Customer scope is agreed in writing with the partners desk. Nothing is quoted on this page.",
+            "fr": "Le périmètre client est convenu par écrit avec le bureau partenaires. Rien n’est chiffré sur cette page.",
+            "ar": "يُتفق على نطاق العميل كتابيا مع مكتب الشركاء. لا تسعير في هذه الصفحة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-customer-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-customer-final",
+      "gradient": "built",
+      "title": {
+        "en": "Tell us what you need built.",
+        "fr": "Dites-nous ce que vous voulez construire.",
+        "ar": "أخبرنا بما تريد بناءه."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Write to the partners desk",
+            "fr": "Écrire au bureau partenaires",
+            "ar": "اكتب لمكتب الشركاء"
+          },
+          "href": "/contact/?desk=partners",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

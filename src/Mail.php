@@ -11,6 +11,55 @@ final class Mail
 {
     public static function types(): array { return (require ROOT . '/config/mail.php')['types']; }
 
+    /** "updates" = non-essential (newsletter) and can be unsubscribed; "transactional" = service mail, always sent. */
+    public static function category(string $type, array $data = []): string
+    {
+        return $type === 'form_ack' && ($data['kind'] ?? '') === 'newsletter' ? 'updates' : 'transactional';
+    }
+
+    public static function suppressed(string $email): bool
+    {
+        try { return (bool)DB::one('SELECT 1 FROM mail_suppressions WHERE email = ?', [mb_strtolower(trim($email))]); } catch (\Throwable) { return false; }
+    }
+
+    public static function suppress(string $email, string $source = 'link'): void
+    {
+        $e = mb_strtolower(trim($email));
+        DB::q('INSERT OR IGNORE INTO mail_suppressions (email, scope, source) VALUES (?, ?, ?)', [$e, 'updates', $source]);
+        DB::q('UPDATE newsletter_subscribers SET unsubscribed_at = CURRENT_TIMESTAMP WHERE email = ? AND unsubscribed_at IS NULL', [$e]);
+    }
+
+    public static function resubscribe(string $email): void
+    {
+        $e = mb_strtolower(trim($email));
+        DB::q('DELETE FROM mail_suppressions WHERE email = ?', [$e]);
+        DB::q('UPDATE newsletter_subscribers SET unsubscribed_at = NULL WHERE email = ?', [$e]);
+    }
+
+    /** Signed, stateless unsubscribe link for one address (no login needed, works from any mail client). */
+    public static function unsubUrl(string $email, ?string $lang = null): string
+    {
+        $e = mb_strtolower(trim($email));
+        return abs_url('/unsubscribe/') . '?e=' . rawurlencode($e) . '&s=' . Secret::sign('unsub:' . $e) . '&l=' . ($lang ?: Lang::current());
+    }
+
+    public static function unsubValid(string $email, string $sig): bool
+    {
+        return $sig !== '' && Secret::verify('unsub:' . mb_strtolower(trim($email)), $sig);
+    }
+
+    /** Plain-text alternative: links kept as "label (url)", head/preheader removed, whitespace tidied. */
+    private static function toText(string $html): string
+    {
+        $h = preg_replace(['#<head>.*?</head>#is', '#<!--pre-->.*?<!--/pre-->#s', '#<style.*?</style>#is'], '', $html);
+        $h = preg_replace(['#<(br|/p|/h1|/h2|/h3|/tr|/li|/table)\s*/?>#i', '#<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>#is'], ["\n", '$2 ($1)'], $h);
+        $h = preg_replace_callback('#(https?://\\S+) \\(\\1\\)#', fn($m) => $m[1], $h);
+        $t = trim(html_entity_decode(strip_tags($h), ENT_QUOTES, 'UTF-8'));
+        $t = preg_replace('/[ \t\x{00A0}]+/u', ' ', $t);
+        $t = preg_replace('/ *\n */', "\n", $t);
+        return preg_replace("/\n{3,}/", "\n\n", $t);
+    }
+
     /** @return bool true when handed to the transport (or logged), false when skipped/failed */
     public static function send(string $to, string $type, array $data = [], ?string $lang = null): bool
     {
@@ -19,14 +68,17 @@ final class Mail
         if (!isset($types[$type]) || !filter_var($to, FILTER_VALIDATE_EMAIL)) return false;
         if (str_ends_with(strtolower($to), '@example.test')) return false; // seeded demo data never mails
         $lang = in_array($lang, Lang::SUPPORTED, true) ? $lang : Lang::current();
+        $category = self::category($type, $data);
+        if ($category === 'updates' && self::suppressed($to)) return false; // unsubscribed from non-essential mail
+        $staff = !empty($data['staff']);
+        $unsub = $staff ? null : self::unsubUrl($to, $lang);
         $driver = (string)Env::get('MAIL_DRIVER', 'log');
         try {
-            [$subject, $html, $text] = Lang::using($lang, function () use ($types, $type, $data) {
+            [$subject, $html, $text] = Lang::using($lang, function () use ($types, $type, $data, $to, $unsub, $category, $staff) {
                 $subject = t($types[$type]['subject']);
                 foreach (['ref', 'status'] as $k) $subject = str_replace(':' . $k, (string)($data[$k] ?? ''), $subject);
-                $html = view('mail.' . $type, $data + ['subject' => $subject]);
-                $text = trim(html_entity_decode(strip_tags(preg_replace(['#<(br|/p|/h1|/h2|/tr|/li)\s*/?>#i', '#<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>#is'], ["\n", '$2 ($1)'], $html)), ENT_QUOTES, 'UTF-8'));
-                return [$subject, $html, preg_replace("/\n{3,}/", "\n\n", $text)];
+                $html = view('mail.' . $type, $data + ['subject' => $subject, 'to' => $to, 'unsub' => $unsub, 'category' => $category, 'isStaff' => $staff]);
+                return [$subject, $html, self::toText($html)];
             });
         } catch (\Throwable $e) {
             self::log('render failed ' . $type . ': ' . $e->getMessage());
@@ -34,9 +86,10 @@ final class Mail
         }
         $id = self::record($to, $subject, $type, $lang, $driver, 'queued');
         try {
-            if ($driver === 'smtp') self::smtp($to, $subject, $html, $text);
-            elseif ($driver === 'mail') self::phpMail($to, $subject, $html, $text);
-            else self::log("[$type] to=$to subject=$subject\n" . $text);
+            $oneClick = $category === 'updates' ? $unsub : null; // RFC 8058 header only for non-essential mail
+            if ($driver === 'smtp') self::smtp($to, $subject, $html, $text, $oneClick);
+            elseif ($driver === 'mail') self::phpMail($to, $subject, $html, $text, $oneClick);
+            else self::log("[$type] to=$to subject=$subject" . ($oneClick ? "\nList-Unsubscribe: <$oneClick>" : '') . "\n" . $text);
             self::mark($id, $driver === 'log' ? 'logged' : 'sent');
             return true;
         } catch (\Throwable $e) {
@@ -61,7 +114,7 @@ final class Mail
         return [$addr, (string)Env::get('MAIL_FROM_NAME', 'W5D')];
     }
 
-    private static function headers(string $to, string $subject, string $boundary): array
+    private static function headers(string $to, string $subject, string $boundary, ?string $unsub = null): array
     {
         [$fa, $fn] = self::from();
         $domain = substr(strrchr($fa, '@') ?: '@localhost', 1);
@@ -71,6 +124,10 @@ final class Mail
             'Content-Type: multipart/alternative; boundary="' . $boundary . '"', 'X-Mailer: W5D', 'Auto-Submitted: auto-generated',
         ];
         if ($rt = (string)Env::get('MAIL_REPLY_TO', '')) $h[] = 'Reply-To: <' . $rt . '>';
+        if ($unsub) {
+            $h[] = 'List-Unsubscribe: <' . $unsub . '>' . (($m = (string)(Env::get('MAIL_FROM_ADDRESS') ?: Env::get('CONTACT_EMAIL', ''))) !== '' ? ', <mailto:' . $m . '?subject=unsubscribe>' : '');
+            $h[] = 'List-Unsubscribe-Post: List-Unsubscribe=One-Click';
+        }
         return $h;
     }
 
@@ -83,14 +140,14 @@ final class Mail
         return $part('text/plain', $text) . $part('text/html', $html) . "--$boundary--\r\n";
     }
 
-    private static function phpMail(string $to, string $subject, string $html, string $text): void
+    private static function phpMail(string $to, string $subject, string $html, string $text, ?string $unsub = null): void
     {
         $b = 'w5d_' . bin2hex(random_bytes(8));
-        $hs = array_values(array_filter(self::headers($to, $subject, $b), fn($h) => !preg_match('/^(To|Subject):/', $h)));
+        $hs = array_values(array_filter(self::headers($to, $subject, $b, $unsub), fn($h) => !preg_match('/^(To|Subject):/', $h)));
         if (!@mail($to, self::encHeader($subject), self::body($html, $text, $b), implode("\r\n", $hs))) throw new \RuntimeException('mail() returned false');
     }
 
-    private static function smtp(string $to, string $subject, string $html, string $text): void
+    private static function smtp(string $to, string $subject, string $html, string $text, ?string $unsub = null): void
     {
         $host = (string)Env::get('MAIL_HOST', '');
         if ($host === '') throw new \RuntimeException('MAIL_HOST is empty');
@@ -130,7 +187,7 @@ final class Mail
             $cmd('RCPT TO:<' . $to . '>', [250, 251]);
             $cmd('DATA', [354]);
             $b = 'w5d_' . bin2hex(random_bytes(8));
-            $msg = implode("\r\n", self::headers($to, $subject, $b)) . "\r\n\r\n" . self::body($html, $text, $b);
+            $msg = implode("\r\n", self::headers($to, $subject, $b, $unsub)) . "\r\n\r\n" . self::body($html, $text, $b);
             $msg = preg_replace('/^\./m', '..', str_replace("\r\n", "\n", $msg));
             fwrite($fp, str_replace("\n", "\r\n", $msg) . "\r\n.\r\n");
             [$code, $all] = $read(); if ($code !== 250) throw new \RuntimeException('message rejected: ' . trim($all));

@@ -3,17 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@yield('title', 'W5D')</title>
-  <meta name="description" content="@yield('description', __('brand.tagline'))">
+@php
+  $seoTitle = html_entity_decode(strip_tags($__env->yieldContent('title', 'W5D')), ENT_QUOTES);
+  $seoDesc = html_entity_decode(strip_tags($__env->yieldContent('description', '')), ENT_QUOTES);
+  if ($seoDesc === '') $seoDesc = __('brand.tagline');
+  $seoRobots = $__env->yieldContent('robots', 'index,follow');
+  $seoPath = $canonicalPath ?? '/';
+  $seoUrl = \W5D\Env::baseUrl() . url($seoPath);
+  $seoImg = \W5D\Social::imageUrl($seoPath, $__env->hasSection('og_image') ? $__env->yieldContent('og_image') : null);
+  $ogLocale = ['en' => 'en_US', 'fr' => 'fr_FR', 'ar' => 'ar_TN'];
+  $seoPublic = !str_contains($seoRobots, 'noindex');
+@endphp
+  <title>{{ $seoTitle }}</title>
+  <meta name="description" content="{{ $seoDesc }}">
   <meta name="theme-color" content="#070711">
-  <meta name="robots" content="@yield('robots', 'index,follow')">
-  <link rel="canonical" href="{{ \W5D\Env::baseUrl() . $canonicalPath }}">
-  <meta property="og:title" content="@yield('title', 'W5D')">
-  <meta property="og:description" content="@yield('description', __('brand.tagline'))">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="{{ $seoRobots . ($seoPublic ? ',max-image-preview:large,max-snippet:-1' : '') }}">
+  <link rel="canonical" href="{{ $seoUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ $seoUrl }}">
+  <link rel="alternate" hreflang="{{ lang() }}" href="{{ $seoUrl }}">
+  <meta property="og:site_name" content="W5D">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ $seoUrl }}">
+  <meta property="og:title" content="{{ $seoTitle }}">
+  <meta property="og:description" content="{{ $seoDesc }}">
+  <meta property="og:locale" content="{{ $ogLocale[lang()] ?? 'en_US' }}">
+  {!! implode("\n  ", array_map(fn($lc) => '<meta property="og:locale:alternate" content="' . $ogLocale[$lc] . '">', array_values(array_diff(array_keys($ogLocale), [lang()])))) !!}
+  <meta property="og:image" content="{{ $seoImg }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ $seoTitle }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $seoTitle }}">
+  <meta name="twitter:description" content="{{ $seoDesc }}">
+  <meta name="twitter:image" content="{{ $seoImg }}">
+  @php $tw = \W5D\Social::via(); $fb = (string)\W5D\Env::get('SOCIAL_FACEBOOK_APP_ID', ''); @endphp
+  @if($tw !== '')
+  <meta name="twitter:site" content="{{ '@' . $tw }}">
+  @endif
+  @if($fb !== '')
+  <meta property="fb:app_id" content="{{ $fb }}">
+  @endif
   <link rel="alternate" type="application/json" href="{{ url('/api/index.json') }}" title="W5D API">
   <link rel="alternate" type="text/plain" href="{{ url('/llms.txt') }}" title="llms.txt">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c3aed'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='white'%3EW5%3C/text%3E%3C/svg%3E">
+  <link rel="sitemap" type="application/xml" href="{{ url('/sitemap.xml') }}">
+  <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon.svg') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+  <link rel="manifest" href="{{ url('/manifest.webmanifest') }}">
+  @if($seoPublic)
+  <script type="application/ld+json">{!! \W5D\Seo::jsonLd(\W5D\Seo::graph($seoPath, $seoTitle, $seoDesc, $seoRobots, $seoImg)) !!}</script>
+  @endif
   <script src="{{ asset('js/theme-init.js') }}"></script>
   <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
   <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">

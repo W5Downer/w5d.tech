@@ -1,0 +1,222 @@
+{
+  "slug": "for-member",
+  "title": {
+    "en": "For members — W5D",
+    "fr": "Pour les membres — W5D",
+    "ar": "للأعضاء — W5D"
+  },
+  "description": {
+    "en": "Members are graduates who registered, completed certification tasks and deliver a reviewable weekly unit in one of the {{ counts.services }} services.",
+    "fr": "Les membres sont des diplômés inscrits qui ont accompli les tâches de certification et livrent une unité hebdomadaire vérifiable dans l’un des {{ counts.services }} services.",
+    "ar": "الأعضاء خريجون سجّلوا وأكملوا مهام الاعتماد ويسلّمون وحدة أسبوعية قابلة للمراجعة في إحدى الخدمات الـ{{ counts.services }}."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-member-hero",
+      "variant": "classic",
+      "gradient": "cultures",
+      "eyebrow": {
+        "en": "Member",
+        "fr": "Membre",
+        "ar": "العضو"
+      },
+      "title": {
+        "en": "Certify first. **Then deliver weekly.**",
+        "fr": "Certifiez d’abord. **Livrez ensuite chaque semaine.**",
+        "ar": "اعتمد أولا. **ثم سلّم أسبوعيا.**"
+      },
+      "lead": {
+        "en": "Members are graduates who registered, completed certification tasks and deliver a reviewable weekly unit in one of the {{ counts.services }} services.",
+        "fr": "Les membres sont des diplômés inscrits qui ont accompli les tâches de certification et livrent une unité hebdomadaire vérifiable dans l’un des {{ counts.services }} services.",
+        "ar": "الأعضاء خريجون سجّلوا وأكملوا مهام الاعتماد ويسلّمون وحدة أسبوعية قابلة للمراجعة في إحدى الخدمات الـ{{ counts.services }}."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Check my eligibility",
+            "fr": "Vérifier mon admissibilité",
+            "ar": "تحقق من أهليتي"
+          },
+          "href": "/join/eligibility/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Register now",
+            "fr": "S’inscrire",
+            "ar": "سجّل الآن"
+          },
+          "href": "/app/register/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-member-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "search",
+          "title": {
+            "en": "Find your service",
+            "fr": "Trouvez votre service",
+            "ar": "اعثر على خدمتك"
+          },
+          "body": {
+            "en": "Diploma level and field give a short list of fitting services.",
+            "fr": "Le niveau et le domaine du diplôme donnent une courte liste de services adaptés.",
+            "ar": "يحدد مستوى الدبلوم ومجاله قائمة قصيرة من الخدمات."
+          }
+        },
+        {
+          "icon": "badge-check",
+          "title": {
+            "en": "Certification tasks",
+            "fr": "Tâches de certification",
+            "ar": "مهام الاعتماد"
+          },
+          "body": {
+            "en": "Registration starts certification. It is not a job offer.",
+            "fr": "L’inscription lance la certification. Ce n’est pas une offre d’emploi.",
+            "ar": "يبدأ التسجيل الاعتماد وهو ليس عرض عمل."
+          }
+        },
+        {
+          "icon": "bell",
+          "title": {
+            "en": "Follow your file",
+            "fr": "Suivez votre dossier",
+            "ar": "تابع ملفك"
+          },
+          "body": {
+            "en": "Your account shows each application status and notifies you of every change.",
+            "fr": "Votre compte affiche l’état de chaque candidature et vous notifie de chaque changement.",
+            "ar": "يعرض حسابك حالة كل طلب ويُعلمك بكل تغيير."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-member-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Check",
+            "fr": "Vérifier",
+            "ar": "تحقق"
+          },
+          "body": {
+            "en": "Thirty seconds to a short list of services.",
+            "fr": "Trente secondes pour une courte liste de services.",
+            "ar": "ثلاثون ثانية لقائمة خدمات قصيرة."
+          }
+        },
+        {
+          "title": {
+            "en": "Register",
+            "fr": "S’inscrire",
+            "ar": "سجّل"
+          },
+          "body": {
+            "en": "Open your applicant file and confirm your e-mail.",
+            "fr": "Ouvrez votre dossier de candidat et confirmez votre e-mail.",
+            "ar": "افتح ملف المتقدم وأكّد بريدك."
+          }
+        },
+        {
+          "title": {
+            "en": "Certify, then deliver",
+            "fr": "Certifier puis livrer",
+            "ar": "اعتمد ثم سلّم"
+          },
+          "body": {
+            "en": "Complete the tasks, then deliver weekly, reviewed by a leader.",
+            "fr": "Accomplissez les tâches, puis livrez chaque semaine, relu par un leader.",
+            "ar": "أكمل المهام ثم سلّم أسبوعيا بمراجعة قائد."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-member-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "How many experts are certified today?",
+            "fr": "Combien d’experts sont certifiés aujourd’hui ?",
+            "ar": "كم خبيرا معتمدا اليوم؟"
+          },
+          "a": {
+            "en": "{{ d.experts_current }}. The figure {{ d.experts_target }} is a design equation, not a headcount.",
+            "fr": "{{ d.experts_current }}. Le chiffre {{ d.experts_target }} est une équation de conception, pas un effectif.",
+            "ar": "{{ d.experts_current }}. الرقم {{ d.experts_target }} معادلة تصميم وليس عدد موظفين."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-member-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-member-final",
+      "gradient": "cultures",
+      "title": {
+        "en": "Start with a thirty-second check.",
+        "fr": "Commencez par une vérification de trente secondes.",
+        "ar": "ابدأ بفحص مدته ثلاثون ثانية."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Check my eligibility",
+            "fr": "Vérifier mon admissibilité",
+            "ar": "تحقق من أهليتي"
+          },
+          "href": "/join/eligibility/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

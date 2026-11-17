@@ -1,0 +1,222 @@
+{
+  "slug": "for-investor",
+  "title": {
+    "en": "For investors — W5D",
+    "fr": "Pour les investisseurs — W5D",
+    "ar": "للمستثمرين — W5D"
+  },
+  "description": {
+    "en": "Today one part costs {{ price.day }} {{ money.currency }}. The price comes from a public function, so you can check it before you commit. No return is promised.",
+    "fr": "Aujourd’hui une part coûte {{ price.day }} {{ money.currency }}. Le prix provient d’une fonction publique : vous pouvez le vérifier avant de vous engager. Aucun rendement n’est promis.",
+    "ar": "تكلفة الحصة اليوم {{ price.day }} {{ money.currency }}. يأتي السعر من دالة عامة فيمكنك التحقق منه قبل الالتزام. لا عائد موعود."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-investor-hero",
+      "variant": "classic",
+      "gradient": "peak",
+      "eyebrow": {
+        "en": "Investor",
+        "fr": "Investisseur",
+        "ar": "المستثمر"
+      },
+      "title": {
+        "en": "A part every day. **A path, not a promise.**",
+        "fr": "Une part chaque jour. **Un parcours, pas une promesse.**",
+        "ar": "حصة كل يوم. **مسار لا وعد.**"
+      },
+      "lead": {
+        "en": "Today one part costs {{ price.day }} {{ money.currency }}. The price comes from a public function, so you can check it before you commit. No return is promised.",
+        "fr": "Aujourd’hui une part coûte {{ price.day }} {{ money.currency }}. Le prix provient d’une fonction publique : vous pouvez le vérifier avant de vous engager. Aucun rendement n’est promis.",
+        "ar": "تكلفة الحصة اليوم {{ price.day }} {{ money.currency }}. يأتي السعر من دالة عامة فيمكنك التحقق منه قبل الالتزام. لا عائد موعود."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Take a part today",
+            "fr": "Prendre une part",
+            "ar": "اشتر حصة اليوم"
+          },
+          "href": "/checkout/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Read the investor dossier",
+            "fr": "Lire le dossier investisseur",
+            "ar": "اقرأ ملف المستثمر"
+          },
+          "href": "/investors/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-investor-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "line-chart",
+          "title": {
+            "en": "A public price",
+            "fr": "Un prix public",
+            "ar": "سعر عام"
+          },
+          "body": {
+            "en": "The formula, the cap and today’s value are published. Compare before you pledge.",
+            "fr": "La formule, le plafond et la valeur du jour sont publiés. Comparez avant de vous engager.",
+            "ar": "الصيغة والسقف وقيمة اليوم منشورة. قارن قبل الالتزام."
+          }
+        },
+        {
+          "icon": "smartphone",
+          "title": {
+            "en": "Pay with D17 in Tunisia",
+            "fr": "Payer avec D17 en Tunisie",
+            "ar": "ادفع عبر D17 في تونس"
+          },
+          "body": {
+            "en": "Send the D17 transfer, enter the reference, and an administrator verifies it by hand.",
+            "fr": "Envoyez le virement D17, saisissez la référence, un administrateur la vérifie à la main.",
+            "ar": "أرسل حوالة D17 وأدخل المرجع ويتحقق مسؤول يدويا."
+          }
+        },
+        {
+          "icon": "repeat",
+          "title": {
+            "en": "Daily or one-off",
+            "fr": "Quotidien ou ponctuel",
+            "ar": "يومي أو مرة واحدة"
+          },
+          "body": {
+            "en": "Pledge a schedule of daily parts, or take a single part. You can manage it with your key.",
+            "fr": "Engagez un calendrier de parts quotidiennes, ou prenez une seule part. Gérez-le avec votre clé.",
+            "ar": "التزم بجدول حصص يومية أو بحصة واحدة وأدِره بمفتاحك."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-investor-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Verify",
+            "fr": "Vérifier",
+            "ar": "تحقق"
+          },
+          "body": {
+            "en": "Read the declared limits and today’s price.",
+            "fr": "Lisez les limites déclarées et le prix du jour.",
+            "ar": "اقرأ الحدود المعلنة وسعر اليوم."
+          }
+        },
+        {
+          "title": {
+            "en": "Pledge",
+            "fr": "S’engager",
+            "ar": "التزم"
+          },
+          "body": {
+            "en": "Choose parts per day and number of days; see the full schedule.",
+            "fr": "Choisissez les parts par jour et le nombre de jours ; voyez le calendrier complet.",
+            "ar": "اختر الحصص يوميا وعدد الأيام وشاهد الجدول كاملا."
+          }
+        },
+        {
+          "title": {
+            "en": "Pay and follow",
+            "fr": "Payer et suivre",
+            "ar": "ادفع وتابع"
+          },
+          "body": {
+            "en": "Pay, then follow status and receipts in your account.",
+            "fr": "Payez, puis suivez l’état et les reçus dans votre compte.",
+            "ar": "ادفع ثم تابع الحالة والإيصالات في حسابك."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-investor-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is a return promised?",
+            "fr": "Un rendement est-il promis ?",
+            "ar": "هل العائد موعود؟"
+          },
+          "a": {
+            "en": "No. No return, dividend or resale value is promised. Parts fund a published programme.",
+            "fr": "Non. Aucun rendement, dividende ni valeur de revente n’est promis. Les parts financent un programme publié.",
+            "ar": "لا. لا عائد ولا أرباح ولا قيمة إعادة بيع. تموّل الحصص برنامجا منشورا."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-investor-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-investor-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Take today’s part.",
+        "fr": "Prenez la part du jour.",
+        "ar": "اشتر حصة اليوم."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Take a part today",
+            "fr": "Prendre une part",
+            "ar": "اشتر حصة اليوم"
+          },
+          "href": "/checkout/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

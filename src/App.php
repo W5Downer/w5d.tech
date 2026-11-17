@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe};
 
 final class App
 {
@@ -31,7 +31,7 @@ final class App
         } catch (\Throwable $e) {
             @file_put_contents(ROOT . '/storage/logs/app-' . date('Y-m-d') . '.log', '[' . date('c') . '] ' . $e::class . ': ' . $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() . "\n", FILE_APPEND);
             $dbg = Env::get('APP_ENV') !== 'production';
-            $res = Response::html($dbg ? '<pre>' . e($e) . '</pre>' : 'Server error', 500);
+            $res = $dbg ? Response::html('<pre>' . e($e) . '</pre>', 500) : self::errorPage($e instanceof \PDOException);
         }
         $res->headers += [
             'X-Content-Type-Options' => 'nosniff',
@@ -42,6 +42,22 @@ final class App
         ];
         if (str_starts_with($res->headers['Content-Type'] ?? '', 'text/html')) $res->headers['Cache-Control'] = 'no-store';
         return $res;
+    }
+
+    /** Production-safe error page: no internals, no layout dependency (works even when views/DB are broken). */
+    private static function errorPage(bool $db): Response
+    {
+        $ar = (Lang::current() === 'ar');
+        $fr = (Lang::current() === 'fr');
+        [$h, $p, $b, $home] = $ar
+            ? ['الخدمة غير متاحة مؤقتا', 'حدث خطأ من جانبنا. جرّب مرة أخرى بعد لحظات.', 'إعادة المحاولة', 'الرئيسية']
+            : ($fr
+                ? ['Service momentanément indisponible', 'Une erreur est survenue de notre côté. Réessayez dans un instant.', 'Réessayer', 'Accueil']
+                : ['Temporarily unavailable', 'Something went wrong on our side. Please try again in a moment.', 'Try again', 'Home']);
+        $html = '<!DOCTYPE html><html lang="' . Lang::current() . '" dir="' . ($ar ? 'rtl' : 'ltr') . '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>' . $h . ' · W5D</title>'
+            . '<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#070711;color:#e2e8f0;font-family:system-ui,Segoe UI,Tahoma,sans-serif}main{max-width:30rem;padding:2rem;text-align:center}h1{font-size:1.6rem;margin:0 0 .75rem;color:#fff}p{color:#94a3b8;line-height:1.7}a{display:inline-block;margin:.5rem;padding:.75rem 1.4rem;border-radius:.75rem;background:linear-gradient(135deg,#7c3aed,#6366f1);color:#fff;text-decoration:none;font-weight:600}a.g{background:none;border:1px solid #334155;color:#cbd5e1}</style></head>'
+            . '<body><main><h1>' . $h . '</h1><p>' . $p . '</p><a href="">' . $b . '</a><a class="g" href="/">' . $home . '</a></main></body></html>';
+        return Response::html($html, $db ? 503 : 500)->withHeaders(['Retry-After' => '30', 'X-Robots-Tag' => 'noindex']);
     }
 
     public static function router(): Router
@@ -61,6 +77,8 @@ final class App
                 foreach (['join', 'how-it-works', 'countries/tunisia', 'partners', 'investors', 'pricing', 'about', 'ontology', 'careers', 'faq', 'status', 'trust', 'join/thanks'] as $slug) {
             $r->get('/' . $slug, fn(Request $q) => Pages::page($q, $slug));
         }
+        $r->get('/for', fn(Request $q) => Pages::page($q, 'for'));
+        $r->get('/for/{aud}', [Pages::class, 'audience']);
         $r->get('/invest', fn() => Response::redirect(url('/investors/'), 301));
         $r->get('/sitemap', [Pages::class, 'sitemap']);
         $r->get('/trust/{page}', [Pages::class, 'trust']);
@@ -92,6 +110,7 @@ final class App
         $r->get('/account', [Accounts::class, 'panel']);
         $r->get('/account/{panel}', [Accounts::class, 'panel']);
         $r->any('/pay/{ref}', [Accounts::class, 'pay']);
+        $r->any('/unsubscribe', [Unsubscribe::class, 'handle']);
 
         // ---- docs (human) ----
         $r->get('/developers', [Docs::class, 'developers']);

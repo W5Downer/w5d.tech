@@ -1,0 +1,222 @@
+{
+  "slug": "for-admin",
+  "title": {
+    "en": "For administrators — W5D",
+    "fr": "Pour les administrateurs — W5D",
+    "ar": "للمسؤولين — W5D"
+  },
+  "description": {
+    "en": "Administrators are appointed by the owner. They verify payments, read applications, answer desks and keep the dated facts accurate.",
+    "fr": "Les administrateurs sont nommés par le propriétaire. Ils vérifient les paiements, lisent les candidatures, répondent aux bureaux et maintiennent l’exactitude des faits datés.",
+    "ar": "يعيّن المالك المسؤولين. يتحققون من الدفعات ويقرؤون الطلبات ويردّون على المكاتب ويبقون الوقائع المؤرخة دقيقة."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "for-admin-hero",
+      "variant": "classic",
+      "gradient": "focus",
+      "eyebrow": {
+        "en": "Admin",
+        "fr": "Administrateur",
+        "ar": "المسؤول"
+      },
+      "title": {
+        "en": "Keep the programme **honest and moving.**",
+        "fr": "Gardez le programme **honnête et en mouvement.**",
+        "ar": "حافظ على البرنامج **صادقا وفاعلا.**"
+      },
+      "lead": {
+        "en": "Administrators are appointed by the owner. They verify payments, read applications, answer desks and keep the dated facts accurate.",
+        "fr": "Les administrateurs sont nommés par le propriétaire. Ils vérifient les paiements, lisent les candidatures, répondent aux bureaux et maintiennent l’exactitude des faits datés.",
+        "ar": "يعيّن المالك المسؤولين. يتحققون من الدفعات ويقرؤون الطلبات ويردّون على المكاتب ويبقون الوقائع المؤرخة دقيقة."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "تسجيل الدخول"
+          },
+          "href": "/account/login/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Developer & API docs",
+            "fr": "Documentation développeurs et API",
+            "ar": "وثائق المطورين وواجهة API"
+          },
+          "href": "/developers/",
+          "style": "ghost"
+        }
+      ],
+      "note": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      }
+    },
+    {
+      "type": "cards",
+      "id": "for-admin-cards",
+      "tier": "i",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What you can do here",
+        "fr": "Ce que vous pouvez faire ici",
+        "ar": "ما يمكنك فعله هنا"
+      },
+      "items": [
+        {
+          "icon": "smartphone",
+          "title": {
+            "en": "Payments queue",
+            "fr": "File des paiements",
+            "ar": "قائمة الدفعات"
+          },
+          "body": {
+            "en": "Check the D17 transaction reference, then verify or reject with a note. The investor is notified by e-mail.",
+            "fr": "Vérifiez la référence de transaction D17, puis validez ou rejetez avec une note. L’investisseur est notifié par e-mail.",
+            "ar": "تحقق من مرجع عملية D17 ثم أكّد أو ارفض مع ملاحظة. يصل إشعار بالبريد للمستثمر."
+          }
+        },
+        {
+          "icon": "badge-check",
+          "title": {
+            "en": "Applications",
+            "fr": "Candidatures",
+            "ar": "الطلبات"
+          },
+          "body": {
+            "en": "Applications are read by people. Ranking only sets the reading order; nothing is rejected automatically.",
+            "fr": "Les candidatures sont lues par des personnes. Le classement fixe seulement l’ordre de lecture ; rien n’est rejeté automatiquement.",
+            "ar": "يقرأ الطلبات أشخاص. الترتيب لتحديد أولوية القراءة فقط ولا رفض آلي."
+          }
+        },
+        {
+          "icon": "mail",
+          "title": {
+            "en": "Desks & mail",
+            "fr": "Bureaux et courriers",
+            "ar": "المكاتب والبريد"
+          },
+          "body": {
+            "en": "Messages arrive by desk. The outbox shows what was sent, logged or failed.",
+            "fr": "Les messages arrivent par bureau. La boîte d’envoi montre ce qui est envoyé, journalisé ou en échec.",
+            "ar": "تصل الرسائل حسب المكتب. يعرض الصندوق ما أُرسل أو سُجّل أو فشل."
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "for-admin-steps",
+      "tier": "i",
+      "focus": 3,
+      "title": {
+        "en": "Your first three steps",
+        "fr": "Vos trois premières étapes",
+        "ar": "خطواتك الثلاث الأولى"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "سجّل الدخول"
+          },
+          "body": {
+            "en": "Your administrator account is created by the owner.",
+            "fr": "Votre compte administrateur est créé par le propriétaire.",
+            "ar": "ينشئ المالك حساب المسؤول."
+          }
+        },
+        {
+          "title": {
+            "en": "Work the queues",
+            "fr": "Traiter les files",
+            "ar": "عالج القوائم"
+          },
+          "body": {
+            "en": "Payments first, then applications, then messages.",
+            "fr": "D’abord les paiements, puis les candidatures, puis les messages.",
+            "ar": "الدفعات أولا ثم الطلبات ثم الرسائل."
+          }
+        },
+        {
+          "title": {
+            "en": "Leave a trace",
+            "fr": "Laisser une trace",
+            "ar": "اترك أثرا"
+          },
+          "body": {
+            "en": "Every decision carries a note and a name.",
+            "fr": "Chaque décision porte une note et un nom.",
+            "ar": "كل قرار يحمل ملاحظة واسما."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "for-admin-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Good to know",
+        "fr": "Bon à savoir",
+        "ar": "من المفيد أن تعرف"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Can an administrator change prices?",
+            "fr": "Un administrateur peut-il changer les prix ?",
+            "ar": "هل يمكن للمسؤول تغيير الأسعار؟"
+          },
+          "a": {
+            "en": "No. The price comes only from the published pricing function and its configuration.",
+            "fr": "Non. Le prix provient uniquement de la fonction de prix publiée et de sa configuration.",
+            "ar": "لا. يأتي السعر فقط من دالة التسعير المنشورة وإعداداتها."
+          }
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "id": "for-admin-limits",
+      "tier": "i",
+      "focus": 2
+    },
+    {
+      "type": "cta",
+      "id": "for-admin-final",
+      "gradient": "focus",
+      "title": {
+        "en": "Open the admin portal.",
+        "fr": "Ouvrez le portail d’administration.",
+        "ar": "افتح بوابة الإدارة."
+      },
+      "body": {
+        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Sign in",
+            "fr": "Se connecter",
+            "ar": "تسجيل الدخول"
+          },
+          "href": "/account/login/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
+    }
+  ]
+}

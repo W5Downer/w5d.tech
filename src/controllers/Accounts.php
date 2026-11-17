@@ -11,12 +11,6 @@ final class Accounts
     private static function m(string $en, string $fr, string $ar): array { return ['en' => $en, 'fr' => $fr, 'ar' => $ar]; }
     private static function flash(string $kind, array $msg): void { Session::flash('acct', ['kind' => $kind, 'msg' => $msg]); }
 
-    private static function devLink(string $url): void
-    {
-        // local/staging convenience only: with MAIL_DRIVER=log the e-mail goes nowhere, so show the link on screen. Never in production.
-        if (Env::get('APP_ENV', 'production') !== 'production' && Env::get('MAIL_DRIVER', 'log') === 'log') $_SESSION['_dev_link'] = $url;
-    }
-
     private static function page(Request $q, string $view, array $data = [], int $status = 200): Response
     {
         ViewEnv::share('canonicalPath', rtrim($q->path, '/') . '/');
@@ -103,7 +97,7 @@ final class Accounts
         } elseif (!$u['email_verified_at'] && RateLimit::hit('acct-verify:' . sha1($email), 3, 3600)) {
             Account::sendVerification($u);
         }
-        if ($u && !$u['email_verified_at']) { $tok = DB::one("SELECT 1 FROM user_tokens WHERE user_id = ? AND type = 'verify' AND used_at IS NULL", [$u['id']]); }
+        
         self::flash('ok', self::m('Almost done: we sent a confirmation link to this address (valid 24 hours). If the address was already registered, sign in or reset your password.', 'Presque fini : nous avons envoyé un lien de confirmation à cette adresse (valable 24 heures). Si l’adresse était déjà inscrite, connectez-vous ou réinitialisez votre mot de passe.', 'أوشكنا: أرسلنا رابط تأكيد إلى هذا العنوان (صالح 24 ساعة). إن كان العنوان مسجلا مسبقا فسجّل الدخول أو أعد تعيين كلمة المرور.'));
         return Response::redirect(url('/account/login/'));
     }
@@ -313,7 +307,7 @@ final class Accounts
             $txn = strtoupper(trim((string)($q->post['txn_ref'] ?? '')));
             if (!preg_match('/^[A-Z0-9\-]{6,32}$/', $txn)) $e['txn_ref'] = self::m('Enter the D17 transaction reference (6 to 32 letters or digits).', 'Saisissez la référence de transaction D17 (6 à 32 lettres ou chiffres).', 'أدخل مرجع عملية D17 (من 6 إلى 32 حرفا أو رقما).');
             if ($p['status'] === 'verified') $e['_form'] = self::m('This payment is already verified.', 'Ce paiement est déjà vérifié.', 'تم التحقق من هذه الدفعة مسبقا.');
-            if ($DUP = ($txn !== '' ? DB::one("SELECT id FROM payments WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']]) : null)) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل مسبقا.');
+            if (($txn !== '' ? DB::one("SELECT id FROM payments WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']]) : null)) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل مسبقا.');
             if ($e) return self::bounce($q, $back, $e);
             DB::q("UPDATE payments SET sender_gsm = ?, txn_ref = ?, status = 'pending', note = NULL WHERE id = ?", [$gsm, $txn, $p['id']]);
             $u = DB::one('SELECT id FROM users WHERE email = ?', [$o['email']]);

@@ -180,8 +180,18 @@ html { scroll-behavior: smooth; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ---------- Mega-menu polish ---------- */
-.mega-panel-enter { animation: megaIn .22s ease-out both; transform-origin: top center; }
-@keyframes megaIn { from { opacity: 0; transform: translateY(-6px) scale(.985); } to { opacity: 1; transform: none; } }
+/* One animation for the desktop mega panels and the mobile menu: fade + slide + height reveal via grid rows. */
+.menu-panel { display: grid; grid-template-rows: 0fr; opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none;
+  transition: grid-template-rows .3s ease, opacity .25s ease, transform .3s ease, visibility 0s linear .3s; }
+.menu-panel > * { overflow: hidden; min-height: 0; }
+.menu-panel.is-open { grid-template-rows: 1fr; opacity: 1; transform: none; visibility: visible; pointer-events: auto; transition-delay: 0s; }
+@media (prefers-reduced-motion: reduce) { .menu-panel, .w5d-aside { transition: none !important; } }
+/* Fully opaque surfaces (no transparency, no blur) */
+.nav-solid { background: #ffffff; border: 1px solid rgba(15,23,42,.08); box-shadow: 0 10px 30px -18px rgba(15,23,42,.35); }
+.dark .nav-solid { background: #0b0b18; border-color: rgba(148,163,184,.16); }
+.mega-surface { background: #ffffff; border-top: 1px solid rgba(15,23,42,.08); border-bottom: 1px solid rgba(15,23,42,.08); }
+.dark .mega-surface { background: #0b0b18; border-color: rgba(148,163,184,.16); }
+.mega-panel { left: 0; right: 0; }
 
 /* Focus rings (a11y) */
 :where(button, a, input, textarea, select, summary):focus-visible {
@@ -503,3 +513,19 @@ html:not(.dark) .hero-dark .orb-a,html:not(.dark) .hero-dark .orb-b,html:not(.da
 /* square icon buttons: no horizontal padding (it squeezed the SVG to ~3px), and icons never shrink inside flex rows */
 .btn-ghost[class*=" w-9"],.btn-ghost[class*=" w-10"],.btn-ghost[class*=" w-11"]{padding:0}
 svg{flex-shrink:0}
+
+/* share + user asides */
+.share-list{display:grid;gap:.5rem;list-style:none;margin:0;padding:0}
+.share-item,.aside-link{display:flex;align-items:center;gap:.75rem;width:100%;padding:.65rem .8rem;border-radius:.75rem;border:1px solid transparent;font-size:.9rem;font-weight:500;text-align:start;color:inherit;transition:background .15s,border-color .15s}
+.share-item{border-color:rgba(148,163,184,.25)}
+.share-item:hover,.aside-link:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.35)}
+.aside-link>span{flex:1}
+.aside-link svg,.share-item svg{color:#8b5cf6;flex:none}
+.aside-badge{font-style:normal;background:#ec4899;color:#fff;border-radius:999px;padding:0 .4rem;font-size:.7rem;font-weight:700;line-height:1.2rem;min-width:1.2rem;text-align:center}
+
+/* fixed header must never cover focused fields / anchor targets */
+html { scroll-padding-top: 6.5rem; }
+
+/* closed mobile menu must take no space (it sits inside the fixed header and would block clicks on the page) */
+#mobileMenu:not(.is-open) { max-height: 0; padding-top: 0; padding-bottom: 0; margin-top: 0; border-width: 0; overflow: hidden; box-shadow: none; }
+@media (min-width: 1024px) { #mobileMenu { display: none; } }
