@@ -5,7 +5,7 @@
 @endphp
 <header class="fixed top-0 inset-x-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3">
-    <nav class="nav-solid rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3" aria-label="Primary">
+    <nav class="nav-solid rounded-2xl flex items-center justify-between px-3 min-[400px]:px-4 sm:px-6 py-3" aria-label="Primary">
       <a href="{{ url('/') }}" class="flex items-center gap-2" aria-label="W5D">
         <span class="relative inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center shadow-lg shadow-brand-500/30">
           <span class="font-display font-bold text-white text-sm">W5</span>
@@ -65,23 +65,23 @@
         $signedIn = $acctUser !== null || $ownerIn;
         $unread = \W5D\Account::unread();
       @endphp
-      <div class="flex items-center gap-1.5 sm:gap-2">
+      <div class="flex items-center gap-0.5 min-[400px]:gap-1.5 sm:gap-2">
         @if(\W5D\Social::enabled())
-        <button type="button" data-aside-open="aside-share" class="btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center" aria-label="{{ __('share.open') }}" aria-controls="aside-share" aria-haspopup="dialog">{{ icon('share-2', 'w-5 h-5') }}</button>
+        <button type="button" data-aside-open="aside-share" class="max-[359px]:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('share.open') }}" aria-controls="aside-share" aria-haspopup="dialog">{{ icon('share-2', 'w-5 h-5') }}</button>
         @endif
-        <button type="button" data-aside-open="aside-user" class="btn-ghost relative rounded-lg w-10 h-10 inline-flex items-center justify-center {{ $signedIn ? 'text-brand-500' : '' }}" aria-label="{{ __('nav.user') }}" aria-controls="aside-user" aria-haspopup="dialog">
+        <button type="button" data-aside-open="aside-user" class="btn-ghost relative rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center {{ $signedIn ? 'text-brand-500' : '' }}" aria-label="{{ __('nav.user') }}" aria-controls="aside-user" aria-haspopup="dialog">
           {{ icon($signedIn ? 'circle-user' : 'user-round', 'w-5 h-5') }}
           @if($unread > 0)<span class="absolute -top-0.5 -end-0.5 min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-pink-500 text-white text-[0.65rem] font-bold leading-[1.1rem] text-center">{{ $unread > 9 ? '9+' : $unread }}</span>@elseif($signedIn)<span class="absolute top-1.5 end-1.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-ink-900"></span>@endif
         </button>
-        <button type="button" data-aside-open="aside-lang" class="btn-ghost rounded-lg h-10 px-3 inline-flex items-center gap-1.5 text-sm" aria-label="{{ __('nav.language') }}">
+        <button type="button" data-aside-open="aside-lang" class="btn-ghost rounded-lg h-9 min-[400px]:h-10 px-2 min-[400px]:px-3 inline-flex items-center gap-1 text-sm" aria-label="{{ __('nav.language') }}">
           {{ icon('languages', 'w-5 h-5') }}<span class="uppercase text-xs font-bold">{{ lang() }}</span>
         </button>
-        <button type="button" data-theme-toggle class="btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.theme') }}">
+        <button type="button" data-theme-toggle class="btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.theme') }}">
           <span data-theme-icon="sun">{{ icon('sun', 'w-5 h-5') }}</span>
           <span data-theme-icon="moon" class="hidden">{{ icon('moon', 'w-5 h-5') }}</span>
         </button>
         <a href="{{ url('/checkout/') }}" class="hidden sm:inline-flex btn-focus text-sm !py-2 !px-4">{{ __('cta.invest') }} {{ icon('arrow-right', 'w-4 h-4 rtl-flip') }}</a>
-        <button type="button" data-mobile-toggle class="lg:hidden btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.menu') }}" aria-expanded="false" aria-controls="mobileMenu">{{ icon('menu', 'w-5 h-5') }}</button>
+        <button type="button" data-mobile-toggle class="lg:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.menu') }}" aria-expanded="false" aria-controls="mobileMenu">{{ icon('menu', 'w-5 h-5') }}</button>
       </div>
     </nav>
 

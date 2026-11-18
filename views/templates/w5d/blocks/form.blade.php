@@ -1,6 +1,8 @@
 @php
   $errors = $errors ?? ($_SESSION['_errors'] ?? []);
   $regs = \W5D\Content::file('countries/tn.json')['regions'] ?? [];
+  $pre = \W5D\Gate::prefill();
+  $lock = \W5D\Gate::lockEmail();
 @endphp
 <x-section :d="$d">
   <form method="post" action="{{ url($d['action']) }}" class="max-w-3xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5 sm:p-8" novalidate>
@@ -12,10 +14,10 @@
         @php
           $opts = $f['options'] ?? [];
           if (($f['name'] ?? '') === 'region') { $opts = ['' => ['en' => '—']]; foreach ($regs as $r) $opts[$r['slug']] = $r['name']; }
-          $val = (string)($_GET[$f['name']] ?? '');
+          $val = (string)($_GET[$f['name']] ?? ($pre[$f['name']] ?? ''));
         @endphp
         <div class="{{ ($f['span'] ?? 1) == 2 ? 'sm:col-span-2' : '' }}">
-          <x-form-field :name="$f['name']" :label="$f['label']" :type="$f['type'] ?? 'text'" :required="!empty($f['required'])" :options="$opts" :hint="$f['hint'] ?? ''" :errors="$errors" :rows="$f['rows'] ?? 4" :value="$val" />
+          <x-form-field :name="$f['name']" :label="$f['label']" :type="$f['type'] ?? 'text'" :required="!empty($f['required'])" :options="$opts" :hint="$f['hint'] ?? ''" :errors="$errors" :rows="$f['rows'] ?? 4" :value="$val" :readonly="$lock && ($f['name'] ?? '') === 'email'" />
         </div>
       @endforeach
     </div>

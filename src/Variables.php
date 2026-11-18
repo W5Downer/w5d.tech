@@ -23,9 +23,69 @@ final class Variables
                 foreach ($pa as $k => $x) $v['pricing'][$k] = (float)$x;
             }
         } catch (\Throwable) {}
+        $v = self::applyOverrides($v);
         $v['experts']['current'] = Rollup::expertsCurrent($v['experts']['current']);
         return $v;
     }
+
+    /** Paths the owner may NOT edit as plain variables (records, or governed elsewhere). */
+    public const LOCKED = ['experts.current', 'quality.sampling_percent'];
+    public const LOCKED_PREFIX = ['pricing.'];
+
+    public static function editable(string $path): bool
+    {
+        if (in_array($path, self::LOCKED, true)) return false;
+        foreach (self::LOCKED_PREFIX as $p) if (str_starts_with($path, $p)) return false;
+        return true;
+    }
+
+    /** Flatten config into dotted scalar leaves. @return array<string,scalar> */
+    public static function leaves(array $a, string $p = ''): array
+    {
+        $o = [];
+        foreach ($a as $k => $v) {
+            $key = $p === '' ? (string)$k : "$p.$k";
+            if (is_array($v)) $o += self::leaves($v, $key); else $o[$key] = $v;
+        }
+        return $o;
+    }
+
+    /** Cast an input string to the type of the config default, or null when invalid. */
+    public static function cast(mixed $default, string $raw): int|float|string|null
+    {
+        $raw = trim($raw);
+        if (is_int($default)) return preg_match('/^-?\d+$/', $raw) ? (int)$raw : null;
+        if (is_float($default)) return is_numeric($raw) ? (float)$raw : null;
+        if (is_string($default) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $default)) {
+            $d = \DateTimeImmutable::createFromFormat('!Y-m-d', $raw);
+            return $d && $d->format('Y-m-d') === $raw ? $raw : null;
+        }
+        if (is_string($default)) return mb_strlen($raw) <= 200 && $raw !== '' ? $raw : null;
+        return null;
+    }
+
+    private static function applyOverrides(array $v): array
+    {
+        try {
+            if (!DB::available()) return $v;
+            $rows = DB::all('SELECT path, value FROM variable_overrides');
+        } catch (\Throwable) { return $v; }
+        $def = self::leaves($v);
+        foreach ($rows as $r) {
+            $path = (string)$r['path'];
+            if (!array_key_exists($path, $def) || !self::editable($path)) continue;
+            $val = self::cast($def[$path], (string)$r['value']);
+            if ($val === null) continue;
+            $ref = &$v;
+            foreach (explode('.', $path) as $seg) $ref = &$ref[$seg];
+            $ref = $val;
+            unset($ref);
+        }
+        return $v;
+    }
+
+    /** Config defaults only (no DB), for the editor's "default" column. */
+    public static function defaults(): array { return require ROOT . '/config/variables.php'; }
 
     public static function all(): array
     {

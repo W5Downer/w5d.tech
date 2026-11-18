@@ -1,4 +1,4 @@
-@props(['name', 'label' => '', 'type' => 'text', 'required' => false, 'options' => [], 'value' => '', 'hint' => '', 'errors' => [], 'rows' => 4, 'min' => null, 'max' => null, 'placeholder' => '', 'class' => ''])
+@props(['name', 'label' => '', 'type' => 'text', 'required' => false, 'options' => [], 'value' => '', 'hint' => '', 'errors' => [], 'rows' => 4, 'min' => null, 'max' => null, 'placeholder' => '', 'class' => '', 'readonly' => false])
 @php $err = $errors[$name] ?? null; $val = old($name, (string)$value); $id = 'f-' . $name; @endphp
 <div class="{{ $class }} {{ $err ? 'has-error' : '' }}">
   @if($type === 'checkbox')
@@ -15,7 +15,7 @@
     @elseif($type === 'textarea')
       <textarea class="field" id="{{ $id }}" name="{{ $name }}" rows="{{ $rows }}" @if($required) required @endif placeholder="{{ t($placeholder) }}">{{ $val }}</textarea>
     @else
-      <input class="field" id="{{ $id }}" name="{{ $name }}" type="{{ $type }}" value="{{ $val }}" @if($required) required @endif @if($min !== null) min="{{ $min }}" @endif @if($max !== null) max="{{ $max }}" @endif placeholder="{{ t($placeholder) }}">
+      <input class="field @if($readonly) opacity-70 @endif" id="{{ $id }}" name="{{ $name }}" type="{{ $type }}" value="{{ $val }}" @if($readonly) readonly aria-readonly="true" @endif @if($required) required @endif @if($min !== null) min="{{ $min }}" @endif @if($max !== null) max="{{ $max }}" @endif placeholder="{{ t($placeholder) }}">
     @endif
   @endif
   @if($hint)<p class="text-xs mt-1 text-slate-500 dark:text-slate-400">{{ t($hint) }}</p>@endif

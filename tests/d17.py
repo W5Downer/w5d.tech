@@ -2,6 +2,8 @@
 """D17 (Tunisia) payment flow + admin verification (stdlib only). Usage: python3 tests/d17.py [base_url]
 Needs PAYMENT_D17_ENABLED=true + PAYMENT_D17_GSM in .env and MAIL_DRIVER=log. Dev/demo database only."""
 import glob, os, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request, http.cookiejar, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _acct import signed_in
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080').rstrip('/')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,11 +39,10 @@ def csrf(c, path):
 
 env = dict(l.split('=', 1) for l in open(os.path.join(ROOT, '.env')).read().splitlines() if '=' in l and not l.startswith('#'))
 start = (datetime.date.today() + datetime.timedelta(days=2)).isoformat()
-email = f'd17{RUN}@mail.test'
+c, email = signed_in(BASE, ROOT, 'customer', 'D17 Buyer', 'd17')
 base = {'full_name': 'D17 Buyer', 'email': email, 'kind': 'individual', 'parts_per_day': '2', 'days': '3', 'start_on': start, 'cadence': 'daily', 'accept': '1', 'mode': 'checkout'}
 
 print('checkout with D17')
-c = client()
 s, h, t = call(c, 'GET', '/checkout/')
 check('wizard offers D17', 'value="d17"' in t, s)
 tok = csrf(c, '/checkout/')
@@ -88,7 +89,7 @@ print('admin verification')
 M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z')
 a = client()
 tk = csrf(a, M + '/login/')
-s, h, t = call(a, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner'), 'password': env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
+s, h, t = call(a, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
 check('owner signs in', s == 302)
 s, h, t = call(a, 'GET', M + '/payments-d17/')
 check('payments screen lists the payment', s == 200 and ref in t and 'D17-' + RUN[-6:] in t, s)

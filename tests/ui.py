@@ -21,7 +21,7 @@ with sync_playwright() as pw:
     br = pw.chromium.launch()
     errors = []
     def newctx(**kw):
-        c = br.new_context(**kw); p = c.new_page()
+        kw.setdefault('ignore_https_errors', True); c = br.new_context(**kw); p = c.new_page()
         p.on('pageerror', lambda e: errors.append(str(e)))
         p.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
         return c, p

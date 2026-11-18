@@ -13,30 +13,42 @@
   @if(lang() === 'ar')<link rel="stylesheet" href="{{ asset('css/rtl.css') }}">@endif
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-ink-950 dark:text-slate-200 antialiased">
+  @include('partials.loader')
+  @php $menus = $menus ?? []; @endphp
   @auth
   <div class="min-h-screen lg:flex">
-    <aside class="lg:w-72 shrink-0 border-b lg:border-b-0 lg:border-e border-slate-200 dark:border-white/10 bg-white dark:bg-ink-900/60 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
-      <div class="px-5 py-4 flex items-center justify-between lg:block">
-        <a href="{{ admin_url() }}" class="flex items-center gap-2">
-          <span class="inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center font-display font-bold text-white text-sm">W5</span>
-          <span><span class="block font-display font-bold leading-tight text-slate-900 dark:text-white">{{ __('admin.title') }}</span><span class="block text-xs text-slate-500">{{ $user['name'] ?? '' }} · {{ $user['role'] ?? '' }}</span></span>
+    {{-- mobile top bar: brand + menu toggle (the 26-item menu lives in a drawer, never stacked above the page) --}}
+    <header class="admin-topbar lg:hidden">
+      <a href="{{ admin_url() }}" class="flex items-center gap-2 min-w-0">
+        <span class="inline-flex w-8 h-8 shrink-0 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center font-display font-bold text-white text-xs">W5</span>
+        <span class="truncate font-display font-bold text-slate-900 dark:text-white">{{ t($menus[array_search($active ?? '', array_column($menus, 'slug'))]['label'] ?? ['en' => __('admin.title'), 'fr' => __('admin.title'), 'ar' => __('admin.title')]) }}</span>
+      </a>
+      <button type="button" data-admin-nav-toggle class="btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center shrink-0" aria-label="{{ __('nav.menu') }}" aria-controls="adminNav" aria-expanded="false">{{ icon('menu', 'w-5 h-5') }}</button>
+    </header>
+    <div class="admin-backdrop lg:hidden" data-admin-nav-close></div>
+    <aside id="adminNav" class="admin-nav" aria-label="Admin" aria-hidden="true">
+      <div class="px-5 py-4 flex items-center justify-between gap-3">
+        <a href="{{ admin_url() }}" class="flex items-center gap-2 min-w-0">
+          <span class="inline-flex w-9 h-9 shrink-0 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center font-display font-bold text-white text-sm">W5</span>
+          <span class="min-w-0"><span class="block font-display font-bold leading-tight text-slate-900 dark:text-white truncate">{{ __('admin.title') }}</span><span class="block text-xs text-slate-500 truncate">{{ $user['name'] ?? '' }} · {{ $user['role'] ?? '' }}</span></span>
         </a>
+        <button type="button" data-admin-nav-close class="lg:hidden btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center shrink-0" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
       </div>
-      <nav aria-label="Admin" class="px-3 pb-4 grid grid-cols-2 lg:grid-cols-1 gap-0.5 text-sm">
+      <nav class="px-3 pb-4 grid grid-cols-1 gap-0.5 text-sm">
         @foreach($menus as $m)
           @php $href = $m['slug'] === 'command-center' ? admin_url() : admin_url($m['slug'] . '/'); @endphp
-          <a href="{{ $href }}" class="flex items-center gap-2.5 rounded-lg px-3 py-2 transition {{ ($active ?? '') === $m['slug'] ? 'bg-brand-500/15 text-brand-700 dark:text-brand-300 font-semibold' : 'hover:bg-slate-500/10' }}" @if(($active ?? '') === $m['slug']) aria-current="page" @endif>
+          <a href="{{ $href }}" class="flex items-center gap-2.5 rounded-lg px-3 py-2.5 transition {{ ($active ?? '') === $m['slug'] ? 'bg-brand-500/15 text-brand-700 dark:text-brand-300 font-semibold' : 'hover:bg-slate-500/10' }}" @if(($active ?? '') === $m['slug']) aria-current="page" @endif>
             {{ icon($m['icon'], 'w-4 h-4 shrink-0') }}<span class="truncate">{{ t($m['label']) }}</span>
           </a>
         @endforeach
       </nav>
-      <div class="px-5 pb-6 flex items-center gap-3 text-xs">
+      <div class="px-5 pb-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
         <a class="btn-link" href="{{ url('/') }}">{{ icon('external-link', 'w-3.5 h-3.5') }} Site</a>
         @foreach(['en', 'fr', 'ar'] as $l)<a class="{{ lang() === $l ? 'font-bold' : 'text-slate-500' }}" href="{{ url('/language/' . $l . '?r=/' . trim((string)\W5D\Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/') . '/') }}">{{ strtoupper($l) }}</a>@endforeach
         <form method="post" action="{{ admin_url('logout') }}" class="ms-auto">{!! csrf_field() !!}<button class="btn-link" type="submit">{{ __('admin.logout') }}</button></form>
       </div>
     </aside>
-    <main id="main" class="flex-1 min-w-0 p-4 sm:p-8">
+    <main id="main" class="flex-1 min-w-0 w-full p-4 sm:p-8">
       @if(!empty($flash))<p class="mb-5 rounded-lg border p-3 text-sm {{ $flash['kind'] === 'ok' ? 'border-emerald-500/40 bg-emerald-500/10' : 'border-red-500/40 bg-red-500/10' }}" role="status">{{ $flash['msg'] }}</p>@php unset($_SESSION['_admin_flash']); @endphp@endif
       @yield('content')
     </main>

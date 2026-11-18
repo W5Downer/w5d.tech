@@ -8,6 +8,7 @@
     'overview' => ['layout-dashboard', __('acct.overview')], 'orders' => ['coins', __('acct.orders')], 'payments' => ['smartphone', __('acct.payments')],
     'applications' => ['badge-check', __('acct.applications')], 'notifications' => ['bell', __('acct.notifications')],
     'profile' => ['user-round', __('acct.profile')], 'security' => ['shield-check', __('acct.security')],
+    'api' => ['code', tr3('API & docs', 'API et docs', 'API والوثائق')],
   ];
   $unread = \W5D\Account::unread();
   $stl = fn($s) => match($s) { 'verified','paid','active' => 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-300', 'rejected','cancelled' => 'bg-red-500/15 text-red-600 dark:text-red-300', default => 'bg-amber-500/15 text-amber-700 dark:text-amber-300' };
@@ -38,7 +39,11 @@
       @if(!empty($errors['_form']))<p class="mt-4 rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ t($errors['_form']) }}</p>@endif
 
       @if($panel === 'overview')
-        <div class="mt-6 rounded-2xl p-6 border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-indigo-500/10">
+        <div class="mt-6 rounded-2xl border border-slate-200 dark:border-white/10 p-5 flex flex-wrap items-center gap-4" data-dash-role="{{ $dash['role'] }}">
+          <span class="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-300">{{ icon($dash['icon'], 'w-6 h-6') }}</span>
+          <div class="min-w-0"><p class="eyebrow">{{ tr3('Your dashboard', 'Votre tableau de bord', 'لوحتك') }} · {{ t($dash['label']) }}</p><p class="text-sm text-slate-600 dark:text-slate-300">{{ t($dash['blurb']) }}</p></div>
+        </div>
+        <div class="mt-4 rounded-2xl p-6 border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-indigo-500/10">
           <p class="eyebrow">{{ __('acct.next_action') }}</p>
           <div class="mt-2 flex items-start gap-4">
             <span class="mt-1 text-violet-500">{{ icon($next['icon'], 'w-8 h-8') }}</span>
@@ -50,15 +55,24 @@
           </div>
         </div>
         <div class="mt-6 grid gap-4 sm:grid-cols-3">
-          <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-500">{{ __('acct.orders') }}</p><p class="mt-1 text-2xl font-display font-bold">{{ count($d['orders']) }}</p></div>
-          <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-500">{{ __('acct.payments') }}</p><p class="mt-1 text-2xl font-display font-bold">{{ count($d['pays']) }}</p></div>
-          <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-500">{{ __('acct.today_price') }}</p><p class="mt-1 text-2xl font-display font-bold">{{ money((float)($price['today'] ?? $price['unit'] ?? 0)) }}</p><p class="text-xs text-slate-500">{{ __('price.per_day') }}</p></div>
+          @foreach($dash['tiles'] as [$tl, $tv, $ts])
+            <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-500">{{ t($tl) }}</p><p class="mt-1 text-2xl font-display font-bold break-words">{{ $tv }}</p><p class="text-xs text-slate-500">{{ t($ts) }}</p></div>
+          @endforeach
         </div>
+        <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Quick actions', 'Actions rapides', 'إجراءات سريعة') }}</h2>
+        <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+          @foreach($dash['actions'] as [$ai, $al, $ah])
+            <li><a class="flex items-center gap-3 rounded-xl border border-slate-200 dark:border-white/10 p-3 hover:bg-slate-100 dark:hover:bg-white/5" href="{{ $ah }}">{{ icon($ai, 'w-5 h-5 text-violet-500') }}<span class="text-sm font-medium">{{ t($al) }}</span>{{ icon('arrow-right', 'w-4 h-4 ms-auto rtl:rotate-180') }}</a></li>
+          @endforeach
+        </ul>
         @if(!empty($d['notes']))
           <h2 class="mt-8 font-display text-lg font-semibold">{{ __('acct.notifications') }}</h2>
           <ul class="mt-3 space-y-2">@foreach(array_slice($d['notes'], 0, 3) as $n)<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm"><strong>{{ $n['title'] }}</strong> <span class="text-slate-500">· {{ $n['body'] }}</span></li>@endforeach</ul>
         @endif
         <p class="mt-8 text-xs text-slate-500">{{ __('limits.jobs') }}</p>
+
+      @elseif($panel === 'api')
+        <div class="mt-6">@include('partials.api-guide', ['guide' => $guide, 'tabs' => $tabs, 'as' => $as, 'tab_base' => $tab_base, 'role' => $role])</div>
 
       @elseif($panel === 'orders')
         @if(!$d['orders'])

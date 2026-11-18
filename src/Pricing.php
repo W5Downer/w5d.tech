@@ -87,10 +87,14 @@ final class Pricing
         $rows = [];
         $total = 0.0;
         $tz = new \DateTimeZone('Africa/Tunis');
+        $now = new \DateTimeImmutable('now', $tz);
         $d0 = \DateTimeImmutable::createFromInterface($from)->setTimezone($tz)->setTime(12, 0);
         for ($i = 0; $i < $days; $i++) {
             $d = $d0->modify("+{$i} day");
-            $t = self::timeShare($d, $v);
+            // Today's charge is priced at the live instant so a one-day quote equals the published price;
+            // later days are forecast at noon (the real price on the day is recomputed).
+            $isToday = $d->format('Y-m-d') === $now->format('Y-m-d');
+            $t = self::timeShare($isToday ? $now : $d, $v);
             $unit = self::perPart('day', $p, $t, $v);
             $amount = round($unit * $partsPerDay, 2);
             $total += $amount;

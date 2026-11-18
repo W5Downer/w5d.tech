@@ -6,6 +6,8 @@ management by reference + key, pricing numbers, admin login / seed / status / lo
 Resets the file-based rate limiter first, so run it against a dev/demo database only.
 """
 import json, os, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request, http.cookiejar
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _acct import signed_in
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080').rstrip('/')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -62,7 +64,11 @@ s, h, t = call(c, 'GET', '/api/price.json'); price = json.loads(t)
 day = (price.get('data') or price).get('price', {}).get('day')
 check('price.json is served', s == 200 and day is not None, t[:120])
 import datetime
-today = datetime.date.today().isoformat()
+try:
+    from zoneinfo import ZoneInfo
+    today = datetime.datetime.now(ZoneInfo('Africa/Tunis')).date().isoformat()  # server prices 'today' in Africa/Tunis, not the runner's TZ
+except Exception:
+    today = datetime.date.today().isoformat()
 s, h, t = call(c, 'GET', f'/api/quote?parts_per_day=1&days=1&cadence=daily&start_on={today}'); q = json.loads(t)
 check('quote 1 part x 1 day starting today = published unit price', s == 200 and abs(q['schedule']['total'] - q['today']['unit']) < 0.02, t[:160])
 check('published day price matches /api/quote today.unit', day is not None and abs(day - q['today']['unit']) < 0.005, f'{day} vs {q["today"]["unit"]}')
@@ -75,9 +81,9 @@ check('weekly quote has 1 charge for 7 days', s == 200 and q['schedule']['charge
 
 # ---------------------------------------------------------------- checkout HTML form
 print('checkout (HTML, PRG, CSRF)')
-c = client(); tok = csrf(c, '/checkout/')
+c, ACCT = signed_in(BASE, ROOT, 'investor'); tok = csrf(c, '/checkout/')
 check('checkout form carries a CSRF token and honeypot', bool(tok))
-form = {'_csrf': tok, 'mode': 'checkout', 'full_name': 'Flow Tester', 'email': f'flow{RUN}@example.com', 'kind': 'individual',
+form = {'_csrf': tok, 'mode': 'checkout', 'full_name': 'Flow Tester', 'email': ACCT, 'kind': 'individual',
         'cadence': 'daily', 'parts_per_day': '2', 'days': '3', 'start_on': '', 'accept': '1', 'website': ''}
 s, h, t = call(c, 'POST', '/checkout/', {**form, '_csrf': 'bad'})
 check('bad CSRF is redirected back, nothing stored', s in (302, 303) and '/checkout/' in h.get('Location', ''), f'{s} {h.get("Location")}')
@@ -95,8 +101,8 @@ check('honeypot filled -> silently accepted, no reference', s in (302, 303))
 
 # ---------------------------------------------------------------- subscription + management
 print('subscription + management')
-c = client(); tok = csrf(c, '/subscription/')
-sub = {**form, '_csrf': tok, 'mode': 'subscription', 'email': f'sub{RUN}@example.com', 'days': '30'}
+c, _ = signed_in(BASE, ROOT, 'investor'); tok = csrf(c, '/subscription/')
+sub = {**form, '_csrf': tok, 'mode': 'subscription', 'email': _, 'days': '30'}
 s, h, t = call(c, 'POST', '/subscription/', sub)
 loc = h.get('Location', '')
 s2, h2, t2 = call(c, 'GET', urllib.parse.urlparse(loc).path or '/')
@@ -115,7 +121,7 @@ check('action without CSRF is refused', s in (302, 303, 403, 419) and 'cancel' n
 
 # ---------------------------------------------------------------- other forms
 print('contact / eligibility / register / manager / newsletter (HTML)')
-c = client()
+c, _ = signed_in(BASE, ROOT, 'user')
 tok = csrf(c, '/contact/')
 s, h, t = call(c, 'POST', '/contact/', {'_csrf': tok, 'name': 'T', 'email': f'c{RUN}@example.com', 'desk': 'general', 'message': 'Hello desk', 'website': ''})
 check('contact accepted -> thanks page', s in (302, 303) and 'thanks' in h.get('Location', ''), f'{s} {h.get("Location")}')
@@ -163,7 +169,7 @@ shutil.rmtree(os.path.join(ROOT, 'storage/cache/rl'), ignore_errors=True)
 print('admin')
 env = dict(l.split('=', 1) for l in open(os.path.join(ROOT, '.env')).read().splitlines() if '=' in l and not l.startswith('#'))
 M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z')
-user = env.get('WEBMASTER_USERNAME', 'owner'); pw = env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')
+user = env.get('WEBMASTER_USERNAME', 'owner'); pw = os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')
 c = client()
 s, h, t = call(c, 'GET', M + '/')
 check('dashboard without session -> redirect to login', s in (302, 303) and 'login' in h.get('Location', ''), f'{s} {h.get("Location")}')
@@ -176,9 +182,12 @@ check('correct password signs in (redirect)', s in (302, 303), f'{s}')
 s, h, t = call(c, 'GET', M + '/')
 check('dashboard renders Command Center', s == 200 and 'Command Center' in t, f'{s}')
 tok = (re.search(r'name="_csrf" value="([0-9a-f]+)"', t) or [None, ''])[1]
-for page in ['countries', 'applicants', 'investors', 'progressive-pricing', 'users']:
+ADMIN_MENUS = ['countries', 'regions-hubs', 'campaigns', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality',
+               'progressive-pricing', 'payroll', 'investors', 'communications', 'support', 'content', 'variables', 'users', 'reports', 'compliance', 'audit', 'system',
+               'manager-applications', 'subscriptions', 'payments-d17', 'mail-outbox', 'api-docs', 'inbox']
+for page in ADMIN_MENUS:
     s, h, t2 = call(c, 'GET', f'{M}/{page}/')
-    check(f'admin menu /{page}/ renders', s == 200, str(s))
+    check(f'admin menu /{page}/ renders (no placeholder, no secrets)', s == 200 and 'Read-only preview' not in t2 and 'ships with the next iteration' not in t2 and 'password_hash' not in t2 and '$argon2' not in t2, str(s))
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': tok, 'do': 'seed'})
 check('seed demo data (redirect)', s in (302, 303), f'{s}')
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': 'bad', 'do': 'purge'})

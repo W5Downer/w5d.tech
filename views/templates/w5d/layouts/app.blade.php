@@ -62,6 +62,7 @@
   @stack('head')
 </head>
 <body class="bg-white text-slate-800 dark:bg-ink-950 dark:text-slate-200 transition-colors duration-300 antialiased">
+  @include('partials.loader')
   <a class="skip-link" href="#main">{{ __('nav.skip') }}</a>
   @include('partials.header')
   <main id="main" tabindex="-1">

@@ -43,7 +43,7 @@ final class Auth
     public static function require(string $perm): ?Response
     {
         if (!self::check()) return Response::redirect(admin_url('login'));
-        if (!self::can($perm)) return Response::html(view('admin.forbidden', ['title' => 'Forbidden']), 403);
+        if (!self::can($perm)) return Response::html(view('admin.forbidden', ['title' => 'Forbidden', 'menus' => ACL::menus(self::role()), 'user' => self::user(), 'active' => '']), 403)->withHeaders(['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store']);
         return null;
     }
 }

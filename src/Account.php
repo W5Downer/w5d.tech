@@ -112,10 +112,11 @@ final class Account
         return $t;
     }
 
-    public static function sendVerification(array $u): bool
+    public static function sendVerification(array $u, ?string $next = null): bool
     {
         $tok = self::issueToken((int)$u['id'], 'verify', 86400);
-        return Mail::send($u['email'], 'verify_email', ['name' => $u['name'] ?: '', 'url' => abs_url('/account/verify/' . $tok . '/')], $u['lang'] ?? null);
+        $nx = $next ? '?next=' . rawurlencode($next) : '';
+        return Mail::send($u['email'], 'verify_email', ['name' => $u['name'] ?: '', 'url' => abs_url('/account/verify/' . $tok . '/') . $nx], $u['lang'] ?? null);
     }
 
     public static function sendReset(array $u): bool

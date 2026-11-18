@@ -608,14 +608,21 @@ php bin/view.php status   # location, size, mode
 
 `ViewCache::COMPILER` is part of the file name hash; bump it whenever `Blade.php` changes.
 
-**Tests and lint.**
+**Tests and lint.** Full list, expected counts and the production simulation are in [`AGENTS.md`](AGENTS.md) section 3.
 
 ```bash
-bash tests/smoke.sh              # every public route x en/fr/ar must answer 200 (663 checks)
-python3 tests/flows.py           # CSRF, validation, honeypot, rate limit, checkout, subscription + key, API, pricing, admin login/seed/logout
 php bin/lint.php                 # tokens resolve, fr/ar complete, no hard-coded price/130,000/2027, no CDN, one peak CTA per section, templates compile
+php tests/viewcache.php          # unit tests for the view cache (no server)
+bash tests/smoke.sh              # every public route x en/fr/ar must answer 200 (720 checks)
+python3 tests/flows.py           # CSRF, validation, honeypot, rate limit, checkout, subscription, API, pricing, all 30 admin menus
+python3 tests/{auth,d17,dash,gate,mail}.py   # accounts, D17 payments, dashboards, sign-in gate, mail + unsubscribe
+python3 tests/{ui,mobile}.py     # Playwright browser suites
+bash tests/production.sh         # FULL production simulation: APP_ENV=production + HTTPS proxy + trusted view cache + every suite + security checks
+php bin/preflight.php            # deploy-readiness check of the CURRENT .env (run on the real host; exit 1 on any FAIL)
 cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)
 ```
+
+Docs: [`docs/pricing.md`](docs/pricing.md), [`docs/templates.md`](docs/templates.md), [`docs/design.md`](docs/design.md), [`docs/ontology-six-layers.md`](docs/ontology-six-layers.md).
 
 ---
 

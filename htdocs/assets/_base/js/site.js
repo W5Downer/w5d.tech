@@ -320,4 +320,20 @@
         .then(function (t) { if (out) out.textContent = t.slice(0, 4000); });
     });
   });
+
+  /* owner/staff panel: phone drawer */
+  (function () {
+    var nav = document.getElementById('adminNav'), tg = $('[data-admin-nav-toggle]');
+    if (!nav || !tg) return;
+    function set(on) {
+      nav.classList.toggle('is-open', on); nav.setAttribute('aria-hidden', on ? 'false' : 'true');
+      tg.setAttribute('aria-expanded', on ? 'true' : 'false'); document.body.classList.toggle('admin-nav-open', on);
+      if (on) { var a = nav.querySelector('a[aria-current]') || nav.querySelector('nav a'); a && a.focus({ preventScroll: true }); } else if (document.activeElement && nav.contains(document.activeElement)) tg.focus();
+    }
+    tg.addEventListener('click', function () { set(!nav.classList.contains('is-open')); });
+    $$('[data-admin-nav-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('is-open')) set(false); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('nav a')) set(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth >= 1024) set(false); });
+  })();
 })();

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{ACL, Auth, Content, Csrf, DB, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
+use W5D\{ACL, ApiGuide, Auth, Content, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
 
 /** Owner portal. Mounted at /{ADMIN_URL_PATH}. Every action re-checks session, permission and CSRF. */
 final class Admin
@@ -81,7 +81,7 @@ final class Admin
             for ($i = 13; $i >= 0; $i--) { $d = date('Y-m-d', strtotime("-$i day")); $series[] = ['d' => $d, 'n' => (int)($by[$d]['n'] ?? 0), 's' => (float)($by[$d]['s'] ?? 0)]; }
         }
         return self::page('admin.dashboard', ['title' => 'Command Center', 'active' => 'command-center', 'db' => $dbOk, 'k' => $k, 'recentOrders' => $recentOrders, 'topManagers' => $topManagers, 'series' => $series,
-            'price' => Variables::get('price'), 'rollup' => Rollup::kpis(), 'd' => Variables::get('d'), 'flash' => $_SESSION['_admin_flash'] ?? null, 'canSeed' => Auth::can('system')]);
+            'desk' => Dash::desk(Auth::role()), 'price' => Variables::get('price'), 'rollup' => Rollup::kpis(), 'd' => Variables::get('d'), 'flash' => $_SESSION['_admin_flash'] ?? null, 'canSeed' => Auth::can('system')]);
     }
 
     /* ================= generic menu ================= */
@@ -101,7 +101,7 @@ final class Admin
             'inbox' => self::vTable('SELECT id, desk, name, email, subject, substr(body,1,160) AS message, status, created_at FROM contact_messages ORDER BY id DESC LIMIT 300', 'contact_messages'),
             'investors' => self::vTable('SELECT i.id, i.full_name, i.email, i.kind, i.organisation, COUNT(o.id) AS orders, COALESCE(SUM(o.total),0) AS pledged, i.created_at FROM investors i LEFT JOIN investor_orders o ON o.investor_id=i.id GROUP BY i.id ORDER BY pledged DESC LIMIT 300'),
             'applicants' => self::vTable('SELECT id, full_name, email, macro_slug AS macro, service_slug AS service, diploma, status, created_at FROM applicants ORDER BY id DESC LIMIT 300'),
-            'communications' => self::vTable('SELECT id, email, lang, created_at FROM newsletter_subscribers ORDER BY id DESC LIMIT 300'),
+            'communications' => self::vTable("SELECT 'newsletter' AS list, n.email, n.lang, CASE WHEN n.unsubscribed_at IS NOT NULL OR s.email IS NOT NULL THEN 'unsubscribed' ELSE 'active' END AS state, COALESCE(n.unsubscribed_at, s.created_at, '') AS unsubscribed_at, COALESCE(s.source, '') AS source, n.created_at FROM newsletter_subscribers n LEFT JOIN mail_suppressions s ON lower(s.email)=lower(n.email) UNION ALL SELECT 'suppression', s.email, '', 'unsubscribed', s.created_at, s.source || ' / ' || s.scope, s.created_at FROM mail_suppressions s WHERE lower(s.email) NOT IN (SELECT lower(email) FROM newsletter_subscribers) ORDER BY 7 DESC LIMIT 300"),
             'audit' => self::vTable('SELECT id, actor, action, subject, detail, created_at FROM audit_log ORDER BY id DESC LIMIT 300'),
             'services' => self::vList(array_map(fn($s) => ['#' => $s['id'], 'slug' => $s['slug'], 'macro' => $s['macro'], 'title' => t($s['title'], 'en'), 'cohort' => $s['cohort'], 'diploma' => $s['diploma']], array_values(Content::all('services'))), ['note' => 'Source of truth: data/content/services/*.json (read-only here; edit JSON, then run bin/sync-content.php).']),
             'projects' => self::vList(array_map(fn($p) => ['#' => $p['id'], 'slug' => $p['slug'], 'status' => $p['status'], 'dated' => $p['status_date'] ?? '', 'name' => t($p['name'], 'en')], array_values(Content::all('projects'))), ['note' => 'Source: data/content/projects/*.json. Status changes are dated and must carry evidence.']),
@@ -109,6 +109,22 @@ final class Admin
             'content' => self::vList(array_map(fn($p) => ['slug' => $p['slug'], 'title' => t($p['title'], 'en'), 'sections' => count($p['sections'] ?? []), 'robots' => $p['robots'] ?? 'index,follow'], array_values(Content::all('pages'))), ['note' => 'Pages are JSON section lists rendered by blocks. Edit data/content/pages/*.json.']),
             'variables' => self::vVariables(),
             'system' => self::vSystem(),
+            'api-docs' => self::vApi($q),
+            // Operational screens backed by the platform tables (read-only lists; never expose secrets).
+            'countries' => self::vTable('SELECT country_id AS id, iso, name_en AS name, currency, timezone, active, created_at FROM countries ORDER BY country_id'),
+            'campaigns' => self::vTable('SELECT id, country_id AS country, name, channel, utm, daily_quota AS quota, active FROM campaigns ORDER BY id DESC LIMIT 300'),
+            'verification' => self::vTable('SELECT v.id, v.country_id AS country, a.full_name AS applicant, v.kind, v.result, v.reviewer_id AS reviewer, v.created_at FROM verifications v LEFT JOIN applicants a ON a.id = v.applicant_id ORDER BY v.id DESC LIMIT 300'),
+            'academies' => self::vTable('SELECT id, country_id AS country, service_slug AS service, level, starts_on, seats FROM cohorts ORDER BY starts_on DESC, id DESC LIMIT 300'),
+            'teams' => self::vTable('SELECT t.id, t.country_id AS country, t.name, t.service_slug AS service, t.manager_id AS manager, t.cap, (SELECT COUNT(*) FROM team_members m WHERE m.team_id = t.id) AS members FROM teams t ORDER BY t.id DESC LIMIT 300'),
+            'weekly' => self::vTable('SELECT w.id, w.week_id AS week, a.full_name AS member, w.service_slug AS service, w.units, w.status, substr(COALESCE(w.evidence, \'\'),1,100) AS evidence, w.created_at FROM weekly_reports w LEFT JOIN applicants a ON a.id = w.applicant_id ORDER BY w.id DESC LIMIT 300'),
+            'clients' => self::vTable('SELECT c.id, c.country_id AS country, c.name, c.email, (SELECT COUNT(*) FROM contracts k WHERE k.client_id = c.id) AS contracts, c.created_at FROM clients c ORDER BY c.id DESC LIMIT 300'),
+            'quality' => self::vTable('SELECT q.id, q.country_id AS country, a.full_name AS applicant, q.service_slug AS service, substr(COALESCE(q.task, \'\'),1,100) AS task, q.status, q.reviewer_id AS reviewer, q.created_at FROM cert_submissions q LEFT JOIN applicants a ON a.id = q.applicant_id ORDER BY q.id DESC LIMIT 300'),
+            'payroll' => self::vTable('SELECT id, country_id AS country, period, posts, amount, status FROM payroll_runs ORDER BY period DESC, id DESC LIMIT 300'),
+            'support' => self::vTable('SELECT id, country_id AS country, subject, requester, status, due_at, created_at FROM tickets ORDER BY id DESC LIMIT 300'),
+            // password_hash and tokens are deliberately NOT selected.
+            'users' => self::vTable('SELECT id, name, email, role_slug AS role, lang, active, CASE WHEN email_verified_at IS NULL THEN \'no\' ELSE \'yes\' END AS verified, COALESCE(last_login_at, \'\') AS last_login, created_at FROM users ORDER BY id DESC LIMIT 300'),
+            'reports' => self::vTable('SELECT day, country_id AS country, macro_slug AS macro, registered, verified, certified, reports_submitted AS submitted, reports_approved AS approved FROM rollups_daily ORDER BY day DESC, macro_slug LIMIT 300'),
+            'compliance' => self::vTable('SELECT id, country_id AS country, subject_ref AS subject, purpose, granted, created_at FROM consents ORDER BY id DESC LIMIT 300'),
             default => ['kind' => 'preview'],
         };
         return self::page('admin.menu', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'v' => $view, 'flash' => $_SESSION['_admin_flash'] ?? null, 'back' => $slug]);
@@ -136,16 +152,78 @@ final class Admin
         return Accounts::review($q, fn(string $a, string $s = '', string $d = '') => self::audit($a, $s, $d));
     }
 
+    /** API documentation for the signed-in role, inside the portal (owner can open every audience's guide). */
+    private static function vApi(Request $q): array
+    {
+        $role = Auth::role();
+        $tabs = $role === 'owner' ? ['owner', 'admin', 'leader', 'manager', 'member', 'investor', 'customer', 'user', 'developer'] : [$role, 'developer'];
+        $as = (string)($q->query['as'] ?? $role);
+        if (!in_array($as, $tabs, true)) $as = $role;
+        return ['kind' => 'api', 'guide' => ApiGuide::build($as, $role), 'tabs' => $tabs, 'as' => $as, 'tab_base' => admin_url('api-docs/'), 'role' => $role];
+    }
+
     private static function vList(array $rows, array $extra = []): array { return ['kind' => 'table', 'rows' => $rows, 'readonly' => true] + $extra; }
 
     private static function vVariables(): array
     {
-        $flat = [];
-        $walk = function ($v, string $p) use (&$walk, &$flat) {
-            if (is_array($v)) foreach ($v as $k => $x) $walk($x, $p === '' ? (string)$k : "$p.$k"); else $flat[] = ['token' => '{{ ' . $p . ' }}', 'value' => is_bool($v) ? ($v ? 'true' : 'false') : (string)$v];
-        };
-        $walk(Variables::all(), '');
-        return ['kind' => 'table', 'rows' => $flat, 'readonly' => true, 'note' => 'Resolved tokens. Edit config/variables.php; pricing constants are published under Progressive Pricing.'];
+        $def = Variables::leaves(Variables::defaults());
+        $cur = Variables::leaves(Variables::all());
+        $ov = [];
+        try { if (DB::available()) foreach (DB::all('SELECT path, value, changed_by, changed_at FROM variable_overrides') as $r) $ov[$r['path']] = $r; } catch (\Throwable) {}
+        $groups = [];
+        foreach ($def as $path => $d) {
+            [$g] = explode('.', $path, 2);
+            $groups[$g][] = ['path' => $path, 'tok' => '{' . '{ ' . $path . ' }' . '}', 'default' => $d, 'value' => $cur[$path] ?? $d, 'overridden' => isset($ov[$path]), 'by' => $ov[$path]['changed_by'] ?? '', 'at' => $ov[$path]['changed_at'] ?? '',
+                'editable' => Variables::editable($path), 'type' => is_int($d) ? 'int' : (is_float($d) ? 'float' : (preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)$d) ? 'date' : 'text'))];
+        }
+        $derived = [];
+        foreach (Variables::leaves(Variables::get('d', [])) as $k => $x) $derived[] = ['token' => '{' . '{ d.' . $k . ' }' . '}', 'value' => $x];
+        $hist = [];
+        try { if (DB::available()) $hist = DB::all('SELECT changed_at, changed_by, path, old_value, new_value, note FROM variable_audit ORDER BY id DESC LIMIT 40'); } catch (\Throwable) {}
+        return ['kind' => 'variables', 'groups' => $groups, 'derived' => $derived, 'hist' => $hist];
+    }
+
+    public static function saveVariables(Request $q): Response
+    {
+        if ($r = Auth::require('variables')) return $r;
+        $back = admin_url('variables/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($back); }
+        $note = trim((string)($q->post['note'] ?? ''));
+        if (mb_strlen($note) < 10) { self::flash('error', 'A reason of at least 10 characters is required: every change is logged with your name and the date.'); return Response::redirect($back); }
+        $def = Variables::leaves(Variables::defaults());
+        $cur = Variables::leaves(Variables::all());
+        $in = is_array($q->post['v'] ?? null) ? $q->post['v'] : [];
+        $reset = is_array($q->post['reset'] ?? null) ? $q->post['reset'] : [];
+        $who = (string)(Auth::user()['name'] ?? 'owner');
+        $changed = 0; $errs = [];
+        foreach ($def as $path => $d) {
+            $key = str_replace('.', '__', $path);
+            if (!Variables::editable($path)) continue;
+            if (isset($reset[$key])) {
+                if (DB::val('SELECT COUNT(*) FROM variable_overrides WHERE path = ?', [$path])) {
+                    DB::q('DELETE FROM variable_overrides WHERE path = ?', [$path]);
+                    DB::insert('variable_audit', ['path' => $path, 'old_value' => (string)($cur[$path] ?? ''), 'new_value' => (string)$d, 'changed_by' => $who, 'note' => 'reset to default: ' . mb_substr($note, 0, 400)]);
+                    $changed++;
+                }
+                continue;
+            }
+            if (!array_key_exists($key, $in)) continue;
+            $raw = trim((string)$in[$key]);
+            if ($raw === (string)($cur[$path] ?? '')) continue;
+            $val = Variables::cast($d, $raw);
+            if ($val === null) { $errs[] = $path; continue; }
+            if (str_starts_with($path, 'flags.') && !in_array($val, [0, 1], true)) { $errs[] = $path . ' (use 0 or 1)'; continue; }
+            if ((is_int($d) || is_float($d)) && $val < 0) { $errs[] = $path . ' (negative)'; continue; }
+            if ($path === 'experts.span_cap' && $val < (int)($cur['experts.span_design'] ?? 10)) { $errs[] = $path . ' (cap below design span)'; continue; }
+            DB::q('INSERT INTO variable_overrides(path, value, changed_by, note) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET value = excluded.value, changed_by = excluded.changed_by, changed_at = CURRENT_TIMESTAMP, note = excluded.note', [$path, (string)$val, $who, mb_substr($note, 0, 500)]);
+            DB::insert('variable_audit', ['path' => $path, 'old_value' => (string)($cur[$path] ?? ''), 'new_value' => (string)$val, 'changed_by' => $who, 'note' => mb_substr($note, 0, 500)]);
+            $changed++;
+        }
+        if ($changed) self::audit('variables.save', 'variable_overrides', $changed . ' change(s) · ' . $note);
+        Variables::reset();
+        if ($errs) self::flash('error', 'Not saved (invalid value): ' . implode(', ', array_slice($errs, 0, 8)) . ($changed ? ". {$changed} other change(s) were saved." : '.'));
+        else self::flash('ok', $changed ? "{$changed} change(s) saved, logged and live on every page." : 'Nothing changed.');
+        return Response::redirect($back);
     }
 
     private static function vSystem(): array
