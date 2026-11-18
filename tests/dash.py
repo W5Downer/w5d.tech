@@ -116,7 +116,7 @@ for role in ('admin', 'leader', 'manager'):
 
 print('owner: every guide inside the portal')
 o = _client(); t = _csrf(o, BASE, '/account/login/')
-s, h, b = call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': 'w5d-demo-owner'})
+s, h, b = call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')})
 s, h, b = call(o, 'GET', M + '/')
 check('owner desk shown', s == 200 and 'data-desk-role="owner"' in b)
 for a in AUD + ['manager', 'developer']:

@@ -1,0 +1,59 @@
+# Design system
+
+DNA = the static source template `views/static/w5d-main/` (owner's `Kaddoussi/w5d`). Three CSS files, no CDN, no icon font, no jQuery:
+
+| File | Role | Load order |
+|---|---|---|
+| `htdocs/assets/_base/css/fonts.css` | self-hosted Inter, Space Grotesk, Noto Sans Arabic (variable woff2 in `fonts/`) | 1 |
+| `htdocs/assets/_base/css/tailwind.css` | compiled Tailwind 3.4 (`tools/tailwind.config.js`, `tools/tailwind.src.css`) | 2 |
+| `htdocs/assets/_base/css/attention.css` | single hand-written stylesheet: template glass/orbs/grid + CMS layer | 3 |
+| `htdocs/assets/_base/css/rtl.css` | Arabic/RTL overrides (loaded when `dir=rtl`) | after |
+| `htdocs/assets/_base/js/theme-init.js` | sets dark/light before paint (no flash) | head |
+| `htdocs/assets/_base/js/site.js` | menu, mega menu, carousel, language panel, theme, FAQ, wizard, map, price chart | end of body |
+
+## Tokens
+
+- Colours: `ink-950 #070711` (page), `ink-900 #0b0b18`, `ink-800 #11111f`, `ink-700 #1a1a2e`; `brand-50..900` violet (`brand-500 #8b5cf6`), accents indigo `#6366f1`, cyan `#06b6d4`, pink `#ec4899`.
+- Fonts: sans = Inter + Noto Sans Arabic; display (`font-display`) = Space Grotesk.
+- Gradients: `--g-calm|warm|focus|peak` and one per macro: `--g-cultures|built|sciences|governance|technology` (all in the violet/indigo/cyan/pink family; macros vary the mix, never the family). Use `g_macro($slug)` in PHP.
+- Background: dark ink + grid + three blurred orbs (`--orb-a/b/c`), glass nav, gradient text. Light theme via `class="dark"` toggle on `<html>` (default dark, stored in `localStorage`).
+
+## Reading tiers (every section gets exactly one)
+
+| Tier | Class | Voice |
+|---|---|---|
+| E | `.tier-e` | easy: short sentences, warm, Darija-friendly Arabic |
+| I | `.tier-i` | in-between: steps, numbers, dates |
+| X | `.tier-x` | expert: ontology, evidence levels, schemas (mono badge) |
+
+## Focus levels (peak-end rule)
+
+| Level | Class | Use |
+|---|---|---|
+| F1 | `btn-link` | expert detail |
+| F2 | `btn-ghost` | explore |
+| F3 | (prose) | explaining section |
+| F4 | `btn-focus` | next step |
+| F5 | `btn-peak` | THE main action; max ONE per section (linted); mobile `sticky-cta` after 40% scroll |
+
+`btn-primary` is the legacy alias of `btn-peak`. Honest psychology only: social proof uses real rollup numbers, deadlines come from dated variables, every CTA has its declared limit one click away.
+
+## Common components (CSS classes)
+
+`.glass`, `.eyebrow`, `.tier-badge`, `.field` (+ `[aria-invalid=true]`), `.w5-table`, `.btn-*`, slider/wizard/price-chart classes (see `attention.css` sections "CMS layer"). Form fields: `<x-form-field name label type :value :required hint />`.
+
+## Accessibility and i18n rules
+
+- One `<h1>` per page (tested in `tests/ui.py`), skip link, visible focus ring, `aria-invalid` on errors, `sr-only` labels on inputs, `prefers-reduced-motion` respected.
+- Languages en (default), fr, ar (RTL via `dir`, `rtl.css`, logical properties `ms-/me-/text-start`). Use logical utilities, not `ml-/mr-`, in new markup.
+- Mobile first; tested at 320/360/390 px (`tests/mobile.py`: no horizontal overflow, header height sane, menu opens).
+- Never hard-code user-facing English in a template: add a key to `lang/en.php`, `fr.php`, `ar.php` (lint fails if fr/ar miss a key). Exceptions already present: admin table headers/notes (owner-only, English).
+
+## Assets pipeline
+
+```bash
+cd tools && npm ci && node build.mjs     # Tailwind compile + Lucide/brand icon subset (scans views/src/data/config for icon('name')) + fonts
+python3 tools/gen/brand_assets.py        # placeholder social/brand images (replace with final art: docs/social-share-image-prompts.md)
+```
+
+Output is committed; the runtime never needs Node.

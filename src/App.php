@@ -40,6 +40,8 @@ final class App
             'Permissions-Policy' => 'camera=(), microphone=(), geolocation=()',
             'Content-Security-Policy' => "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'",
         ];
+        // HSTS only in production and only when the public origin is https (never lock a dev/http host into https).
+        if (Env::get('APP_ENV') === 'production' && str_starts_with((string)Env::get('APP_URL', ''), 'https://')) $res->headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
         if (str_starts_with($res->headers['Content-Type'] ?? '', 'text/html')) $res->headers['Cache-Control'] = 'no-store';
         return $res;
     }

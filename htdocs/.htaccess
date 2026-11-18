@@ -20,6 +20,7 @@ DirectoryIndex index.php
 # assets/_base/icons.json is served intentionally? No: icons are inlined server-side.
 
 <IfModule mod_headers.c>
+  Header always unset X-Powered-By
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"

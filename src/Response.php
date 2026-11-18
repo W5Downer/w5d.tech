@@ -37,6 +37,7 @@ final class Response
     public function send(): void
     {
         http_response_code($this->status);
+        if (!headers_sent()) header_remove('X-Powered-By');
         foreach ($this->headers as $k => $v) header("$k: $v");
         echo $this->body;
     }

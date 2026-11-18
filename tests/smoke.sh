@@ -8,7 +8,7 @@ for f in $ROOT/data/content/services/*.json; do paths+=("/services/$(basename $f
 for f in $ROOT/data/content/projects/*.json; do paths+=("/projects/$(basename $f .json)/"); done
 for g in $(php -r '$j=json_decode(file_get_contents("'$ROOT'/data/countries/tn.json"),true); foreach($j["regions"] as $g) echo ($g["slug"]??$g["id"]??"")," ";' 2>/dev/null); do paths+=("/tn/$g/"); done
 for l in en fr ar; do for p in "${paths[@]}"; do
-  out=$(curl -s -o /tmp/smoke.out -w '%{http_code} %{redirect_url}' -b "w5d_lang=$l" "$BASE$p"); code=${out%% *}; loc=${out#* }; n=$((n+1))
+  out=$(curl $SMOKE_CURL_OPTS -s -o /tmp/smoke.out -w '%{http_code} %{redirect_url}' -b "w5d_lang=$l" "$BASE$p"); code=${out%% *}; loc=${out#* }; n=$((n+1))
   # sign-in gated forms (src/Gate.php): a guest gets 302 -> /account/login/?next=<same path> while flag gate_forms=1
   case " $gated " in *" $p "*) if [ "$code" = 302 ] && [[ "$loc" == */account/login/?next=* ]]; then continue; fi;; esac
   if [ "$code" != 200 ]; then echo "[$l] $p -> $code"; fail=$((fail+1)); fi

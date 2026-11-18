@@ -64,7 +64,11 @@ s, h, t = call(c, 'GET', '/api/price.json'); price = json.loads(t)
 day = (price.get('data') or price).get('price', {}).get('day')
 check('price.json is served', s == 200 and day is not None, t[:120])
 import datetime
-today = datetime.date.today().isoformat()
+try:
+    from zoneinfo import ZoneInfo
+    today = datetime.datetime.now(ZoneInfo('Africa/Tunis')).date().isoformat()  # server prices 'today' in Africa/Tunis, not the runner's TZ
+except Exception:
+    today = datetime.date.today().isoformat()
 s, h, t = call(c, 'GET', f'/api/quote?parts_per_day=1&days=1&cadence=daily&start_on={today}'); q = json.loads(t)
 check('quote 1 part x 1 day starting today = published unit price', s == 200 and abs(q['schedule']['total'] - q['today']['unit']) < 0.02, t[:160])
 check('published day price matches /api/quote today.unit', day is not None and abs(day - q['today']['unit']) < 0.005, f'{day} vs {q["today"]["unit"]}')
@@ -165,7 +169,7 @@ shutil.rmtree(os.path.join(ROOT, 'storage/cache/rl'), ignore_errors=True)
 print('admin')
 env = dict(l.split('=', 1) for l in open(os.path.join(ROOT, '.env')).read().splitlines() if '=' in l and not l.startswith('#'))
 M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z')
-user = env.get('WEBMASTER_USERNAME', 'owner'); pw = env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')
+user = env.get('WEBMASTER_USERNAME', 'owner'); pw = os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')
 c = client()
 s, h, t = call(c, 'GET', M + '/')
 check('dashboard without session -> redirect to login', s in (302, 303) and 'login' in h.get('Location', ''), f'{s} {h.get("Location")}')
@@ -178,9 +182,12 @@ check('correct password signs in (redirect)', s in (302, 303), f'{s}')
 s, h, t = call(c, 'GET', M + '/')
 check('dashboard renders Command Center', s == 200 and 'Command Center' in t, f'{s}')
 tok = (re.search(r'name="_csrf" value="([0-9a-f]+)"', t) or [None, ''])[1]
-for page in ['countries', 'applicants', 'investors', 'progressive-pricing', 'users']:
+ADMIN_MENUS = ['countries', 'regions-hubs', 'campaigns', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality',
+               'progressive-pricing', 'payroll', 'investors', 'communications', 'support', 'content', 'variables', 'users', 'reports', 'compliance', 'audit', 'system',
+               'manager-applications', 'subscriptions', 'payments-d17', 'mail-outbox', 'api-docs', 'inbox']
+for page in ADMIN_MENUS:
     s, h, t2 = call(c, 'GET', f'{M}/{page}/')
-    check(f'admin menu /{page}/ renders', s == 200, str(s))
+    check(f'admin menu /{page}/ renders (no placeholder, no secrets)', s == 200 and 'Read-only preview' not in t2 and 'ships with the next iteration' not in t2 and 'password_hash' not in t2 and '$argon2' not in t2, str(s))
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': tok, 'do': 'seed'})
 check('seed demo data (redirect)', s in (302, 303), f'{s}')
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': 'bad', 'do': 'purge'})

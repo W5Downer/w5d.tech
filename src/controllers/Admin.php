@@ -110,6 +110,21 @@ final class Admin
             'variables' => self::vVariables(),
             'system' => self::vSystem(),
             'api-docs' => self::vApi($q),
+            // Operational screens backed by the platform tables (read-only lists; never expose secrets).
+            'countries' => self::vTable('SELECT country_id AS id, iso, name_en AS name, currency, timezone, active, created_at FROM countries ORDER BY country_id'),
+            'campaigns' => self::vTable('SELECT id, country_id AS country, name, channel, utm, daily_quota AS quota, active FROM campaigns ORDER BY id DESC LIMIT 300'),
+            'verification' => self::vTable('SELECT v.id, v.country_id AS country, a.full_name AS applicant, v.kind, v.result, v.reviewer_id AS reviewer, v.created_at FROM verifications v LEFT JOIN applicants a ON a.id = v.applicant_id ORDER BY v.id DESC LIMIT 300'),
+            'academies' => self::vTable('SELECT id, country_id AS country, service_slug AS service, level, starts_on, seats FROM cohorts ORDER BY starts_on DESC, id DESC LIMIT 300'),
+            'teams' => self::vTable('SELECT t.id, t.country_id AS country, t.name, t.service_slug AS service, t.manager_id AS manager, t.cap, (SELECT COUNT(*) FROM team_members m WHERE m.team_id = t.id) AS members FROM teams t ORDER BY t.id DESC LIMIT 300'),
+            'weekly' => self::vTable('SELECT w.id, w.week_id AS week, a.full_name AS member, w.service_slug AS service, w.units, w.status, substr(COALESCE(w.evidence, \'\'),1,100) AS evidence, w.created_at FROM weekly_reports w LEFT JOIN applicants a ON a.id = w.applicant_id ORDER BY w.id DESC LIMIT 300'),
+            'clients' => self::vTable('SELECT c.id, c.country_id AS country, c.name, c.email, (SELECT COUNT(*) FROM contracts k WHERE k.client_id = c.id) AS contracts, c.created_at FROM clients c ORDER BY c.id DESC LIMIT 300'),
+            'quality' => self::vTable('SELECT q.id, q.country_id AS country, a.full_name AS applicant, q.service_slug AS service, substr(COALESCE(q.task, \'\'),1,100) AS task, q.status, q.reviewer_id AS reviewer, q.created_at FROM cert_submissions q LEFT JOIN applicants a ON a.id = q.applicant_id ORDER BY q.id DESC LIMIT 300'),
+            'payroll' => self::vTable('SELECT id, country_id AS country, period, posts, amount, status FROM payroll_runs ORDER BY period DESC, id DESC LIMIT 300'),
+            'support' => self::vTable('SELECT id, country_id AS country, subject, requester, status, due_at, created_at FROM tickets ORDER BY id DESC LIMIT 300'),
+            // password_hash and tokens are deliberately NOT selected.
+            'users' => self::vTable('SELECT id, name, email, role_slug AS role, lang, active, CASE WHEN email_verified_at IS NULL THEN \'no\' ELSE \'yes\' END AS verified, COALESCE(last_login_at, \'\') AS last_login, created_at FROM users ORDER BY id DESC LIMIT 300'),
+            'reports' => self::vTable('SELECT day, country_id AS country, macro_slug AS macro, registered, verified, certified, reports_submitted AS submitted, reports_approved AS approved FROM rollups_daily ORDER BY day DESC, macro_slug LIMIT 300'),
+            'compliance' => self::vTable('SELECT id, country_id AS country, subject_ref AS subject, purpose, granted, created_at FROM consents ORDER BY id DESC LIMIT 300'),
             default => ['kind' => 'preview'],
         };
         return self::page('admin.menu', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'v' => $view, 'flash' => $_SESSION['_admin_flash'] ?? null, 'back' => $slug]);

@@ -42,7 +42,7 @@ def audit(p, path, label):
 with sync_playwright() as pw:
     br = pw.chromium.launch()
     for (w, h, lang) in ((360, 740, 'en'), (390, 800, 'ar'), (320, 640, 'fr')):
-        c = br.new_context(viewport={'width': w, 'height': h}, is_mobile=True, has_touch=True)
+        c = br.new_context(viewport={'width': w, 'height': h}, is_mobile=True, has_touch=True, ignore_https_errors=True)
         p = c.new_page()
         if lang != 'en': p.goto(BASE + f'/language/{lang}?r=%2F')
         print(f'public @{w} {lang}')
@@ -50,7 +50,7 @@ with sync_playwright() as pw:
         c.close()
     # owner panel
     for (w, h, lang) in ((360, 740, 'en'), (390, 800, 'ar')):
-        c = br.new_context(viewport={'width': w, 'height': h}, is_mobile=True, has_touch=True)
+        c = br.new_context(viewport={'width': w, 'height': h}, is_mobile=True, has_touch=True, ignore_https_errors=True)
         p = c.new_page()
         if lang != 'en': p.goto(BASE + f'/language/{lang}?r=%2F')
         p.goto(BASE + ADMIN + '/login/')
