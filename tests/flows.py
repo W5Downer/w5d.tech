@@ -6,6 +6,8 @@ management by reference + key, pricing numbers, admin login / seed / status / lo
 Resets the file-based rate limiter first, so run it against a dev/demo database only.
 """
 import json, os, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request, http.cookiejar
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _acct import signed_in
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080').rstrip('/')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,9 +77,9 @@ check('weekly quote has 1 charge for 7 days', s == 200 and q['schedule']['charge
 
 # ---------------------------------------------------------------- checkout HTML form
 print('checkout (HTML, PRG, CSRF)')
-c = client(); tok = csrf(c, '/checkout/')
+c, ACCT = signed_in(BASE, ROOT, 'investor'); tok = csrf(c, '/checkout/')
 check('checkout form carries a CSRF token and honeypot', bool(tok))
-form = {'_csrf': tok, 'mode': 'checkout', 'full_name': 'Flow Tester', 'email': f'flow{RUN}@example.com', 'kind': 'individual',
+form = {'_csrf': tok, 'mode': 'checkout', 'full_name': 'Flow Tester', 'email': ACCT, 'kind': 'individual',
         'cadence': 'daily', 'parts_per_day': '2', 'days': '3', 'start_on': '', 'accept': '1', 'website': ''}
 s, h, t = call(c, 'POST', '/checkout/', {**form, '_csrf': 'bad'})
 check('bad CSRF is redirected back, nothing stored', s in (302, 303) and '/checkout/' in h.get('Location', ''), f'{s} {h.get("Location")}')
@@ -95,8 +97,8 @@ check('honeypot filled -> silently accepted, no reference', s in (302, 303))
 
 # ---------------------------------------------------------------- subscription + management
 print('subscription + management')
-c = client(); tok = csrf(c, '/subscription/')
-sub = {**form, '_csrf': tok, 'mode': 'subscription', 'email': f'sub{RUN}@example.com', 'days': '30'}
+c, _ = signed_in(BASE, ROOT, 'investor'); tok = csrf(c, '/subscription/')
+sub = {**form, '_csrf': tok, 'mode': 'subscription', 'email': _, 'days': '30'}
 s, h, t = call(c, 'POST', '/subscription/', sub)
 loc = h.get('Location', '')
 s2, h2, t2 = call(c, 'GET', urllib.parse.urlparse(loc).path or '/')
@@ -115,7 +117,7 @@ check('action without CSRF is refused', s in (302, 303, 403, 419) and 'cancel' n
 
 # ---------------------------------------------------------------- other forms
 print('contact / eligibility / register / manager / newsletter (HTML)')
-c = client()
+c, _ = signed_in(BASE, ROOT, 'user')
 tok = csrf(c, '/contact/')
 s, h, t = call(c, 'POST', '/contact/', {'_csrf': tok, 'name': 'T', 'email': f'c{RUN}@example.com', 'desk': 'general', 'message': 'Hello desk', 'website': ''})
 check('contact accepted -> thanks page', s in (302, 303) and 'thanks' in h.get('Location', ''), f'{s} {h.get("Location")}')

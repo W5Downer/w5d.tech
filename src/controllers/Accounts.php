@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, Auth, Csrf, DB, Env, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
+use W5D\{Account, ApiGuide, Auth, Csrf, DB, Dash, Env, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
 
 /** Public accounts: sign in/up, e-mail verification, password reset, social login, user dashboard, D17 payment page. */
 final class Accounts
@@ -76,8 +76,10 @@ final class Accounts
     public static function register(Request $q): Response
     {
         if (Account::signedIn()) return Response::redirect(Account::home(Account::user()));
-        if (!$q->isPost()) return self::page($q, 'account.auth', ['mode' => 'register', 'title' => __('acct.register'), 'providers' => OAuth::enabled(), 'next' => null]);
-        if ($r = self::guard($q, 'acct-register', '/account/register/', 8, 3600)) return $r;
+        $next = Account::safeNext((string)$q->input('next', ''));
+        $back = '/account/register/' . self::nextQ($next);
+        if (!$q->isPost()) return self::page($q, 'account.auth', ['mode' => 'register', 'title' => __('acct.register'), 'providers' => OAuth::enabled(), 'next' => $next]);
+        if ($r = self::guard($q, 'acct-register', $back, 8, 3600)) return $r;
         $e = [];
         Forms::required($q->post, ['name'], $e);
         $email = Forms::email($q->post, 'email', $e);
@@ -87,19 +89,18 @@ final class Accounts
         $role = (string)($q->post['role'] ?? 'user');
         if (!in_array($role, Account::SELF_ROLES, true)) $role = 'user';
         Forms::accepted($q->post, $e);
-        if ($e) return self::bounce($q, '/account/register/', $e);
+        if ($e) return self::bounce($q, $back, $e);
         $u = Account::byEmail($email);
         if (!$u) {
             $id = Account::create($email, Forms::str($q->post, 'name', 120), $pw, $role, false, lang());
             $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]);
-            Account::sendVerification($u);
+            Account::sendVerification($u, $next);
             Mail::staff('New account', ['email' => $email, 'role' => $role]);
         } elseif (!$u['email_verified_at'] && RateLimit::hit('acct-verify:' . sha1($email), 3, 3600)) {
-            Account::sendVerification($u);
+            Account::sendVerification($u, $next);
         }
-        
         self::flash('ok', self::m('Almost done: we sent a confirmation link to this address (valid 24 hours). If the address was already registered, sign in or reset your password.', 'Presque fini : nous avons envoyé un lien de confirmation à cette adresse (valable 24 heures). Si l’adresse était déjà inscrite, connectez-vous ou réinitialisez votre mot de passe.', 'أوشكنا: أرسلنا رابط تأكيد إلى هذا العنوان (صالح 24 ساعة). إن كان العنوان مسجلا مسبقا فسجّل الدخول أو أعد تعيين كلمة المرور.'));
-        return Response::redirect(url('/account/login/'));
+        return Response::redirect(url('/account/login/') . self::nextQ($next));
     }
 
     public static function resend(Request $q): Response
@@ -120,7 +121,7 @@ final class Accounts
         DB::q('UPDATE users SET email_verified_at = COALESCE(email_verified_at, CURRENT_TIMESTAMP) WHERE id = ?', [$t['user_id']]);
         Account::notify((int)$t['user_id'], tr3('Welcome to W5D', 'Bienvenue sur W5D', 'مرحبا بك في W5D'), tr3('Your e-mail is confirmed. Complete your profile to get tailored next steps.', 'Votre e-mail est confirmé. Complétez votre profil pour obtenir des étapes adaptées.', 'تم تأكيد بريدك. أكمل ملفك للحصول على خطوات مناسبة.'), '/account/profile/');
         self::flash('ok', self::m('E-mail confirmed. You can sign in now.', 'E-mail confirmé. Vous pouvez vous connecter.', 'تم تأكيد البريد. يمكنك تسجيل الدخول الآن.'));
-        return Response::redirect(url('/account/login/'));
+        return Response::redirect(url('/account/login/') . self::nextQ(Account::safeNext((string)$q->input('next', ''))));
     }
 
     /* ======================= password reset ======================= */
@@ -238,13 +239,21 @@ final class Accounts
         if ($r = self::need($q)) return $r;
         $panel = (string)($q->params['panel'] ?? 'overview');
         if ($panel === '') $panel = 'overview';
-        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security'], true)) return Pages::notFound($q);
+        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api'], true)) return Pages::notFound($q);
         $u = Account::row();
         if (!$u) return Response::redirect(url('/account/login/'));
         $d = self::data($u);
         if ($panel === 'notifications' && $q->isPost() === false && ($d['notes'])) DB::q('UPDATE notifications SET read_at = CURRENT_TIMESTAMP WHERE user_id = ? AND read_at IS NULL', [$u['id']]);
-        $titles = ['overview' => __('acct.overview'), 'orders' => __('acct.orders'), 'payments' => __('acct.payments'), 'applications' => __('acct.applications'), 'notifications' => __('acct.notifications'), 'profile' => __('acct.profile'), 'security' => __('acct.security')];
-        return self::page($q, 'account.panel', ['panel' => $panel, 'title' => $titles[$panel], 'u' => $u, 'd' => $d, 'next' => self::nextAction($u, $d), 'price' => Variables::get('price'), 'Lbl' => [Pages::class, 'L']]);
+        $titles = ['overview' => __('acct.overview'), 'orders' => __('acct.orders'), 'payments' => __('acct.payments'), 'applications' => __('acct.applications'), 'notifications' => __('acct.notifications'), 'profile' => __('acct.profile'), 'security' => __('acct.security'), 'api' => tr3('API & documentation', 'API et documentation', 'واجهة API والوثائق')];
+        $role = (string)($u['role_slug'] ?? 'user');
+        $extra = [];
+        if ($panel === 'api') {
+            $tabs = [$role, 'developer'];
+            $as = (string)($q->query['as'] ?? $role);
+            if (!in_array($as, $tabs, true)) $as = $role;
+            $extra = ['guide' => ApiGuide::build($as, $role), 'tabs' => $tabs, 'as' => $as, 'tab_base' => url('/account/api/'), 'role' => $role];
+        }
+        return self::page($q, 'account.panel', ['panel' => $panel, 'title' => $titles[$panel], 'u' => $u, 'd' => $d, 'dash' => Dash::account($u, $d), 'next' => self::nextAction($u, $d), 'price' => Variables::get('price'), 'Lbl' => [Pages::class, 'L']] + $extra);
     }
 
     public static function profile(Request $q): Response

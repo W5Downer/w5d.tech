@@ -83,6 +83,53 @@
   <h2 class="font-display font-semibold mt-8 mb-3">Audit trail</h2>
   @if($v['hist'])<div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>When</th><th>By</th><th>α</th><th>β</th><th>k</th><th>m</th><th>cap</th><th>Reason</th></tr></thead><tbody>@foreach($v['hist'] as $h)<tr><td class="font-mono text-xs">{{ $h['changed_at'] }}</td><td>{{ $h['changed_by'] }}</td><td>{{ $h['alpha'] }}</td><td>{{ $h['beta'] }}</td><td>{{ $h['p_prog'] }}</td><td>{{ $h['p_time'] }}</td><td>{{ $h['cap'] }}</td><td>{{ $h['note'] }}</td></tr>@endforeach</tbody></table></div>@else<p class="text-sm text-slate-500">No change published yet: defaults from config apply.</p>@endif
 
+@elseif($v['kind'] === 'variables')
+  @php
+    $gl = ['money' => 'Money', 'dates' => 'Dates', 'experts' => 'Experts, spans and derivation', 'quality' => 'Quality and integrity', 'storage' => 'Storage budget (MB)', 'waves' => 'Wave cohorts', 'economics' => 'Unit economics (declared parameters)', 'gates' => 'Revenue gates and rules', 'cat' => 'Revenue catalogue prices (A1-J3, TND)', 'flags' => 'Behaviour switches', 'investor' => 'Investor limits', 'pricing' => 'Pricing function (published under Progressive Pricing)'];
+  @endphp
+  <p class="mb-4 max-w-3xl text-sm text-slate-600 dark:text-slate-400">Every number, date and switch the site prints comes from here. Change a value, give a reason, save: it goes live on every page, the API and the checkout, and is written to the change log below with your name and the date. <strong>Reset</strong> returns a value to the file default. Locked rows are records or are governed elsewhere.</p>
+  @if(!empty($flash))<p class="mb-4 rounded-lg border p-3 text-sm {{ $flash['kind'] === 'ok' ? 'border-emerald-500/40 bg-emerald-500/10' : 'border-red-500/40 bg-red-500/10' }}" role="status">{{ $flash['msg'] }}</p>@endif
+  <form method="post" action="{{ admin_url('variables/save') }}" class="space-y-6">
+    {!! csrf_field() !!}
+    <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-4 sm:p-5">
+      <label for="v-note" class="block text-sm font-medium mb-1">Reason (required, public audit trail)</label>
+      <input id="v-note" name="note" class="field" minlength="10" maxlength="500" placeholder="e.g. Wave 1 gate reviewed on the quarterly call" required>
+      <button class="btn-peak mt-3" type="submit">Save changes</button>
+    </div>
+    @foreach($v['groups'] as $g => $rows)
+    <details class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5" @if(in_array($g, ['money', 'dates', 'experts', 'flags'])) open @endif>
+      <summary class="cursor-pointer select-none px-4 sm:px-5 py-3 font-display font-semibold flex items-center justify-between gap-3"><span>{{ $gl[$g] ?? ucfirst($g) }}</span><span class="text-xs font-normal text-slate-500">{{ count($rows) }}</span></summary>
+      <div class="divide-y divide-slate-200 dark:divide-white/10 border-t border-slate-200 dark:border-white/10">
+        @foreach($rows as $r)
+          @php $key = str_replace('.', '__', $r['path']); @endphp
+          <div class="grid gap-2 px-4 sm:px-5 py-3 sm:grid-cols-[minmax(0,1fr)_12rem_auto] sm:items-center">
+            <div class="min-w-0"><label for="v-{{ $key }}" class="block font-mono text-xs break-all text-slate-700 dark:text-slate-300">{{ $r['tok'] }}</label>
+              <p class="text-xs text-slate-500">default {{ $r['default'] }}@if($r['overridden']) · <span class="text-amber-600 dark:text-amber-300">changed by {{ $r['by'] }}, {{ $r['at'] }}</span>@endif</p></div>
+            @if($r['editable'])
+              <input id="v-{{ $key }}" name="v[{{ $key }}]" value="{{ $r['value'] }}" class="field !py-1.5 text-sm" @if($r['type'] === 'date') type="date" @else type="text" inputmode="{{ $r['type'] === 'text' ? 'text' : 'decimal' }}" @endif>
+              <label class="flex items-center gap-2 text-xs text-slate-500 whitespace-nowrap"><input type="checkbox" name="reset[{{ $key }}]" value="1" @if(!$r['overridden']) disabled @endif> Reset</label>
+            @else
+              <input value="{{ $r['value'] }}" class="field !py-1.5 text-sm opacity-60" disabled aria-label="{{ $r['path'] }} (locked)">
+              <span class="text-xs text-slate-500 inline-flex items-center gap-1">{{ icon('lock', 'w-3.5 h-3.5') }} Locked</span>
+            @endif
+          </div>
+        @endforeach
+      </div>
+    </details>
+    @endforeach
+  </form>
+
+  <h2 class="font-display font-semibold mt-10 mb-3">Derived values (read-only, computed from the numbers above)</h2>
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><tbody>@foreach($v['derived'] as $r)<tr><th scope="row" class="font-mono text-xs">{{ $r['token'] }}</th><td class="tabular-nums">{{ $r['value'] }}</td></tr>@endforeach</tbody></table></div>
+
+  <h2 class="font-display font-semibold mt-10 mb-3">Change log</h2>
+  @if($v['hist'])
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>When</th><th>By</th><th>Variable</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody>@foreach($v['hist'] as $h)<tr><td class="font-mono text-xs whitespace-nowrap">{{ $h['changed_at'] }}</td><td>{{ $h['changed_by'] }}</td><td class="font-mono text-xs">{{ $h['path'] }}</td><td>{{ $h['old_value'] }}</td><td>{{ $h['new_value'] }}</td><td>{{ $h['note'] }}</td></tr>@endforeach</tbody></table></div>
+  @else<p class="text-sm text-slate-500">No change yet: every value is the file default.</p>@endif
+
+@elseif($v['kind'] === 'api')
+  @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])
+
 @elseif($v['kind'] === 'system')
   <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><tbody>@foreach($v['rows'] as $r)<tr><th scope="row" class="w-56">{{ $r['check'] }}</th><td>{{ $r['value'] }}</td></tr>@endforeach</tbody></table></div>
 

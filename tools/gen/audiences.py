@@ -128,10 +128,15 @@ A['user'] = dict(icon='user-round', grad='sciences',
   final=L('Create your free account.', 'Créez votre compte gratuit.', 'أنشئ حسابك المجاني.'),
   faq=[(L('Does an account cost anything?', 'Un compte est-il payant ?', 'هل الحساب مدفوع؟'), L('No. Creating an account is free. Taking a part is a separate, explicit step.', 'Non. Créer un compte est gratuit. Prendre une part est une étape distincte et explicite.', 'لا. إنشاء الحساب مجاني. شراء حصة خطوة منفصلة وصريحة.'))])
 
+DASH_LEAD = L('This is what you find the day you sign in. Nothing here is a promise of outcome; it is a list of tools.', 'Voici ce que vous trouvez le jour où vous vous connectez. Rien ici n’est une promesse de résultat ; c’est une liste d’outils.', 'هذا ما تجده يوم تسجّل الدخول. لا شيء هنا وعد بنتيجة؛ إنها قائمة أدوات.')
+for _a in A.values(): _a.setdefault('dash_lead', DASH_LEAD)
+
 def page(k, a):
     secs = [
       {'type': 'hero', 'id': f'for-{k}-hero', 'variant': 'classic', 'gradient': a['grad'], 'eyebrow': a['eyebrow'], 'title': a['h'], 'lead': a['lead'],
        'ctas': [a['primary'], a['second']], 'note': LIMIT},
+      {'type': 'dash-preview', 'id': f'for-{k}-dash', 'tier': 'i', 'focus': 3, 'aud': k, 'title': L('Your dashboard, in advance', 'Votre tableau de bord, par avance', 'لوحتك مسبقا'),
+       'lead': a['dash_lead']},
       {'type': 'cards', 'id': f'for-{k}-cards', 'tier': 'i', 'focus': 3, 'cols': 3, 'title': L('What you can do here', 'Ce que vous pouvez faire ici', 'ما يمكنك فعله هنا'),
        'items': [{'icon': i, 'title': t, 'body': b} for i, t, b in a['cards']]},
       {'type': 'steps', 'id': f'for-{k}-steps', 'tier': 'i', 'focus': 3, 'title': L('Your first three steps', 'Vos trois premières étapes', 'خطواتك الثلاث الأولى'),
@@ -148,16 +153,16 @@ for k, a in A.items():
 
 order = ['investor', 'customer', 'member', 'leader', 'admin', 'owner', 'user']
 idx = {'slug': 'for', 'title': L('Choose your door — W5D', 'Choisissez votre porte — W5D', 'اختر بابك — W5D'),
-  'description': L('Seven audiences, seven homepages: owner, admin, leader, member, investor, customer and user. Each one shows the right next step.',
-                   'Sept publics, sept pages d’accueil : propriétaire, admin, leader, membre, investisseur, client et utilisateur. Chacune montre la bonne prochaine étape.',
-                   'سبعة جماهير وسبع صفحات رئيسية: المالك والمسؤول والقائد والعضو والمستثمر والعميل والمستخدم. تعرض كل صفحة الخطوة التالية المناسبة.'),
+  'description': L('Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first. One dashboard per audience, each with its own API documentation.',
+                   'Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites. Un tableau de bord par public, chacun avec sa documentation API.',
+                   'المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا. لوحة لكل جمهور ولكل منها وثائق API خاصة بها.'),
   'sections': [
     {'type': 'hero', 'id': 'for-hero', 'variant': 'editorial', 'gradient': 'peak', 'eyebrow': L('Audiences', 'Publics', 'الجماهير'),
-     'title': L('One W5D. **Seven doors.**', 'Un seul W5D. **Sept portes.**', 'W5D واحدة. **سبعة أبواب.**'),
-     'lead': L('Pick the door that matches why you are here. Every page ends with one clear next step.', 'Choisissez la porte qui correspond à votre raison de venir. Chaque page se termine par une prochaine étape claire.', 'اختر الباب الذي يناسب سبب زيارتك. تنتهي كل صفحة بخطوة تالية واضحة.'),
-     'ctas': [cta(L('Take a part today', 'Prendre une part', 'اشتر حصة اليوم'), '/checkout/', 'peak', True), cta(SIGNIN, '/account/login/')], 'note': LIMIT},
-    {'type': 'cards', 'id': 'for-cards', 'tier': 'e', 'focus': 3, 'cols': 3, 'title': L('Who are you?', 'Qui êtes-vous ?', 'من أنت؟'),
-     'items': [{'icon': A[k]['icon'], 'title': A[k]['title'], 'body': A[k]['lead'], 'href': f'/for/{k}/', 'cta': L('Open', 'Ouvrir', 'افتح'), 'gradient': A[k]['grad'] if A[k]['grad'] in ('cultures', 'built', 'sciences', 'governance', 'technology') else 'technology'} for k in order]},
+     'title': L('One W5D. **One door for each of you.**', 'Un seul W5D. **Une porte pour chacun.**', 'W5D واحدة. **باب لكل واحد منكم.**'),
+     'lead': L('Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first.', 'Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites.', 'المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا.'),
+     'ctas': [cta(L('Check my eligibility', 'Vérifier mon admissibilité', 'تحقق من أهليتي'), '/join/eligibility/', 'peak', True), cta(SIGNIN, '/account/login/')], 'note': LIMIT},
+    {'type': 'dash-hub', 'id': 'for-hub', 'tier': 'e', 'focus': 3, 'title': L('Who are you?', 'Qui êtes-vous ?', 'من أنت؟'),
+     'lead': L('Each door opens a dashboard built for that role, with API documentation written for it.', 'Chaque porte ouvre un tableau de bord conçu pour ce rôle, avec une documentation API écrite pour lui.', 'كل باب يفتح لوحة مصممة لذلك الدور مع وثائق API مكتوبة له.')},
     {'type': 'notice', 'id': 'for-limits', 'tier': 'i', 'focus': 2},
     {'type': 'cta', 'id': 'for-final', 'gradient': 'peak', 'title': L('Not sure? Start with the facts.', 'Pas sûr ? Commencez par les faits.', 'غير متأكد؟ ابدأ بالوقائع.'),
      'body': LIMIT, 'ctas': [cta(L('How it works', 'Comment ça marche', 'كيف يعمل'), '/how-it-works/', 'peak', True)]},

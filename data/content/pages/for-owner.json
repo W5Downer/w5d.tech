@@ -59,6 +59,23 @@
       }
     },
     {
+      "type": "dash-preview",
+      "id": "for-owner-dash",
+      "tier": "i",
+      "focus": 3,
+      "aud": "owner",
+      "title": {
+        "en": "Your dashboard, in advance",
+        "fr": "Votre tableau de bord, par avance",
+        "ar": "لوحتك مسبقا"
+      },
+      "lead": {
+        "en": "This is what you find the day you sign in. Nothing here is a promise of outcome; it is a list of tools.",
+        "fr": "Voici ce que vous trouvez le jour où vous vous connectez. Rien ici n’est une promesse de résultat ; c’est une liste d’outils.",
+        "ar": "هذا ما تجده يوم تسجّل الدخول. لا شيء هنا وعد بنتيجة؛ إنها قائمة أدوات."
+      }
+    },
+    {
       "type": "cards",
       "id": "for-owner-cards",
       "tier": "i",

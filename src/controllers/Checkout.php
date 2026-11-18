@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
+use W5D\{Content, Csrf, DB, Gate, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
 
 /** Investor demo flows: pledge checkout, daily subscription, management by reference + key. No money moves in demo mode. */
 final class Checkout
@@ -15,6 +15,7 @@ final class Checkout
         $p = Pricing::progress($v);
         $tz = new \DateTimeZone('Africa/Tunis');
         $d0 = \DateTimeImmutable::createFromInterface($start)->setTimezone($tz)->setTime(12, 0);
+        $now = new \DateTimeImmutable('now', $tz);
         $weekly = $cadence === 'weekly';
         $step = $weekly ? 7 : 1;
         $n = $weekly ? (int)ceil($days / 7) : $days;
@@ -22,7 +23,9 @@ final class Checkout
         $total = 0.0;
         for ($i = 0; $i < $n; $i++) {
             $d = $d0->modify('+' . ($i * $step) . ' day');
-            $t = Pricing::timeShare($d, $v);
+            // A charge dated today is priced at the live instant, so it equals the published price;
+            // later charges are forecasts at noon (the real price on the day is recomputed).
+            $t = Pricing::timeShare($d->format('Y-m-d') === $now->format('Y-m-d') ? $now : $d, $v);
             $unit = Pricing::perPart($weekly ? 'week' : 'day', $p, $t, $v);
             $amount = round($unit * $parts, 2);
             $total += $amount;
@@ -112,6 +115,7 @@ final class Checkout
     {
         $back = self::back($mode);
         if (!Csrf::check($q)) { $_SESSION['_flash_error'] = 'csrf'; return Response::redirect(url($back)); }
+        Gate::bind($q);
         $g = Forms::guard($q, 'checkout', 10, 600);
         if ($g === 'bot') return Response::redirect(url($back));
         if ($g) { $_SESSION['_flash_error'] = $g; return Response::redirect(url($back)); }
@@ -128,12 +132,15 @@ final class Checkout
 
     public static function wizard(Request $q): Response
     {
-        if ($q->isPost()) return self::submit($q, (($q->post['mode'] ?? '') === 'subscription') ? 'subscription' : 'checkout');
+        $sub = $q->isPost() && ($q->post['mode'] ?? '') === 'subscription';
+        if ($r = Gate::need($q, $sub ? 'subscription' : 'checkout', $sub ? '/subscription/' : '/checkout/')) return $r;
+        if ($q->isPost()) return self::submit($q, $sub ? 'subscription' : 'checkout');
         return self::view($q, 'checkout');
     }
 
     public static function subscription(Request $q): Response
     {
+        if ($r = Gate::need($q, 'subscription', '/subscription/')) return $r;
         if ($q->isPost()) return self::submit($q, 'subscription');
         return self::view($q, 'subscription');
     }

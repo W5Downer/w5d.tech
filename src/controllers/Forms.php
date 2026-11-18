@@ -146,7 +146,9 @@ final class Forms
 
     public static function register(Request $q): Response
     {
+        if ($r = \W5D\Gate::need($q, 'register', '/app/register/')) return $r;
         if (!$q->isPost()) return Pages::page($q, 'app-register');
+        \W5D\Gate::bind($q);
         if ($r = self::check($q, '/app/register/', 'register')) return $r;
         $x = self::coreRegister($q->post);
         return $x['ok'] ? self::done($q, $x['data'], 'register') : self::fail($q, '/app/register/', $x['errors']);
@@ -181,6 +183,7 @@ final class Forms
 
     public static function eligibility(Request $q): Response
     {
+        if ($r = \W5D\Gate::need($q, 'eligibility', '/join/eligibility/')) return $r;
         if (!$q->isPost()) return Pages::page($q, 'join-eligibility');
         if ($r = self::check($q, '/join/eligibility/', 'elig')) return $r;
         $x = self::coreEligibility($q->post);
@@ -249,7 +252,9 @@ final class Forms
 
     public static function managers(Request $q): Response
     {
+        if ($r = \W5D\Gate::need($q, 'manager', '/careers/managers/')) return $r;
         if (!$q->isPost()) return Pages::page($q, 'careers-managers');
+        \W5D\Gate::bind($q);
         if ($r = self::check($q, '/careers/managers/', 'mgr')) return $r;
         $x = self::coreManager($q->post);
         return $x['ok'] ? self::done($q, $x['data'], 'manager') : self::fail($q, '/careers/managers/', $x['errors']);

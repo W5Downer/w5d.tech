@@ -529,3 +529,49 @@ html { scroll-padding-top: 6.5rem; }
 /* closed mobile menu must take no space (it sits inside the fixed header and would block clicks on the page) */
 #mobileMenu:not(.is-open) { max-height: 0; padding-top: 0; padding-bottom: 0; margin-top: 0; border-width: 0; overflow: hidden; box-shadow: none; }
 @media (min-width: 1024px) { #mobileMenu { display: none; } }
+
+/* ===== Animated SVG page loader ===== */
+#w5d-loader { display: none; position: fixed; inset: 0; z-index: 99999; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, #0f172a 0%, #020617 100%); transition: opacity .5s ease, visibility .5s ease; }
+.js #w5d-loader { display: flex; }
+#w5d-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.w5l-inner { display: flex; flex-direction: column; align-items: center; gap: .9rem; }
+.w5l-ring { transform-origin: 80px 80px; animation: w5lSpin 1.6s linear infinite; }
+.w5l-orbit { transform-origin: 80px 80px; animation: w5lSpin 9s linear infinite reverse; }
+.w5l-mark { transform-origin: 80px 80px; animation: w5lPop 2s ease-in-out infinite; }
+.w5l-text { font: 700 1.05rem/1 'Space Grotesk', Inter, system-ui, sans-serif; letter-spacing: .3em; background: linear-gradient(90deg, #7c3aed, #06b6d4, #7c3aed); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: w5lSlide 2.2s linear infinite; }
+.w5l-bar { width: 180px; height: 3px; border-radius: 99px; background: rgba(255,255,255,.08); position: relative; overflow: hidden; }
+.w5l-bar::after { content: ""; position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, transparent, #7c3aed, #06b6d4, transparent); animation: w5lBar 1.4s ease-in-out infinite; }
+@keyframes w5lSpin { to { transform: rotate(360deg); } }
+@keyframes w5lPop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+@keyframes w5lSlide { to { background-position: 200% 0; } }
+@keyframes w5lBar { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+@media (prefers-reduced-motion: reduce) { .w5l-ring, .w5l-orbit, .w5l-mark, .w5l-text, .w5l-bar::after { animation: none !important; } }
+
+/* ===== Owner/staff panel shell: drawer on phones/tablets, sticky sidebar on desktop ===== */
+.admin-topbar { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .6rem 1rem; background: #fff; border-bottom: 1px solid rgba(15,23,42,.08); }
+.dark .admin-topbar { background: #0b0b18; border-color: rgba(148,163,184,.16); }
+.admin-backdrop { position: fixed; inset: 0; z-index: 59; background: rgba(2,6,23,.6); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility 0s linear .25s; }
+.admin-nav { position: fixed; z-index: 60; top: 0; bottom: 0; inset-inline-start: 0; width: min(86vw, 20rem); overflow-y: auto; overscroll-behavior: contain; background: #fff; border-inline-end: 1px solid rgba(15,23,42,.1); transform: translateX(-102%); visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s; }
+[dir=rtl] .admin-nav { transform: translateX(102%); }
+.dark .admin-nav { background: #0b0b18; border-color: rgba(148,163,184,.16); }
+.admin-nav.is-open { transform: none; visibility: visible; transition-delay: 0s; }
+.admin-nav.is-open ~ .admin-backdrop, body.admin-nav-open .admin-backdrop { opacity: 1; visibility: visible; transition-delay: 0s; }
+body.admin-nav-open { overflow: hidden; }
+@media (min-width: 1024px) {
+  .admin-nav { position: sticky; top: 0; height: 100vh; width: 18rem; flex-shrink: 0; transform: none !important; visibility: visible !important; z-index: 10; }
+  .admin-backdrop { display: none; }
+  body.admin-nav-open { overflow: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .admin-nav, .admin-backdrop { transition: none; } }
+/* wide data must scroll inside its own box, never widen the page */
+main .overflow-x-auto { max-width: 100%; -webkit-overflow-scrolling: touch; }
+main table.w5-table { min-width: 36rem; }
+main pre, main code { overflow-wrap: anywhere; }
+
+/* Scroll containers must be the containing block of absolutely positioned
+   descendants (e.g. .sr-only labels inside table cells), otherwise those
+   escape the clip and widen the page on phones. */
+.overflow-x-auto{position:relative}
+
+/* Grid/flex children may shrink below their content width (forms, cards). */
+main .grid > *, .admin-shell .grid > *{min-width:0}

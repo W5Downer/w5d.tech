@@ -22,6 +22,20 @@
 </header>
 @if(!$db)<p class="mb-6 rounded-lg border border-red-500/40 bg-red-500/10 p-4 text-sm">Database unavailable. Run <code>php bin/migrate.php</code>.</p>@endif
 
+<section class="mb-6 rounded-2xl border border-violet-500/30 bg-violet-500/5 p-5" aria-label="{{ tr3('Your desk', 'Votre bureau', 'مكتبك') }}" data-desk-role="{{ $user['role'] ?? '' }}">
+  <p class="eyebrow">{{ tr3('Your desk', 'Votre bureau', 'مكتبك') }} · {{ t($desk['label']) }}</p>
+  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">{{ t($desk['blurb']) }}</p>
+  @if($desk['queues'])
+  <ul class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+    @foreach($desk['queues'] as $qq)<li><a class="block rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-3 hover:border-violet-500/50" href="{{ $qq['href'] }}"><span class="block font-display text-2xl font-bold">{{ $qq['count'] }}</span><span class="text-xs text-slate-500">{{ t($qq['label']) }}</span></a></li>@endforeach
+  </ul>
+  @endif
+  <ul class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+    @foreach($desk['widgets'] as [$wi, $wl, $wb])<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3"><p class="flex items-center gap-2 text-sm font-semibold">{{ icon($wi, 'w-4 h-4 text-violet-500') }} {{ t($wl) }}</p><p class="mt-1 text-xs text-slate-500">{{ t($wb) }}</p></li>@endforeach
+  </ul>
+  <p class="mt-4 text-sm"><a class="btn-link" href="{{ admin_url('api-docs/') }}">{{ icon('code', 'w-4 h-4') }} {{ tr3('API and documentation for my role', 'API et documentation pour mon rôle', 'واجهة API ووثائق دوري') }}</a></p>
+</section>
+
 <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4" aria-label="Key figures">
   @foreach($cards as [$label, $val, $ic, $sub])
     <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-5">

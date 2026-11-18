@@ -25,18 +25,68 @@ return [
         'start'      => '2026-11-01',   // programme clock start (t = 0)
         'deadline'   => '2026-12-31',   // programme clock end   (t = 1)
         'offer_year' => 2027,           // "valid before 2027"
-        'as_of'      => '2026-11-15',   // date the published figures were last reviewed
+        'as_of'      => '2026-11-18',   // date the published figures were last reviewed
+        'doctrine'   => '2026-11-18',   // date of the last doctrine revision (docs/CHANGELOG-doctrine.md)
     ],
     'experts' => [
-        'per_service'      => 1000,
+        'per_service'      => 1000,   // ESTIMATE: expert posts per meta service (D3). Review against certification throughput.
+        'meta_services'    => 130,    // 5 macro works x 26 services; must equal the number of services in data/content/services (linted)
         'services_per_macro' => 26,
+        'span_design'      => 10,     // design span of control (1 manager : 10 experts)
+        'span_cap'         => 12,     // hard cap enforced by the portal
+        'reviewer_ratio'   => 50,     // reviewer load, experts per reviewer
         'managers_per_service' => 100,
         'team_size'        => 10,
         'current'          => 0,   // overridden by rollups_daily at render
         'developers_today' => 26,  // real delivery footprint today (Tunisia)
         'departments'      => 16,
     ],
-    'quality' => ['sampling_percent' => 5],
+    'quality' => [
+        'sampling_percent' => 5,      // fixed by doctrine: lowering it dilutes the integrity layer (D7)
+        'rag_red'          => 70,
+        'rag_amber'        => 90,
+        'correction_sla_days' => 14,
+    ],
+    'storage' => ['budget_mb' => 100, 'warn_mb' => 60, 'refuse_mb' => 90],
+    // Wave cohorts (gate-driven, not calendar-driven). Managers are derived: posts / span_design.
+    'waves' => [
+        'w0' => ['pilot' => 5,  'posts' => 0,     'managers' => 5],
+        'w1' => ['posts' => 1000],
+        'w2' => ['posts' => 10000],
+    ],
+    // Declared unit-economics parameters (not records).
+    'economics' => [
+        'cost_week_low' => 52, 'cost_week_high' => 54,
+        'manager_share' => 41.5, 'reviewer_share' => 6.5, 'tooling_low' => 0.2, 'tooling_high' => 2.3, 'cert_amortised' => 3.8,
+        'cost_year_low' => 2700, 'cost_year_high' => 2800,
+    ],
+    // Revenue gates and rules.
+    'gates' => [
+        'concentration_max_pct' => 40,   // no single stream above this share at any gate
+        'w2_recurring_pct'      => 60,   // subscription + unit revenue vs team cost at W2
+        'w3_licensing_pct'      => 30,   // licensing share of total at W3
+        'graduate_ceiling'      => 250,  // no graduate-facing price above this without a sponsorship fallback
+        'credit_uplift_pct'     => 10,
+        'credit_expiry_months'  => 24,
+    ],
+    // Revenue catalogue prices (TND). Names, inclusions and falsifiers live in data/content/pricing/*.json.
+    'cat' => [
+        'a1' => 0, 'a2' => 60, 'a3' => 25, 'a4m' => 15, 'a4y' => 120, 'a5' => 250, 'a6' => 30,
+        'b1' => 350, 'b2' => 550, 'b3' => 400,
+        'c1' => 90, 'c2' => 250, 'c3' => 600, 'c4' => 1400, 'c5' => 1200, 'c6' => 3500, 'c7' => 9000, 'c8' => 300, 'c9' => 35,
+        'd2' => 1000, 'd2_credit' => 1100,
+        'e1' => 18000, 'e2' => 45000, 'e3' => 90000, 'e4' => 6000,
+        'f1' => 10,
+        'g1' => 2500, 'g2' => 6000,
+        'h1' => 4500, 'h2' => 12000, 'h3' => 3600,
+        'i1' => 8000, 'i2' => 45000, 'i3' => 15000,
+        'j1' => 3200, 'j2' => 32000, 'j3' => 150000,
+    ],
+    // Behaviour switches the owner can flip from the dashboard (no deploy needed).
+    'flags' => [
+        'gate_forms'       => 1,   // 1 = checkout, subscription, applicant registration and manager application need a signed-in account
+        'gate_eligibility' => 0,   // 1 = the 30-second eligibility check also needs a signed-in account (default: public)
+    ],
     'investor' => [
         'min_parts_per_day' => 1,
         'max_parts_per_day' => 1000,

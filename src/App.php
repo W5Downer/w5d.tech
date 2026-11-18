@@ -172,6 +172,7 @@ final class App
         $r->post($m . '/logout', [Admin::class, 'logout']);
         $r->get($m, [Admin::class, 'dashboard']);
         $r->post($m . '/progressive-pricing/publish', [Admin::class, 'publishPricing']);
+        $r->post($m . '/variables/save', [Admin::class, 'saveVariables']);
         $r->post($m . '/status', [Admin::class, 'setStatus']);
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);

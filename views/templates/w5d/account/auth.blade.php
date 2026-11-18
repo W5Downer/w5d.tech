@@ -14,7 +14,7 @@
       <h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{{ $title }}</h1>
 
       @if(!empty($flash))
-        <p class="mt-4 rounded-lg p-3 text-sm {{ $flash['kind'] === 'ok' ? 'bg-emerald-500/10 border border-emerald-500/40' : 'bg-red-500/10 border border-red-500/40' }}" role="status">{{ t($flash['msg']) }}</p>
+        <p class="mt-4 rounded-lg p-3 text-sm {{ $flash['kind'] === 'ok' ? 'bg-emerald-500/10 border border-emerald-500/40' : ($flash['kind'] === 'info' ? 'bg-violet-500/10 border border-violet-500/40' : 'bg-red-500/10 border border-red-500/40') }}" role="status">{{ t($flash['msg']) }}</p>
       @endif
       @if(!empty($errors['_form']))
         <p class="mt-4 rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ t($errors['_form']) }}</p>
@@ -25,7 +25,7 @@
 
       @if($mode === 'notice')
         <p class="mt-4 text-slate-600 dark:text-slate-300">{{ t($text) }}</p>
-        <p class="mt-6"><a class="btn-peak" href="{{ url('/account/login/') }}">{{ __('acct.login') }}</a></p>
+        <p class="mt-6"><a class="btn-peak" href="{{ url('/account/login/') . $nextQ }}">{{ __('acct.login') }}</a></p>
 
       @elseif($mode === 'login')
         <form method="post" action="{{ url('/account/login/') . $nextQ }}" class="mt-6 space-y-4" novalidate>
@@ -54,10 +54,10 @@
             </div>
           </div>
         @endif
-        <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.no_account') }} <a class="btn-link" href="{{ url('/account/register/') }}">{{ __('acct.register') }}</a></p>
+        <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.no_account') }} <a class="btn-link" href="{{ url('/account/register/') . $nextQ }}">{{ __('acct.register') }}</a></p>
 
       @elseif($mode === 'register')
-        <form method="post" action="{{ url('/account/register/') }}" class="mt-6 space-y-4" novalidate>
+        <form method="post" action="{{ url('/account/register/') . $nextQ }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
           <x-form-field name="name" :label="__('acct.name')" :required="true" :errors="$errors" />
@@ -78,7 +78,7 @@
             </div>
           </div>
         @endif
-        <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.have_account') }} <a class="btn-link" href="{{ url('/account/login/') }}">{{ __('acct.login') }}</a></p>
+        <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.have_account') }} <a class="btn-link" href="{{ url('/account/login/') . $nextQ }}">{{ __('acct.login') }}</a></p>
 
       @elseif($mode === 'forgot')
         <form method="post" action="{{ url('/account/forgot/') }}" class="mt-6 space-y-4" novalidate>
@@ -87,7 +87,7 @@
           <x-form-field name="email" :label="__('acct.email')" type="email" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.send_link') }}</button>
         </form>
-        <p class="mt-6 text-sm"><a class="btn-link" href="{{ url('/account/login/') }}">{{ __('acct.login') }}</a></p>
+        <p class="mt-6 text-sm"><a class="btn-link" href="{{ url('/account/login/') . $nextQ }}">{{ __('acct.login') }}</a></p>
 
       @elseif($mode === 'reset')
         <form method="post" action="{{ url('/account/reset/' . $token . '/') }}" class="mt-6 space-y-4" novalidate>

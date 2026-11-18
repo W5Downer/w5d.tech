@@ -7,6 +7,8 @@
   $tomorrow = (new DateTimeImmutable('tomorrow', new DateTimeZone('Africa/Tunis')))->format('Y-m-d');
   $macroSel = (string)($_GET['macro'] ?? '');
   $defDays = $mode === 'subscription' ? 30 : 1;
+  $pre = \W5D\Gate::prefill();
+  $lock = \W5D\Gate::lockEmail();
 @endphp
 <x-section :d="$d">
   <form method="post" action="{{ url($mode === 'subscription' ? '/subscription/' : '/checkout/') }}" class="max-w-4xl" data-wizard data-start="{{ !empty($errors) ? 0 : 0 }}" novalidate>
@@ -22,9 +24,9 @@
     <div class="wz-step space-y-4" data-step="1">
       <h3 class="font-display text-xl font-semibold">{{ __('lbl.step') }} 1 {{ __('lbl.of') }} 3</h3>
       <div class="grid gap-4 sm:grid-cols-2">
-        <x-form-field name="full_name" :label="__('lbl.name')" :required="true" :errors="$errors" />
-        <x-form-field name="email" type="email" :label="__('lbl.email')" :required="true" :errors="$errors" />
-        <x-form-field name="phone" type="tel" :label="__('lbl.phone')" :errors="$errors" />
+        <x-form-field name="full_name" :label="__('lbl.name')" :required="true" :errors="$errors" :value="$pre['full_name'] ?? ''" />
+        <x-form-field name="email" type="email" :label="__('lbl.email')" :required="true" :errors="$errors" :value="$pre['email'] ?? ''" :readonly="$lock" />
+        <x-form-field name="phone" type="tel" :label="__('lbl.phone')" :errors="$errors" :value="$pre['phone'] ?? ''" />
         <x-form-field name="kind" type="select" :label="__('lbl.kind')" :options="['individual' => __('lbl.individual'), 'company' => __('lbl.company')]" />
         <x-form-field name="organisation" :label="__('lbl.org')" :hint="__('lbl.optional')" class="sm:col-span-2" />
       </div>
