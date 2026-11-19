@@ -69,7 +69,7 @@
         @if(\W5D\Social::enabled())
         <button type="button" data-aside-open="aside-share" class="max-[359px]:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('share.open') }}" aria-controls="aside-share" aria-haspopup="dialog">{{ icon('share-2', 'w-5 h-5') }}</button>
         @endif
-        <button type="button" data-quick-open class="btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('ux.find') }}" title="{{ __('ux.find_hint') }}">{{ icon('search', 'w-5 h-5') }}</button>
+        <button type="button" data-quick-open class="max-lg:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('ux.find') }}" title="{{ __('ux.find_hint') }}">{{ icon('search', 'w-5 h-5') }}</button>
         <button type="button" data-aside-open="aside-user" class="btn-ghost relative rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center {{ $signedIn ? 'text-brand-500' : '' }}" aria-label="{{ __('nav.user') }}" aria-controls="aside-user" aria-haspopup="dialog">
           {{ icon($signedIn ? 'circle-user' : 'user-round', 'w-5 h-5') }}
           @if($unread > 0)<span class="absolute -top-0.5 -end-0.5 min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-pink-500 text-white text-[0.65rem] font-bold leading-[1.1rem] text-center">{{ $unread > 9 ? '9+' : $unread }}</span>@elseif($signedIn)<span class="absolute top-1.5 end-1.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-ink-900"></span>@endif
