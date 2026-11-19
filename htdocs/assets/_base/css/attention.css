@@ -618,3 +618,15 @@ html.dlg-open{overflow:hidden}
 }
 @media(min-width:1024px){.w5-tabbar{display:none}}
 @media print{.w5-tabbar{display:none!important}}
+
+/* ---------- Card media (indexed images, optional carousel) ---------- */
+.card-media{display:block;background:rgba(124,58,237,.12)}
+.card-carousel>img{opacity:0;transition:opacity .5s ease}
+.card-carousel>img.is-active{opacity:1}
+.card-car-btn{position:absolute;top:50%;transform:translateY(-50%);width:1.9rem;height:1.9rem;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;background:rgba(7,7,17,.55);color:#fff;opacity:0;transition:opacity .2s;z-index:2}
+.card-carousel:hover .card-car-btn,.card-carousel:focus-within .card-car-btn{opacity:1}
+@media(hover:none){.card-car-btn{opacity:.85}}
+.card-car-dots{position:absolute;bottom:.5rem;inset-inline:0;display:flex;justify-content:center;gap:.3rem;z-index:2}
+.card-car-dots i{width:.4rem;height:.4rem;border-radius:99px;background:rgba(255,255,255,.55)}
+.card-car-dots i.is-active{width:1.1rem;background:#fff}
+@media(prefers-reduced-motion:reduce){.card-carousel>img{transition:none}}

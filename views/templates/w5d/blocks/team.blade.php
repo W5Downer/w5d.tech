@@ -16,12 +16,15 @@
     @endforeach
     <div class="lg:col-span-2 grid gap-5 sm:grid-cols-2 content-start">
       @foreach($open as $o)
-        <div class="rounded-2xl border border-dashed border-brand-500/50 bg-white/40 dark:bg-white/5 p-5 flex flex-col gap-2">
+        <div class="rounded-2xl border border-dashed border-brand-500/50 bg-white/40 dark:bg-white/5 overflow-hidden flex flex-col">
+          <x-card-media :k="'team:' . ($d['id'] ?? '') . ':open:' . $loop->index" :alt="t($o['title'])" />
+          <div class="p-5 flex flex-col gap-2 flex-1">
           <span class="inline-flex w-10 h-10 items-center justify-center rounded-xl bg-brand-500/10 text-brand-500">{{ icon($o['icon'] ?? 'user-plus', 'w-5 h-5') }}</span>
           <p class="font-display text-2xl font-bold text-brand-600 dark:text-brand-300">{{ t($o['value'] ?? __('ux.be_first')) }}</p>
           <h3 class="font-display font-semibold text-slate-900 dark:text-white">{{ t($o['title']) }}</h3>
           <p class="text-sm text-slate-600 dark:text-slate-400">{{ rich($o['body']) }}</p>
           @if(!empty($o['href']))<a class="btn-link mt-auto" href="{{ link_to($o['href']) }}">{{ t($o['cta']) }} {{ icon('arrow-right', 'w-4 h-4 rtl:rotate-180') }}</a>@endif
+          </div>
         </div>
       @endforeach
     </div>

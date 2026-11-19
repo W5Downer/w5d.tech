@@ -210,6 +210,31 @@
     go(0);
   });
 
+  /* ---------- card image carousels (click/arrow/swipe; auto-advances only without reduced motion, pauses on hover) ---------- */
+  $$('[data-card-carousel]').forEach(function (root) {
+    var sl = $$('[data-cslide]', root), dots = $$('[data-cdot]', root), i = 0, timer = null;
+    function go(n, ev) {
+      if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+      i = (n + sl.length) % sl.length;
+      sl.forEach(function (s, k) { s.classList.toggle('is-active', k === i); if (k) s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+    }
+    function play() { if (reduce) return; stop(); timer = setInterval(function () { go(i + 1); }, 4500); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    var pv = $('[data-cprev]', root), nx = $('[data-cnext]', root);
+    if (pv) pv.addEventListener('click', function (e) { go(i - 1, e); });
+    if (nx) nx.addEventListener('click', function (e) { go(i + 1, e); });
+    root.addEventListener('mouseenter', stop); root.addEventListener('mouseleave', play);
+    root.addEventListener('focusin', stop); root.addEventListener('focusout', play);
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) go(i + ((dx < 0) !== (document.documentElement.dir === 'rtl') ? 1 : -1));
+    });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { en[0].isIntersecting ? play() : stop(); }).observe(root); else play();
+  });
+
   /* ---------- sticky CTA (after 40 % scroll) ---------- */
   var sc = $('[data-sticky-cta]');
   if (sc) {
