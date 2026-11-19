@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 shutil.rmtree(os.path.join(ROOT, 'storage/cache/rl'), ignore_errors=True)
 OWNER_USER = os.environ.get('W5D_OWNER_USER', 'owner'); OWNER_PASS = os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')
 ADMIN = '/' + (os.environ.get('W5D_ADMIN_PATH', 'panel-x9z')).strip('/')
-PUBLIC = ['/', '/for/', '/for/investor/', '/for/owner/', '/join/', '/pricing/', '/investors/', '/checkout/', '/subscription/', '/careers/', '/contact/', '/faq/', '/status/', '/macro-works/', '/services/', '/projects/', '/developers/', '/account/login/', '/account/register/', '/account/forgot/', '/trust/', '/join/eligibility/', '/countries/tunisia/', '/how-it-works/', '/about/', '/newsletter/']
+PUBLIC = ['/', '/for/', '/for/investor/', '/for/owner/', '/join/', '/pricing/', '/investors/', '/checkout/', '/subscription/', '/careers/', '/contact/', '/faq/', '/status/', '/macro-works/', '/services/', '/projects/', '/account/login/', '/account/register/', '/account/forgot/', '/trust/', '/join/eligibility/', '/countries/tunisia/', '/how-it-works/', '/about/', '/newsletter/']
 ADMIN_PAGES = ['/', '/applicants/', '/services/', '/progressive-pricing/', '/investors/', '/variables/', '/payments-d17/', '/subscriptions/', '/inbox/', '/audit/', '/system/', '/quality/', '/manager-applications/']
 ok = bad = 0
 JS = """() => {

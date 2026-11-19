@@ -1,0 +1,14 @@
+<?php
+/** Account panels: name => desc + use. */
+$L = fn(string $en, string $fr, string $ar): array => ['en' => $en, 'fr' => $fr, 'ar' => $ar];
+$I = fn($d, $u) => ['desc' => $d, 'use' => $u];
+return [
+    'overview' => $I($L('Dashboard home: key figures and the next best action for your role.', 'Accueil : chiffres clés et prochaine action utile pour votre rôle.', 'الرئيسية: أرقام رئيسية والإجراء التالي لدورك.'), $L('Start here; tiles open the panel with the detail.', 'Commencez ici ; les tuiles ouvrent le panneau détaillé.', 'ابدأ هنا؛ البطاقات تفتح اللوحة التفصيلية.')),
+    'orders' => $I($L('Your pledged parts with schedule and reference.', 'Vos parts engagées avec calendrier et référence.', 'حصصك الملتزم بها بجدولها ومرجعها.'), $L('Open an order to see every date and amount.', 'Ouvrez une commande pour voir chaque date et montant.', 'افتح طلبا لرؤية كل تاريخ ومبلغ.')),
+    'payments' => $I($L('Your D17 payments and verification status.', 'Vos paiements D17 et leur statut de vérification.', 'مدفوعات D17 وحالة التحقق.'), $L('After the D17 transfer, paste the transaction reference. A person verifies it and you are notified.', 'Après le virement D17, collez la référence. Une personne la vérifie et vous êtes notifié.', 'بعد تحويل D17 الصق المرجع. يتحقق شخص ويصلك إشعار.')),
+    'applications' => $I($L('Your applicant file and manager application with status.', 'Votre dossier de candidat et candidature de manager avec statut.', 'ملف المترشح وطلب المدير بحالتهما.'), $L('Statuses move from received to verified or certified; each change notifies you.', 'Les statuts passent de reçu à vérifié ou certifié ; chaque changement vous notifie.', 'تنتقل الحالات من مستلم إلى موثق أو معتمد؛ كل تغيير يخطرك.')),
+    'notifications' => $I($L('Messages from W5D about your account.', 'Messages de W5D concernant votre compte.', 'رسائل W5D عن حسابك.'), $L('Unread items are highlighted; open or clear them.', 'Les non lus sont en évidence ; ouvrez-les ou effacez-les.', 'غير المقروء مميز؛ افتحه أو امسحه.')),
+    'profile' => $I($L('Your name, phone and language.', 'Votre nom, téléphone et langue.', 'اسمك وهاتفك ولغتك.'), $L('Edit and Save; the language also sets e-mails you receive.', 'Modifiez et Enregistrez ; la langue règle aussi vos e-mails.', 'عدّل واحفظ؛ تحدد اللغة لغة بريدك.')),
+    'security' => $I($L('Password and remembered devices.', 'Mot de passe et appareils mémorisés.', 'كلمة المرور والأجهزة المحفوظة.'), $L('Change the password or sign out everywhere.', 'Changez le mot de passe ou déconnectez-vous partout.', 'غيّر كلمة المرور أو اخرج من كل مكان.')),
+    'api' => $I($L('This private documentation for your role.', 'Cette documentation privée pour votre rôle.', 'هذه الوثائق الخاصة لدورك.'), $L('Switch tabs for the developer reference. Only signed-in people can open it.', 'Changez d’onglet pour la référence développeur. Réservé aux personnes connectées.', 'بدّل التبويب لمرجع المطور. للمسجلين فقط.')),
+];

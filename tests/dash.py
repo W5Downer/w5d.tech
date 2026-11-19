@@ -40,7 +40,7 @@ for lang in ('en', 'fr', 'ar'):
     html = urllib.request.urlopen(req).read().decode()
     check(f'hub 200 [{lang}]', s == 200)
     check(f'hub has 7 audience cards [{lang}]', len(re.findall(r'data-hub-card="', html)) == 7, len(re.findall(r'data-hub-card="', html)))
-check('hub links to /developers/', '/developers/' in html)
+check('hub no longer links to the (private) /developers/ page', '/developers/' not in html and '/llms.txt' not in html)
 s, h, b = call(g, 'GET', '/for/')
 check('guest sees no "signed in as" banner', 'data-hub-me' not in b)
 check('hub declaration sentence', 'Everyone sees the limits first' in b)
@@ -50,6 +50,14 @@ for a in AUD:
 check('owner preview says portal', 'admin portal' in call(g, 'GET', '/for/owner/')[2].lower())
 check('investor preview says account', 'inside your account' in call(g, 'GET', '/for/investor/')[2].lower())
 check('admin mount never appears on public pages', M.strip('/') not in call(g, 'GET', '/for/admin/')[2] and M.strip('/') not in call(g, 'GET', '/developers/')[2])
+_s, _h, _b = call(g, 'GET', '/developers/')
+check('guest: /developers/ is private (302 to sign-in, noindex)', _s == 302 and '/account/login/' in _h.get('Location', '') and 'noindex' in _h.get('X-Robots-Tag', ''), (_s, _h.get('Location')))
+for _p in ('/openapi.json', '/api/openapi.json', '/llms.txt', '/llms-full.txt', '/api/agents.json', '/.well-known/agents.json', '/api/docs/developers.json'):
+    _s, _h, _b = call(g, 'GET', _p)
+    check(f'guest: {_p} answers 401, not the docs', _s == 401 and 'noindex' in _h.get('X-Robots-Tag', '') and 'paths' not in _b, _s)
+_s, _h, _b = call(g, 'GET', '/sitemap.xml'); check('sitemap does not list private docs', '/developers/' not in _b and '/agents/' not in _b)
+_s, _h, _b = call(g, 'GET', '/robots.txt'); check('robots disallows the private docs', 'Disallow: /developers/' in _b)
+_s, _h, _b = call(g, 'GET', '/api/price.json'); check('data API stays public', _s == 200)
 
 def account_as(role, label, prefix):
     """Register + verify a throw-away account, give it `role` in the DB, then sign in (so the session carries that role)."""
@@ -83,6 +91,11 @@ for role, marker in (('investor', 'Parts ordered'), ('customer', 'Requests sent'
     check(f'{role}: no portal actions in an account guide', 'payments/review' not in b and 'variables/save' not in b)
     check(f'{role}: public API rows with curl examples', 'curl ' in b and '/api/price.json' in b)
     check(f'{role}: gates listed with flags', 'flags.gate_forms' in b)
+    check(f'{role}: every public op has a description + usage', b.count('data-op="') == 19 and b.count('How to use') >= 19, b.count('data-op="'))
+    check(f'{role}: JS and Python snippets present', 'fetch(' in b and 'requests.get' in b)
+    check(f'{role}: account panels each described', all(f'data-panel="{x}"' in b for x in ('overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api')))
+    check(f'{role}: quick start present', 'Quick start' in b)
+    check(f'{role}: no portal screens or CRUD table in an account guide', 'data-screen=' not in b and 'data-crud=' not in b)
     s, h, b = call(c, 'GET', '/account/api/?as=developer')
     check(f'{role}: developer reference tab', s == 200 and 'data-api-guide="developer"' in b)
     s, h, b = call(c, 'GET', '/account/api/?as=owner')
@@ -109,6 +122,8 @@ for role in ('admin', 'leader', 'manager'):
         check('admin: variables/save shown but marked not for role', 'variables/save' in b and 'not for your role' in b)
     if role in ('leader', 'manager'):
         check(f'{role}: payments/review marked not for role', 'not for your role' in b)
+    check(f'{role}: guide lists every screen of its sidebar', b.count('data-screen="') == len([1 for _ in re.findall(r'href="[^"]*"[^>]*aria-current|\\bx\\b', b)]) or b.count('data-screen="') >= 3, b.count('data-screen="'))
+    check(f'{role}: CRUD rights table present', 'data-crud=' in b or role == 'leader')
     s, h, b = call(c, 'GET', M + '/api-docs/?as=owner')
     check(f'{role}: cannot switch to the owner guide', 'data-api-guide="owner"' not in b)
     s, h, b = call(c, 'GET', M + '/variables/')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Smoke test: every public route x en/fr/ar must answer 200 (or expected code). Usage: tests/smoke.sh [base]
 BASE=${1:-http://localhost:8080}; ROOT=$(cd "$(dirname "$0")/.." && pwd); fail=0; n=0
-paths=(/ /join/ /how-it-works/ /countries/tunisia/ /partners/ /investors/ /pricing/ /about/ /ontology/ /careers/ /faq/ /status/ /trust/ /trust/statement/ /join/eligibility/ /checkout/ /subscription/ /sitemap/ /macro-works/ /services/ /projects/ /developers/ /agents/ /api/docs/developers.json /api/docs/agents.json /api/docs/agents/tools.json /llms.txt /llms-full.txt /sitemap.xml /robots.txt /api/index.json /api/price.json /api/kpis.json /api/macros.json /api/services.json /api/projects.json /api/governorates.json /for/ /for/owner/ /for/admin/ /for/leader/ /for/member/ /for/investor/ /for/customer/ /for/user/ /account/login/ /account/register/ /account/forgot/ /security.txt /.well-known/security.txt /humans.txt /manifest.webmanifest /api/openapi.json /api/agents.json /openapi.json /favicon.ico)
+paths=(/ /join/ /how-it-works/ /countries/tunisia/ /partners/ /investors/ /pricing/ /about/ /ontology/ /careers/ /faq/ /status/ /trust/ /trust/statement/ /join/eligibility/ /checkout/ /subscription/ /sitemap/ /macro-works/ /services/ /projects/ /sitemap.xml /robots.txt /api/index.json /api/price.json /api/kpis.json /api/macros.json /api/services.json /api/projects.json /api/governorates.json /for/ /for/owner/ /for/admin/ /for/leader/ /for/member/ /for/investor/ /for/customer/ /for/user/ /account/login/ /account/register/ /account/forgot/ /security.txt /.well-known/security.txt /humans.txt /manifest.webmanifest /favicon.ico)
 gated="/checkout/ /subscription/"
 for f in $ROOT/data/content/macros/*.json; do paths+=("/macro-works/$(basename $f .json)/"); done
 for f in $ROOT/data/content/services/*.json; do paths+=("/services/$(basename $f .json)/"); done
@@ -13,4 +13,10 @@ for l in en fr ar; do for p in "${paths[@]}"; do
   case " $gated " in *" $p "*) if [ "$code" = 302 ] && [[ "$loc" == */account/login/?next=* ]]; then continue; fi;; esac
   if [ "$code" != 200 ]; then echo "[$l] $p -> $code"; fail=$((fail+1)); fi
 done; done
+# private docs: guests never get them (302 for pages, 401 for files), never indexed
+for p in /developers/ /agents/ /openapi.json /api/openapi.json /llms.txt /llms-full.txt /api/agents.json /.well-known/agents.json /api/docs/developers.json /api/docs/agents.json /api/docs/agents/tools.json; do
+  code=$(curl $SMOKE_CURL_OPTS -s -o /dev/null -w '%{http_code}' "$BASE$p"); n=$((n+1))
+  case "$p" in /developers/|/agents/) want=302;; *) want=401;; esac
+  if [ "$code" != "$want" ]; then echo "[private] $p -> $code (want $want)"; fail=$((fail+1)); fi
+done
 echo "checked $n, failed $fail"; [ $fail = 0 ]

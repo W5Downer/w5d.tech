@@ -164,14 +164,134 @@ final class ApiGuide
     /** Gate flags and where the owner switches them. */
     public static function gates(): array { return Gate::map(); }
 
+    /** Descriptions + usage catalog (config/apidocs.php). */
+    public static function docs(): array { static $d; return $d ??= require ROOT . '/config/apidocs.php'; }
+
+    /** Public operations enriched with description, usage, reply shape and JS/Python snippets. */
+    private static function enrichPublic(array $rows): array
+    {
+        $cat = self::docs()['public'];
+        $base = Env::baseUrl() . rtrim(url(''), '/');
+        foreach ($rows as &$r) {
+            $c = $cat[$r['id']] ?? null;
+            $r['desc'] = $c['desc'] ?? self::L($r['summary'], $r['summary'], $r['summary']);
+            $r['use'] = $c['use'] ?? null;
+            $r['returns'] = $c['returns'] ?? '';
+            if ($r['method'] === 'GET') {
+                $u = $base . self::sample($r['path']);
+                $r['js'] = "const r = await fetch('" . $u . "');\nconst data = await r.json();";
+                $r['py'] = "import requests\ndata = requests.get('" . $u . "', timeout=15).json()";
+            } else {
+                $u = $base . $r['path'];
+                $b = self::body($r['id']);
+                $r['js'] = "const r = await fetch('" . $u . "', {\n  method: 'POST',\n  headers: {'Content-Type': 'application/json'},\n  body: JSON.stringify(" . $b . ")\n});\nconst data = await r.json(); // 201, or 422 {errors:{field:msg}}";
+                $r['py'] = "import requests\nr = requests.post('" . $u . "', json=" . $b . ", timeout=15)\nprint(r.status_code, r.json())";
+            }
+        }
+        unset($r);
+        return $rows;
+    }
+
+    /** Session rows enriched with description + usage (portal keys omit the secret mount). */
+    private static function enrichSession(array $groups, string $role): array
+    {
+        $cat = self::docs()['session'];
+        $admin = ltrim(parse_url(admin_url(), PHP_URL_PATH) ?: '', '/');
+        foreach ($groups as &$g) foreach ($g['rows'] as &$r) {
+            $k = (string)$r['path'];
+            if ($admin !== '' && str_starts_with(ltrim($k, '/'), $admin)) $k = substr(ltrim($k, '/'), strlen($admin));
+            $c = $cat[$k] ?? $cat[$r['path']] ?? null;
+            $r['desc'] = $c['desc'] ?? $r['summary'];
+            $r['use'] = $c['use'] ?? null;
+            $r['ok'] = self::allowed($role, (string)$r['perm']);
+        }
+        unset($g, $r);
+        return $groups;
+    }
+
+    /** Portal screens (menus) of a role: description, kind of screen and what the role may do there. */
+    public static function screens(string $aud): array
+    {
+        if (!Dash::inPortal($aud) && $aud !== 'owner') return [];
+        $cat = self::docs();
+        $out = [];
+        foreach (ACL::menus($aud) as $m) {
+            $slug = $m['slug'];
+            $kind = Crud::has($slug) ? 'crud' : (in_array($slug, ['manager-applications', 'subscriptions', 'inbox'], true) ? 'status' : 'table');
+            $out[] = ['slug' => $slug, 'icon' => $m['icon'], 'label' => $m['label'], 'desc' => $cat['screens'][$slug] ?? null, 'kind' => $kind,
+                'how' => $cat['kinds'][$kind] ?? null, 'can' => Crud::has($slug) ? Crud::allowed($aud, $slug) : [], 'scope' => Crud::has($slug) ? (Crud::def($slug)['scope'][$aud] ?? null) : null];
+        }
+        return $out;
+    }
+
+    /** CRUD rights of a role on every resource it can read (generated from config/resources.php + config/roles.php). */
+    public static function crudRights(string $aud): array
+    {
+        if (!Dash::inPortal($aud) && $aud !== 'owner') return [];
+        $out = [];
+        foreach (Crud::defs() as $slug => $d) {
+            if (!ACL::can($aud, $d['perm'])) continue;
+            $out[] = ['slug' => $slug, 'title' => $d['title'], 'table' => $d['table'], 'declared' => $d['actions'], 'can' => Crud::allowed($aud, $slug),
+                'scope' => $d['scope'][$aud] ?? null, 'fields' => array_map(fn($k, $f) => ['name' => $k, 'type' => $f[0], 'label' => $f[1], 'req' => !empty($f['req'])], array_keys($d['fields']), array_values($d['fields']))];
+        }
+        return $out;
+    }
+
+    /** Account panels with description + usage (account roles only). */
+    public static function panels(string $aud): array
+    {
+        if (Dash::inPortal($aud) || $aud === 'developer' || $aud === 'owner') return [];
+        $out = [];
+        foreach (self::docs()['panels'] as $k => $c) $out[] = ['panel' => $k, 'path' => '/account/' . ($k === 'overview' ? '' : $k . '/'), 'desc' => $c['desc'], 'use' => $c['use']];
+        return $out;
+    }
+
+    /** Ordered steps for the audience: the shortest path to get value from the dashboard. */
+    public static function quickstart(string $aud): array
+    {
+        $S = fn(string $en, string $fr, string $ar) => self::L($en, $fr, $ar);
+        $common = [
+            $S('Sign in (or sign up) with the popup in the top bar; the page you were on is kept.', 'Connectez-vous (ou inscrivez-vous) avec la fenêtre de la barre du haut ; la page en cours est conservée.', 'سجّل الدخول (أو أنشئ حسابا) من النافذة في الشريط العلوي؛ تبقى صفحتك الحالية.'),
+        ];
+        $steps = match ($aud) {
+            'owner', 'admin' => [
+                $S('Open a menu in the left sidebar (on phones, the menu button).', 'Ouvrez un menu dans la barre latérale (sur mobile, le bouton menu).', 'افتح قائمة من الشريط الجانبي (وعلى الهاتف زر القائمة).'),
+                $S('Lists with New / Edit / Delete are editable; read-only lists say so at the top. Your allowed actions are shown as badges.', 'Les listes avec Nouveau / Modifier / Supprimer sont modifiables ; les autres l’indiquent en haut. Vos actions permises sont affichées en badges.', 'القوائم التي فيها جديد/تعديل/حذف قابلة للتحرير وغيرها يُذكر أعلاها. إجراءاتك المسموحة تظهر كشارات.'),
+                $S('Every write is logged in Audit Log with your name.', 'Chaque écriture est journalisée dans le journal d’audit à votre nom.', 'كل كتابة تُسجَّل في سجل التدقيق باسمك.'),
+            ],
+            'leader', 'manager' => [
+                $S('Open Teams or Weekly Work from the sidebar.', 'Ouvrez Équipes ou Travail hebdomadaire dans la barre latérale.', 'افتح الفرق أو العمل الأسبوعي من الشريط الجانبي.'),
+                $S('Managers see and edit only their own rows; leaders see all rows in their screens.', 'Les managers ne voient et ne modifient que leurs propres lignes ; les leaders voient toutes les lignes de leurs écrans.', 'يرى المديرون ويعدلون صفوفهم فقط؛ ويرى القادة كل صفوف شاشاتهم.'),
+                $S('An action your role lacks is not shown; calling it anyway answers 403.', 'Une action que votre rôle n’a pas n’est pas affichée ; l’appeler quand même répond 403.', 'الإجراء غير المتاح لدورك لا يظهر؛ واستدعاؤه يردّ 403.'),
+            ],
+            'investor' => [
+                $S('Read today’s price, quote a commitment, then pledge from Pricing or Invest.', 'Lisez le prix du jour, chiffrez un engagement, puis engagez-vous depuis Tarifs ou Investir.', 'اقرأ سعر اليوم وسعّر التزاما ثم التزم من الأسعار أو استثمر.'),
+                $S('Send the D17 transaction reference in Payments; a person verifies it.', 'Envoyez la référence de transaction D17 dans Paiements ; une personne la vérifie.', 'أرسل مرجع عملية D17 في المدفوعات؛ يتحقق منه شخص.'),
+                $S('Pause, resume or cancel a subscription from Orders.', 'Suspendez, reprenez ou annulez un abonnement depuis Commandes.', 'أوقف الاشتراك أو استأنفه أو ألغه من الطلبات.'),
+            ],
+            'customer' => [
+                $S('Browse services and projects, then write to the partners desk.', 'Parcourez services et projets, puis écrivez au bureau des partenaires.', 'تصفح الخدمات والمشاريع ثم راسل مكتب الشركاء.'),
+                $S('Follow your requests in Applications and Notifications.', 'Suivez vos demandes dans Candidatures et Notifications.', 'تابع طلباتك في الطلبات المقدمة والإشعارات.'),
+            ],
+            'developer' => [
+                $S('Start with GET /api/index.json, then read price and KPIs.', 'Commencez par GET /api/index.json, puis lisez prix et indicateurs.', 'ابدأ بـ GET /api/index.json ثم اقرأ السعر والمؤشرات.'),
+                $S('Add ?lang=fr or ar to any GET. Writes are public but limited to 10 per 10 minutes per IP.', 'Ajoutez ?lang=fr ou ar à tout GET. Les écritures sont publiques mais limitées à 10 par 10 minutes et par IP.', 'أضف ?lang=fr أو ar لأي GET. الكتابة عامة لكن محدودة بـ10 كل 10 دقائق لكل IP.'),
+            ],
+            default => [
+                $S('Check your eligibility, then open your applicant file from your account.', 'Vérifiez votre admissibilité, puis ouvrez votre dossier depuis votre compte.', 'افحص أهليتك ثم افتح ملفك من حسابك.'),
+                $S('Follow its status in Applications; each change sends you a notification.', 'Suivez son statut dans Candidatures ; chaque changement vous envoie une notification.', 'تابع حالته في الطلبات المقدمة؛ كل تغيير يرسل لك إشعارا.'),
+            ],
+        };
+        return $aud === 'developer' ? $steps : [...$common, ...$steps];
+    }
+
     /** Everything a view needs. $role is the viewer's role (permissions), $aud the guide shown. */
     public static function build(string $aud, string $role): array
     {
         if (!in_array($aud, self::AUDIENCES, true)) $aud = 'developer';
-        $groups = self::sessionOps($aud);
-        foreach ($groups as &$g) foreach ($g['rows'] as &$r) { $r['ok'] = self::allowed($role, (string)$r['perm']); }
-        unset($g, $r);
-        return ['aud' => $aud, 'intro' => self::intro($aud), 'public' => self::publicOps($aud), 'groups' => $groups, 'notes' => self::notes($aud), 'gates' => self::gates(),
+        return ['aud' => $aud, 'intro' => self::intro($aud), 'quickstart' => self::quickstart($aud), 'public' => self::enrichPublic(self::publicOps($aud)),
+            'groups' => self::enrichSession(self::sessionOps($aud), $role), 'notes' => self::notes($aud), 'gates' => self::gates(),
+            'screens' => self::screens($aud), 'crud' => self::crudRights($aud), 'panels' => self::panels($aud),
             'links' => ['openapi' => url('/api/openapi.json'), 'developers' => url('/developers/'), 'agents' => url('/agents/'), 'llms' => url('/llms.txt')]];
     }
 }

@@ -111,12 +111,19 @@ s, h, t, c = get('/robots.txt')
 check('robots.txt disallows admin/account/pay and lists https sitemap', 'Disallow: /panel-x9z/' in t and 'Disallow: /account/' in t and f'Sitemap: {origin}/sitemap.xml' in t, t[:200])
 s, h, t, c = get('/.well-known/security.txt')
 check('security.txt has Contact + future Expires + https Canonical', s == 200 and 'Contact:' in t and f'Canonical: {origin}/' in t and re.search(r'Expires: (20[2-9]\d)', t) is not None, t[:200])
-for p, ct in (('/manifest.webmanifest', 'json'), ('/api/openapi.json', 'json'), ('/llms.txt', 'text'), ('/humans.txt', 'text')):
+for p, ct in (('/manifest.webmanifest', 'json'), ('/humans.txt', 'text')):
     s, h, t, c = get(p)
     check(f'{p} 200 {ct}', s == 200 and ct in h.get('content-type', ''), f'{s} {h.get("content-type")}')
-s, h, t, c = get('/api/openapi.json')
-try: spec = json.loads(t); check('openapi.json parses and lists paths', len(spec.get('paths', {})) > 5 and all(str(srv.get('url', '')).startswith('https://') for srv in spec.get('servers', [])), str(spec.get('servers')))
-except Exception as e: check('openapi.json parses', False, str(e))
+# API documentation is private: guests get 401 (files) or a sign-in redirect (pages); never indexed, never cached
+for p in ('/api/openapi.json', '/openapi.json', '/llms.txt', '/llms-full.txt', '/api/agents.json', '/.well-known/agents.json', '/api/docs/developers.json'):
+    s, h, t, c = get(p)
+    check(f'{p} is private for guests (401, noindex, no-store)', s == 401 and 'noindex' in h.get('x-robots-tag', '') and 'no-store' in h.get('cache-control', '') and '"paths"' not in t, f'{s} {h.get("x-robots-tag")}')
+s, h, t, c = get('/api/price.json')
+check('/api/price.json (data) stays public', s == 200, s)
+s, h, t, c = get('/sitemap.xml')
+check('sitemap does not list the private docs', '/developers/' not in t and '/agents/' not in t)
+s, h, t, c = get('/robots.txt')
+check('robots.txt disallows the private docs', 'Disallow: /developers/' in t and 'Disallow: /agents/' in t, t[:300])
 
 print('indexing: public pages indexable, private pages noindex')
 for p in ('/account/login/', '/account/register/', '/unsubscribe/', '/panel-x9z/login/'):
