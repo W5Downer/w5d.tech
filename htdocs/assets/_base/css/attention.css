@@ -589,3 +589,15 @@ main .grid > *, .admin-shell .grid > *{min-width:0}
 html.dlg-open{overflow:hidden}
 @keyframes w5-dlg-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){.w5-dialog[open]{animation:none}}
+
+/* ---- Responsive data tables (CRUD lists): rows become labelled cards on phones ---- */
+@media (max-width: 640px) {
+  main table.w5-table.w5-stack { min-width: 0; display: block; }
+  .w5-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .w5-stack tbody, .w5-stack tr, .w5-stack td { display: block; width: 100%; }
+  .w5-stack tr { padding: .6rem .9rem; border-bottom: 1px solid rgba(148,163,184,.3); }
+  .w5-stack td { display: flex; justify-content: space-between; gap: 1rem; padding: .3rem 0; border: 0; text-align: end; overflow-wrap: anywhere; }
+  .w5-stack td::before { content: attr(data-label); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; opacity: .65; text-align: start; flex: 0 0 38%; }
+  [dir=rtl] .w5-stack td { text-align: left; }
+  [dir=rtl] .w5-stack td::before { text-align: right; }
+}

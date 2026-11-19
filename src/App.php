@@ -179,6 +179,11 @@ final class App
         $r->post($m . '/status', [Admin::class, 'setStatus']);
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
+        // CRUD with ACL (src/Crud.php): static segments first, then the generic menu
+        $r->get($m . '/{menu}/new', [Admin::class, 'crudNew']);
+        $r->get($m . '/{menu}/{id}/edit', [Admin::class, 'crudEdit']);
+        $r->post($m . '/{menu}/save', [Admin::class, 'crudSave']);
+        $r->post($m . '/{menu}/delete', [Admin::class, 'crudDelete']);
         $r->get($m . '/{menu}', [Admin::class, 'menu']);
         return $r;
     }

@@ -111,5 +111,9 @@ return [
         'crud_invalid' => 'صحّح الحقول المحددة.', 'crud_missing' => 'السجل غير موجود.', 'crud_readonly' => 'للقراءة فقط لدورك',
         'crud_you_can' => 'يستطيع دورك', 'crud_none' => 'لا سجلات بعد.', 'crud_search' => 'بحث', 'crud_rows' => 'صفوف', 'crud_owner_only' => 'للمالك فقط',
         'docs_title' => 'API والوثائق', 'docs_private' => 'وثائق خاصة. لا يراها إلا من سجّل الدخول.',
+        'f_required' => 'مطلوب', 'f_toolong' => 'طويل جدًا', 'f_invalid' => 'قيمة غير صالحة', 'f_range' => 'النطاق المسموح',
+        'crud_failed' => 'تعذّر الحفظ. حاول مجددًا.', 'crud_in_use' => 'لا يمكن الحذف: السجل قيد الاستخدام.', 'crud_scope' => 'ترى صفوفك فقط.',
+        'crud_back' => 'العودة إلى القائمة', 'crud_new_title' => 'سجل جديد', 'crud_edit_title' => 'تعديل السجل', 'crud_perms' => 'الصلاحيات', 'crud_matrix' => 'الأدوار وما يستطيع كل منها',
+        'crud_read' => 'قراءة', 'crud_create_l' => 'إنشاء', 'crud_update_l' => 'تعديل', 'crud_delete_l' => 'حذف', 'crud_yes' => 'نعم', 'crud_own' => 'صفوفه فقط',
     ],
 ];

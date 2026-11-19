@@ -3,9 +3,12 @@
 return [
     'roles' => [
         'owner'    => ['*'],
-        'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments'],
-        'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports'],
-        'manager'  => ['dashboard', 'teams', 'weekly'],
+        // Read perms gate the menu; "<perm>.create|update|delete" gate each write (see config/resources.php for which writes exist).
+        'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments',
+                       'applicants.update', 'applicants.delete', 'verification.update', 'academies.create', 'academies.update', 'academies.delete', 'teams.create', 'teams.update', 'teams.delete',
+                       'weekly.update', 'clients.create', 'clients.update', 'clients.delete', 'quality.update', 'support.create', 'support.update', 'support.delete'],
+        'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports', 'teams.create', 'teams.update', 'weekly.update', 'quality.update', 'academies.update'],
+        'manager'  => ['dashboard', 'teams', 'weekly', 'teams.update', 'weekly.update'],
         'member'   => ['dashboard'],
         'investor' => ['dashboard', 'investors.self'],
         'customer' => ['dashboard', 'clients.self'],
