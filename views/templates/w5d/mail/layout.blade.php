@@ -33,7 +33,7 @@
   <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="w-card bg-card" style="width:600px;max-width:100%;background:#ffffff;border:1px solid #e2e8f0;border-radius:18px;overflow:hidden;">
     <tr><td bgcolor="#6d4aff" class="px" style="background:#6d4aff;background-image:linear-gradient(135deg,#7c3aed 0%,#6366f1 55%,#06b6d4 100%);padding:22px 32px;text-align:{{ $al }};">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" dir="{{ dir_attr() }}"><tr>
-        <td style="background:#ffffff;border-radius:12px;width:40px;height:40px;text-align:center;font-weight:800;font-size:15px;color:#6d28d9;line-height:40px;">W5</td>
+        <td style="background:#ffffff;border-radius:12px;width:56px;height:40px;text-align:center;line-height:0;"><img src="{{ \W5D\Env::baseUrl() }}{{ asset('images/logo-240.png') }}" width="44" height="21" alt="W5D" style="display:inline-block;border:0;vertical-align:middle;margin:9px 6px;"></td>
         <td style="padding:0 12px;color:#ffffff;font-size:20px;font-weight:700;letter-spacing:.2px;">W5D</td>
         <td style="color:rgba(255,255,255,.85);font-size:12px;padding-top:2px;">{{ __('brand.tagline') }}</td>
       </tr></table>

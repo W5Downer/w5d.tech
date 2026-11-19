@@ -7,9 +7,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3">
     <nav class="nav-solid rounded-2xl flex items-center justify-between px-3 min-[400px]:px-4 sm:px-6 py-3" aria-label="Primary">
       <a href="{{ url('/') }}" class="flex items-center gap-2" aria-label="W5D">
-        <span class="relative inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center shadow-lg shadow-brand-500/30">
-          <span class="font-display font-bold text-white text-sm">W5</span>
-        </span>
+        <img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-8 w-auto shrink-0" decoding="async">
         <span class="font-display font-bold text-lg tracking-tight text-slate-900 dark:text-white">W5D</span>
       </a>
 

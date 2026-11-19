@@ -127,9 +127,9 @@
       "ar": "{{ dates.as_of }}"
      },
      "evidence": {
-      "en": "{{ experts.developers_today }} developers.",
-      "fr": "{{ experts.developers_today }} développeurs.",
-      "ar": "{{ experts.developers_today }} مطوّرًا."
+      "en": "{{ experts.developers_today|devs }}.",
+      "fr": "{{ experts.developers_today|devs }}.",
+      "ar": "{{ experts.developers_today|devs }}."
      }
     },
     {

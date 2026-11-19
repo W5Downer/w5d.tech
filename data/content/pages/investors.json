@@ -180,9 +180,9 @@
    },
    "paragraphs": [
     {
-     "en": "Parts fund the path from today's footprint ({{ experts.developers_today }} developers) toward the design ceiling: certification tasks, reviewer time, manager onboarding, tooling and the weekly work engine.",
-     "fr": "Les parts financent le parcours depuis l'effectif actuel ({{ experts.developers_today }} développeurs) vers le plafond de conception : tâches de certification, temps des évaluateurs, intégration des responsables, outils et moteur de travail hebdomadaire.",
-     "ar": "تموّل الحصص المسار من الوضع الحالي ({{ experts.developers_today }} مطورًا) نحو الحد التصميمي: مهام الاعتماد، ووقت المراجعين، وتأهيل المديرين، والأدوات، ومحرك العمل الأسبوعي."
+     "en": "Parts fund the path from today's footprint ({{ experts.developers_today|devs }}) toward the design ceiling: certification tasks, reviewer time, manager onboarding, tooling and the weekly work engine.",
+     "fr": "Les parts financent le parcours depuis l'effectif actuel ({{ experts.developers_today|devs }}) vers le plafond de conception : tâches de certification, temps des évaluateurs, intégration des responsables, outils et moteur de travail hebdomadaire.",
+     "ar": "تموّل الحصص المسار من الوضع الحالي ({{ experts.developers_today|devs }}) نحو الحد التصميمي: مهام الاعتماد، ووقت المراجعين، وتأهيل المديرين، والأدوات، ومحرك العمل الأسبوعي."
     },
     {
      "en": "Every part is recorded with its date, its unit price and the programme progress at that moment. Your daily subscription is a schedule of such records.",
@@ -522,9 +522,9 @@
      "ar": "لا يُوعَد بأي عائد أو توزيعات أرباح أو قيمة عند إعادة البيع. ودالة التسعير متاحة للعموم."
     },
     {
-     "en": "Experts certified today: {{ d.experts_current }}. The design ceiling is {{ d.experts_target }}.",
-     "fr": "Experts certifiés aujourd’hui : {{ d.experts_current }}. Le plafond prévu est de {{ d.experts_target }}.",
-     "ar": "الخبراء المعتمدون اليوم: {{ d.experts_current }}. الحد الأقصى التصميمي هو {{ d.experts_target }}."
+     "en": "Experts certified today: {{ d.experts_current|first }}. The design ceiling is {{ d.experts_target }}.",
+     "fr": "Experts certifiés aujourd’hui : {{ d.experts_current|first }}. Le plafond prévu est de {{ d.experts_target }}.",
+     "ar": "الخبراء المعتمدون اليوم: {{ d.experts_current|first }}. الحد الأقصى التصميمي هو {{ d.experts_target }}."
     }
    ]
   },

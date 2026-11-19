@@ -16,15 +16,15 @@
   "ar": "المطورون (تونس)"
  },
  "tagline": {
-  "en": "The real delivery capacity today: {{ experts.developers_today }} developers.",
-  "fr": "La capacité réelle de réalisation aujourd’hui : {{ experts.developers_today }} développeurs.",
-  "ar": "القدرة الفعلية على الإنجاز اليوم: {{ experts.developers_today }} مطورًا."
+  "en": "The real delivery capacity today: {{ experts.developers_today|devs }}.",
+  "fr": "La capacité réelle de réalisation aujourd’hui : {{ experts.developers_today|devs }}.",
+  "ar": "القدرة الفعلية على الإنجاز اليوم: {{ experts.developers_today|devs }}."
  },
  "outcome": [
   {
-   "en": "{{ experts.developers_today }} developers deliver in Tunisia today. This is the real footprint, distinct from the design ceiling of {{ d.experts_target }} expert seats.",
-   "fr": "{{ experts.developers_today }} développeurs réalisent des projets en Tunisie aujourd’hui. Il s’agit de la présence réelle, distincte du plafond théorique de {{ d.experts_target }} postes d’experts.",
-   "ar": "{{ experts.developers_today }} مطورًا ينجزون العمل في تونس اليوم. وهذا هو النطاق الفعلي، وهو متميز عن الحد الأقصى التصميمي البالغ {{ d.experts_target }} مقعدًا للخبراء."
+   "en": "Delivery team in Tunisia today: {{ experts.developers_today|devs }}. This is the real footprint, distinct from the design ceiling of {{ d.experts_target }} expert seats.",
+   "fr": "Réalisation en Tunisie aujourd’hui : {{ experts.developers_today|devs }}. Il s’agit de la présence réelle, distincte du plafond théorique de {{ d.experts_target }} postes d’experts.",
+   "ar": "ينجز {{ experts.developers_today|devs }} العمل في تونس اليوم. وهذا هو النطاق الفعلي، وهو متميز عن الحد الأقصى التصميمي البالغ {{ d.experts_target }} مقعدًا للخبراء."
   },
   {
    "en": "Every part sold funds the path from this number toward the ceiling; it does not claim the ceiling is reached.",
@@ -52,9 +52,9 @@
     "ar": "2026-11-15"
    },
    "title": {
-    "en": "{{ experts.developers_today }} developers",
-    "fr": "{{ experts.developers_today }} développeurs",
-    "ar": "{{ experts.developers_today }} مطورًا"
+    "en": "{{ experts.developers_today|devs }}",
+    "fr": "{{ experts.developers_today|devs }}",
+    "ar": "{{ experts.developers_today|devs }}"
    },
    "body": {
     "en": "Dated count.",

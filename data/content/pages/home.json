@@ -74,6 +74,7 @@
         },
         {
           "value": "{{ d.experts_current }}",
+          "zero_label": {"en": "Be the first", "fr": "Soyez le premier", "ar": "كن الأول"},
           "label": {
             "en": "experts certified today",
             "fr": "experts certifiés à ce jour",
@@ -627,9 +628,9 @@
             "ar": "هل رقم {{ d.experts_target }} حقيقي؟"
           },
           "a": {
-            "en": "It is a design equation ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Today {{ experts.developers_today }} developers deliver and {{ d.experts_current }} experts are certified.",
-            "fr": "Il s’agit d’une équation de conception ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Aujourd’hui, {{ experts.developers_today }} développeurs assurent les prestations et {{ d.experts_current }} experts sont certifiés.",
-            "ar": "إنها معادلة تصميمية ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). اليوم، يقدم الخدمات {{ experts.developers_today }} مطورًا، وحصل {{ d.experts_current }} خبيرًا على الاعتماد."
+            "en": "It is a design equation ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Delivery today: {{ experts.developers_today|devs }}. Certification: {{ d.experts_current|certs }}.",
+            "fr": "Il s’agit d’une équation de conception ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). Livraison aujourd’hui : {{ experts.developers_today|devs }}. Certification : {{ d.experts_current|certs }}.",
+            "ar": "إنها معادلة تصميمية ({{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}). التسليم اليوم: {{ experts.developers_today|devs }}. الاعتماد: {{ d.experts_current|certs }}."
           }
         },
         {

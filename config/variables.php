@@ -38,7 +38,7 @@ return [
         'managers_per_service' => 100,
         'team_size'        => 10,
         'current'          => 0,   // overridden by rollups_daily at render
-        'developers_today' => 26,  // real delivery footprint today (Tunisia)
+        'developers_today' => 1,   // real delivery footprint today (Tunisia): the owner, who also manages the team
         'departments'      => 16,
     ],
     'quality' => [

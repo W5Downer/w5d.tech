@@ -139,9 +139,9 @@
       "ar": "ينجز مجموعات المهام من L1 إلى L4، ثم يسلّم وحدات العمل أسبوعيًا إلى مراجع محدد بالاسم."
      },
      "count": {
-      "en": "{{ d.experts_current }} certified today",
-      "fr": "{{ d.experts_current }} certifiés à ce jour",
-      "ar": "{{ d.experts_current }} معتمدون اليوم"
+      "en": "{{ d.experts_current|certs }}",
+      "fr": "{{ d.experts_current|certs }}",
+      "ar": "{{ d.experts_current|certs }}"
      }
     }
    ]
@@ -261,9 +261,9 @@
      "ar": "نتعهّد بمعايير تقييم واضحة، ومراجع محدد بالاسم، ونتيجة شفافة. ولا نتعهّد براتب لوظيفة لم تُعتمد بعد."
     },
     {
-     "en": "Posts are created as certified headcount and funded capacity grow. Today {{ d.experts_current }} experts are certified and {{ experts.developers_today }} developers deliver.",
-     "fr": "Les postes sont créés à mesure que les effectifs certifiés et les capacités financées augmentent. Aujourd’hui, {{ d.experts_current }} experts sont certifiés et {{ experts.developers_today }} développeurs sont en poste.",
-     "ar": "تُستحدث الوظائف مع نمو عدد الكفاءات المعتمدة والقدرات الممولة. اليوم، {{ d.experts_current }} خبيرًا معتمدًا، و{{ experts.developers_today }} مطورًا يباشرون العمل."
+     "en": "Posts are created as certified headcount and funded capacity grow. Today: {{ d.experts_current|certs }}; delivery team: {{ experts.developers_today|devs }}.",
+     "fr": "Les postes sont créés à mesure que les effectifs certifiés et les capacités financées augmentent. Aujourd’hui, {{ d.experts_current|certs }} ; en poste : {{ experts.developers_today|devs }}.",
+     "ar": "تُستحدث الوظائف مع نمو عدد الكفاءات المعتمدة والقدرات الممولة. اليوم، {{ d.experts_current|certs }}، و{{ experts.developers_today|devs }} يباشر العمل."
     }
    ],
    "ctas": [

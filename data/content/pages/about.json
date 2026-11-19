@@ -66,9 +66,9 @@
      "ar": "تتسم بالشفافية بشأن وضعها إلى حدّ تقييد ادعاءاتها: فهي تدرج المسودات والمفاهيم والعناصر الجارية مع تواريخها، وتذكر «بانتظار» حيث لا تتوفر أدلة بعد."
     },
     {
-     "en": "It does not claim that {{ d.experts_target }} experts are active. {{ experts.developers_today }} developers deliver in Tunisia today.",
-     "fr": "Elle ne prétend pas que {{ d.experts_target }} experts sont actifs. {{ experts.developers_today }} développeurs travaillent aujourd’hui en Tunisie.",
-     "ar": "لا تدّعي أن {{ d.experts_target }} خبيرًا نشطون. ويقدّم {{ experts.developers_today }} مطوّرًا خدماتهم في تونس اليوم."
+     "en": "It does not claim that {{ d.experts_target }} experts are active. Delivery team in Tunisia today: {{ experts.developers_today|devs }}.",
+     "fr": "Elle ne prétend pas que {{ d.experts_target }} experts sont actifs. Équipe en activité en Tunisie aujourd’hui : {{ experts.developers_today|devs }}.",
+     "ar": "لا تدّعي أن {{ d.experts_target }} خبيرًا نشطون. ويقدّم {{ experts.developers_today|devs }} الخدمات في تونس اليوم."
     }
    ]
   },

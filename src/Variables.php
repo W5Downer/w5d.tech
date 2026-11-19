@@ -141,9 +141,24 @@ final class Variables
                 'num' => number_format((float)$v, 0, '.', ','),
                 'money' => number_format((float)$v, 2, '.', ',') . ' ' . self::get('money.currency'),
                 'pct' => rtrim(rtrim(number_format((float)$v, 2), '0'), '.') . '%',
+                'first' => (float)$v <= 0 ? __('ux.be_first') : number_format((float)$v, 0, '.', ','),
+                'devs' => self::devs((int)$v),
+                'certs' => (int)$v <= 0 ? __('ux.cert_zero') : ((int)$v === 1 ? __('ux.cert_one') : sprintf(__('ux.cert_many'), (int)$v)),
                 default => is_numeric($v) && !is_string($v) && (float)$v >= 10000 ? number_format((float)$v, 0, '.', ',') : (string)$v,
             };
         }, $s);
+    }
+
+    /** "1 developer" / "N developers" in the active language (Arabic has dual and few forms). */
+    public static function devs(int $n): string
+    {
+        if ($n <= 0) return __('ux.be_first');
+        if ($n === 1) return __('ux.dev_one');
+        if (Lang::current() === 'ar') {
+            if ($n === 2) return __('ux.dev_two');
+            return sprintf($n <= 10 ? __('ux.dev_few') : __('ux.dev_many'), $n);
+        }
+        return sprintf(__('ux.dev_many'), $n);
     }
 
     public static function unresolved(): array { return array_values(array_unique(self::$unresolved)); }

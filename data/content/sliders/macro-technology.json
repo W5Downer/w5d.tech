@@ -17,9 +17,9 @@
     "ar": "طوّر، وأمّن، وانشر"
    },
    "title": {
-    "en": "From {{ experts.developers_today }} developers today to a deliverable-based programme.",
-    "fr": "De {{ experts.developers_today }} développeurs aujourd’hui à un programme fondé sur des livrables.",
-    "ar": "من {{ experts.developers_today }} مطوّرًا اليوم إلى برنامج قائم على المخرجات."
+    "en": "From {{ experts.developers_today|devs }} today to a deliverable-based programme.",
+    "fr": "De {{ experts.developers_today|devs }} aujourd’hui à un programme fondé sur des livrables.",
+    "ar": "من {{ experts.developers_today|devs }} اليوم إلى برنامج قائم على المخرجات."
    },
    "lead": {
     "en": "Twenty-six services from software and security to deployed devices in water plants, farms and clinics, with human approval of every change.",

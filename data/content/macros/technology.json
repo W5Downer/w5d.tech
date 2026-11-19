@@ -48,9 +48,9 @@
    "ar": "التسمية Real 0.5 / Virtual 0.5 اصطلاح تنظيمي، وليست نسبة مقاسة من ساعات العمل."
   },
   {
-   "en": "It is also where W5D already has delivery capacity: {{ experts.developers_today }} developers in Tunisia today.",
-   "fr": "C’est également là que W5D dispose déjà d’une capacité de livraison : {{ experts.developers_today }} développeurs en Tunisie aujourd’hui.",
-   "ar": "وهذا أيضًا هو المجال الذي تمتلك فيه W5D بالفعل القدرة على التنفيذ: {{ experts.developers_today }} مطورًا في تونس اليوم."
+   "en": "It is also where W5D already has delivery capacity: {{ experts.developers_today|devs }} in Tunisia today.",
+   "fr": "C’est également là que W5D dispose déjà d’une capacité de livraison : {{ experts.developers_today|devs }} en Tunisie aujourd’hui.",
+   "ar": "وهذا أيضًا هو المجال الذي تمتلك فيه W5D بالفعل القدرة على التنفيذ: {{ experts.developers_today|devs }} في تونس اليوم."
   }
  ],
  "feeds": {
@@ -59,8 +59,8 @@
   "ar": "جميع وحدات الماكرو عبر الأدوات والبنية التحتية"
  },
  "why": {
-  "en": "{{ experts.developers_today }} developers deliver in Tunisia today. The macro scales that proven capacity before the rest of the ontology.",
-  "fr": "{{ experts.developers_today }} développeurs assurent des livraisons en Tunisie aujourd’hui. La macro développe cette capacité éprouvée avant le reste de l’ontologie.",
-  "ar": "ينفذ {{ experts.developers_today }} مطورًا أعمالًا في تونس اليوم. وتوسّع وحدات الماكرو هذه القدرة المثبتة قبل التوسع إلى بقية الأنطولوجيا."
+  "en": "Delivery team in Tunisia today: {{ experts.developers_today|devs }}. The macro scales that proven capacity before the rest of the ontology.",
+  "fr": "Équipe de livraison en Tunisie aujourd’hui : {{ experts.developers_today|devs }}. La macro développe cette capacité éprouvée avant le reste de l’ontologie.",
+  "ar": "ينفذ {{ experts.developers_today|devs }} أعمالًا في تونس اليوم. وتوسّع وحدات الماكرو هذه القدرة المثبتة قبل التوسع إلى بقية الأنطولوجيا."
  }
 }

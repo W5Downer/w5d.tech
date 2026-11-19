@@ -92,9 +92,9 @@
     }
    ],
    "note": {
-    "en": "{{ d.managers_target }} manager seats exist by design. Today the certified headcount is {{ d.experts_current }}.",
-    "fr": "{{ d.managers_target }} postes de responsable sont prévus dès la conception. Aujourd’hui, l’effectif certifié est de {{ d.experts_current }}.",
-    "ar": "هناك {{ d.managers_target }} منصبًا للمديرين، وهذا مقصود. يبلغ عدد الخبراء المعتمدين اليوم {{ d.experts_current }}."
+    "en": "{{ d.managers_target }} manager seats exist by design. Today: {{ d.experts_current|certs }}.",
+    "fr": "{{ d.managers_target }} postes de responsable sont prévus dès la conception. Aujourd’hui : {{ d.experts_current|certs }}.",
+    "ar": "هناك {{ d.managers_target }} منصبًا للمديرين، وهذا مقصود. اليوم: {{ d.experts_current|certs }}."
    }
   },
   {
@@ -236,9 +236,9 @@
     "ar": "لا وظيفة. لا عائد. **لا تخلط سقف التصميم مع عدد الموظفين.**"
    },
    "lead": {
-    "en": "\"{{ d.experts_target }} experts\" is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: a design equation. Today: {{ experts.developers_today }} developers deliver; {{ d.experts_current }} experts are certified.",
-    "fr": "« {{ d.experts_target }} experts » correspond à {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }} : une équation de conception. Aujourd’hui : {{ experts.developers_today }} développeurs assurent la prestation ; {{ d.experts_current }} experts sont certifiés.",
-    "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: معادلة تصميمية. اليوم، يقدّم {{ experts.developers_today }} مطورًا الخدمات؛ وقد حصل {{ d.experts_current }} خبيرًا على الاعتماد."
+    "en": "\"{{ d.experts_target }} experts\" is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: a design equation. Today: delivery team {{ experts.developers_today|devs }}; {{ d.experts_current|certs }}.",
+    "fr": "« {{ d.experts_target }} experts » correspond à {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }} : une équation de conception. Aujourd’hui : équipe de livraison {{ experts.developers_today|devs }} ; {{ d.experts_current|certs }}.",
+    "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}: معادلة تصميمية. اليوم: فريق التسليم {{ experts.developers_today|devs }}؛ و{{ d.experts_current|certs }}."
    },
    "ctas": [
     {

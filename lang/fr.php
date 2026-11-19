@@ -109,7 +109,7 @@ return [
         'path_status_d' => 'Statut daté de chaque projet', 'path_help' => 'J’ai une question', 'path_help_d' => 'FAQ et bon bureau',
         'choose_title' => 'Où voulez-vous aller ?', 'choose_lead' => 'Cinq chemins courts couvrent presque toutes les visites. Choisissez le vôtre.',
         'notfound_try' => 'Essayez l’un de ces chemins courts', 'tab_home' => 'Accueil', 'tab_invest' => 'Investir', 'tab_find' => 'Chercher',
-        'tab_account' => 'Compte', 'tab_label' => 'Navigation rapide', 'tab_menu' => 'Menu', 'crud_new' => 'Nouveau', 'crud_edit' => 'Modifier', 'crud_delete' => 'Supprimer',
+        'tab_account' => 'Compte', 'be_first' => 'Soyez le premier', 'dev_one' => '1 développeur', 'dev_two' => '2 développeurs', 'dev_few' => '%d développeurs', 'dev_many' => '%d développeurs', 'cert_zero' => 'aucun expert n’est encore certifié : soyez le premier', 'cert_one' => '1 expert est certifié', 'cert_many' => '%d experts sont certifiés', 'tab_label' => 'Navigation rapide', 'tab_menu' => 'Menu', 'crud_new' => 'Nouveau', 'crud_edit' => 'Modifier', 'crud_delete' => 'Supprimer',
         'crud_save' => 'Enregistrer', 'crud_cancel' => 'Annuler', 'crud_actions' => 'Actions',
         'crud_confirm' => 'Supprimer cet enregistrement ? Action irréversible.', 'crud_created' => 'Enregistrement créé.',
         'crud_updated' => 'Enregistrement mis à jour.', 'crud_deleted' => 'Enregistrement supprimé.',
