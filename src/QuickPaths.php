@@ -17,7 +17,7 @@ final class QuickPaths
         $defs = [
             ['invest', 'coins', '/checkout/'],
             ['learn', 'graduation-cap', '/join/eligibility/'],
-            ['manage', 'users', '/careers/managers/'],
+            ['manage', 'users', '/for/leader/'],
             ['client', 'briefcase', '/partners/'],
             ['status', 'activity', '/status/'],
             ['help', 'life-buoy', '/faq/'],

@@ -107,7 +107,7 @@ return [
         'path_account_d' => 'Orders, payments, applications', 'path_status' => 'What is live today?', 'path_status_d' => 'Dated status of every project',
         'path_help' => 'I have a question', 'path_help_d' => 'FAQ and the right desk', 'choose_title' => 'Where do you want to go?',
         'choose_lead' => 'Five short paths cover almost every visit. Pick yours.', 'notfound_try' => 'Try one of these short paths', 'tab_home' => 'Home',
-        'tab_invest' => 'Invest', 'tab_find' => 'Search', 'tab_account' => 'Account', 'tab_menu' => 'Menu', 'crud_new' => 'New', 'crud_edit' => 'Edit',
+        'tab_invest' => 'Invest', 'tab_find' => 'Search', 'tab_account' => 'Account', 'tab_label' => 'Quick navigation', 'tab_menu' => 'Menu', 'crud_new' => 'New', 'crud_edit' => 'Edit',
         'crud_delete' => 'Delete', 'crud_save' => 'Save', 'crud_cancel' => 'Cancel', 'crud_actions' => 'Actions',
         'crud_confirm' => 'Delete this record? This cannot be undone.', 'crud_created' => 'Record created.', 'crud_updated' => 'Record updated.',
         'crud_deleted' => 'Record deleted.', 'crud_denied' => 'Your role cannot do this.', 'crud_invalid' => 'Please fix the highlighted fields.',

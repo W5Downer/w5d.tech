@@ -601,3 +601,20 @@ html.dlg-open{overflow:hidden}
   [dir=rtl] .w5-stack td { text-align: left; }
   [dir=rtl] .w5-stack td::before { text-align: right; }
 }
+
+/* ---------- Mobile bottom tab bar: five short paths within thumb reach (hidden >= 1024px) ---------- */
+.w5-tabbar{position:fixed;inset-inline:0;bottom:0;z-index:45;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.96);border-top:1px solid rgba(15,23,42,.1);backdrop-filter:blur(10px);padding:.25rem .25rem calc(.25rem + env(safe-area-inset-bottom))}
+.dark .w5-tabbar{background:rgba(10,10,24,.96);border-top-color:rgba(255,255,255,.1)}
+.w5-tabbar>a,.w5-tabbar>button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;min-height:3.1rem;padding:.3rem .1rem;border-radius:.7rem;font-size:.68rem;line-height:1.1;font-weight:600;color:#475569;background:none;border:0;cursor:pointer;min-width:0}
+.dark .w5-tabbar>a,.dark .w5-tabbar>button{color:#cbd5e1}
+.w5-tabbar span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w5-tabbar>a[aria-current="page"]{color:#7c3aed;background:rgba(139,92,246,.12)}
+.dark .w5-tabbar>a[aria-current="page"]{color:#bda7ff}
+.w5-tabbar>a:active,.w5-tabbar>button:active{background:rgba(139,92,246,.18)}
+@media(max-width:1023.98px){
+  body:has(.w5-tabbar){padding-bottom:calc(3.7rem + env(safe-area-inset-bottom))}
+  .sticky-cta{bottom:calc(3.5rem + env(safe-area-inset-bottom));padding-bottom:.6rem}
+  .w5d-aside-backdrop{z-index:60}
+}
+@media(min-width:1024px){.w5-tabbar{display:none}}
+@media print{.w5-tabbar{display:none!important}}

@@ -105,7 +105,7 @@ return [
         'path_status_d' => 'الحالة المؤرخة لكل مشروع', 'path_help' => 'لدي سؤال', 'path_help_d' => 'الأسئلة الشائعة والمكتب المناسب',
         'choose_title' => 'إلى أين تريد الذهاب؟', 'choose_lead' => 'خمسة مسارات قصيرة تغطي معظم الزيارات. اختر مسارك.',
         'notfound_try' => 'جرّب أحد هذه المسارات القصيرة', 'tab_home' => 'الرئيسية', 'tab_invest' => 'استثمر', 'tab_find' => 'بحث',
-        'tab_account' => 'الحساب', 'tab_menu' => 'القائمة', 'crud_new' => 'جديد', 'crud_edit' => 'تعديل', 'crud_delete' => 'حذف', 'crud_save' => 'حفظ',
+        'tab_account' => 'الحساب', 'tab_label' => 'تنقل سريع', 'tab_menu' => 'القائمة', 'crud_new' => 'جديد', 'crud_edit' => 'تعديل', 'crud_delete' => 'حذف', 'crud_save' => 'حفظ',
         'crud_cancel' => 'إلغاء', 'crud_actions' => 'إجراءات', 'crud_confirm' => 'حذف هذا السجل؟ لا يمكن التراجع.', 'crud_created' => 'تم إنشاء السجل.',
         'crud_updated' => 'تم تحديث السجل.', 'crud_deleted' => 'تم حذف السجل.', 'crud_denied' => 'دورك لا يسمح بهذا الإجراء.',
         'crud_invalid' => 'صحّح الحقول المحددة.', 'crud_missing' => 'السجل غير موجود.', 'crud_readonly' => 'للقراءة فقط لدورك',

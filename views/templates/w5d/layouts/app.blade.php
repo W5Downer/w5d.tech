@@ -70,6 +70,7 @@
   @yield('sticky')
   @include('partials.footer')
   @include('partials.aside')
+  @include('partials.tabbar')
   @include('partials.auth-dialog')
   @include('partials.quickfind')
   <script src="{{ asset('js/site.js') }}" defer></script>
