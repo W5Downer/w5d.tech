@@ -222,30 +222,6 @@
       "items": [
         {
           "label": {
-            "en": "Developers",
-            "fr": "Développeurs",
-            "ar": "المطورون"
-          },
-          "href": "/developers/"
-        },
-        {
-          "label": {
-            "en": "AI agents",
-            "fr": "Agents IA",
-            "ar": "وكلاء الذكاء الاصطناعي"
-          },
-          "href": "/agents/"
-        },
-        {
-          "label": {
-            "en": "llms.txt",
-            "fr": "llms.txt",
-            "ar": "llms.txt"
-          },
-          "href": "/llms.txt"
-        },
-        {
-          "label": {
             "en": "Sitemap",
             "fr": "Plan du site",
             "ar": "خريطة الموقع"

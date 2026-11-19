@@ -69,6 +69,7 @@
         @if(\W5D\Social::enabled())
         <button type="button" data-aside-open="aside-share" class="max-[359px]:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('share.open') }}" aria-controls="aside-share" aria-haspopup="dialog">{{ icon('share-2', 'w-5 h-5') }}</button>
         @endif
+        <button type="button" data-quick-open class="btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('ux.find') }}" title="{{ __('ux.find_hint') }}">{{ icon('search', 'w-5 h-5') }}</button>
         <button type="button" data-aside-open="aside-user" class="btn-ghost relative rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center {{ $signedIn ? 'text-brand-500' : '' }}" aria-label="{{ __('nav.user') }}" aria-controls="aside-user" aria-haspopup="dialog">
           {{ icon($signedIn ? 'circle-user' : 'user-round', 'w-5 h-5') }}
           @if($unread > 0)<span class="absolute -top-0.5 -end-0.5 min-w-[1.1rem] h-[1.1rem] px-1 rounded-full bg-pink-500 text-white text-[0.65rem] font-bold leading-[1.1rem] text-center">{{ $unread > 9 ? '9+' : $unread }}</span>@elseif($signedIn)<span class="absolute top-1.5 end-1.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-white dark:ring-ink-900"></span>@endif
@@ -80,12 +81,14 @@
           <span data-theme-icon="sun">{{ icon('sun', 'w-5 h-5') }}</span>
           <span data-theme-icon="moon" class="hidden">{{ icon('moon', 'w-5 h-5') }}</span>
         </button>
+        @if(!$signedIn)<a href="{{ url('/account/login/') }}" data-auth-open="login" class="hidden md:inline-flex btn-ghost text-sm !py-2 !px-3">{{ __('ux.sign_in') }}</a>@endif
         <a href="{{ url('/checkout/') }}" class="hidden sm:inline-flex btn-focus text-sm !py-2 !px-4">{{ __('cta.invest') }} {{ icon('arrow-right', 'w-4 h-4 rtl-flip') }}</a>
         <button type="button" data-mobile-toggle class="lg:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.menu') }}" aria-expanded="false" aria-controls="mobileMenu">{{ icon('menu', 'w-5 h-5') }}</button>
       </div>
     </nav>
 
     <div id="mobileMenu" class="menu-panel lg:hidden nav-solid rounded-2xl mt-2 p-4 max-h-[75vh] overflow-y-auto" aria-hidden="true">
+      @if(!$signedIn)<div class="grid grid-cols-2 gap-2 mb-2"><a class="btn-ghost justify-center" href="{{ url('/account/login/') }}" data-auth-open="login">{{ __('ux.sign_in') }}</a><a class="btn-ghost justify-center" href="{{ url('/account/register/') }}" data-auth-open="register">{{ __('ux.sign_up') }}</a></div>@endif
       @foreach($nav['items'] as $item)
         <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mt-3 mb-1 font-semibold">{{ t($item['label']) }}</p>
         @foreach($item['groups'] as $g)

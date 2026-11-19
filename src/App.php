@@ -101,6 +101,7 @@ final class App
         $r->any('/account/login', [Accounts::class, 'login']);
         $r->post('/account/logout', [Accounts::class, 'logout']);
         $r->any('/account/register', [Accounts::class, 'register']);
+        $r->get('/account/modal/{mode}', [Accounts::class, 'modalForm']);
         $r->post('/account/resend', [Accounts::class, 'resend']);
         $r->get('/account/verify/{token}', [Accounts::class, 'verify']);
         $r->any('/account/forgot', [Accounts::class, 'forgot']);

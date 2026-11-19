@@ -460,34 +460,6 @@
           },
           "items": [
             {
-              "icon": "code",
-              "label": {
-                "en": "Developers",
-                "fr": "Développeurs",
-                "ar": "المطورون"
-              },
-              "desc": {
-                "en": "JSON API and OpenAPI",
-                "fr": "API JSON et OpenAPI",
-                "ar": "JSON API وOpenAPI"
-              },
-              "href": "/developers/"
-            },
-            {
-              "icon": "bot",
-              "label": {
-                "en": "AI agents",
-                "fr": "Agents IA",
-                "ar": "وكلاء الذكاء الاصطناعي"
-              },
-              "desc": {
-                "en": "Manifest, tools, llms.txt",
-                "fr": "Manifeste, outils, llms.txt",
-                "ar": "البيان، والأدوات، وllms.txt"
-              },
-              "href": "/agents/"
-            },
-            {
               "icon": "newspaper",
               "label": {
                 "en": "Newsletter",

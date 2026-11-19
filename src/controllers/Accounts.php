@@ -19,8 +19,29 @@ final class Accounts
         return Response::html($html, $status)->withHeaders(['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store']);
     }
 
+    /** True when the request comes from the sign-in/register modal (site.js sends X-W5D-Modal: 1). */
+    private static function modal(): bool { return ($_SERVER['HTTP_X_W5D_MODAL'] ?? '') === '1'; }
+
+    private static function jsonOut(array $data, int $status = 200): Response
+    {
+        return new Response((string)json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $status, ['Content-Type' => 'application/json; charset=utf-8', 'Cache-Control' => 'no-store', 'X-Robots-Tag' => 'noindex, nofollow']);
+    }
+
+    /** Modal requests get JSON instead of the redirect-after-post: success => {ok, redirect|message}; failure => 422 {errors}. */
+    private static function wrap(Response $r): Response
+    {
+        if (!self::modal() || $r->status < 300 || $r->status >= 400) return $r;
+        $f = Session::flash('acct');
+        return self::jsonOut(['ok' => true, 'redirect' => (string)($r->headers['Location'] ?? ''), 'message' => $f ? t($f['msg']) : null, 'kind' => $f['kind'] ?? 'ok']);
+    }
+
     private static function bounce(Request $q, string $back, array $errors): Response
     {
+        if (self::modal()) {
+            $out = [];
+            foreach ($errors as $k => $v) $out[$k] = is_array($v) ? t($v) : (string)$v;
+            return self::jsonOut(['ok' => false, 'errors' => $out, 'resend' => $_SESSION['_resend'] ?? null], 422);
+        }
         $_SESSION['_errors'] = $errors;
         $_SESSION['_old'] = array_map(fn($v) => is_scalar($v) ? (string)$v : '', array_diff_key($q->post, ['_csrf' => 1, 'website' => 1, 'password' => 1, 'password2' => 1, 'current' => 1]));
         return Response::redirect(url($back));
@@ -38,7 +59,9 @@ final class Accounts
     private static function nextQ(?string $n): string { return $n ? '?next=' . rawurlencode($n) : ''; }
 
     /* ======================= sign in ======================= */
-    public static function login(Request $q): Response
+    public static function login(Request $q): Response { return self::wrap(self::loginCore($q)); }
+
+    private static function loginCore(Request $q): Response
     {
         if (Account::signedIn()) return Response::redirect(Account::check() ? Account::home(Account::user()) : admin_url());
         $next = Account::safeNext((string)$q->input('next', ''));
@@ -72,8 +95,20 @@ final class Accounts
         return Response::redirect(url('/'));
     }
 
+    /** GET /account/modal/{login|register}: the sign-in or register form as an HTML fragment for the dialog (fresh CSRF, `next` kept). */
+    public static function modalForm(Request $q): Response
+    {
+        $mode = (string)($q->params['mode'] ?? '');
+        if (!in_array($mode, ['login', 'register'], true) || Account::signedIn()) return Response::html('', 204)->withHeaders(['Cache-Control' => 'no-store']);
+        $next = Account::safeNext((string)$q->input('next', ''));
+        $html = view('partials.auth-modal', ['mode' => $mode, 'next' => $next, 'providers' => OAuth::enabled(), 'errors' => [], 'resend' => null, 'flash' => Session::flash('acct')]);
+        return Response::html($html)->withHeaders(['Cache-Control' => 'no-store', 'X-Robots-Tag' => 'noindex, nofollow']);
+    }
+
     /* ======================= register + verify ======================= */
-    public static function register(Request $q): Response
+    public static function register(Request $q): Response { return self::wrap(self::registerCore($q)); }
+
+    private static function registerCore(Request $q): Response
     {
         if (Account::signedIn()) return Response::redirect(Account::home(Account::user()));
         $next = Account::safeNext((string)$q->input('next', ''));
@@ -103,7 +138,9 @@ final class Accounts
         return Response::redirect(url('/account/login/') . self::nextQ($next));
     }
 
-    public static function resend(Request $q): Response
+    public static function resend(Request $q): Response { return self::wrap(self::resendCore($q)); }
+
+    private static function resendCore(Request $q): Response
     {
         if ($r = self::guard($q, 'acct-resend', '/account/login/', 6, 3600)) return $r;
         $email = mb_strtolower(trim((string)($q->post['email'] ?? '')));

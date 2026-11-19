@@ -321,6 +321,117 @@
     });
   });
 
+
+  /* ---------- auth modal (login / register) + quick-find dialog ----------
+   * Progressive enhancement: every trigger is a real link ([data-auth-open] -> /account/login/ or /register/), so without JS the
+   * full page opens. With JS the same form is fetched as a fragment (GET /account/modal/{mode}) and posted with X-W5D-Modal: 1,
+   * which makes the server answer JSON instead of redirecting. CSRF, honeypot, rate limits and `next` are unchanged. */
+  (function () {
+    var dlg = document.getElementById('authDialog');
+    var body = dlg && $('[data-auth-body]', dlg);
+    var returnTo = null;
+    function openDlg(d) { if (!d) return; returnTo = document.activeElement; if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute('open', ''); document.documentElement.classList.add('dlg-open'); }
+    function closeDlg(d) { if (!d) return; if (d.close) { if (d.open) d.close(); } else d.removeAttribute('open'); document.documentElement.classList.remove('dlg-open'); if (returnTo && returnTo.focus) { try { returnTo.focus(); } catch (e) {} } }
+    function backdropClose(d) { d.addEventListener('mousedown', function (e) { if (e.target === d) closeDlg(d); }); d.addEventListener('close', function () { document.documentElement.classList.remove('dlg-open'); }); }
+    if (dlg) backdropClose(dlg);
+    var qd = document.getElementById('quickDialog');
+    if (qd) backdropClose(qd);
+
+    function modeOf(a) { var m = a.getAttribute('data-auth-open'); if (m === 'login' || m === 'register') return m; var h = a.getAttribute('href') || ''; return /register/.test(h) ? 'register' : 'login'; }
+    function nextOf(a) { var n = a && a.getAttribute('data-next'); if (n) return n; try { var u = new URL(a.href, location.href); return u.searchParams.get('next') || ''; } catch (e) { return ''; } }
+    function load(mode, next) {
+      if (!dlg || !body) return;
+      body.innerHTML = '<p class="text-sm text-slate-500">' + (dlg.getAttribute('data-loading') || '…') + '</p>';
+      fetch((dlg.getAttribute('data-modal-url') || '/account/modal/') + mode + '/' + (next ? '?next=' + encodeURIComponent(next) : ''), { headers: { 'X-W5D-Modal': '1' }, credentials: 'same-origin' })
+        .then(function (r) { if (r.status === 204) { location.reload(); return null; } return r.text(); })
+        .then(function (h) { if (h === null) return; body.innerHTML = h; wire(); var f = $('input:not([type=hidden]):not(.hidden)', body); if (f) f.focus(); })
+        .catch(function () { body.innerHTML = '<p class="text-sm text-red-500">' + (dlg.getAttribute('data-error') || 'Error') + '</p>'; });
+    }
+    function showErr(form, errors) {
+      $$('[data-err]', form.closest('[data-auth-pane]') || form).forEach(function (el) { el.textContent = ''; });
+      $$('.field[aria-invalid]', form).forEach(function (el) { el.removeAttribute('aria-invalid'); });
+      var top = $('[data-form-error]', body); if (top) { top.classList.add('hidden'); top.textContent = ''; }
+      Object.keys(errors || {}).forEach(function (k) {
+        var el = $('[data-err="' + k + '"]', body), inp = $('[name="' + k + '"]', form);
+        if (el) { el.textContent = errors[k]; if (inp) inp.setAttribute('aria-invalid', 'true'); }
+        else if (top) { top.textContent = errors[k]; top.classList.remove('hidden'); }
+      });
+      var first = $('[aria-invalid="true"]', form); if (first) first.focus();
+    }
+    function wire() {
+      $$('[data-auth-open]', body).forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); load(modeOf(a), nextOf(a)); }); });
+      var form = $('[data-auth-form]', body); if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = $('[data-submit]', form), label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = dlg.getAttribute('data-sending') || '…'; }
+        fetch(form.getAttribute('action'), { method: 'POST', body: new URLSearchParams(new FormData(form)), headers: { 'X-W5D-Modal': '1', Accept: 'application/json' }, credentials: 'same-origin' })
+          .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+          .then(function (x) {
+            if (btn) { btn.disabled = false; btn.textContent = label; }
+            if (x.j && x.j.ok) {
+              var loc = x.j.redirect || '';
+              var ok = $('[data-form-ok]', body);
+              if (/\/account\/login\//.test(loc) && !/\/account\/login\/\?next/.test(loc) || (x.j.message && /\/account\/login\//.test(loc))) {
+                if (ok) { ok.textContent = x.j.message || ''; ok.classList.remove('hidden'); }
+                var link = $('[data-auth-open="login"]', body); if (form.parentNode) form.parentNode.removeChild(form);
+                if (!link) setTimeout(function () { load('login', ''); }, 1800);
+                return;
+              }
+              if (ok) { ok.textContent = dlg.getAttribute('data-redirect') || ''; ok.classList.remove('hidden'); }
+              location.assign(loc || location.href);
+              return;
+            }
+            if (x.j && x.j.errors) { showErr(form, x.j.errors); return; }
+            showErr(form, { _form: dlg.getAttribute('data-error') || 'Error' });
+          })
+          .catch(function () { if (btn) { btn.disabled = false; btn.textContent = label; } showErr(form, { _form: dlg.getAttribute('data-error') || 'Error' }); });
+      });
+    }
+    // Upgrade every sign-in / register link that is not already inside the dialog; skip owner portal links and ctrl/cmd-clicks.
+    $$('a[data-auth-open], a[href*="/account/login"], a[href*="/account/register"]').forEach(function (a) {
+      if (!dlg || a.closest('#authDialog') || a.hasAttribute('data-no-modal')) return;
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        e.preventDefault(); closeAsides(); openDlg(dlg); load(modeOf(a), nextOf(a));
+      });
+    });
+    $$('[data-auth-close]').forEach(function (b) { b.addEventListener('click', function () { closeDlg(dlg); }); });
+    if (dlg && /[?&]auth=(login|register)\b/.test(location.search)) { var m = /[?&]auth=(login|register)/.exec(location.search)[1]; openDlg(dlg); load(m, ''); }
+
+    /* quick-find */
+    var qi = qd && $('[data-quick-input]', qd), items = qd ? $$('[data-quick-item]', qd) : [], empty = qd && $('[data-quick-empty]', qd);
+    function filter() {
+      var q = (qi.value || '').trim().toLowerCase(), n = 0;
+      items.forEach(function (li) { var on = !q || li.getAttribute('data-quick-item').indexOf(q) >= 0; li.classList.toggle('hidden', !on); if (on) n++; });
+      if (empty) empty.classList.toggle('hidden', n > 0);
+    }
+    function openQuick() { if (!qd) return; closeAsides(); openDlg(qd); if (qi) { qi.value = ''; filter(); setTimeout(function () { qi.focus(); }, 30); } }
+    if (qi) {
+      qi.addEventListener('input', filter);
+      qi.addEventListener('keydown', function (e) {
+        var vis = items.filter(function (li) { return !li.classList.contains('hidden'); }), a;
+        if (e.key === 'Enter' && vis.length) { a = $('a', vis[0]); if (a) location.assign(a.href); }
+        if (e.key === 'ArrowDown' && vis.length) { e.preventDefault(); a = $('a', vis[0]); if (a) a.focus(); }
+      });
+      $('[data-quick-list]', qd).addEventListener('keydown', function (e) {
+        var a = e.target.closest('a'); if (!a) return; var li = a.parentNode, vis = items.filter(function (x) { return !x.classList.contains('hidden'); }), i = vis.indexOf(li);
+        if (e.key === 'ArrowDown' && vis[i + 1]) { e.preventDefault(); $('a', vis[i + 1]).focus(); }
+        if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) $('a', vis[i - 1]).focus(); else qi.focus(); }
+      });
+    }
+    $$('[data-quick-open]').forEach(function (b) { b.addEventListener('click', openQuick); });
+    $$('[data-quick-close]').forEach(function (b) { b.addEventListener('click', function () { closeDlg(qd); }); });
+    document.addEventListener('keydown', function (e) {
+      var t = e.target, typing = t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
+      if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); openQuick(); }
+      else if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openQuick(); }
+    });
+  })();
+
+  /* ---------- CRUD: confirm before destructive submits ---------- */
+  $$('form[data-confirm]').forEach(function (f) { f.addEventListener('submit', function (e) { if (!window.confirm(f.getAttribute('data-confirm'))) e.preventDefault(); }); });
+
   /* owner/staff panel: phone drawer */
   (function () {
     var nav = document.getElementById('adminNav'), tg = $('[data-admin-nav-toggle]');

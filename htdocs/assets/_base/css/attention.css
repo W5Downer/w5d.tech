@@ -575,3 +575,17 @@ main pre, main code { overflow-wrap: anywhere; }
 
 /* Grid/flex children may shrink below their content width (forms, cards). */
 main .grid > *, .admin-shell .grid > *{min-width:0}
+
+/* ===== Dialogs (sign-in / register modal, quick-find) ===== */
+.w5-dialog{border:0;padding:0;background:transparent;color:inherit;max-width:none;max-height:none;width:100%;height:100%;overflow:hidden;margin:0}
+.w5-dialog:not([open]){display:none}
+.w5-dialog::backdrop{background:rgba(7,7,17,.62);backdrop-filter:blur(4px)}
+.w5-dialog[open]{display:flex;align-items:flex-start;justify-content:center;padding:max(1rem,env(safe-area-inset-top)) 1rem 1rem;overflow-y:auto;animation:w5-dlg-in .18s ease-out}
+@media(min-width:640px){.w5-dialog[open]{align-items:center}}
+.w5-dialog-card{position:relative;width:100%;max-width:26rem;margin-block:auto;border-radius:1.1rem;border:1px solid rgba(148,163,184,.3);background:#fff;color:#1e293b;padding:1.5rem 1.25rem 1.25rem;box-shadow:0 30px 80px -20px rgba(0,0,0,.55)}
+.dark .w5-dialog-card{background:#0b0b18;color:#e2e8f0;border-color:rgba(148,163,184,.2)}
+#quickDialog .w5-dialog-card{max-width:34rem}
+.w5-dialog-x{position:absolute;top:.75rem;inset-inline-end:.75rem}
+html.dlg-open{overflow:hidden}
+@keyframes w5-dlg-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.w5-dialog[open]{animation:none}}

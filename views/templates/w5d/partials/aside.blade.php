@@ -107,8 +107,8 @@
       <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">{{ __('acct.guest_lead') }}</p>
     </div>
     <div class="mt-4 grid gap-2">
-      <a class="btn-focus justify-center" href="{{ url('/account/login/') }}">{{ icon('log-in', 'w-4 h-4') }} {{ __('acct.login') }}</a>
-      <a class="btn-ghost justify-center" href="{{ url('/account/register/') }}">{{ __('acct.register') }}</a>
+      <a class="btn-focus justify-center" href="{{ url('/account/login/') }}" data-auth-open="login">{{ icon('log-in', 'w-4 h-4') }} {{ __('acct.login') }}</a>
+      <a class="btn-ghost justify-center" href="{{ url('/account/register/') }}" data-auth-open="register">{{ __('acct.register') }}</a>
     </div>
     @php $oauth = \W5D\OAuth::enabled(); @endphp
     @if($oauth)

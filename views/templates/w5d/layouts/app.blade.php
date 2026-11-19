@@ -45,7 +45,6 @@
   <meta property="fb:app_id" content="{{ $fb }}">
   @endif
   <link rel="alternate" type="application/json" href="{{ url('/api/index.json') }}" title="W5D API">
-  <link rel="alternate" type="text/plain" href="{{ url('/llms.txt') }}" title="llms.txt">
   <link rel="sitemap" type="application/xml" href="{{ url('/sitemap.xml') }}">
   <link rel="icon" type="image/svg+xml" href="{{ asset('images/favicon.svg') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
@@ -71,6 +70,8 @@
   @yield('sticky')
   @include('partials.footer')
   @include('partials.aside')
+  @include('partials.auth-dialog')
+  @include('partials.quickfind')
   <script src="{{ asset('js/site.js') }}" defer></script>
   @stack('scripts')
 </body>
