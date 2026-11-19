@@ -76,7 +76,7 @@ final class App
         $r->get('/projects/{slug}', [Pages::class, 'project']);
         $r->get('/tn', fn() => Response::redirect(url('/countries/tunisia/'), 301));
         $r->get('/tn/{gov}', [Pages::class, 'governorate']);
-                foreach (['join', 'how-it-works', 'countries/tunisia', 'partners', 'investors', 'pricing', 'about', 'ontology', 'careers', 'faq', 'status', 'trust', 'join/thanks'] as $slug) {
+                foreach (['join', 'how-it-works', 'countries/tunisia', 'partners', 'investors', 'pricing', 'about', 'ontology', 'careers', 'team', 'faq', 'status', 'trust', 'join/thanks'] as $slug) {
             $r->get('/' . $slug, fn(Request $q) => Pages::page($q, $slug));
         }
         $r->get('/for', fn(Request $q) => Pages::page($q, 'for'));

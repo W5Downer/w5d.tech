@@ -15,7 +15,7 @@ return [
     'images' => [
         '/' => 'og-home', '/investors/' => 'og-investors', '/pricing/' => 'og-pricing', '/checkout/' => 'og-checkout', '/subscription/' => 'og-subscription',
         '/how-it-works/' => 'og-how-it-works', '/join/' => 'og-join', '/join/eligibility/' => 'og-join-eligibility', '/app/register/' => 'og-app-register',
-        '/careers/' => 'og-careers', '/careers/managers/' => 'og-careers-managers', '/partners/' => 'og-partners', '/about/' => 'og-about',
+        '/careers/' => 'og-careers', '/careers/managers/' => 'og-careers-managers', '/partners/' => 'og-partners', '/about/' => 'og-about', '/team/' => 'og-team',
         '/ontology/' => 'og-ontology', '/countries/tunisia/' => 'og-countries-tunisia', '/faq/' => 'og-faq', '/contact/' => 'og-contact',
         '/newsletter/' => 'og-newsletter', '/status/' => 'og-status', '/macro-works/' => 'og-macro-works', '/services/' => 'og-services',
         '/projects/' => 'og-projects', '/developers/' => 'og-developers', '/agents/' => 'og-agents', '/sitemap/' => 'og-sitemap', '/for/' => 'og-for',

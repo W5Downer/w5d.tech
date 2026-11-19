@@ -67,6 +67,7 @@ add('og-app-register', 'warm', 'Register', 'Register as an applicant', '/app/reg
 add('og-careers', 'focus', 'Careers', 'A path, not a job', '/careers/', 'a branching path of light splitting into five trails, with small briefcase and compass icons, honest and grounded mood')
 add('og-careers-managers', 'peak', 'Managers', 'Lead a macro work', '/careers/managers/', 'a leader silhouette on a hill overlooking five glowing districts connected by bridges')
 add('og-partners', 'built', 'Partners', 'Build with W5D', '/partners/', 'two interlocking rings of light, one violet one cyan, with a handshake silhouette, institutional tone')
+add('og-team', 'calm', 'Team', 'One owner, one developer, open seats', '/team/', 'a long wooden workbench with one laptop and one chair lit warmly, and several empty chairs waiting in soft shadow')
 add('og-about', 'calm', 'About', 'Who builds W5D', '/about/', 'a workshop table seen from above with blueprint sheets, a compass and a glowing five-sided emblem')
 add('og-ontology', 'sciences', 'Ontology', 'One shared vocabulary', '/ontology/', 'a knowledge graph of labelled nodes forming a brain-like network, cyan and violet edges')
 add('og-countries-tunisia', 'built', 'Tunisia', 'Rooted in Tunisia', '/countries/tunisia/', 'abstract map of Tunisia outlined by glowing dots with a Mediterranean-blue gradient, 24 governorate markers')
