@@ -615,8 +615,8 @@ php bin/lint.php                 # tokens resolve, fr/ar complete, no hard-coded
 php tests/viewcache.php          # unit tests for the view cache (no server)
 bash tests/smoke.sh              # every public route x en/fr/ar must answer 200 (720 checks)
 python3 tests/flows.py           # CSRF, validation, honeypot, rate limit, checkout, subscription, API, pricing, all 30 admin menus
-python3 tests/{auth,d17,dash,gate,mail}.py   # accounts, D17 payments, dashboards, sign-in gate, mail + unsubscribe
-python3 tests/{ui,mobile}.py     # Playwright browser suites
+python3 tests/{auth,d17,dash,gate,mail,crud}.py   # accounts, D17 payments, dashboards, sign-in gate, mail + unsubscribe, CRUD + ACL
+python3 tests/{ui,browser,mobile}.py     # Playwright browser suites (UI, modals/quick-find/tab bar, responsive audit)
 bash tests/production.sh         # FULL production simulation: APP_ENV=production + HTTPS proxy + trusted view cache + every suite + security checks
 php bin/preflight.php            # deploy-readiness check of the CURRENT .env (run on the real host; exit 1 on any FAIL)
 cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)

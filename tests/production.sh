@@ -86,8 +86,10 @@ run "d17 payments"                                  python3 tests/d17.py "$BASE"
 run "dashboards"                                    python3 tests/dash.py "$BASE"
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"
+run "CRUD + ACL"                                    python3 tests/crud.py "$BASE"
 if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
+  run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
   run "mobile audit (Playwright)"                   python3 tests/mobile.py "$BASE"
 fi
 

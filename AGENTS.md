@@ -28,12 +28,14 @@ Docroot is `htdocs/`. A root `.htaccess` + `index.php` exist only for hosts that
 | `python3 tests/flows.py` | CSRF, forms, honeypot, rate limit, checkout, subscription, API, pricing, **30 admin menus**, seed, logout | 69/0 |
 | `python3 tests/auth.py` | register/verify/login/remember/forgot/reset/safety | 37/0 |
 | `python3 tests/d17.py` | D17 payment flow + admin verification + mails | 25/0 |
-| `python3 tests/dash.py` | audience hub, per-role dashboards, API guides | 105/0 |
+| `python3 tests/dash.py` | audience hub, per-role dashboards, API guides | 142/0 |
 | `python3 tests/gate.py` | sign-in gate for forms (`gate_forms` flag, `next` redirect) | 38/0 |
+| `python3 tests/crud.py` | dashboard CRUD with ACL: perms per action, row scope, validation, CSRF, audit | 60/0 |
+| `python3 tests/browser.py` | Playwright: auth modals, quick-find, bottom tab bar, CRUD pages on a phone | 65/0 |
 | `python3 tests/mail.py` | 5 mail types x 3 languages, unsubscribe, List-Unsubscribe, suppression | 88/0 |
 | `python3 tests/ui.py` | Playwright: desktop UI, SEO head, JSON-LD, console errors | 64/0 |
-| `python3 tests/mobile.py` | Playwright: 320/360/390 px, no overflow, public + admin | 330/0 |
-| **`bash tests/production.sh`** | **full production simulation** (see 3.1) | `ALL GREEN`, 17 steps, ~4 min |
+| `python3 tests/mobile.py` | Playwright: 320/360/390 px, no overflow, public + admin | 408/0 |
+| **`bash tests/production.sh`** | **full production simulation** (see 3.1) | `ALL GREEN`, 19 steps, ~4 min |
 
 The functional suites need the dev server on `:8080` and write demo rows (`@example.test` emails) into the dev DB. Never run them against a real database. Run them sequentially (shared rate limiter + `storage/cache/rl`).
 
@@ -117,3 +119,12 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 - Prefer editing existing files; keep docs in `docs/`; add a dated note to `docs/notes/` when a session ends with open items.
 - Never claim a test passed without running it; paste the pass/fail counts. If a number in this file drifts, fix this file in the same commit.
 - Secrets: never print `.env` values, hashes, or `$GSK_TOKEN`.
+
+
+## UX layer, private docs, CRUD (turn 2)
+
+- **API docs are private**: `Docs::gate()` (guests: pages 302 to `/account/login/?next=`, files 401; `noindex`, `no-store`; not in sitemap; Disallow in robots). Files are kept. Docs live in dashboards (portal menu `api-docs`, `/account/api/`), per audience; the catalog is `config/apidocs.php` + `config/apidocs/{public,session,panels,screens}.php`, rendered by `ApiGuide::build()` and `partials/api-guide`. Lists, fields and CRUD rights are generated from code, so they cannot drift. `/api/*.json` data endpoints stay public.
+- **Auth modals**: `<dialog id="authDialog">` fed by `GET /account/modal/{mode}/`; forms post with `X-W5D-Modal: 1` and get JSON. Every trigger is a real link (works without JS).
+- **Short paths**: `QuickPaths` (home path chooser, 404, quick-find index), quick-find dialog (`/`, Ctrl+K, search button), mobile bottom tab bar `partials/tabbar` (Home, Invest, Search, Account, Menu; hidden >= 1024px).
+- **CRUD with ACL**: `config/resources.php` declares resources per menu slug; `src/Crud.php` enforces read perm, action perm `<perm>.create|update|delete`, row scope, validation, `country_id='tn'`, audit. Undeclared actions do not exist for anybody. Phones get stacked-card tables (`.w5-stack`).
+- Adding a new Lucide icon or Tailwind class needs `cd tools && node build.mjs`; then `php bin/view.php cache`.
