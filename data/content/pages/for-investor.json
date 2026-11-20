@@ -88,7 +88,7 @@
       },
       "items": [
         {
-          "icon": "line-chart",
+          "icon": "chart-line",
           "title": {
             "en": "A public price",
             "fr": "Un prix public",

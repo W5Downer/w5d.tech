@@ -128,3 +128,9 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 - **Short paths**: `QuickPaths` (home path chooser, 404, quick-find index), quick-find dialog (`/`, Ctrl+K, search button), mobile bottom tab bar `partials/tabbar` (Home, Invest, Search, Account, Menu; hidden >= 1024px).
 - **CRUD with ACL**: `config/resources.php` declares resources per menu slug; `src/Crud.php` enforces read perm, action perm `<perm>.create|update|delete`, row scope, validation, `country_id='tn'`, audit. Undeclared actions do not exist for anybody. Phones get stacked-card tables (`.w5-stack`).
 - Adding a new Lucide icon or Tailwind class needs `cd tools && node build.mjs`; then `php bin/view.php cache`.
+
+
+## Turn 5 addendum (2026-11-20)
+- Portal now has 36 menus (QCM bank/review/rules, affiliates, certificates added); see `config/roles.php`.
+- New docs: `docs/ARCHITECTURE.md`, `docs/qcm-generation-prompt.md`, `docs/reviews/*` (per-audience reviews + backlog).
+- OPEN: write `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` (see `docs/reviews/README.md`), add a crud case for `qcm-rules`.
