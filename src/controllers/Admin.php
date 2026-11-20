@@ -16,7 +16,7 @@ final class Admin
     ];
     private const STATUS_PERM = ['manager_applications' => 'managers', 'contact_messages' => 'messages', 'investor_subscriptions' => 'investors.read'];
 
-    private static function page(string $view, array $data, int $status = 200): Response
+    public static function page(string $view, array $data, int $status = 200): Response
     {
         ViewEnv::share('canonicalPath', '/');
         $role = Auth::role();
@@ -24,9 +24,9 @@ final class Admin
         return Response::html(view($view, $data), $status)->withHeaders(['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store']);
     }
 
-    private static function flash(string $kind, string $msg): void { $_SESSION['_admin_flash'] = ['kind' => $kind, 'msg' => $msg]; }
+    public static function flash(string $kind, string $msg): void { $_SESSION['_admin_flash'] = ['kind' => $kind, 'msg' => $msg]; }
 
-    private static function audit(string $action, string $subject = '', string $detail = ''): void
+    public static function audit(string $action, string $subject = '', string $detail = ''): void
     {
         try { DB::insert('audit_log', ['country_id' => 'tn', 'actor' => (string)(Auth::user()['name'] ?? 'system'), 'action' => $action, 'subject' => $subject, 'detail' => mb_substr($detail, 0, 1000)]); } catch (\Throwable) {}
     }

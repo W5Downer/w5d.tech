@@ -278,7 +278,7 @@ final class Qcm
         if ($a['status'] === 'submitted') return $a;
         $items = self::items($a);
         $ans = self::answersOf($a);
-        if ($posted !== null && !$late && self::inWindow($a)) $ans = self::clean($items, $posted) + $ans; // posted answers win, autosaved ones fill the gaps
+        if ($posted !== null && !$late && self::inWindow($a)) $ans = self::clean($items, $posted); // the submitted form is the full, final state
         $ok = 0;
         foreach ($items as $it) if (isset($ans[$it['id']]) && self::same($ans[$it['id']], $it['answer'])) $ok++;
         $total = max(1, count($items));

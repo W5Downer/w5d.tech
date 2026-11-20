@@ -26,6 +26,7 @@ final class App
 
     public static function handle(Request $req): Response
     {
+        Affiliate::track($req); // ?ref=CODE: first-touch cookie + one click per visitor per day (never throws)
         try {
             $res = self::router()->dispatch($req);
         } catch (\Throwable $e) {

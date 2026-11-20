@@ -3,15 +3,15 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, ApiGuide, Auth, Csrf, DB, Dash, Env, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
+use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
 
 /** Public accounts: sign in/up, e-mail verification, password reset, social login, user dashboard, D17 payment page. */
 final class Accounts
 {
-    private static function m(string $en, string $fr, string $ar): array { return ['en' => $en, 'fr' => $fr, 'ar' => $ar]; }
-    private static function flash(string $kind, array $msg): void { Session::flash('acct', ['kind' => $kind, 'msg' => $msg]); }
+    public static function m(string $en, string $fr, string $ar): array { return ['en' => $en, 'fr' => $fr, 'ar' => $ar]; }
+    public static function flash(string $kind, array $msg): void { Session::flash('acct', ['kind' => $kind, 'msg' => $msg]); }
 
-    private static function page(Request $q, string $view, array $data = [], int $status = 200): Response
+    public static function page(Request $q, string $view, array $data = [], int $status = 200): Response
     {
         ViewEnv::share('canonicalPath', rtrim($q->path, '/') . '/');
         $html = view($view, $data + ['errors' => $_SESSION['_errors'] ?? [], 'robots' => 'noindex,nofollow', 'flash' => Session::flash('acct'), 'devLink' => $_SESSION['_dev_link'] ?? null]);
@@ -22,7 +22,7 @@ final class Accounts
     /** True when the request comes from the sign-in/register modal (site.js sends X-W5D-Modal: 1). */
     private static function modal(): bool { return ($_SERVER['HTTP_X_W5D_MODAL'] ?? '') === '1'; }
 
-    private static function jsonOut(array $data, int $status = 200): Response
+    public static function jsonOut(array $data, int $status = 200): Response
     {
         return new Response((string)json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $status, ['Content-Type' => 'application/json; charset=utf-8', 'Cache-Control' => 'no-store', 'X-Robots-Tag' => 'noindex, nofollow']);
     }
@@ -35,7 +35,7 @@ final class Accounts
         return self::jsonOut(['ok' => true, 'redirect' => (string)($r->headers['Location'] ?? ''), 'message' => $f ? t($f['msg']) : null, 'kind' => $f['kind'] ?? 'ok']);
     }
 
-    private static function bounce(Request $q, string $back, array $errors): Response
+    public static function bounce(Request $q, string $back, array $errors): Response
     {
         if (self::modal()) {
             $out = [];
@@ -47,7 +47,7 @@ final class Accounts
         return Response::redirect(url($back));
     }
 
-    private static function guard(Request $q, string $bucket, string $back, int $max = 10, int $win = 600): ?Response
+    public static function guard(Request $q, string $bucket, string $back, int $max = 10, int $win = 600): ?Response
     {
         if (!Csrf::check($q)) return self::bounce($q, $back, ['_form' => self::m('Session expired. Reload and try again.', 'Session expirée. Rechargez et réessayez.', 'انتهت الجلسة. أعد التحميل وحاول مجددا.')]);
         if (!empty($q->post['website'])) return Response::redirect(url($back));
@@ -129,6 +129,7 @@ final class Accounts
         if (!$u) {
             $id = Account::create($email, Forms::str($q->post, 'name', 120), $pw, $role, false, lang());
             $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]);
+            Affiliate::attach((int)$id);
             Account::sendVerification($u, $next);
             Mail::staff('New account', ['email' => $email, 'role' => $role]);
         } elseif (!$u['email_verified_at'] && RateLimit::hit('acct-verify:' . sha1($email), 3, 3600)) {
@@ -156,6 +157,7 @@ final class Accounts
         $t = DB::available() ? Account::readToken((string)($q->params['token'] ?? ''), 'verify') : null;
         if (!$t) return self::page($q, 'account.auth', ['mode' => 'notice', 'title' => __('acct.verify'), 'ok' => false, 'text' => self::m('This confirmation link is invalid, expired or already used. Request a new one from the sign-in page.', 'Ce lien de confirmation est invalide, expiré ou déjà utilisé. Demandez-en un nouveau depuis la page de connexion.', 'رابط التأكيد غير صالح أو منتهٍ أو مستعمل. اطلب رابطا جديدا من صفحة الدخول.')], 410);
         DB::q('UPDATE users SET email_verified_at = COALESCE(email_verified_at, CURRENT_TIMESTAMP) WHERE id = ?', [$t['user_id']]);
+        Affiliate::onVerified((int)$t['user_id']);
         Account::notify((int)$t['user_id'], tr3('Welcome to W5D', 'Bienvenue sur W5D', 'مرحبا بك في W5D'), tr3('Your e-mail is confirmed. Complete your profile to get tailored next steps.', 'Votre e-mail est confirmé. Complétez votre profil pour obtenir des étapes adaptées.', 'تم تأكيد بريدك. أكمل ملفك للحصول على خطوات مناسبة.'), '/account/profile/');
         self::flash('ok', self::m('E-mail confirmed. You can sign in now.', 'E-mail confirmé. Vous pouvez vous connecter.', 'تم تأكيد البريد. يمكنك تسجيل الدخول الآن.'));
         return Response::redirect(url('/account/login/') . self::nextQ(Account::safeNext((string)$q->input('next', ''))));
@@ -217,7 +219,7 @@ final class Accounts
             if (!$pr['email'] || !$pr['verified']) { self::flash('error', self::m('The provider did not share a verified e-mail address.', 'Le fournisseur n’a pas partagé d’adresse e-mail vérifiée.', 'لم يشارك المزوّد بريدا إلكترونيا موثّقا.')); return Response::redirect(url('/account/login/')); }
             $u = Account::byEmail($pr['email']);
             if ($u && !in_array($u['role_slug'], Account::SELF_ROLES, true)) { self::flash('error', self::m('Staff accounts must sign in with their password.', 'Les comptes du personnel doivent se connecter avec leur mot de passe.', 'حسابات الفريق تسجّل الدخول بكلمة المرور.')); return Response::redirect(url('/account/login/')); }
-            if (!$u) { $id = Account::create($pr['email'], $pr['name'], null, 'user', true, lang()); $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]); }
+            if (!$u) { $id = Account::create($pr['email'], $pr['name'], null, 'user', true, lang()); $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]); Affiliate::attach((int)$id); Affiliate::onVerified((int)$id); }
             elseif (!$u['email_verified_at']) { DB::q('UPDATE users SET email_verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$u['id']]); $u['email_verified_at'] = date('Y-m-d H:i:s'); }
             DB::q('INSERT OR IGNORE INTO social_accounts(user_id, provider, provider_uid, email) VALUES (?,?,?,?)', [$u['id'], $p, $pr['uid'], $pr['email']]);
             if ($pr['avatar'] && !$u['avatar_url'] && preg_match('#^https://#', (string)$pr['avatar'])) DB::q('UPDATE users SET avatar_url = ? WHERE id = ?', [$pr['avatar'], $u['id']]);
@@ -228,7 +230,7 @@ final class Accounts
     }
 
     /* ======================= dashboard ======================= */
-    private static function need(Request $q): ?Response
+    public static function need(Request $q): ?Response
     {
         if (Account::check()) return null;
         if (Auth::check()) return Response::redirect(admin_url());
@@ -276,12 +278,13 @@ final class Accounts
         if ($r = self::need($q)) return $r;
         $panel = (string)($q->params['panel'] ?? 'overview');
         if ($panel === '') $panel = 'overview';
-        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api'], true)) return Pages::notFound($q);
+        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api', 'qcm', 'certificates', 'affiliate'], true)) return Pages::notFound($q);
         $u = Account::row();
         if (!$u) return Response::redirect(url('/account/login/'));
         $d = self::data($u);
         if ($panel === 'notifications' && $q->isPost() === false && ($d['notes'])) DB::q('UPDATE notifications SET read_at = CURRENT_TIMESTAMP WHERE user_id = ? AND read_at IS NULL', [$u['id']]);
-        $titles = ['overview' => __('acct.overview'), 'orders' => __('acct.orders'), 'payments' => __('acct.payments'), 'applications' => __('acct.applications'), 'notifications' => __('acct.notifications'), 'profile' => __('acct.profile'), 'security' => __('acct.security'), 'api' => tr3('API & documentation', 'API et documentation', 'واجهة API والوثائق')];
+        $titles = ['overview' => __('acct.overview'), 'orders' => __('acct.orders'), 'payments' => __('acct.payments'), 'applications' => __('acct.applications'), 'notifications' => __('acct.notifications'), 'profile' => __('acct.profile'), 'security' => __('acct.security'), 'api' => tr3('API & documentation', 'API et documentation', 'واجهة API والوثائق'),
+            'qcm' => tr3('QCM & practice', 'QCM et entraînement', 'الاختبارات والتدريب'), 'certificates' => tr3('Certificates', 'Certificats', 'الشهادات'), 'affiliate' => tr3('Affiliate programme', 'Programme d’affiliation', 'برنامج الإحالة')];
         $role = (string)($u['role_slug'] ?? 'user');
         $extra = [];
         if ($panel === 'api') {
@@ -290,6 +293,7 @@ final class Accounts
             if (!in_array($as, $tabs, true)) $as = $role;
             $extra = ['guide' => ApiGuide::build($as, $role), 'tabs' => $tabs, 'as' => $as, 'tab_base' => url('/account/api/'), 'role' => $role];
         }
+        if (in_array($panel, ['qcm', 'certificates', 'affiliate'], true)) $extra = Programs::panelData($panel, $u);
         return self::page($q, 'account.panel', ['panel' => $panel, 'title' => $titles[$panel], 'u' => $u, 'd' => $d, 'dash' => Dash::account($u, $d), 'next' => self::nextAction($u, $d), 'price' => Variables::get('price'), 'Lbl' => [Pages::class, 'L']] + $extra);
     }
 
@@ -377,6 +381,7 @@ final class Accounts
         DB::q('UPDATE payments SET status = ?, note = ?, verified_by = ?, verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$status, $note ?: null, (string)(Auth::user()['name'] ?? 'admin'), $id]);
         DB::q('UPDATE investor_orders SET status = ? WHERE ref = ?', [$status === 'verified' ? 'paid' : 'awaiting_payment', $p['order_ref']]);
         $audit('payment.' . $status, $p['ref'], $p['order_ref'] . ' ' . $note);
+        if ($status === 'verified' && $p['email']) Affiliate::onPayment((string)$p['email'], (string)$p['ref'], (float)$p['amount']);
         if ($p['email']) {
             Mail::send($p['email'], 'payment_status', ['name' => $p['full_name'], 'ref' => $p['ref'], 'order_ref' => $p['order_ref'], 'amount' => $p['amount'], 'currency' => $p['currency'], 'status' => $status, 'note' => $note, 'pay_url' => Payments::absLink($p['order_ref'])], $p['lang'] ?? null);
             $u = DB::one('SELECT id FROM users WHERE email = ?', [$p['email']]);
