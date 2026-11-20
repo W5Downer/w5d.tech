@@ -153,7 +153,7 @@ final class Docs
         $b = Env::baseUrl();
         $asOf = (string)Variables::get('dates.as_of');
         $static = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/checkout/' => .9, '/subscription/' => .7, '/for/' => .8, '/careers/' => .6, '/careers/managers/' => .6, '/join/' => .7, '/join/eligibility/' => .6,
-            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/team/' => .6, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
+            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/team/' => .6, '/certification/' => .6, '/affiliate/' => .5, '/certification/verify/' => .4, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
             '/status/' => .5, '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4,
             '/macro-works/' => .8, '/services/' => .7, '/projects/' => .7, '/sitemap/' => .3];
         foreach (Pages::AUDIENCES as $a) $static['/for/' . $a . '/'] = .7;

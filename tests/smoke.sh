@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Smoke test: every public route x en/fr/ar must answer 200 (or expected code). Usage: tests/smoke.sh [base]
 BASE=${1:-http://localhost:8080}; ROOT=$(cd "$(dirname "$0")/.." && pwd); fail=0; n=0
-paths=(/ /join/ /how-it-works/ /countries/tunisia/ /partners/ /investors/ /pricing/ /about/ /team/ /ontology/ /careers/ /faq/ /status/ /trust/ /trust/statement/ /join/eligibility/ /checkout/ /subscription/ /sitemap/ /macro-works/ /services/ /projects/ /sitemap.xml /robots.txt /api/index.json /api/price.json /api/kpis.json /api/macros.json /api/services.json /api/projects.json /api/governorates.json /for/ /for/owner/ /for/admin/ /for/leader/ /for/member/ /for/investor/ /for/customer/ /for/user/ /account/login/ /account/register/ /account/forgot/ /security.txt /.well-known/security.txt /humans.txt /manifest.webmanifest /favicon.ico)
+paths=(/ /join/ /how-it-works/ /countries/tunisia/ /partners/ /investors/ /pricing/ /about/ /team/ /certification/ /certification/verify/ /affiliate/ /ontology/ /careers/ /faq/ /status/ /trust/ /trust/statement/ /join/eligibility/ /checkout/ /subscription/ /sitemap/ /macro-works/ /services/ /projects/ /sitemap.xml /robots.txt /api/index.json /api/price.json /api/kpis.json /api/macros.json /api/services.json /api/projects.json /api/governorates.json /for/ /for/owner/ /for/admin/ /for/leader/ /for/member/ /for/investor/ /for/customer/ /for/user/ /account/login/ /account/register/ /account/forgot/ /security.txt /.well-known/security.txt /humans.txt /manifest.webmanifest /favicon.ico)
 gated="/checkout/ /subscription/"
 for f in $ROOT/data/content/macros/*.json; do paths+=("/macro-works/$(basename $f .json)/"); done
 for f in $ROOT/data/content/services/*.json; do paths+=("/services/$(basename $f .json)/"); done

@@ -161,6 +161,30 @@
       "ar": "الشركاء"
      },
      "href": "/partners/"
+    },
+    {
+     "label": {
+      "en": "Certification and QCM",
+      "fr": "Certification et QCM",
+      "ar": "الاعتماد واختبارات QCM"
+     },
+     "href": "/certification/"
+    },
+    {
+     "label": {
+      "en": "Affiliate programme",
+      "fr": "Programme d’affiliation",
+      "ar": "برنامج الإحالة"
+     },
+     "href": "/affiliate/"
+    },
+    {
+     "label": {
+      "en": "Verify a certificate",
+      "fr": "Vérifier un certificat",
+      "ar": "تحقق من شهادة"
+     },
+     "href": "/certification/verify/"
     }
    ]
   },

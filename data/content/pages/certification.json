@@ -1,0 +1,388 @@
+{
+ "slug": "certification",
+ "title": {
+  "en": "Certification and QCM",
+  "fr": "Certification et QCM",
+  "ar": "الاعتماد واختبارات QCM"
+ },
+ "description": {
+  "en": "Timed multiple-choice rounds for each service and level: practice, certification and upgrade. Every certificate can be verified by anyone.",
+  "fr": "Sessions à choix multiples chronométrées pour chaque service et niveau : entraînement, certification et montée de niveau. Chaque certificat est vérifiable par tous.",
+  "ar": "جولات اختيار من متعدد محددة الوقت لكل خدمة ومستوى: تدريب واعتماد وترقية. يمكن لأي شخص التحقق من كل شهادة."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "cert-hero",
+   "variant": "classic",
+   "gradient": "sciences",
+   "eyebrow": {
+    "en": "Certification",
+    "fr": "Certification",
+    "ar": "الاعتماد"
+   },
+   "title": {
+    "en": "Ten questions. Ten minutes. **A certificate anyone can check.**",
+    "fr": "Dix questions. Dix minutes. **Un certificat que chacun peut vérifier.**",
+    "ar": "عشرة أسئلة. عشر دقائق. **وشهادة يستطيع أي شخص التحقق منها.**"
+   },
+   "lead": {
+    "en": "Each of the {{ counts.services }} services has its own question bank. Practise for free, then sit a graded round when you meet the requirements the owner has set for your level.",
+    "fr": "Chacun des {{ counts.services }} services dispose de sa propre banque de questions. Entraînez-vous gratuitement, puis passez une session notée lorsque vous remplissez les conditions fixées par le propriétaire pour votre niveau.",
+    "ar": "لكل خدمة من الخدمات الـ{{ counts.services }} بنك أسئلة خاص بها. تدرّب مجانا ثم اجتز جولة مصحَّحة حين تستوفي الشروط التي حدّدها المالك لمستواك."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open my QCM rounds",
+      "fr": "Ouvrir mes sessions QCM",
+      "ar": "افتح جولاتي"
+     },
+     "href": "/account/qcm/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Verify a certificate",
+      "fr": "Vérifier un certificat",
+      "ar": "تحقق من شهادة"
+     },
+     "href": "/certification/verify/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "id": "cert-purposes",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Three kinds of round",
+    "fr": "Trois types de session",
+    "ar": "ثلاثة أنواع من الجولات"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Practice",
+      "fr": "Entraînement",
+      "ar": "تدريب"
+     },
+     "body": {
+      "en": "Free. A random service at your level, the right answers and explanations shown at the end. No certificate.",
+      "fr": "Gratuit. Un service tiré au hasard à votre niveau, avec les bonnes réponses et explications à la fin. Aucun certificat.",
+      "ar": "مجاني. خدمة عشوائية في مستواك مع عرض الإجابات الصحيحة والشروح في النهاية. دون شهادة."
+     },
+     "meta": {
+      "en": "Free",
+      "fr": "Gratuit",
+      "ar": "مجاني"
+     }
+    },
+    {
+     "title": {
+      "en": "Certification",
+      "fr": "Certification",
+      "ar": "اعتماد"
+     },
+     "body": {
+      "en": "A graded round that can issue a certificate. It may require a minimum level, a practice score, a task or a number of affiliates.",
+      "fr": "Une session notée pouvant délivrer un certificat. Elle peut exiger un niveau minimal, un score d’entraînement, une tâche ou un nombre d’affiliés.",
+      "ar": "جولة مصحَّحة قد تُصدر شهادة. وقد تتطلب حدا أدنى للمستوى أو نتيجة تدريب أو مهمة أو عددا من المُحالين."
+     },
+     "meta": {
+      "en": "Graded",
+      "fr": "Notée",
+      "ar": "مصحَّحة"
+     }
+    },
+    {
+     "title": {
+      "en": "Upgrade",
+      "fr": "Montée de niveau",
+      "ar": "ترقية"
+     },
+     "body": {
+      "en": "A graded round at the next level for an existing certificate holder. A fee for a new attempt may apply, set by the owner.",
+      "fr": "Une session notée au niveau supérieur pour un titulaire de certificat. Des frais pour une nouvelle tentative peuvent s’appliquer, fixés par le propriétaire.",
+      "ar": "جولة مصحَّحة في المستوى التالي لحامل شهادة. قد تُطبَّق رسوم لمحاولة جديدة يحددها المالك."
+     },
+     "meta": {
+      "en": "Graded",
+      "fr": "Notée",
+      "ar": "مصحَّحة"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "id": "cert-levels",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "{{ cert.levels }} levels, one bank per service",
+    "fr": "{{ cert.levels }} niveaux, une banque par service",
+    "ar": "{{ cert.levels }} مستويات، وبنك لكل خدمة"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "L1 Foundations",
+      "fr": "L1 Fondamentaux",
+      "ar": "L1 الأساسيات"
+     },
+     "body": {
+      "en": "Vocabulary, evidence rules and the boundary of the service.",
+      "fr": "Vocabulaire, règles de preuve et limites du service.",
+      "ar": "المفردات وقواعد الأدلة وحدود الخدمة."
+     }
+    },
+    {
+     "title": {
+      "en": "L2 Practice",
+      "fr": "L2 Pratique",
+      "ar": "L2 الممارسة"
+     },
+     "body": {
+      "en": "Applied judgement on realistic cases.",
+      "fr": "Jugement appliqué sur des cas réalistes.",
+      "ar": "حكم تطبيقي على حالات واقعية."
+     }
+    },
+    {
+     "title": {
+      "en": "L3 Review",
+      "fr": "L3 Revue",
+      "ar": "L3 المراجعة"
+     },
+     "body": {
+      "en": "Checking other people’s work against a rubric.",
+      "fr": "Vérifier le travail d’autrui à l’aide d’une grille.",
+      "ar": "مراجعة عمل الآخرين وفق معيار."
+     }
+    },
+    {
+     "title": {
+      "en": "L4 Lead",
+      "fr": "L4 Direction",
+      "ar": "L4 القيادة"
+     },
+     "body": {
+      "en": "Method, risk and sign-off for a team.",
+      "fr": "Méthode, risque et validation pour une équipe.",
+      "ar": "المنهج والمخاطر والاعتماد لفريق."
+     }
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "cert-rules",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "How a round is scored",
+    "fr": "Comment une session est notée",
+    "ar": "كيف تُصحَّح الجولة"
+   },
+   "paragraphs": [
+    {
+     "en": "A question with one right answer scores when you pick it. A question with several right answers scores only when you tick exactly the right set: a partly right answer scores zero. The pass mark is shown on every round.",
+     "fr": "Une question à réponse unique rapporte un point si vous la choisissez. Une question à réponses multiples ne rapporte que si vous cochez exactement le bon ensemble : une réponse partielle vaut zéro. Le seuil de réussite est affiché sur chaque session.",
+     "ar": "السؤال بإجابة واحدة يُحتسب إذا اخترتها. والسؤال بعدة إجابات صحيحة لا يُحتسب إلا إذا حدّدت المجموعة الصحيحة تماما: الإجابة الجزئية تساوي صفرا. تظهر نسبة النجاح في كل جولة."
+    },
+    {
+     "en": "The timer is kept by the server. Your answers are saved as you go; when time ends the round closes and is scored with what was saved. In graded rounds the right answers are not revealed, so the bank stays fair for the next person.",
+     "fr": "Le chronomètre est tenu par le serveur. Vos réponses sont enregistrées au fil de l’eau ; à la fin du temps, la session est close et notée avec ce qui a été enregistré. Dans les sessions notées, les bonnes réponses ne sont pas révélées, afin que la banque reste équitable pour la personne suivante.",
+     "ar": "يحتفظ الخادم بالمؤقت. تُحفظ إجاباتك أثناء التقدم، وعند انتهاء الوقت تُغلق الجولة وتُصحَّح بما حُفظ. لا تُكشف الإجابات الصحيحة في الجولات المصحَّحة ليبقى البنك عادلا للشخص التالي."
+    },
+    {
+     "en": "A certificate is valid for {{ cert.validity_months }} months. Its code can be checked by anyone; the public record shows the service, level and dates and masks the holder’s name.",
+     "fr": "Un certificat est valable {{ cert.validity_months }} mois. Son code peut être vérifié par tous ; la fiche publique indique le service, le niveau et les dates, et masque le nom du titulaire.",
+     "ar": "الشهادة صالحة {{ cert.validity_months }} شهرا. يمكن لأي شخص التحقق من رمزها، ويعرض السجل العام الخدمة والمستوى والتواريخ ويخفي اسم الحامل."
+    },
+    {
+     "en": "A certificate proves that you passed a round at a date. It is not a licence, a degree or a promise of a post.",
+     "fr": "Un certificat prouve que vous avez réussi une session à une date donnée. Ce n’est ni une licence, ni un diplôme, ni la promesse d’un poste.",
+     "ar": "تثبت الشهادة أنك نجحت في جولة بتاريخ معين. وهي ليست رخصة ولا شهادة جامعية ولا وعدا بمنصب."
+    }
+   ]
+  },
+  {
+   "type": "definitions",
+   "id": "cert-conditions",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "Requirements the owner can set",
+    "fr": "Conditions que le propriétaire peut fixer",
+    "ar": "شروط يمكن للمالك تحديدها"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "Minimum level",
+      "fr": "Niveau minimal",
+      "ar": "الحد الأدنى للمستوى"
+     },
+     "def": {
+      "en": "A certificate at a lower level first.",
+      "fr": "Un certificat de niveau inférieur d’abord.",
+      "ar": "شهادة من مستوى أدنى أولا."
+     }
+    },
+    {
+     "term": {
+      "en": "Practice score",
+      "fr": "Score d’entraînement",
+      "ar": "نتيجة التدريب"
+     },
+     "def": {
+      "en": "A best practice score before a graded round.",
+      "fr": "Un meilleur score d’entraînement avant une session notée.",
+      "ar": "أفضل نتيجة تدريب قبل جولة مصحَّحة."
+     }
+    },
+    {
+     "term": {
+      "en": "Task",
+      "fr": "Tâche",
+      "ar": "مهمة"
+     },
+     "def": {
+      "en": "A short deliverable reviewed by a person.",
+      "fr": "Un court livrable examiné par une personne.",
+      "ar": "منتج قصير تراجعه جهة بشرية."
+     }
+    },
+    {
+     "term": {
+      "en": "Affiliates",
+      "fr": "Affiliés",
+      "ar": "المُحالون"
+     },
+     "def": {
+      "en": "A number of confirmed referred accounts.",
+      "fr": "Un nombre de comptes parrainés confirmés.",
+      "ar": "عدد من الحسابات المُحالة المؤكدة."
+     }
+    },
+    {
+     "term": {
+      "en": "Fee",
+      "fr": "Frais",
+      "ar": "رسوم"
+     },
+     "def": {
+      "en": "A paid pass for a new round, verified like any other payment.",
+      "fr": "Un accès payant pour une nouvelle session, vérifié comme tout autre paiement.",
+      "ar": "تصريح مدفوع لجولة جديدة يُتحقق منه كأي دفع آخر."
+     }
+    },
+    {
+     "term": {
+      "en": "Waiting time",
+      "fr": "Délai d’attente",
+      "ar": "مدة الانتظار"
+     },
+     "def": {
+      "en": "A pause between attempts and a daily limit.",
+      "fr": "Une pause entre les tentatives et une limite quotidienne.",
+      "ar": "فترة بين المحاولات وحد يومي."
+     }
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "cert-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Certification questions",
+    "fr": "Questions sur la certification",
+    "ar": "أسئلة عن الاعتماد"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Can I choose the service?",
+      "fr": "Puis-je choisir le service ?",
+      "ar": "هل أختار الخدمة؟"
+     },
+     "a": {
+      "en": "Rounds draw a random service at your level, so the result reflects the whole level and not one favourite topic. The owner can also target a round at one service.",
+      "fr": "Les sessions tirent un service au hasard à votre niveau, afin que le résultat reflète le niveau entier et non un sujet préféré. Le propriétaire peut aussi cibler une session sur un service.",
+      "ar": "تسحب الجولات خدمة عشوائية في مستواك ليعكس الناتج المستوى كله لا موضوعا مفضلا. ويمكن للمالك أيضا تخصيص جولة لخدمة بعينها."
+     }
+    },
+    {
+     "q": {
+      "en": "What if the timer ends?",
+      "fr": "Que se passe-t-il si le chronomètre se termine ?",
+      "ar": "ماذا لو انتهى المؤقت؟"
+     },
+     "a": {
+      "en": "The round closes and is scored with the answers already saved.",
+      "fr": "La session est close et notée avec les réponses déjà enregistrées.",
+      "ar": "تُغلق الجولة وتُصحَّح بالإجابات المحفوظة."
+     }
+    },
+    {
+     "q": {
+      "en": "How does someone check my certificate?",
+      "fr": "Comment quelqu’un vérifie-t-il mon certificat ?",
+      "ar": "كيف يتحقق شخص من شهادتي؟"
+     },
+     "a": {
+      "en": "With the code, on the verification page or through the public JSON endpoint. The name is masked.",
+      "fr": "Avec le code, sur la page de vérification ou via le point d’accès JSON public. Le nom est masqué.",
+      "ar": "بالرمز في صفحة التحقق أو عبر نقطة JSON العامة. الاسم مخفي."
+     }
+    },
+    {
+     "q": {
+      "en": "Can a certificate be withdrawn?",
+      "fr": "Un certificat peut-il être retiré ?",
+      "ar": "هل يمكن سحب شهادة؟"
+     },
+     "a": {
+      "en": "Yes. If it was issued in error or obtained unfairly it is revoked, and the public record then says so.",
+      "fr": "Oui. S’il a été délivré par erreur ou obtenu de façon déloyale, il est révoqué et la fiche publique l’indique.",
+      "ar": "نعم. إن صدرت بالخطأ أو نيلت بغير وجه حق تُلغى ويذكر السجل العام ذلك."
+     }
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "cert-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Start with a **free practice round.**",
+    "fr": "Commencez par un **entraînement gratuit.**",
+    "ar": "ابدأ **بجولة تدريب مجانية.**"
+   },
+   "body": {
+    "en": "You need an account. A practice round costs nothing and teaches you the format.",
+    "fr": "Un compte est nécessaire. Un entraînement ne coûte rien et vous apprend le format.",
+    "ar": "تحتاج إلى حساب. التدريب بلا مقابل ويعلّمك الصيغة."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open my QCM rounds",
+      "fr": "Ouvrir mes sessions QCM",
+      "ar": "افتح جولاتي"
+     },
+     "href": "/account/qcm/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}
