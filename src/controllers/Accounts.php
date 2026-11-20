@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
+use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Gateways, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
 
 /** Public accounts: sign in/up, e-mail verification, password reset, social login, user dashboard, D17 payment page. */
 final class Accounts
@@ -339,55 +339,75 @@ final class Accounts
         return Response::redirect(url('/account/security/'));
     }
 
-    /* ======================= D17 payment page ======================= */
+    /* ======================= payment page (every method) ======================= */
     public static function pay(Request $q): Response
     {
         $ref = (string)($q->params['ref'] ?? '');
         $sig = (string)$q->input('s', '');
-        $o = preg_match('/^ORD-[A-F0-9]{8}$/', $ref) && Payments::enabled() ? DB::one('SELECT o.*, i.full_name, i.email, i.phone FROM investor_orders o JOIN investors i ON i.id = o.investor_id WHERE o.ref = ?', [$ref]) : null;
+        $o = preg_match('/^ORD-[A-F0-9]{8}$/', $ref) ? DB::one('SELECT o.*, i.full_name, i.email, i.phone FROM investor_orders o JOIN investors i ON i.id = o.investor_id WHERE o.ref = ?', [$ref]) : null;
         if (!$o || !Secret::verify('pay:' . $ref, $sig)) return Pages::notFound($q);
         $p = DB::one('SELECT * FROM payments WHERE order_ref = ? ORDER BY id DESC', [$ref]);
-        if (!$p) return Pages::notFound($q);
+        if (!$p || !Gateways::def((string)$p['method'])) return Pages::notFound($q);
+        $m = (string)$p['method'];
+        $online = Gateways::online($m);
+        // A method the owner has switched off since the order was placed can no longer be paid; a verified payment stays viewable.
+        if (!Gateways::enabled($m) && $p['status'] !== 'verified') return Pages::notFound($q);
         $back = '/pay/' . $ref . '/?s=' . $sig;
         if ($q->isPost()) {
             if ($r = self::guard($q, 'pay-submit', $back, 12, 3600)) return $r;
+            if ($online) {
+                // "Pay now" / "Try again": (re)create the hosted payment, then send the buyer to the provider.
+                if ($p['status'] === 'verified') return Response::redirect(url($back));
+                if (($q->post['do'] ?? '') === 'check' && $p['provider_ref']) { Payments::sync($p, 'buyer-recheck'); return Response::redirect(url($back)); }
+                $url = ($p['status'] === 'pending' && $p['gateway_url'] && $p['gateway_status'] === 'started' && $p['started_at'] && time() - (int)strtotime($p['started_at'] . ' UTC') < 600) ? $p['gateway_url'] : null;
+                if (!$url) $url = Payments::begin($p, ['name' => $o['full_name'], 'email' => $o['email'], 'phone' => $o['phone']]);
+                if (!$url) return self::bounce($q, $back, ['_form' => self::m('The payment page could not be opened. Try again in a moment or choose another method.', 'La page de paiement n’a pas pu s’ouvrir. Réessayez dans un instant ou choisissez un autre moyen.', 'تعذّر فتح صفحة الدفع. حاول بعد لحظات أو اختر وسيلة أخرى.')]);
+                return Response::redirect($url);   // external hosted page; the provider is not in form-action because this is a 302, not a form post
+            }
             $e = [];
-            $gsm = Payments::tnGsm((string)($q->post['sender_gsm'] ?? ''));
-            if (!$gsm) $e['sender_gsm'] = self::m('D17 is for Tunisian numbers only: use +216 followed by 8 digits.', 'D17 est réservé aux numéros tunisiens : +216 suivi de 8 chiffres.', 'D17 للأرقام التونسية فقط: +216 متبوعا بـ 8 أرقام.');
+            $gsm = null;
+            if ($m === 'd17') {
+                $gsm = Payments::tnGsm((string)($q->post['sender_gsm'] ?? ''));
+                if (!$gsm) $e['sender_gsm'] = self::m('D17 is for Tunisian numbers only: use +216 followed by 8 digits.', 'D17 est réservé aux numéros tunisiens : +216 suivi de 8 chiffres.', 'D17 للأرقام التونسية فقط: +216 متبوعا بـ 8 أرقام.');
+            } else {
+                $gsm = mb_substr(trim((string)($q->post['sender_gsm'] ?? '')), 0, 60);
+                if ($gsm === '') $e['sender_gsm'] = self::m('Enter the name or account of the sender.', 'Saisissez le nom ou le compte de l’émetteur.', 'أدخل اسم أو حساب المرسل.');
+            }
             $txn = strtoupper(trim((string)($q->post['txn_ref'] ?? '')));
-            if (!preg_match('/^[A-Z0-9\-]{6,32}$/', $txn)) $e['txn_ref'] = self::m('Enter the D17 transaction reference (6 to 32 letters or digits).', 'Saisissez la référence de transaction D17 (6 à 32 lettres ou chiffres).', 'أدخل مرجع عملية D17 (من 6 إلى 32 حرفا أو رقما).');
+            if (!preg_match('/^[A-Z0-9\-]{6,32}$/', $txn)) $e['txn_ref'] = self::m('Enter the transaction reference (6 to 32 letters or digits).', 'Saisissez la référence de transaction (6 à 32 lettres ou chiffres).', 'أدخل مرجع العملية (من 6 إلى 32 حرفا أو رقما).');
             if ($p['status'] === 'verified') $e['_form'] = self::m('This payment is already verified.', 'Ce paiement est déjà vérifié.', 'تم التحقق من هذه الدفعة مسبقا.');
-            if (($txn !== '' ? DB::one("SELECT id FROM payments WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']]) : null)) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل مسبقا.');
+            if (($txn !== '' ? DB::one("SELECT id FROM payments WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']]) : null)) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل من قبل.');
             if ($e) return self::bounce($q, $back, $e);
             DB::q("UPDATE payments SET sender_gsm = ?, txn_ref = ?, status = 'pending', note = NULL WHERE id = ?", [$gsm, $txn, $p['id']]);
             $u = DB::one('SELECT id FROM users WHERE email = ?', [$o['email']]);
-            if ($u) Account::notify((int)$u['id'], tr3('D17 reference received', 'Référence D17 reçue', 'تم استلام مرجع D17'), $p['ref'] . ' · ' . $txn, '/account/payments/');
-            Mail::staff('D17 payment to verify', ['payment' => $p['ref'], 'order' => $ref, 'amount' => number_format((float)$p['amount'], 2) . ' ' . $p['currency'], 'sender' => $gsm, 'txn' => $txn]);
+            $nm = Gateways::short($m);
+            if ($u) Account::notify((int)$u['id'], tr3($nm . ' reference received', 'Référence ' . $nm . ' reçue', 'تم استلام مرجع ' . $nm), $p['ref'] . ' · ' . $txn, '/account/payments/');
+            Mail::staff($nm . ' payment to verify', ['payment' => $p['ref'], 'order' => $ref, 'amount' => number_format((float)$p['amount'], 2) . ' ' . $p['currency'], 'sender' => $gsm, 'txn' => $txn]);
             self::flash('ok', self::m('Thank you. An administrator will verify the transfer by hand and we will e-mail you.', 'Merci. Un administrateur vérifiera le virement manuellement et nous vous écrirons.', 'شكرا. سيتحقق مسؤول من التحويل يدويا وسنراسلك.'));
             return Response::redirect(url($back));
         }
         $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]);
-        return self::page($q, 'account.pay', ['title' => __('acct.pay_d17'), 'o' => $o, 'p' => $p, 'd17' => Payments::instructions((float)$p['amount']), 'sig' => $sig]);
+        // A buyer who lands here while the provider has not yet confirmed (webhook still on its way) gets one look-up, rate-limited.
+        if ($online && $p['status'] === 'pending' && $p['provider_ref'] && !empty($q->query['w']) && (!$p['checked_at'] || time() - (int)strtotime($p['checked_at'] . ' UTC') > 6)) { Payments::sync($p, 'pay-page'); $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]); }
+        return self::page($q, 'account.pay', ['title' => Gateways::short($m), 'o' => $o, 'p' => $p, 'm' => $m, 'online' => $online, 'ins' => $online ? null : Gateways::instructions($m, (float)$p['amount']), 'sig' => $sig, 'waiting' => $online && $p['status'] === 'pending' && !empty($q->query['w'])]);
     }
 
     /* ======================= admin: D17 verification + user roles ======================= */
     public static function review(Request $q, callable $audit): Response
     {
         $id = (int)($q->post['id'] ?? 0); $do = (string)($q->post['do'] ?? '');
-        $p = $id > 0 ? DB::one('SELECT p.*, i.full_name, i.email, i.lang FROM payments p LEFT JOIN investors i ON i.id = p.investor_id WHERE p.id = ?', [$id]) : null;
-        if (!$p || !in_array($do, ['verify', 'reject'], true) || $p['status'] === 'verified') return Response::redirect(admin_url('payments-d17/'));
-        $status = $do === 'verify' ? 'verified' : 'rejected';
-        $note = mb_substr(trim((string)($q->post['note'] ?? '')), 0, 300);
-        DB::q('UPDATE payments SET status = ?, note = ?, verified_by = ?, verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$status, $note ?: null, (string)(Auth::user()['name'] ?? 'admin'), $id]);
-        DB::q('UPDATE investor_orders SET status = ? WHERE ref = ?', [$status === 'verified' ? 'paid' : 'awaiting_payment', $p['order_ref']]);
-        $audit('payment.' . $status, $p['ref'], $p['order_ref'] . ' ' . $note);
-        if ($status === 'verified' && $p['email']) Affiliate::onPayment((string)$p['email'], (string)$p['ref'], (float)$p['amount']);
-        if ($p['email']) {
-            Mail::send($p['email'], 'payment_status', ['name' => $p['full_name'], 'ref' => $p['ref'], 'order_ref' => $p['order_ref'], 'amount' => $p['amount'], 'currency' => $p['currency'], 'status' => $status, 'note' => $note, 'pay_url' => Payments::absLink($p['order_ref'])], $p['lang'] ?? null);
-            $u = DB::one('SELECT id FROM users WHERE email = ?', [$p['email']]);
-            if ($u) Account::notify((int)$u['id'], $status === 'verified' ? tr3('Payment verified', 'Paiement vérifié', 'تم التحقق من الدفعة') : tr3('Payment rejected', 'Paiement rejeté', 'تم رفض الدفعة'), $p['ref'] . ' · ' . $p['order_ref'], '/account/payments/');
+        $p = $id > 0 ? DB::one('SELECT p.* FROM payments p WHERE p.id = ?', [$id]) : null;
+        $back = admin_url('payments-d17/');
+        if (!$p || !in_array($do, ['verify', 'reject', 'recheck'], true) || $p['status'] === 'verified') return Response::redirect($back);
+        $by = (string)(Auth::user()['name'] ?? 'admin');
+        if ($do === 'recheck') {
+            $st = Gateways::online((string)$p['method']) && $p['provider_ref'] ? Payments::sync($p, $by . ' (re-check)') : 'error';
+            $_SESSION['_admin_flash'] = ['kind' => $st === 'error' ? 'error' : 'ok', 'msg' => $p['ref'] . ' → provider says: ' . $st];
+            return Response::redirect($back);
         }
-        $_SESSION['_admin_flash'] = ['kind' => 'ok', 'msg' => $p['ref'] . ' → ' . $status];
-        return Response::redirect(admin_url('payments-d17/'));
+        $note = mb_substr(trim((string)($q->post['note'] ?? '')), 0, 300);
+        Payments::settle($id, $do === 'verify', $by, $note);
+        $_SESSION['_admin_flash'] = ['kind' => 'ok', 'msg' => $p['ref'] . ' → ' . ($do === 'verify' ? 'verified' : 'rejected')];
+        return Response::redirect($back);
     }
 }

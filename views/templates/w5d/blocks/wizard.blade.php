@@ -64,11 +64,15 @@
       <aside class="rounded-2xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm space-y-1" role="note">
         <p>{{ __('limits.jobs') }}</p><p>{{ __('limits.returns') }}</p><p class="font-semibold">{{ __('msg.demo') }}</p>
       </aside>
-      @if(\W5D\Payments::enabled())
+      @php $pms = \W5D\Gateways::enabledIds(); @endphp
+      @if($pms)
       <fieldset class="rounded-2xl border border-slate-200 dark:border-white/10 p-4 text-sm">
         <legend class="px-2 font-semibold">{{ __('acct.payments') }}</legend>
-        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="" class="mt-1" @if(old('payment_method') === '') checked @endif @if(old('payment_method', 'x') === 'x') checked @endif><span>{{ __('msg.demo') }}</span></label>
-        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="d17" class="mt-1" @if(old('payment_method') === 'd17') checked @endif><span><strong>D17</strong> · {{ __('acct.pay_title') }}<br><span class="text-xs text-slate-500">{{ __('acct.pay_steps') }}</span></span></label>
+        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="" class="mt-1" @if(old('payment_method', '') === '') checked @endif><span>{{ __('msg.demo') }}</span></label>
+        @foreach($pms as $pm)
+        @php $pd = \W5D\Gateways::def($pm); @endphp
+        <label class="flex items-start gap-3 py-1"><input type="radio" name="payment_method" value="{{ $pm }}" class="mt-1" @if(old('payment_method') === $pm) checked @endif><span><strong>{{ \W5D\Gateways::short($pm) }}</strong> · {{ \W5D\Gateways::online($pm) ? __('acct.pay_online') : __('acct.pay_manual') }}@if(!empty($pd['tn_only'])) · {{ __('acct.pay_tn_only') }}@endif<br><span class="text-xs text-slate-500">{{ \W5D\Gateways::online($pm) ? __('acct.pay_online_steps') : __('acct.pay_steps_generic') }}</span></span></label>
+        @endforeach
         @if(!empty($errors['payment_method']))<p class="text-xs mt-1 text-red-500" role="alert">{{ t($errors['payment_method']) }}</p>@endif
       </fieldset>
       @endif

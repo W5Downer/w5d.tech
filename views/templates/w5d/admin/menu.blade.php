@@ -66,27 +66,29 @@
   @endif
 
 @elseif($v['kind'] === 'payments')
-  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">D17 (Tunisia only) · {{ $v['enabled'] ? 'enabled → ' . $v['gsm'] : 'DISABLED: set PAYMENT_D17_ENABLED=true and PAYMENT_D17_GSM in .env' }}. Check the transfer in your D17 app, then verify or reject. The buyer is e-mailed.</p>
+  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">All payment methods. Manual ones (D17, bank transfer): check the transfer in your app or bank statement, then verify or reject. Online ones (Flouci, Konnect, Paymee) settle by themselves when the provider confirms; use “Re-check” if a webhook never arrived. Keys and switches: <a class="btn-link" href="{{ admin_url('payment-methods/') }}">Payment methods</a>. The buyer is e-mailed on every outcome.</p>
   @if(!empty($v['error']))<p class="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm">{{ $v['error'] }}</p>@endif
   @if(empty($v['rows']))<p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-500">{{ __('lbl.none') }}</p>
   @else
   <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
-    <table class="w5-table"><thead><tr><th>Payment</th><th>Order</th><th>Buyer</th><th class="text-end">Amount</th><th>Sender GSM</th><th>D17 txn</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    <table class="w5-table"><thead><tr><th>Payment</th><th>Order</th><th>Buyer</th><th>Method</th><th class="text-end">Amount</th><th>Sender</th><th>Txn / provider</th><th>Status</th><th>Action</th></tr></thead><tbody>
     @foreach($v['rows'] as $p)
       <tr>
         <td class="font-mono text-xs">{{ $p['ref'] }}<br><span class="text-slate-500">{{ $p['created_at'] }}</span></td>
         <td class="font-mono text-xs">{{ $p['order_ref'] }}</td>
         <td>{{ $p['full_name'] }}<br><span class="text-xs text-slate-500">{{ $p['email'] }}</span></td>
+        <td><span class="tier-badge">{{ $p['method'] }}</span></td>
         <td class="text-end tabular-nums">{{ number_format((float)$p['amount'], 2) }} {{ $p['currency'] }}</td>
         <td dir="ltr">{{ $p['sender_gsm'] ?: '—' }}</td>
-        <td class="font-mono text-xs">{{ $p['txn_ref'] ?: '—' }}</td>
+        <td class="font-mono text-xs">{{ $p['txn_ref'] ?: ($p['provider_ref'] ?? '—') }}@if(!empty($p['gateway_status']))<br><span class="text-slate-500">{{ $p['gateway_status'] }}</span>@endif</td>
         <td><span class="tier-badge">{{ $p['status'] }}</span>@if($p['note'])<br><span class="text-xs">{{ $p['note'] }}</span>@endif @if($p['verified_by'])<br><span class="text-xs text-slate-500">{{ $p['verified_by'] }}</span>@endif</td>
         <td>
           @if($p['status'] !== 'verified')
           <form method="post" action="{{ admin_url('payments/review') }}" class="flex flex-col gap-1 min-w-[10rem]">
             {!! csrf_field() !!}<input type="hidden" name="id" value="{{ $p['id'] }}">
             <input class="field !py-1 !text-xs" name="note" maxlength="300" placeholder="Note (optional, sent to buyer)" aria-label="Note">
-            <div class="flex gap-1"><button class="btn-focus !py-1 !px-2 text-xs" name="do" value="verify" type="submit" @if(!$p['txn_ref']) disabled title="No transaction reference yet" @endif>Verify</button><button class="btn-ghost !py-1 !px-2 text-xs" name="do" value="reject" type="submit">Reject</button></div>
+            @php $onl = !empty($p['provider_ref']); @endphp
+            <div class="flex gap-1 flex-wrap">@if($onl)<button class="btn-focus !py-1 !px-2 text-xs" name="do" value="recheck" type="submit">Re-check</button>@else<button class="btn-focus !py-1 !px-2 text-xs" name="do" value="verify" type="submit" @if(!$p['txn_ref']) disabled title="No transaction reference yet" @endif>Verify</button>@endif<button class="btn-ghost !py-1 !px-2 text-xs" name="do" value="reject" type="submit">Reject</button></div>
           </form>
           @else — @endif
         </td>
@@ -95,6 +97,60 @@
     </tbody></table>
   </div>
   @endif
+
+@elseif($v['kind'] === 'settings')
+  <p class="mb-4 max-w-3xl text-sm text-slate-600 dark:text-slate-400">{{ $v['intro'] }}</p>
+  @if(!empty($flash))<p class="mb-4 rounded-lg border p-3 text-sm {{ $flash['kind'] === 'ok' ? 'border-emerald-500/40 bg-emerald-500/10' : 'border-red-500/40 bg-red-500/10' }}" role="status">{{ $flash['msg'] }}</p>@endif
+  <form method="post" action="{{ $v['action'] }}" class="space-y-6" autocomplete="off">
+    {!! csrf_field() !!}
+    <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-4 sm:p-5">
+      <label for="s-note" class="block text-sm font-medium mb-1">Reason (required, kept in the change log)</label>
+      <input id="s-note" name="note" class="field" minlength="10" maxlength="500" placeholder="e.g. Sandbox keys entered for the first test" required>
+      <button class="btn-peak mt-3" type="submit">Save changes</button>
+    </div>
+    @foreach($v['items'] as $it)
+    <fieldset class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-4 sm:p-5" id="s-{{ $it['id'] }}">
+      <input type="hidden" name="item[{{ $it['id'] }}]" value="1">
+      <legend class="sr-only">{{ $it['name'] }}</legend>
+      <div class="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h2 class="font-display text-lg font-semibold flex items-center gap-2">{{ icon($it['icon'], 'w-5 h-5 text-brand-500') }} {{ $it['name'] }}</h2>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 max-w-3xl">{{ $it['doc'] }}</p>
+        </div>
+        <div class="flex items-center gap-3">
+          @if($it['ready'])<span class="rounded-full px-2 py-0.5 text-xs bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">LIVE</span>
+          @elseif($it['on'])<span class="rounded-full px-2 py-0.5 text-xs bg-red-500/15 text-red-700 dark:text-red-300">ON but incomplete</span>
+          @else<span class="rounded-full px-2 py-0.5 text-xs bg-slate-500/15 text-slate-600 dark:text-slate-300">OFF</span>@endif
+          <label class="flex items-center gap-2 text-sm font-medium"><input type="checkbox" name="on[{{ $it['id'] }}]" value="1" @if($it['on']) checked @endif> Enabled</label>
+        </div>
+      </div>
+      @if($it['missing'])<p class="mt-3 text-xs text-amber-700 dark:text-amber-300">Missing or invalid: {{ implode(', ', $it['missing']) }}. It cannot go live until these are filled.</p>@endif
+      @if($it['src'] === 'env')<p class="mt-2 text-xs text-slate-500">Currently read from the server .env. Saving here takes over from .env.</p>@endif
+      @if(!empty($it['hook']))<p class="mt-3 text-xs">Webhook URL to register at the provider: <code class="font-mono select-all" dir="ltr">{{ $it['hook'] }}</code></p>@endif
+      @if(!empty($it['note']))<p class="mt-2 text-xs text-amber-700 dark:text-amber-300">{{ $it['note'] }}</p>@endif
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        @foreach($it['fields'] as $f)
+          @php $fid = 'f-' . $it['id'] . '-' . $f['k']; $nm = 'f[' . $it['id'] . '][' . $f['k'] . ']'; @endphp
+          @if($f['t'] === 'bool')
+            <label class="flex items-center gap-2 text-sm sm:col-span-2"><input type="checkbox" name="{{ $nm }}" value="1" @if($f['value'] === '1') checked @endif> {{ $f['label'] }}</label>
+          @elseif($f['t'] === 'select')
+            <div><label for="{{ $fid }}" class="block text-sm font-medium mb-1">{{ $f['label'] }}</label><select id="{{ $fid }}" name="{{ $nm }}" class="field">@foreach($f['options'] as $ov => $ol)<option value="{{ $ov }}" @if($f['value'] === (string)$ov) selected @endif>{{ $ol }}</option>@endforeach</select></div>
+          @elseif($f['t'] === 'secret')
+            <div><label for="{{ $fid }}" class="block text-sm font-medium mb-1">{{ $f['label'] }} @if($f['is_set'])<span class="rounded-full px-2 py-0.5 text-xs bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">stored (hidden)</span>@else<span class="rounded-full px-2 py-0.5 text-xs bg-slate-500/15">not set</span>@endif</label>
+              <input id="{{ $fid }}" type="password" name="{{ $nm }}" class="field" dir="ltr" autocomplete="new-password" spellcheck="false" placeholder="{{ $f['is_set'] ? 'leave empty to keep the stored value' : 'paste the secret' }}">
+              @if($f['is_set'])<label class="mt-1 flex items-center gap-2 text-xs text-slate-500"><input type="checkbox" name="clear[{{ $it['id'] }}][{{ $f['k'] }}]" value="1"> erase the stored value</label>@endif</div>
+          @else
+            <div><label for="{{ $fid }}" class="block text-sm font-medium mb-1">{{ $f['label'] }}@if(!empty($f['req'])) <span class="text-red-500" aria-hidden="true">*</span>@endif</label>
+              <input id="{{ $fid }}" type="{{ $f['t'] === 'int' ? 'number' : 'text' }}" name="{{ $nm }}" class="field" dir="ltr" value="{{ $f['value'] }}" maxlength="300" @if($f['t'] === 'int') min="{{ $f['min'] ?? 0 }}" max="{{ $f['max'] ?? '' }}" @endif @if(!empty($f['hint']))placeholder="{{ $f['hint'] }}"@endif spellcheck="false"></div>
+          @endif
+        @endforeach
+      </div>
+    </fieldset>
+    @endforeach
+  </form>
+  <h2 class="font-display font-semibold mt-8 mb-3">Change log</h2>
+  @if($v['hist'])<div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>When</th><th>By</th><th>Setting</th><th>Action</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody>@foreach($v['hist'] as $h)<tr><td class="font-mono text-xs">{{ $h['changed_at'] }}</td><td>{{ $h['changed_by'] }}</td><td class="font-mono text-xs">{{ $h['skey'] }}</td><td>{{ $h['action'] }}</td><td class="text-xs">{{ $h['old_value'] ?? '(hidden)' }}</td><td class="text-xs">{{ $h['new_value'] ?? '(hidden)' }}</td><td class="text-xs">{{ $h['note'] }}</td></tr>@endforeach</tbody></table></div>
+  @else<p class="text-sm text-slate-500">{{ __('lbl.none') }}</p>@endif
 
 @elseif($v['kind'] === 'pricing')
   @php $k = $v['k']; $snap = $v['snap']; @endphp

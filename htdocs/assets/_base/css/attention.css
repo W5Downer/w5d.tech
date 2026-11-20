@@ -19,7 +19,7 @@
   --g-technology:linear-gradient(135deg,#22d3ee,#8b5cf6);
   --orb-a:#8b5cf6; --orb-b:#06b6d4; --orb-c:#ec4899;
   --scrim:rgba(7,7,17,.22);
-  --font-ar:'Noto Sans Arabic','Inter',system-ui,sans-serif;
+  --font-ar:'Cairo','Noto Sans Arabic','Inter',system-ui,sans-serif;
 }
 
 /* template base */
@@ -460,7 +460,8 @@ select.field{appearance:none;background-image:linear-gradient(45deg,transparent 
 @media print{header,footer,.sticky-cta,.orb,.grid-bg{display:none!important}}
 
 /* ---------- Arabic / RTL ---------- */
-html[lang=ar] body,html[lang=ar] .font-display{font-family:var(--font-ar);letter-spacing:0}
+html[lang=ar] body,html[lang=ar] .font-display,html[lang=ar] .prose-w5 h3,html[lang=ar] .w5d-aside>header h2,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] textarea{font-family:var(--font-ar);letter-spacing:0}
+html[lang=ar] body{line-height:1.75}
 html[lang=ar] .tracking-tight,html[lang=ar] .tracking-tighter{letter-spacing:0}
 html[lang=ar] .uppercase{text-transform:none;letter-spacing:0}
 [dir=rtl] .rtl-flip{transform:scaleX(-1)}

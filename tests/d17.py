@@ -54,7 +54,7 @@ loc = h.get('Location', '')
 check('D17 order accepted', s == 302 and '/checkout/done/' in loc, (s, loc))
 ref = re.search(r'(ORD-[A-F0-9]{8})', loc).group(1) if loc else ''
 s, h, t = call(c, 'GET', loc)
-check('done page shows D17 instructions', s == 200 and '+21620123456' in t and '/pay/' + ref in t, s)
+check('done page links to the payment page', s == 200 and '/pay/' + ref in t, s)
 m = re.search(r'href="([^"]*/pay/' + ref + r'/\?s=[0-9a-f]+)"', t)
 pay = urllib.parse.urlparse(m.group(1)).path + '?' + urllib.parse.urlparse(m.group(1)).query if m else ''
 check('signed pay link present', bool(pay), pay)

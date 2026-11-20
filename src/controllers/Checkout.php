@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, Gate, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
+use W5D\{Content, Csrf, DB, Gateways, Gate, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
 
 /** Investor demo flows: pledge checkout, daily subscription, management by reference + key. No money moves in demo mode. */
 final class Checkout
@@ -70,9 +70,10 @@ final class Checkout
         $macro = Forms::str($in, 'macro', 30);
         if ($macro !== '' && !in_array($macro, Forms::MACROS, true)) $e['macro'] = Forms::err('Unknown macro work.', 'Macro-œuvre inconnue.', 'عمل كبير غير معروف.');
         $kind = Forms::str($in, 'kind', 20) === 'company' ? 'company' : 'individual';
-        $d17 = (string)($in['payment_method'] ?? '') === 'd17';
-        if ($d17 && !Payments::enabled()) $e['payment_method'] = Forms::err('D17 is not available right now.', 'D17 n’est pas disponible pour le moment.', 'D17 غير متاح حاليا.');
-        if ($d17 && !isset($e['payment_method'])) {
+        $method = (string)($in['payment_method'] ?? '');
+        if ($method !== '' && !Gateways::enabled($method)) { $e['payment_method'] = Forms::err('This payment method is not available right now.', 'Ce moyen de paiement n’est pas disponible pour le moment.', 'وسيلة الدفع هذه غير متاحة حاليا.'); $method = ''; }
+        $d17 = $method === 'd17';
+        if ($method !== '' && (Gateways::def($method)['tn_only'] ?? false)) {
             $gsm = Payments::tnGsm(Forms::str($in, 'phone', 40));
             if (!$gsm) $e['phone'] = Forms::err('D17 is for Tunisian numbers only: give a +216 phone number.', 'D17 est réservé aux numéros tunisiens : indiquez un numéro +216.', 'D17 للأرقام التونسية فقط: أدخل رقم هاتف +216.');
         }
@@ -88,25 +89,30 @@ final class Checkout
         }
         $ref = Forms::ref('ORD');
         DB::insert('investor_orders', ['country_id' => 'tn', 'ref' => $ref, 'investor_id' => $iid, 'cadence' => $cad, 'parts_per_day' => $parts, 'days' => $days, 'macro_slug' => $macro ?: null,
-            'start_on' => $start->format('Y-m-d'), 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'p' => $q['p'], 't' => $q['t'], 'payment_mode' => $d17 ? 'd17' : (string)\W5D\Env::get('PAYMENT_MODE', 'demo'), 'status' => $d17 ? 'awaiting_payment' : 'pledged']);
+            'start_on' => $start->format('Y-m-d'), 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'p' => $q['p'], 't' => $q['t'], 'payment_mode' => $method !== '' ? $method : (string)\W5D\Env::get('PAYMENT_MODE', 'demo'), 'status' => $method !== '' ? 'awaiting_payment' : 'pledged']);
         $token = null;
         if ($mode === 'subscription') {
             $token = bin2hex(random_bytes(16));
             DB::insert('investor_subscriptions', ['country_id' => 'tn', 'token' => hash('sha256', $token), 'investor_id' => $iid, 'order_ref' => $ref, 'parts_per_day' => $parts, 'macro_slug' => $macro ?: null, 'status' => 'active', 'next_charge_on' => $start->format('Y-m-d')]);
         }
-        $payRef = $payUrl = null;
-        if ($d17) {
-            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total']);
+        $payRef = $payUrl = $gwUrl = null;
+        if ($method !== '') {
+            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total'], $method);
             $payUrl = Payments::link($ref);
+            if (Gateways::online($method)) {
+                $prow = DB::one('SELECT * FROM payments WHERE ref = ?', [$payRef]);
+                $gwUrl = Payments::begin($prow, ['name' => Forms::str($in, 'full_name', 120), 'email' => $email, 'phone' => Forms::str($in, 'phone', 40)]);
+            }
         }
         $mailTo = $email;
         Mail::send($mailTo, 'order_receipt', [
             'name' => Forms::str($in, 'full_name', 120), 'ref' => $ref, 'parts' => $parts, 'days' => $days, 'start' => $start->format('Y-m-d'),
             'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'key' => $token,
-            'd17' => $d17 ? Payments::instructions((float)$q['schedule']['total']) : null, 'pay_url' => $d17 ? Payments::absLink($ref) : null,
+            'd17' => $d17 ? Payments::instructions((float)$q['schedule']['total']) : null, 'pay_url' => $method !== '' ? Payments::absLink($ref) : null,
+            'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => $method === 'bank' ? Gateways::instructions('bank', (float)$q['schedule']['total'])['rows'] : [],
         ], lang());
-        if ($d17) Mail::staff('New D17 order', ['order' => $ref, 'payment' => $payRef, 'amount' => number_format((float)$q['schedule']['total'], 2) . ' ' . $q['currency']]);
-        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $d17 ? 'd17: pending administrator verification' : 'demo: no money moves', 'payment_ref' => $payRef, 'pay_url' => $payUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
+        if ($method !== '') Mail::staff('New order · ' . Gateways::short($method), ['order' => $ref, 'payment' => $payRef, 'amount' => number_format((float)$q['schedule']['total'], 2) . ' ' . $q['currency']]);
+        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'demo: no money moves' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'pay_url' => $payUrl, 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
     }
 
     private static function back(string $mode): string { return $mode === 'subscription' ? '/subscription/' : '/checkout/'; }
@@ -170,9 +176,9 @@ final class Checkout
             [$L('Starts', 'Début', 'البدء'), ['en' => $o['start_on']]],
             [$L('Unit price today', 'Prix unitaire aujourd’hui', 'سعر الوحدة اليوم'), ['en' => money((float)$o['unit_price'])]],
             [$L('Total of the schedule', 'Total du calendrier', 'مجموع الجدول'), ['en' => money((float)$o['total'])]],
-            [$L('Status', 'Statut', 'الحالة'), $o['status'] === 'awaiting_payment' ? $L('Awaiting your D17 payment', 'En attente de votre paiement D17', 'بانتظار دفعتك عبر D17') : ($o['status'] === 'paid' ? $L('Paid (verified by an administrator)', 'Payé (vérifié par un administrateur)', 'مدفوع (تحقق منه مسؤول)') : $L('Pledged (demo: no money moved)', 'Engagé (démo : aucun argent versé)', 'التزام (تجريبي: لا أموال تحوّلت)'))],
+            [$L('Status', 'Statut', 'الحالة'), $o['status'] === 'awaiting_payment' ? $L('Awaiting your payment', 'En attente de votre paiement', 'بانتظار دفعتك') : ($o['status'] === 'paid' ? $L('Paid and confirmed', 'Payé et confirmé', 'مدفوع ومؤكد') : $L('Pledged (demo: no money moved)', 'Engagé (démo : aucun argent versé)', 'التزام (تجريبي: لا أموال تحوّلت)'))],
         ];
-        $isD17 = $o['payment_mode'] === 'd17' && Payments::enabled();
+        $pm = (string)$o['payment_mode'];
         $secs = [
             ['type' => 'hero', 'id' => 'done-hero', 'variant' => 'classic', 'gradient' => 'peak', 'icon' => 'badge-check', 'eyebrow' => $L('Pledge recorded', 'Engagement enregistré', 'سُجّل التزامك'),
                 'title' => $L('Thank you, ' . $first . '. **Your pledge is recorded.**', 'Merci, ' . $first . '. **Votre engagement est enregistré.**', 'شكرا ' . $first . '. **سُجّل التزامك.**'),
@@ -182,12 +188,12 @@ final class Checkout
         ];
         if ($key) $secs[] = ['type' => 'notice', 'id' => 'done-key', 'title' => $L('Your management key (shown once)', 'Votre clé de gestion (affichée une fois)', 'مفتاح الإدارة (يظهر مرة واحدة)'),
             'items' => [['en' => 'Reference `' . $ref . '` · key `' . $key . '`', 'fr' => 'Référence `' . $ref . '` · clé `' . $key . '`', 'ar' => 'المرجع `' . $ref . '` · المفتاح `' . $key . '`'], $L('Use both on the manage page to pause, resume or cancel.', 'Utilisez les deux sur la page de gestion pour suspendre, reprendre ou annuler.', 'استخدمهما معا في صفحة الإدارة للإيقاف أو الاستئناف أو الإلغاء.')], 'href' => '/subscription/manage/'];
-        if ($isD17 && $o['status'] === 'awaiting_payment') {
-            $i = Payments::instructions((float)$o['total']);
-            array_splice($secs, 1, 0, [['type' => 'notice', 'id' => 'done-d17', 'title' => $L('Next: pay with D17', 'Ensuite : payez avec D17', 'التالي: ادفع عبر D17'),
-                'items' => [
-                    $L('Send ' . number_format((float)$o['total'], 2) . ' TND by D17 to ' . $i['gsm'] . ' (' . $i['name'] . ').', 'Envoyez ' . number_format((float)$o['total'], 2) . ' TND par D17 au ' . $i['gsm'] . ' (' . $i['name'] . ').', 'أرسل ' . number_format((float)$o['total'], 2) . ' دينار عبر D17 إلى ' . $i['gsm'] . ' (' . $i['name'] . ').'),
-                    $L('Then open the payment page and enter your D17 number and the transaction reference. An administrator verifies it by hand.', 'Ouvrez ensuite la page de paiement et saisissez votre numéro D17 et la référence de transaction. Un administrateur la vérifie manuellement.', 'ثم افتح صفحة الدفع وأدخل رقم D17 ومرجع العملية. يتحقق منه مسؤول يدويا.'),
+        if ($o['status'] === 'awaiting_payment' && Gateways::def($pm)) {
+            $nm = Gateways::short($pm);
+            array_splice($secs, 1, 0, [['type' => 'notice', 'id' => 'done-pay', 'title' => $L('Next: pay with ' . $nm, 'Ensuite : payez avec ' . $nm, 'التالي: ادفع عبر ' . $nm),
+                'items' => [Gateways::online($pm)
+                    ? $L('Open the payment page: you pay on ' . $nm . '’s secure page and come back here. Your order is confirmed only when ' . $nm . ' confirms the payment to our server.', 'Ouvrez la page de paiement : vous payez sur la page sécurisée de ' . $nm . ' puis revenez ici. Votre commande n’est confirmée que lorsque ' . $nm . ' confirme le paiement à notre serveur.', 'افتح صفحة الدفع: تدفع على صفحة ' . $nm . ' الآمنة ثم تعود إلى هنا. لا يُؤكَّد طلبك إلا عندما تؤكد ' . $nm . ' الدفع لخادمنا.')
+                    : $L('Open the payment page for the details, send the amount and enter the transaction reference. An administrator verifies it by hand.', 'Ouvrez la page de paiement pour les détails, envoyez le montant et saisissez la référence de transaction. Un administrateur la vérifie manuellement.', 'افتح صفحة الدفع للتفاصيل، أرسل المبلغ وأدخل مرجع العملية. يتحقق منه مسؤول يدويا.'),
                 ], 'href' => Payments::link($ref)]]);
         }
         $secs[] = ['type' => 'notice', 'id' => 'done-limits'];

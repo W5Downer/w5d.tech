@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks};
 
 final class App
 {
@@ -125,6 +125,9 @@ final class App
         $r->get('/account', [Accounts::class, 'panel']);
         $r->get('/account/{panel}', [Accounts::class, 'panel']);
         $r->any('/pay/{ref}', [Accounts::class, 'pay']);
+        // online gateways: buyer return (signed, re-verified) and server-to-server webhooks (signature + re-verification; no session, no CSRF by design)
+        $r->get('/pay/return/{ref}', [PayHooks::class, 'back']);
+        $r->any('/pay/hook/{provider}', [PayHooks::class, 'hook']);
         $r->any('/unsubscribe', [Unsubscribe::class, 'handle']);
 
         // ---- docs (human) ----
@@ -192,6 +195,7 @@ final class App
         $r->post($m . '/status', [Admin::class, 'setStatus']);
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
+        $r->post($m . '/payment-methods/save', [Admin::class, 'savePayMethods']);
         // QCM bank / review, affiliates, certificates (src/controllers/Programs.php)
         $r->get($m . '/qcm-bank/export', [Programs::class, 'bankExport']);
         foreach (['save' => 'bankSave', 'toggle' => 'bankToggle', 'delete' => 'bankDelete', 'import' => 'bankImport'] as $seg => $fn) $r->post($m . '/qcm-bank/' . $seg, [Programs::class, $fn]);
