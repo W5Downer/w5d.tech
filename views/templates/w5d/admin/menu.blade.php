@@ -164,6 +164,18 @@
   <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>When</th><th>By</th><th>Variable</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody>@foreach($v['hist'] as $h)<tr><td class="font-mono text-xs whitespace-nowrap">{{ $h['changed_at'] }}</td><td>{{ $h['changed_by'] }}</td><td class="font-mono text-xs">{{ $h['path'] }}</td><td>{{ $h['old_value'] }}</td><td>{{ $h['new_value'] }}</td><td>{{ $h['note'] }}</td></tr>@endforeach</tbody></table></div>
   @else<p class="text-sm text-slate-500">No change yet: every value is the file default.</p>@endif
 
+@elseif($v['kind'] === 'qcm-bank')
+  @include('admin.qcm-bank')
+
+@elseif($v['kind'] === 'qcm-review')
+  @include('admin.qcm-review')
+
+@elseif($v['kind'] === 'affiliates')
+  @include('admin.affiliates')
+
+@elseif($v['kind'] === 'certificates')
+  @include('admin.certificates')
+
 @elseif($v['kind'] === 'api')
   @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])
 

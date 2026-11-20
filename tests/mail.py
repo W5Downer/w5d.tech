@@ -46,10 +46,14 @@ SAMPLES = {
  'password_reset': {'name': 'Amal', 'url': 'https://w5d.tech/account/reset/abc/', 'minutes': 60},
  'order_receipt': {'name': 'Amal', 'ref': 'ORD-T1', 'parts': 2, 'days': 30, 'start': '2026-12-01', 'total': 120, 'currency': 'TND', 'd17': {'amount': 120, 'gsm': '+21612345678', 'name': 'W5D'}, 'pay_url': 'https://w5d.tech/pay/ORD-T1/?s=x', 'key': 'KEY123'},
  'payment_status': {'name': 'Amal', 'ref': 'PAY-T1', 'order_ref': 'ORD-T1', 'amount': 120, 'currency': 'TND', 'status': 'rejected', 'note': 'Wrong ref', 'pay_url': 'https://w5d.tech/pay/ORD-T1/?s=x'},
+ 'certificate_issued': {'name': 'Amal', 'code': 'W5D-AAAA-BBBB-CCCC', 'level': 2, 'service': 'cold-chain', 'score': 85, 'verify_url': 'https://w5d.tech/certification/verify/?code=W5D-AAAA-BBBB-CCCC'},
+ 'affiliate_status': {'name': 'Amal', 'code': 'AMAL1234', 'status': 'active', 'url': 'https://w5d.tech/account/affiliate/'},
+ 'payout_status': {'name': 'Amal', 'amount': 55, 'currency': 'TND', 'status': 'paid', 'txn': 'D17ABC123', 'note': '', 'url': 'https://w5d.tech/account/affiliate/'},
+ 'qcm_pass_status': {'name': 'Amal', 'ref': 'QP-AABBCCDD', 'status': 'verified', 'amount': 15, 'currency': 'TND', 'note': '', 'url': 'https://w5d.tech/account/qcm/'},
  'form_ack': {'kind': 'contact', 'name': 'Amal', 'ref': 'C-T1'},
 }
 
-print('render matrix: 5 types x 3 languages')
+print('render matrix: all types x 3 languages')
 for lang in ('en', 'fr', 'ar'):
     for t, d in SAMPLES.items():
         to = f'rt-{RUN}-{lang}-{t}@mail.test'.replace('@mail.test', '@real.org')

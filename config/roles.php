@@ -1,12 +1,13 @@
 <?php
-/** 8 roles x permissions, and the 25 portal menus (README §Owner dashboard). Menu perm gates the sidebar. */
+/** 8 roles x permissions, and the portal menus (README §Owner dashboard). Menu perm gates the sidebar. */
 return [
     'roles' => [
         'owner'    => ['*'],
         // Read perms gate the menu; "<perm>.create|update|delete" gate each write (see config/resources.php for which writes exist).
         'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments',
                        'applicants.update', 'applicants.delete', 'verification.update', 'academies.create', 'academies.update', 'academies.delete', 'teams.create', 'teams.update', 'teams.delete',
-                       'weekly.update', 'clients.create', 'clients.update', 'clients.delete', 'quality.update', 'support.create', 'support.update', 'support.delete'],
+                       'weekly.update', 'clients.create', 'clients.update', 'clients.delete', 'quality.update', 'support.create', 'support.update', 'support.delete',
+                       'qcm', 'qcm.create', 'qcm.update', 'affiliates', 'affiliates.update', 'certificates', 'certificates.update'],
         'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports', 'teams.create', 'teams.update', 'weekly.update', 'quality.update', 'academies.update'],
         'manager'  => ['dashboard', 'teams', 'weekly', 'teams.update', 'weekly.update'],
         'member'   => ['dashboard'],
@@ -47,5 +48,10 @@ return [
         ['n' => 30, 'slug' => 'mail-outbox',         'icon' => 'mail',             'perm' => 'messages',    'label' => ['en' => 'Mail outbox', 'fr' => 'Boîte d’envoi', 'ar' => 'صندوق الصادر']],
         ['n' => 31, 'slug' => 'api-docs',            'icon' => 'code',             'perm' => 'dashboard',   'label' => ['en' => 'API & Docs', 'fr' => 'API et documentation', 'ar' => 'واجهة API والوثائق']],
         ['n' => 28, 'slug' => 'inbox',               'icon' => 'inbox',            'perm' => 'messages',    'label' => ['en' => 'Contact Inbox', 'fr' => 'Boîte de contact', 'ar' => 'صندوق الرسائل']],
+        ['n' => 32, 'slug' => 'qcm-rules',           'icon' => 'timer',            'perm' => 'qcm-rules',   'label' => ['en' => 'QCM rules', 'fr' => 'Règles QCM', 'ar' => 'قواعد الاختبار']],
+        ['n' => 33, 'slug' => 'qcm-bank',            'icon' => 'list-checks',      'perm' => 'qcm',         'label' => ['en' => 'QCM bank', 'fr' => 'Banque QCM', 'ar' => 'بنك الأسئلة']],
+        ['n' => 34, 'slug' => 'qcm-review',          'icon' => 'clipboard-check',  'perm' => 'qcm',         'label' => ['en' => 'QCM fees & tasks', 'fr' => 'Frais et tâches QCM', 'ar' => 'رسوم الاختبار والمهام']],
+        ['n' => 35, 'slug' => 'affiliates',          'icon' => 'share-2',          'perm' => 'affiliates',  'label' => ['en' => 'Affiliates', 'fr' => 'Affiliés', 'ar' => 'المُحيلون']],
+        ['n' => 36, 'slug' => 'certificates',        'icon' => 'award',            'perm' => 'certificates','label' => ['en' => 'Certificates', 'fr' => 'Certificats', 'ar' => 'الشهادات']],
     ],
 ];

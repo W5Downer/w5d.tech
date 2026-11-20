@@ -94,6 +94,10 @@ final class Admin
         if ($r = Auth::require($menu['perm'])) return $r;
         $view = Crud::has($slug) ? self::vCrud($slug) : match ($slug) {
             'progressive-pricing' => self::vPricing(),
+            'qcm-bank' => Programs::vBank($q),
+            'qcm-review' => Programs::vReview(),
+            'affiliates' => Programs::vAffiliates(),
+            'certificates' => Programs::vCertificates(),
             'manager-applications' => self::vTable('SELECT id, ref, full_name, email, macro_slug AS macro, years, team_size_led AS team, region_slug AS region, score, status, created_at FROM manager_applications ORDER BY score DESC, id DESC LIMIT 300', 'manager_applications'),
             'subscriptions' => self::vTable('SELECT s.id, s.order_ref AS ref, i.full_name, i.email, s.parts_per_day AS parts, s.macro_slug AS macro, s.next_charge_on AS next_charge, s.status, s.created_at FROM investor_subscriptions s JOIN investors i ON i.id=s.investor_id ORDER BY s.id DESC LIMIT 300', 'investor_subscriptions'),
             'payments-d17' => self::vPayments(),
