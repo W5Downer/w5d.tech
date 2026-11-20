@@ -111,7 +111,7 @@ key = (re.search(r'\b([0-9a-f]{32})\b', t2) or [None, ''])[1]
 check('subscription returns reference + one-time management key', bool(ref) and bool(key), f'{loc} ref={ref} key={bool(key)}')
 c2 = client(); tok = csrf(c2, '/subscription/manage/')
 s, h, t = call(c2, 'POST', '/subscription/manage/', {'_csrf': tok, 'ref': ref, 'key': 'x' * 32})
-check('wrong key does not reveal the subscription', ref not in t or 'not found' in t.lower() or 'introuvable' in t.lower() or s == 200 and 'active' not in t.lower(), '')
+check('wrong key does not reveal the subscription', s == 200 and ('No subscription matches' in t or 'Aucun abonnement' in t) and not any(k in t for k in ('Next charge', 'Prochain prélèvement', 'Cancel subscription', 'Annuler l’abonnement')), t[:120])
 s, h, t = call(c2, 'POST', '/subscription/manage/', {'_csrf': tok, 'ref': ref, 'key': key})
 check('right ref + key shows the subscription', s == 200 and ref in t, f'{s}')
 s, h, t = call(c2, 'POST', '/subscription/action', {'_csrf': tok, 'ref': ref, 'key': key, 'do': 'pause'})
