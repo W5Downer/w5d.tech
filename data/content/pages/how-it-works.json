@@ -226,6 +226,67 @@
    ]
   },
   {
+   "type": "steps",
+   "id": "how-path",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Your path, from account to certificate",
+    "fr": "Votre parcours, du compte au certificat",
+    "ar": "مسارك من الحساب إلى الشهادة"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Create an account",
+      "fr": "Créez un compte",
+      "ar": "أنشئ حسابا"
+     },
+     "body": {
+      "en": "Confirm your e-mail. Your dashboard opens with the panels for your role.",
+      "fr": "Confirmez votre e-mail. Votre tableau de bord s’ouvre avec les panneaux de votre rôle.",
+      "ar": "أكّد بريدك. تفتح لوحتك بلوحات دورك."
+     }
+    },
+    {
+     "title": {
+      "en": "Practise",
+      "fr": "Entraînez-vous",
+      "ar": "تدرّب"
+     },
+     "body": {
+      "en": "Free QCM rounds across the {{ counts.services }} services show you the format and the level.",
+      "fr": "Des sessions QCM gratuites sur les {{ counts.services }} services vous montrent le format et le niveau.",
+      "ar": "تُريك جولات QCM المجانية عبر الخدمات الـ{{ counts.services }} الصيغة والمستوى."
+     }
+    },
+    {
+     "title": {
+      "en": "Sit a graded round",
+      "fr": "Passez une session notée",
+      "ar": "اجتز جولة مصحَّحة"
+     },
+     "body": {
+      "en": "When you meet the requirements, a graded round can issue a certificate valid for {{ cert.validity_months }} months.",
+      "fr": "Lorsque vous remplissez les conditions, une session notée peut délivrer un certificat valable {{ cert.validity_months }} mois.",
+      "ar": "حين تستوفي الشروط قد تُصدر جولة مصحَّحة شهادة صالحة {{ cert.validity_months }} شهرا."
+     }
+    },
+    {
+     "title": {
+      "en": "Move up",
+      "fr": "Montez en niveau",
+      "ar": "ارتقِ"
+     },
+     "body": {
+      "en": "An upgrade round at the next level builds on your certificate. Delivery work follows certified headcount and funded capacity.",
+      "fr": "Une session de montée de niveau au palier suivant s’appuie sur votre certificat. Le travail de livraison dépend des effectifs certifiés et des capacités financées.",
+      "ar": "تبني جولة الترقية في المستوى التالي على شهادتك. ويتبع عمل التنفيذ العدد المعتمد والقدرة الممولة."
+     }
+    }
+   ]
+  },
+  {
    "type": "cta",
    "id": "how-final",
    "gradient": "sciences",

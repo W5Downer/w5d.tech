@@ -134,6 +134,29 @@
    }
   },
   {
+   "type": "prose",
+   "id": "tn-why",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Why Tunisia first",
+    "fr": "Pourquoi la Tunisie d’abord",
+    "ar": "لماذا تونس أولا"
+   },
+   "paragraphs": [
+    {
+     "en": "The programme starts where its first certified experts live. Tunisia has {{ counts.governorates }} governorates; experts register from their own, and hubs, universities and coordinators are listed per region only once they are confirmed.",
+     "fr": "Le programme commence là où vivent ses premiers experts certifiés. La Tunisie compte {{ counts.governorates }} gouvernorats ; les experts s’inscrivent depuis le leur, et les pôles, universités et coordinateurs ne sont listés par région qu’une fois confirmés.",
+     "ar": "يبدأ البرنامج حيث يعيش أول خبرائه المعتمدين. لتونس {{ counts.governorates }} ولاية؛ يسجّل الخبراء من ولايتهم، ولا تُدرج المراكز والجامعات والمنسقون لكل جهة إلا بعد تأكيدهم."
+    },
+    {
+     "en": "Payments run in Tunisian dinars through D17, verified by hand. Other countries come later, and none is announced before it is real.",
+     "fr": "Les paiements se font en dinars tunisiens via D17, vérifiés à la main. D’autres pays viendront plus tard, et aucun n’est annoncé avant d’être réel.",
+     "ar": "تتم المدفوعات بالدينار التونسي عبر D17 ويُتحقق منها يدويا. تأتي دول أخرى لاحقا ولا تُعلن قبل أن تتحقق."
+    }
+   ]
+  },
+  {
    "type": "cta",
    "id": "tn-final",
    "gradient": "built",

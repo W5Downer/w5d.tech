@@ -234,6 +234,55 @@
     "fr": "Environ 10 minutes.",
     "ar": "يستغرق نحو 10 دقائق."
    }
+  },
+  {
+   "type": "faq",
+   "id": "mgr-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Managers, answered",
+    "fr": "Responsables, en réponses",
+    "ar": "المديرون بأجوبة"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "What does a manager do?",
+      "fr": "Que fait un responsable ?",
+      "ar": "ماذا يفعل المدير؟"
+     },
+     "a": {
+      "en": "Leads about {{ experts.team_size }} experts, sets a weekly rubric, signs a weekly report and answers for the quality of what the team delivers.",
+      "fr": "Dirige environ {{ experts.team_size }} experts, fixe une grille hebdomadaire, signe un rapport hebdomadaire et répond de la qualité de ce que l’équipe livre.",
+      "ar": "يقود نحو {{ experts.team_size }} خبيرا ويضع معيارا أسبوعيا ويوقّع تقريرا أسبوعيا ويُسأل عن جودة ما يسلّمه الفريق."
+     }
+    },
+    {
+     "q": {
+      "en": "How is my application judged?",
+      "fr": "Comment ma candidature est-elle jugée ?",
+      "ar": "كيف يُحكم على طلبي؟"
+     },
+     "a": {
+      "en": "The scenario answer is scored against a fixed rubric, then a person reads the whole file.",
+      "fr": "La réponse au scénario est notée selon une grille fixe, puis une personne lit l’ensemble du dossier.",
+      "ar": "تُقيَّم إجابة السيناريو وفق معيار ثابت ثم يقرأ شخص الملف كله."
+     }
+    },
+    {
+     "q": {
+      "en": "Is a post promised?",
+      "fr": "Un poste est-il promis ?",
+      "ar": "هل المنصب موعود؟"
+     },
+     "a": {
+      "en": "No. Posts follow certified headcount and funded capacity.",
+      "fr": "Non. Les postes dépendent des effectifs certifiés et des capacités financées.",
+      "ar": "لا. تتبع المناصب العدد المعتمد والقدرة الممولة."
+     }
+    }
+   ]
   }
  ]
 }

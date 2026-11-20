@@ -10,6 +10,93 @@
   "fr": "Votre engagement a été enregistré.",
   "ar": "تم تسجيل تعهّدك."
  },
- "sections": [],
+ "sections": [
+  {
+   "type": "steps",
+   "id": "done-next",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "What happens next",
+    "fr": "Et maintenant",
+    "ar": "ما الذي يحدث بعد ذلك"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Keep the reference",
+      "fr": "Conservez la référence",
+      "ar": "احتفظ بالمرجع"
+     },
+     "body": {
+      "en": "The reference and the schedule are your proof. Your account shows them under Orders at any time.",
+      "fr": "La référence et le calendrier sont votre preuve. Votre compte les affiche à tout moment dans Commandes.",
+      "ar": "المرجع والجدول هما إثباتك. يعرضهما حسابك في الطلبات في أي وقت."
+     }
+    },
+    {
+     "title": {
+      "en": "Pay, if payment is open",
+      "fr": "Payez, si le paiement est ouvert",
+      "ar": "ادفع إن كان الدفع مفتوحا"
+     },
+     "body": {
+      "en": "With D17 you send the transfer yourself and enter its reference. A person checks it by hand; until then the status stays awaiting.",
+      "fr": "Avec D17, vous envoyez le virement vous-même et saisissez sa référence. Une personne le vérifie à la main ; d’ici là, le statut reste en attente.",
+      "ar": "مع D17 ترسل التحويل بنفسك وتدخل مرجعه. يتحقق منه شخص يدويا، وحتى ذلك الحين تبقى الحالة قيد الانتظار."
+     }
+    },
+    {
+     "title": {
+      "en": "Follow the progress",
+      "fr": "Suivez l’avancement",
+      "ar": "تابع التقدم"
+     },
+     "body": {
+      "en": "Status changes are e-mailed and listed in your notifications. The public status page shows the programme as it really is.",
+      "fr": "Les changements de statut sont envoyés par e-mail et listés dans vos notifications. La page de statut public montre le programme tel qu’il est.",
+      "ar": "تُرسل تغييرات الحالة بالبريد وتُدرج في إشعاراتك. وتعرض صفحة الحالة العامة البرنامج كما هو فعلا."
+     }
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "done-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "After your pledge",
+    "fr": "Après votre engagement",
+    "ar": "بعد التزامك"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Can I change the schedule?",
+      "fr": "Puis-je modifier le calendrier ?",
+      "ar": "هل أستطيع تعديل الجدول؟"
+     },
+     "a": {
+      "en": "A daily subscription can be paused, resumed or cancelled with its reference and key. A recorded pledge is not rewritten; place a new one instead.",
+      "fr": "Un abonnement journalier peut être suspendu, repris ou annulé avec sa référence et sa clé. Un engagement enregistré n’est pas réécrit ; faites-en un nouveau.",
+      "ar": "يمكن إيقاف الاشتراك اليومي أو استئنافه أو إلغاؤه بمرجعه ومفتاحه. لا يُعاد كتابة التزام مسجّل؛ قدّم التزاما جديدا."
+     }
+    },
+    {
+     "q": {
+      "en": "Is a return promised?",
+      "fr": "Un rendement est-il promis ?",
+      "ar": "هل هناك عائد موعود؟"
+     },
+     "a": {
+      "en": "No. A part is a dated contribution to a path. No return, resale value or post is promised.",
+      "fr": "Non. Une part est une contribution datée à un parcours. Aucun rendement, valeur de revente ni poste n’est promis.",
+      "ar": "لا. الحصة مساهمة مؤرخة في مسار. لا يُوعد بعائد ولا بقيمة إعادة بيع ولا بمنصب."
+     }
+    }
+   ]
+  }
+ ],
  "robots": "noindex,follow"
 }

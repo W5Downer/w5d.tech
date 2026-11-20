@@ -1,111 +1,148 @@
 {
-  "slug": "for",
-  "title": {
-    "en": "Choose your door — W5D",
-    "fr": "Choisissez votre porte — W5D",
-    "ar": "اختر بابك — W5D"
-  },
-  "description": {
-    "en": "Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first. One dashboard per audience, each with its own API documentation.",
-    "fr": "Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites. Un tableau de bord par public, chacun avec sa documentation API.",
-    "ar": "المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا. لوحة لكل جمهور ولكل منها وثائق API خاصة بها."
-  },
-  "sections": [
+ "slug": "for",
+ "title": {
+  "en": "Choose your door — W5D",
+  "fr": "Choisissez votre porte — W5D",
+  "ar": "اختر بابك — W5D"
+ },
+ "description": {
+  "en": "Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first. One dashboard per audience, each with its own API documentation.",
+  "fr": "Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites. Un tableau de bord par public, chacun avec sa documentation API.",
+  "ar": "المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا. لوحة لكل جمهور ولكل منها وثائق API خاصة بها."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "for-hero",
+   "variant": "editorial",
+   "gradient": "peak",
+   "eyebrow": {
+    "en": "Audiences",
+    "fr": "Publics",
+    "ar": "الجماهير"
+   },
+   "title": {
+    "en": "One W5D. **One door for each of you.**",
+    "fr": "Un seul W5D. **Une porte pour chacun.**",
+    "ar": "W5D واحدة. **باب لكل واحد منكم.**"
+   },
+   "lead": {
+    "en": "Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first.",
+    "fr": "Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites.",
+    "ar": "المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا."
+   },
+   "ctas": [
     {
-      "type": "hero",
-      "id": "for-hero",
-      "variant": "editorial",
-      "gradient": "peak",
-      "eyebrow": {
-        "en": "Audiences",
-        "fr": "Publics",
-        "ar": "الجماهير"
-      },
-      "title": {
-        "en": "One W5D. **One door for each of you.**",
-        "fr": "Un seul W5D. **Une porte pour chacun.**",
-        "ar": "W5D واحدة. **باب لكل واحد منكم.**"
-      },
-      "lead": {
-        "en": "Investors take a part. Managers apply. Graduates check eligibility. Everyone sees the limits first.",
-        "fr": "Les investisseurs prennent une part. Les managers postulent. Les diplômés vérifient leur admissibilité. Tout le monde voit d’abord les limites.",
-        "ar": "المستثمرون يقتنون حصة. المديرون يتقدمون. الخريجون يفحصون أهليتهم. والجميع يرى الحدود أولا."
-      },
-      "ctas": [
-        {
-          "label": {
-            "en": "Check my eligibility",
-            "fr": "Vérifier mon admissibilité",
-            "ar": "تحقق من أهليتي"
-          },
-          "href": "/join/eligibility/",
-          "style": "peak",
-          "arrow": true
-        },
-        {
-          "label": {
-            "en": "Sign in",
-            "fr": "Se connecter",
-            "ar": "تسجيل الدخول"
-          },
-          "href": "/account/login/",
-          "style": "ghost"
-        }
-      ],
-      "note": {
-        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
-        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
-        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
-      }
+     "label": {
+      "en": "Check my eligibility",
+      "fr": "Vérifier mon admissibilité",
+      "ar": "تحقق من أهليتي"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
     },
     {
-      "type": "dash-hub",
-      "id": "for-hub",
-      "tier": "e",
-      "focus": 3,
-      "title": {
-        "en": "Who are you?",
-        "fr": "Qui êtes-vous ?",
-        "ar": "من أنت؟"
-      },
-      "lead": {
-        "en": "Each door opens a dashboard built for that role, with API documentation written for it.",
-        "fr": "Chaque porte ouvre un tableau de bord conçu pour ce rôle, avec une documentation API écrite pour lui.",
-        "ar": "كل باب يفتح لوحة مصممة لذلك الدور مع وثائق API مكتوبة له."
-      }
-    },
-    {
-      "type": "notice",
-      "id": "for-limits",
-      "tier": "i",
-      "focus": 2
-    },
-    {
-      "type": "cta",
-      "id": "for-final",
-      "gradient": "peak",
-      "title": {
-        "en": "Not sure? Start with the facts.",
-        "fr": "Pas sûr ? Commencez par les faits.",
-        "ar": "غير متأكد؟ ابدأ بالوقائع."
-      },
-      "body": {
-        "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
-        "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
-        "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
-      },
-      "ctas": [
-        {
-          "label": {
-            "en": "How it works",
-            "fr": "Comment ça marche",
-            "ar": "كيف يعمل"
-          },
-          "href": "/how-it-works/",
-          "style": "peak",
-          "arrow": true
-        }
-      ]
+     "label": {
+      "en": "Sign in",
+      "fr": "Se connecter",
+      "ar": "تسجيل الدخول"
+     },
+     "href": "/account/login/",
+     "style": "ghost"
     }
-  ]
+   ],
+   "note": {
+    "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+    "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+    "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+   }
+  },
+  {
+   "type": "dash-hub",
+   "id": "for-hub",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Who are you?",
+    "fr": "Qui êtes-vous ?",
+    "ar": "من أنت؟"
+   },
+   "lead": {
+    "en": "Each door opens a dashboard built for that role, with API documentation written for it.",
+    "fr": "Chaque porte ouvre un tableau de bord conçu pour ce rôle, avec une documentation API écrite pour lui.",
+    "ar": "كل باب يفتح لوحة مصممة لذلك الدور مع وثائق API مكتوبة له."
+   }
+  },
+  {
+   "type": "faq",
+   "id": "for-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Choosing a door",
+    "fr": "Choisir sa porte",
+    "ar": "اختيار بابك"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Can one account have several roles?",
+      "fr": "Un compte peut-il avoir plusieurs rôles ?",
+      "ar": "هل يمكن لحساب أن يحمل أدوارا عدة؟"
+     },
+     "a": {
+      "en": "An account has one role at a time. You can use the same e-mail for an investor file and an applicant file; the role decides what the dashboard shows.",
+      "fr": "Un compte a un rôle à la fois. Vous pouvez utiliser le même e-mail pour un dossier d’investisseur et un dossier de candidat ; le rôle décide de ce que le tableau de bord affiche.",
+      "ar": "للحساب دور واحد في الوقت. يمكنك استخدام البريد نفسه لملف مستثمر وملف مترشح؛ والدور يحدد ما تعرضه اللوحة."
+     }
+    },
+    {
+     "q": {
+      "en": "Where is the API documentation?",
+      "fr": "Où est la documentation API ?",
+      "ar": "أين وثائق API؟"
+     },
+     "a": {
+      "en": "Inside your dashboard, written for your role, under API & Docs. It is private to signed-in people.",
+      "fr": "Dans votre tableau de bord, rédigée pour votre rôle, sous API et docs. Elle est réservée aux personnes connectées.",
+      "ar": "داخل لوحتك مكتوبة لدورك تحت API والوثائق. وهي خاصة بالمسجلين."
+     }
+    }
+   ]
+  },
+  {
+   "type": "notice",
+   "id": "for-limits",
+   "tier": "i",
+   "focus": 2
+  },
+  {
+   "type": "cta",
+   "id": "for-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Not sure? Start with the facts.",
+    "fr": "Pas sûr ? Commencez par les faits.",
+    "ar": "غير متأكد؟ ابدأ بالوقائع."
+   },
+   "body": {
+    "en": "A part is an investment in a path, not a job. W5D does not promise employment, returns or resale value.",
+    "fr": "Une part est un investissement dans un parcours, pas un emploi. W5D ne promet ni emploi, ni rendement, ni valeur de revente.",
+    "ar": "الحصة مساهمة في مسار وليست وظيفة. لا تَعِد W5D بعمل أو عائد أو قيمة إعادة بيع."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "How it works",
+      "fr": "Comment ça marche",
+      "ar": "كيف يعمل"
+     },
+     "href": "/how-it-works/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
 }

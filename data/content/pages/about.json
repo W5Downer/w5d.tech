@@ -105,6 +105,29 @@
    ]
   },
   {
+   "type": "prose",
+   "id": "abt-how",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "How we work",
+    "fr": "Notre façon de travailler",
+    "ar": "كيف نعمل"
+   },
+   "paragraphs": [
+    {
+     "en": "We publish the plan, the constants of the price function and the status of every project, each with a date. When something is only a concept, the page says so.",
+     "fr": "Nous publions le plan, les constantes de la fonction de prix et le statut de chaque projet, avec une date. Lorsqu’une chose n’est qu’un concept, la page le dit.",
+     "ar": "ننشر الخطة وثوابت دالة السعر وحالة كل مشروع بتاريخها. وحين يكون الشيء مجرد مفهوم تقول الصفحة ذلك."
+    },
+    {
+     "en": "The team page names who is on the team today and which seats are open. Nothing is staffed on paper only.",
+     "fr": "La page équipe nomme qui est dans l’équipe aujourd’hui et quels postes sont ouverts. Rien n’est pourvu seulement sur le papier.",
+     "ar": "تسمّي صفحة الفريق من هو في الفريق اليوم والمقاعد المفتوحة. لا شيء يُشغَل على الورق فقط."
+    }
+   ]
+  },
+  {
    "type": "cta",
    "id": "abt-final",
    "gradient": "peak",

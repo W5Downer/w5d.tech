@@ -204,6 +204,55 @@
    ]
   },
   {
+   "type": "faq",
+   "id": "faq-programs",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Certification, QCM and referrals",
+    "fr": "Certification, QCM et parrainage",
+    "ar": "الاعتماد وQCM والإحالة"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "How does a QCM round work?",
+      "fr": "Comment fonctionne une session QCM ?",
+      "ar": "كيف تعمل جولة QCM؟"
+     },
+     "a": {
+      "en": "Ten questions in ten minutes by default, drawn from a random service at your level. Your answers autosave and the server keeps the clock.",
+      "fr": "Dix questions en dix minutes par défaut, tirées d’un service au hasard à votre niveau. Vos réponses sont enregistrées et le serveur tient le chronomètre.",
+      "ar": "عشرة أسئلة في عشر دقائق افتراضيا من خدمة عشوائية في مستواك. تُحفظ إجاباتك والخادم يحتفظ بالمؤقت."
+     }
+    },
+    {
+     "q": {
+      "en": "How is a certificate verified?",
+      "fr": "Comment un certificat est-il vérifié ?",
+      "ar": "كيف يُتحقق من شهادة؟"
+     },
+     "a": {
+      "en": "Anyone can check its code on the verification page or through the public JSON endpoint. The holder’s name is masked.",
+      "fr": "Chacun peut vérifier son code sur la page de vérification ou via le point d’accès JSON public. Le nom du titulaire est masqué.",
+      "ar": "يستطيع أي شخص فحص رمزها في صفحة التحقق أو عبر نقطة JSON العامة. اسم الحامل مخفي."
+     }
+    },
+    {
+     "q": {
+      "en": "How much does the affiliate programme pay?",
+      "fr": "Combien rapporte le programme d’affiliation ?",
+      "ar": "كم يدفع برنامج الإحالة؟"
+     },
+     "a": {
+      "en": "A declared {{ affiliate.commission_pct|pct }} of a referred investor’s verified payment, plus small fixed bonuses, after a {{ affiliate.hold_days }}-day hold. It is not an income promise.",
+      "fr": "{{ affiliate.commission_pct|pct }} déclarés du paiement vérifié d’un investisseur parrainé, plus de petits bonus fixes, après {{ affiliate.hold_days }} jours d’attente. Ce n’est pas une promesse de revenu.",
+      "ar": "{{ affiliate.commission_pct|pct }} معلنة من الدفع الموثق لمستثمر مُحال، مع مكافآت ثابتة صغيرة بعد احتجاز {{ affiliate.hold_days }} يوما. وليست وعدا بدخل."
+     }
+    }
+   ]
+  },
+  {
    "type": "cta",
    "id": "faq-final",
    "gradient": "calm",

@@ -71,6 +71,43 @@
      "ar": "يُحدَّد المعدل وفقًا للسياسة المعتمدة، ويظهر في كل صفحة تذكره."
     }
    ]
+  },
+  {
+   "type": "faq",
+   "id": "sp-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Sampling, asked plainly",
+    "fr": "L’échantillonnage, en questions simples",
+    "ar": "أخذ العينات بأسئلة مباشرة"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Why not check everything?",
+      "fr": "Pourquoi ne pas tout vérifier ?",
+      "ar": "لماذا لا نتحقق من كل شيء؟"
+     },
+     "a": {
+      "en": "Full re-checking would cost more than the work it protects. A random sample is cheap and makes cheating risky.",
+      "fr": "Tout revérifier coûterait plus que le travail protégé. Un échantillon aléatoire est peu coûteux et rend la triche risquée.",
+      "ar": "إعادة فحص كل شيء ستكلف أكثر من العمل الذي تحميه. العينة العشوائية رخيصة وتجعل الغش مجازفة."
+     }
+    },
+    {
+     "q": {
+      "en": "What happens when a sample fails?",
+      "fr": "Que se passe-t-il quand un échantillon échoue ?",
+      "ar": "ماذا يحدث عند فشل عينة؟"
+     },
+     "a": {
+      "en": "The report is returned, the manager is told and the failure is counted in the quality figures.",
+      "fr": "Le rapport est renvoyé, le responsable est informé et l’échec est compté dans les chiffres de qualité.",
+      "ar": "يُعاد التقرير ويُبلَّغ المدير ويُحتسب الفشل في أرقام الجودة."
+     }
+    }
+   ]
   }
  ]
 }

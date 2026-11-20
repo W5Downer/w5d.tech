@@ -150,6 +150,29 @@
      }
     }
    ]
+  },
+  {
+   "type": "prose",
+   "id": "sub-how",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "How a daily subscription works",
+    "fr": "Comment fonctionne un abonnement journalier",
+    "ar": "كيف يعمل الاشتراك اليومي"
+   },
+   "paragraphs": [
+    {
+     "en": "You choose parts per day, a start date and a number of days. Each day has its own unit price from the published function, so the schedule is shown in full before you confirm.",
+     "fr": "Vous choisissez les parts par jour, une date de début et un nombre de jours. Chaque jour a son prix unitaire issu de la fonction publiée ; le calendrier est donc affiché en entier avant confirmation.",
+     "ar": "تختار الحصص يوميا وتاريخ البدء وعدد الأيام. لكل يوم سعر وحدة من الدالة المنشورة، فيُعرض الجدول كاملا قبل التأكيد."
+    },
+    {
+     "en": "You can pause, resume or cancel with the reference and the key shown once at creation. Cancelling never touches what is already recorded.",
+     "fr": "Vous pouvez suspendre, reprendre ou annuler avec la référence et la clé affichée une fois à la création. Annuler ne touche jamais à ce qui est déjà enregistré.",
+     "ar": "يمكنك الإيقاف أو الاستئناف أو الإلغاء بالمرجع والمفتاح الذي ظهر مرة عند الإنشاء. ولا يمس الإلغاء ما سُجّل أصلا."
+    }
+   ]
   }
  ]
 }

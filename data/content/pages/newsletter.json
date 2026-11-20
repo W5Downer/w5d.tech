@@ -84,6 +84,29 @@
      "span": 1
     }
    ]
+  },
+  {
+   "type": "prose",
+   "id": "nl-promise",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "What we send, and what we never do",
+    "fr": "Ce que nous envoyons, et ce que nous ne faisons jamais",
+    "ar": "ما نرسله وما لا نفعله أبدا"
+   },
+   "paragraphs": [
+    {
+     "en": "Dated updates only: a status change, a published correction, a new level of the programme. No countdowns, no pressure, no daily noise.",
+     "fr": "Seulement des mises à jour datées : un changement de statut, une correction publiée, un nouveau niveau du programme. Pas de compte à rebours, pas de pression, pas de bruit quotidien.",
+     "ar": "تحديثات مؤرخة فقط: تغيّر حالة أو تصحيح منشور أو مستوى جديد للبرنامج. لا عدّ تنازلي ولا ضغط ولا ضجيج يومي."
+    },
+    {
+     "en": "Every message carries a one-click unsubscribe link. Your e-mail is not sold or shared, and a person who unsubscribes stays unsubscribed.",
+     "fr": "Chaque message contient un lien de désabonnement en un clic. Votre e-mail n’est ni vendu ni partagé, et une personne désabonnée le reste.",
+     "ar": "تحمل كل رسالة رابط إلغاء اشتراك بنقرة واحدة. لا يُباع بريدك ولا يُشارك، ومن يلغي اشتراكه يبقى ملغيا."
+    }
+   ]
   }
  ]
 }

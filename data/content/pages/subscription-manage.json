@@ -43,6 +43,55 @@
     "fr": "Gérer",
     "ar": "إدارة"
    }
+  },
+  {
+   "type": "steps",
+   "id": "mng-how",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "How to manage a subscription",
+    "fr": "Comment gérer un abonnement",
+    "ar": "كيف تدير اشتراكا"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Find it",
+      "fr": "Retrouvez-le",
+      "ar": "اعثر عليه"
+     },
+     "body": {
+      "en": "Enter the reference (ORD-…) and the management key that was shown once when you created it.",
+      "fr": "Saisissez la référence (ORD-…) et la clé de gestion affichée une seule fois à la création.",
+      "ar": "أدخل المرجع (ORD-…) ومفتاح الإدارة الذي ظهر مرة واحدة عند الإنشاء."
+     }
+    },
+    {
+     "title": {
+      "en": "Choose an action",
+      "fr": "Choisissez une action",
+      "ar": "اختر إجراء"
+     },
+     "body": {
+      "en": "Pause, resume or cancel. Cancelling stops future charges and cannot be undone; you can start a new subscription instead.",
+      "fr": "Suspendre, reprendre ou annuler. Annuler arrête les prélèvements futurs et ne peut être défait ; vous pouvez en démarrer un nouveau.",
+      "ar": "إيقاف أو استئناف أو إلغاء. الإلغاء يوقف الخصومات المقبلة ولا يمكن التراجع عنه؛ يمكنك بدء اشتراك جديد."
+     }
+    },
+    {
+     "title": {
+      "en": "Lost the key?",
+      "fr": "Clé perdue ?",
+      "ar": "فقدت المفتاح؟"
+     },
+     "body": {
+      "en": "The key is stored only as a hash, so nobody can read it back. Sign in and open Orders, or write to the investors desk with your reference.",
+      "fr": "La clé n’est conservée que sous forme de hachage ; personne ne peut la relire. Connectez-vous et ouvrez Commandes, ou écrivez au bureau investisseurs avec votre référence.",
+      "ar": "يُحفظ المفتاح كبصمة مجزّأة فقط فلا يستطيع أحد قراءته. سجّل الدخول وافتح الطلبات أو راسل مكتب المستثمرين بمرجعك."
+     }
+    }
+   ]
   }
  ],
  "robots": "noindex,follow"
