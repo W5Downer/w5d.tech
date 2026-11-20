@@ -141,6 +141,9 @@ final class Dash
         $add('managers', self::L('Manager applications to read', 'Candidatures de managers à lire', 'طلبات مديرين للقراءة'), $n("SELECT COUNT(*) FROM manager_applications WHERE status = 'received'"), admin_url('manager-applications/'));
         $add('messages', self::L('New messages', 'Nouveaux messages', 'رسائل جديدة'), $n("SELECT COUNT(*) FROM contact_messages WHERE status = 'new'"), admin_url('inbox/'));
         $add('applicants', self::L('Registered applicants', 'Candidats inscrits', 'مترشحون مسجلون'), $n("SELECT COUNT(*) FROM applicants WHERE status = 'registered'"), admin_url('applicants/'));
+        $add('qcm', self::L('QCM fee passes to verify', 'Accès QCM payants à vérifier', 'تصاريح QCM المدفوعة للتحقق'), $n("SELECT COUNT(*) FROM qcm_passes WHERE status = 'pending'"), admin_url('qcm-review/'));
+        $add('qcm', self::L('QCM tasks to review', 'Tâches QCM à examiner', 'مهام QCM للمراجعة'), $n("SELECT COUNT(*) FROM qcm_tasks WHERE status = 'submitted'"), admin_url('qcm-review/'));
+        $add('affiliates', self::L('Affiliate applications and payouts', 'Candidatures d’affiliés et versements', 'طلبات المُحيلين والصرف'), $n("SELECT (SELECT COUNT(*) FROM affiliates WHERE status = 'pending') + (SELECT COUNT(*) FROM affiliate_payouts WHERE status = 'requested')"), admin_url('affiliates/'));
         return ['label' => self::spec($role)['label'], 'blurb' => self::spec($role)['blurb'], 'queues' => $q, 'widgets' => self::spec($role)['widgets']];
     }
 }
