@@ -100,6 +100,10 @@ function view(string $name, array $data = []): string
 
 function not_found(): W5D\Response
 {
+    $path = (string)parse_url((string)($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
+    if (PHP_SAPI !== 'cli' && (str_starts_with($path, '/api/') || str_ends_with($path, '.json'))) {
+        return W5D\Response::json(['error' => 'not_found', 'message' => 'No such API resource. See /developers/ for the endpoints.'], 404, ['X-Robots-Tag' => 'noindex']);
+    }
     return W5D\Response::html(view('pages.404', ['title' => '404']), 404);
 }
 

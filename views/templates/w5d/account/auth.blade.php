@@ -32,7 +32,7 @@
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
           <x-form-field name="identifier" :label="__('acct.id_label')" type="text" :required="true" :errors="$errors" />
-          <x-form-field name="password" :label="__('acct.password')" type="password" :required="true" :errors="$errors" />
+          <x-form-field name="password" :label="__('acct.password')" type="password" autocomplete="current-password" :required="true" :errors="$errors" />
           <x-form-field name="remember" :label="__('acct.remember')" type="checkbox" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.login') }}</button>
           <p class="text-sm"><a class="btn-link" href="{{ url('/account/forgot/') }}">{{ __('acct.forgot_link') }}</a></p>
@@ -63,8 +63,8 @@
           <x-form-field name="name" :label="__('acct.name')" :required="true" :errors="$errors" />
           <x-form-field name="email" :label="__('acct.email')" type="email" :required="true" :errors="$errors" />
           <x-form-field name="role" :label="__('acct.role')" type="select" :options="['user' => __('acct.role_user'), 'investor' => __('acct.role_investor'), 'customer' => __('acct.role_customer')]" :errors="$errors" />
-          <x-form-field name="password" :label="__('acct.password')" type="password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
-          <x-form-field name="password2" :label="__('acct.password2')" type="password" :required="true" :errors="$errors" />
+          <x-form-field name="password" :label="__('acct.password')" type="password" autocomplete="new-password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
+          <x-form-field name="password2" :label="__('acct.password2')" type="password" autocomplete="new-password" :required="true" :errors="$errors" />
           <x-form-field name="accept" :label="__('acct.accept') . ' ([' . __('cta.read_limits') . '](/trust/statement/))'" type="checkbox" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.register') }}</button>
         </form>
@@ -93,8 +93,8 @@
         <form method="post" action="{{ url('/account/reset/' . $token . '/') }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
-          <x-form-field name="password" :label="__('acct.new_password')" type="password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
-          <x-form-field name="password2" :label="__('acct.password2')" type="password" :required="true" :errors="$errors" />
+          <x-form-field name="password" :label="__('acct.new_password')" type="password" autocomplete="new-password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
+          <x-form-field name="password2" :label="__('acct.password2')" type="password" autocomplete="new-password" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.reset') }}</button>
         </form>
       @endif

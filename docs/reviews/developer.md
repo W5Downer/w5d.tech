@@ -1,27 +1,28 @@
 # Review as: Developer / API consumer
 
-**Scope:** Public JSON API, private API docs tab in dashboards, `/openapi.json` (auth required), agent tools.
+**Scope:** public JSON API (`/api/*.json`, `POST /api/quote`, `POST /api/subscriptions`, `POST /api/managers/apply`, `/api/certificates/{code}.json`), CORS, error contract, private OpenAPI at `/openapi.json` and the API tab in dashboards.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+Good: stable JSON, CORS enabled, rate-limited certificate verification. The first pass found that errors on API paths came back as HTML and that browsers' CORS preflight failed. Both are fixed and guarded. The remaining gaps are localisation of errors and the absence of language-aware URLs.
 
 ## What worked
-- dash suite: 20 public ops and 11 panels documented, 142 pass.
-- `/api/certificates/{code}.json` returns 404 for unknown code; guest `/openapi.json` returns 401 (private by design).
-- `verify_certificate` agent tool and sitemap entries added.
+- Unknown API resource: JSON `{"error":"not_found","message":"..."}` 404 with `X-Robots-Tag: noindex`.
+- Wrong method: 405 with `Allow` header and JSON `{"error":"method_not_allowed","allow":[...]}`; non-API pages show the 405 page.
+- `OPTIONS` -> 204 with `Allow`; on `/api/` and `*.json` also `Access-Control-Allow-Origin: *`, Methods, Headers `Content-Type, X-CSRF-Token`, Max-Age 86400. `GET /api/price.json` sends `Access-Control-Allow-Origin: *` and `Cache-Control: public, max-age=60`.
+- Certificate API masks the holder ("Amel T."), reports valid/revoked/expired, and returns 429 after `cert.verify_per_10min` (30) per IP (`cert.py`).
+- `/openapi.json` is 401 for guests; `/api/openapi.json` is listed in the post-upload checklist.
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| D-1 | Medium | Certificate verify API rate limit (429) and masked holder name untested | Hit endpoint >limit/min; inspect JSON | tests/cert.py |
-| D-2 | Low | OpenAPI is private; public developers cannot discover endpoints without an account | GET /openapi.json as guest = 401 | Consider a public subset or link the developer tab from /api page |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| D-0 | Medium | Fixed | API 404/405 returned HTML; no CORS preflight | `curl -i -X OPTIONS /api/quote`, `curl /api/nope` | `Router`, `not_found()`; `contract.py` |
+| D-1 | Low | Open | Validation messages from `/api/quote` are English in all languages and have no stable machine code per field | `POST /api/quote {"parts":0}` | add `code` per error (e.g. `parts_range`) and localise `message` |
+| D-2 | Low | Open | `/api/quote` is routed for both GET and POST (a bare GET answers 422 validation); the contract does not say whether GET is supported | `curl -i /api/quote` | decide and document; return 405 for GET if POST-only |
+| D-3 | Low | Open | Language is cookie-based; `?lang=` ignored, so API consumers cannot request fr/ar content with a URL | `curl /api/pages/home.json?lang=fr` | support `?lang=` or `Accept-Language` for `/api/*` |
+| D-4 | Low | Open | Public OpenAPI subset does not exist; the full spec requires login | `curl -i /openapi.json` (401) | publish a public subset for the open endpoints |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+Behaviour behind a real CDN, API versioning policy, throughput.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`contract.py` 34/0 (404/405/OPTIONS/CORS), `cert.py` 55/0, `flows.py` 69/0. Live probe of `/api/price.json` headers confirmed `Access-Control-Allow-Origin: *`.

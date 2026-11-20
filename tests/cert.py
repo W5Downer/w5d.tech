@@ -69,7 +69,7 @@ try:
     s, h, b = call(guest, 'GET', '/certification/verify/')
     check('empty form: 200, indexable, has labelled input', s == 200 and 'for="f-code"' in b and 'noindex' not in b, s)
     s, h, b = call(guest, 'GET', f'/certification/verify/?code={code}')
-    check('valid code -> "valid" state with masked holder', s == 200 and 'data-cert-state="valid"' in b and 'Amel B.' not in b and 'Amel T.' not in b and 'Amel Ben T.' not in b or ('Amel' in b and 'Trabelsi' not in b), s)
+    check('valid code -> "valid" state', s == 200 and 'data-cert-state="valid"' in b, s)
     check('holder shown as first name + last initial only', 'Amel T.' in b and 'Trabelsi' not in b)
     check('no e-mail address on the public page', hemail not in b and '@mail.test' not in b)
     check('result page is noindex', 'noindex' in b)
@@ -82,7 +82,7 @@ try:
         check(f'junk code {junk[:18]!r}: no 5xx, no reflected markup', s < 500 and '<script>alert(1)' not in b, s)
     check('certificates table survived the injection probe', q1('SELECT COUNT(*) FROM certificates') >= 3)
     for lang in ('fr', 'ar'):
-        g = _client(); g.cookies.set('w5d_lang', lang) if hasattr(g, 'cookies') and hasattr(g.cookies, 'set') else None
+        g = _client()
         call(g, 'GET', f'/language/{lang}')
         s, h, b = call(g, 'GET', f'/certification/verify/?code={code}')
         want = 'Certificat valide' if lang == 'fr' else 'شهادة صالحة'
@@ -156,8 +156,6 @@ try:
     check('the empty form still opens while limited', s == 200)
     reset_rl()
 
-    section('programme hooks')
-    check('first valid certificate paid the affiliate certificate hook without error (no 5xx in log)', True)
 finally:
     for uid in made_users:
         run('DELETE FROM certificates WHERE user_id=?', (uid,))

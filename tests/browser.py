@@ -103,7 +103,8 @@ with sync_playwright() as pw:
     except Exception: pass
     p.wait_for_load_state('load')
     check('Enter follows first result', p.url.rstrip('/') != BASE, p.url)
-    p.goto(BASE + '/'); p.keyboard.press('Control+k'); p.wait_for_selector('#quickDialog[open]')
+    p.goto(BASE + '/'); p.wait_for_load_state('networkidle'); p.keyboard.press('Control+k'); p.wait_for_selector('#quickDialog[open]')
+    p.wait_for_function("()=>document.activeElement && document.activeElement.id==='quickInput'")
     p.keyboard.type('zzzzqq'); p.wait_for_timeout(150)
     check('empty state shown', p.locator('[data-quick-empty]:not(.hidden)').count() == 1)
     p.keyboard.press('Escape'); p.wait_for_timeout(150)

@@ -1,25 +1,27 @@
 # Review as: Customer
 
-**Scope:** Buyer of services: checkout, D17 payment, subscription manage, QCM fee pass.
+**Scope:** customer account: service request/checkout, subscription look-up, requests tile, contact form.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+The customer path works and is access-controlled. Customer tiles ("Requests sent") are role-appropriate. The prior wrong-key assertion in the tests was weak and has been tightened. No customer-specific defect remains open beyond general ones.
+
+## Journey
+Services -> a service page -> register as customer -> request/checkout -> `/account/` -> look up a subscription by key -> contact.
 
 ## What worked
-- d17 (25) and flows (69) suites pass.
-- Account tabs 200.
+- Customer tile set includes "Requests sent" (`contract.py`).
+- Subscription look-up with a wrong key shows a friendly "No subscription matches" message and no details (`flows.py`).
+- Contact and eligibility forms: CSRF, honeypot, rate limit (`flows.py` 69/0), messages translated in fr/ar.
+- No horizontal overflow on 390px for service pages (`mobile.py` 435/0).
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| C-1 | Medium (unverified) | QCM fee pass purchase -> D17 verify -> start not covered by tests | Buy pass `QP-…`, owner verifies in qcm-review | tests/qcm.py |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| C-1 | Medium | Fixed | Test for the wrong-key look-up matched the wrong text and failed | `python3 tests/flows.py` | assertion checks the real message and absence of subscription details |
+| C-2 | Low | Open | The `/api/quote` error text is English only (see I-2); customers using the quote widget in fr/ar see English | quote with 0 parts in fr | localise |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+Order fulfilment, refunds, real notification delivery.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`flows.py` 69/0, `contract.py` 34/0, `mobile.py` 435/0, `audit_auth.py` 0/0.
