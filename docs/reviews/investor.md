@@ -1,26 +1,30 @@
 # Review as: Investor
 
-**Scope:** Investor account: dashboard, programs, developer tab.
+**Scope:** `/pricing/`, `/investors/`, `/checkout/`, D17 payment, subscription look-up, receipts, `/api/price.json`, `/api/quote`.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+The money-times-time pricing and checkout flow work and the dashboard shows parts and price. Honest tone is kept ("a path, not a job"; no promised returns). The investor-facing finds were an unmarked Invest tab on phones (fixed) and an English-only API validation message (open).
+
+## Journey
+Guest -> `/pricing/` -> `/investors/` -> Invest (302 to sign-in with `?next=`) -> register as investor -> `/checkout/` -> D17 reference -> owner verifies -> subscription look-up.
 
 ## What worked
-- Investor tabs 200.
-- `for-investor` page now uses valid `chart-line` icon (was missing `line-chart`, fixed this round).
-- Tone honest: no promised returns.
+- `/api/price.json` and `/api/quote` agree (`flows.py`); numbers come from `config/variables.php` via tokens, never hard-coded in content (lint enforces).
+- Guest on `/checkout/` is redirected to login with the return path preserved.
+- D17 flow end-to-end (`d17.py` 25/0): wrong key shows "No subscription matches" with no details leaked (`flows.py` assertion).
+- Investor tiles: Parts ordered, Price today (`contract.py`).
+- Active menu: the Invest mega trigger is selected on `/pricing/`, `/investors/`; phone tab bar now marks Invest there too.
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| I-1 | Low | Investor dashboard has no investor-specific KPIs in probe | GET /account/ as investor | Add investor KPIs or hide empty panels |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| I-1 | Medium | Fixed | Phone tab bar showed no current tab on `/pricing/` and `/investors/` | 390px, open `/pricing/` | `tabbar.blade.php` matches checkout/pricing/invest; `contract.py` |
+| I-2 | Low | Open | `/api/quote` validation message is English in every language: `"Choose 1 to 1000 parts."` | `curl -X POST /api/quote -d '{"parts":0}'` | pass `lang()` into `Api::quote` messages via `lang/*` keys |
+| I-3 | Low | Open | `for-investor` copy was reviewed for promises; keep checking any future return/ROI wording | `/for/investor/` | keep the lint rule and human review of money claims |
+| I-4 | Info | Open | `/checkout/` redirect for guests appears as 12 INFO redirects in `audit.py`; expected | `audit.py` | none |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+Real D17 gateway, tax/legal wording by a lawyer, behaviour under many simultaneous orders.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`d17.py` 25/0, `flows.py` 69/0, `contract.py` tile and tab-bar checks, `audit_auth.py` 0/0. Probe: `POST /api/quote {"parts":0}` returns `{"error":"validation","errors":{"parts_per_day":"Choose 1 to 1000 parts.","days":"Choose 1 to 365 days."}}` regardless of language.

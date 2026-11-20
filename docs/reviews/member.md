@@ -1,25 +1,28 @@
-# Review as: Member
+# Review as: Member (promoted account)
 
-**Scope:** Paid/enrolled member: learning path, QCM practice, certification.
+**Scope:** an account promoted to `member` before login: dashboard, QCM, certificates, API tab. `member` has only the `dashboard` permission in `config/roles.php`, and public registration cannot create it (`Account::SELF_ROLES` = user, investor, customer).
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+A real member sees "Your dashboard · Member" and the member API tab; the journeys work. An earlier "member sees the visitor view" alarm turned out to be a test artifact (the account had been promoted after login, and the role is read at login). The one real gap is that the overview tiles are the generic ones.
+
+## Journey
+Register -> verify -> promoted in DB -> login -> `/account/` -> `?tab=qcm` -> `?tab=certificates` -> `?tab=developer`.
 
 ## What worked
-- All account tabs 200.
-- Certification and affiliate public pages 200 and token-free.
+- Dashboard title and role label are correct; unread-notification tile shows a count.
+- QCM and certificate tabs return 200; QCM gating and scoring pass `qcm.py` (86/0).
+- API tab shows the Member text (not the user text).
+- The portal is not reachable (302 to login), as expected for a role with no staff permission.
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| MB-1 | High (unverified) | QCM timer auto-submit, late-finish grace and exact-set scoring have no automated test | Start a round, wait past limit + grace, submit | Write tests/qcm.py |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| M-1 | Low | Open | Member overview tiles are the generic default: "Your next step", "Applicant file", "status", "Unread notifications", "Services 130" | promote before login, open `/account/` | add a `'member' =>` arm in `Dash::account()` (certificates held, next QCM allowed at, affiliate balance) |
+| M-2 | Low | Open | The role is read at login only; promoting a signed-in user shows no change until they sign in again (caused the false alarm) | promote after login, reload | per-request role read, or end the session on role change |
+| M-3 | Info | n/a | No self-service route to become a member; promotion is an owner action, and no screen explains that to the user | n/a | add one line to the user dashboard once the policy is decided |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+A long-lived member session over several QCM rounds; a human check of the member API tab wording in fr/ar.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+Throw-away promoted account: `/account/` 200, text "Your dashboard · Member", tiles list above; test user deleted afterwards. `qcm.py` 86/0, `cert.py` 55/0, `audit_auth.py` 0/0.

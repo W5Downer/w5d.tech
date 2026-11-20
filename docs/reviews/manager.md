@@ -1,25 +1,27 @@
-# Review as: Manager (account role)
+# Review as: Manager (staff account role)
 
-**Scope:** Manager account: dashboard and programs.
+**Scope:** a public account promoted to `manager` (member of `Account::STAFF`), its `/account/` overview and the portal menus its ACL allows.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+After the round-1 fix the manager sees a staff overview instead of the applicant file, and reaches the portal. Staff roles share one tile set, so manager-specific work queues are not surfaced on the overview. That is a design gap, not a defect.
+
+## Journey
+Register -> verify -> promote before login -> login -> `/account/` -> portal -> a menu the role may open -> a menu it may not.
 
 ## What worked
-- Tabs qcm/affiliate/certificates/developer all 200.
-- Careers/managers page gated (302) per gate suite.
+- The role is honoured at login and the portal opens (`Dash::STAFF_PORTAL` includes `manager`).
+- Tiles: Unread notifications, Services (130), Portal menus (count). No "Applicant file".
+- ACL denials render a proper page, not a blank 403 (`gate.py`, `audit_auth.py`).
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| M-1 | Low | Manager vs leader differences are thin in UI | Compare dashboards | Clarify role matrix in docs |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| M-1 | Medium | Fixed | Overview showed the applicant file for a staff role | sign in, open `/account/` | staff tiles in `Dash::account()`; `contract.py` checks `manager` |
+| M-2 | Low | Open | Staff roles share identical tiles; no queue counts (pending referrals, passes to review, applications) | open `/account/` as manager | add per-role counters from the tables the `Dash` desks already query |
+| M-3 | Low | Open | Role is read at login only (see admin A-2) | promote while signed in | per-request role read |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+The full permission matrix for manager. A real team workflow with several staff acting on one queue.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`contract.py` 34/0 (tile checks for admin/leader/manager); `dash.py` 142/0; `audit_auth.py` 0/0.

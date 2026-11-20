@@ -130,7 +130,10 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 - Adding a new Lucide icon or Tailwind class needs `cd tools && node build.mjs`; then `php bin/view.php cache`.
 
 
-## Turn 5 addendum (2026-11-20)
-- Portal now has 36 menus (QCM bank/review/rules, affiliates, certificates added); see `config/roles.php`.
-- New docs: `docs/ARCHITECTURE.md`, `docs/qcm-generation-prompt.md`, `docs/reviews/*` (per-audience reviews + backlog).
-- OPEN: write `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` (see `docs/reviews/README.md`), add a crud case for `qcm-rules`.
+## Turn 5 addendum (2026-11-20, final)
+- New suites: `tests/qcm.py` (86), `tests/cert.py` (55), `tests/affiliate.py` (88), `tests/contract.py` (34); audits `tests/audit.py`, `audit_auth.py`, `audit_browser.py`. Helpers: `tests/_prog.py` (`staff(role)` promotes BEFORE login because the role is read at login).
+- Router: 405 + `Allow`, JSON 404/405 for `/api/*` and `*.json`, OPTIONS 204 with CORS preflight on API paths.
+- Active menu: header longest-match + `active_prefix` in `nav/main.json`; phone tab bar patterns in `partials/tabbar.blade.php`. Any new top-level section needs both and a `contract.py` case.
+- Forms: `<x-form-field>` derives `autocomplete`/`inputmode`; password fields use `current-password`/`new-password`.
+- Reviews per audience with real findings: `docs/reviews/`. Architecture map: `docs/ARCHITECTURE.md`.
+- OPEN (see `docs/reviews/README.md`): language URLs + hreflang, localised `/api/quote` errors, member overview tiles, per-request role refresh, `qcm-rules` case in `crud.py`, human RTL/screen-reader review, real SMTP/D17.

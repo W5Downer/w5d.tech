@@ -1,27 +1,31 @@
 # Review as: Owner (portal super-user)
 
-**Scope:** Full portal: 36 menus incl. QCM bank, QCM rules, affiliates, certificates, CRUD, mail, payments.
+**Scope:** `/panel-x9z/` (path from `ADMIN_URL_PATH`), 36 menus, CRUD with ACL, D17 verification, QCM bank/rules/review, affiliates, certificates, mail outbox, variables.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+Every menu I opened rendered, on desktop and on a 390px phone, and the active portal item was marked correctly each time. The owner-only desks (QCM review, affiliate referrals and payouts, certificate issue/revoke) work end-to-end under the new suites. No data leak or ACL gap was found. Findings are mostly about guarding and polish.
+
+## Journey
+Login -> Command Center -> Services -> QCM bank (import/export/CRUD) -> QCM rules -> QCM review (fee pass, task approve) -> Affiliates (approve, settle payout) -> Certificates (issue, revoke) -> Variables -> Mail outbox.
 
 ## What worked
-- Portal login redirect works for guests (`/panel-x9z/` 302).
-- dash/crud/gate suites cover owner desk queues (QCM passes, tasks, affiliates) and CRUD with ACL.
-- Owner-only `qcm-rules` resource by design.
+- Sidebar item for the current page carries `aria-current="page"` and the highlighted style on desktop and phone (probe: `/`, `/services/`, `/qcm-bank/`, `/affiliates/`; no horizontal overflow on either viewport).
+- QCM: rules are owner-only; bank import/export/CRUD work; fee-pass flow QP-XXXXXXXX -> D17 -> `qcm-review/pass` (`tests/qcm.py` 86/0).
+- Certificates: issue, revoke, expiry, CSRF and ACL denial for non-owners (`tests/cert.py` 55/0).
+- Affiliates: approve/reject, hold period, payout settle (`tests/affiliate.py` 88/0).
+- Mail goes through the log driver; `@example.test` is never mailed.
+- Variable overrides are written with `changed_by` for audit.
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| O-1 | Medium | `qcm-rules` select options (level/min_level) use string keys; not exercised in portal UI test | Open portal > QCM rules > edit a rule and save | Add a crud.py case for qcm-rules create/update |
-| O-2 | Low | Admin URL path default `panel-x9z` is visible in tests/docs; ensure production `.env` overrides it | grep ADMIN_URL_PATH .env.example | Document rotation in ops docs |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| O-1 | High (coverage) | Fixed | No automated coverage for QCM, certificates and affiliates | `ls tests/` | `qcm.py`, `cert.py`, `affiliate.py` written (229 checks) |
+| O-2 | Low | Open | `crud.py` has no case for the owner-only `qcm-rules` resource (rules are covered by `qcm.py`, but not through generic CRUD) | read `tests/crud.py` | add a create/update/denied-for-admin case |
+| O-3 | Low | Open | Default portal path `panel-x9z` and demo owner password appear in tests/docs. Safe only if production `.env` overrides both | `grep ADMIN_URL_PATH .env.example` | `bin/preflight.php` already warns; keep the post-upload checklist (AGENTS.md section 8) |
+| O-4 | Low | Open | Test suites seed `@example.test` rows into the dev DB | `tests/*.py` | use "Purge demo data" in the portal; never run write suites against production |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+Real SMTP delivery, real D17 gateway callbacks, concurrent owner sessions, a human pass over all 36 screens in Arabic.
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`dash` 142/0, `crud` 60/0, `gate` 38/0, `qcm` 86/0, `cert` 55/0, `affiliate` 88/0. Playwright probe on the owner portal at 390px and 1366px: active item present and visible on 4 of 4 pages tried, no overflow.

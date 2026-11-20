@@ -617,6 +617,8 @@ bash tests/smoke.sh              # every public route x en/fr/ar must answer 200
 python3 tests/flows.py           # CSRF, validation, honeypot, rate limit, checkout, subscription, API, pricing, all 30 admin menus
 python3 tests/{auth,d17,dash,gate,mail,crud}.py   # accounts, D17 payments, dashboards, sign-in gate, mail + unsubscribe, CRUD + ACL
 python3 tests/{ui,browser,mobile}.py     # Playwright browser suites (UI, modals/quick-find/tab bar, responsive audit)
+python3 tests/{qcm,cert,affiliate,contract}.py   # programmes (QCM, certification, affiliate) and the HTTP/UI contract
+python3 tests/audit.py; python3 tests/audit_auth.py; python3 tests/audit_browser.py   # professionalism audits (0 errors expected)
 bash tests/production.sh         # FULL production simulation: APP_ENV=production + HTTPS proxy + trusted view cache + every suite + security checks
 php bin/preflight.php            # deploy-readiness check of the CURRENT .env (run on the real host; exit 1 on any FAIL)
 cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)

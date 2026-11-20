@@ -1,25 +1,28 @@
 # Review as: User (basic account)
 
-**Scope:** Default registrant: register, verify e-mail, sign in, QCM practice, affiliate apply.
+**Scope:** default registrant: register, verify e-mail, sign in, profile and password, QCM practice, affiliate apply, certificate view.
 
 ## Summary
-The audience's main journeys render and are access-controlled correctly in all automated checks. The largest risk is missing automated coverage for the new QCM / certification / affiliate subsystems.
+The sign-up path is solid and now behaves well with password managers. Messages are translated (fr/ar checked). Remaining items are small.
+
+## Journey
+`/account/register/` -> verification mail (log driver) -> `/account/verify/...` -> login -> `/account/` -> profile -> QCM practice -> affiliate apply -> certificate tab.
 
 ## What worked
-- Register -> mail log verify -> login works (auth 37/0, `_acct.signed_in`).
-- All account tabs 200.
+- Register -> verify -> login (`auth.py` 37/0). Login error text is translated.
+- Validation messages for register, contact and eligibility are translated in fr and ar (checked by a probe in all three languages). The forgot-password and checkout probes showed no alert element; I did not establish whether that is intended, so treat it as unverified.
+- Password fields carry `current-password` (login) and `new-password` (register, reset, profile): the register page has exactly two `new-password` fields. E-mail has `inputmode=email`.
+- Affiliate: apply is pending until approved unless `affiliate.auto_approve`; self-referral is refused; click dedupe per visitor per day (`affiliate.py` 88/0).
 
 ## Findings
-| ID | Severity | Finding | Repro | Suggested fix |
-|----|----------|---------|-------|---------------|
-| U-1 | Medium (unverified) | Affiliate apply/approve/commission/self-referral refusal untested end-to-end | Apply on `?tab=affiliate`, approve in portal, visit `?ref=` | tests/affiliate.py |
-| G-1 | High (coverage) | No automated tests for QCM, certificates, affiliate flows | `ls tests/` has no qcm/cert/affiliate | Author `tests/qcm.py`, `tests/cert.py`, `tests/affiliate.py` using `_acct.signed_in` (see docs/reviews/README.md checklist) |
+| ID | Sev | Status | Finding | Repro | Fix / guard |
+|---|---|---|---|---|---|
+| U-1 | Medium | Fixed | Forms had no `autocomplete`, so browsers offered the wrong saved values (e.g. the payout GSM) | open `/account/register/` | `form-field` `$acMap`; `contract.py` autocomplete checks |
+| U-2 | Low | Open | Public registration offers only user, investor, customer; there is no visible explanation of how the other roles are obtained | `/account/register/` | add help text |
+| U-3 | Low | Open | The verification mail is only visible in `storage/logs/mail-*.log` while `MAIL_DRIVER=log`; real delivery is unverified | `php bin/mail.php status` | test with SMTP before launch |
 
-## Honest coverage statement
-This review is based on the automated suites plus a per-role HTTP probe. The dedicated suites `tests/qcm.py`, `tests/cert.py` and `tests/affiliate.py` do NOT exist yet, so the QCM timeout/scoring, requirement gating, affiliate commission/payout and certificate revoke/expiry paths have no end-to-end automated coverage. Treat statements about those flows as unverified beyond status codes and page rendering. No human visual review was done for this audience.
+## Not verified
+Real e-mail delivery; password-manager behaviour in real browsers (attributes are present, behaviour was not observed).
 
-## Test evidence (2026-11-20, dev server :8080, MAIL_DRIVER=log)
-- `smoke.sh` 713 checked / 0 failed; `flows` 69/0; `auth` 37/0; `d17` 25/0; `dash` 142/0; `gate` 38/0; `mail` 136/0; `crud` 60/0; `ui` 64/0; `browser` 65/0; `mobile` 435/0; `viewcache` 27/0.
-- `php bin/lint.php`: LINT OK (215 content files, 92 templates, 3 languages). `php bin/view.php cache`: 92 compiled.
-- Role probe (`/tmp/probe.py`, throw-away accounts via `tests/_acct.py`): for roles user, customer, investor, member, leader, manager, GET `/account/`, `?tab=qcm`, `?tab=affiliate`, `?tab=certificates`, `?tab=developer`, `/certification/`, `/affiliate/` all returned 200; `/panel-x9z/` returned 302 (login redirect); unknown certificate code returned 404.
-- Guest probe: `/` 200, `/sitemap.xml` 200, `/account/` 302, `/panel-x9z/` 302, `/openapi.json` 401, `/nope/` 404, `/ar/` and `/fr/` 404.
+## Evidence
+`auth.py` 37/0, `affiliate.py` 88/0, `qcm.py` 86/0, `contract.py` 34/0, `audit_auth.py` 0/0.
