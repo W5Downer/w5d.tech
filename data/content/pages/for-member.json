@@ -195,9 +195,9 @@
             "ar": "كم خبيرا معتمدا اليوم؟"
           },
           "a": {
-            "en": "{{ d.experts_current }}. The figure {{ d.experts_target }} is a design equation, not a headcount.",
-            "fr": "{{ d.experts_current }}. Le chiffre {{ d.experts_target }} est une équation de conception, pas un effectif.",
-            "ar": "{{ d.experts_current }}. الرقم {{ d.experts_target }} معادلة تصميم وليس عدد موظفين."
+            "en": "{{ d.experts_current|first }}. The figure {{ d.experts_target }} is a design equation, not a headcount.",
+            "fr": "{{ d.experts_current|first }}. Le chiffre {{ d.experts_target }} est une équation de conception, pas un effectif.",
+            "ar": "{{ d.experts_current|first }}. الرقم {{ d.experts_target }} معادلة تصميم وليس عدد موظفين."
           }
         }
       ]

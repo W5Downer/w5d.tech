@@ -39,6 +39,10 @@
     window.addEventListener('resize', function () { if (window.innerWidth >= 1024) { setPanel(mm, false); mt.setAttribute('aria-expanded', 'false'); } });
   }
 
+  /* bottom tab bar (phones): "Menu" opens the same panel as the header burger */
+  var tm = $('[data-tab-menu]');
+  if (tm && mt) tm.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); mt.click(); });
+
   /* mega menu: hover (with a delay bridge) + click + keyboard */
   var triggers = $$('[data-mega-trigger]'), closeT;
   function closeAll(except) {
@@ -206,6 +210,31 @@
     go(0);
   });
 
+  /* ---------- card image carousels (click/arrow/swipe; auto-advances only without reduced motion, pauses on hover) ---------- */
+  $$('[data-card-carousel]').forEach(function (root) {
+    var sl = $$('[data-cslide]', root), dots = $$('[data-cdot]', root), i = 0, timer = null;
+    function go(n, ev) {
+      if (ev) { ev.preventDefault(); ev.stopPropagation(); }
+      i = (n + sl.length) % sl.length;
+      sl.forEach(function (s, k) { s.classList.toggle('is-active', k === i); if (k) s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+    }
+    function play() { if (reduce) return; stop(); timer = setInterval(function () { go(i + 1); }, 4500); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    var pv = $('[data-cprev]', root), nx = $('[data-cnext]', root);
+    if (pv) pv.addEventListener('click', function (e) { go(i - 1, e); });
+    if (nx) nx.addEventListener('click', function (e) { go(i + 1, e); });
+    root.addEventListener('mouseenter', stop); root.addEventListener('mouseleave', play);
+    root.addEventListener('focusin', stop); root.addEventListener('focusout', play);
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) go(i + ((dx < 0) !== (document.documentElement.dir === 'rtl') ? 1 : -1));
+    });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { en[0].isIntersecting ? play() : stop(); }).observe(root); else play();
+  });
+
   /* ---------- sticky CTA (after 40 % scroll) ---------- */
   var sc = $('[data-sticky-cta]');
   if (sc) {
@@ -225,14 +254,76 @@
   });
 
   /* ---------- copy buttons ---------- */
-  $$('[data-copy]').forEach(function (b) {
+  $$('[data-copy],[data-copy-text]').forEach(function (b) {
     b.addEventListener('click', function () {
-      var src = document.getElementById(b.getAttribute('data-copy')), txt = src ? src.textContent : b.getAttribute('data-copy-text') || '';
-      if (navigator.clipboard) navigator.clipboard.writeText(txt.trim()).then(function () {
-        var old = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = old; }, 1200);
-      });
+      var id = b.getAttribute('data-copy'), src = id ? document.getElementById(id.replace(/^#/, '')) : null, txt = src ? src.textContent : b.getAttribute('data-copy-text') || '';
+      function ok() { var old = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = old; }, 1200); }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt.trim()).then(ok, function () {});
+      else { var ta = document.createElement('textarea'); ta.value = txt.trim(); ta.setAttribute('readonly', ''); ta.className = 'sr-only'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) {} document.body.removeChild(ta); }
     });
   });
+  $$('[data-print]').forEach(function (b) { b.addEventListener('click', function () { window.print(); }); });
+
+  /* ---------- QCM round: one question at a time, timer, autosave (form still works without JS) ---------- */
+  (function () {
+    var form = $('form[data-qcm]');
+    if (!form) return;
+    var steps = $$('.qcm-step', form), prev = $('[data-qcm-prev]', form), next = $('[data-qcm-next]', form), sub = $('[data-qcm-submit]', form);
+    var clock = $('[data-qcm-clock]'), cnt = $('[data-qcm-count]'), bar = $('[data-qcm-progress]'), st = $('[data-qcm-status]');
+    var total = steps.length, cur = 0, left = parseInt(clock ? clock.getAttribute('data-left') : '0', 10) || 0, sent = false;
+    document.documentElement.classList.add('qcm-js');
+    function answered(step) { return $$('input:checked', step).length > 0; }
+    function refresh() {
+      var n = steps.filter(answered).length;
+      if (cnt) cnt.textContent = String(n);
+      if (bar) bar.style.width = (total ? Math.round(n * 100 / total) : 0) + '%';
+      return n;
+    }
+    function show(i) {
+      cur = Math.max(0, Math.min(total - 1, i));
+      steps.forEach(function (s, k) { s.classList.toggle('is-current', k === cur); });
+      if (prev) { prev.classList.remove('hidden'); prev.disabled = cur === 0; }
+      if (next) { next.classList.remove('hidden'); next.disabled = cur === total - 1; }
+      if (sub) sub.classList.toggle('qcm-submit-late', cur !== total - 1);
+      if (st) st.textContent = (cur + 1) + ' / ' + total;
+      var f = steps[cur] && $('input', steps[cur]);
+      if (f && !reduce) steps[cur].scrollIntoView({ block: 'nearest' });
+    }
+    function save(step) {
+      var body = new URLSearchParams();
+      body.append('_csrf', form.getAttribute('data-csrf')); body.append('attempt', form.getAttribute('data-attempt')); body.append('qid', step.getAttribute('data-qid'));
+      $$('input:checked', step).forEach(function (i) { body.append('choice[]', i.value); });
+      if (!window.fetch) return;
+      fetch(form.getAttribute('data-answer-url'), { method: 'POST', credentials: 'same-origin', headers: { 'X-CSRF-Token': form.getAttribute('data-csrf'), 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+        .then(function (r) { if (r.status === 409 || r.status === 404) { sent = true; window.location.reload(); } return r.json().catch(function () { return {}; }); })
+        .then(function (j) { if (j && j.ok === false && j.error === 'auth') window.location.reload(); })
+        .catch(function () { if (st) st.textContent = '!'; });
+    }
+    steps.forEach(function (s) { s.addEventListener('change', function () { refresh(); save(s); }); });
+    if (prev) prev.addEventListener('click', function () { show(cur - 1); });
+    if (next) next.addEventListener('click', function () { show(cur + 1); });
+    form.addEventListener('keydown', function (e) {
+      if (e.target && /^INPUT$/.test(e.target.tagName) && e.key === 'Enter') e.preventDefault();
+    });
+    form.addEventListener('submit', function (e) {
+      if (sent) return;
+      var n = refresh();
+      if (n < total && left > 0 && sub && !window.confirm(sub.getAttribute('data-confirm-text'))) { e.preventDefault(); return; }
+      sent = true;
+    });
+    function fmt(n) { n = Math.max(0, n); var m = Math.floor(n / 60), s = n % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+    if (clock) {
+      var end = Date.now() + left * 1000, bx = $('[data-qcm-bar]');
+      var tick = setInterval(function () {
+        left = Math.round((end - Date.now()) / 1000);
+        clock.textContent = fmt(left);
+        if (bx) bx.classList.toggle('is-low', left <= 60);
+        if (st && (left === 60 || left === 10)) st.textContent = left + 's';
+        if (left <= 0) { clearInterval(tick); if (!sent) { sent = true; form.submit(); } }
+      }, 500);
+    }
+    refresh(); show(0);
+  })();
 
   /* ---------- wizard (progressive enhancement; the form works without JS, every step visible) ---------- */
   $$('[data-wizard]').forEach(function (form) {
@@ -320,6 +411,119 @@
         .then(function (t) { if (out) out.textContent = t.slice(0, 4000); });
     });
   });
+
+
+  /* ---------- auth modal (login / register) + quick-find dialog ----------
+   * Progressive enhancement: every trigger is a real link ([data-auth-open] -> /account/login/ or /register/), so without JS the
+   * full page opens. With JS the same form is fetched as a fragment (GET /account/modal/{mode}) and posted with X-W5D-Modal: 1,
+   * which makes the server answer JSON instead of redirecting. CSRF, honeypot, rate limits and `next` are unchanged. */
+  (function () {
+    var dlg = document.getElementById('authDialog');
+    var body = dlg && $('[data-auth-body]', dlg);
+    var returnTo = null;
+    function openDlg(d) { if (!d) return; returnTo = document.activeElement; if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute('open', ''); document.documentElement.classList.add('dlg-open'); }
+    function closeDlg(d) { if (!d) return; if (d.close) { if (d.open) d.close(); } else d.removeAttribute('open'); document.documentElement.classList.remove('dlg-open'); if (returnTo && returnTo.focus) { try { returnTo.focus(); } catch (e) {} } }
+    function backdropClose(d) { d.addEventListener('mousedown', function (e) { if (e.target === d) closeDlg(d); }); d.addEventListener('close', function () { document.documentElement.classList.remove('dlg-open'); }); }
+    if (dlg) backdropClose(dlg);
+    var qd = document.getElementById('quickDialog');
+    if (qd) backdropClose(qd);
+
+    function modeOf(a) { var m = a.getAttribute('data-auth-open'); if (m === 'login' || m === 'register') return m; var h = a.getAttribute('href') || ''; return /register/.test(h) ? 'register' : 'login'; }
+    function nextOf(a) { var n = a && a.getAttribute('data-next'); if (n) return n; try { var u = new URL(a.href, location.href); return u.searchParams.get('next') || ''; } catch (e) { return ''; } }
+    function load(mode, next) {
+      if (!dlg || !body) return;
+      body.innerHTML = '<p class="text-sm text-slate-500">' + (dlg.getAttribute('data-loading') || '…') + '</p>';
+      fetch((dlg.getAttribute('data-modal-url') || '/account/modal/') + mode + '/' + (next ? '?next=' + encodeURIComponent(next) : ''), { headers: { 'X-W5D-Modal': '1' }, credentials: 'same-origin' })
+        .then(function (r) { if (r.status === 204) { location.reload(); return null; } return r.text(); })
+        .then(function (h) { if (h === null) return; body.innerHTML = h; wire(); var f = $('input:not([type=hidden]):not(.hidden)', body); if (f) f.focus(); })
+        .catch(function () { body.innerHTML = '<p class="text-sm text-red-500">' + (dlg.getAttribute('data-error') || 'Error') + '</p>'; });
+    }
+    function showErr(form, errors) {
+      $$('[data-err]', form.closest('[data-auth-pane]') || form).forEach(function (el) { el.textContent = ''; });
+      $$('.field[aria-invalid]', form).forEach(function (el) { el.removeAttribute('aria-invalid'); });
+      var top = $('[data-form-error]', body); if (top) { top.classList.add('hidden'); top.textContent = ''; }
+      Object.keys(errors || {}).forEach(function (k) {
+        var el = $('[data-err="' + k + '"]', body), inp = $('[name="' + k + '"]', form);
+        if (el) { el.textContent = errors[k]; if (inp) inp.setAttribute('aria-invalid', 'true'); }
+        else if (top) { top.textContent = errors[k]; top.classList.remove('hidden'); }
+      });
+      var first = $('[aria-invalid="true"]', form); if (first) first.focus();
+    }
+    function wire() {
+      $$('[data-auth-open]', body).forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); load(modeOf(a), nextOf(a)); }); });
+      var form = $('[data-auth-form]', body); if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        showErr(form, {});
+        var btn = $('[data-submit]', form), label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = dlg.getAttribute('data-sending') || '…'; }
+        fetch(form.getAttribute('action'), { method: 'POST', body: new URLSearchParams(new FormData(form)), headers: { 'X-W5D-Modal': '1', Accept: 'application/json' }, credentials: 'same-origin' })
+          .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+          .then(function (x) {
+            if (btn) { btn.disabled = false; btn.textContent = label; }
+            if (x.j && x.j.ok) {
+              var loc = x.j.redirect || '';
+              var ok = $('[data-form-ok]', body);
+              if (/\/account\/login\//.test(loc) && !/\/account\/login\/\?next/.test(loc) || (x.j.message && /\/account\/login\//.test(loc))) {
+                if (ok) { ok.textContent = x.j.message || ''; ok.classList.remove('hidden'); }
+                var link = $('[data-auth-open="login"]', body); if (form.parentNode) form.parentNode.removeChild(form);
+                if (!link) setTimeout(function () { load('login', ''); }, 1800);
+                return;
+              }
+              if (ok) { ok.textContent = dlg.getAttribute('data-redirect') || ''; ok.classList.remove('hidden'); }
+              location.assign(loc || location.href);
+              return;
+            }
+            if (x.j && x.j.errors) { showErr(form, x.j.errors); return; }
+            showErr(form, { _form: dlg.getAttribute('data-error') || 'Error' });
+          })
+          .catch(function () { if (btn) { btn.disabled = false; btn.textContent = label; } showErr(form, { _form: dlg.getAttribute('data-error') || 'Error' }); });
+      });
+    }
+    // Upgrade every sign-in / register link that is not already inside the dialog; skip owner portal links and ctrl/cmd-clicks.
+    $$('a[data-auth-open], a[href*="/account/login"], a[href*="/account/register"]').forEach(function (a) {
+      if (!dlg || a.closest('#authDialog') || a.hasAttribute('data-no-modal')) return;
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        e.preventDefault(); closeAsides(); openDlg(dlg); load(modeOf(a), nextOf(a));
+      });
+    });
+    $$('[data-auth-close]').forEach(function (b) { b.addEventListener('click', function () { closeDlg(dlg); }); });
+    if (dlg && /[?&]auth=(login|register)\b/.test(location.search)) { var m = /[?&]auth=(login|register)/.exec(location.search)[1]; openDlg(dlg); load(m, ''); }
+
+    /* quick-find */
+    var qi = qd && $('[data-quick-input]', qd), items = qd ? $$('[data-quick-item]', qd) : [], empty = qd && $('[data-quick-empty]', qd);
+    function filter() {
+      var q = (qi.value || '').trim().toLowerCase(), n = 0;
+      items.forEach(function (li) { var on = !q || li.getAttribute('data-quick-item').indexOf(q) >= 0; li.classList.toggle('hidden', !on); if (on) n++; });
+      if (empty) empty.classList.toggle('hidden', n > 0);
+    }
+    function openQuick() { if (!qd) return; closeAsides(); openDlg(qd); if (qi) { qi.value = ''; filter(); setTimeout(function () { qi.focus(); }, 30); } }
+    if (qd) qd.addEventListener('keydown', function (e) { if (e.key === 'Escape') { e.preventDefault(); closeDlg(qd); } });
+    if (qi) {
+      qi.addEventListener('input', filter);
+      qi.addEventListener('keydown', function (e) {
+        var vis = items.filter(function (li) { return !li.classList.contains('hidden'); }), a;
+        if (e.key === 'Enter' && vis.length) { a = $('a', vis[0]); if (a) location.assign(a.href); }
+        if (e.key === 'ArrowDown' && vis.length) { e.preventDefault(); a = $('a', vis[0]); if (a) a.focus(); }
+      });
+      $('[data-quick-list]', qd).addEventListener('keydown', function (e) {
+        var a = e.target.closest('a'); if (!a) return; var li = a.parentNode, vis = items.filter(function (x) { return !x.classList.contains('hidden'); }), i = vis.indexOf(li);
+        if (e.key === 'ArrowDown' && vis[i + 1]) { e.preventDefault(); $('a', vis[i + 1]).focus(); }
+        if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) $('a', vis[i - 1]).focus(); else qi.focus(); }
+      });
+    }
+    $$('[data-quick-open]').forEach(function (b) { b.addEventListener('click', openQuick); });
+    $$('[data-quick-close]').forEach(function (b) { b.addEventListener('click', function () { closeDlg(qd); }); });
+    document.addEventListener('keydown', function (e) {
+      var t = e.target, typing = t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
+      if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); openQuick(); }
+      else if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openQuick(); }
+    });
+  })();
+
+  /* ---------- CRUD: confirm before destructive submits ---------- */
+  $$('form[data-confirm]').forEach(function (f) { f.addEventListener('submit', function (e) { if (!window.confirm(f.getAttribute('data-confirm'))) e.preventDefault(); }); });
 
   /* owner/staff panel: phone drawer */
   (function () {

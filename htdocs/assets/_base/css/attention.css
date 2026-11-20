@@ -500,7 +500,7 @@ html:not(.dark) .hero-dark .orb-a,html:not(.dark) .hero-dark .orb-b,html:not(.da
 .dark .w5d-aside{background:rgba(11,11,24,.98);color:#e2e8f0;border-inline-start-color:rgba(148,163,184,.14)}
 .w5d-aside.is-open{transform:none;visibility:visible}
 .w5d-aside>header{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.25rem;border-bottom:1px solid rgba(148,163,184,.18)}
-.w5d-aside>header h3{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;font-size:1.05rem}
+.w5d-aside>header h2{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;font-size:1.05rem}
 .w5d-aside .aside-body{padding:1.25rem;overflow-y:auto;flex:1}
 .lang-grid{display:grid;gap:.5rem}
 .lang-item{display:flex;align-items:center;gap:.75rem;padding:.8rem 1rem;border-radius:.85rem;border:1px solid rgba(148,163,184,.3);transition:border-color .2s,background .2s}
@@ -575,3 +575,103 @@ main pre, main code { overflow-wrap: anywhere; }
 
 /* Grid/flex children may shrink below their content width (forms, cards). */
 main .grid > *, .admin-shell .grid > *{min-width:0}
+
+/* ===== Dialogs (sign-in / register modal, quick-find) ===== */
+.w5-dialog{border:0;padding:0;background:transparent;color:inherit;max-width:none;max-height:none;width:100%;height:100%;overflow:hidden;margin:0}
+.w5-dialog:not([open]){display:none}
+.w5-dialog::backdrop{background:rgba(7,7,17,.62);backdrop-filter:blur(4px)}
+.w5-dialog[open]{display:flex;align-items:flex-start;justify-content:center;padding:max(1rem,env(safe-area-inset-top)) 1rem 1rem;overflow-y:auto;animation:w5-dlg-in .18s ease-out}
+@media(min-width:640px){.w5-dialog[open]{align-items:center}}
+.w5-dialog-card{position:relative;width:100%;max-width:26rem;margin-block:auto;border-radius:1.1rem;border:1px solid rgba(148,163,184,.3);background:#fff;color:#1e293b;padding:1.5rem 1.25rem 1.25rem;box-shadow:0 30px 80px -20px rgba(0,0,0,.55)}
+.dark .w5-dialog-card{background:#0b0b18;color:#e2e8f0;border-color:rgba(148,163,184,.2)}
+#quickDialog .w5-dialog-card{max-width:34rem}
+.w5-dialog-x{position:absolute;top:.75rem;inset-inline-end:.75rem}
+html.dlg-open{overflow:hidden}
+@keyframes w5-dlg-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.w5-dialog[open]{animation:none}}
+
+/* ---- Responsive data tables (CRUD lists): rows become labelled cards on phones ---- */
+@media (max-width: 640px) {
+  main table.w5-table.w5-stack { min-width: 0; display: block; }
+  .w5-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .w5-stack tbody, .w5-stack tr, .w5-stack td { display: block; width: 100%; }
+  .w5-stack tr { padding: .6rem .9rem; border-bottom: 1px solid rgba(148,163,184,.3); }
+  .w5-stack td { display: flex; justify-content: space-between; gap: 1rem; padding: .3rem 0; border: 0; text-align: end; overflow-wrap: anywhere; }
+  .w5-stack td::before { content: attr(data-label); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; opacity: .65; text-align: start; flex: 0 0 38%; }
+  [dir=rtl] .w5-stack td { text-align: left; }
+  [dir=rtl] .w5-stack td::before { text-align: right; }
+}
+
+/* ---------- Mobile bottom tab bar: five short paths within thumb reach (hidden >= 1024px) ---------- */
+.w5-tabbar{position:fixed;inset-inline:0;bottom:0;z-index:45;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.96);border-top:1px solid rgba(15,23,42,.1);backdrop-filter:blur(10px);padding:.25rem .25rem calc(.25rem + env(safe-area-inset-bottom))}
+.dark .w5-tabbar{background:rgba(10,10,24,.96);border-top-color:rgba(255,255,255,.1)}
+.w5-tabbar>a,.w5-tabbar>button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;min-height:3.1rem;padding:.3rem .1rem;border-radius:.7rem;font-size:.68rem;line-height:1.1;font-weight:600;color:#475569;background:none;border:0;cursor:pointer;min-width:0}
+.dark .w5-tabbar>a,.dark .w5-tabbar>button{color:#cbd5e1}
+.w5-tabbar span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w5-tabbar>a[aria-current="page"]{color:#7c3aed;background:rgba(139,92,246,.12)}
+.dark .w5-tabbar>a[aria-current="page"]{color:#bda7ff}
+.w5-tabbar>a:active,.w5-tabbar>button:active{background:rgba(139,92,246,.18)}
+@media(max-width:1023.98px){
+  body:has(.w5-tabbar){padding-bottom:calc(3.7rem + env(safe-area-inset-bottom))}
+  .sticky-cta{bottom:calc(3.5rem + env(safe-area-inset-bottom));padding-bottom:.6rem}
+  .w5d-aside-backdrop{z-index:60}
+}
+@media(min-width:1024px){.w5-tabbar{display:none}}
+@media print{.w5-tabbar{display:none!important}}
+
+/* ---------- Card media (indexed images, optional carousel) ---------- */
+.card-media{display:block;background:rgba(124,58,237,.12)}
+.card-carousel>img{opacity:0;transition:opacity .5s ease}
+.card-carousel>img.is-active{opacity:1}
+.card-car-btn{position:absolute;top:50%;transform:translateY(-50%);width:1.9rem;height:1.9rem;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;background:rgba(7,7,17,.55);color:#fff;opacity:0;transition:opacity .2s;z-index:2}
+.card-carousel:hover .card-car-btn,.card-carousel:focus-within .card-car-btn{opacity:1}
+@media(hover:none){.card-car-btn{opacity:.85}}
+.card-car-dots{position:absolute;bottom:.5rem;inset-inline:0;display:flex;justify-content:center;gap:.3rem;z-index:2}
+.card-car-dots i{width:.4rem;height:.4rem;border-radius:99px;background:rgba(255,255,255,.55)}
+.card-car-dots i.is-active{width:1.1rem;background:#fff}
+@media(prefers-reduced-motion:reduce){.card-carousel>img{transition:none}}
+
+/* ---------- QCM round + certificate sheet ---------- */
+.qcm-js .qcm-step:not(.is-current){display:none}
+.qcm-js .qcm-step.is-current{animation:qcm-in .25s ease both}
+@keyframes qcm-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.qcm-js .qcm-step.is-current{animation:none}}
+.qcm-choice:has(input:checked){border-color:rgba(139,92,246,.7);background:rgba(139,92,246,.12)}
+.qcm-choice:focus-within{outline:2px solid rgba(139,92,246,.6);outline-offset:2px}
+.qcm-bar.is-low{border-color:rgba(239,68,68,.6)}
+.qcm-bar.is-low [data-qcm-clock]{color:#ef4444}
+.qcm-js .qcm-submit-late{opacity:.85}
+.qcm-js [data-qcm-prev]:disabled,.qcm-js [data-qcm-next]:disabled{opacity:.4;cursor:not-allowed}
+.cert-sheet{box-shadow:0 20px 60px -30px rgba(124,58,237,.5)}
+@media print{
+  .no-print,nav[aria-label],.w5-tabbar{display:none!important}
+  body{background:#fff!important}
+  .cert-sheet-wrap{padding:0!important}
+  .cert-sheet{box-shadow:none!important;border:3px double #7c3aed!important;break-inside:avoid;margin:0 auto}
+  @page{margin:14mm}
+}
+
+/* Active navigation state (desktop trigger, mega-menu link, mobile menu link) */
+[data-mega-trigger][data-active]>button{color:#7c3aed;font-weight:700;box-shadow:inset 0 -2px 0 #8b5cf6}
+.dark [data-mega-trigger][data-active]>button{color:#bda7ff;box-shadow:inset 0 -2px 0 #a78bfa}
+a[data-active-link]{background:rgba(139,92,246,.12);box-shadow:inset 3px 0 0 #8b5cf6}
+[dir=rtl] a[data-active-link]{box-shadow:inset -3px 0 0 #8b5cf6}
+a[data-active-link][aria-current=page]{font-weight:700}
+a[data-active-link] .font-semibold{color:#6d28d9}
+.dark a[data-active-link] .font-semibold{color:#c4b5fd}
+
+/* Touch targets: visual size stays, hit area grows to >= 40px (WCAG 2.5.8 / Apple HIG) */
+.w5-dot{position:relative}
+.w5-dot::after{content:"";position:absolute;inset:-16px -6px}
+.w5-slider [data-prev],.w5-slider [data-next]{min-width:2.5rem;min-height:2.5rem;display:inline-flex;align-items:center;justify-content:center}
+@media (pointer:coarse){
+  .auth-links a,form a.text-sm,form p a{display:inline-block;padding:.65rem .25rem}
+  input[type=checkbox],input[type=radio]{width:1.25rem;height:1.25rem}
+  label:has(>input[type=checkbox]),label:has(>input[type=radio]){min-height:2.5rem;display:inline-flex;align-items:center;gap:.6rem}
+}
+
+@media (pointer:coarse){
+  a.btn-link{min-height:2.5rem;padding-block:.5rem}
+  .card-car-btn{width:2.5rem;height:2.5rem}
+  .w5-slider [data-prev],.w5-slider [data-next],.w5-slider button[aria-label]{min-width:2.5rem;min-height:2.5rem}
+}

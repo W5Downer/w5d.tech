@@ -35,7 +35,7 @@ final class Api
     {
         $b = \W5D\Env::baseUrl();
         $e = fn(string $p) => $b . url($p);
-        return Response::json(['name' => 'W5D public API', 'version' => '1', 'docs' => ['developers' => $e('/developers/'), 'openapi' => $e('/openapi.json'), 'agents' => $e('/agents/'), 'agent_manifest' => $e('/.well-known/agents.json'), 'llms' => $e('/llms.txt')],
+        return Response::json(['name' => 'W5D public API', 'version' => '1', 'docs' => ['private' => true, 'where' => 'Sign in and open API & Docs in your dashboard: ' . $e('/account/api/')],
             'languages' => ['en', 'fr', 'ar'], 'note' => 'Append ?lang=fr|ar to any GET. Read endpoints are public and cached 60s.',
             'endpoints' => [
                 ['GET', '/api/price.json', 'Live price per part'], ['GET', '/api/price/curve.json', 'Published price curve'], ['GET', '/api/quote?parts=&days=&start=&cadence=', 'Schedule and total'],

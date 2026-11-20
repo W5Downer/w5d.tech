@@ -52,6 +52,55 @@
     "fr": "Terminé",
     "ar": "تم"
    }
+  },
+  {
+   "type": "steps",
+   "id": "thx-next",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "What happens to your file",
+    "fr": "Ce qui arrive à votre dossier",
+    "ar": "ما يحدث لملفك"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Received",
+      "fr": "Reçu",
+      "ar": "مستلم"
+     },
+     "body": {
+      "en": "Your file is recorded with a date. You get an e-mail and a notification in your account.",
+      "fr": "Votre dossier est enregistré avec une date. Vous recevez un e-mail et une notification dans votre compte.",
+      "ar": "يُسجَّل ملفك بتاريخ. يصلك بريد وإشعار في حسابك."
+     }
+    },
+    {
+     "title": {
+      "en": "Checked by a person",
+      "fr": "Vérifié par une personne",
+      "ar": "يراجعه شخص"
+     },
+     "body": {
+      "en": "Identity and diploma are checked by hand. Nothing is automatic and nothing is guaranteed.",
+      "fr": "L’identité et le diplôme sont vérifiés à la main. Rien n’est automatique et rien n’est garanti.",
+      "ar": "تُراجع الهوية والشهادة يدويا. لا شيء تلقائي ولا شيء مضمون."
+     }
+    },
+    {
+     "title": {
+      "en": "Practise while you wait",
+      "fr": "Entraînez-vous en attendant",
+      "ar": "تدرّب أثناء الانتظار"
+     },
+     "body": {
+      "en": "Open the QCM panel for free practice rounds on the {{ counts.services }} services. A certificate comes only from a passed graded round.",
+      "fr": "Ouvrez le panneau QCM pour des entraînements gratuits sur les {{ counts.services }} services. Un certificat ne vient que d’une session notée réussie.",
+      "ar": "افتح لوحة QCM لتدريب مجاني على الخدمات الـ{{ counts.services }}. لا تأتي الشهادة إلا من جولة مصحَّحة ناجحة."
+     }
+    }
+   ]
   }
  ],
  "robots": "noindex,follow"

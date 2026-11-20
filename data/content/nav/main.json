@@ -1,509 +1,495 @@
 {
-  "slug": "main",
-  "items": [
+ "slug": "main",
+ "items": [
+  {
+   "label": {
+    "en": "Macro works",
+    "fr": "Grands chantiers",
+    "ar": "الأعمال الكبرى"
+   },
+   "active_prefix": "/macro-works",
+   "groups": [
     {
-      "label": {
-        "en": "Macro works",
-        "fr": "Grands chantiers",
-        "ar": "الأعمال الكبرى"
-      },
-      "active_prefix": "/macro-works",
-      "groups": [
-        {
-          "heading": {
-            "en": "Five macro works",
-            "fr": "Cinq grands travaux",
-            "ar": "خمسة أعمال كبرى"
-          },
-          "each": "macros"
-        },
-        {
-          "heading": {
-            "en": "Explore the ontology",
-            "fr": "Explorer l’ontologie",
-            "ar": "استكشف الأنطولوجيا"
-          },
-          "items": [
-            {
-              "icon": "list-checks",
-              "label": {
-                "en": "{{ counts.services }} services",
-                "fr": "{{ counts.services }} services",
-                "ar": "{{ counts.services }} خدمة"
-              },
-              "desc": {
-                "en": "Every service, its deliverables and limits",
-                "fr": "Chaque service, ses livrables et ses limites",
-                "ar": "كل خدمة ومخرجاتها وحدودها"
-              },
-              "href": "/services/"
-            },
-            {
-              "icon": "folder-kanban",
-              "label": {
-                "en": "{{ counts.projects }} projects",
-                "fr": "{{ counts.projects }} projets",
-                "ar": "{{ counts.projects }} مشروعًا"
-              },
-              "desc": {
-                "en": "What is live, what is a concept",
-                "fr": "Ce qui est en ligne, ce qui est un concept",
-                "ar": "ما هو قائم، وما هو مجرد مفهوم"
-              },
-              "href": "/projects/"
-            },
-            {
-              "icon": "network",
-              "label": {
-                "en": "Ontology",
-                "fr": "Ontologie",
-                "ar": "الأنطولوجيا"
-              },
-              "desc": {
-                "en": "Six layers, one vocabulary",
-                "fr": "Six couches, un vocabulaire",
-                "ar": "ست طبقات، ومفردات واحدة"
-              },
-              "href": "/ontology/"
-            }
-          ]
-        }
-      ],
-      "promo": {
-        "tag": {
-          "en": "Design ceiling",
-          "fr": "Plafond de conception",
-          "ar": "سقف التصميم"
-        },
-        "title": {
-          "en": "{{ d.experts_target }} expert seats",
-          "fr": "{{ d.experts_target }} places d’experts",
-          "ar": "{{ d.experts_target }} مقعدًا للخبراء"
-        },
-        "body": {
-          "en": "A design equation, not a headcount. Read how it is built.",
-          "fr": "Une équation de conception, pas un effectif. Découvrez comment elle est construite.",
-          "ar": "معادلة تصميمية، لا عدد أفراد. اطّلع على كيفية بنائها."
-        },
-        "href": "/trust/statement/",
-        "gradient": "technology"
-      }
+     "heading": {
+      "en": "Five macro works",
+      "fr": "Cinq grands travaux",
+      "ar": "خمسة أعمال كبرى"
+     },
+     "each": "macros"
     },
     {
-      "label": {
-        "en": "Invest",
-        "fr": "Investir",
-        "ar": "استثمر"
+     "heading": {
+      "en": "Explore the ontology",
+      "fr": "Explorer l’ontologie",
+      "ar": "استكشف الأنطولوجيا"
+     },
+     "items": [
+      {
+       "icon": "list-checks",
+       "label": {
+        "en": "{{ counts.services }} services",
+        "fr": "{{ counts.services }} services",
+        "ar": "{{ counts.services }} خدمة"
+       },
+       "desc": {
+        "en": "Every service, its deliverables and limits",
+        "fr": "Chaque service, ses livrables et ses limites",
+        "ar": "كل خدمة ومخرجاتها وحدودها"
+       },
+       "href": "/services/"
       },
-      "active_prefix": "/invest",
-      "groups": [
-        {
-          "heading": {
-            "en": "Take a part",
-            "fr": "Prenez une part",
-            "ar": "احصل على حصة"
-          },
-          "items": [
-            {
-              "icon": "coins",
-              "label": {
-                "en": "Invest today",
-                "fr": "Investir aujourd’hui",
-                "ar": "استثمر اليوم"
-              },
-              "desc": {
-                "en": "Buy a part now: 3 steps, demo checkout",
-                "fr": "Achetez une part maintenant : 3 étapes, paiement de démonstration",
-                "ar": "اشترِ حصة الآن: 3 خطوات، وتجربة لإتمام الشراء"
-              },
-              "href": "/checkout/"
-            },
-            {
-              "icon": "calendar-check",
-              "label": {
-                "en": "Daily subscription",
-                "fr": "Abonnement journalier",
-                "ar": "اشتراك يومي"
-              },
-              "desc": {
-                "en": "At least one part, every day",
-                "fr": "Au moins une part chaque jour",
-                "ar": "حصة واحدة على الأقل كل يوم"
-              },
-              "href": "/subscription/"
-            },
-            {
-              "icon": "trending-up",
-              "label": {
-                "en": "Progressive price",
-                "fr": "Tarif progressif",
-                "ar": "سعر تصاعدي"
-              },
-              "desc": {
-                "en": "The published curve, live",
-                "fr": "La courbe publiée, en temps réel",
-                "ar": "المنحنى المنشور، محدّث مباشرةً"
-              },
-              "href": "/pricing/"
-            },
-            {
-              "icon": "briefcase",
-              "label": {
-                "en": "Investor dossier",
-                "fr": "Dossier investisseur",
-                "ar": "ملف المستثمر"
-              },
-              "desc": {
-                "en": "What a part funds, and what it does not",
-                "fr": "Ce qu’une part finance, et ce qu’elle ne finance pas",
-                "ar": "ما الذي تموّله الحصة، وما الذي لا تموّله"
-              },
-              "href": "/investors/"
-            }
-          ]
-        },
-        {
-          "heading": {
-            "en": "Verify before you commit",
-            "fr": "Vérifiez avant de vous engager",
-            "ar": "تحقّق قبل الالتزام"
-          },
-          "items": [
-            {
-              "icon": "shield-check",
-              "label": {
-                "en": "Declared limits",
-                "fr": "Limites déclarées",
-                "ar": "الحدود المعلنة"
-              },
-              "desc": {
-                "en": "No job, no return, no promise",
-                "fr": "Pas d’emploi, pas de rendement, pas de promesse",
-                "ar": "لا وظيفة، ولا عائد، ولا وعود"
-              },
-              "href": "/trust/statement/"
-            },
-            {
-              "icon": "activity",
-              "label": {
-                "en": "Status",
-                "fr": "État",
-                "ar": "الحالة"
-              },
-              "desc": {
-                "en": "Dated, sourced, auditable",
-                "fr": "Daté, sourcé, auditable",
-                "ar": "مؤرّخ، وموثّق المصادر، وقابل للتدقيق"
-              },
-              "href": "/status/"
-            },
-            {
-              "icon": "file-search",
-              "label": {
-                "en": "5% sampling",
-                "fr": "Échantillonnage à 5 %",
-                "ar": "أخذ عينات بنسبة 5%"
-              },
-              "desc": {
-                "en": "How quality is checked",
-                "fr": "Comment la qualité est vérifiée",
-                "ar": "كيف تُجرى مراقبة الجودة"
-              },
-              "href": "/trust/sampling/"
-            }
-          ]
-        }
-      ],
-      "promo": {
-        "tag": {
-          "en": "Live price",
-          "fr": "Prix en vigueur",
-          "ar": "السعر الحالي"
-        },
-        "title": {
-          "en": "From {{ price.day }} {{ money.currency }} per part per day",
-          "fr": "À partir de {{ price.day }} {{ money.currency }} par part et par jour",
-          "ar": "ابتداءً من {{ price.day }} {{ money.currency }} للحصة في اليوم"
-        },
-        "body": {
-          "en": "Rises with programme progress and time. Capped at {{ pricing.cap }}× base.",
-          "fr": "Augmente avec l’avancement du programme et le temps. Plafonné à {{ pricing.cap }}× la base.",
-          "ar": "يرتفع مع تقدّم البرنامج ومرور الوقت. وبحد أقصى {{ pricing.cap }}× من السعر الأساسي."
-        },
-        "href": "/pricing/",
-        "gradient": "peak"
+      {
+       "icon": "folder-kanban",
+       "label": {
+        "en": "{{ counts.projects }} projects",
+        "fr": "{{ counts.projects }} projets",
+        "ar": "{{ counts.projects }} مشروعًا"
+       },
+       "desc": {
+        "en": "What is live, what is a concept",
+        "fr": "Ce qui est en ligne, ce qui est un concept",
+        "ar": "ما هو قائم، وما هو مجرد مفهوم"
+       },
+       "href": "/projects/"
+      },
+      {
+       "icon": "network",
+       "label": {
+        "en": "Ontology",
+        "fr": "Ontologie",
+        "ar": "الأنطولوجيا"
+       },
+       "desc": {
+        "en": "Six layers, one vocabulary",
+        "fr": "Six couches, un vocabulaire",
+        "ar": "ست طبقات، ومفردات واحدة"
+       },
+       "href": "/ontology/"
       }
-    },
-    {
-      "label": {
-        "en": "Join",
-        "fr": "Rejoindre",
-        "ar": "انضم"
-      },
-      "active_prefix": "/join",
-      "groups": [
-        {
-          "heading": {
-            "en": "As an expert",
-            "fr": "En tant qu’expert",
-            "ar": "بصفتك خبيرًا"
-          },
-          "items": [
-            {
-              "icon": "user-check",
-              "label": {
-                "en": "Check eligibility",
-                "fr": "Vérifier l’admissibilité",
-                "ar": "تحقق من الأهلية"
-              },
-              "desc": {
-                "en": "Thirty seconds, no account",
-                "fr": "Trente secondes, sans compte",
-                "ar": "ثلاثون ثانية، دون حساب"
-              },
-              "href": "/join/eligibility/"
-            },
-            {
-              "icon": "user-plus",
-              "label": {
-                "en": "Register",
-                "fr": "S’inscrire",
-                "ar": "سجّل"
-              },
-              "desc": {
-                "en": "Open a Dyon-linked applicant file",
-                "fr": "Ouvrir un dossier de candidature lié à Dyon",
-                "ar": "افتح ملف متقدم مرتبطًا بـ Dyon"
-              },
-              "href": "/app/register"
-            },
-            {
-              "icon": "route",
-              "label": {
-                "en": "How it works",
-                "fr": "Comment ça marche",
-                "ar": "كيف يعمل"
-              },
-              "desc": {
-                "en": "From diploma to weekly delivery",
-                "fr": "Du diplôme aux livraisons hebdomadaires",
-                "ar": "من الشهادة إلى الإنجاز الأسبوعي"
-              },
-              "href": "/how-it-works/"
-            },
-            {
-              "icon": "map-pin",
-              "label": {
-                "en": "Tunisia hub",
-                "fr": "Pôle tunisien",
-                "ar": "مركز تونس"
-              },
-              "desc": {
-                "en": "{{ counts.governorates }} governorates",
-                "fr": "{{ counts.governorates }} gouvernorats",
-                "ar": "{{ counts.governorates }} محافظة"
-              },
-              "href": "/countries/tunisia/"
-            },
-            {
-              "icon": "compass",
-              "label": {
-                "en": "Choose your door",
-                "fr": "Choisissez votre porte",
-                "ar": "اختر بابك"
-              },
-              "desc": {
-                "en": "Seven audiences, one next step each",
-                "fr": "Sept publics, une étape chacun",
-                "ar": "سبعة جماهير وخطوة لكل منها"
-              },
-              "href": "/for/"
-            }
-          ]
-        },
-        {
-          "heading": {
-            "en": "As a leader",
-            "fr": "En tant que responsable",
-            "ar": "بصفتك قائدًا"
-          },
-          "items": [
-            {
-              "icon": "users",
-              "label": {
-                "en": "Become a manager",
-                "fr": "Devenir gestionnaire",
-                "ar": "كن مديرًا"
-              },
-              "desc": {
-                "en": "Lead about {{ experts.team_size }} experts",
-                "fr": "Encadrer environ {{ experts.team_size }} experts",
-                "ar": "قد فريقًا يضم نحو {{ experts.team_size }} خبيرًا"
-              },
-              "href": "/careers/managers/"
-            },
-            {
-              "icon": "briefcase-business",
-              "label": {
-                "en": "Careers",
-                "fr": "Carrières",
-                "ar": "الوظائف"
-              },
-              "desc": {
-                "en": "Service leaders and managers",
-                "fr": "Responsables et managers de service",
-                "ar": "قادة الخدمات ومديروها"
-              },
-              "href": "/careers/"
-            },
-            {
-              "icon": "handshake",
-              "label": {
-                "en": "Partners and clients",
-                "fr": "Partenaires et clients",
-                "ar": "الشركاء والعملاء"
-              },
-              "desc": {
-                "en": "Commission a delivery",
-                "fr": "Confier une mission",
-                "ar": "كلّفنا بإنجاز عمل"
-              },
-              "href": "/partners/"
-            }
-          ]
-        }
-      ],
-      "promo": {
-        "tag": {
-          "en": "Hiring",
-          "fr": "Recrutement",
-          "ar": "التوظيف"
-        },
-        "title": {
-          "en": "{{ d.managers_target }} manager seats by design",
-          "fr": "{{ d.managers_target }} postes de manager prévus",
-          "ar": "{{ d.managers_target }} منصبًا إداريًا وفق التصميم"
-        },
-        "body": {
-          "en": "We are recruiting expert team managers first.",
-          "fr": "Nous recrutons en priorité des managers d’équipes d’experts.",
-          "ar": "نستقطب أولًا مديري فرق الخبراء."
-        },
-        "href": "/careers/managers/",
-        "gradient": "governance"
-      }
-    },
-    {
-      "label": {
-        "en": "Company",
-        "fr": "Entreprise",
-        "ar": "الشركة"
-      },
-      "active_prefix": "/about",
-      "groups": [
-        {
-          "heading": {
-            "en": "W5D",
-            "fr": "W5D",
-            "ar": "W5D"
-          },
-          "items": [
-            {
-              "icon": "info",
-              "label": {
-                "en": "About",
-                "fr": "À propos",
-                "ar": "نبذة عنا"
-              },
-              "desc": {
-                "en": "Who we are and what we will not claim",
-                "fr": "Qui nous sommes et ce que nous ne prétendons pas être",
-                "ar": "من نحن وما الذي لن ندّعيه"
-              },
-              "href": "/about/"
-            },
-            {
-              "icon": "circle-help",
-              "label": {
-                "en": "FAQ",
-                "fr": "FAQ",
-                "ar": "الأسئلة الشائعة"
-              },
-              "desc": {
-                "en": "Straight answers",
-                "fr": "Des réponses claires",
-                "ar": "إجابات مباشرة"
-              },
-              "href": "/faq/"
-            },
-            {
-              "icon": "mail",
-              "label": {
-                "en": "Contact",
-                "fr": "Contact",
-                "ar": "اتصل بنا"
-              },
-              "desc": {
-                "en": "Write to the right desk",
-                "fr": "Écrivez au bon service",
-                "ar": "راسل الجهة المناسبة"
-              },
-              "href": "/contact/"
-            }
-          ]
-        },
-        {
-          "heading": {
-            "en": "Build with us",
-            "fr": "Construisez avec nous",
-            "ar": "ابنوا معنا"
-          },
-          "items": [
-            {
-              "icon": "code",
-              "label": {
-                "en": "Developers",
-                "fr": "Développeurs",
-                "ar": "المطورون"
-              },
-              "desc": {
-                "en": "JSON API and OpenAPI",
-                "fr": "API JSON et OpenAPI",
-                "ar": "JSON API وOpenAPI"
-              },
-              "href": "/developers/"
-            },
-            {
-              "icon": "bot",
-              "label": {
-                "en": "AI agents",
-                "fr": "Agents IA",
-                "ar": "وكلاء الذكاء الاصطناعي"
-              },
-              "desc": {
-                "en": "Manifest, tools, llms.txt",
-                "fr": "Manifeste, outils, llms.txt",
-                "ar": "البيان، والأدوات، وllms.txt"
-              },
-              "href": "/agents/"
-            },
-            {
-              "icon": "newspaper",
-              "label": {
-                "en": "Newsletter",
-                "fr": "Newsletter",
-                "ar": "النشرة البريدية"
-              },
-              "desc": {
-                "en": "Dated updates only",
-                "fr": "Mises à jour datées uniquement",
-                "ar": "التحديثات المؤرخة فقط"
-              },
-              "href": "/newsletter/"
-            }
-          ]
-        }
-      ]
+     ]
     }
-  ]
+   ],
+   "promo": {
+    "tag": {
+     "en": "Design ceiling",
+     "fr": "Plafond de conception",
+     "ar": "سقف التصميم"
+    },
+    "title": {
+     "en": "{{ d.experts_target }} expert seats",
+     "fr": "{{ d.experts_target }} places d’experts",
+     "ar": "{{ d.experts_target }} مقعدًا للخبراء"
+    },
+    "body": {
+     "en": "A design equation, not a headcount. Read how it is built.",
+     "fr": "Une équation de conception, pas un effectif. Découvrez comment elle est construite.",
+     "ar": "معادلة تصميمية، لا عدد أفراد. اطّلع على كيفية بنائها."
+    },
+    "href": "/trust/statement/",
+    "gradient": "technology"
+   }
+  },
+  {
+   "label": {
+    "en": "Invest",
+    "fr": "Investir",
+    "ar": "استثمر"
+   },
+   "active_prefix": "/invest",
+   "groups": [
+    {
+     "heading": {
+      "en": "Take a part",
+      "fr": "Prenez une part",
+      "ar": "احصل على حصة"
+     },
+     "items": [
+      {
+       "icon": "coins",
+       "label": {
+        "en": "Invest today",
+        "fr": "Investir aujourd’hui",
+        "ar": "استثمر اليوم"
+       },
+       "desc": {
+        "en": "Buy a part now: 3 steps, demo checkout",
+        "fr": "Achetez une part maintenant : 3 étapes, paiement de démonstration",
+        "ar": "اشترِ حصة الآن: 3 خطوات، وتجربة لإتمام الشراء"
+       },
+       "href": "/checkout/"
+      },
+      {
+       "icon": "calendar-check",
+       "label": {
+        "en": "Daily subscription",
+        "fr": "Abonnement journalier",
+        "ar": "اشتراك يومي"
+       },
+       "desc": {
+        "en": "At least one part, every day",
+        "fr": "Au moins une part chaque jour",
+        "ar": "حصة واحدة على الأقل كل يوم"
+       },
+       "href": "/subscription/"
+      },
+      {
+       "icon": "trending-up",
+       "label": {
+        "en": "Progressive price",
+        "fr": "Tarif progressif",
+        "ar": "سعر تصاعدي"
+       },
+       "desc": {
+        "en": "The published curve, live",
+        "fr": "La courbe publiée, en temps réel",
+        "ar": "المنحنى المنشور، محدّث مباشرةً"
+       },
+       "href": "/pricing/"
+      },
+      {
+       "icon": "briefcase",
+       "label": {
+        "en": "Investor dossier",
+        "fr": "Dossier investisseur",
+        "ar": "ملف المستثمر"
+       },
+       "desc": {
+        "en": "What a part funds, and what it does not",
+        "fr": "Ce qu’une part finance, et ce qu’elle ne finance pas",
+        "ar": "ما الذي تموّله الحصة، وما الذي لا تموّله"
+       },
+       "href": "/investors/"
+      }
+     ]
+    },
+    {
+     "heading": {
+      "en": "Verify before you commit",
+      "fr": "Vérifiez avant de vous engager",
+      "ar": "تحقّق قبل الالتزام"
+     },
+     "items": [
+      {
+       "icon": "shield-check",
+       "label": {
+        "en": "Declared limits",
+        "fr": "Limites déclarées",
+        "ar": "الحدود المعلنة"
+       },
+       "desc": {
+        "en": "No job, no return, no promise",
+        "fr": "Pas d’emploi, pas de rendement, pas de promesse",
+        "ar": "لا وظيفة، ولا عائد، ولا وعود"
+       },
+       "href": "/trust/statement/"
+      },
+      {
+       "icon": "activity",
+       "label": {
+        "en": "Status",
+        "fr": "État",
+        "ar": "الحالة"
+       },
+       "desc": {
+        "en": "Dated, sourced, auditable",
+        "fr": "Daté, sourcé, auditable",
+        "ar": "مؤرّخ، وموثّق المصادر، وقابل للتدقيق"
+       },
+       "href": "/status/"
+      },
+      {
+       "icon": "file-search",
+       "label": {
+        "en": "5% sampling",
+        "fr": "Échantillonnage à 5 %",
+        "ar": "أخذ عينات بنسبة 5%"
+       },
+       "desc": {
+        "en": "How quality is checked",
+        "fr": "Comment la qualité est vérifiée",
+        "ar": "كيف تُجرى مراقبة الجودة"
+       },
+       "href": "/trust/sampling/"
+      }
+     ]
+    }
+   ],
+   "promo": {
+    "tag": {
+     "en": "Live price",
+     "fr": "Prix en vigueur",
+     "ar": "السعر الحالي"
+    },
+    "title": {
+     "en": "From {{ price.day }} {{ money.currency }} per part per day",
+     "fr": "À partir de {{ price.day }} {{ money.currency }} par part et par jour",
+     "ar": "ابتداءً من {{ price.day }} {{ money.currency }} للحصة في اليوم"
+    },
+    "body": {
+     "en": "Rises with programme progress and time. Capped at {{ pricing.cap }}× base.",
+     "fr": "Augmente avec l’avancement du programme et le temps. Plafonné à {{ pricing.cap }}× la base.",
+     "ar": "يرتفع مع تقدّم البرنامج ومرور الوقت. وبحد أقصى {{ pricing.cap }}× من السعر الأساسي."
+    },
+    "href": "/pricing/",
+    "gradient": "peak"
+   }
+  },
+  {
+   "label": {
+    "en": "Join",
+    "fr": "Rejoindre",
+    "ar": "انضم"
+   },
+   "active_prefix": "/join",
+   "groups": [
+    {
+     "heading": {
+      "en": "As an expert",
+      "fr": "En tant qu’expert",
+      "ar": "بصفتك خبيرًا"
+     },
+     "items": [
+      {
+       "icon": "user-check",
+       "label": {
+        "en": "Check eligibility",
+        "fr": "Vérifier l’admissibilité",
+        "ar": "تحقق من الأهلية"
+       },
+       "desc": {
+        "en": "Thirty seconds, no account",
+        "fr": "Trente secondes, sans compte",
+        "ar": "ثلاثون ثانية، دون حساب"
+       },
+       "href": "/join/eligibility/"
+      },
+      {
+       "icon": "user-plus",
+       "label": {
+        "en": "Register",
+        "fr": "S’inscrire",
+        "ar": "سجّل"
+       },
+       "desc": {
+        "en": "Open a Dyon-linked applicant file",
+        "fr": "Ouvrir un dossier de candidature lié à Dyon",
+        "ar": "افتح ملف متقدم مرتبطًا بـ Dyon"
+       },
+       "href": "/app/register"
+      },
+      {
+       "icon": "route",
+       "label": {
+        "en": "How it works",
+        "fr": "Comment ça marche",
+        "ar": "كيف يعمل"
+       },
+       "desc": {
+        "en": "From diploma to weekly delivery",
+        "fr": "Du diplôme aux livraisons hebdomadaires",
+        "ar": "من الشهادة إلى الإنجاز الأسبوعي"
+       },
+       "href": "/how-it-works/"
+      },
+      {
+       "icon": "map-pin",
+       "label": {
+        "en": "Tunisia hub",
+        "fr": "Pôle tunisien",
+        "ar": "مركز تونس"
+       },
+       "desc": {
+        "en": "{{ counts.governorates }} governorates",
+        "fr": "{{ counts.governorates }} gouvernorats",
+        "ar": "{{ counts.governorates }} محافظة"
+       },
+       "href": "/countries/tunisia/"
+      },
+      {
+       "icon": "compass",
+       "label": {
+        "en": "Choose your door",
+        "fr": "Choisissez votre porte",
+        "ar": "اختر بابك"
+       },
+       "desc": {
+        "en": "Seven audiences, one next step each",
+        "fr": "Sept publics, une étape chacun",
+        "ar": "سبعة جماهير وخطوة لكل منها"
+       },
+       "href": "/for/"
+      }
+     ]
+    },
+    {
+     "heading": {
+      "en": "As a leader",
+      "fr": "En tant que responsable",
+      "ar": "بصفتك قائدًا"
+     },
+     "items": [
+      {
+       "icon": "users",
+       "label": {
+        "en": "Become a manager",
+        "fr": "Devenir gestionnaire",
+        "ar": "كن مديرًا"
+       },
+       "desc": {
+        "en": "Lead about {{ experts.team_size }} experts",
+        "fr": "Encadrer environ {{ experts.team_size }} experts",
+        "ar": "قد فريقًا يضم نحو {{ experts.team_size }} خبيرًا"
+       },
+       "href": "/careers/managers/"
+      },
+      {
+       "icon": "briefcase-business",
+       "label": {
+        "en": "Careers",
+        "fr": "Carrières",
+        "ar": "الوظائف"
+       },
+       "desc": {
+        "en": "Service leaders and managers",
+        "fr": "Responsables et managers de service",
+        "ar": "قادة الخدمات ومديروها"
+       },
+       "href": "/careers/"
+      },
+      {
+       "icon": "handshake",
+       "label": {
+        "en": "Partners and clients",
+        "fr": "Partenaires et clients",
+        "ar": "الشركاء والعملاء"
+       },
+       "desc": {
+        "en": "Commission a delivery",
+        "fr": "Confier une mission",
+        "ar": "كلّفنا بإنجاز عمل"
+       },
+       "href": "/partners/"
+      }
+     ]
+    }
+   ],
+   "promo": {
+    "tag": {
+     "en": "Hiring",
+     "fr": "Recrutement",
+     "ar": "التوظيف"
+    },
+    "title": {
+     "en": "{{ d.managers_target }} manager seats by design",
+     "fr": "{{ d.managers_target }} postes de manager prévus",
+     "ar": "{{ d.managers_target }} منصبًا إداريًا وفق التصميم"
+    },
+    "body": {
+     "en": "We are recruiting expert team managers first.",
+     "fr": "Nous recrutons en priorité des managers d’équipes d’experts.",
+     "ar": "نستقطب أولًا مديري فرق الخبراء."
+    },
+    "href": "/careers/managers/",
+    "gradient": "governance"
+   }
+  },
+  {
+   "label": {
+    "en": "Company",
+    "fr": "Entreprise",
+    "ar": "الشركة"
+   },
+   "active_prefix": "/about",
+   "groups": [
+    {
+     "heading": {
+      "en": "W5D",
+      "fr": "W5D",
+      "ar": "W5D"
+     },
+     "items": [
+      {
+       "icon": "info",
+       "label": {
+        "en": "About",
+        "fr": "À propos",
+        "ar": "نبذة عنا"
+       },
+       "desc": {
+        "en": "Who we are and what we will not claim",
+        "fr": "Qui nous sommes et ce que nous ne prétendons pas être",
+        "ar": "من نحن وما الذي لن ندّعيه"
+       },
+       "href": "/about/"
+      },
+      {
+       "icon": "users",
+       "label": {
+        "en": "Team",
+        "fr": "Équipe",
+        "ar": "الفريق"
+       },
+       "desc": {
+        "en": "The owner, the manager and the first seat",
+        "fr": "Le propriétaire, le gestionnaire et la première place",
+        "ar": "المالك والمدير والمقعد الأول"
+       },
+       "href": "/team/"
+      },
+      {
+       "icon": "circle-help",
+       "label": {
+        "en": "FAQ",
+        "fr": "FAQ",
+        "ar": "الأسئلة الشائعة"
+       },
+       "desc": {
+        "en": "Straight answers",
+        "fr": "Des réponses claires",
+        "ar": "إجابات مباشرة"
+       },
+       "href": "/faq/"
+      },
+      {
+       "icon": "mail",
+       "label": {
+        "en": "Contact",
+        "fr": "Contact",
+        "ar": "اتصل بنا"
+       },
+       "desc": {
+        "en": "Write to the right desk",
+        "fr": "Écrivez au bon service",
+        "ar": "راسل الجهة المناسبة"
+       },
+       "href": "/contact/"
+      }
+     ]
+    },
+    {
+     "heading": {
+      "en": "Build with us",
+      "fr": "Construisez avec nous",
+      "ar": "ابنوا معنا"
+     },
+     "items": [
+      {
+       "icon": "newspaper",
+       "label": {
+        "en": "Newsletter",
+        "fr": "Newsletter",
+        "ar": "النشرة البريدية"
+       },
+       "desc": {
+        "en": "Dated updates only",
+        "fr": "Mises à jour datées uniquement",
+        "ar": "التحديثات المؤرخة فقط"
+       },
+       "href": "/newsletter/"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

@@ -189,6 +189,92 @@
      "span": 2
     }
    ]
+  },
+  {
+   "type": "steps",
+   "id": "reg-next",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "After you register",
+    "fr": "Après l’inscription",
+    "ar": "بعد التسجيل"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Verification",
+      "fr": "Vérification",
+      "ar": "التحقق"
+     },
+     "body": {
+      "en": "A person checks identity and diploma. You are told by e-mail and in your notifications.",
+      "fr": "Une personne vérifie l’identité et le diplôme. Vous êtes informé par e-mail et dans vos notifications.",
+      "ar": "يتحقق شخص من الهوية والشهادة. تُبلَّغ بالبريد وفي إشعاراتك."
+     }
+    },
+    {
+     "title": {
+      "en": "Practice",
+      "fr": "Entraînement",
+      "ar": "التدريب"
+     },
+     "body": {
+      "en": "Free QCM practice rounds are open from your account straight away.",
+      "fr": "Les entraînements QCM gratuits sont ouverts depuis votre compte dès maintenant.",
+      "ar": "جولات تدريب QCM المجانية مفتوحة من حسابك فورا."
+     }
+    },
+    {
+     "title": {
+      "en": "Certification",
+      "fr": "Certification",
+      "ar": "الاعتماد"
+     },
+     "body": {
+      "en": "A graded round can issue a certificate when you meet the requirements set for your level.",
+      "fr": "Une session notée peut délivrer un certificat lorsque vous remplissez les conditions de votre niveau.",
+      "ar": "قد تُصدر جولة مصحَّحة شهادة حين تستوفي شروط مستواك."
+     }
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "reg-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Applicant questions",
+    "fr": "Questions des candidats",
+    "ar": "أسئلة المترشحين"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Is registering a job offer?",
+      "fr": "S’inscrire est-il une offre d’emploi ?",
+      "ar": "هل التسجيل عرض وظيفة؟"
+     },
+     "a": {
+      "en": "No. It opens a path to certification. Work follows certified headcount and funded capacity.",
+      "fr": "Non. Cela ouvre un parcours vers la certification. Le travail dépend des effectifs certifiés et des capacités financées.",
+      "ar": "لا. يفتح مسارا نحو الاعتماد. والعمل يتبع العدد المعتمد والقدرة الممولة."
+     }
+    },
+    {
+     "q": {
+      "en": "Do I pay to register?",
+      "fr": "Dois-je payer pour m’inscrire ?",
+      "ar": "هل أدفع للتسجيل؟"
+     },
+     "a": {
+      "en": "No. Registration and practice are free; a graded round may carry a fee the owner has set, shown before you start.",
+      "fr": "Non. L’inscription et l’entraînement sont gratuits ; une session notée peut comporter des frais fixés par le propriétaire, affichés avant de commencer.",
+      "ar": "لا. التسجيل والتدريب مجانيان؛ وقد تحمل الجولة المصحَّحة رسوما يحددها المالك وتظهر قبل البدء."
+     }
+    }
+   ]
   }
  ]
 }

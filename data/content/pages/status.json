@@ -127,9 +127,9 @@
       "ar": "{{ dates.as_of }}"
      },
      "evidence": {
-      "en": "{{ experts.developers_today }} developers.",
-      "fr": "{{ experts.developers_today }} développeurs.",
-      "ar": "{{ experts.developers_today }} مطوّرًا."
+      "en": "{{ experts.developers_today|devs }}.",
+      "fr": "{{ experts.developers_today|devs }}.",
+      "ar": "{{ experts.developers_today|devs }}."
      }
     },
     {
@@ -197,6 +197,29 @@
       "fr": "Mode démo. Aucun paiement n’est effectué.",
       "ar": "وضع تجريبي. لا تُحصّل أي مدفوعات."
      }
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "st-how",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "How to read this page",
+    "fr": "Comment lire cette page",
+    "ar": "كيف تقرأ هذه الصفحة"
+   },
+   "paragraphs": [
+    {
+     "en": "Every line has a status, a date and the evidence behind it. “Live” means a person can use it today; “building” and “concept” are not live and are labelled so.",
+     "fr": "Chaque ligne a un statut, une date et la preuve correspondante. « Actif » signifie qu’une personne peut l’utiliser aujourd’hui ; « en construction » et « concept » ne le sont pas et sont étiquetés ainsi.",
+     "ar": "لكل سطر حالة وتاريخ ودليل. «نشط» يعني أن شخصا يستطيع استخدامه اليوم؛ و«قيد الإنشاء» و«مفهوم» ليسا كذلك ويوسمان بذلك."
+    },
+    {
+     "en": "The live figures come from daily roll-ups, not from targets. If a figure is zero, it is zero.",
+     "fr": "Les chiffres en direct viennent des cumuls quotidiens, pas des objectifs. Si un chiffre est zéro, il est zéro.",
+     "ar": "تأتي الأرقام الحالية من الحصائل اليومية لا من الأهداف. إن كان الرقم صفرا فهو صفر."
     }
    ]
   }

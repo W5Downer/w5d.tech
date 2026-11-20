@@ -6,7 +6,8 @@
 @php
   $nav = [
     'overview' => ['layout-dashboard', __('acct.overview')], 'orders' => ['coins', __('acct.orders')], 'payments' => ['smartphone', __('acct.payments')],
-    'applications' => ['badge-check', __('acct.applications')], 'notifications' => ['bell', __('acct.notifications')],
+    'applications' => ['badge-check', __('acct.applications')], 'qcm' => ['list-checks', tr3('QCM rounds', 'Sessions QCM', 'جولات الاختبار')], 'certificates' => ['award', tr3('Certificates', 'Certificats', 'الشهادات')],
+    'affiliate' => ['share-2', tr3('Affiliate', 'Affiliation', 'الإحالة')], 'notifications' => ['bell', __('acct.notifications')],
     'profile' => ['user-round', __('acct.profile')], 'security' => ['shield-check', __('acct.security')],
     'api' => ['code', tr3('API & docs', 'API et docs', 'API والوثائق')],
   ];
@@ -73,6 +74,15 @@
 
       @elseif($panel === 'api')
         <div class="mt-6">@include('partials.api-guide', ['guide' => $guide, 'tabs' => $tabs, 'as' => $as, 'tab_base' => $tab_base, 'role' => $role])</div>
+
+      @elseif($panel === 'qcm')
+        @include('account.sec-qcm')
+
+      @elseif($panel === 'certificates')
+        @include('account.sec-certificates')
+
+      @elseif($panel === 'affiliate')
+        @include('account.sec-affiliate')
 
       @elseif($panel === 'orders')
         @if(!$d['orders'])

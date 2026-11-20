@@ -11,7 +11,7 @@
       <g class="w5l-orbit">
         <circle cx="80" cy="14" r="5" fill="#a78bfa"/><circle cx="142.8" cy="59.6" r="5" fill="#818cf8"/><circle cx="118.8" cy="133.4" r="5" fill="#38bdf8"/><circle cx="41.2" cy="133.4" r="5" fill="#22d3ee"/><circle cx="17.2" cy="59.6" r="5" fill="#c4b5fd"/>
       </g>
-      <g class="w5l-mark"><rect x="46" y="46" width="68" height="68" rx="18" fill="url(#w5lg)"/><text x="80" y="91" text-anchor="middle" font-family="Space Grotesk,Inter,system-ui,sans-serif" font-weight="800" font-size="28" fill="#fff">W5</text></g>
+      <g class="w5l-mark"><image href="{{ asset('images/logo.svg') }}" x="30" y="56" width="100" height="48" preserveAspectRatio="xMidYMid meet"/></g>
     </svg>
     <span class="w5l-text">W5D</span>
     <span class="w5l-bar"></span>

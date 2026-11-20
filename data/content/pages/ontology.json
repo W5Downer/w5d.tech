@@ -145,6 +145,29 @@
    ]
   },
   {
+   "type": "prose",
+   "id": "ont-how",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "How to use the ontology",
+    "fr": "Comment utiliser l’ontologie",
+    "ar": "كيف تستخدم الأنطولوجيا"
+   },
+   "paragraphs": [
+    {
+     "en": "Start from a macro work, open a service and read its deliverables, who does the work and how quality is checked. Every service sits at one layer and says which layer it speaks about.",
+     "fr": "Partez d’une macro-œuvre, ouvrez un service et lisez ses livrables, qui réalise le travail et comment la qualité est contrôlée. Chaque service se situe à un niveau et indique de quel niveau il parle.",
+     "ar": "ابدأ من عمل كبير وافتح خدمة واقرأ مخرجاتها ومن ينفذها وكيف تُراجع جودتها. تقع كل خدمة في طبقة وتذكر أي طبقة تتحدث عنها."
+    },
+    {
+     "en": "The same data is available as JSON for developers, and each of the {{ counts.services }} services has its own QCM bank for certification.",
+     "fr": "Les mêmes données sont disponibles en JSON pour les développeurs, et chacun des {{ counts.services }} services possède sa propre banque QCM pour la certification.",
+     "ar": "البيانات نفسها متاحة بصيغة JSON للمطورين، ولكل خدمة من الخدمات الـ{{ counts.services }} بنك QCM خاص بها للاعتماد."
+    }
+   ]
+  },
+  {
    "type": "cta",
    "id": "ont-final",
    "gradient": "sciences",

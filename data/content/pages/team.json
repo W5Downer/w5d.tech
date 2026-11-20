@@ -1,0 +1,300 @@
+{
+ "slug": "team",
+ "title": {
+  "en": "Team — the owner, the manager and the first seat",
+  "fr": "Équipe — le propriétaire, le gestionnaire et la première place",
+  "ar": "الفريق — المالك والمدير والمقعد الأول"
+ },
+ "description": {
+  "en": "Meet the W5D team: Maher, owner and manager. One developer today, managed by the owner. Be the first to join.",
+  "fr": "Découvrez l’équipe W5D : Maher, propriétaire et gestionnaire. Un développeur aujourd’hui, encadré par le propriétaire. Soyez le premier à rejoindre.",
+  "ar": "تعرّف على فريق W5D: ماهر، المالك والمدير. مطوّر واحد اليوم، يديره المالك. كن الأول في الانضمام."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "team-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "eyebrow": {
+    "en": "Team",
+    "fr": "Équipe",
+    "ar": "الفريق"
+   },
+   "title": {
+    "en": "A small team, **managed by its owner.**",
+    "fr": "Une petite équipe, **gérée par son propriétaire.**",
+    "ar": "فريق صغير **يديره مالكه.**"
+   },
+   "lead": {
+    "en": "Today W5D delivers with {{ experts.developers_today|devs }}, managed by the owner. Everything else on this page is a seat nobody has taken yet.",
+    "fr": "Aujourd’hui W5D livre avec {{ experts.developers_today|devs }}, encadré par le propriétaire. Tout le reste sur cette page est une place que personne n’a encore prise.",
+    "ar": "اليوم تنفّذ W5D أعمالها بـ{{ experts.developers_today|devs }} يديره المالك. وكل ما عدا ذلك في هذه الصفحة مقاعد لم يشغلها أحد بعد."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Take the first seat",
+      "fr": "Prendre la première place",
+      "ar": "احجز المقعد الأول"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "Careers",
+      "fr": "Carrières",
+      "ar": "الوظائف"
+     },
+     "href": "/careers/",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "type": "kpis",
+   "id": "team-kpis",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "The team, today",
+    "fr": "L’équipe, aujourd’hui",
+    "ar": "الفريق اليوم"
+   },
+   "items": [
+    {
+     "value": "{{ experts.developers_today }}",
+     "label": {
+      "en": "Developer, managed by the owner",
+      "fr": "Développeur, encadré par le propriétaire",
+      "ar": "مطوّر، يديره المالك"
+     },
+     "zero_label": {
+      "en": "Be the first",
+      "fr": "Soyez le premier",
+      "ar": "كن الأول"
+     }
+    },
+    {
+     "value": "1",
+     "label": {
+      "en": "Owner and manager",
+      "fr": "Propriétaire et gestionnaire",
+      "ar": "مالك ومدير"
+     }
+    },
+    {
+     "value": "{{ experts.current }}",
+     "label": {
+      "en": "Certified experts",
+      "fr": "Experts certifiés",
+      "ar": "خبراء معتمدون"
+     },
+     "zero_label": {
+      "en": "Be the first",
+      "fr": "Soyez le premier",
+      "ar": "كن الأول"
+     }
+    },
+    {
+     "value": "{{ counts.managers_today }}",
+     "label": {
+      "en": "Additional managers",
+      "fr": "Gestionnaires supplémentaires",
+      "ar": "مديرون إضافيون"
+     },
+     "zero_label": {
+      "en": "Be the first",
+      "fr": "Soyez le premier",
+      "ar": "كن الأول"
+     }
+    }
+   ]
+  },
+  {
+   "type": "team",
+   "id": "team-people",
+   "tier": "e",
+   "focus": 4,
+   "title": {
+    "en": "Who is on the team",
+    "fr": "Qui est dans l’équipe",
+    "ar": "من هم أعضاء الفريق"
+   },
+   "lead": {
+    "en": "One person owns, manages and currently carries the delivery. The other cards are open on purpose.",
+    "fr": "Une personne possède, gère et porte aujourd’hui la livraison. Les autres cartes sont ouvertes volontairement.",
+    "ar": "شخص واحد يملك ويدير ويتحمل التنفيذ حاليًا. أما البطاقات الأخرى فمفتوحة عن قصد."
+   },
+   "members": [
+    {
+     "id": "maher",
+     "photo": "maher-w5d-owner",
+     "name": {
+      "en": "Maher",
+      "fr": "Maher",
+      "ar": "ماهر"
+     },
+     "alt": {
+      "en": "Portrait of Maher, owner and manager of W5D",
+      "fr": "Portrait de Maher, propriétaire et gestionnaire de W5D",
+      "ar": "صورة ماهر، مالك W5D ومديرها"
+     },
+     "roles": [
+      {
+       "en": "Owner",
+       "fr": "Propriétaire",
+       "ar": "المالك"
+      },
+      {
+       "en": "Manager",
+       "fr": "Gestionnaire",
+       "ar": "المدير"
+      }
+     ],
+     "body": {
+      "en": "Owns W5D, manages the team and signs off every delivery. The one developer on the team works under his management.",
+      "fr": "Possède W5D, gère l’équipe et valide chaque livraison. Le seul développeur de l’équipe travaille sous sa direction.",
+      "ar": "يملك W5D ويدير الفريق ويعتمد كل تسليم. والمطوّر الوحيد في الفريق يعمل تحت إدارته."
+     }
+    }
+   ],
+   "open": [
+    {
+     "icon": "code",
+     "title": {
+      "en": "Developer seat",
+      "fr": "Poste de développeur",
+      "ar": "مقعد مطوّر"
+     },
+     "body": {
+      "en": "Today: {{ experts.developers_today|devs }}, managed by the owner. More seats open as supervised work grows.",
+      "fr": "Aujourd’hui : {{ experts.developers_today|devs }}, encadré par le propriétaire. D’autres postes s’ouvrent à mesure que le travail encadré grandit.",
+      "ar": "اليوم: {{ experts.developers_today|devs }} يديره المالك. وتُفتح مقاعد أخرى كلما نما العمل المُشرَف عليه."
+     },
+     "value": {
+      "en": "1",
+      "fr": "1",
+      "ar": "1"
+     },
+     "href": "/careers/",
+     "cta": {
+      "en": "See how roles work",
+      "fr": "Voir les rôles",
+      "ar": "اطّلع على الأدوار"
+     }
+    },
+    {
+     "icon": "award",
+     "title": {
+      "en": "Certified expert",
+      "fr": "Expert certifié",
+      "ar": "خبير معتمد"
+     },
+     "body": {
+      "en": "No expert is certified yet. The first certificate is issued after a reviewed delivery, and it can be verified publicly.",
+      "fr": "Aucun expert n’est encore certifié. Le premier certificat est délivré après une livraison revue, et il est vérifiable publiquement.",
+      "ar": "لا يوجد خبير معتمد بعد. تُصدر أول شهادة بعد تسليم تمت مراجعته، ويمكن التحقق منها علنًا."
+     },
+     "href": "/certification/",
+     "cta": {
+      "en": "About certification",
+      "fr": "À propos de la certification",
+      "ar": "عن الاعتماد"
+     }
+    },
+    {
+     "icon": "users",
+     "title": {
+      "en": "Team manager",
+      "fr": "Gestionnaire d’équipe",
+      "ar": "مدير فريق"
+     },
+     "body": {
+      "en": "Lead a group of experts under the owner. A path, not a job: no salary or return is promised.",
+      "fr": "Encadrez un groupe d’experts sous la direction du propriétaire. Un parcours, pas un emploi : aucun salaire ni rendement n’est promis.",
+      "ar": "قُد مجموعة من الخبراء تحت إشراف المالك. مسار لا وظيفة: لا راتب ولا عائد مضمونان."
+     },
+     "href": "/careers/managers/",
+     "cta": {
+      "en": "Apply as manager",
+      "fr": "Candidater comme gestionnaire",
+      "ar": "قدّم كمدير"
+     }
+    },
+    {
+     "icon": "share-2",
+     "title": {
+      "en": "Affiliate partner",
+      "fr": "Partenaire affilié",
+      "ar": "شريك تسويق"
+     },
+     "body": {
+      "en": "Recommend W5D with a personal link and follow clicks and commissions in your dashboard.",
+      "fr": "Recommandez W5D avec un lien personnel et suivez clics et commissions dans votre tableau de bord.",
+      "ar": "رشّح W5D برابط شخصي وتابع النقرات والعمولات في لوحتك."
+     },
+     "href": "/affiliate/",
+     "cta": {
+      "en": "Affiliate programme",
+      "fr": "Programme d’affiliation",
+      "ar": "برنامج التسويق بالعمولة"
+     }
+    }
+   ],
+   "ctas": []
+  },
+  {
+   "type": "prose",
+   "id": "team-honest",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "What the team page does not claim",
+    "fr": "Ce que la page équipe ne prétend pas",
+    "ar": "ما لا تدّعيه صفحة الفريق"
+   },
+   "paragraphs": [
+    {
+     "en": "The team is small and we say so. One developer works today, managed by the owner. Counts on this site come from one dated source and show “Be the first” instead of a zero.",
+     "fr": "L’équipe est petite et nous le disons. Un développeur travaille aujourd’hui, encadré par le propriétaire. Les chiffres du site viennent d’une source datée unique et affichent « Soyez le premier » plutôt qu’un zéro.",
+     "ar": "الفريق صغير ونقولها صراحة. يعمل مطوّر واحد اليوم يديره المالك. أرقام الموقع تأتي من مصدر مؤرَّخ واحد وتعرض «كن الأول» بدل الصفر."
+    },
+    {
+     "en": "Joining is a path, not a job. Supervised work, reviewed delivery and a verifiable certificate are what we offer. No salary, return or placement is promised.",
+     "fr": "Rejoindre est un parcours, pas un emploi. Travail encadré, livraison revue et certificat vérifiable : voilà ce que nous offrons. Aucun salaire, rendement ni placement n’est promis.",
+     "ar": "الانضمام مسار لا وظيفة. نقدّم عملًا مُشرَفًا عليه وتسليمًا مراجَعًا وشهادة يمكن التحقق منها. لا نعد برواتب ولا عوائد ولا توظيف."
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "team-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Be the first.",
+    "fr": "Soyez le premier.",
+    "ar": "كن الأول."
+   },
+   "body": {
+    "en": "Check eligibility in thirty seconds, no account needed.",
+    "fr": "Vérifiez votre admissibilité en trente secondes, sans compte.",
+    "ar": "تحقق من أهليتك في ثلاثين ثانية دون حساب."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Check eligibility",
+      "fr": "Vérifier l’admissibilité",
+      "ar": "تحقق من الأهلية"
+     },
+     "href": "/join/eligibility/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

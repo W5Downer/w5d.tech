@@ -71,6 +71,79 @@
      "ar": "لا نبيع البيانات. ولا نحمّل نصوصًا برمجية تابعة لجهات خارجية."
     }
    ]
+  },
+  {
+   "type": "definitions",
+   "id": "pv-key",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "Your data, in short",
+    "fr": "Vos données, en bref",
+    "ar": "بياناتك باختصار"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "What we keep",
+      "fr": "Ce que nous conservons",
+      "ar": "ما نحتفظ به"
+     },
+     "def": {
+      "en": "Your account, your pledges and applications, your QCM attempts and certificates, and the messages you send us.",
+      "fr": "Votre compte, vos engagements et candidatures, vos tentatives QCM et certificats, et les messages que vous nous envoyez.",
+      "ar": "حسابك والتزاماتك وطلباتك ومحاولات QCM وشهاداتك والرسائل التي ترسلها إلينا."
+     }
+    },
+    {
+     "term": {
+      "en": "What we never store",
+      "fr": "Ce que nous ne stockons jamais",
+      "ar": "ما لا نخزنه أبدا"
+     },
+     "def": {
+      "en": "Your password in clear text, or the management key of a subscription in readable form.",
+      "fr": "Votre mot de passe en clair, ni la clé de gestion d’un abonnement sous forme lisible.",
+      "ar": "كلمة مرورك نصا صريحا أو مفتاح إدارة اشتراك بصيغة مقروءة."
+     }
+    },
+    {
+     "term": {
+      "en": "Referral links",
+      "fr": "Liens de parrainage",
+      "ar": "روابط الإحالة"
+     },
+     "def": {
+      "en": "A click is counted with a hashed, short-lived marker and a cookie that lasts {{ affiliate.cookie_days }} days.",
+      "fr": "Un clic est compté avec un marqueur haché et éphémère et un cookie valable {{ affiliate.cookie_days }} jours.",
+      "ar": "تُحسب النقرة بعلامة مجزّأة قصيرة العمر وملف تعريف يدوم {{ affiliate.cookie_days }} يوما."
+     }
+    },
+    {
+     "term": {
+      "en": "Public certificate record",
+      "fr": "Fiche publique de certificat",
+      "ar": "سجل الشهادة العام"
+     },
+     "def": {
+      "en": "Shows service, level and dates. The holder’s name is masked.",
+      "fr": "Indique service, niveau et dates. Le nom du titulaire est masqué.",
+      "ar": "يعرض الخدمة والمستوى والتواريخ. اسم الحامل مخفي."
+     }
+    },
+    {
+     "term": {
+      "en": "Your rights",
+      "fr": "Vos droits",
+      "ar": "حقوقك"
+     },
+     "def": {
+      "en": "Ask to see, correct or delete your data by writing to the contact desk.",
+      "fr": "Demandez à voir, corriger ou supprimer vos données en écrivant au bureau de contact.",
+      "ar": "اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها بالكتابة إلى مكتب التواصل."
+     }
+    }
+   ]
   }
  ]
 }

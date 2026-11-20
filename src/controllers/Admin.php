@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{ACL, ApiGuide, Auth, Content, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
+use W5D\{ACL, ApiGuide, Auth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
 
 /** Owner portal. Mounted at /{ADMIN_URL_PATH}. Every action re-checks session, permission and CSRF. */
 final class Admin
@@ -16,7 +16,7 @@ final class Admin
     ];
     private const STATUS_PERM = ['manager_applications' => 'managers', 'contact_messages' => 'messages', 'investor_subscriptions' => 'investors.read'];
 
-    private static function page(string $view, array $data, int $status = 200): Response
+    public static function page(string $view, array $data, int $status = 200): Response
     {
         ViewEnv::share('canonicalPath', '/');
         $role = Auth::role();
@@ -24,9 +24,9 @@ final class Admin
         return Response::html(view($view, $data), $status)->withHeaders(['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store']);
     }
 
-    private static function flash(string $kind, string $msg): void { $_SESSION['_admin_flash'] = ['kind' => $kind, 'msg' => $msg]; }
+    public static function flash(string $kind, string $msg): void { $_SESSION['_admin_flash'] = ['kind' => $kind, 'msg' => $msg]; }
 
-    private static function audit(string $action, string $subject = '', string $detail = ''): void
+    public static function audit(string $action, string $subject = '', string $detail = ''): void
     {
         try { DB::insert('audit_log', ['country_id' => 'tn', 'actor' => (string)(Auth::user()['name'] ?? 'system'), 'action' => $action, 'subject' => $subject, 'detail' => mb_substr($detail, 0, 1000)]); } catch (\Throwable) {}
     }
@@ -92,8 +92,12 @@ final class Admin
         foreach (ACL::matrix()['menus'] as $m) if ($m['slug'] === $slug) $menu = $m;
         if (!$menu) return Response::html(view('pages.404', ['title' => '404']), 404);
         if ($r = Auth::require($menu['perm'])) return $r;
-        $view = match ($slug) {
+        $view = Crud::has($slug) ? self::vCrud($slug) : match ($slug) {
             'progressive-pricing' => self::vPricing(),
+            'qcm-bank' => Programs::vBank($q),
+            'qcm-review' => Programs::vReview(),
+            'affiliates' => Programs::vAffiliates(),
+            'certificates' => Programs::vCertificates(),
             'manager-applications' => self::vTable('SELECT id, ref, full_name, email, macro_slug AS macro, years, team_size_led AS team, region_slug AS region, score, status, created_at FROM manager_applications ORDER BY score DESC, id DESC LIMIT 300', 'manager_applications'),
             'subscriptions' => self::vTable('SELECT s.id, s.order_ref AS ref, i.full_name, i.email, s.parts_per_day AS parts, s.macro_slug AS macro, s.next_charge_on AS next_charge, s.status, s.created_at FROM investor_subscriptions s JOIN investors i ON i.id=s.investor_id ORDER BY s.id DESC LIMIT 300', 'investor_subscriptions'),
             'payments-d17' => self::vPayments(),
@@ -128,6 +132,89 @@ final class Admin
             default => ['kind' => 'preview'],
         };
         return self::page('admin.menu', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'v' => $view, 'flash' => $_SESSION['_admin_flash'] ?? null, 'back' => $slug]);
+    }
+
+    /* ================= CRUD with ACL (config/resources.php, src/Crud.php) ================= */
+    private static function uid(): int { return (int)(Auth::user()['id'] ?? 0); }
+
+    private static function vCrud(string $slug): array
+    {
+        $d = Crud::def($slug); $role = Auth::role();
+        try { $rows = Crud::rows($slug, $role, self::uid()); } catch (\Throwable $e) { return ['kind' => 'crud', 'rows' => [], 'error' => $e->getMessage(), 'slug' => $slug, 'can' => [], 'def' => $d]; }
+        $scoped = Crud::scopeCol($role, $d) !== null;
+        return ['kind' => 'crud', 'rows' => $rows, 'slug' => $slug, 'def' => $d, 'can' => Crud::allowed($role, $slug), 'scoped' => $scoped, 'declared' => $d['actions']];
+    }
+
+    /** Resolve the menu + resource and re-check read and action perms; returns [menu, def] or a Response. */
+    private static function crudGate(string $slug, string $action): array|Response
+    {
+        $menu = null;
+        foreach (ACL::matrix()['menus'] as $m) if ($m['slug'] === $slug) $menu = $m;
+        if (!$menu || !Crud::has($slug)) return Response::html(view('pages.404', ['title' => '404']), 404);
+        if ($r = Auth::require($menu['perm'])) return $r;
+        if (!Crud::can(Auth::role(), $slug, $action)) {
+            self::audit('crud.denied', $slug, $action);
+            return self::page('admin.forbidden', ['title' => 'Forbidden', 'active' => ''], 403);
+        }
+        return [$menu, Crud::def($slug)];
+    }
+
+    private static function crudForm(Request $q, string $slug, ?int $id): Response
+    {
+        $g = self::crudGate($slug, $id ? 'update' : 'create');
+        if ($g instanceof Response) return $g;
+        [$menu, $d] = $g;
+        $row = null;
+        if ($id) { $row = Crud::find($slug, $id, Auth::role(), self::uid()); if (!$row) return Response::html(view('pages.404', ['title' => '404']), 404); }
+        $res = self::page('admin.crud-form', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'def' => $d, 'slug' => $slug, 'row' => $row, 'errors' => $_SESSION['_errors'] ?? [], 'flash' => $_SESSION['_admin_flash'] ?? null, 'role' => Auth::role()]);
+        unset($_SESSION['_errors'], $_SESSION['_old']);
+        return $res;
+    }
+
+    public static function crudNew(Request $q): Response { return self::crudForm($q, (string)($q->params['menu'] ?? ''), null); }
+    public static function crudEdit(Request $q): Response { return self::crudForm($q, (string)($q->params['menu'] ?? ''), (int)($q->params['id'] ?? 0)); }
+
+    public static function crudSave(Request $q): Response
+    {
+        $slug = (string)($q->params['menu'] ?? '');
+        $id = (int)($q->post['id'] ?? 0);
+        $g = self::crudGate($slug, $id ? 'update' : 'create');
+        if ($g instanceof Response) return $g;
+        [, $d] = $g;
+        $list = admin_url($slug . '/');
+        $form = $id ? admin_url($slug . '/' . $id . '/edit/') : admin_url($slug . '/new/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($list); }
+        $role = Auth::role(); $uid = self::uid();
+        if ($id && !Crud::find($slug, $id, $role, $uid)) { self::flash('error', __('ux.crud_missing')); return Response::redirect($list); }
+        [$vals, $err] = Crud::validate($d, $q->post, $role, $uid);
+        if ($err) {
+            $_SESSION['_errors'] = $err;
+            $_SESSION['_old'] = array_map(fn($v) => is_scalar($v) ? (string)$v : '', array_intersect_key($q->post, $d['fields']));
+            foreach ($d['fields'] as $n => $f) if ($f[0] === 'bool') $_SESSION['_old'][$n] = ($q->post[$n] ?? '') === '1' ? '1' : '0';
+            self::flash('error', __('ux.crud_invalid'));
+            return Response::redirect($form);
+        }
+        try {
+            if ($id) { Crud::update($slug, $id, $vals, $role, $uid); self::audit('crud.update', $d['table'] . '#' . $id, json_encode($vals, JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_updated')); }
+            else { $nid = Crud::create($slug, $vals, $uid); self::audit('crud.create', $d['table'] . '#' . $nid, json_encode($vals, JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_created')); }
+        } catch (\Throwable $e) { self::flash('error', __('ux.crud_failed')); }
+        return Response::redirect($list);
+    }
+
+    public static function crudDelete(Request $q): Response
+    {
+        $slug = (string)($q->params['menu'] ?? '');
+        $g = self::crudGate($slug, 'delete');
+        if ($g instanceof Response) return $g;
+        [, $d] = $g;
+        $list = admin_url($slug . '/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($list); }
+        $id = (int)($q->post['id'] ?? 0);
+        try {
+            if ($id > 0 && Crud::delete($slug, $id, Auth::role(), self::uid())) { self::audit('crud.delete', $d['table'] . '#' . $id); self::flash('ok', __('ux.crud_deleted')); }
+            else self::flash('error', __('ux.crud_missing'));
+        } catch (\Throwable $e) { self::flash('error', __('ux.crud_in_use')); }
+        return Response::redirect($list);
     }
 
     private static function vTable(string $sql, ?string $statusTable = null): array

@@ -31,5 +31,5 @@
       </li>
     @endforeach
   </ul>
-  <p class="mt-6 text-sm text-slate-500">{{ tr3('Developers: the public API and its OpenAPI description are open to everyone.', 'Développeurs : l’API publique et sa description OpenAPI sont ouvertes à tous.', 'للمطورين: الواجهة العامة ووصف OpenAPI مفتوحان للجميع.') }} <a class="btn-link" href="{{ url('/developers/') }}">/developers/</a></p>
+  <p class="mt-6 text-sm text-slate-500">{{ tr3('API documentation is private: sign in and open “API & Docs” in your own dashboard.', 'La documentation de l’API est privée : connectez-vous et ouvrez « API et docs » dans votre tableau de bord.', 'وثائق API خاصة: سجّل الدخول وافتح «API والوثائق» في لوحتك.') }} <a class="btn-link" href="{{ url('/account/api/') }}">{{ tr3('Open my docs', 'Ouvrir mes docs', 'افتح وثائقي') }}</a></p>
 </x-section>

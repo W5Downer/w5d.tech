@@ -3,7 +3,44 @@
 @section('content')
 <header class="mb-6"><p class="eyebrow">{{ __('admin.title') }}</p><h1 class="font-display text-3xl font-bold flex items-center gap-3 text-slate-900 dark:text-white">{{ icon($menu['icon'], 'w-7 h-7 text-brand-500') }} {{ t($menu['label']) }}</h1></header>
 
-@if($v['kind'] === 'table')
+@if($v['kind'] === 'crud')
+  @php $can = $v['can']; $slug = $v['slug']; $d = $v['def']; @endphp
+  <div class="mb-4 flex flex-wrap items-center gap-3">
+    @if(in_array('create', $can, true))<a class="btn-peak" href="{{ admin_url($slug . '/new/') }}">{{ icon('plus', 'w-4 h-4') }} {{ __('ux.crud_new') }}</a>@endif
+    <p class="text-xs text-slate-500">
+      {{ __('ux.crud_you_can') }}:
+      @forelse($can as $a)<span class="tier-badge">{{ __('ux.crud_' . $a . '_l') }}</span> @empty<span class="tier-badge">{{ __('ux.crud_readonly') }}</span>@endforelse
+      @if(!empty($v['scoped']))· {{ __('ux.crud_scope') }}@endif
+    </p>
+  </div>
+  @if(!empty($v['error']))<p class="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm">{{ $v['error'] }}</p>@endif
+  @if(empty($v['rows']))
+    <p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-500">{{ __('ux.crud_none') }}</p>
+  @else
+    @php $cols = array_keys($v['rows'][0]); $hasAct = count(array_intersect($can, ['update', 'delete'])) > 0; @endphp
+    @if(count($v['rows']) > 12)<div class="mb-3"><label class="sr-only" for="adm-filter">{{ __('ux.crud_search') }}</label><input id="adm-filter" type="search" class="field max-w-sm" placeholder="{{ __('ux.crud_search') }}" data-filter="#adm-table"></div>@endif
+    <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden">
+      <table class="w5-table w5-stack"><thead><tr>@foreach($cols as $c)<th scope="col">{{ $c }}</th>@endforeach @if($hasAct)<th scope="col">{{ __('ux.crud_actions') }}</th>@endif</tr></thead>
+      <tbody id="adm-table">
+        @foreach($v['rows'] as $row)
+          <tr data-filter-item="{{ mb_strtolower(implode(' ', array_map('strval', $row))) }}">
+            @foreach($row as $c => $cell)<td data-label="{{ $c }}" @if(is_numeric($cell)) class="tabular-nums" @endif>@if($c === 'status')<span class="tier-badge">{{ $cell }}</span>@else{{ is_float($cell) ? number_format($cell, 2) : $cell }}@endif</td>@endforeach
+            @if($hasAct)
+            <td data-label="{{ __('ux.crud_actions') }}"><div class="flex flex-wrap gap-1.5">
+              @if(in_array('update', $can, true))<a class="btn-ghost !py-1 !px-2 text-xs" href="{{ admin_url($slug . '/' . $row['id'] . '/edit/') }}" aria-label="{{ __('ux.crud_edit') }} #{{ $row['id'] }}">{{ icon('pencil', 'w-3.5 h-3.5') }} {{ __('ux.crud_edit') }}</a>@endif
+              @if(in_array('delete', $can, true))
+                <form method="post" action="{{ admin_url($slug . '/delete') }}" data-confirm="{{ __('ux.crud_confirm') }}">{!! csrf_field() !!}<input type="hidden" name="id" value="{{ $row['id'] }}"><button class="btn-ghost !py-1 !px-2 text-xs text-red-600 dark:text-red-400" type="submit" aria-label="{{ __('ux.crud_delete') }} #{{ $row['id'] }}">{{ icon('trash-2', 'w-3.5 h-3.5') }} {{ __('ux.crud_delete') }}</button></form>
+              @endif
+            </div></td>
+            @endif
+          </tr>
+        @endforeach
+      </tbody></table>
+    </div>
+    <p class="text-xs text-slate-500 mt-2">{{ count($v['rows']) }} {{ __('ux.crud_rows') }}</p>
+  @endif
+
+@elseif($v['kind'] === 'table')
   @if(!empty($v['note']))<p class="mb-4 text-sm text-slate-500">{{ $v['note'] }}</p>@endif
   @if(!empty($v['error']))<p class="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm">{{ $v['error'] }}</p>@endif
   @if(empty($v['rows']))
@@ -126,6 +163,18 @@
   @if($v['hist'])
   <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>When</th><th>By</th><th>Variable</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody>@foreach($v['hist'] as $h)<tr><td class="font-mono text-xs whitespace-nowrap">{{ $h['changed_at'] }}</td><td>{{ $h['changed_by'] }}</td><td class="font-mono text-xs">{{ $h['path'] }}</td><td>{{ $h['old_value'] }}</td><td>{{ $h['new_value'] }}</td><td>{{ $h['note'] }}</td></tr>@endforeach</tbody></table></div>
   @else<p class="text-sm text-slate-500">No change yet: every value is the file default.</p>@endif
+
+@elseif($v['kind'] === 'qcm-bank')
+  @include('admin.qcm-bank')
+
+@elseif($v['kind'] === 'qcm-review')
+  @include('admin.qcm-review')
+
+@elseif($v['kind'] === 'affiliates')
+  @include('admin.affiliates')
+
+@elseif($v['kind'] === 'certificates')
+  @include('admin.certificates')
 
 @elseif($v['kind'] === 'api')
   @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs};
 
 final class App
 {
@@ -26,6 +26,7 @@ final class App
 
     public static function handle(Request $req): Response
     {
+        Affiliate::track($req); // ?ref=CODE: first-touch cookie + one click per visitor per day (never throws)
         try {
             $res = self::router()->dispatch($req);
         } catch (\Throwable $e) {
@@ -76,7 +77,7 @@ final class App
         $r->get('/projects/{slug}', [Pages::class, 'project']);
         $r->get('/tn', fn() => Response::redirect(url('/countries/tunisia/'), 301));
         $r->get('/tn/{gov}', [Pages::class, 'governorate']);
-                foreach (['join', 'how-it-works', 'countries/tunisia', 'partners', 'investors', 'pricing', 'about', 'ontology', 'careers', 'faq', 'status', 'trust', 'join/thanks'] as $slug) {
+                foreach (['join', 'how-it-works', 'countries/tunisia', 'partners', 'investors', 'pricing', 'about', 'ontology', 'careers', 'team', 'faq', 'status', 'trust', 'join/thanks', 'affiliate', 'certification'] as $slug) {
             $r->get('/' . $slug, fn(Request $q) => Pages::page($q, $slug));
         }
         $r->get('/for', fn(Request $q) => Pages::page($q, 'for'));
@@ -84,6 +85,8 @@ final class App
         $r->get('/invest', fn() => Response::redirect(url('/investors/'), 301));
         $r->get('/sitemap', [Pages::class, 'sitemap']);
         $r->get('/trust/{page}', [Pages::class, 'trust']);
+        $r->any('/certification/verify', [Programs::class, 'certVerify']);
+        $r->get('/certificate/{code}', [Programs::class, 'certPrint']);
         $r->any('/join/eligibility', [Forms::class, 'eligibility']);
         $r->any('/app/register', [Forms::class, 'register']);
         $r->any('/contact', [Forms::class, 'contact']);
@@ -101,6 +104,7 @@ final class App
         $r->any('/account/login', [Accounts::class, 'login']);
         $r->post('/account/logout', [Accounts::class, 'logout']);
         $r->any('/account/register', [Accounts::class, 'register']);
+        $r->get('/account/modal/{mode}', [Accounts::class, 'modalForm']);
         $r->post('/account/resend', [Accounts::class, 'resend']);
         $r->get('/account/verify/{token}', [Accounts::class, 'verify']);
         $r->any('/account/forgot', [Accounts::class, 'forgot']);
@@ -109,6 +113,15 @@ final class App
         $r->get('/account/social/{provider}/callback', [Accounts::class, 'socialCallback']);
         $r->post('/account/profile', [Accounts::class, 'profile']);
         $r->post('/account/security', [Accounts::class, 'security']);
+        $r->post('/account/qcm/start', [Programs::class, 'qcmStart']);
+        $r->post('/account/qcm/answer', [Programs::class, 'qcmAnswer']);
+        $r->post('/account/qcm/buy', [Programs::class, 'qcmBuy']);
+        $r->post('/account/qcm/task', [Programs::class, 'qcmTask']);
+        $r->get('/account/qcm/attempt/{id}', [Programs::class, 'qcmAttempt']);
+        $r->post('/account/qcm/attempt/{id}/submit', [Programs::class, 'qcmSubmit']);
+        $r->any('/account/qcm/pay/{ref}', [Programs::class, 'qcmPay']);
+        $r->post('/account/affiliate/apply', [Programs::class, 'affApply']);
+        $r->post('/account/affiliate/payout', [Programs::class, 'affPayout']);
         $r->get('/account', [Accounts::class, 'panel']);
         $r->get('/account/{panel}', [Accounts::class, 'panel']);
         $r->any('/pay/{ref}', [Accounts::class, 'pay']);
@@ -134,6 +147,7 @@ final class App
         $r->get('/api/sliders/{name}.json', [Api::class, 'slider']);
         $r->get('/api/pages/{slug}.json', [Api::class, 'pageJson']);
         $r->get('/api/governorates.json', [Api::class, 'governorates']);
+        $r->get('/api/certificates/{code}.json', [Programs::class, 'certApi']);
         $r->post('/api/quote', [Api::class, 'quote']);
         $r->get('/api/quote', [Api::class, 'quote']);
         $r->post('/api/subscriptions', [Api::class, 'subscribe']);
@@ -178,6 +192,21 @@ final class App
         $r->post($m . '/status', [Admin::class, 'setStatus']);
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
+        // QCM bank / review, affiliates, certificates (src/controllers/Programs.php)
+        $r->get($m . '/qcm-bank/export', [Programs::class, 'bankExport']);
+        foreach (['save' => 'bankSave', 'toggle' => 'bankToggle', 'delete' => 'bankDelete', 'import' => 'bankImport'] as $seg => $fn) $r->post($m . '/qcm-bank/' . $seg, [Programs::class, $fn]);
+        $r->post($m . '/qcm-review/pass', [Programs::class, 'passReview']);
+        $r->post($m . '/qcm-review/task', [Programs::class, 'taskReview']);
+        $r->post($m . '/affiliates/status', [Programs::class, 'affStatus']);
+        $r->post($m . '/affiliates/referral', [Programs::class, 'refDecide']);
+        $r->post($m . '/affiliates/payout', [Programs::class, 'payoutSettle']);
+        $r->post($m . '/certificates/issue', [Programs::class, 'certIssue']);
+        $r->post($m . '/certificates/revoke', [Programs::class, 'certRevoke']);
+        // CRUD with ACL (src/Crud.php): static segments first, then the generic menu
+        $r->get($m . '/{menu}/new', [Admin::class, 'crudNew']);
+        $r->get($m . '/{menu}/{id}/edit', [Admin::class, 'crudEdit']);
+        $r->post($m . '/{menu}/save', [Admin::class, 'crudSave']);
+        $r->post($m . '/{menu}/delete', [Admin::class, 'crudDelete']);
         $r->get($m . '/{menu}', [Admin::class, 'menu']);
         return $r;
     }

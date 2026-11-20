@@ -1,0 +1,274 @@
+{
+ "slug": "affiliate",
+ "title": {
+  "en": "Affiliate programme",
+  "fr": "Programme d’affiliation",
+  "ar": "برنامج الإحالة"
+ },
+ "description": {
+  "en": "Share your link, earn a declared commission on verified payments. No promise of income.",
+  "fr": "Partagez votre lien et percevez une commission déclarée sur les paiements vérifiés. Aucune promesse de revenu.",
+  "ar": "شارك رابطك واحصل على عمولة معلنة عن المدفوعات الموثقة. دون وعد بدخل."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "aff-hero",
+   "variant": "classic",
+   "gradient": "calm",
+   "eyebrow": {
+    "en": "Affiliate programme",
+    "fr": "Programme d’affiliation",
+    "ar": "برنامج الإحالة"
+   },
+   "title": {
+    "en": "Bring someone who fits. **Be paid for the proof, not the promise.**",
+    "fr": "Amenez une personne qui a sa place. **Soyez rémunéré pour la preuve, pas pour la promesse.**",
+    "ar": "اجلب شخصا مناسبا. **تُكافأ على الإثبات لا على الوعد.**"
+   },
+   "lead": {
+    "en": "Every account gets a personal link. When someone who arrived through it confirms an e-mail, pays a verified part or earns a certificate, your balance records it, with a date and a reason.",
+    "fr": "Chaque compte reçoit un lien personnel. Lorsqu’une personne arrivée par ce lien confirme son e-mail, règle une part vérifiée ou obtient un certificat, votre solde l’enregistre avec une date et un motif.",
+    "ar": "يحصل كل حساب على رابط شخصي. حين يؤكد شخص وصل عبره بريده، أو يدفع حصة موثقة، أو ينال شهادة، يسجّل رصيدك ذلك بتاريخ وسبب."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Open my affiliate panel",
+      "fr": "Ouvrir mon espace d’affiliation",
+      "ar": "افتح لوحة الإحالة"
+     },
+     "href": "/account/affiliate/",
+     "style": "peak",
+     "arrow": true
+    },
+    {
+     "label": {
+      "en": "How the money works",
+      "fr": "Comment l’argent circule",
+      "ar": "كيف تعمل المبالغ"
+     },
+     "href": "#aff-rates",
+     "style": "ghost"
+    }
+   ]
+  },
+  {
+   "type": "kpis",
+   "id": "aff-rates",
+   "tier": "e",
+   "focus": 3,
+   "items": [
+    {
+     "value": "{{ affiliate.commission_pct|pct }}",
+     "label": {
+      "en": "of a referred investor’s verified payment",
+      "fr": "du paiement vérifié d’un investisseur parrainé",
+      "ar": "من المدفوعات الموثقة للمستثمر المُحال"
+     }
+    },
+    {
+     "value": "{{ affiliate.signup_bonus|money }}",
+     "label": {
+      "en": "when a referred account confirms its e-mail",
+      "fr": "lorsqu’un compte parrainé confirme son e-mail",
+      "ar": "عند تأكيد الحساب المُحال لبريده"
+     }
+    },
+    {
+     "value": "{{ affiliate.cert_bonus|money }}",
+     "label": {
+      "en": "when a referred account earns its first certificate",
+      "fr": "lorsqu’un compte parrainé obtient son premier certificat",
+      "ar": "عند نيل الحساب المُحال شهادته الأولى"
+     }
+    },
+    {
+     "value": "{{ affiliate.cookie_days }}",
+     "label": {
+      "en": "days your link is remembered",
+      "fr": "jours de mémorisation de votre lien",
+      "ar": "يوما يُحفظ فيها رابطك"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "id": "aff-how",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "Four steps, all visible in your panel",
+    "fr": "Quatre étapes, toutes visibles dans votre espace",
+    "ar": "أربع خطوات، كلها ظاهرة في لوحتك"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "Apply",
+      "fr": "Candidatez",
+      "ar": "قدّم طلبك"
+     },
+     "body": {
+      "en": "Sign in, open the affiliate panel and apply. A person reviews each application unless the owner has opened automatic approval.",
+      "fr": "Connectez-vous, ouvrez l’espace d’affiliation et candidatez. Une personne examine chaque demande, sauf si le propriétaire a ouvert l’approbation automatique.",
+      "ar": "سجّل الدخول وافتح لوحة الإحالة وقدّم طلبك. يراجع شخص كل طلب ما لم يفتح المالك الموافقة التلقائية."
+     }
+    },
+    {
+     "title": {
+      "en": "Share your link",
+      "fr": "Partagez votre lien",
+      "ar": "شارك رابطك"
+     },
+     "body": {
+      "en": "Copy the link or your code. Clicks are counted without storing anything about the visitor beyond a hashed, short-lived marker.",
+      "fr": "Copiez le lien ou votre code. Les clics sont comptés sans conserver sur le visiteur autre chose qu’un marqueur haché et éphémère.",
+      "ar": "انسخ الرابط أو رمزك. تُحسب النقرات دون حفظ شيء عن الزائر سوى علامة مجزّأة قصيرة العمر."
+     }
+    },
+    {
+     "title": {
+      "en": "Wait for the hold",
+      "fr": "Attendez la période de rétention",
+      "ar": "انتظر فترة الاحتجاز"
+     },
+     "body": {
+      "en": "A commission stays pending for {{ affiliate.hold_days }} days so that a reversed or failed payment never leaves a debt behind.",
+      "fr": "Une commission reste en attente {{ affiliate.hold_days }} jours afin qu’un paiement annulé ou échoué ne laisse aucune dette.",
+      "ar": "تبقى العمولة معلّقة {{ affiliate.hold_days }} يوما حتى لا يترك دفع مُلغى أو فاشل أي دين."
+     }
+    },
+    {
+     "title": {
+      "en": "Request a payout",
+      "fr": "Demandez un versement",
+      "ar": "اطلب صرفا"
+     },
+     "body": {
+      "en": "From {{ affiliate.min_payout|money }} you can request a payout. The owner settles it by hand and records the reference.",
+      "fr": "À partir de {{ affiliate.min_payout|money }}, vous pouvez demander un versement. Le propriétaire le règle à la main et en consigne la référence.",
+      "ar": "ابتداء من {{ affiliate.min_payout|money }} يمكنك طلب صرف. يسوّيه المالك يدويا ويسجّل مرجعه."
+     }
+    }
+   ]
+  },
+  {
+   "type": "prose",
+   "id": "aff-rules",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "The rules, in plain words",
+    "fr": "Les règles, en termes simples",
+    "ar": "القواعد بلغة واضحة"
+   },
+   "paragraphs": [
+    {
+     "en": "Commission is a declared rate set by the owner and shown here from the live settings. It applies only to payments the programme has verified. It is not a salary, not a guaranteed income and not a share of the programme.",
+     "fr": "La commission est un taux déclaré, fixé par le propriétaire et affiché ici à partir des réglages en vigueur. Elle ne s’applique qu’aux paiements vérifiés par le programme. Ce n’est ni un salaire, ni un revenu garanti, ni une part du programme.",
+     "ar": "العمولة نسبة معلنة يحددها المالك وتظهر هنا من الإعدادات الحالية. تنطبق فقط على المدفوعات التي تحقق منها البرنامج. وهي ليست راتبا ولا دخلا مضمونا ولا حصة في البرنامج."
+    },
+    {
+     "en": "You cannot earn from your own account or from accounts you control. Self-referrals, duplicate accounts and misleading promotion are refused, and an affiliate who breaks these rules can be suspended.",
+     "fr": "Vous ne pouvez rien percevoir sur votre propre compte ni sur des comptes que vous contrôlez. Les auto-parrainages, les comptes en double et la promotion trompeuse sont refusés, et un affilié qui enfreint ces règles peut être suspendu.",
+     "ar": "لا يمكنك الكسب من حسابك أو من حسابات تتحكم فيها. تُرفض الإحالة الذاتية والحسابات المكررة والترويج المضلِّل، ويمكن تعليق من يخالف ذلك."
+    },
+    {
+     "en": "Say what the programme is. It is a path to certified expert work in Tunisia, not a job offer. Never promise a candidate a post, a result or a return.",
+     "fr": "Dites ce qu’est le programme : un parcours vers un travail d’expert certifié en Tunisie, pas une offre d’emploi. Ne promettez jamais à un candidat un poste, un résultat ou un rendement.",
+     "ar": "قل ما هو البرنامج: مسار نحو عمل خبير معتمد في تونس وليس عرض وظيفة. لا تعد أي مرشح بمنصب أو نتيجة أو عائد."
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "aff-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Affiliate questions",
+    "fr": "Questions sur l’affiliation",
+    "ar": "أسئلة عن الإحالة"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Is it free to join?",
+      "fr": "L’inscription est-elle gratuite ?",
+      "ar": "هل الانضمام مجاني؟"
+     },
+     "a": {
+      "en": "Yes. You only need an account with a confirmed e-mail.",
+      "fr": "Oui. Il suffit d’un compte dont l’e-mail est confirmé.",
+      "ar": "نعم. يكفي حساب ببريد مؤكد."
+     }
+    },
+    {
+     "q": {
+      "en": "What if the referred person already had an account?",
+      "fr": "Et si la personne parrainée avait déjà un compte ?",
+      "ar": "ماذا لو كان للشخص المُحال حساب مسبق؟"
+     },
+     "a": {
+      "en": "Only accounts created after clicking your link are attributed. The first link in the {{ affiliate.cookie_days }}-day window wins.",
+      "fr": "Seuls les comptes créés après un clic sur votre lien sont rattachés. Le premier lien dans la fenêtre de {{ affiliate.cookie_days }} jours l’emporte.",
+      "ar": "تُنسب فقط الحسابات المنشأة بعد النقر على رابطك. ويفوز أول رابط ضمن نافذة {{ affiliate.cookie_days }} يوما."
+     }
+    },
+    {
+     "q": {
+      "en": "Why is my commission pending?",
+      "fr": "Pourquoi ma commission est-elle en attente ?",
+      "ar": "لماذا عمولتي معلّقة؟"
+     },
+     "a": {
+      "en": "It waits {{ affiliate.hold_days }} days and for the payment to be verified. After that it becomes payable.",
+      "fr": "Elle attend {{ affiliate.hold_days }} jours et la vérification du paiement. Ensuite, elle devient payable.",
+      "ar": "تنتظر {{ affiliate.hold_days }} يوما وتحقق الدفع. بعدها تصبح قابلة للصرف."
+     }
+    },
+    {
+     "q": {
+      "en": "Can the rates change?",
+      "fr": "Les taux peuvent-ils changer ?",
+      "ar": "هل يمكن أن تتغير النسب؟"
+     },
+     "a": {
+      "en": "Yes. The owner can change them; a change applies to later events, never to what is already recorded.",
+      "fr": "Oui. Le propriétaire peut les modifier ; un changement s’applique aux événements futurs, jamais à ce qui est déjà enregistré.",
+      "ar": "نعم. يمكن للمالك تغييرها، ويسري التغيير على الأحداث اللاحقة لا على ما سُجّل."
+     }
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "id": "aff-final",
+   "gradient": "peak",
+   "title": {
+    "en": "Ready to **share your link?**",
+    "fr": "Prêt à **partager votre lien ?**",
+    "ar": "هل أنت مستعد **لمشاركة رابطك؟**"
+   },
+   "body": {
+    "en": "Applications are reviewed by a person. Nothing here is a promise of income.",
+    "fr": "Les candidatures sont examinées par une personne. Rien ici n’est une promesse de revenu.",
+    "ar": "يراجع شخص الطلبات. لا شيء هنا وعد بدخل."
+   },
+   "ctas": [
+    {
+     "label": {
+      "en": "Apply in my account",
+      "fr": "Candidater depuis mon compte",
+      "ar": "قدّم من حسابي"
+     },
+     "href": "/account/affiliate/",
+     "style": "peak",
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

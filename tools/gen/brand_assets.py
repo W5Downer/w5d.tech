@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generates brand icons + 1200x630 social placeholder images (alias.jpg) and docs/social-share-image-prompts.md.
 Placeholders are Latin-only (safe fonts). Replace any og-*.jpg with the AI-generated artwork from the prompts doc (same file name)."""
-import os, math
+import os, math, re
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 IMG = f'{ROOT}/htdocs/assets/_base/images'
@@ -24,22 +24,32 @@ def grad(w, h, a, b):
     return im
 def rr_mask(w, h, r):
     m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, w - 1, h - 1], r, fill=255); return m
+LOGO_SVG = f'{IMG}/logo.svg'   # traced from tools/gen/source/w5d.tech-logo.jpg (the official logo supplied by the owner)
+def logo_png(width, bg=None):
+    """Render the vector logo to a PIL RGBA image of the given width (transparent unless bg given)."""
+    import subprocess, io
+    cmd = ['rsvg-convert', '-w', str(width), LOGO_SVG]
+    if bg: cmd[1:1] = ['-b', bg]
+    return Image.open(io.BytesIO(subprocess.run(cmd, check=True, capture_output=True).stdout)).convert('RGBA')
 def icon(size, maskable=False, g='peak'):
-    bg = grad(size, size, *G[g])
-    if maskable:
-        out = bg
+    """App icon: the W5D infinity logo on a white tile (rounded, or full-bleed + safe zone when maskable)."""
+    if maskable: out = Image.new('RGBA', (size, size), (255, 255, 255, 255))
     else:
-        out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.paste(bg, (0, 0), rr_mask(size, size, int(size * .22)))
-    d = ImageDraw.Draw(out); f = font(int(size * (.34 if maskable else .42)))
-    tw = d.textlength('W5', font=f); asc = f.getbbox('W5')
-    d.text(((size - tw) / 2, size / 2 - (asc[1] + asc[3]) / 2), 'W5', font=f, fill='white')
+        out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.paste(Image.new('RGBA', (size, size), (255, 255, 255, 255)), (0, 0), rr_mask(size, size, int(size * .22)))
+    lw = int(size * (.60 if maskable else .74)); lg = logo_png(lw)
+    out.alpha_composite(lg, ((size - lg.width) // 2, (size - lg.height) // 2))
     return out
 icon(512).save(f'{IMG}/icon-512.png'); icon(192).save(f'{IMG}/icon-192.png')
 icon(512, True).convert('RGB').save(f'{IMG}/icon-maskable-512.png')
 icon(180, True).convert('RGB').save(f'{IMG}/apple-touch-icon.png')
 icon(32).save(f'{IMG}/favicon-32.png')
-icon(48).save(f'{ROOT}/htdocs/favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
-open(f'{IMG}/favicon.svg', 'w').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#g)"/><text x="16" y="21.5" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#fff">W5</text></svg>\n')
+icon(256).save(f'{ROOT}/htdocs/favicon.ico', sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
+# favicon.svg = white rounded tile + the logo paths (viewBox 0 0 32 32)
+_svg = open(LOGO_SVG).read(); _vb = [float(v) for v in re.search(r'viewBox="([^"]+)"', _svg).group(1).split()]; _body = re.search(r'<title>W5D</title>(.*)</svg>', _svg, re.S).group(1)
+_sc = 24 / _vb[2]; _tx = 4 - _vb[0] * _sc; _ty = 16 - (_vb[1] + _vb[3] / 2) * _sc
+open(f'{IMG}/favicon.svg', 'w').write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#fff"/><g transform="translate({_tx:.3f} {_ty:.3f}) scale({_sc:.5f})">{_body}</g></svg>\n')
+# small PNG logos for mail (SVG is not reliable in mail clients) and the header
+logo_png(480).save(f'{IMG}/logo-480.png'); logo_png(240).save(f'{IMG}/logo-240.png')
 
 # ---- alias table: alias, grad, kicker, title, page(s), prompt scene ----
 A = []
@@ -57,6 +67,7 @@ add('og-app-register', 'warm', 'Register', 'Register as an applicant', '/app/reg
 add('og-careers', 'focus', 'Careers', 'A path, not a job', '/careers/', 'a branching path of light splitting into five trails, with small briefcase and compass icons, honest and grounded mood')
 add('og-careers-managers', 'peak', 'Managers', 'Lead a macro work', '/careers/managers/', 'a leader silhouette on a hill overlooking five glowing districts connected by bridges')
 add('og-partners', 'built', 'Partners', 'Build with W5D', '/partners/', 'two interlocking rings of light, one violet one cyan, with a handshake silhouette, institutional tone')
+add('og-team', 'calm', 'Team', 'One owner, one developer, open seats', '/team/', 'a long wooden workbench with one laptop and one chair lit warmly, and several empty chairs waiting in soft shadow')
 add('og-about', 'calm', 'About', 'Who builds W5D', '/about/', 'a workshop table seen from above with blueprint sheets, a compass and a glowing five-sided emblem')
 add('og-ontology', 'sciences', 'Ontology', 'One shared vocabulary', '/ontology/', 'a knowledge graph of labelled nodes forming a brain-like network, cyan and violet edges')
 add('og-countries-tunisia', 'built', 'Tunisia', 'Rooted in Tunisia', '/countries/tunisia/', 'abstract map of Tunisia outlined by glowing dots with a Mediterranean-blue gradient, 24 governorate markers')
@@ -97,8 +108,8 @@ def card(a):
         cx = 870 + i * 62; cy = 150 + int(30 * math.sin(i * 1.3)); r = 22 + i * 3
         od.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255, 40 + i * 12), outline=(255, 255, 255, 120), width=2)
     im = Image.alpha_composite(im.convert('RGBA'), ov).convert('RGB'); d = ImageDraw.Draw(im)
-    d.rounded_rectangle([60, 60, 156, 156], 24, fill=(255, 255, 255)); icn = icon(96, g=a['g']).convert('RGBA'); im.paste(icn, (60, 60), icn)
-    d.text((176, 92), 'W5D', font=font(40), fill='white')
+    d.rounded_rectangle([60, 56, 256, 150], 24, fill=(255, 255, 255)); lg = logo_png(164); im.paste(lg, (60 + (196 - lg.width) // 2, 56 + (94 - lg.height) // 2), lg)
+    d.text((276, 86), 'W5D', font=font(40), fill='white')
     d.text((60, 300), a['kicker'].upper(), font=font(30), fill=(196, 181, 253))
     t = a['title']; fs = 84
     while d.textlength(t, font=font(fs)) > 1080 and fs > 40: fs -= 4

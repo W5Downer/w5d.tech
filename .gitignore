@@ -1,10 +1,11 @@
-# secrets & runtime state
-.env
-storage/*
 !storage/.gitkeep
-node_modules/
-tools/node_modules/
-*.sqlite
-*.sqlite-wal
-*.sqlite-shm
+# secrets & runtime state
 *.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+__pycache__/
+node_modules/
+storage/*
+tools/node_modules/

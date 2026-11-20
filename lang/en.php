@@ -1,7 +1,7 @@
 <?php
 /** UI chrome only (English). Content lives in data/content/*.json as {en,fr,ar}. Tokens: {{ path.to.var }}. */
 return [
-    'brand' => ['tagline' => 'World Five Dimensions'],
+    'brand' => ['desc_suffix' => 'W5D: certified weekly work packages, a path and not a job.', 'tagline' => 'World Five Dimensions'],
     'nav' => [
         'home' => 'Home', 'audiences' => 'Audiences', 'account' => 'Account', 'user' => 'Your account', 'share' => 'Share',
         'macro' => 'Five macro works', 'services' => '130 services', 'services_unit' => 'services', 'projects' => 'Projects', 'invest' => 'Invest', 'join' => 'Join',
@@ -90,5 +90,33 @@ return [
         'title' => 'Share W5D', 'lead' => 'Spread the word. Share this page with one tap.', 'native' => 'Share…',
         'copy' => 'Copy link', 'copied' => 'Link copied', 'email' => 'E-mail',
         'open' => 'Share this page', 'text' => 'W5D: five macro works, 130 services, one path.',
+    ],
+    'ux' => [
+        'close' => 'Close', 'auth_title_login' => 'Sign in to W5D', 'auth_title_register' => 'Create your W5D account',
+        'auth_lead_login' => 'Pick up where you left off: your parts, payments and applications.',
+        'auth_lead_register' => 'One account for every door. E-mail confirmation required.', 'auth_sending' => 'Please wait…',
+        'auth_error' => 'Something went wrong. Try again or use the full page.', 'auth_full' => 'Open the full page',
+        'auth_ok_redirect' => 'Done. Taking you there…', 'auth_check_mail' => 'Check your e-mail', 'auth_loading' => 'Loading…', 'sign_in' => 'Sign in',
+        'sign_up' => 'Sign up', 'find' => 'Find a page', 'find_ph' => 'Type to find a page, e.g. price, manager, eligibility',
+        'find_empty' => 'Nothing matches. Try another word.', 'find_hint' => 'Press / or Ctrl+K anywhere to search', 'find_open' => 'Search',
+        'quick' => 'Quick paths', 'quick_lead' => 'Where do you want to go? Pick the shortest path.', 'path_invest' => 'I want to invest',
+        'path_invest_d' => 'See today\'s price and take a daily part', 'path_learn' => 'I want to learn and get certified',
+        'path_learn_d' => 'Check eligibility, then open an applicant file', 'path_manage' => 'I want to lead a team',
+        'path_manage_d' => 'Apply as a team manager', 'path_client' => 'I need work done',
+        'path_client_d' => 'Browse services and write to the partners desk', 'path_account' => 'My account',
+        'path_account_d' => 'Orders, payments, applications', 'path_status' => 'What is live today?', 'path_status_d' => 'Dated status of every project',
+        'path_help' => 'I have a question', 'path_help_d' => 'FAQ and the right desk', 'choose_title' => 'Where do you want to go?',
+        'choose_lead' => 'Five short paths cover almost every visit. Pick yours.', 'notfound_try' => 'Try one of these short paths', 'tab_home' => 'Home',
+        'tab_invest' => 'Invest', 'tab_find' => 'Search', 'tab_account' => 'Account', 'be_first' => 'Be the first', 'dev_one' => '1 developer', 'dev_two' => '2 developers', 'dev_few' => '%d developers', 'dev_many' => '%d developers', 'cert_zero' => 'no expert is certified yet: be the first', 'cert_one' => '1 expert is certified', 'cert_many' => '%d experts are certified', 'tab_label' => 'Quick navigation', 'tab_menu' => 'Menu', 'crud_new' => 'New', 'crud_edit' => 'Edit',
+        'crud_delete' => 'Delete', 'crud_save' => 'Save', 'crud_cancel' => 'Cancel', 'crud_actions' => 'Actions',
+        'crud_confirm' => 'Delete this record? This cannot be undone.', 'crud_created' => 'Record created.', 'crud_updated' => 'Record updated.',
+        'crud_deleted' => 'Record deleted.', 'crud_denied' => 'Your role cannot do this.', 'crud_invalid' => 'Please fix the highlighted fields.',
+        'crud_missing' => 'Record not found.', 'crud_readonly' => 'Read only for your role', 'crud_you_can' => 'Your role can',
+        'crud_none' => 'No records yet.', 'crud_search' => 'Search', 'crud_rows' => 'rows', 'crud_owner_only' => 'Owner only', 'docs_title' => 'API & Docs',
+        'docs_private' => 'Private documentation. Only signed-in people see it.',
+        'f_required' => 'Required', 'f_toolong' => 'Too long', 'f_invalid' => 'Invalid value', 'f_range' => 'Allowed range',
+        'crud_failed' => 'Could not save. Try again.', 'crud_in_use' => 'Cannot delete: the record is in use.', 'crud_scope' => 'You see only your own rows.',
+        'crud_back' => 'Back to the list', 'crud_new_title' => 'New record', 'crud_edit_title' => 'Edit record', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Roles and what each can do',
+        'crud_read' => 'Read', 'crud_create_l' => 'Create', 'crud_update_l' => 'Update', 'crud_delete_l' => 'Delete', 'crud_yes' => 'yes', 'crud_own' => 'own rows',
     ],
 ];

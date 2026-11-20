@@ -1,9 +1,9 @@
 {
  "slug": "trust-terms",
  "title": {
-  "en": "Terms",
-  "fr": "Conditions",
-  "ar": "الشروط"
+  "en": "Terms of use",
+  "fr": "Conditions d’utilisation",
+  "ar": "شروط الاستخدام"
  },
  "description": {
   "en": "Demo-mode terms for pledges and subscriptions.",
@@ -69,6 +69,79 @@
      "en": "Real-payment terms will be published and shown before any charge.",
      "fr": "Les conditions applicables aux paiements réels seront publiées et présentées avant tout prélèvement.",
      "ar": "ستُنشر شروط الدفع الفعلي وتُعرض قبل تحصيل أي مبلغ."
+    }
+   ]
+  },
+  {
+   "type": "definitions",
+   "id": "tm-key",
+   "tier": "x",
+   "focus": 2,
+   "title": {
+    "en": "The terms in one glance",
+    "fr": "Les conditions en un coup d’œil",
+    "ar": "الشروط في لمحة"
+   },
+   "items": [
+    {
+     "term": {
+      "en": "What a part is",
+      "fr": "Ce qu’est une part",
+      "ar": "ما هي الحصة"
+     },
+     "def": {
+      "en": "A dated contribution to a certification path. Not a loan, share, deposit or job.",
+      "fr": "Une contribution datée à un parcours de certification. Ni prêt, ni action, ni dépôt, ni emploi.",
+      "ar": "مساهمة مؤرخة في مسار اعتماد. ليست قرضا ولا سهما ولا وديعة ولا وظيفة."
+     }
+    },
+    {
+     "term": {
+      "en": "Refunds",
+      "fr": "Remboursements",
+      "ar": "الاستردادات"
+     },
+     "def": {
+      "en": "Judged case by case in writing; nothing is promised in advance.",
+      "fr": "Examinés au cas par cas, par écrit ; rien n’est promis à l’avance.",
+      "ar": "تُبحث كل حالة كتابيا؛ ولا يُوعد بشيء مسبقا."
+     }
+    },
+    {
+     "term": {
+      "en": "Your account",
+      "fr": "Votre compte",
+      "ar": "حسابك"
+     },
+     "def": {
+      "en": "You are responsible for your password. We never ask for it.",
+      "fr": "Vous êtes responsable de votre mot de passe. Nous ne le demandons jamais.",
+      "ar": "أنت مسؤول عن كلمة مرورك. لا نطلبها أبدا."
+     }
+    },
+    {
+     "term": {
+      "en": "Certificates",
+      "fr": "Certificats",
+      "ar": "الشهادات"
+     },
+     "def": {
+      "en": "A certificate proves a passed round at a date. It can be revoked if it was issued in error or obtained unfairly.",
+      "fr": "Un certificat prouve une session réussie à une date. Il peut être révoqué s’il a été délivré par erreur ou obtenu de façon déloyale.",
+      "ar": "تثبت الشهادة جولة ناجحة بتاريخ. ويمكن إلغاؤها إن صدرت بالخطأ أو نيلت بغير وجه حق."
+     }
+    },
+    {
+     "term": {
+      "en": "Referral commissions",
+      "fr": "Commissions de parrainage",
+      "ar": "عمولات الإحالة"
+     },
+     "def": {
+      "en": "Declared rates on verified payments, paid by hand after a hold. Not an income promise.",
+      "fr": "Taux déclarés sur des paiements vérifiés, versés à la main après une période d’attente. Pas une promesse de revenu.",
+      "ar": "نسب معلنة على مدفوعات موثقة تُصرف يدويا بعد فترة احتجاز. ليست وعدا بدخل."
+     }
     }
    ]
   }

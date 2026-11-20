@@ -151,17 +151,17 @@
   {
    "en": "Sensor placement misses warm zones → re-perform critical checks against traceable references and quarantine invalid results.",
    "fr": "Un mauvais positionnement des capteurs ne permet pas de détecter les zones chaudes → refaire les contrôles critiques à l’aide de références traçables et mettre en quarantaine les résultats non valides.",
-   "ar": "يؤدي عدم وضع المستشعرات في المناطق الأدفأ إلى إعادة إجراء الفحوصات الحرجة بالاستناد إلى مراجع قابلة للتتبع، وعزل النتائج غير الصالحة."
+   "ar": "عدم وضع المستشعرات في المناطق الأدفأ ← إعادة إجراء الفحوصات الحرجة بالاستناد إلى مراجع قابلة للتتبع، وعزل النتائج غير الصالحة."
   },
   {
    "en": "Records fabricated during outages → test operator handover, maintenance dependencies and an available recovery procedure.",
    "fr": "Des dossiers fabriqués pendant les interruptions de service → tester le transfert entre opérateurs, les dépendances liées à la maintenance et l’existence d’une procédure de récupération.",
-   "ar": "تُختبر السجلات المُختلقة أثناء انقطاع الخدمة عبر التحقق من تسليم المهام بين المشغلين، والاعتماد على أعمال الصيانة، وتوافر إجراء للاستعادة."
+   "ar": "السجلات المُختلقة أثناء انقطاع الخدمة ← اختبار تسليم المهام بين المشغلين، والاعتماد على أعمال الصيانة، وتوافر إجراء للاستعادة."
   },
   {
    "en": "Last-mile handling breaks validated conditions → reconcile source records with the temperature logger checks acceptance checklist and assign corrective-action ownership.",
    "fr": "La manutention du dernier kilomètre compromet les conditions validées → rapprocher les dossiers sources de la liste de contrôle d’acceptation des contrôles des enregistreurs de température et attribuer la responsabilité des actions correctives.",
-   "ar": "يؤدي الإخلال بالشروط المعتمدة أثناء التعامل في المرحلة الأخيرة إلى مطابقة سجلات المصدر مع قائمة التحقق لقبول فحوصات مسجلات درجة الحرارة، وتحديد المسؤولية عن الإجراءات التصحيحية."
+   "ar": "الإخلال بالشروط المعتمدة أثناء التعامل في المرحلة الأخيرة ← مطابقة سجلات المصدر مع قائمة التحقق لقبول فحوصات مسجلات درجة الحرارة، وتحديد المسؤولية عن الإجراءات التصحيحية."
   }
  ]
 }

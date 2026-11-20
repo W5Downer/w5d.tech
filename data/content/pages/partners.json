@@ -98,6 +98,55 @@
    ]
   },
   {
+   "type": "faq",
+   "id": "par-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Commissioning a delivery",
+    "fr": "Confier une mission",
+    "ar": "تكليف بإنجاز"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "What can I commission?",
+      "fr": "Que puis-je confier ?",
+      "ar": "ماذا أستطيع أن أكلّف؟"
+     },
+     "a": {
+      "en": "Any of the {{ counts.services }} registered services, scoped as a deliverable with an acceptance rubric you agree beforehand.",
+      "fr": "N’importe lequel des {{ counts.services }} services enregistrés, cadré comme un livrable avec une grille d’acceptation convenue à l’avance.",
+      "ar": "أي خدمة من الخدمات الـ{{ counts.services }} المسجلة، محددة كمخرج بمعيار قبول تتفقون عليه مسبقا."
+     }
+    },
+    {
+     "q": {
+      "en": "Who does the work?",
+      "fr": "Qui réalise le travail ?",
+      "ar": "من ينفذ العمل؟"
+     },
+     "a": {
+      "en": "Certified experts, supervised by a manager, with a share of reports re-checked against source evidence.",
+      "fr": "Des experts certifiés, supervisés par un responsable, avec une part des rapports revérifiée à partir des preuves sources.",
+      "ar": "خبراء معتمدون يشرف عليهم مدير، وتُعاد مراجعة جزء من التقارير مقابل الأدلة المصدرية."
+     }
+    },
+    {
+     "q": {
+      "en": "How do I start?",
+      "fr": "Comment commencer ?",
+      "ar": "كيف أبدأ؟"
+     },
+     "a": {
+      "en": "Write to the partners desk with the service and the outcome you need. A person answers with scope and conditions.",
+      "fr": "Écrivez au bureau partenaires avec le service et le résultat attendu. Une personne répond avec un cadrage et des conditions.",
+      "ar": "راسل مكتب الشركاء بالخدمة والنتيجة التي تحتاجها. يرد شخص بنطاق وشروط."
+     }
+    }
+   ]
+  },
+  {
    "type": "notice",
    "id": "par-limits",
    "tier": "i",

@@ -125,6 +125,55 @@
      "rows": 5
     }
    ]
+  },
+  {
+   "type": "steps",
+   "id": "co-how",
+   "tier": "i",
+   "focus": 3,
+   "title": {
+    "en": "How a correction is handled",
+    "fr": "Comment une correction est traitée",
+    "ar": "كيف تُعالج التصحيحات"
+   },
+   "items": [
+    {
+     "title": {
+      "en": "You report",
+      "fr": "Vous signalez",
+      "ar": "تبلّغ"
+     },
+     "body": {
+      "en": "Name the page, quote the sentence and say what the evidence is. The form takes a minute.",
+      "fr": "Indiquez la page, citez la phrase et dites quelle est la preuve. Le formulaire prend une minute.",
+      "ar": "اذكر الصفحة واقتبس الجملة وبيّن الدليل. يستغرق النموذج دقيقة."
+     }
+    },
+    {
+     "title": {
+      "en": "We check",
+      "fr": "Nous vérifions",
+      "ar": "نتحقق"
+     },
+     "body": {
+      "en": "A person compares the claim with its source. If we are wrong, we say so.",
+      "fr": "Une personne compare l’affirmation à sa source. Si nous avons tort, nous le disons.",
+      "ar": "يقارن شخص الادعاء بمصدره. إن كنا مخطئين نقول ذلك."
+     }
+    },
+    {
+     "title": {
+      "en": "We publish",
+      "fr": "Nous publions",
+      "ar": "ننشر"
+     },
+     "body": {
+      "en": "The fix goes live with its date, and the reporter gets an answer within 14 days.",
+      "fr": "La correction est publiée avec sa date, et la personne reçoit une réponse sous 14 jours.",
+      "ar": "يُنشر التصحيح بتاريخه ويصل المبلّغ ردّ خلال 14 يوما."
+     }
+    }
+   ]
   }
  ]
 }

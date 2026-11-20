@@ -62,6 +62,71 @@
    }
   },
   {
+   "type": "prose",
+   "id": "chk-how",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Before you commit",
+    "fr": "Avant de vous engager",
+    "ar": "قبل أن تلتزم"
+   },
+   "paragraphs": [
+    {
+     "en": "The price of a part is a public function of programme progress and time, capped. The wizard shows the unit price for every day of your schedule and the total before you confirm; nothing is hidden behind the last step.",
+     "fr": "Le prix d’une part est une fonction publique de l’avancement du programme et du temps, plafonnée. L’assistant affiche le prix unitaire de chaque jour de votre calendrier et le total avant confirmation ; rien n’est caché derrière la dernière étape.",
+     "ar": "سعر الحصة دالة علنية لتقدم البرنامج والزمن، ومسقوفة. يعرض المعالج سعر الوحدة لكل يوم من جدولك والمجموع قبل التأكيد؛ ولا شيء مخفي خلف الخطوة الأخيرة."
+    },
+    {
+     "en": "You need a signed-in account so that the record belongs to someone. If you are not signed in, the popup keeps you on this step.",
+     "fr": "Un compte connecté est nécessaire pour que l’enregistrement appartienne à quelqu’un. Si vous n’êtes pas connecté, la fenêtre vous garde sur cette étape.",
+     "ar": "تحتاج إلى حساب مسجَّل ليكون السجل لشخص ما. إن لم تكن مسجلا فالنافذة تُبقيك في هذه الخطوة."
+    },
+    {
+     "en": "A part funds certification and delivery capacity. It is not a loan, a share of a company or a job.",
+     "fr": "Une part finance la certification et la capacité de livraison. Ce n’est ni un prêt, ni une part de société, ni un emploi.",
+     "ar": "تموّل الحصة الاعتماد وقدرة التنفيذ. وهي ليست قرضا ولا حصة في شركة ولا وظيفة."
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "chk-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Checkout questions",
+    "fr": "Questions sur la commande",
+    "ar": "أسئلة عن الطلب"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Is money taken when I confirm?",
+      "fr": "De l’argent est-il prélevé à la confirmation ?",
+      "ar": "هل يُخصم مال عند التأكيد؟"
+     },
+     "a": {
+      "en": "Only if payments are open. With D17 you send the transfer yourself and a person verifies it. In demo mode nothing moves.",
+      "fr": "Seulement si les paiements sont ouverts. Avec D17, vous envoyez le virement et une personne le vérifie. En mode démo, rien ne bouge.",
+      "ar": "فقط إن كان الدفع مفتوحا. مع D17 ترسل التحويل ويتحقق منه شخص. في الوضع التجريبي لا يتحرك شيء."
+     }
+    },
+    {
+     "q": {
+      "en": "Can I take a part every day?",
+      "fr": "Puis-je prendre une part chaque jour ?",
+      "ar": "هل أستطيع أخذ حصة كل يوم؟"
+     },
+     "a": {
+      "en": "Yes, with the daily subscription. You can pause or cancel it with its reference and key.",
+      "fr": "Oui, avec l’abonnement journalier. Vous pouvez le suspendre ou l’annuler avec sa référence et sa clé.",
+      "ar": "نعم، بالاشتراك اليومي. يمكنك إيقافه أو إلغاؤه بمرجعه ومفتاحه."
+     }
+    }
+   ]
+  },
+  {
    "type": "notice",
    "id": "chk-limits",
    "tier": "i",

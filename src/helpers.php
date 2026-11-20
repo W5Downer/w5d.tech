@@ -73,6 +73,14 @@ function link_to(string $path): string
     return preg_match('#^(https?:|mailto:|tel:|\#)#', $path) ? $path : url($path);
 }
 
+/** Images registered for a card key (data/cards/manifest.json, built by tools/gen/card_images.py). Returns [] when none. */
+function card_images(string $key): array
+{
+    static $m = null;
+    $m ??= is_file(ROOT . '/data/cards/manifest.json') ? (json_decode((string)file_get_contents(ROOT . '/data/cards/manifest.json'), true)['cards'] ?? []) : [];
+    return $m[$key]['images'] ?? [];
+}
+
 /** Inline Lucide SVG from the locally vendored icon set (no CDN, no icon font, no JS). */
 function icon(string $name, string $class = 'w-5 h-5'): Html
 {

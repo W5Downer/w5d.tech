@@ -8,7 +8,7 @@
         <div class="relative mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-36 pb-28 text-center">
           <div class="rise">
             <span class="hero-pill glass">{{ icon($s['icon'] ?? 'sparkles') }} {{ rich($s['eyebrow'] ?? '') }}</span>
-            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mt-6 leading-[1.06] text-slate-900 dark:text-white">@if($i === 0)<span class="sr-only">W5D — </span>@endif{{ hl($s['title'] ?? '') }}</h2>
+            <{{ $i === 0 ? 'h1' : 'h2' }} class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mt-6 leading-[1.06] text-slate-900 dark:text-white">@if($i === 0)<span class="sr-only">W5D — </span>@endif{{ hl($s['title'] ?? '') }}</{{ $i === 0 ? 'h1' : 'h2' }}>
             <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">{{ rich($s['lead'] ?? '') }}</p>
             <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
               @foreach(($s['ctas'] ?? []) as $c)<x-cta :c="$c" />@endforeach

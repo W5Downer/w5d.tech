@@ -163,6 +163,55 @@
    ]
   },
   {
+   "type": "faq",
+   "id": "join-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Joining, answered",
+    "fr": "Rejoindre, en réponses",
+    "ar": "الانضمام بأجوبة"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "Do I need a diploma?",
+      "fr": "Faut-il un diplôme ?",
+      "ar": "هل أحتاج شهادة؟"
+     },
+     "a": {
+      "en": "Each service names the diploma it expects. The eligibility check tells you which services your profile could match.",
+      "fr": "Chaque service indique le diplôme attendu. Le contrôle d’admissibilité vous dit quels services votre profil pourrait viser.",
+      "ar": "تذكر كل خدمة الشهادة المتوقعة. ويخبرك فحص الأهلية بالخدمات التي قد يناسبها ملفك."
+     }
+    },
+    {
+     "q": {
+      "en": "What does it cost?",
+      "fr": "Combien cela coûte-t-il ?",
+      "ar": "كم تكلف؟"
+     },
+     "a": {
+      "en": "Checking, registering and practising are free. A graded QCM round may have a fee set by the owner, shown before you start.",
+      "fr": "Vérifier, s’inscrire et s’entraîner sont gratuits. Une session QCM notée peut avoir des frais fixés par le propriétaire, affichés avant de commencer.",
+      "ar": "الفحص والتسجيل والتدريب مجانية. وقد تكون لجولة QCM المصحَّحة رسوم يحددها المالك وتظهر قبل البدء."
+     }
+    },
+    {
+     "q": {
+      "en": "Is a job guaranteed?",
+      "fr": "Un emploi est-il garanti ?",
+      "ar": "هل الوظيفة مضمونة؟"
+     },
+     "a": {
+      "en": "No. It is a path, not a job. Work follows certified headcount and funded capacity.",
+      "fr": "Non. C’est un parcours, pas un emploi. Le travail dépend des effectifs certifiés et des capacités financées.",
+      "ar": "لا. هو مسار لا وظيفة. والعمل يتبع العدد المعتمد والقدرة الممولة."
+     }
+    }
+   ]
+  },
+  {
    "type": "notice",
    "id": "join-limits",
    "tier": "i",

@@ -3,12 +3,33 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Env, Request, Response, Variables};
+use W5D\{Account, Content, Env, Request, Response, Variables};
 
-/** Documentation: one API for developers (OpenAPI + HTML), one for AI agents (manifest, tools, llms.txt). */
+/**
+ * Documentation: one API for developers (OpenAPI + HTML), one for AI agents (manifest, tools, llms.txt).
+ * PRIVATE since v2: every documentation page and machine file below requires a signed-in session (account or owner)
+ * and is noindex. Nothing is deleted: the same content is also embedded, per audience, in each dashboard (ApiGuide).
+ * The data endpoints under /api/*.json stay public: they are the API itself, not its documentation.
+ */
 final class Docs
 {
     private static function base(): string { return Env::baseUrl() . rtrim(url(''), '/'); }
+
+
+    /** Sign-in gate for documentation. Pages redirect to the sign-in page; machine files answer 401 (never cached, never indexed). */
+    public static function gate(Request $q): ?Response
+    {
+        if (Account::signedIn()) return null;
+        $h = ['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store'];
+        $path = rtrim($q->path, '/');
+        if ($path === '/developers' || $path === '/agents') {
+            return Response::redirect(url('/account/login/') . '?next=' . rawurlencode($path . '/'))->withHeaders($h);
+        }
+        $login = Env::baseUrl() . url('/account/login/');
+        $msg = 'API documentation is private. Sign in, then open API & Docs in your dashboard.';
+        if (str_ends_with($path, '.txt')) return Response::text($msg . "\nSign in: $login\n", 'text/plain', 401)->withHeaders($h);
+        return Response::json(['error' => 'sign_in_required', 'message' => $msg, 'login_url' => $login], 401)->withHeaders($h);
+    }
 
     /** Single source of truth for the public API surface. */
     public static function endpoints(): array
@@ -38,6 +59,7 @@ final class Docs
             '/api/sliders/{name}.json' => $G('getSlider', 'One slider (slides, CTAs)', [['name' => 'name', 'in' => 'path', 'required' => true, 'schema' => $s]]),
             '/api/pages/{slug}.json' => $G('getPage', 'A page as structured sections', [$slug('Page slug')]),
             '/api/governorates.json' => $G('listGovernorates', 'The 24 governorates'),
+            '/api/certificates/{code}.json' => ['get' => ['operationId' => 'getCertificate', 'summary' => 'Public record of one certificate by code (name masked, rate-limited, never cached)', 'parameters' => [['name' => 'code', 'in' => 'path', 'required' => true, 'schema' => ['type' => 'string', 'pattern' => '^W5D-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$']]], 'responses' => ['200' => ['description' => 'OK'], '404' => ['description' => 'Unknown code'], '429' => ['description' => 'Rate limited']]]],
             '/api/subscriptions' => $form('createSubscription', 'Create a pledge or daily subscription (demo: no money moves)', ['full_name' => $s, 'email' => ['type' => 'string', 'format' => 'email'], 'parts_per_day' => $i, 'days' => $i, 'start_on' => ['type' => 'string', 'format' => 'date'], 'cadence' => ['type' => 'string', 'enum' => ['daily', 'weekly']], 'macro' => $s, 'mode' => ['type' => 'string', 'enum' => ['subscription', 'checkout']], 'accept' => ['type' => 'boolean']], ['full_name', 'email', 'parts_per_day', 'days', 'accept']),
             '/api/managers/apply' => $form('applyManager', 'Apply as a team manager', ['name' => $s, 'email' => $s, 'region' => $s, 'macro' => $s, 'years' => $i, 'team' => $i, 'profile' => $s, 'motivation' => $s, 'scenario' => $s, 'accept' => ['type' => 'boolean']], ['name', 'email', 'region', 'macro', 'years', 'team', 'motivation', 'scenario', 'accept']),
             '/api/contact' => $form('sendContact', 'Write to a desk', ['name' => $s, 'email' => $s, 'desk' => ['type' => 'string', 'enum' => Forms::DESKS], 'subject' => $s, 'message' => $s], ['name', 'email', 'message']),
@@ -47,6 +69,7 @@ final class Docs
 
     public static function openapi(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         return Response::json(['openapi' => '3.0.3',
             'info' => ['title' => 'W5D public API', 'version' => '1.0.0', 'description' => "Read endpoints are public and cached for 60 seconds. Write endpoints are rate-limited and honeypot-guarded; in demo mode no payment is taken. Honesty constraint: a part is an investment in a path, not a job; no return is promised. The 130,000 experts figure is a design equation; certified today: " . Variables::get('d.experts_current') . '.'],
             'servers' => [['url' => self::base() ?: '/']],
@@ -66,6 +89,7 @@ final class Docs
             $T('list_macros', 'List the five macro works.', 'GET', '/api/macros.json'),
             $T('list_services', 'List services, optionally filtered by macro slug.', 'GET', '/api/services.json', ['macro' => $s]),
             $T('get_service', 'Fetch one service in full (deliverables, evidence, boundary).', 'GET', '/api/services/{slug}.json', ['slug' => $s], ['slug']),
+            $T('verify_certificate', 'Check a W5D certificate by its code. The holder name is masked; say only what the record says.', 'GET', '/api/certificates/{code}.json', ['code' => $s], ['code']),
             $T('list_projects', 'List projects with dated status (live, building, concept).', 'GET', '/api/projects.json'),
             $T('check_eligibility', 'Indicative service matches for a diploma and field. A human reviewer confirms.', 'POST', '/api/eligibility', ['diploma' => $s, 'field' => $s, 'macro' => $s], ['diploma', 'field']),
             $T('send_contact', 'Send a message to a desk on behalf of a human who asked you to.', 'POST', '/api/contact', ['name' => $s, 'email' => $s, 'desk' => $s, 'message' => $s], ['name', 'email', 'message']),
@@ -87,6 +111,7 @@ final class Docs
 
     public static function agentManifest(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         $b = self::base();
         return Response::json(['schema_version' => '1', 'name' => 'W5D', 'description' => 'World Five Dimensions: five macro works, ' . Variables::get('counts.services') . ' services. Investors take a daily part; experts and managers join a certified path.',
             'languages' => ['en', 'fr', 'ar'], 'contact' => Variables::get('investor.contact'),
@@ -97,11 +122,13 @@ final class Docs
 
     public static function agentToolsJson(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         return Response::json(['tools' => self::agentTools(), 'base_url' => self::base()]);
     }
 
     public static function llms(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         $b = self::base();
         $o = "# W5D — World Five Dimensions\n\n> Five macro works, " . Variables::get('counts.services') . " services, one weekly work engine. Investors take at least a part of W5D every day; experts and team managers join a certified path. A part is an investment in a path, not a job. No return is promised.\n\n";
         $o .= "## Rules for AI agents\n" . implode("\n", array_map(fn($r) => '- ' . $r, self::rules())) . "\n\n";
@@ -112,6 +139,7 @@ final class Docs
 
     public static function llmsFull(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         $b = self::base();
         $o = "# W5D — full reference (English)\n\nFigures as of " . Variables::get('dates.as_of') . ".\n\n## Honest numbers\n- Design equation: " . Variables::get('counts.macros') . ' macros × ' . Variables::get('experts.services_per_macro') . ' services × ' . Variables::get('experts.per_service') . ' = ' . Variables::get('d.experts_target') . " experts (not a headcount).\n- Certified today: " . Variables::get('d.experts_current') . ".\n- Sampling: a fixed " . Variables::get('quality.sampling_percent') . "% random audit.\n- Price today: " . Variables::get('price.day') . ' ' . Variables::get('money.currency') . " per part per day.\n\n## Macro works\n";
         foreach (Content::all('macros') as $m) $o .= "\n### " . t($m['name'], 'en') . "\n" . t($m['tagline'], 'en') . "\n$b/macro-works/{$m['slug']}/\n";
@@ -127,9 +155,9 @@ final class Docs
         $b = Env::baseUrl();
         $asOf = (string)Variables::get('dates.as_of');
         $static = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/checkout/' => .9, '/subscription/' => .7, '/for/' => .8, '/careers/' => .6, '/careers/managers/' => .6, '/join/' => .7, '/join/eligibility/' => .6,
-            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
+            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/team/' => .6, '/certification/' => .6, '/affiliate/' => .5, '/certification/verify/' => .4, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
             '/status/' => .5, '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4,
-            '/macro-works/' => .8, '/services/' => .7, '/projects/' => .7, '/developers/' => .5, '/agents/' => .5, '/sitemap/' => .3];
+            '/macro-works/' => .8, '/services/' => .7, '/projects/' => .7, '/sitemap/' => .3];
         foreach (Pages::AUDIENCES as $a) $static['/for/' . $a . '/'] = .7;
         $urls = [];
         foreach ($static as $u => $pr) $urls[$u] = $pr;
@@ -175,8 +203,8 @@ final class Docs
     public static function robots(Request $q): Response
     {
         $admin = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
-        $dis = [$admin . '/', '/account/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote'];
-        $o = "User-agent: *\nAllow: /\n" . implode('', array_map(fn($d) => "Disallow: $d\n", $dis)) . "\nSitemap: " . Env::baseUrl() . "/sitemap.xml\n# AI agents: see /llms.txt and /api/agents.json\n";
+        $dis = [$admin . '/', '/account/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote', '/developers/', '/agents/', '/api/openapi.json', '/openapi.json', '/api/agents.json', '/api/docs/', '/llms.txt', '/llms-full.txt', '/.well-known/agents.json'];
+        $o = "User-agent: *\nAllow: /\n" . implode('', array_map(fn($d) => "Disallow: $d\n", $dis)) . "\nSitemap: " . Env::baseUrl() . "/sitemap.xml\n# API documentation is private: sign in and open API & Docs in your dashboard.\n";
         return Response::text($o, 'text/plain');
     }
 
@@ -185,13 +213,14 @@ final class Docs
 
     public static function developers(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         $L = [Pages::class, 'L'];
         $b = self::base();
         $rows = [];
         foreach (self::endpoints() as $path => $ops) {
             foreach ($ops as $m => $op) $rows[] = [['en' => strtoupper($m)], ['en' => '`' . $path . '`'], ['en' => $op['summary']], ['en' => '`' . $op['operationId'] . '`']];
         }
-        return Pages::render($q, ['title' => $L('Developer API', 'API développeurs', 'واجهة المطورين'), 'description' => $L('Public JSON API and OpenAPI description for W5D.', 'API JSON publique et description OpenAPI de W5D.', 'واجهة JSON عامة ووصف OpenAPI لـ W5D.'), 'sections' => [
+        return Pages::render($q, ['robots' => 'noindex,nofollow', 'title' => $L('Developer API', 'API développeurs', 'واجهة المطورين'), 'description' => $L('Public JSON API and OpenAPI description for W5D.', 'API JSON publique et description OpenAPI de W5D.', 'واجهة JSON عامة ووصف OpenAPI لـ W5D.'), 'sections' => [
             ['type' => 'hero', 'id' => 'dev-hero', 'variant' => 'classic', 'gradient' => 'technology', 'icon' => 'code', 'eyebrow' => $L('For developers', 'Pour les développeurs', 'للمطورين'),
                 'title' => $L('One public API. **Same data as the site.**', 'Une API publique. **Les mêmes données que le site.**', 'واجهة عامة واحدة. **بيانات الموقع نفسها.**'),
                 'lead' => $L('Read endpoints are public, cached for 60 seconds and available in English, French and Arabic. Write endpoints are rate-limited and guarded.', 'Les points de lecture sont publics, mis en cache 60 secondes et disponibles en anglais, français et arabe. Les points d’écriture sont limités et protégés.', 'نقاط القراءة عامة ومخزنة 60 ثانية ومتاحة بالإنجليزية والفرنسية والعربية. نقاط الكتابة محدودة ومحمية.'),
@@ -214,10 +243,11 @@ final class Docs
 
     public static function agents(Request $q): Response
     {
+        if ($g = self::gate($q)) return $g;
         $L = [Pages::class, 'L'];
         $b = self::base();
         $tools = array_map(fn($t) => [['en' => '`' . $t['name'] . '`'], ['en' => $t['method'] . ' `' . $t['path'] . '`'], ['en' => $t['description']]], self::agentTools());
-        return Pages::render($q, ['title' => $L('AI agents', 'Agents IA', 'وكلاء الذكاء الاصطناعي'), 'description' => $L('Manifest, tools and rules for AI agents that read or act on W5D.', 'Manifeste, outils et règles pour les agents IA qui lisent ou agissent sur W5D.', 'بيان وأدوات وقواعد لوكلاء الذكاء الاصطناعي الذين يقرؤون W5D أو يتصرفون عليه.'), 'sections' => [
+        return Pages::render($q, ['robots' => 'noindex,nofollow', 'title' => $L('AI agents', 'Agents IA', 'وكلاء الذكاء الاصطناعي'), 'description' => $L('Manifest, tools and rules for AI agents that read or act on W5D.', 'Manifeste, outils et règles pour les agents IA qui lisent ou agissent sur W5D.', 'بيان وأدوات وقواعد لوكلاء الذكاء الاصطناعي الذين يقرؤون W5D أو يتصرفون عليه.'), 'sections' => [
             ['type' => 'hero', 'id' => 'ag-hero', 'variant' => 'classic', 'gradient' => 'governance', 'icon' => 'bot', 'eyebrow' => $L('For AI agents', 'Pour les agents IA', 'للوكلاء الأذكياء'),
                 'title' => $L('Machine-readable. **Honest by rule.**', 'Lisible par machine. **Honnête par règle.**', 'مقروء آليا. **صادق بالقاعدة.**'),
                 'lead' => $L('A manifest, a tool list and seven rules. Agents may quote the price, compute a schedule and relay a human\'s request, but may never promise a return or a job.', 'Un manifeste, une liste d’outils et sept règles. Les agents peuvent citer le prix, calculer un calendrier et relayer une demande humaine, mais jamais promettre un rendement ou un emploi.', 'بيان وقائمة أدوات وسبع قواعد. يمكن للوكلاء ذكر السعر وحساب جدول ونقل طلب إنسان، لكن لا يعدون بعائد أو وظيفة.'),

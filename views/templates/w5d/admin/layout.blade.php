@@ -20,7 +20,7 @@
     {{-- mobile top bar: brand + menu toggle (the 26-item menu lives in a drawer, never stacked above the page) --}}
     <header class="admin-topbar lg:hidden">
       <a href="{{ admin_url() }}" class="flex items-center gap-2 min-w-0">
-        <span class="inline-flex w-8 h-8 shrink-0 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center font-display font-bold text-white text-xs">W5</span>
+        <img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-7 w-auto shrink-0" decoding="async">
         <span class="truncate font-display font-bold text-slate-900 dark:text-white">{{ t($menus[array_search($active ?? '', array_column($menus, 'slug'))]['label'] ?? ['en' => __('admin.title'), 'fr' => __('admin.title'), 'ar' => __('admin.title')]) }}</span>
       </a>
       <button type="button" data-admin-nav-toggle class="btn-ghost rounded-lg w-10 h-10 inline-flex items-center justify-center shrink-0" aria-label="{{ __('nav.menu') }}" aria-controls="adminNav" aria-expanded="false">{{ icon('menu', 'w-5 h-5') }}</button>
@@ -29,7 +29,7 @@
     <aside id="adminNav" class="admin-nav" aria-label="Admin" aria-hidden="true">
       <div class="px-5 py-4 flex items-center justify-between gap-3">
         <a href="{{ admin_url() }}" class="flex items-center gap-2 min-w-0">
-          <span class="inline-flex w-9 h-9 shrink-0 rounded-xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 items-center justify-center font-display font-bold text-white text-sm">W5</span>
+          <img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-7 w-auto shrink-0" decoding="async">
           <span class="min-w-0"><span class="block font-display font-bold leading-tight text-slate-900 dark:text-white truncate">{{ __('admin.title') }}</span><span class="block text-xs text-slate-500 truncate">{{ $user['name'] ?? '' }} · {{ $user['role'] ?? '' }}</span></span>
         </a>
         <button type="button" data-admin-nav-close class="lg:hidden btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center shrink-0" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>

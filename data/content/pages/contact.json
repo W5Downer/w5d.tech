@@ -242,6 +242,55 @@
      "rows": 6
     }
    ]
+  },
+  {
+   "type": "faq",
+   "id": "con-faq",
+   "tier": "e",
+   "focus": 2,
+   "title": {
+    "en": "Before you write",
+    "fr": "Avant d’écrire",
+    "ar": "قبل أن تكتب"
+   },
+   "items": [
+    {
+     "q": {
+      "en": "How fast do you answer?",
+      "fr": "En combien de temps répondez-vous ?",
+      "ar": "ما سرعة ردكم؟"
+     },
+     "a": {
+      "en": "A person reads every message. Corrections are answered within 14 days; other desks reply as soon as they can, without a promised delay.",
+      "fr": "Une personne lit chaque message. Les corrections reçoivent une réponse sous 14 jours ; les autres bureaux répondent dès que possible, sans délai promis.",
+      "ar": "يقرأ شخص كل رسالة. تُجاب التصحيحات خلال 14 يوما؛ وتردّ المكاتب الأخرى بأسرع ما يمكن دون موعد موعود."
+     }
+    },
+    {
+     "q": {
+      "en": "Which desk should I pick?",
+      "fr": "Quel bureau choisir ?",
+      "ar": "أي مكتب أختار؟"
+     },
+     "a": {
+      "en": "Pick the one closest to your question. If unsure, choose Partners; it is re-routed by hand.",
+      "fr": "Choisissez le plus proche de votre question. En cas de doute, prenez Partenaires ; le message est réorienté à la main.",
+      "ar": "اختر الأقرب إلى سؤالك. إن ترددت فاختر الشركاء؛ يُعاد توجيه الرسالة يدويا."
+     }
+    },
+    {
+     "q": {
+      "en": "Is my message private?",
+      "fr": "Mon message est-il privé ?",
+      "ar": "هل رسالتي خاصة؟"
+     },
+     "a": {
+      "en": "It is read by the team and kept only as long as needed to answer. See the privacy page.",
+      "fr": "Elle est lue par l’équipe et conservée le temps nécessaire pour répondre. Voir la page confidentialité.",
+      "ar": "يقرؤها الفريق وتُحفظ بقدر ما يلزم للرد. انظر صفحة الخصوصية."
+     }
+    }
+   ]
   }
  ]
 }

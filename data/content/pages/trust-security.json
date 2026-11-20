@@ -128,6 +128,29 @@
      }
     }
    ]
+  },
+  {
+   "type": "prose",
+   "id": "sc-report",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Reporting a vulnerability",
+    "fr": "Signaler une vulnérabilité",
+    "ar": "الإبلاغ عن ثغرة"
+   },
+   "paragraphs": [
+    {
+     "en": "Write to the security contact published in security.txt. Tell us what you found, how to reproduce it and what it could expose. Do not access other people’s data, and do not run denial-of-service tests.",
+     "fr": "Écrivez au contact sécurité publié dans security.txt. Dites-nous ce que vous avez trouvé, comment le reproduire et ce que cela pourrait exposer. N’accédez pas aux données d’autrui et ne lancez pas de tests de déni de service.",
+     "ar": "راسل جهة الأمان المنشورة في security.txt. أخبرنا بما وجدت وكيف تعيد إنتاجه وما قد يكشفه. لا تصل إلى بيانات الآخرين ولا تجرِ اختبارات حجب الخدمة."
+    },
+    {
+     "en": "We acknowledge a report, fix what is real and credit the reporter if they wish. We do not threaten good-faith researchers.",
+     "fr": "Nous accusons réception, corrigeons ce qui est réel et citons la personne si elle le souhaite. Nous ne menaçons pas les chercheurs de bonne foi.",
+     "ar": "نؤكد استلام البلاغ ونصلح ما هو حقيقي وننسب الفضل للمبلّغ إن رغب. ولا نهدد الباحثين حسني النية."
+    }
+   ]
   }
  ]
 }

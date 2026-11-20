@@ -79,9 +79,9 @@
      "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. وهذا سقف تخطيطي، وليس ادعاءً بالتوظيف."
     },
     {
-     "en": "Today: {{ experts.developers_today }} developers deliver in Tunisia; {{ d.experts_current }} experts are certified (as of {{ dates.as_of }}).",
-     "fr": "Aujourd’hui : {{ experts.developers_today }} développeurs fournissent des prestations en Tunisie ; {{ d.experts_current }} experts sont certifiés (au {{ dates.as_of }}).",
-     "ar": "اليوم: يعمل {{ experts.developers_today }} من المطورين في تونس؛ وقد حصل {{ d.experts_current }} من الخبراء على اعتماد (حتى {{ dates.as_of }})."
+     "en": "Today in Tunisia, delivery team: {{ experts.developers_today|devs }}; {{ d.experts_current|certs }} (as of {{ dates.as_of }}).",
+     "fr": "Aujourd’hui, en Tunisie, équipe de livraison : {{ experts.developers_today|devs }} ; {{ d.experts_current|certs }} (au {{ dates.as_of }}).",
+     "ar": "اليوم: يعمل في تونس {{ experts.developers_today|devs }}؛ و{{ d.experts_current|certs }} (حتى {{ dates.as_of }})."
     }
    ]
   },

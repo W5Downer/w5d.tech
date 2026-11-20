@@ -165,6 +165,29 @@
      "span": 1
     }
    ]
+  },
+  {
+   "type": "prose",
+   "id": "elig-what",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "What this check is, and is not",
+    "fr": "Ce qu’est ce contrôle, et ce qu’il n’est pas",
+    "ar": "ما هذا الفحص وما ليس هو"
+   },
+   "paragraphs": [
+    {
+     "en": "A thirty-second, indicative match between your diploma and field and the {{ counts.services }} services. It lists where your profile could fit; it does not admit or refuse anyone.",
+     "fr": "Une correspondance indicative en trente secondes entre votre diplôme et votre domaine et les {{ counts.services }} services. Elle liste où votre profil pourrait s’inscrire ; elle n’admet ni ne refuse personne.",
+     "ar": "مطابقة استرشادية في ثلاثين ثانية بين شهادتك ومجالك والخدمات الـ{{ counts.services }}. تُعدّد أين قد يناسب ملفك؛ ولا تقبل أحدا ولا ترفضه."
+    },
+    {
+     "en": "Nothing you type here is stored against your name unless you then open an applicant file. A person confirms every match during verification.",
+     "fr": "Rien de ce que vous saisissez ici n’est enregistré à votre nom, sauf si vous ouvrez ensuite un dossier de candidat. Une personne confirme chaque correspondance lors de la vérification.",
+     "ar": "لا يُحفظ شيء مما تكتبه هنا باسمك ما لم تفتح لاحقا ملف مترشح. يؤكد شخص كل مطابقة أثناء التحقق."
+    }
+   ]
   }
  ]
 }

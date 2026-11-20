@@ -38,7 +38,8 @@ return [
         'managers_per_service' => 100,
         'team_size'        => 10,
         'current'          => 0,   // overridden by rollups_daily at render
-        'developers_today' => 26,  // real delivery footprint today (Tunisia)
+        'developers_today' => 1,   // real delivery footprint today (Tunisia): the owner, who also manages the team
+        'managers_today'   => 0,   // managers other than the owner (real, dated figure)
         'departments'      => 16,
     ],
     'quality' => [
@@ -86,6 +87,32 @@ return [
     'flags' => [
         'gate_forms'       => 1,   // 1 = checkout, subscription, applicant registration and manager application need a signed-in account
         'gate_eligibility' => 0,   // 1 = the 30-second eligibility check also needs a signed-in account (default: public)
+    ],
+    // Affiliate programme (owner-editable in the portal: Variables). Commissions are declared rates, not a promise of income.
+    'affiliate' => [
+        'enabled'        => 1,     // 0 hides the programme and stops tracking
+        'commission_pct' => 5.0,   // % of a referred investor's VERIFIED payment
+        'signup_bonus'   => 2.0,   // TND when a referred account confirms its e-mail
+        'cert_bonus'     => 5.0,   // TND when a referred account earns its first certificate
+        'cookie_days'    => 30,    // how long a ?ref= link is remembered
+        'hold_days'      => 14,    // days a commission stays pending before it becomes payable
+        'min_payout'     => 50.0,  // TND: smallest payout that can be requested
+        'auto_approve'   => 0,     // 1 = new affiliates are active at once; 0 = a person approves them
+    ],
+    // Certificates: issued only by a passed certification/upgrade QCM round (or by hand by the owner), verifiable by anyone with the code.
+    'cert' => [
+        'validity_months' => 24,
+        'levels'          => 4,
+        'verify_per_10min' => 30,   // public lookups allowed per IP per 10 minutes
+    ],
+    // QCM engine defaults (each round's own rules live in the portal: QCM rules).
+    'qcm' => [
+        'enabled'            => 1,
+        'default_questions'  => 10,
+        'default_minutes'    => 10,
+        'grace_seconds'      => 15,    // server tolerance after the timer ends
+        'bank_target'        => 1000,  // target questions per service (all levels together) for the full bank
+        'show_answers_practice' => 1,  // 1 = practice rounds reveal the correct answers and explanations
     ],
     'investor' => [
         'min_parts_per_day' => 1,

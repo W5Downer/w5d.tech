@@ -171,6 +171,29 @@
      }
     }
    ]
+  },
+  {
+   "type": "prose",
+   "id": "tr-why",
+   "tier": "e",
+   "focus": 3,
+   "title": {
+    "en": "Why this section exists",
+    "fr": "Pourquoi cette section existe",
+    "ar": "لماذا يوجد هذا القسم"
+   },
+   "paragraphs": [
+    {
+     "en": "Most of what is published here is a plan, and a plan is easy to over-sell. Each page in this section says what we claim, what we do not, and how you can check.",
+     "fr": "L’essentiel de ce qui est publié ici est un plan, et un plan se survend facilement. Chaque page de cette section dit ce que nous affirmons, ce que nous n’affirmons pas, et comment vous pouvez vérifier.",
+     "ar": "معظم ما يُنشر هنا خطة، والخطة يسهل المبالغة في بيعها. تقول كل صفحة في هذا القسم ما ندّعيه وما لا ندّعيه وكيف تتحقق."
+    },
+    {
+     "en": "Numbers on the site come from one settings file and from daily roll-ups. A zero is shown as a zero.",
+     "fr": "Les chiffres du site proviennent d’un seul fichier de réglages et de cumuls quotidiens. Un zéro est affiché comme un zéro.",
+     "ar": "تأتي أرقام الموقع من ملف إعدادات واحد ومن حصائل يومية. ويظهر الصفر صفرا."
+    }
+   ]
   }
  ]
 }
