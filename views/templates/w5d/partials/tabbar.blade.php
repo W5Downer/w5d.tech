@@ -4,7 +4,7 @@
   $tbAcct = \W5D\Account::check() ? url('/account/') : (\W5D\Auth::check() ? admin_url() : url('/account/login/'));
   $tbItems = [
     ['home', 'house', url('/'), __('ux.tab_home'), $tbHere === '/'],
-    ['invest', 'coins', url('/checkout/'), __('ux.tab_invest'), str_starts_with($tbHere, '/checkout')],
+    ['invest', 'coins', url('/checkout/'), __('ux.tab_invest'), (bool) preg_match('#^/(checkout|pricing|invest)#', $tbHere)],
   ];
 @endphp
 <nav class="w5-tabbar lg:hidden" aria-label="{{ __('ux.tab_label') }}" data-tabbar>

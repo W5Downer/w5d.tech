@@ -89,4 +89,15 @@ for path, label in (('/pricing/', 'pricing'), ('/services/', 'services'), ('/mac
     check(f'{label}: a menu entry is marked active and exposes aria-current', on >= 1 and cur >= 1, (on, cur))
 b = call(g, 'GET', '/')[2]
 check('home: the logo link is current, no mega-menu trigger is falsely marked', not re.search(r'<li data-mega-trigger[^>]*data-active', b))
+
+section('phone tab bar: the current tab is marked')
+for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/checkout/'), ('/account/login/', '/account/login/'), ('/services/', None)):
+    b = call(g, 'GET', path)[2]
+    nav = re.search(r'<nav class="w5-tabbar.*?</nav>', b, re.S)
+    nav = nav.group(0) if nav else ''
+    cur = re.findall(r'<a href="([^"]*)"[^>]*aria-current="page"', nav)
+    if href is None:
+        check(f'tab bar on {path}: no tab is falsely current', len(cur) == 0, cur)
+    else:
+        check(f'tab bar on {path}: exactly one current tab, pointing at {href}', cur == [href], cur)
 finish('contract')
