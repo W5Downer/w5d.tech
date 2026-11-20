@@ -2,6 +2,29 @@
   $nav = \W5D\Content::get('nav', 'main') ?? ['items' => []];
   $macros = \W5D\Content::all('macros');
   $here = $canonicalPath ?? '/';
+  $hereN = rtrim($here, '/') ?: '/';
+  // Longest-match wins: exact link hit => aria-current="page"; a section/prefix hit marks the parent item.
+  $navBest = -1; $navBestLen = 0; $navExact = null;
+  foreach ($nav['items'] as $ni => $nitem) {
+    $cands = [];
+    if (!empty($nitem['active_prefix'])) $cands[] = [rtrim($nitem['active_prefix'], '/'), false];
+    foreach ($nitem['groups'] ?? [] as $ng) {
+      foreach ($ng['items'] ?? [] as $nl) { $cands[] = [rtrim($nl['href'], '/') ?: '/', true]; }
+      if (($ng['each'] ?? '') === 'macros') $cands[] = ['/macro-works', false];
+    }
+    foreach ($cands as [$cp, $isLink]) {
+      if ($cp === '' || $cp === '/') continue;
+      $hit = $hereN === $cp || str_starts_with($hereN . '/', $cp . '/');
+      if ($hit && (strlen($cp) > $navBestLen || ($hereN === $cp && $navExact === null && strlen($cp) >= $navBestLen))) {
+        $navBest = $ni; $navBestLen = strlen($cp); if ($hereN === $cp) $navExact = $ni;
+      }
+    }
+  }
+  if ($navExact !== null) $navBest = $navExact;
+  $navLinkOn = function (string $href) use ($hereN, $navBest, $navBestLen): string {
+    $h = rtrim($href, '/') ?: '/';
+    return $hereN === $h ? 'page' : ($h !== '/' && str_starts_with($hereN . '/', $h . '/') ? 'true' : '');
+  };
 @endphp
 <header class="fixed top-0 inset-x-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3">
@@ -12,9 +35,9 @@
       </a>
 
       <ul data-mega-host class="hidden lg:flex items-center gap-7 text-sm font-medium">
-        @foreach($nav['items'] as $item)
-          <li data-mega-trigger @if(!empty($item['active_prefix']) && str_starts_with($here, $item['active_prefix'])) data-active @endif>
-            <button type="button" class="inline-flex items-center gap-1 py-2 hover:text-brand-500 transition" aria-expanded="false" aria-haspopup="true">
+        @foreach($nav['items'] as $ni => $item)
+          <li data-mega-trigger @if($ni === $navBest) data-active @endif>
+            <button type="button" class="inline-flex items-center gap-1 py-2 hover:text-brand-500 transition" aria-expanded="false" aria-haspopup="true" @if($ni === $navBest) aria-current="{{ $navExact === $ni ? 'page' : 'true' }}" @endif>
               {{ t($item['label']) }} {{ icon('chevron-down', 'w-4 h-4 opacity-60') }}
             </button>
             <div data-mega-panel class="menu-panel mega-panel absolute inset-x-0 top-full pt-2 z-50" aria-hidden="true">
@@ -33,7 +56,8 @@
                       @endphp
                       @foreach($links as $l)
                         <li>
-                          <a href="{{ link_to($l['href']) }}" @if(rtrim($here, '/') === rtrim($l['href'], '/')) data-active-link @endif class="flex items-start gap-3 rounded-xl px-3 py-2 hover:bg-brand-500/10 transition">
+                          @php $lon = $navLinkOn($l['href']); @endphp
+                          <a href="{{ link_to($l['href']) }}" @if($lon !== '') data-active-link aria-current="{{ $lon }}" @endif class="flex items-start gap-3 rounded-xl px-3 py-2 hover:bg-brand-500/10 transition">
                             <span class="mt-0.5 text-brand-500">{{ icon($l['icon'], 'w-5 h-5') }}</span>
                             <span><span class="block font-semibold text-slate-900 dark:text-white">{{ t($l['label']) }}</span>
                             <span class="block text-xs text-slate-500">{{ t($l['desc']) }}</span></span>
@@ -87,15 +111,16 @@
 
     <div id="mobileMenu" class="menu-panel lg:hidden nav-solid rounded-2xl mt-2 p-4 max-h-[75vh] overflow-y-auto" aria-hidden="true">
       @if(!$signedIn)<div class="grid grid-cols-2 gap-2 mb-2"><a class="btn-ghost justify-center" href="{{ url('/account/login/') }}" data-auth-open="login">{{ __('ux.sign_in') }}</a><a class="btn-ghost justify-center" href="{{ url('/account/register/') }}" data-auth-open="register">{{ __('ux.sign_up') }}</a></div>@endif
-      @foreach($nav['items'] as $item)
-        <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mt-3 mb-1 font-semibold">{{ t($item['label']) }}</p>
+      @foreach($nav['items'] as $ni => $item)
+        <p class="text-[0.68rem] uppercase tracking-[0.18em] mt-3 mb-1 font-semibold {{ $ni === $navBest ? 'text-brand-500' : 'text-slate-500' }}">{{ t($item['label']) }}</p>
         @foreach($item['groups'] as $g)
           @php
             $links = $g['items'] ?? [];
             if (($g['each'] ?? '') === 'macros') { $links = []; foreach ($macros as $m) $links[] = ['icon' => $m['icon'], 'label' => $m['name'], 'href' => '/macro-works/' . $m['slug'] . '/']; }
           @endphp
           @foreach($links as $l)
-            <a href="{{ link_to($l['href']) }}" class="flex items-center gap-2 py-1.5 text-sm">{{ icon($l['icon'], 'w-4 h-4 text-brand-500') }} {{ t($l['label']) }}</a>
+            @php $lon = $navLinkOn($l['href']); @endphp
+            <a href="{{ link_to($l['href']) }}" @if($lon !== '') data-active-link aria-current="{{ $lon }}" @endif class="flex items-center gap-2 py-1.5 text-sm">{{ icon($l['icon'], 'w-4 h-4 text-brand-500') }} {{ t($l['label']) }}</a>
           @endforeach
         @endforeach
       @endforeach

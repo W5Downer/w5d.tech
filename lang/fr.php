@@ -1,7 +1,7 @@
 <?php
 /** Interface uniquement (français). Le contenu vit dans data/content/*.json sous la forme {en,fr,ar}. */
 return [
-    'brand' => ['tagline' => 'World Five Dimensions'],
+    'brand' => ['desc_suffix' => 'W5D : des lots de travail hebdomadaires certifiés, un parcours et non un emploi.', 'tagline' => 'World Five Dimensions'],
     'nav' => [
         'home' => 'Accueil', 'audiences' => 'Profils', 'account' => 'Compte', 'user' => 'Votre compte', 'share' => 'Partager',
         'macro' => 'Cinq macro-œuvres', 'services' => '130 services', 'services_unit' => 'services', 'projects' => 'Projets', 'invest' => 'Investir', 'join' => 'Rejoindre',

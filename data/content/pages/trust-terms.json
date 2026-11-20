@@ -1,9 +1,9 @@
 {
  "slug": "trust-terms",
  "title": {
-  "en": "Terms",
-  "fr": "Conditions",
-  "ar": "الشروط"
+  "en": "Terms of use",
+  "fr": "Conditions d’utilisation",
+  "ar": "شروط الاستخدام"
  },
  "description": {
   "en": "Demo-mode terms for pledges and subscriptions.",

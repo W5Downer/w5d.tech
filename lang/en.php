@@ -1,7 +1,7 @@
 <?php
 /** UI chrome only (English). Content lives in data/content/*.json as {en,fr,ar}. Tokens: {{ path.to.var }}. */
 return [
-    'brand' => ['tagline' => 'World Five Dimensions'],
+    'brand' => ['desc_suffix' => 'W5D: certified weekly work packages, a path and not a job.', 'tagline' => 'World Five Dimensions'],
     'nav' => [
         'home' => 'Home', 'audiences' => 'Audiences', 'account' => 'Account', 'user' => 'Your account', 'share' => 'Share',
         'macro' => 'Five macro works', 'services' => '130 services', 'services_unit' => 'services', 'projects' => 'Projects', 'invest' => 'Invest', 'join' => 'Join',

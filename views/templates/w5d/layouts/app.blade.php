@@ -7,6 +7,10 @@
   $seoTitle = html_entity_decode(strip_tags($__env->yieldContent('title', 'W5D')), ENT_QUOTES);
   $seoDesc = html_entity_decode(strip_tags($__env->yieldContent('description', '')), ENT_QUOTES);
   if ($seoDesc === '') $seoDesc = __('brand.tagline');
+  $seoDesc = trim(preg_replace('/\s+/u', ' ', $seoDesc));
+  // Keep snippets in the 50-160 character window search engines display.
+  if (mb_strlen($seoDesc) < (lang() === 'ar' ? 40 : 55)) $seoDesc = rtrim($seoDesc, ' .') . '. ' . __('brand.desc_suffix');
+  if (mb_strlen($seoDesc) > 165) { $cut = mb_substr($seoDesc, 0, 160); $sp = mb_strrpos($cut, ' '); $seoDesc = rtrim(mb_substr($cut, 0, $sp > 100 ? $sp : 160), ' ,;:.—-') . '…'; }
   $seoRobots = $__env->yieldContent('robots', 'index,follow');
   $seoPath = $canonicalPath ?? '/';
   $seoUrl = \W5D\Env::baseUrl() . url($seoPath);

@@ -1,7 +1,7 @@
 <div class="w5d-aside-backdrop" aria-hidden="true"></div>
 <aside id="aside-lang" class="w5d-aside" aria-hidden="true" aria-label="{{ __('nav.language') }}">
   <header>
-    <h3>{{ __('nav.language') }}</h3>
+    <h2>{{ __('nav.language') }}</h2>
     <button type="button" data-aside-close class="btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
   </header>
   <div class="aside-body">
@@ -36,7 +36,7 @@
 @if(\W5D\Social::enabled())
 <aside id="aside-share" class="w5d-aside" aria-hidden="true" aria-label="{{ __('share.title') }}" role="dialog">
   <header>
-    <h3>{{ __('share.title') }}</h3>
+    <h2>{{ __('share.title') }}</h2>
     <button type="button" data-aside-close class="btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
   </header>
   <div class="aside-body">
@@ -59,7 +59,7 @@
 
 <aside id="aside-user" class="w5d-aside" aria-hidden="true" aria-label="{{ __('acct.user_aside') }}" role="dialog">
   <header>
-    <h3>{{ __('acct.user_aside') }}</h3>
+    <h2>{{ __('acct.user_aside') }}</h2>
     <button type="button" data-aside-close class="btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
   </header>
   <div class="aside-body">
@@ -103,7 +103,7 @@
   @else
     <div class="text-center">
       <span class="inline-flex w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 text-white items-center justify-center">{{ icon('user-round', 'w-7 h-7') }}</span>
-      <h4 class="font-display font-bold text-lg mt-3 text-slate-900 dark:text-white">{{ __('acct.guest_title') }}</h4>
+      <p class="font-display font-bold text-lg mt-3 text-slate-900 dark:text-white">{{ __('acct.guest_title') }}</p>
       <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">{{ __('acct.guest_lead') }}</p>
     </div>
     <div class="mt-4 grid gap-2">
