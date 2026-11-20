@@ -188,7 +188,6 @@ try:
     check('verifying the fee credits 5.00 on a 100.00 base, keyed by the pass ref', len(pay) == 1 and abs(pay[0]['commission'] - 5.0) < 0.001 and abs(pay[0]['base_amount'] - 100.0) < 0.001 and pay[0]['ref_key'] == ref, pay)
     post(o, M + '/qcm-review/pass', {'id': pid, 'decision': 'verify'}, token_from=M + '/qcm-review/')
     check('verifying again cannot pay twice', len([x for x in lines(A1['id']) if x['kind'] == 'payment']) == 1)
-    run("INSERT INTO affiliate_referrals (affiliate_id,kind,user_id,ref_key,commission) VALUES (?,?,?,?,1)", (A1['id'], 'payment', nuu, 'DUP-' + uniq())) if False else None
     try:
         run("INSERT INTO affiliate_referrals (affiliate_id,kind,user_id,ref_key,commission) VALUES (?,?,?,?,1)", (A1['id'], 'payment', nuu, ref)); dup = True
     except Exception:
@@ -216,7 +215,7 @@ try:
     override('affiliate.min_payout', 5)
     s, h, b = post(a1, '/account/affiliate/payout', {}, token_from=AFF)
     check('approved but still inside the 14-day hold -> refused (below minimum)', q1('SELECT COUNT(*) FROM affiliate_payouts WHERE affiliate_id=?', (A1['id'],)) == 0)
-    check('the refusal is explained to the affiliate', flash(a1, 'minimum payout') or True)
+    check('the refusal is explained to the affiliate (flash message)', flash(a1, 'below the minimum payout'))
     run("UPDATE affiliate_referrals SET approved_at = datetime('now','-20 days') WHERE id IN (?,?)", (sg['id'], py['id']))
     fresh = run("INSERT INTO affiliate_referrals (affiliate_id,kind,user_id,ref_key,commission,status,approved_at) VALUES (?,?,?,?,3,'approved',datetime('now'))", (A1['id'], 'certificate', nuu, 'c-f-' + uniq()))
     override('affiliate.min_payout', 50)
@@ -250,7 +249,7 @@ try:
     check('the affiliate cannot pay themselves', q1('SELECT status FROM affiliate_payouts WHERE id=?', (P['id'],)) == 'requested')
     settle(o, P['id'], decision='reject', note='GSM did not match your account')
     check('reject with a note: payout rejected, lines released (paid_in cleared)', q1('SELECT status FROM affiliate_payouts WHERE id=?', (P['id'],)) == 'rejected' and q1('SELECT paid_in FROM affiliate_referrals WHERE id=?', (sg['id'],)) is None)
-    check('affiliate sees the reason on the next visit', mail_to(a1e, 'GSM did not match') or 'GSM did not match' in call(a1, 'GET', AFF)[2] or mail_to(a1e, 'rejected'))
+    check('affiliate is e-mailed the rejection reason', mail_to(a1e, 'GSM did not match'))
     post(a1, '/account/affiliate/payout', {}, token_from=AFF)
     P2 = q1("SELECT * FROM affiliate_payouts WHERE affiliate_id=? AND status='requested'", (A1['id'],))
     check('after a rejection the affiliate can ask again', bool(P2) and abs(P2['amount'] - 7.0) < 0.001)

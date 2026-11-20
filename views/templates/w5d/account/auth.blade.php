@@ -63,7 +63,7 @@
           <x-form-field name="name" :label="__('acct.name')" :required="true" :errors="$errors" />
           <x-form-field name="email" :label="__('acct.email')" type="email" :required="true" :errors="$errors" />
           <x-form-field name="role" :label="__('acct.role')" type="select" :options="['user' => __('acct.role_user'), 'investor' => __('acct.role_investor'), 'customer' => __('acct.role_customer')]" :errors="$errors" />
-          <x-form-field name="password" :label="__('acct.password')" type="password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
+          <x-form-field name="password" :label="__('acct.password')" type="password" autocomplete="new-password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
           <x-form-field name="password2" :label="__('acct.password2')" type="password" autocomplete="new-password" :required="true" :errors="$errors" />
           <x-form-field name="accept" :label="__('acct.accept') . ' ([' . __('cta.read_limits') . '](/trust/statement/))'" type="checkbox" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.register') }}</button>
