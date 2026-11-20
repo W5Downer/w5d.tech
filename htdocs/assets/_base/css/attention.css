@@ -630,3 +630,23 @@ html.dlg-open{overflow:hidden}
 .card-car-dots i{width:.4rem;height:.4rem;border-radius:99px;background:rgba(255,255,255,.55)}
 .card-car-dots i.is-active{width:1.1rem;background:#fff}
 @media(prefers-reduced-motion:reduce){.card-carousel>img{transition:none}}
+
+/* ---------- QCM round + certificate sheet ---------- */
+.qcm-js .qcm-step:not(.is-current){display:none}
+.qcm-js .qcm-step.is-current{animation:qcm-in .25s ease both}
+@keyframes qcm-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.qcm-js .qcm-step.is-current{animation:none}}
+.qcm-choice:has(input:checked){border-color:rgba(139,92,246,.7);background:rgba(139,92,246,.12)}
+.qcm-choice:focus-within{outline:2px solid rgba(139,92,246,.6);outline-offset:2px}
+.qcm-bar.is-low{border-color:rgba(239,68,68,.6)}
+.qcm-bar.is-low [data-qcm-clock]{color:#ef4444}
+.qcm-js .qcm-submit-late{opacity:.85}
+.qcm-js [data-qcm-prev]:disabled,.qcm-js [data-qcm-next]:disabled{opacity:.4;cursor:not-allowed}
+.cert-sheet{box-shadow:0 20px 60px -30px rgba(124,58,237,.5)}
+@media print{
+  .no-print,nav[aria-label],.w5-tabbar{display:none!important}
+  body{background:#fff!important}
+  .cert-sheet-wrap{padding:0!important}
+  .cert-sheet{box-shadow:none!important;border:3px double #7c3aed!important;break-inside:avoid;margin:0 auto}
+  @page{margin:14mm}
+}

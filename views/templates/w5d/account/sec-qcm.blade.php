@@ -37,7 +37,7 @@
         @if($c['checks'])
           <ul class="mt-3 space-y-1 text-sm" aria-label="{{ tr3('Minimum requirements', 'Conditions minimales', 'الشروط الدنيا') }}">
             @foreach($c['checks'] as $k)
-              <li class="flex items-center gap-2 {{ $k['ok'] ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300' }}">{{ icon($k['ok'] ? 'circle-check' : 'hourglass', 'w-4 h-4 shrink-0') }}<span>{{ $ck($k['key']) }}: <strong>{{ $k['have'] }}</strong> / {{ $k['need'] }}</span></li>
+              <li class="flex items-center gap-2 {{ $k['ok'] ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300' }}">{{ $k['ok'] ? icon('circle-check', 'w-4 h-4 shrink-0') : icon('hourglass', 'w-4 h-4 shrink-0') }}<span>{{ $ck($k['key']) }}: <strong>{{ $k['have'] }}</strong> / {{ $k['need'] }}</span></li>
             @endforeach
           </ul>
         @else

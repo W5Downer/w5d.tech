@@ -254,14 +254,76 @@
   });
 
   /* ---------- copy buttons ---------- */
-  $$('[data-copy]').forEach(function (b) {
+  $$('[data-copy],[data-copy-text]').forEach(function (b) {
     b.addEventListener('click', function () {
-      var src = document.getElementById(b.getAttribute('data-copy')), txt = src ? src.textContent : b.getAttribute('data-copy-text') || '';
-      if (navigator.clipboard) navigator.clipboard.writeText(txt.trim()).then(function () {
-        var old = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = old; }, 1200);
-      });
+      var id = b.getAttribute('data-copy'), src = id ? document.getElementById(id.replace(/^#/, '')) : null, txt = src ? src.textContent : b.getAttribute('data-copy-text') || '';
+      function ok() { var old = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = old; }, 1200); }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt.trim()).then(ok, function () {});
+      else { var ta = document.createElement('textarea'); ta.value = txt.trim(); ta.setAttribute('readonly', ''); ta.className = 'sr-only'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) {} document.body.removeChild(ta); }
     });
   });
+  $$('[data-print]').forEach(function (b) { b.addEventListener('click', function () { window.print(); }); });
+
+  /* ---------- QCM round: one question at a time, timer, autosave (form still works without JS) ---------- */
+  (function () {
+    var form = $('form[data-qcm]');
+    if (!form) return;
+    var steps = $$('.qcm-step', form), prev = $('[data-qcm-prev]', form), next = $('[data-qcm-next]', form), sub = $('[data-qcm-submit]', form);
+    var clock = $('[data-qcm-clock]'), cnt = $('[data-qcm-count]'), bar = $('[data-qcm-progress]'), st = $('[data-qcm-status]');
+    var total = steps.length, cur = 0, left = parseInt(clock ? clock.getAttribute('data-left') : '0', 10) || 0, sent = false;
+    document.documentElement.classList.add('qcm-js');
+    function answered(step) { return $$('input:checked', step).length > 0; }
+    function refresh() {
+      var n = steps.filter(answered).length;
+      if (cnt) cnt.textContent = String(n);
+      if (bar) bar.style.width = (total ? Math.round(n * 100 / total) : 0) + '%';
+      return n;
+    }
+    function show(i) {
+      cur = Math.max(0, Math.min(total - 1, i));
+      steps.forEach(function (s, k) { s.classList.toggle('is-current', k === cur); });
+      if (prev) { prev.classList.remove('hidden'); prev.disabled = cur === 0; }
+      if (next) { next.classList.remove('hidden'); next.disabled = cur === total - 1; }
+      if (sub) sub.classList.toggle('qcm-submit-late', cur !== total - 1);
+      if (st) st.textContent = (cur + 1) + ' / ' + total;
+      var f = steps[cur] && $('input', steps[cur]);
+      if (f && !reduce) steps[cur].scrollIntoView({ block: 'nearest' });
+    }
+    function save(step) {
+      var body = new URLSearchParams();
+      body.append('_csrf', form.getAttribute('data-csrf')); body.append('attempt', form.getAttribute('data-attempt')); body.append('qid', step.getAttribute('data-qid'));
+      $$('input:checked', step).forEach(function (i) { body.append('choice[]', i.value); });
+      if (!window.fetch) return;
+      fetch(form.getAttribute('data-answer-url'), { method: 'POST', credentials: 'same-origin', headers: { 'X-CSRF-Token': form.getAttribute('data-csrf'), 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+        .then(function (r) { if (r.status === 409 || r.status === 404) { sent = true; window.location.reload(); } return r.json().catch(function () { return {}; }); })
+        .then(function (j) { if (j && j.ok === false && j.error === 'auth') window.location.reload(); })
+        .catch(function () { if (st) st.textContent = '!'; });
+    }
+    steps.forEach(function (s) { s.addEventListener('change', function () { refresh(); save(s); }); });
+    if (prev) prev.addEventListener('click', function () { show(cur - 1); });
+    if (next) next.addEventListener('click', function () { show(cur + 1); });
+    form.addEventListener('keydown', function (e) {
+      if (e.target && /^INPUT$/.test(e.target.tagName) && e.key === 'Enter') e.preventDefault();
+    });
+    form.addEventListener('submit', function (e) {
+      if (sent) return;
+      var n = refresh();
+      if (n < total && left > 0 && sub && !window.confirm(sub.getAttribute('data-confirm-text'))) { e.preventDefault(); return; }
+      sent = true;
+    });
+    function fmt(n) { n = Math.max(0, n); var m = Math.floor(n / 60), s = n % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+    if (clock) {
+      var end = Date.now() + left * 1000, bx = $('[data-qcm-bar]');
+      var tick = setInterval(function () {
+        left = Math.round((end - Date.now()) / 1000);
+        clock.textContent = fmt(left);
+        if (bx) bx.classList.toggle('is-low', left <= 60);
+        if (st && (left === 60 || left === 10)) st.textContent = left + 's';
+        if (left <= 0) { clearInterval(tick); if (!sent) { sent = true; form.submit(); } }
+      }, 500);
+    }
+    refresh(); show(0);
+  })();
 
   /* ---------- wizard (progressive enhancement; the form works without JS, every step visible) ---------- */
   $$('[data-wizard]').forEach(function (form) {
