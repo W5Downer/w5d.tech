@@ -29,10 +29,10 @@ final class Router
             return Response::redirect(url($req->path . '/') . ($q ? '?' . $q : ''), 301);
         }
 
-        $allowed = false;
+        $allowed = false; $methods = [];
         foreach ($this->routes as [$m, $re, $h]) {
             if (!preg_match($re, $req->path, $mm)) continue;
-            $allowed = true;
+            $allowed = true; $methods[$m] = true; if ($m === 'GET') $methods['HEAD'] = true;
             if ($m !== $req->method && !($m === 'GET' && $req->method === 'HEAD')) continue;
             $req->params = array_filter($mm, 'is_string', ARRAY_FILTER_USE_KEY);
             $out = $h($req);
@@ -40,7 +40,15 @@ final class Router
             if (is_array($out)) return Response::json($out);
             return Response::html((string)$out);
         }
-        if ($allowed) return Response::html('Method not allowed', 405);
+        if ($allowed) {
+            // 405 with the mandatory Allow header; JSON for API clients, a short page for browsers.
+            $allow = implode(', ', array_keys($methods + ['OPTIONS' => true]));
+            if ($req->method === 'OPTIONS') return (new Response('', 204, ['Allow' => $allow]));
+            if (str_starts_with($req->path, '/api/') || str_ends_with($req->path, '.json')) {
+                return Response::json(['error' => 'method_not_allowed', 'allow' => array_keys($methods)], 405, ['Allow' => $allow]);
+            }
+            return Response::html(view('pages.405', ['title' => '405']), 405)->withHeaders(['Allow' => $allow]);
+        }
         return not_found();
     }
 }
