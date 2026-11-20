@@ -138,8 +138,8 @@
           <h2 class="font-display text-lg font-semibold">{{ __('acct.sec_password') }}</h2>
           <p class="text-sm text-slate-600 dark:text-slate-400">{{ __('acct.sec_tip') }}</p>
           @if(!empty($u['password_hash']))<x-form-field name="current" :label="__('acct.current')" type="password" :required="true" :errors="$errors" />@endif
-          <x-form-field name="password" :label="__('acct.new_password')" type="password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
-          <x-form-field name="password2" :label="__('acct.password2')" type="password" :required="true" :errors="$errors" />
+          <x-form-field name="password" :label="__('acct.new_password')" type="password" autocomplete="new-password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
+          <x-form-field name="password2" :label="__('acct.password2')" type="password" autocomplete="new-password" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak">{{ __('acct.save') }}</button>
         </form>
         <form method="post" action="{{ url('/account/security/') }}" class="mt-8 max-w-xl">
