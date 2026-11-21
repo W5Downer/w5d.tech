@@ -67,10 +67,17 @@ Public JSON API plus the private OpenAPI at `/openapi.json` (login required), ge
 - Site and flows: `smoke.sh`, `flows`, `auth`, `d17`, `dash`, `gate`, `mail`, `crud`, `viewcache.php`.
 - Browser (Playwright + chromium): `ui`, `browser`, `mobile`.
 - Programmes: `qcm` (86), `cert` (55), `affiliate` (88).
-- Contract: `contract` (34): 404/405/OPTIONS/CORS, staff overview tiles, autocomplete, active menu markers, phone tab bar.
+- Contract: `contract` (78): 404/405/OPTIONS/CORS, staff overview tiles, autocomplete, active menu markers, phone tab bar, chromeless pages, reveal wiring, five-door menu, per-subject CTA.
+- Also: `sitemap` (28), `motion` (32, Playwright: desktop vs phone animation, reduce-motion opt-in, chromeless pages), `integrations` (112), `gateways` (129), `qcmgen.php`.
 - Professionalism audits: `audit.py` (every public path x 3 languages: titles, descriptions, headings, links), `audit_auth.py` (signed-in views per role), `audit_browser.py` (console, overflow, images, tap targets, focus, active menu, RTL).
 - `production.sh`: APP_ENV=production, HTTPS proxy, trusted view cache, every suite, security checks.
 Run them all before and after every change. Never name a test file after a stdlib module (`http.py` shadowed the stdlib). Open items live in `docs/reviews/README.md`.
+
+### 8a. Front-end chrome, motion, sitemap, navigation (turn 6)
+- **Chromeless pages.** A view that declares `@section('chromeless', '1')` (sign-in/register/forgot/reset, pay, QCM round and QCM pay, unsubscribe, certificate, subscription manage) renders `partials/minibar` (brand, way out, language, theme) and `partials/footer-mini` instead of the mega-menu header, tab bar, quick-find and auth dialog. Verification page, 404 and every content page keep the full chrome.
+- **Motion.** `<x-section>` wraps its content in `data-rv="up"`; `site.js` reveals it with an IntersectionObserver (threshold 0, 6 s failsafe). OS `prefers-reduced-motion` now means *calm*: travelling/looping decoration stops, orbs slow to 40 s, reveals become a fade, counters still count. A footer button (`data-motion-toggle`, only shown when the OS asks for reduced motion) stores `w5d-motion=full` in localStorage and sets `html[data-motion=full]` for full motion. A hover/pointer layer (`@media (hover:hover) and (pointer:fine)`) lifts cards and buttons on desktop.
+- **Sitemap.** `Docs::sitemapUrls()` derives every public indexable URL from content (pages JSON minus `robots: noindex`, audiences, macros, services, projects, regions), drops guest-gated forms while their `Gate` flag is on, uses file mtime for `lastmod`, and declares no hreflang (language is cookie-based on the same URL). `tests/sitemap.py` crawls every entry in 3 languages.
+- **Navigation = five doors.** `data/content/nav/main.json`: Programme, Learn and certify, Lead and partner, Invest, Company and trust; `footer.json` mirrors them. `src/Cta.php` picks the header button, mobile-menu button and phone tab for the page subject (invest, learn, lead, client, affiliate, or the neutral "Choose your door"); a service page links to eligibility for that service. Page bodies carry their own CTAs in the content JSON.
 
 ## 9. Data model (SQLite)
 Core accounts, orders, subscriptions and payments are in 001–005. The `variable_overrides` table (path, value, changed_by, note) lets the owner override `config/variables.php` values at run time. Mail suppressions are in 004 and variable overrides in 005. Programs (affiliate, certification, QCM) are in 006.
