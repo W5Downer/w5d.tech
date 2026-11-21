@@ -86,6 +86,7 @@ run "auth"                                          python3 tests/auth.py "$BASE
 run "d17 payments"                                  python3 tests/d17.py "$BASE"
 run "payment gateways + owner config"              python3 tests/gateways.py "$BASE"
 run "integrations (GA4/Ads/Meta/reCAPTCHA) + config"  python3 tests/integrations.py "$BASE"
+run "sitemap.xml (complete, indexable, no gated/noindex)"  python3 tests/sitemap.py "$BASE"
 run "dashboards"                                    python3 tests/dash.py "$BASE"
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"

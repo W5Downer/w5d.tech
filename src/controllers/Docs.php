@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, Content, Env, Request, Response, Variables};
+use W5D\{Account, Content, Env, Gate, Request, Response, Variables};
 
 /**
  * Documentation: one API for developers (OpenAPI + HTML), one for AI agents (manifest, tools, llms.txt).
@@ -150,26 +150,74 @@ final class Docs
         return Response::text($o, 'text/plain');
     }
 
+    /** Page-JSON slug => public path (the JSON file names flatten the first path segment with a hyphen). */
+    private static function pagePath(string $slug): string
+    {
+        if ($slug === 'home') return '/';
+        foreach (['for', 'trust', 'join', 'careers', 'app', 'countries', 'checkout', 'subscription'] as $pre) {
+            if (str_starts_with($slug, $pre . '-')) return '/' . $pre . '/' . substr($slug, strlen($pre) + 1) . '/';
+        }
+        return '/' . $slug . '/';
+    }
+
+    /** Guest-gated forms redirect to sign-in while their gate is on: a crawler would only index the login page, so they leave the sitemap. */
+    private const GATED = ['/checkout/' => 'checkout', '/subscription/' => 'subscription', '/app/register/' => 'register', '/careers/managers/' => 'manager', '/join/eligibility/' => 'eligibility'];
+
+    /**
+     * Every public, indexable URL, derived from the content (pages, audiences, macros, services, projects, regions) — nothing is typed twice.
+     * Left out on purpose: noindex pages (robots key in the page JSON), gated forms (while the gate is on), and everything robots.txt disallows.
+     * No hreflang: the language is chosen by cookie/Accept-Language on the very same URL, so there is no alternate URL to declare.
+     * @return array<string,array{pr:float,mod:int}> path => priority + last-modified timestamp
+     */
+    public static function sitemapUrls(): array
+    {
+        $root = ROOT . '/data/content';
+        $mt = fn(string $f): int => (int)(@filemtime($f) ?: time());
+        $prio = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/for/' => .8, '/how-it-works/' => .8, '/join/' => .7, '/checkout/' => .9, '/subscription/' => .7,
+            '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/status/' => .5, '/sitemap/' => .3, '/newsletter/' => .4, '/contact/' => .5,
+            '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4, '/affiliate/' => .5, '/ontology/' => .5];
+        $u = [];
+        foreach (glob($root . '/pages/*.json') ?: [] as $f) {
+            $j = json_decode((string)file_get_contents($f), true);
+            if (!is_array($j) || str_contains((string)($j['robots'] ?? ''), 'noindex')) continue;
+            $path = self::pagePath(basename($f, '.json'));
+            if (isset(self::GATED[$path]) && Gate::enabled(self::GATED[$path])) continue;
+            $u[$path] = ['pr' => $prio[$path] ?? (str_starts_with($path, '/for/') ? .7 : .6), 'mod' => $mt($f)];
+        }
+        // pages served by code, with no JSON file of their own
+        $u['/certification/verify/'] = ['pr' => .4, 'mod' => $mt($root . '/pages/certification.json')];
+        $u['/sitemap/'] = ['pr' => .3, 'mod' => $mt(__FILE__)];
+        foreach (Pages::AUDIENCES as $a) $u['/for/' . $a . '/'] ??= ['pr' => .7, 'mod' => $mt($root . '/pages/for.json')];
+
+        $coll = ['macros' => ['/macro-works/', .8], 'services' => ['/services/', .5], 'projects' => ['/projects/', .6]];
+        foreach ($coll as $c => [$base, $pr]) {
+            $files = glob($root . "/$c/*.json") ?: [];
+            $u[$base] = ['pr' => $base === '/macro-works/' ? .8 : .7, 'mod' => $files ? max(array_map($mt, $files)) : time()];
+            foreach ($files as $f) $u[$base . basename($f, '.json') . '/'] = ['pr' => $pr, 'mod' => $mt($f)];
+        }
+        // slugs come from the record, not the file name
+        foreach ($coll as $c => [$base, $pr]) {
+            foreach (Content::all($c) as $r) {
+                $k = $base . $r['slug'] . '/';
+                if (!isset($u[$k])) $u[$k] = ['pr' => $pr, 'mod' => $u[$base]['mod']];
+            }
+        }
+        $tn = ROOT . '/data/countries/tn.json';
+        foreach (Content::file('countries/tn.json')['regions'] ?? [] as $r) $u["/tn/{$r['slug']}/"] = ['pr' => .4, 'mod' => $mt($tn)];
+        uksort($u, fn($a, $b) => $a === '/' ? -1 : ($b === '/' ? 1 : strcmp($a, $b)));
+        return $u;
+    }
+
     public static function sitemap(Request $q): Response
     {
         $b = Env::baseUrl();
-        $asOf = (string)Variables::get('dates.as_of');
-        $static = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/checkout/' => .9, '/subscription/' => .7, '/for/' => .8, '/careers/' => .6, '/careers/managers/' => .6, '/join/' => .7, '/join/eligibility/' => .6,
-            '/app/register/' => .6, '/how-it-works/' => .8, '/partners/' => .6, '/about/' => .6, '/team/' => .6, '/certification/' => .6, '/affiliate/' => .5, '/certification/verify/' => .4, '/ontology/' => .5, '/countries/tunisia/' => .6, '/faq/' => .6, '/contact/' => .5, '/newsletter/' => .4,
-            '/status/' => .5, '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4,
-            '/macro-works/' => .8, '/services/' => .7, '/projects/' => .7, '/sitemap/' => .3];
-        foreach (Pages::AUDIENCES as $a) $static['/for/' . $a . '/'] = .7;
-        $urls = [];
-        foreach ($static as $u => $pr) $urls[$u] = $pr;
-        foreach (Content::all('macros') as $m) $urls["/macro-works/{$m['slug']}/"] = .8;
-        foreach (Content::all('services') as $s) $urls["/services/{$s['slug']}/"] = .5;
-        foreach (Content::all('projects') as $p) $urls["/projects/{$p['slug']}/"] = .6;
-        foreach (Content::file('countries/tn.json')['regions'] ?? [] as $r) $urls["/tn/{$r['slug']}/"] = .4;
+        $cap = time();
         $x = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";
-        foreach ($urls as $u => $pr) {
-            $freq = $u === '/' || $u === '/status/' ? 'daily' : ($pr >= .7 ? 'weekly' : 'monthly');
-            $img = \W5D\Social::imageUrl($u);
-            $x .= '  <url><loc>' . htmlspecialchars($b . url($u)) . '</loc><lastmod>' . $asOf . '</lastmod><changefreq>' . $freq . '</changefreq><priority>' . number_format($pr, 1) . '</priority>'
+        foreach (self::sitemapUrls() as $path => $m) {
+            $pr = $m['pr'];
+            $freq = $path === '/' || $path === '/status/' ? 'daily' : ($pr >= .7 ? 'weekly' : 'monthly');
+            $img = \W5D\Social::imageUrl($path);
+            $x .= '  <url><loc>' . htmlspecialchars($b . url($path)) . '</loc><lastmod>' . gmdate('Y-m-d', min($m['mod'], $cap)) . '</lastmod><changefreq>' . $freq . '</changefreq><priority>' . number_format($pr, 1) . '</priority>'
                 . '<image:image><image:loc>' . htmlspecialchars($img) . '</image:loc></image:image></url>' . "\n";
         }
         return Response::text($x . '</urlset>', 'application/xml');
