@@ -74,7 +74,11 @@
         },
         {
           "value": "{{ d.experts_current }}",
-          "zero_label": {"en": "Be the first", "fr": "Soyez le premier", "ar": "كن الأول"},
+          "zero_label": {
+            "en": "Be the first",
+            "fr": "Soyez le premier",
+            "ar": "كن الأول"
+          },
           "label": {
             "en": "experts certified today",
             "fr": "experts certifiés à ce jour",
@@ -676,13 +680,22 @@
       "ctas": [
         {
           "label": {
+            "en": "Choose your door",
+            "fr": "Choisissez votre porte",
+            "ar": "اختر بابك"
+          },
+          "href": "/for/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
             "en": "Take a part today",
             "fr": "Prendre une part aujourd’hui",
             "ar": "احصل على حصة اليوم"
           },
           "href": "/checkout/",
-          "style": "peak",
-          "arrow": true
+          "style": "ghost"
         },
         {
           "label": {
@@ -698,11 +711,11 @@
     {
       "type": "sticky-cta",
       "id": "sticky",
-      "href": "/checkout/",
+      "href": "/for/",
       "label": {
-        "en": "Take a part today",
-        "fr": "Prendre une part aujourd’hui",
-        "ar": "احصل على حصة اليوم"
+        "en": "Choose your door",
+        "fr": "Choisissez votre porte",
+        "ar": "اختر بابك"
       }
     }
   ]

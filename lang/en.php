@@ -12,6 +12,7 @@ return [
         'subscription' => 'Daily subscription', 'checkout' => 'Checkout', 'tunisia' => 'Tunisia hub',
     ],
     'cta' => [
+        'partners' => 'Write to the partners desk', 'affiliate' => 'Open my referral panel', 'path' => 'Choose your door',
         'invest' => 'Take a part today', 'quote' => 'See today\'s price', 'register' => 'Register now', 'eligibility' => 'Check my eligibility',
         'manager' => 'Apply as manager', 'dossier' => 'Request the dossier', 'read_limits' => 'Read the declared limits', 'open' => 'Open',
         'back_home' => 'Back home', 'contact' => 'Write to the right desk', 'subscribe' => 'Start a daily subscription', 'next' => 'Next',
@@ -93,6 +94,7 @@ return [
         'open' => 'Share this page', 'text' => 'W5D: five macro works, 130 services, one path.',
     ],
     'ux' => [
+        'tab_learn' => 'Learn', 'tab_lead' => 'Lead', 'tab_client' => 'Partner', 'tab_refer' => 'Refer', 'tab_path' => 'Start',
         'mini_home' => 'Home', 'mini_account' => 'My account', 'mini_privacy' => 'Privacy', 'mini_terms' => 'Terms', 'mini_help' => 'Help', 'motion_full' => 'Animations are reduced by your device. Turn full animations on', 'motion_auto' => 'Use my device setting (reduced animations)',
         'close' => 'Close', 'auth_title_login' => 'Sign in to W5D', 'auth_title_register' => 'Create your W5D account',
         'auth_lead_login' => 'Pick up where you left off: your parts, payments and applications.',

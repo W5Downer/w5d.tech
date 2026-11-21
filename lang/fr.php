@@ -12,6 +12,7 @@ return [
         'subscription' => 'Abonnement quotidien', 'checkout' => 'Paiement', 'tunisia' => 'Pôle Tunisie',
     ],
     'cta' => [
+        'partners' => 'Écrire au bureau partenaires', 'affiliate' => 'Ouvrir mon espace parrainage', 'path' => 'Choisissez votre porte',
         'invest' => 'Prendre une part aujourd’hui', 'quote' => 'Voir le prix du jour', 'register' => 'S’inscrire', 'eligibility' => 'Vérifier mon éligibilité',
         'manager' => 'Candidater comme manager', 'dossier' => 'Demander le dossier', 'read_limits' => 'Lire les limites déclarées', 'open' => 'Ouvrir',
         'back_home' => 'Retour à l’accueil', 'contact' => 'Écrire au bon service', 'subscribe' => 'Démarrer un abonnement quotidien', 'next' => 'Suivant',
@@ -93,6 +94,7 @@ return [
         'open' => 'Partager cette page', 'text' => 'W5D : cinq macro-travaux, 130 services, un parcours.',
     ],
     'ux' => [
+        'tab_learn' => 'Apprendre', 'tab_lead' => 'Diriger', 'tab_client' => 'Partenaire', 'tab_refer' => 'Parrainer', 'tab_path' => 'Démarrer',
         'mini_home' => 'Accueil', 'mini_account' => 'Mon compte', 'mini_privacy' => 'Confidentialité', 'mini_terms' => 'Conditions', 'mini_help' => 'Aide', 'motion_full' => 'Les animations sont réduites par votre appareil. Activer toutes les animations', 'motion_auto' => 'Suivre le réglage de mon appareil (animations réduites)',
         'close' => 'Fermer', 'auth_title_login' => 'Connexion à W5D', 'auth_title_register' => 'Créez votre compte W5D',
         'auth_lead_login' => 'Reprenez où vous en étiez : vos parts, paiements et candidatures.',

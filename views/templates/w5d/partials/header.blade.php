@@ -21,6 +21,7 @@
     }
   }
   if ($navExact !== null) $navBest = $navExact;
+  $hc = \W5D\Cta::for($here);
   $navLinkOn = function (string $href) use ($hereN, $navBest, $navBestLen): string {
     $h = rtrim($href, '/') ?: '/';
     return $hereN === $h ? 'page' : ($h !== '/' && str_starts_with($hereN . '/', $h . '/') ? 'true' : '');
@@ -104,7 +105,7 @@
           <span data-theme-icon="moon" class="hidden">{{ icon('moon', 'w-5 h-5') }}</span>
         </button>
         @if(!$signedIn)<a href="{{ url('/account/login/') }}" data-auth-open="login" class="hidden md:inline-flex btn-ghost text-sm !py-2 !px-3">{{ __('ux.sign_in') }}</a>@endif
-        <a href="{{ url('/checkout/') }}" class="hidden sm:inline-flex btn-focus text-sm !py-2 !px-4">{{ __('cta.invest') }} {{ icon('arrow-right', 'w-4 h-4 rtl-flip') }}</a>
+        <a href="{{ link_to($hc['href']) }}" data-cta="{{ $hc['key'] }}" class="hidden sm:inline-flex btn-focus text-sm !py-2 !px-4">{{ $hc['label'] }} {{ icon('arrow-right', 'w-4 h-4 rtl-flip') }}</a>
         <button type="button" data-mobile-toggle class="lg:hidden btn-ghost rounded-lg w-9 h-9 min-[400px]:w-10 min-[400px]:h-10 inline-flex items-center justify-center" aria-label="{{ __('nav.menu') }}" aria-expanded="false" aria-controls="mobileMenu">{{ icon('menu', 'w-5 h-5') }}</button>
       </div>
     </nav>
@@ -124,7 +125,7 @@
           @endforeach
         @endforeach
       @endforeach
-      <a href="{{ url('/checkout/') }}" class="btn-focus mt-4 w-full">{{ __('cta.invest') }}</a>
+      <a href="{{ link_to($hc['href']) }}" data-cta="{{ $hc['key'] }}" class="btn-focus mt-4 w-full">{{ $hc['label'] }}</a>
     </div>
   </div>
 </header>

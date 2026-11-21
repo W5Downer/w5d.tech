@@ -1,156 +1,183 @@
 {
- "slug": "trust-security",
- "title": {
-  "en": "Security",
-  "fr": "Sécurité",
-  "ar": "الأمان"
- },
- "description": {
-  "en": "Security controls and responsible disclosure.",
-  "fr": "Mesures de sécurité et procédure de divulgation responsable.",
-  "ar": "ضوابط الأمان والإبلاغ المسؤول عن الثغرات."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "sc-hero",
-   "variant": "classic",
-   "gradient": "technology",
-   "title": {
-    "en": "Security, **checkable.**",
-    "fr": "La sécurité, **vérifiable.**",
-    "ar": "الأمان، **قابل للتحقق.**"
-   },
-   "lead": {
-    "en": "Strict CSP, no inline scripts, CSRF tokens, rate limits, hashed secrets, an obfuscated owner mount.",
-    "fr": "CSP stricte, aucun script en ligne, jetons CSRF, limites de débit, secrets hachés, point de montage du propriétaire obfusqué.",
-    "ar": "سياسة أمن محتوى (CSP) صارمة، ولا نصوص برمجية مضمنة، ورموز CSRF، وحدود لمعدل الطلبات، وأسرار مجزأة، وموضع تثبيت المالك مخفي الهوية."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Report a vulnerability",
-      "fr": "Signaler une vulnérabilité",
-      "ar": "أبلغ عن ثغرة"
-     },
-     "href": "/trust/corrections/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
+  "slug": "trust-security",
+  "title": {
     "en": "Security",
     "fr": "Sécurité",
     "ar": "الأمان"
-   }
   },
-  {
-   "type": "definitions",
-   "id": "sc-list",
-   "tier": "x",
-   "focus": 2,
-   "title": {
-    "en": "Controls",
-    "fr": "Mesures de contrôle",
-    "ar": "الضوابط"
-   },
-   "items": [
-    {
-     "term": {
-      "en": "CSP",
-      "fr": "CSP",
-      "ar": "CSP"
-     },
-     "def": {
-      "en": "script-src 'self'; no inline scripts",
-      "fr": "script-src 'self'; pas de scripts intégrés",
-      "ar": "script-src 'self'; لا توجد نصوص برمجية مضمنة"
-     }
-    },
-    {
-     "term": {
-      "en": "CSRF",
-      "fr": "CSRF",
-      "ar": "CSRF"
-     },
-     "def": {
-      "en": "Token on every state-changing form",
-      "fr": "Jeton sur chaque formulaire qui modifie l’état",
-      "ar": "رمز مميز في كل نموذج يغيّر الحالة"
-     }
-    },
-    {
-     "term": {
-      "en": "Passwords",
-      "fr": "Mots de passe",
-      "ar": "كلمات المرور"
-     },
-     "def": {
-      "en": "Argon2id; owner secret from the environment",
-      "fr": "Argon2id ; secret du propriétaire issu de l’environnement",
-      "ar": "Argon2id؛ السرّ الخاص بالمالك مأخوذ من البيئة"
-     }
-    },
-    {
-     "term": {
-      "en": "Rate limits",
-      "fr": "Limites de débit",
-      "ar": "حدود المعدل"
-     },
-     "def": {
-      "en": "Per IP and action",
-      "fr": "Par adresse IP et par action",
-      "ar": "لكل عنوان IP ولكل إجراء"
-     }
-    },
-    {
-     "term": {
-      "en": "Cookies",
-      "fr": "Cookies",
-      "ar": "ملفات تعريف الارتباط"
-     },
-     "def": {
-      "en": "HttpOnly, SameSite, Secure over HTTPS",
-      "fr": "HttpOnly, SameSite, Secure sur HTTPS",
-      "ar": "HttpOnly وSameSite وSecure عبر HTTPS"
-     }
-    },
-    {
-     "term": {
-      "en": "Dependencies",
-      "fr": "Dépendances",
-      "ar": "التبعيات"
-     },
-     "def": {
-      "en": "No Composer, no CDN",
-      "fr": "Pas de Composer, pas de CDN",
-      "ar": "لا Composer ولا CDN"
-     }
-    }
-   ]
+  "description": {
+    "en": "Security controls and responsible disclosure.",
+    "fr": "Mesures de sécurité et procédure de divulgation responsable.",
+    "ar": "ضوابط الأمان والإبلاغ المسؤول عن الثغرات."
   },
-  {
-   "type": "prose",
-   "id": "sc-report",
-   "tier": "e",
-   "focus": 3,
-   "title": {
-    "en": "Reporting a vulnerability",
-    "fr": "Signaler une vulnérabilité",
-    "ar": "الإبلاغ عن ثغرة"
-   },
-   "paragraphs": [
+  "sections": [
     {
-     "en": "Write to the security contact published in security.txt. Tell us what you found, how to reproduce it and what it could expose. Do not access other people’s data, and do not run denial-of-service tests.",
-     "fr": "Écrivez au contact sécurité publié dans security.txt. Dites-nous ce que vous avez trouvé, comment le reproduire et ce que cela pourrait exposer. N’accédez pas aux données d’autrui et ne lancez pas de tests de déni de service.",
-     "ar": "راسل جهة الأمان المنشورة في security.txt. أخبرنا بما وجدت وكيف تعيد إنتاجه وما قد يكشفه. لا تصل إلى بيانات الآخرين ولا تجرِ اختبارات حجب الخدمة."
+      "type": "hero",
+      "id": "sc-hero",
+      "variant": "classic",
+      "gradient": "technology",
+      "title": {
+        "en": "Security, **checkable.**",
+        "fr": "La sécurité, **vérifiable.**",
+        "ar": "الأمان، **قابل للتحقق.**"
+      },
+      "lead": {
+        "en": "Strict CSP, no inline scripts, CSRF tokens, rate limits, hashed secrets, an obfuscated owner mount.",
+        "fr": "CSP stricte, aucun script en ligne, jetons CSRF, limites de débit, secrets hachés, point de montage du propriétaire obfusqué.",
+        "ar": "سياسة أمن محتوى (CSP) صارمة، ولا نصوص برمجية مضمنة، ورموز CSRF، وحدود لمعدل الطلبات، وأسرار مجزأة، وموضع تثبيت المالك مخفي الهوية."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Report a vulnerability",
+            "fr": "Signaler une vulnérabilité",
+            "ar": "أبلغ عن ثغرة"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Security",
+        "fr": "Sécurité",
+        "ar": "الأمان"
+      }
     },
     {
-     "en": "We acknowledge a report, fix what is real and credit the reporter if they wish. We do not threaten good-faith researchers.",
-     "fr": "Nous accusons réception, corrigeons ce qui est réel et citons la personne si elle le souhaite. Nous ne menaçons pas les chercheurs de bonne foi.",
-     "ar": "نؤكد استلام البلاغ ونصلح ما هو حقيقي وننسب الفضل للمبلّغ إن رغب. ولا نهدد الباحثين حسني النية."
+      "type": "definitions",
+      "id": "sc-list",
+      "tier": "x",
+      "focus": 2,
+      "title": {
+        "en": "Controls",
+        "fr": "Mesures de contrôle",
+        "ar": "الضوابط"
+      },
+      "items": [
+        {
+          "term": {
+            "en": "CSP",
+            "fr": "CSP",
+            "ar": "CSP"
+          },
+          "def": {
+            "en": "script-src 'self'; no inline scripts",
+            "fr": "script-src 'self'; pas de scripts intégrés",
+            "ar": "script-src 'self'; لا توجد نصوص برمجية مضمنة"
+          }
+        },
+        {
+          "term": {
+            "en": "CSRF",
+            "fr": "CSRF",
+            "ar": "CSRF"
+          },
+          "def": {
+            "en": "Token on every state-changing form",
+            "fr": "Jeton sur chaque formulaire qui modifie l’état",
+            "ar": "رمز مميز في كل نموذج يغيّر الحالة"
+          }
+        },
+        {
+          "term": {
+            "en": "Passwords",
+            "fr": "Mots de passe",
+            "ar": "كلمات المرور"
+          },
+          "def": {
+            "en": "Argon2id; owner secret from the environment",
+            "fr": "Argon2id ; secret du propriétaire issu de l’environnement",
+            "ar": "Argon2id؛ السرّ الخاص بالمالك مأخوذ من البيئة"
+          }
+        },
+        {
+          "term": {
+            "en": "Rate limits",
+            "fr": "Limites de débit",
+            "ar": "حدود المعدل"
+          },
+          "def": {
+            "en": "Per IP and action",
+            "fr": "Par adresse IP et par action",
+            "ar": "لكل عنوان IP ولكل إجراء"
+          }
+        },
+        {
+          "term": {
+            "en": "Cookies",
+            "fr": "Cookies",
+            "ar": "ملفات تعريف الارتباط"
+          },
+          "def": {
+            "en": "HttpOnly, SameSite, Secure over HTTPS",
+            "fr": "HttpOnly, SameSite, Secure sur HTTPS",
+            "ar": "HttpOnly وSameSite وSecure عبر HTTPS"
+          }
+        },
+        {
+          "term": {
+            "en": "Dependencies",
+            "fr": "Dépendances",
+            "ar": "التبعيات"
+          },
+          "def": {
+            "en": "No Composer, no CDN",
+            "fr": "Pas de Composer, pas de CDN",
+            "ar": "لا Composer ولا CDN"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "sc-report",
+      "tier": "e",
+      "focus": 3,
+      "title": {
+        "en": "Reporting a vulnerability",
+        "fr": "Signaler une vulnérabilité",
+        "ar": "الإبلاغ عن ثغرة"
+      },
+      "paragraphs": [
+        {
+          "en": "Write to the security contact published in security.txt. Tell us what you found, how to reproduce it and what it could expose. Do not access other people’s data, and do not run denial-of-service tests.",
+          "fr": "Écrivez au contact sécurité publié dans security.txt. Dites-nous ce que vous avez trouvé, comment le reproduire et ce que cela pourrait exposer. N’accédez pas aux données d’autrui et ne lancez pas de tests de déni de service.",
+          "ar": "راسل جهة الأمان المنشورة في security.txt. أخبرنا بما وجدت وكيف تعيد إنتاجه وما قد يكشفه. لا تصل إلى بيانات الآخرين ولا تجرِ اختبارات حجب الخدمة."
+        },
+        {
+          "en": "We acknowledge a report, fix what is real and credit the reporter if they wish. We do not threaten good-faith researchers.",
+          "fr": "Nous accusons réception, corrigeons ce qui est réel et citons la personne si elle le souhaite. Nous ne menaçons pas les chercheurs de bonne foi.",
+          "ar": "نؤكد استلام البلاغ ونصلح ما هو حقيقي وننسب الفضل للمبلّغ إن رغب. ولا نهدد الباحثين حسني النية."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "sc-final",
+      "gradient": "calm",
+      "title": {
+        "en": "Found a weakness? **Tell us first.**",
+        "fr": "Une faille ? **Dites-le-nous d’abord.**",
+        "ar": "وجدت ثغرة؟ **أخبرنا أولا.**"
+      },
+      "body": {
+        "en": "Responsible reports are read by a person and answered.",
+        "fr": "Les signalements responsables sont lus par une personne et reçoivent une réponse.",
+        "ar": "يقرأ شخص البلاغات المسؤولة ويرد عليها."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Report a vulnerability",
+            "fr": "Signaler une vulnérabilité",
+            "ar": "أبلغ عن ثغرة"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

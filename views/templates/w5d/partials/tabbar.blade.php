@@ -2,9 +2,10 @@
   $tbHere = rtrim($canonicalPath ?? '/', '/') ?: '/';
   $tbIn = \W5D\Account::signedIn() || \W5D\Auth::check();
   $tbAcct = \W5D\Account::check() ? url('/account/') : (\W5D\Auth::check() ? admin_url() : url('/account/login/'));
+  $tbCta = \W5D\Cta::for($tbHere);
   $tbItems = [
     ['home', 'house', url('/'), __('ux.tab_home'), $tbHere === '/'],
-    ['invest', 'coins', url('/checkout/'), __('ux.tab_invest'), (bool) preg_match('#^/(checkout|pricing|invest)#', $tbHere)],
+    [$tbCta['key'], $tbCta['icon'], link_to($tbCta['href']), $tbCta['tab'], $tbCta['current']],
   ];
 @endphp
 <nav class="w5-tabbar lg:hidden" aria-label="{{ __('ux.tab_label') }}" data-tabbar>

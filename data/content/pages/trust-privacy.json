@@ -1,149 +1,185 @@
 {
- "slug": "trust-privacy",
- "title": {
-  "en": "Privacy",
-  "fr": "Confidentialité",
-  "ar": "الخصوصية"
- },
- "description": {
-  "en": "What W5D collects, why, and for how long.",
-  "fr": "Ce que W5D recueille, pourquoi et pendant combien de temps.",
-  "ar": "ما الذي تجمعه W5D، ولماذا، وإلى متى تحتفظ به."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "pv-hero",
-   "variant": "classic",
-   "gradient": "calm",
-   "title": {
-    "en": "Privacy, **in plain terms.**",
-    "fr": "La confidentialité, **en termes clairs.**",
-    "ar": "الخصوصية، **بعبارات واضحة.**"
-   },
-   "lead": {
-    "en": "We collect what a form asks for, and nothing else. No third-party trackers, no CDN, no fonts from elsewhere.",
-    "fr": "Nous collectons les données demandées dans un formulaire, et rien de plus. Aucun traceur tiers, aucun CDN, aucune police provenant d’une source externe.",
-    "ar": "نجمع البيانات التي يطلبها النموذج، ولا شيء سواها. لا أدوات تتبّع تابعة لجهات خارجية، ولا شبكة توصيل محتوى (CDN)، ولا خطوط من مصادر خارجية."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Contact the privacy desk",
-      "fr": "Contacter le service chargé de la confidentialité",
-      "ar": "اتصل بمكتب الخصوصية"
-     },
-     "href": "/contact/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
+  "slug": "trust-privacy",
+  "title": {
     "en": "Privacy",
     "fr": "Confidentialité",
     "ar": "الخصوصية"
-   }
   },
-  {
-   "type": "prose",
-   "id": "pv-body",
-   "tier": "e",
-   "focus": 2,
-   "title": {
-    "en": "What we keep",
-    "fr": "Ce que nous conservons",
-    "ar": "البيانات التي نحتفظ بها"
-   },
-   "paragraphs": [
-    {
-     "en": "Form submissions are stored in our own database. We use one session cookie for security and one for your language choice.",
-     "fr": "Les réponses aux formulaires sont stockées dans notre propre base de données. Nous utilisons un cookie de session à des fins de sécurité et un autre pour mémoriser votre choix de langue.",
-     "ar": "تُخزَّن الطلبات المقدمة عبر النماذج في قاعدة بياناتنا الخاصة. نستخدم ملف تعريف ارتباط واحدًا للجلسة لأغراض الأمان، وآخر لاختيار اللغة."
-    },
-    {
-     "en": "Applicant data follows Organic Law 2004-63 and INPDP rules. You may ask for access, correction or deletion at {{ investor.contact }}.",
-     "fr": "Les données des candidats sont traitées conformément à la Loi organique 2004-63 et aux règles de l’INPDP. Vous pouvez demander l’accès à vos données, leur rectification ou leur suppression à {{ investor.contact }}.",
-     "ar": "تخضع بيانات المتقدمين للقانون الأساسي عدد 2004-63 وقواعد INPDP. يمكنك طلب الاطلاع على بياناتك أو تصحيحها أو حذفها عبر {{ investor.contact }}."
-    },
-    {
-     "en": "We do not sell data. We do not load third-party scripts.",
-     "fr": "Nous ne vendons pas de données. Nous ne chargeons aucun script tiers.",
-     "ar": "لا نبيع البيانات. ولا نحمّل نصوصًا برمجية تابعة لجهات خارجية."
-    }
-   ]
+  "description": {
+    "en": "What W5D collects, why, and for how long.",
+    "fr": "Ce que W5D recueille, pourquoi et pendant combien de temps.",
+    "ar": "ما الذي تجمعه W5D، ولماذا، وإلى متى تحتفظ به."
   },
-  {
-   "type": "definitions",
-   "id": "pv-key",
-   "tier": "x",
-   "focus": 2,
-   "title": {
-    "en": "Your data, in short",
-    "fr": "Vos données, en bref",
-    "ar": "بياناتك باختصار"
-   },
-   "items": [
+  "sections": [
     {
-     "term": {
-      "en": "What we keep",
-      "fr": "Ce que nous conservons",
-      "ar": "ما نحتفظ به"
-     },
-     "def": {
-      "en": "Your account, your pledges and applications, your QCM attempts and certificates, and the messages you send us.",
-      "fr": "Votre compte, vos engagements et candidatures, vos tentatives QCM et certificats, et les messages que vous nous envoyez.",
-      "ar": "حسابك والتزاماتك وطلباتك ومحاولات QCM وشهاداتك والرسائل التي ترسلها إلينا."
-     }
+      "type": "hero",
+      "id": "pv-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Privacy, **in plain terms.**",
+        "fr": "La confidentialité, **en termes clairs.**",
+        "ar": "الخصوصية، **بعبارات واضحة.**"
+      },
+      "lead": {
+        "en": "We collect what a form asks for, and nothing else. No third-party trackers, no CDN, no fonts from elsewhere.",
+        "fr": "Nous collectons les données demandées dans un formulaire, et rien de plus. Aucun traceur tiers, aucun CDN, aucune police provenant d’une source externe.",
+        "ar": "نجمع البيانات التي يطلبها النموذج، ولا شيء سواها. لا أدوات تتبّع تابعة لجهات خارجية، ولا شبكة توصيل محتوى (CDN)، ولا خطوط من مصادر خارجية."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Contact the privacy desk",
+            "fr": "Contacter le service chargé de la confidentialité",
+            "ar": "اتصل بمكتب الخصوصية"
+          },
+          "href": "/contact/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Privacy",
+        "fr": "Confidentialité",
+        "ar": "الخصوصية"
+      }
     },
     {
-     "term": {
-      "en": "What we never store",
-      "fr": "Ce que nous ne stockons jamais",
-      "ar": "ما لا نخزنه أبدا"
-     },
-     "def": {
-      "en": "Your password in clear text, or the management key of a subscription in readable form.",
-      "fr": "Votre mot de passe en clair, ni la clé de gestion d’un abonnement sous forme lisible.",
-      "ar": "كلمة مرورك نصا صريحا أو مفتاح إدارة اشتراك بصيغة مقروءة."
-     }
+      "type": "prose",
+      "id": "pv-body",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What we keep",
+        "fr": "Ce que nous conservons",
+        "ar": "البيانات التي نحتفظ بها"
+      },
+      "paragraphs": [
+        {
+          "en": "Form submissions are stored in our own database. We use one session cookie for security and one for your language choice.",
+          "fr": "Les réponses aux formulaires sont stockées dans notre propre base de données. Nous utilisons un cookie de session à des fins de sécurité et un autre pour mémoriser votre choix de langue.",
+          "ar": "تُخزَّن الطلبات المقدمة عبر النماذج في قاعدة بياناتنا الخاصة. نستخدم ملف تعريف ارتباط واحدًا للجلسة لأغراض الأمان، وآخر لاختيار اللغة."
+        },
+        {
+          "en": "Applicant data follows Organic Law 2004-63 and INPDP rules. You may ask for access, correction or deletion at {{ investor.contact }}.",
+          "fr": "Les données des candidats sont traitées conformément à la Loi organique 2004-63 et aux règles de l’INPDP. Vous pouvez demander l’accès à vos données, leur rectification ou leur suppression à {{ investor.contact }}.",
+          "ar": "تخضع بيانات المتقدمين للقانون الأساسي عدد 2004-63 وقواعد INPDP. يمكنك طلب الاطلاع على بياناتك أو تصحيحها أو حذفها عبر {{ investor.contact }}."
+        },
+        {
+          "en": "We do not sell data. We do not load third-party scripts.",
+          "fr": "Nous ne vendons pas de données. Nous ne chargeons aucun script tiers.",
+          "ar": "لا نبيع البيانات. ولا نحمّل نصوصًا برمجية تابعة لجهات خارجية."
+        }
+      ]
     },
     {
-     "term": {
-      "en": "Referral links",
-      "fr": "Liens de parrainage",
-      "ar": "روابط الإحالة"
-     },
-     "def": {
-      "en": "A click is counted with a hashed, short-lived marker and a cookie that lasts {{ affiliate.cookie_days }} days.",
-      "fr": "Un clic est compté avec un marqueur haché et éphémère et un cookie valable {{ affiliate.cookie_days }} jours.",
-      "ar": "تُحسب النقرة بعلامة مجزّأة قصيرة العمر وملف تعريف يدوم {{ affiliate.cookie_days }} يوما."
-     }
+      "type": "definitions",
+      "id": "pv-key",
+      "tier": "x",
+      "focus": 2,
+      "title": {
+        "en": "Your data, in short",
+        "fr": "Vos données, en bref",
+        "ar": "بياناتك باختصار"
+      },
+      "items": [
+        {
+          "term": {
+            "en": "What we keep",
+            "fr": "Ce que nous conservons",
+            "ar": "ما نحتفظ به"
+          },
+          "def": {
+            "en": "Your account, your pledges and applications, your QCM attempts and certificates, and the messages you send us.",
+            "fr": "Votre compte, vos engagements et candidatures, vos tentatives QCM et certificats, et les messages que vous nous envoyez.",
+            "ar": "حسابك والتزاماتك وطلباتك ومحاولات QCM وشهاداتك والرسائل التي ترسلها إلينا."
+          }
+        },
+        {
+          "term": {
+            "en": "What we never store",
+            "fr": "Ce que nous ne stockons jamais",
+            "ar": "ما لا نخزنه أبدا"
+          },
+          "def": {
+            "en": "Your password in clear text, or the management key of a subscription in readable form.",
+            "fr": "Votre mot de passe en clair, ni la clé de gestion d’un abonnement sous forme lisible.",
+            "ar": "كلمة مرورك نصا صريحا أو مفتاح إدارة اشتراك بصيغة مقروءة."
+          }
+        },
+        {
+          "term": {
+            "en": "Referral links",
+            "fr": "Liens de parrainage",
+            "ar": "روابط الإحالة"
+          },
+          "def": {
+            "en": "A click is counted with a hashed, short-lived marker and a cookie that lasts {{ affiliate.cookie_days }} days.",
+            "fr": "Un clic est compté avec un marqueur haché et éphémère et un cookie valable {{ affiliate.cookie_days }} jours.",
+            "ar": "تُحسب النقرة بعلامة مجزّأة قصيرة العمر وملف تعريف يدوم {{ affiliate.cookie_days }} يوما."
+          }
+        },
+        {
+          "term": {
+            "en": "Public certificate record",
+            "fr": "Fiche publique de certificat",
+            "ar": "سجل الشهادة العام"
+          },
+          "def": {
+            "en": "Shows service, level and dates. The holder’s name is masked.",
+            "fr": "Indique service, niveau et dates. Le nom du titulaire est masqué.",
+            "ar": "يعرض الخدمة والمستوى والتواريخ. اسم الحامل مخفي."
+          }
+        },
+        {
+          "term": {
+            "en": "Your rights",
+            "fr": "Vos droits",
+            "ar": "حقوقك"
+          },
+          "def": {
+            "en": "Ask to see, correct or delete your data by writing to the contact desk.",
+            "fr": "Demandez à voir, corriger ou supprimer vos données en écrivant au bureau de contact.",
+            "ar": "اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها بالكتابة إلى مكتب التواصل."
+          }
+        }
+      ]
     },
     {
-     "term": {
-      "en": "Public certificate record",
-      "fr": "Fiche publique de certificat",
-      "ar": "سجل الشهادة العام"
-     },
-     "def": {
-      "en": "Shows service, level and dates. The holder’s name is masked.",
-      "fr": "Indique service, niveau et dates. Le nom du titulaire est masqué.",
-      "ar": "يعرض الخدمة والمستوى والتواريخ. اسم الحامل مخفي."
-     }
-    },
-    {
-     "term": {
-      "en": "Your rights",
-      "fr": "Vos droits",
-      "ar": "حقوقك"
-     },
-     "def": {
-      "en": "Ask to see, correct or delete your data by writing to the contact desk.",
-      "fr": "Demandez à voir, corriger ou supprimer vos données en écrivant au bureau de contact.",
-      "ar": "اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها بالكتابة إلى مكتب التواصل."
-     }
+      "type": "cta",
+      "id": "pv-final",
+      "gradient": "calm",
+      "title": {
+        "en": "A question about **your data?**",
+        "fr": "Une question sur **vos données ?**",
+        "ar": "سؤال عن **بياناتك؟**"
+      },
+      "body": {
+        "en": "Write to the privacy desk. A person answers, and corrections are public.",
+        "fr": "Écrivez au bureau confidentialité. Une personne répond, et les corrections sont publiques.",
+        "ar": "راسل مكتب الخصوصية. يجيبك شخص، والتصحيحات علنية."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Contact the privacy desk",
+            "fr": "Contacter le bureau confidentialité",
+            "ar": "راسل مكتب الخصوصية"
+          },
+          "href": "/contact/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Declared limits",
+            "fr": "Limites déclarées",
+            "ar": "الحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "ghost"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

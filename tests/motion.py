@@ -18,7 +18,7 @@ with sync_playwright() as pw:
     for name, kw in (('desktop 1366', dict(viewport={'width': 1366, 'height': 800})),
                      ('phone 390', dict(viewport={'width': 390, 'height': 800}, is_mobile=True, has_touch=True))):
         print(name)
-        c = br.new_context(**kw); p = c.new_page(); errs = []
+        c = br.new_context(ignore_https_errors=True, **kw); p = c.new_page(); errs = []
         p.on('pageerror', lambda e: errs.append(str(e)))
         p.goto(BASE + '/pricing/'); p.wait_for_load_state('networkidle'); p.wait_for_timeout(1500)
         a = p.evaluate(ANIM)
@@ -37,7 +37,7 @@ with sync_playwright() as pw:
         c.close()
 
     print('desktop hover layer')
-    c = br.new_context(viewport={'width': 1366, 'height': 800}); p = c.new_page()
+    c = br.new_context(ignore_https_errors=True, viewport={'width': 1366, 'height': 800}); p = c.new_page()
     p.goto(BASE + '/'); p.wait_for_load_state('networkidle')
     card = p.locator('a.group').first; card.scroll_into_view_if_needed(); p.wait_for_timeout(900)
     card.hover(); p.wait_for_timeout(500)
@@ -46,7 +46,7 @@ with sync_playwright() as pw:
     c.close()
 
     print('OS reduce-motion = calm, with an opt-in')
-    c = br.new_context(viewport={'width': 1366, 'height': 800}, reduced_motion='reduce'); p = c.new_page()
+    c = br.new_context(ignore_https_errors=True, viewport={'width': 1366, 'height': 800}, reduced_motion='reduce'); p = c.new_page()
     p.goto(BASE + '/'); p.wait_for_load_state('networkidle'); p.wait_for_timeout(800)
     a = p.evaluate(ANIM)
     check('orbs still drift (slowly) under reduce', a.get('orbFloat', 0) >= 3, a)
@@ -63,7 +63,7 @@ with sync_playwright() as pw:
     print('chromeless pages work in a browser')
     for name, kw in (('desktop', dict(viewport={'width': 1366, 'height': 800})), ('phone', dict(viewport={'width': 390, 'height': 800}, is_mobile=True, has_touch=True))):
         for lang in ('en', 'ar'):
-            c = br.new_context(**kw); c.add_cookies([{'name': 'w5d_lang', 'value': lang, 'url': BASE}]); p = c.new_page()
+            c = br.new_context(ignore_https_errors=True, **kw); c.add_cookies([{'name': 'w5d_lang', 'value': lang, 'url': BASE}]); p = c.new_page()
             p.goto(BASE + '/account/login/'); p.wait_for_load_state('networkidle')
             check(f'{name} {lang}: minibar visible, no navbar/tab bar', p.locator('.w5-minibar').is_visible() and p.locator('nav.nav-solid').count() == 0 and p.locator('.w5-tabbar').count() == 0)
             top = p.evaluate("()=>document.querySelector('input[name=identifier]').getBoundingClientRect().top")

@@ -1,274 +1,306 @@
 {
- "slug": "footer",
- "columns": [
-  {
-   "heading": {
-    "en": "Programme",
-    "fr": "Programme",
-    "ar": "البرنامج"
-   },
-   "items": [
+  "slug": "footer",
+  "columns": [
     {
-     "label": {
-      "en": "Macro works",
-      "fr": "Grands chantiers",
-      "ar": "الأعمال الكبرى"
-     },
-     "href": "/macro-works/"
+      "heading": {
+        "en": "Programme",
+        "fr": "Programme",
+        "ar": "البرنامج"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Macro works",
+            "fr": "Grands chantiers",
+            "ar": "الأعمال الكبرى"
+          },
+          "href": "/macro-works/"
+        },
+        {
+          "label": {
+            "en": "130 services",
+            "fr": "130 services",
+            "ar": "130 خدمة"
+          },
+          "href": "/services/"
+        },
+        {
+          "label": {
+            "en": "Projects",
+            "fr": "Projets",
+            "ar": "المشروعات"
+          },
+          "href": "/projects/"
+        },
+        {
+          "label": {
+            "en": "Ontology",
+            "fr": "Ontologie",
+            "ar": "الأنطولوجيا"
+          },
+          "href": "/ontology/"
+        },
+        {
+          "label": {
+            "en": "Tunisia hub",
+            "fr": "Pôle tunisien",
+            "ar": "مركز تونس"
+          },
+          "href": "/countries/tunisia/"
+        }
+      ]
     },
     {
-     "label": {
-      "en": "130 services",
-      "fr": "130 services",
-      "ar": "130 خدمة"
-     },
-     "href": "/services/"
+      "heading": {
+        "en": "Learn and certify",
+        "fr": "Apprendre et certifier",
+        "ar": "تعلّم واعتمد"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Choose your door",
+            "fr": "Choisissez votre porte",
+            "ar": "اختر بابك"
+          },
+          "href": "/for/"
+        },
+        {
+          "label": {
+            "en": "Check eligibility",
+            "fr": "Vérifier l’admissibilité",
+            "ar": "تحقق من الأهلية"
+          },
+          "href": "/join/eligibility/"
+        },
+        {
+          "label": {
+            "en": "Register",
+            "fr": "S’inscrire",
+            "ar": "سجّل"
+          },
+          "href": "/app/register/"
+        },
+        {
+          "label": {
+            "en": "How it works",
+            "fr": "Comment ça marche",
+            "ar": "كيف يعمل"
+          },
+          "href": "/how-it-works/"
+        },
+        {
+          "label": {
+            "en": "Certification and QCM",
+            "fr": "Certification et QCM",
+            "ar": "الاعتماد واختبارات QCM"
+          },
+          "href": "/certification/"
+        },
+        {
+          "label": {
+            "en": "Verify a certificate",
+            "fr": "Vérifier un certificat",
+            "ar": "تحقق من شهادة"
+          },
+          "href": "/certification/verify/"
+        }
+      ]
     },
     {
-     "label": {
-      "en": "Projects",
-      "fr": "Projets",
-      "ar": "المشروعات"
-     },
-     "href": "/projects/"
+      "heading": {
+        "en": "Lead and partner",
+        "fr": "Diriger et collaborer",
+        "ar": "قيادة وشراكة"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Become a manager",
+            "fr": "Devenir gestionnaire",
+            "ar": "كن مديرًا"
+          },
+          "href": "/careers/managers/"
+        },
+        {
+          "label": {
+            "en": "Careers",
+            "fr": "Carrières",
+            "ar": "الوظائف"
+          },
+          "href": "/careers/"
+        },
+        {
+          "label": {
+            "en": "Partners",
+            "fr": "Partenaires",
+            "ar": "الشركاء"
+          },
+          "href": "/partners/"
+        },
+        {
+          "label": {
+            "en": "Affiliate programme",
+            "fr": "Programme d’affiliation",
+            "ar": "برنامج الإحالة"
+          },
+          "href": "/affiliate/"
+        }
+      ]
     },
     {
-     "label": {
-      "en": "Ontology",
-      "fr": "Ontologie",
-      "ar": "الأنطولوجيا"
-     },
-     "href": "/ontology/"
+      "heading": {
+        "en": "Invest",
+        "fr": "Investir",
+        "ar": "استثمر"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Invest today",
+            "fr": "Investir aujourd’hui",
+            "ar": "استثمر اليوم"
+          },
+          "href": "/checkout/"
+        },
+        {
+          "label": {
+            "en": "Daily subscription",
+            "fr": "Abonnement journalier",
+            "ar": "اشتراك يومي"
+          },
+          "href": "/subscription/"
+        },
+        {
+          "label": {
+            "en": "Progressive price",
+            "fr": "Tarif progressif",
+            "ar": "سعر تصاعدي"
+          },
+          "href": "/pricing/"
+        },
+        {
+          "label": {
+            "en": "Investor dossier",
+            "fr": "Dossier investisseur",
+            "ar": "ملف المستثمر"
+          },
+          "href": "/investors/"
+        },
+        {
+          "label": {
+            "en": "Manage a subscription",
+            "fr": "Gérer un abonnement",
+            "ar": "إدارة اشتراك"
+          },
+          "href": "/subscription/manage/"
+        }
+      ]
     },
     {
-     "label": {
-      "en": "Tunisia hub",
-      "fr": "Pôle tunisien",
-      "ar": "مركز تونس"
-     },
-     "href": "/countries/tunisia/"
-    },
-    {
-     "label": {
-      "en": "Team",
-      "fr": "Équipe",
-      "ar": "الفريق"
-     },
-     "href": "/team/"
+      "heading": {
+        "en": "Company and trust",
+        "fr": "Entreprise et confiance",
+        "ar": "الشركة والثقة"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "About",
+            "fr": "À propos",
+            "ar": "من نحن"
+          },
+          "href": "/about/"
+        },
+        {
+          "label": {
+            "en": "Team",
+            "fr": "Équipe",
+            "ar": "الفريق"
+          },
+          "href": "/team/"
+        },
+        {
+          "label": {
+            "en": "FAQ",
+            "fr": "FAQ",
+            "ar": "الأسئلة الشائعة"
+          },
+          "href": "/faq/"
+        },
+        {
+          "label": {
+            "en": "Contact",
+            "fr": "Contact",
+            "ar": "اتصل بنا"
+          },
+          "href": "/contact/"
+        },
+        {
+          "label": {
+            "en": "Declared limits",
+            "fr": "Limites déclarées",
+            "ar": "الحدود المعلنة"
+          },
+          "href": "/trust/statement/"
+        },
+        {
+          "label": {
+            "en": "5% sampling",
+            "fr": "Échantillonnage à 5 %",
+            "ar": "أخذ عينات بنسبة 5%"
+          },
+          "href": "/trust/sampling/"
+        },
+        {
+          "label": {
+            "en": "Privacy",
+            "fr": "Confidentialité",
+            "ar": "الخصوصية"
+          },
+          "href": "/trust/privacy/"
+        },
+        {
+          "label": {
+            "en": "Terms",
+            "fr": "Conditions",
+            "ar": "الشروط"
+          },
+          "href": "/trust/terms/"
+        },
+        {
+          "label": {
+            "en": "Security",
+            "fr": "Sécurité",
+            "ar": "الأمان"
+          },
+          "href": "/trust/security/"
+        },
+        {
+          "label": {
+            "en": "Corrections",
+            "fr": "Corrections",
+            "ar": "التصحيحات"
+          },
+          "href": "/trust/corrections/"
+        },
+        {
+          "label": {
+            "en": "Status",
+            "fr": "État",
+            "ar": "الحالة"
+          },
+          "href": "/status/"
+        },
+        {
+          "label": {
+            "en": "Sitemap",
+            "fr": "Plan du site",
+            "ar": "خريطة الموقع"
+          },
+          "href": "/sitemap/"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "heading": {
-    "en": "Invest",
-    "fr": "Investir",
-    "ar": "استثمر"
-   },
-   "items": [
-    {
-     "label": {
-      "en": "Invest today",
-      "fr": "Investir aujourd’hui",
-      "ar": "استثمر اليوم"
-     },
-     "href": "/checkout/"
-    },
-    {
-     "label": {
-      "en": "Daily subscription",
-      "fr": "Abonnement journalier",
-      "ar": "اشتراك يومي"
-     },
-     "href": "/subscription/"
-    },
-    {
-     "label": {
-      "en": "Progressive price",
-      "fr": "Tarif progressif",
-      "ar": "سعر تصاعدي"
-     },
-     "href": "/pricing/"
-    },
-    {
-     "label": {
-      "en": "Investor dossier",
-      "fr": "Dossier investisseur",
-      "ar": "ملف المستثمر"
-     },
-     "href": "/investors/"
-    },
-    {
-     "label": {
-      "en": "Manage a subscription",
-      "fr": "Gérer un abonnement",
-      "ar": "إدارة اشتراك"
-     },
-     "href": "/subscription/manage/"
-    }
-   ]
-  },
-  {
-   "heading": {
-    "en": "Join",
-    "fr": "Rejoindre",
-    "ar": "انضم"
-   },
-   "items": [
-    {
-     "label": {
-      "en": "Choose your door",
-      "fr": "Choisissez votre porte",
-      "ar": "اختر بابك"
-     },
-     "href": "/for/"
-    },
-    {
-     "label": {
-      "en": "Check eligibility",
-      "fr": "Vérifier l’admissibilité",
-      "ar": "تحقق من الأهلية"
-     },
-     "href": "/join/eligibility/"
-    },
-    {
-     "label": {
-      "en": "Register",
-      "fr": "S’inscrire",
-      "ar": "سجّل"
-     },
-     "href": "/app/register/"
-    },
-    {
-     "label": {
-      "en": "Become a manager",
-      "fr": "Devenir gestionnaire",
-      "ar": "كن مديرًا"
-     },
-     "href": "/careers/managers/"
-    },
-    {
-     "label": {
-      "en": "How it works",
-      "fr": "Comment ça marche",
-      "ar": "كيف يعمل"
-     },
-     "href": "/how-it-works/"
-    },
-    {
-     "label": {
-      "en": "Partners",
-      "fr": "Partenaires",
-      "ar": "الشركاء"
-     },
-     "href": "/partners/"
-    },
-    {
-     "label": {
-      "en": "Certification and QCM",
-      "fr": "Certification et QCM",
-      "ar": "الاعتماد واختبارات QCM"
-     },
-     "href": "/certification/"
-    },
-    {
-     "label": {
-      "en": "Affiliate programme",
-      "fr": "Programme d’affiliation",
-      "ar": "برنامج الإحالة"
-     },
-     "href": "/affiliate/"
-    },
-    {
-     "label": {
-      "en": "Verify a certificate",
-      "fr": "Vérifier un certificat",
-      "ar": "تحقق من شهادة"
-     },
-     "href": "/certification/verify/"
-    }
-   ]
-  },
-  {
-   "heading": {
-    "en": "Trust",
-    "fr": "Confiance",
-    "ar": "الثقة"
-   },
-   "items": [
-    {
-     "label": {
-      "en": "Declared limits",
-      "fr": "Limites déclarées",
-      "ar": "الحدود المعلنة"
-     },
-     "href": "/trust/statement/"
-    },
-    {
-     "label": {
-      "en": "5% sampling",
-      "fr": "Échantillonnage à 5 %",
-      "ar": "أخذ عينات بنسبة 5%"
-     },
-     "href": "/trust/sampling/"
-    },
-    {
-     "label": {
-      "en": "Privacy",
-      "fr": "Confidentialité",
-      "ar": "الخصوصية"
-     },
-     "href": "/trust/privacy/"
-    },
-    {
-     "label": {
-      "en": "Terms",
-      "fr": "Conditions",
-      "ar": "الشروط"
-     },
-     "href": "/trust/terms/"
-    },
-    {
-     "label": {
-      "en": "Security",
-      "fr": "Sécurité",
-      "ar": "الأمان"
-     },
-     "href": "/trust/security/"
-    },
-    {
-     "label": {
-      "en": "Corrections",
-      "fr": "Corrections",
-      "ar": "التصحيحات"
-     },
-     "href": "/trust/corrections/"
-    }
-   ]
-  },
-  {
-   "heading": {
-    "en": "Build",
-    "fr": "Construire",
-    "ar": "البناء"
-   },
-   "items": [
-    {
-     "label": {
-      "en": "Sitemap",
-      "fr": "Plan du site",
-      "ar": "خريطة الموقع"
-     },
-     "href": "/sitemap/"
-    },
-    {
-     "label": {
-      "en": "Status",
-      "fr": "État",
-      "ar": "الحالة"
-     },
-     "href": "/status/"
-    }
-   ]
-  }
- ]
+  ]
 }
