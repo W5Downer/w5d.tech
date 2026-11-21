@@ -2,6 +2,7 @@
 @section('title', $title . ' · W5D')
 @section('description', tr3('A W5D certificate.', 'Un certificat W5D.', 'شهادة W5D.'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php $ok = $rec['status'] === 'valid'; @endphp
 <section class="py-10 sm:py-14 cert-sheet-wrap">

@@ -93,6 +93,7 @@ return [
         'open' => 'Partager cette page', 'text' => 'W5D : cinq macro-travaux, 130 services, un parcours.',
     ],
     'ux' => [
+        'mini_home' => 'Accueil', 'mini_account' => 'Mon compte', 'mini_privacy' => 'Confidentialité', 'mini_terms' => 'Conditions', 'mini_help' => 'Aide', 'motion_full' => 'Les animations sont réduites par votre appareil. Activer toutes les animations', 'motion_auto' => 'Suivre le réglage de mon appareil (animations réduites)',
         'close' => 'Fermer', 'auth_title_login' => 'Connexion à W5D', 'auth_title_register' => 'Créez votre compte W5D',
         'auth_lead_login' => 'Reprenez où vous en étiez : vos parts, paiements et candidatures.',
         'auth_lead_register' => 'Un compte pour toutes les portes. Confirmation par e-mail requise.', 'auth_sending' => 'Veuillez patienter…',

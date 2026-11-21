@@ -71,6 +71,9 @@ with sync_playwright() as pw:
                     if tp:
                         add('warn', 'tap-target', path, vpn, lang, '; '.join(tp[:3]))
                     tb = pg.evaluate(JS_TABBAR)
+                    if path.startswith('/account/'):
+                        if tb['present']: add('error', 'tabbar-on-chromeless', path, vpn, lang, '')
+                        continue
                     if not tb['present']:
                         add('error', 'tabbar-missing', path, vpn, lang, '')
                     elif tb['bottom'] != 0:

@@ -4,7 +4,21 @@
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* The OS "reduce motion" switch is honoured by default (many desktops have it on without the owner knowing it).
+   * A visitor can opt back in with the footer button; that choice is stored in localStorage `w5d-motion`. */
+  var osReduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var reduce = osReduce && document.documentElement.getAttribute('data-motion') !== 'full';
+  $$('[data-motion-toggle]').forEach(function (b) {
+    if (!osReduce) return;
+    b.hidden = false;
+    var full = !reduce;
+    b.textContent = full ? b.getAttribute('data-label-auto') : b.getAttribute('data-label-full');
+    b.setAttribute('aria-pressed', full ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      try { if (full) localStorage.removeItem('w5d-motion'); else localStorage.setItem('w5d-motion', 'full'); } catch (e) {}
+      window.location.reload();
+    });
+  });
 
   /* ---------- theme ---------- */
   function syncThemeIcons() {
@@ -142,19 +156,22 @@
 
   /* ---------- reveal on scroll ---------- */
   var rv = $$('[data-rv],[data-reveal]');
-  if (rv.length && 'IntersectionObserver' in window && !reduce) {
+  function showRv(el) { el.classList.add('rv-in', 'is-visible'); }
+  if (rv.length && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('rv-in', 'is-visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
+      // threshold 0: a very tall block must still reveal; a block already scrolled past (anchor jump, restored scroll) must not stay hidden
+      es.forEach(function (e) { if (e.isIntersecting || e.boundingClientRect.top < 0) { showRv(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
     rv.forEach(function (el) { io.observe(el); });
-  } else rv.forEach(function (el) { el.classList.add('rv-in', 'is-visible'); });
+    setTimeout(function () { rv.forEach(showRv); }, 6000); // failsafe: content is never left invisible
+  } else rv.forEach(showRv);
 
   /* ---------- counters (values come from rollups/variables, rendered server-side in data-count) ---------- */
   var cs = $$('[data-count]');
   function runCount(el) {
     var to = parseFloat(el.getAttribute('data-count')) || 0, dec = parseInt(el.getAttribute('data-dec') || '0', 10);
     var suffix = el.getAttribute('data-suffix') || '';
-    if (reduce || to === 0) { el.textContent = to.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suffix; return; }
+    if (to === 0) { el.textContent = to.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suffix; return; }
     var t0 = null, dur = 1200;
     (function step(ts) {
       if (!t0) t0 = ts;

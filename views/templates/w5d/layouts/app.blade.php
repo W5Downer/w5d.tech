@@ -70,16 +70,26 @@
 <body class="bg-white text-slate-800 dark:bg-ink-950 dark:text-slate-200 transition-colors duration-300 antialiased">
   @include('partials.loader')
   <a class="skip-link" href="#main">{{ __('nav.skip') }}</a>
-  @include('partials.header')
+  @php $chromeless = $__env->hasSection('chromeless'); @endphp
+  @if($chromeless)
+    @include('partials.minibar')
+  @else
+    @include('partials.header')
+  @endif
   <main id="main" tabindex="-1">
     @yield('content')
   </main>
   @yield('sticky')
-  @include('partials.footer')
-  @include('partials.aside')
-  @include('partials.tabbar')
-  @include('partials.auth-dialog')
-  @include('partials.quickfind')
+  @if($chromeless)
+    @include('partials.footer-mini')
+    @include('partials.aside')
+  @else
+    @include('partials.footer')
+    @include('partials.aside')
+    @include('partials.tabbar')
+    @include('partials.auth-dialog')
+    @include('partials.quickfind')
+  @endif
   <script src="{{ asset('js/site.js') }}" defer></script>
   @include('partials.integrations')
   @stack('scripts')

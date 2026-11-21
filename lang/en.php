@@ -93,6 +93,7 @@ return [
         'open' => 'Share this page', 'text' => 'W5D: five macro works, 130 services, one path.',
     ],
     'ux' => [
+        'mini_home' => 'Home', 'mini_account' => 'My account', 'mini_privacy' => 'Privacy', 'mini_terms' => 'Terms', 'mini_help' => 'Help', 'motion_full' => 'Animations are reduced by your device. Turn full animations on', 'motion_auto' => 'Use my device setting (reduced animations)',
         'close' => 'Close', 'auth_title_login' => 'Sign in to W5D', 'auth_title_register' => 'Create your W5D account',
         'auth_lead_login' => 'Pick up where you left off: your parts, payments and applications.',
         'auth_lead_register' => 'One account for every door. E-mail confirmation required.', 'auth_sending' => 'Please wait…',

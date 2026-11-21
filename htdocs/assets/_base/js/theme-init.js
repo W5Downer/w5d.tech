@@ -2,6 +2,7 @@
 (function () {
   var d = document.documentElement, t = null, t0 = Date.now(), done = false;
   d.classList.add('js');
+  try { if (localStorage.getItem('w5d-motion') === 'full') d.setAttribute('data-motion', 'full'); } catch (e) {}
   try { t = localStorage.getItem('w5d-theme'); } catch (e) {}
   if (t === 'light') d.classList.remove('dark'); else d.classList.add('dark');
 

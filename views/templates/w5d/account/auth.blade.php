@@ -2,6 +2,7 @@
 @section('title', $title . ' · W5D')
 @section('description', __('acct.guest_lead'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php
   $providers = $providers ?? [];

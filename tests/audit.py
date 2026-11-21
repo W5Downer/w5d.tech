@@ -315,7 +315,10 @@ def audit_page(path, lang, pages):
     if (expect_prefix or expect_link) and not any(x for x in p.aria_current if x[0] == 'a' or x[0] == 'button' or x[0] == 'li'):
         add('error', 'menu-aria-current', path, lang, 'no aria-current anywhere in navigation for a page that is in the menu')
     # tab bar present
-    if 'w5-tabbar' not in body:
+    if 'w5-minibar' in body:
+        if 'w5-tabbar' in body or 'nav-solid' in body:
+            add('error', 'chromeless', path, lang, 'focused page still renders the navbar/tab bar')
+    elif 'w5-tabbar' not in body:
         add('warn', 'tabbar', path, lang, 'bottom tab bar missing')
     elif ap in ('/', '/checkout') or ap.startswith('/account'):
         if not any(x[0] == 'a' and 'tabbar' not in x[2] for x in p.aria_current):

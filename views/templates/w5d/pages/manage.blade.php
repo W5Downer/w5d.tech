@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', __('lbl.manage') . ' — W5D')
 @section('robots', 'noindex,follow')
+@section('chromeless', '1')
 @section('content')
   @foreach($sections as $s)@widget($s['type'], $s)@endforeach
   <x-section :d="['id' => 'mng-form', 'tier' => 'i', 'focus' => 3, 'title' => ['en' => 'Your subscription', 'fr' => 'Votre abonnement', 'ar' => 'اشتراكك']]">

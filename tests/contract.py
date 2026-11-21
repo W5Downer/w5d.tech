@@ -91,7 +91,7 @@ b = call(g, 'GET', '/')[2]
 check('home: the logo link is current, no mega-menu trigger is falsely marked', not re.search(r'<li data-mega-trigger[^>]*data-active', b))
 
 section('phone tab bar: the current tab is marked')
-for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/checkout/'), ('/account/login/', '/account/login/'), ('/services/', None)):
+for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/checkout/'), ('/services/', None)):
     b = call(g, 'GET', path)[2]
     nav = re.search(r'<nav class="w5-tabbar.*?</nav>', b, re.S)
     nav = nav.group(0) if nav else ''
@@ -100,4 +100,22 @@ for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/ch
         check(f'tab bar on {path}: no tab is falsely current', len(cur) == 0, cur)
     else:
         check(f'tab bar on {path}: exactly one current tab, pointing at {href}', cur == [href], cur)
+
+section('chromeless pages: slim bar, no navbar / tab bar / mega menu; everything else keeps the full chrome')
+for path in ('/account/login/', '/account/register/', '/account/forgot/'):
+    b = call(g, 'GET', path)[2]
+    check(f'{path}: minibar present', 'w5-minibar' in b)
+    check(f'{path}: no navbar, tab bar, mega menu or quick-find', not any(k in b for k in ('nav-solid', 'w5-tabbar', 'data-mega-trigger', 'quickDialog')))
+    check(f'{path}: language + theme controls still reachable', 'data-aside-open="aside-lang"' in b and 'data-theme-toggle' in b)
+for path in ('/', '/pricing/', '/certification/verify/', '/no-such-page/'):
+    b = call(g, 'GET', path)[2]
+    check(f'{path}: keeps the full navbar and tab bar', 'nav-solid' in b and 'w5-tabbar' in b and 'w5-minibar' not in b)
+
+section('reveal on scroll: sections carry data-rv, and nothing stays hidden without JS')
+b = call(g, 'GET', '/pricing/')[2]
+check('sections emit data-rv', b.count('data-rv="up"') >= 3, b.count('data-rv'))
+css = call(g, 'GET', '/assets/_base/css/attention.css')[2]
+check('reveal hiding only applies under .js', '.js [data-rv]' in css and '\n[data-rv]{' not in css)
+check('reduced motion is calm, not off (orbs slowed, reveal fade-only)', 'animation-duration: 40s' in css and 'data-motion="full"' in css)
+check('footer offers the full-motion opt-in', 'data-motion-toggle' in call(g, 'GET', '/')[2])
 finish('contract')

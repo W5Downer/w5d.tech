@@ -2,6 +2,7 @@
 @section('title', tr3('Unsubscribe', 'Se désabonner', 'إلغاء الاشتراك') . ' · W5D')
 @section('description', tr3('Manage W5D dated-update e-mails.', 'Gérer les e-mails de mises à jour datées W5D.', 'إدارة رسائل تحديثات W5D المؤرخة.'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php
   $state = $state ?? 'invalid';
