@@ -9,10 +9,18 @@
   [tr3('Starts', 'Début', 'البدء'), $start],
   [tr3('Total of the schedule', 'Total du calendrier', 'مجموع الجدول'), number_format((float)$total, 2) . ' ' . $currency],
 ]" />
+@if(!empty($method))
+<h2 class="t-main" style="font-size:18px;margin:24px 0 8px;color:#0f172a;">{{ tr3('Pay with', 'Payer avec', 'الدفع عبر') }} {{ $method_name }}</h2>
+@if(!empty($manual))
 @if(!empty($d17))
-<h2 class="t-main" style="font-size:18px;margin:24px 0 8px;color:#0f172a;">{{ tr3('Pay with D17 (Tunisia)', 'Payer avec D17 (Tunisie)', 'الدفع عبر D17 (تونس)') }}</h2>
 <x-mail-p>{{ tr3('Send', 'Envoyez', 'أرسل') }} <strong>{{ number_format((float)$d17['amount'], 2) }} {{ $currency }}</strong> {{ tr3('by D17 to', 'par D17 au', 'عبر D17 إلى الرقم') }} <strong dir="ltr">{{ $d17['gsm'] }}</strong>@if(!empty($d17['name'])) ({{ $d17['name'] }})@endif.</x-mail-p>
-<x-mail-note tone="info">{{ tr3('Then enter the D17 transaction reference on the payment page. An administrator verifies it by hand; your pledge stays “awaiting verification” until then.', 'Saisissez ensuite la référence de transaction D17 sur la page de paiement. Un administrateur la vérifie manuellement ; votre engagement reste « en attente de vérification » d’ici là.', 'ثم أدخل مرجع عملية D17 في صفحة الدفع. يتحقق منها مسؤول يدويا؛ ويبقى التزامك «بانتظار التحقق» حتى ذلك الحين.') }}</x-mail-note>
+@elseif(!empty($manual_rows))
+<x-mail-box :rows="array_map(fn($r) => [$r[0], $r[1]], $manual_rows)" />
+@endif
+<x-mail-note tone="info">{{ tr3('Then enter your transaction reference on the payment page. An administrator verifies it by hand; your pledge stays “awaiting verification” until then.', 'Saisissez ensuite votre référence de transaction sur la page de paiement. Un administrateur la vérifie manuellement ; votre engagement reste « en attente de vérification » d’ici là.', 'ثم أدخل مرجع عمليتك في صفحة الدفع. يتحقق منها مسؤول يدويا؛ ويبقى التزامك «بانتظار التحقق» حتى ذلك الحين.') }}</x-mail-note>
+@else
+<x-mail-note tone="info">{{ tr3('You pay on the provider’s secure page. Your order is confirmed only when the provider confirms the payment to our server.', 'Vous payez sur la page sécurisée du prestataire. Votre commande n’est confirmée que lorsque celui-ci confirme le paiement à notre serveur.', 'تدفع على صفحة المزوّد الآمنة. لا يُؤكَّد طلبك إلا عندما يؤكد المزوّد الدفع لخادمنا.') }}</x-mail-note>
+@endif
 <x-mail-button :href="$pay_url" :label="tr3('Open the payment page', 'Ouvrir la page de paiement', 'افتح صفحة الدفع')" />
 @else
 <x-mail-note tone="info">{{ tr3('Demo mode: no payment is taken and no money moves.', 'Mode démo : aucun paiement n’est prélevé.', 'الوضع التجريبي: لا يُحصَّل أي دفع ولا تتحرك أموال.') }}</x-mail-note>

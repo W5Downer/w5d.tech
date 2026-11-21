@@ -100,8 +100,8 @@
         @else
           <ul class="mt-6 space-y-3">@foreach($d['pays'] as $p)
             <li class="rounded-2xl border border-slate-200 dark:border-white/10 p-4 flex flex-wrap items-center gap-3 justify-between">
-              <div><p class="font-mono text-sm">{{ $p['ref'] }} · {{ $p['order_ref'] }}</p><p class="text-xs text-slate-500">D17 · {{ number_format((float)$p['amount'], 2) }} {{ $p['currency'] }} · {{ $p['created_at'] }}</p>@if(!empty($p['note']))<p class="text-xs mt-1">{{ $p['note'] }}</p>@endif</div>
-              <div class="flex items-center gap-3"><span class="rounded-full px-2 py-0.5 text-xs {{ $stl($p['status']) }}">{{ $stx($p['status']) }}</span>@if($p['status'] !== 'verified')<a class="btn-ghost text-sm" href="{{ \W5D\Payments::link($p['order_ref']) }}">{{ __('acct.pay_d17') }}</a>@endif</div>
+              <div><p class="font-mono text-sm">{{ $p['ref'] }} · {{ $p['order_ref'] }}</p><p class="text-xs text-slate-500">{{ \W5D\Gateways::short($p['method'] ?? 'd17') }} · {{ number_format((float)$p['amount'], 2) }} {{ $p['currency'] }} · {{ $p['created_at'] }}</p>@if(!empty($p['note']))<p class="text-xs mt-1">{{ $p['note'] }}</p>@endif</div>
+              <div class="flex items-center gap-3"><span class="rounded-full px-2 py-0.5 text-xs {{ $stl($p['status']) }}">{{ $stx($p['status']) }}</span>@if($p['status'] !== 'verified')<a class="btn-ghost text-sm" href="{{ \W5D\Payments::link($p['order_ref']) }}">{{ __('acct.pay_open') }}</a>@endif</div>
             </li>@endforeach</ul>
         @endif
 

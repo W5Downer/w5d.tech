@@ -11,7 +11,7 @@ PHP 8.4 + SQLite CMS. No framework, no Composer, no CDN, no jQuery. Written 2026
 | `views/templates/w5d/` | The single Blade-style template (layouts, pages, account, admin, components, mail) |
 | `data/content/` | Page/nav JSON, one file per page; every leaf is `{en,fr,ar}` |
 | `data/qcm/` | QCM bank, one JSON file per service (130 files, demo 5,200 questions) |
-| `config/` | `app.php`, `variables.php` (single source of numbers), `roles.php` (roles + 36 menus), `resources.php` (CRUD), `mail.php`, `certification.php`, `apidocs/*`, `oauth.php`, `social.php` |
+| `config/` | `app.php`, `variables.php` (single source of numbers), `roles.php` (roles + 37 menus), `resources.php` (CRUD), `mail.php`, `certification.php`, `apidocs/*`, `oauth.php`, `social.php` |
 | `lang/` | UI strings en/fr/ar; the linter enforces identical keys |
 | `db/migrations/` | `001`..`006` SQL migrations applied by `Migrator` |
 | `storage/` | SQLite DB, logs (`mail-*.log`), view cache, incoming uploads (gitignored) |
@@ -41,7 +41,7 @@ PHP 8.4 + SQLite CMS. No framework, no Composer, no CDN, no jQuery. Written 2026
 - Language: cookie `w5d_lang` or `/language/{code}`. `?lang=` and `/ar/` prefixes are not supported. Arabic renders RTL.
 
 ## 4. Auth, ACL, CRUD
-- **Owner and staff:** `Auth`, portal at `/{ADMIN_URL_PATH}` (default `panel-x9z`), 36 menus defined in `config/roles.php`, permission checks via `ACL::can` and `Auth::require($perm)`.
+- **Owner and staff:** `Auth`, portal at `/{ADMIN_URL_PATH}` (default `panel-x9z`), 37 menus defined in `config/roles.php`, permission checks via `ACL::can` and `Auth::require($perm)`.
 - **Public accounts:** `Account`, `$_SESSION['acct']`, e-mail verification, roles user/customer/investor/member/leader/manager (investor/leader/member/customer/user appear as `Pages::AUDIENCES`, along with owner and admin).
 - **CRUD:** `config/resources.php` + `src/Crud.php` generate list/edit/delete screens with ACL. Every POST carries a CSRF token (`Csrf`). Password hashes and tokens are never selected for display.
 - Rate limiting: `RateLimit` (login, certificate verify, QCM answers).

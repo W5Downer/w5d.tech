@@ -5,6 +5,7 @@ Control:  POST /_set/<id>  {"status": "...", "amount": n}     Inspect: GET /_log
 import json, sys, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8097
 PAY = {}      # id -> {"provider","status","amount","req"}
 LOG = []
 KEYS = {'flouci': 'PUBTOKEN123:PRIVTOKEN456', 'konnect': 'konnect-api-key-1', 'paymee': 'paymee-token-1'}
@@ -52,16 +53,16 @@ class H(BaseHTTPRequestHandler):
         if p == '/api/v2/generate_payment':
             if not self._auth('flouci'): return self._send(401, {'success': False})
             i = uuid.uuid4().hex[:16]; PAY[i] = {'provider': 'flouci', 'status': 'PENDING', 'amount': int(b.get('amount', 0)), 'req': b}; LOG.append({'p': 'flouci', 'id': i, 'req': b})
-            return self._send(200, {'success': True, 'result': {'link': f'http://127.0.0.1:8099/hosted/{i}', 'payment_id': i}})
+            return self._send(200, {'success': True, 'result': {'link': f'http://127.0.0.1:{PORT}/hosted/{i}', 'payment_id': i}})
         if p == '/konnect/payments/init-payment':
             if not self._auth('konnect'): return self._send(401, {})
             i = uuid.uuid4().hex[:16]; PAY[i] = {'provider': 'konnect', 'status': 'pending', 'amount': int(b.get('amount', 0)), 'req': b}; LOG.append({'p': 'konnect', 'id': i, 'req': b})
-            return self._send(200, {'payUrl': f'http://127.0.0.1:8099/hosted/{i}', 'paymentRef': i})
+            return self._send(200, {'payUrl': f'http://127.0.0.1:{PORT}/hosted/{i}', 'paymentRef': i})
         if p == '/paymee/payments/create':
             if not self._auth('paymee'): return self._send(401, {'status': False})
             i = uuid.uuid4().hex[:20]; PAY[i] = {'provider': 'paymee', 'status': 'unpaid', 'amount': b.get('amount'), 'req': b}; LOG.append({'p': 'paymee', 'id': i, 'req': b})
-            return self._send(200, {'status': True, 'data': {'payment_url': f'http://127.0.0.1:8099/hosted/{i}', 'token': i}})
+            return self._send(200, {'status': True, 'data': {'payment_url': f'http://127.0.0.1:{PORT}/hosted/{i}', 'token': i}})
         self._send(404, {})
 
 if __name__ == '__main__':
-    ThreadingHTTPServer(('127.0.0.1', int(sys.argv[1]) if len(sys.argv) > 1 else 8099), H).serve_forever()
+    ThreadingHTTPServer(('127.0.0.1', PORT), H).serve_forever()
