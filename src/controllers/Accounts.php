@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Gateways, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
+use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Gateways, Integrations, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
 
 /** Public accounts: sign in/up, e-mail verification, password reset, social login, user dashboard, D17 payment page. */
 final class Accounts
@@ -47,12 +47,17 @@ final class Accounts
         return Response::redirect(url($back));
     }
 
+    /** Guard buckets that an anonymous visitor can submit: these require the reCAPTCHA token when it is enabled. */
+    public const CAPTCHA_BUCKETS = ['acct-login', 'acct-register', 'acct-resend', 'acct-forgot', 'acct-reset-set'];
+
     public static function guard(Request $q, string $bucket, string $back, int $max = 10, int $win = 600): ?Response
     {
         if (!Csrf::check($q)) return self::bounce($q, $back, ['_form' => self::m('Session expired. Reload and try again.', 'Session expirée. Rechargez et réessayez.', 'انتهت الجلسة. أعد التحميل وحاول مجددا.')]);
         if (!empty($q->post['website'])) return Response::redirect(url($back));
         if (!DB::available()) return self::bounce($q, $back, ['_form' => self::m('The service is temporarily unavailable.', 'Le service est momentanément indisponible.', 'الخدمة غير متاحة مؤقتا.')]);
         if (!RateLimit::hit($bucket . ':' . $q->ip(), $max, $win)) return self::bounce($q, $back, ['_form' => self::m('Too many attempts. Try again later.', 'Trop de tentatives. Réessayez plus tard.', 'محاولات كثيرة. حاول لاحقا.')]);
+        // reCAPTCHA only on the forms an anonymous visitor can reach; signed-in actions (profile, QCM, payouts…) are CSRF + session protected.
+        if (in_array($bucket, self::CAPTCHA_BUCKETS, true) && Integrations::captcha($q) !== null) return self::bounce($q, $back, ['_form' => Integrations::message()]);
         return null;
     }
 

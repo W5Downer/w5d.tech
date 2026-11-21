@@ -123,4 +123,12 @@ return [
         'crud_back' => 'Retour à la liste', 'crud_new_title' => 'Nouvel enregistrement', 'crud_edit_title' => 'Modifier l’enregistrement', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Rôles et ce que chacun peut faire',
         'crud_read' => 'Lire', 'crud_create_l' => 'Créer', 'crud_update_l' => 'Modifier', 'crud_delete_l' => 'Supprimer', 'crud_yes' => 'oui', 'crud_own' => 'lignes propres',
     ],
+    'consent' => [
+        'title' => 'Cookies et mesure d’audience', 'accept' => 'Accepter', 'refuse' => 'Refuser', 'settings' => 'Paramètres des cookies',
+        'body' => 'Avec votre accord, nous utilisons des outils Google et Meta pour compter les visites et mesurer nos publicités. Rien n’est chargé avant votre choix, et refuser ne change rien d’autre sur le site. Voir la [page confidentialité](/trust/privacy/).',
+    ],
+    'captcha' => [
+        'notice' => 'Protégé par Google reCAPTCHA : sa [politique de confidentialité](https://policies.google.com/privacy) et ses [conditions](https://policies.google.com/terms) s’appliquent.',
+        'required' => 'Veuillez d’abord cocher « Je ne suis pas un robot ».',
+    ],
 ];

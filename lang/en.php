@@ -120,4 +120,12 @@ return [
         'crud_back' => 'Back to the list', 'crud_new_title' => 'New record', 'crud_edit_title' => 'Edit record', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Roles and what each can do',
         'crud_read' => 'Read', 'crud_create_l' => 'Create', 'crud_update_l' => 'Update', 'crud_delete_l' => 'Delete', 'crud_yes' => 'yes', 'crud_own' => 'own rows',
     ],
+    'consent' => [
+        'title' => 'Cookies and measurement', 'accept' => 'Accept', 'refuse' => 'Refuse', 'settings' => 'Cookie settings',
+        'body' => 'With your consent we use Google and Meta tools to count visits and measure our ads. Nothing is loaded before you choose, and refusing changes nothing else on the site. See the [privacy page](/trust/privacy/).',
+    ],
+    'captcha' => [
+        'notice' => 'Protected by Google reCAPTCHA: its [privacy policy](https://policies.google.com/privacy) and [terms](https://policies.google.com/terms) apply.',
+        'required' => 'Please tick “I am not a robot” first.',
+    ],
 ];

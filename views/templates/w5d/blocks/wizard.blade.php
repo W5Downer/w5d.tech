@@ -15,6 +15,7 @@
     {!! csrf_field() !!}
     <input type="hidden" name="mode" value="{{ $mode }}">
     <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+    {!! \W5D\Integrations::field() !!}
     <ol class="flex items-center gap-3 mb-8" aria-label="{{ __('lbl.step') }}">
       @foreach([1 => __('lbl.step_details'), 2 => __('lbl.step_parts'), 3 => __('lbl.step_review')] as $i => $lbl)
         <li class="flex items-center gap-2 text-sm"><span class="wz-dot" data-wz-dot>{{ $i }}</span><span class="hidden sm:inline">{{ $lbl }}</span></li>

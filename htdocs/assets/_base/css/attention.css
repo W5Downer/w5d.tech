@@ -676,3 +676,13 @@ a[data-active-link] .font-semibold{color:#6d28d9}
   .card-car-btn{width:2.5rem;height:2.5rem}
   .w5-slider [data-prev],.w5-slider [data-next]{min-width:2.5rem;min-height:2.5rem}
 }
+
+/* ---------- Cookie / measurement consent bar (shown only when a tracking integration is live) ---------- */
+.w5-consent{position:fixed;inset-inline:.75rem;bottom:.75rem;z-index:60;max-width:34rem;margin-inline:auto;padding:1rem 1.1rem;border-radius:1rem;background:rgba(255,255,255,.98);color:#0f172a;border:1px solid rgba(15,23,42,.15);box-shadow:0 18px 50px -18px rgba(0,0,0,.45)}
+.dark .w5-consent{background:rgba(10,10,24,.98);color:#e2e8f0;border-color:rgba(255,255,255,.14)}
+.w5-consent[hidden]{display:none}
+@media(max-width:1023px){.w5-consent{bottom:calc(4rem + env(safe-area-inset-bottom))}}
+@media(min-width:1024px){.w5-consent{inset-inline-start:auto;inset-inline-end:1.25rem;margin-inline:0}}
+.w5-consent a{text-decoration:underline}
+.w5-captcha{min-height:4.9rem}
+.grecaptcha-badge{visibility:visible}

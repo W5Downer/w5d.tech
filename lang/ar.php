@@ -117,4 +117,12 @@ return [
         'crud_back' => 'العودة إلى القائمة', 'crud_new_title' => 'سجل جديد', 'crud_edit_title' => 'تعديل السجل', 'crud_perms' => 'الصلاحيات', 'crud_matrix' => 'الأدوار وما يستطيع كل منها',
         'crud_read' => 'قراءة', 'crud_create_l' => 'إنشاء', 'crud_update_l' => 'تعديل', 'crud_delete_l' => 'حذف', 'crud_yes' => 'نعم', 'crud_own' => 'صفوفه فقط',
     ],
+    'consent' => [
+        'title' => 'ملفات تعريف الارتباط والقياس', 'accept' => 'أوافق', 'refuse' => 'أرفض', 'settings' => 'إعدادات ملفات الارتباط',
+        'body' => 'بموافقتك نستخدم أدوات Google وMeta لعدّ الزيارات وقياس إعلاناتنا. لا يُحمَّل شيء قبل اختيارك، ورفضك لا يغيّر أي شيء آخر في الموقع. انظر [صفحة الخصوصية](/trust/privacy/).',
+    ],
+    'captcha' => [
+        'notice' => 'محمي بواسطة Google reCAPTCHA: تنطبق [سياسة الخصوصية](https://policies.google.com/privacy) و[الشروط](https://policies.google.com/terms).',
+        'required' => 'يرجى أولا تحديد «أنا لست روبوتا».',
+    ],
 ];

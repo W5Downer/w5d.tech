@@ -25,6 +25,7 @@
     <div class="mt-12 pt-6 border-t border-slate-200/60 dark:border-white/5 text-xs text-slate-500 space-y-1">
       <p>{{ __('footer.rights') }}</p>
       <p>{{ __('footer.license') }}</p>
+      @if(!empty((\W5D\Integrations::pageConfig() ?? [])['track']))<p><button type="button" class="btn-link text-xs" data-consent-open>{{ __('consent.settings') }}</button></p>@endif
     </div>
   </div>
 </footer>

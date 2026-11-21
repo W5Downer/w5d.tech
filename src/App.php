@@ -26,6 +26,7 @@ final class App
 
     public static function handle(Request $req): Response
     {
+        Integrations::setPath($req->path);
         Affiliate::track($req); // ?ref=CODE: first-touch cookie + one click per visitor per day (never throws)
         try {
             $res = self::router()->dispatch($req);
@@ -39,7 +40,7 @@ final class App
             'X-Frame-Options' => 'SAMEORIGIN',
             'Referrer-Policy' => 'strict-origin-when-cross-origin',
             'Permissions-Policy' => 'camera=(), microphone=(), geolocation=()',
-            'Content-Security-Policy' => "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'",
+            'Content-Security-Policy' => Integrations::csp($req->path),
         ];
         // HSTS only in production and only when the public origin is https (never lock a dev/http host into https).
         if (Env::get('APP_ENV') === 'production' && str_starts_with((string)Env::get('APP_URL', ''), 'https://')) $res->headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
@@ -196,6 +197,7 @@ final class App
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
         $r->post($m . '/payment-methods/save', [Admin::class, 'savePayMethods']);
+        $r->post($m . '/integrations/save', [Admin::class, 'saveIntegrations']);
         // QCM bank / review, affiliates, certificates (src/controllers/Programs.php)
         $r->get($m . '/qcm-bank/export', [Programs::class, 'bankExport']);
         foreach (['save' => 'bankSave', 'toggle' => 'bankToggle', 'delete' => 'bankDelete', 'import' => 'bankImport'] as $seg => $fn) $r->post($m . '/qcm-bank/' . $seg, [Programs::class, $fn]);

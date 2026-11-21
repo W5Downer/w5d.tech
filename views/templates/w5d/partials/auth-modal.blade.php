@@ -24,6 +24,7 @@
     <form method="post" action="{{ url('/account/login/') . $nextQ }}" class="mt-4 space-y-4" data-auth-form novalidate>
       {!! csrf_field() !!}
       <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+      {!! \W5D\Integrations::field() !!}
       {!! $F('identifier', __('acct.id_label'), 'text', 'username') !!}
       {!! $F('password', __('acct.password'), 'password', 'current-password') !!}
       <label class="flex items-start gap-3 text-sm" for="am-remember"><input type="checkbox" id="am-remember" name="remember" value="1" class="mt-1"><span>{{ __('acct.remember') }}</span></label>
@@ -34,6 +35,7 @@
     <form method="post" action="{{ url('/account/register/') . $nextQ }}" class="mt-4 space-y-4" data-auth-form novalidate>
       {!! csrf_field() !!}
       <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+      {!! \W5D\Integrations::field() !!}
       {!! $F('name', __('acct.name'), 'text', 'name') !!}
       {!! $F('email', __('acct.email'), 'email', 'email') !!}
       <div data-field="role"><label for="am-role" class="block text-sm font-medium mb-1">{{ __('acct.role') }}</label>

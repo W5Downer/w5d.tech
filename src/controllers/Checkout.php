@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, Gateways, Gate, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
+use W5D\{Content, Csrf, DB, Gateways, Gate, Integrations, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
 
 /** Investor demo flows: pledge checkout, daily subscription, management by reference + key. No money moves in demo mode. */
 final class Checkout
@@ -124,6 +124,7 @@ final class Checkout
         Gate::bind($q);
         $g = Forms::guard($q, 'checkout', 10, 600);
         if ($g === 'bot') return Response::redirect(url($back));
+        if ($g === 'captcha') { $_SESSION['_errors'] = ['_form' => Integrations::message()]; $_SESSION['_old'] = array_map(fn($v) => is_scalar($v) ? (string)$v : '', array_diff_key($q->post, ['_csrf' => 1, 'website' => 1, 'g-recaptcha-response' => 1])); $_SESSION['_flash_error'] = 'captcha'; return Response::redirect(url($back)); }
         if ($g) { $_SESSION['_flash_error'] = $g; return Response::redirect(url($back)); }
         $x = self::core($q->post, $mode);
         if (!$x['ok']) {
@@ -217,6 +218,7 @@ final class Checkout
         if ($q->isPost()) {
             if (!Csrf::check($q)) $msg = $L('Session expired. Reload and try again.', 'Session expirée. Rechargez et réessayez.', 'انتهت الجلسة. أعد التحميل وحاول مجددا.');
             elseif (!\W5D\RateLimit::hit('manage:' . $q->ip(), 10, 600)) $msg = $L('Too many attempts. Try again later.', 'Trop de tentatives. Réessayez plus tard.', 'محاولات كثيرة. حاول لاحقا.');
+            elseif (Integrations::captcha($q) !== null) $msg = Integrations::message();
             else {
                 $ref = Forms::str($q->post, 'ref', 20); $key = Forms::str($q->post, 'key', 40);
                 $sub = DB::available() ? self::findSub($ref, $key) : null;

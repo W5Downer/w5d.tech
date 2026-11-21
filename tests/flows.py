@@ -184,7 +184,7 @@ check('dashboard renders Command Center', s == 200 and 'Command Center' in t, f'
 tok = (re.search(r'name="_csrf" value="([0-9a-f]+)"', t) or [None, ''])[1]
 ADMIN_MENUS = ['countries', 'regions-hubs', 'campaigns', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality',
                'progressive-pricing', 'payroll', 'investors', 'communications', 'support', 'content', 'variables', 'users', 'reports', 'compliance', 'audit', 'system',
-               'manager-applications', 'subscriptions', 'payments-d17', 'payment-methods', 'mail-outbox', 'api-docs', 'inbox']
+               'manager-applications', 'subscriptions', 'payments-d17', 'payment-methods', 'integrations', 'mail-outbox', 'api-docs', 'inbox']
 for page in ADMIN_MENUS:
     s, h, t2 = call(c, 'GET', f'{M}/{page}/')
     check(f'admin menu /{page}/ renders (no placeholder, no secrets)', s == 200 and 'Read-only preview' not in t2 and 'ships with the next iteration' not in t2 and 'password_hash' not in t2 and '$argon2' not in t2, str(s))

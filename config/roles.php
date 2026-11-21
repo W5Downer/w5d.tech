@@ -54,5 +54,6 @@ return [
         ['n' => 35, 'slug' => 'affiliates',          'icon' => 'share-2',          'perm' => 'affiliates',  'label' => ['en' => 'Affiliates', 'fr' => 'Affiliés', 'ar' => 'المُحيلون']],
         ['n' => 36, 'slug' => 'certificates',        'icon' => 'award',            'perm' => 'certificates','label' => ['en' => 'Certificates', 'fr' => 'Certificats', 'ar' => 'الشهادات']],
         ['n' => 37, 'slug' => 'payment-methods',     'icon' => 'wallet',           'perm' => 'payment-methods','label' => ['en' => 'Payment methods', 'fr' => 'Moyens de paiement', 'ar' => 'وسائل الدفع']],
+        ['n' => 38, 'slug' => 'integrations',        'icon' => 'plug',             'perm' => 'integrations', 'label' => ['en' => 'Integrations', 'fr' => 'Intégrations', 'ar' => 'التكاملات']],
     ],
 ];

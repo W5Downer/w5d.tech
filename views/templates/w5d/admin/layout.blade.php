@@ -57,5 +57,6 @@
     @yield('content')
   @endauth
   <script src="{{ asset('js/site.js') }}" defer></script>
+  @include('partials.integrations')
 </body>
 </html>

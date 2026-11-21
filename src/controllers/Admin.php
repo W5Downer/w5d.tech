@@ -38,6 +38,7 @@ final class Admin
         $error = null;
         if ($q->isPost()) {
             if (!Csrf::check($q)) $error = __('msg.csrf');
+            elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $error = t(\W5D\Integrations::message());
             elseif (Auth::attempt((string)($q->post['username'] ?? ''), (string)($q->post['password'] ?? ''), $q->ip())) return Response::redirect(admin_url());
             else $error = 'Invalid credentials or too many attempts.';
         }
@@ -102,6 +103,7 @@ final class Admin
             'subscriptions' => self::vTable('SELECT s.id, s.order_ref AS ref, i.full_name, i.email, s.parts_per_day AS parts, s.macro_slug AS macro, s.next_charge_on AS next_charge, s.status, s.created_at FROM investor_subscriptions s JOIN investors i ON i.id=s.investor_id ORDER BY s.id DESC LIMIT 300', 'investor_subscriptions'),
             'payments-d17' => self::vPayments(),
             'payment-methods' => self::vPayMethods(),
+            'integrations' => self::vIntegrations(),
             'mail-outbox' => self::vTable('SELECT id, to_email AS "to", template, lang, driver, status, substr(COALESCE(error, \'\'),1,120) AS error, created_at FROM mail_outbox ORDER BY id DESC LIMIT 300'),
             'inbox' => self::vTable('SELECT id, desk, name, email, subject, substr(body,1,160) AS message, status, created_at FROM contact_messages ORDER BY id DESC LIMIT 300', 'contact_messages'),
             'investors' => self::vTable('SELECT i.id, i.full_name, i.email, i.kind, i.organisation, COUNT(o.id) AS orders, COALESCE(SUM(o.total),0) AS pledged, i.created_at FROM investors i LEFT JOIN investor_orders o ON o.investor_id=i.id GROUP BY i.id ORDER BY pledged DESC LIMIT 300'),
@@ -249,6 +251,27 @@ final class Admin
         if (mb_strlen($note) < 10) { self::flash('error', 'A reason of at least 10 characters is required: every change is logged with your name and the date.'); return Response::redirect($back); }
         [$n, $errs] = \W5D\SettingsForm::save(\W5D\Gateways::all(), 'pay', $q->post, (string)(Auth::user()['name'] ?? 'owner'), $note);
         if ($n) self::audit('payment-methods.save', '', $n . ' setting(s) · ' . $note);
+        self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
+        return Response::redirect($back);
+    }
+
+    private static function vIntegrations(): array
+    {
+        $defs = \W5D\Integrations::all();
+        return \W5D\SettingsForm::view($defs, 'int', admin_url('integrations/save'),
+            'Switch each third-party service on or off and enter its identifiers. A service goes live only when it is ON and every required field is valid. Tracking services (Google Analytics, Tag Manager, Google Ads, Meta Pixel) load only after the visitor accepts the cookie banner and never run on this portal, the account area, payment pages or the unsubscribe page. The Content-Security-Policy opens each service\'s domains only while it is live. reCAPTCHA is checked on the server for every public form; its secret key is stored encrypted and never shown again. Every change is logged with your reason.',
+            ['site' => \W5D\Env::baseUrl()]);
+    }
+
+    public static function saveIntegrations(Request $q): Response
+    {
+        if ($r = Auth::require('integrations')) return $r;
+        $back = admin_url('integrations/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($back); }
+        $note = trim((string)($q->post['note'] ?? ''));
+        if (mb_strlen($note) < 10) { self::flash('error', 'A reason of at least 10 characters is required: every change is logged with your name and the date.'); return Response::redirect($back); }
+        [$n, $errs] = \W5D\SettingsForm::save(\W5D\Integrations::all(), 'int', $q->post, (string)(Auth::user()['name'] ?? 'owner'), $note);
+        if ($n) self::audit('integrations.save', '', $n . ' setting(s) · ' . $note);
         self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
         return Response::redirect($back);
     }

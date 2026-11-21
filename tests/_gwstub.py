@@ -14,8 +14,15 @@ class H(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
     def _send(self, code, obj):
         b = json.dumps(obj).encode(); self.send_response(code); self.send_header('Content-Type', 'application/json'); self.send_header('Content-Length', str(len(b))); self.end_headers(); self.wfile.write(b)
+    def _raw(self):
+        if not hasattr(self, '_cached'):
+            n = int(self.headers.get('Content-Length') or 0); self._cached = self.rfile.read(n) if n else b''
+        return self._cached
+    def _form(self):
+        from urllib.parse import parse_qs
+        return {k: v[0] for k, v in parse_qs(self._raw().decode()).items()}
     def _body(self):
-        n = int(self.headers.get('Content-Length') or 0); raw = self.rfile.read(n) if n else b''
+        raw = self._raw()
         try: return json.loads(raw or b'{}')
         except Exception: return {}
     def _auth(self, prov):
@@ -46,6 +53,17 @@ class H(BaseHTTPRequestHandler):
     def do_POST(self):
         p = self.path.split('?')[0]; b = self._body()
         if p == '/_reset': PAY.clear(); LOG.clear(); return self._send(200, {})
+        if p == '/recaptcha/siteverify':                                  # Google reCAPTCHA siteverify (form-encoded)
+            f = self._form(); LOG.append({'p': 'recaptcha', 'req': f})
+            if f.get('secret') != 'RECAPTCHA-SECRET-1': return self._send(200, {'success': False, 'error-codes': ['invalid-input-secret']})
+            t = f.get('response', '')
+            if t == 'outage': return self._send(503, {})
+            if t == 'good': return self._send(200, {'success': True, 'score': 0.9, 'action': 'w5d_form', 'hostname': 'localhost'})
+            if t == 'good2': return self._send(200, {'success': True})
+            if t == 'mid': return self._send(200, {'success': True, 'score': 0.8, 'action': 'w5d_form'})
+            if t == 'low': return self._send(200, {'success': True, 'score': 0.1, 'action': 'w5d_form'})
+            if t == 'wrongaction': return self._send(200, {'success': True, 'score': 0.9, 'action': 'other'})
+            return self._send(200, {'success': False, 'error-codes': ['invalid-input-response']})
         if p.startswith('/_set/'):
             d = PAY.get(p.rsplit('/', 1)[1])
             if not d: return self._send(404, {})

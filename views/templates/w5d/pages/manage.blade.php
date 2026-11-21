@@ -11,6 +11,7 @@
         {!! csrf_field() !!}
         <x-form-field name="ref" :label="__('lbl.ref')" :required="true" :value="$ref" />
         <x-form-field name="key" :label="__('lbl.token')" :required="true" />
+        {!! \W5D\Integrations::field() !!}
         <button class="btn-focus" type="submit">{{ __('cta.open') }}</button>
       </form>
     @else
