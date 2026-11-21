@@ -15,7 +15,8 @@
   @if($can['create'])<a class="btn-peak" href="{{ $q(['new' => 1]) }}">{{ icon('plus', 'w-4 h-4') }} New question</a>@endif
 </form>
 
-<p class="mb-4 flex flex-wrap gap-2 text-xs" aria-label="Active questions per level">@foreach($v['per_level'] as $l => $n)<span class="tier-badge">L{{ $l }}: {{ $n }}@if($n < 10) · too few for a 10-question round @endif</span>@endforeach</p>
+<p class="mb-2 max-w-3xl text-xs text-slate-600 dark:text-slate-400">@if($v['generated'])Besides the stored questions below, each service level also draws from <strong>{{ number_format($v['generated']) }}</strong> generated questions ({{ number_format($v['generated'] * 4) }} per service, rebuilt on demand from the service sheet; they are not listed here). Change the number or switch them off in Variables → qcm (<code>generated_per_level</code>, <code>generated</code>). The number of questions per round is set in QCM rules.@else Generated questions are switched off: rounds draw only from the stored questions below.@endif</p>
+<p class="mb-4 flex flex-wrap gap-2 text-xs" aria-label="Active questions per level">@foreach($v['per_level'] as $l => $n)<span class="tier-badge">L{{ $l }}: {{ $n }} stored@if($v['generated']) + {{ number_format($v['generated']) }} generated@elseif($n < 10) · too few for a 10-question round @endif</span>@endforeach</p>
 
 @if($form && ($can['create'] || $can['update']))
 <form method="post" action="{{ $base . 'save' }}" class="mb-8 rounded-2xl border border-violet-500/30 bg-white dark:bg-white/5 p-5 space-y-4" data-qcm-editor novalidate>

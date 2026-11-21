@@ -112,6 +112,8 @@ return [
         'default_minutes'    => 10,
         'grace_seconds'      => 15,    // server tolerance after the timer ends
         'bank_target'        => 1000,  // target questions per service (all levels together) for the full bank
+        'generated'          => 1,     // 1 = the generated pool (src/QcmGen.php) is drawn from next to the stored questions
+        'generated_per_level' => 1000, // generated questions per service per level (0-5000): 130 services x 4 levels x 1000 = 520,000
         'show_answers_practice' => 1,  // 1 = practice rounds reveal the correct answers and explanations
     ],
     'investor' => [

@@ -78,6 +78,7 @@ run "view cache build + status (deploy step)"       bash -c 'php bin/view.php ca
 run "preflight (production copy must have 0 FAIL)"  env PREFLIGHT_ALLOW_LOCAL_URL=1 php bin/preflight.php
 run "lint"                                          php bin/lint.php
 run "view cache unit tests"                         php tests/viewcache.php
+run "generated QCM pool (520,000 questions)"        php tests/qcmgen.php
 run "production security checks"                    python3 tests/production.py "$BASE" "$PASS"
 run "smoke: every route x en/fr/ar"                 bash tests/smoke.sh "$BASE"
 run "flows (CSRF, forms, API, pricing, admin)"      python3 tests/flows.py "$BASE"

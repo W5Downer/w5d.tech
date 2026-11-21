@@ -57,6 +57,13 @@ final class Qcm
             $out[$slug] = $c; $dirty = true;
         }
         if ($dirty) { @mkdir(dirname($cf), 0775, true); @file_put_contents($cf, json_encode($out), LOCK_EX); }
+        // generated questions are not stored, so they are added after the cache (the owner can change the number at any time)
+        $g = QcmGen::enabled() ? QcmGen::perLevel() : 0;
+        foreach ($out as $slug => &$c) {
+            $c['gen'] = $g ? ($g * 4) : 0;
+            if ($g) { foreach (self::LEVELS as $l) { $c['s' . $l] = $c[$l]; $c[$l] = ($c[$l] ?? 0) + $g; } $c['all'] += $g * 4; }
+        }
+        unset($c);
         return $out;
     }
 
@@ -218,13 +225,7 @@ final class Qcm
         if (!$chk['ok']) return [null, 'requirements'];
         $slug = self::pickService($uid, $r);
         if (!$slug) return [null, 'bank'];
-        $pool = array_values(array_filter(self::bank($slug), fn($q) => !empty($q['active']) && (int)$q['level'] === (int)$r['level'] && !self::validate($q)));
-        shuffle($pool);
-        $items = [];
-        foreach (array_slice($pool, 0, (int)$r['question_count']) as $q) {
-            $ch = $q['choices']; shuffle($ch);
-            $items[] = ['id' => $q['id'], 'type' => $q['type'], 'q' => $q['q'], 'choices' => $ch, 'answer' => $q['answer'], 'explain' => $q['explain'] ?? null];
-        }
+        $items = self::draw($slug, (int)$r['level'], (int)$r['question_count']);
         if (count($items) < (int)$r['question_count']) return [null, 'bank'];
         $now = time(); $mins = max(1, (int)$r['minutes']);
         $meta = ['pass_pct' => (int)$r['pass_pct'], 'minutes' => $mins, 'rule' => $r['name'], 'fee' => (float)$r['fee']];
@@ -233,6 +234,33 @@ final class Qcm
             'started_at' => date('Y-m-d H:i:s', $now), 'deadline_at' => date('Y-m-d H:i:s', $now + $mins * 60), 'total' => count($items), 'pass_id' => $chk['pass']['id'] ?? null]);
         if ($chk['pass']) DB::q("UPDATE qcm_passes SET status = 'used', attempt_id = ? WHERE id = ?", [$id, $chk['pass']['id']]);
         return [$id, ''];
+    }
+
+    /**
+     * N random questions for one service and level, from the stored (expert-written) questions AND the generated pool, uniformly.
+     * Only the N drawn generated questions are built. One round never repeats the same idea (same stem + same right answers).
+     * @return list<array>
+     */
+    public static function draw(string $slug, int $level, int $n): array
+    {
+        $stored = array_values(array_filter(self::bank($slug), fn($q) => !empty($q['active']) && (int)$q['level'] === $level && !self::validate($q)));
+        $g = QcmGen::enabled() ? QcmGen::perLevel() : 0;
+        $total = count($stored) + $g;
+        $items = []; $seen = []; $used = [];
+        $guard = 0;
+        while (count($items) < $n && $guard++ < $n * 40 && count($used) < $total) {
+            $pos = random_int(0, $total - 1);
+            if (isset($used[$pos])) continue;
+            $used[$pos] = 1;
+            $q = $pos < count($stored) ? $stored[$pos] : QcmGen::question($slug, $level, $pos - count($stored) + 1);
+            if (!$q) continue;
+            $key = !empty($q['gen']) ? QcmGen::concept($q) : $q['id'];
+            if (isset($seen[$key])) continue;
+            $seen[$key] = 1;
+            $ch = $q['choices']; shuffle($ch);
+            $items[] = ['id' => $q['id'], 'type' => $q['type'], 'q' => $q['q'], 'choices' => $ch, 'answer' => $q['answer'], 'explain' => $q['explain'] ?? null];
+        }
+        return $items;
     }
 
     public static function items(array $a): array { return json_decode((string)$a['questions'], true)['items'] ?? []; }

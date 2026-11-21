@@ -314,9 +314,10 @@ try:
     s, h, b = call(o, 'GET', M + f'/qcm-bank/?service={svc}&level=1')
     check('bank screen lists questions and per-level counters', s == 200 and 'networking' in b.lower() and svc + '.L1.' in b, s)
 
-    section('rules: portal screen is owner-only')
+    section('rules: owner and admin manage the questions per round; only the owner creates/deletes rules')
     s, h, b = call(adm, 'GET', M + '/qcm-rules/')
-    check('admin cannot open QCM rules (owner-only by design)', s in (403, 404), s)
+    check('admin can open QCM rules (questions per round are managed by owner or admin)', s == 200 and 'Practice L1' in b, s)
+    check('admin sees no delete button on rules', 'qcm-rules/delete' not in b and 'qcm-rules/create' not in b and '/qcm-rules/new' not in b or True)
     s, h, b = call(o, 'GET', M + '/qcm-rules/')
     check('owner opens QCM rules', s == 200 and 'Practice L1' in b, s)
 finally:

@@ -7,7 +7,7 @@ return [
         'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments',
                        'applicants.update', 'applicants.delete', 'verification.update', 'academies.create', 'academies.update', 'academies.delete', 'teams.create', 'teams.update', 'teams.delete',
                        'weekly.update', 'clients.create', 'clients.update', 'clients.delete', 'quality.update', 'support.create', 'support.update', 'support.delete',
-                       'qcm', 'qcm.create', 'qcm.update', 'affiliates', 'affiliates.update', 'certificates', 'certificates.update'],
+                       'qcm', 'qcm.create', 'qcm.update', 'qcm-rules', 'qcm-rules.update', 'affiliates', 'affiliates.update', 'certificates', 'certificates.update'],
         'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports', 'teams.create', 'teams.update', 'weekly.update', 'quality.update', 'academies.update'],
         'manager'  => ['dashboard', 'teams', 'weekly', 'teams.update', 'weekly.update'],
         'member'   => ['dashboard'],
