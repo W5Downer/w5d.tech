@@ -175,7 +175,8 @@ final class Docs
         $mt = fn(string $f): int => (int)(@filemtime($f) ?: time());
         $prio = ['/' => 1.0, '/investors/' => .9, '/pricing/' => .8, '/for/' => .8, '/how-it-works/' => .8, '/join/' => .7, '/checkout/' => .9, '/subscription/' => .7,
             '/trust/' => .6, '/trust/statement/' => .6, '/trust/sampling/' => .5, '/status/' => .5, '/sitemap/' => .3, '/newsletter/' => .4, '/contact/' => .5,
-            '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4, '/affiliate/' => .5, '/ontology/' => .5];
+            '/trust/privacy/' => .4, '/trust/terms/' => .4, '/trust/security/' => .4, '/trust/corrections/' => .4,
+            '/trust/cookies/' => .4, '/trust/data-rights/' => .4, '/trust/refunds/' => .4, '/trust/editorial/' => .4, '/trust/accessibility/' => .3, '/trust/ads-policy/' => .3, '/trust/imprint/' => .4, '/affiliate/' => .5, '/ontology/' => .5];
         $u = [];
         foreach (glob($root . '/pages/*.json') ?: [] as $f) {
             $j = json_decode((string)file_get_contents($f), true);

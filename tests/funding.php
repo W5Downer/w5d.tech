@@ -98,7 +98,11 @@ Ads::useGate($mk(30)); $d = Ads::canApplyDetail();
 chk('30 pages (10/10/10) -> only the policy page and consent remain', $d['ok'] === Ads::policyPageExists() && ($d['ok'] || $d['reason_code'] === 'policy_missing'), json_encode($d['reason_code']));
 chk('consent mechanism is recorded (cookie notice present + dated record)', Ads::consentRecorded());
 Ads::useGate(null);
+// the real cache file (written by php bin/ads-gate.php) must not leak into this check: move it aside, then put it back
+$realGate = Ads::cacheFile(); $aside = is_file($realGate) ? $realGate . '.test-aside' : null;
+if ($aside) rename($realGate, $aside);
 chk('with no computed gate -> closed', Ads::canApply() === false);
+if ($aside) rename($aside, $realGate);
 chk('/trust/ads-policy/ is excluded from ads and from counts', !Ads::allowedOn('/trust/ads-policy/') && !Ads::allowedOn('/status/') && !Ads::allowedOn('/checkout/') && !Ads::allowedOn('/certification/verify/') && !Ads::allowedOn('/' . trim(W5D\Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/') . '/') && Ads::allowedOn('/services/x/'));
 
 echo "test 5: matricule empty and ADS_WITHDRAWN_TND > 0 -> the build fails\n";

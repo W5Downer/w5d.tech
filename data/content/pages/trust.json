@@ -1,199 +1,683 @@
 {
- "slug": "trust",
- "title": {
-  "en": "Trust and limits",
-  "fr": "Confiance et limites",
-  "ar": "الثقة والحدود"
- },
- "description": {
-  "en": "Declared limits, sampling method, privacy, terms, security and corrections.",
-  "fr": "Limites déclarées, méthode d’échantillonnage, confidentialité, conditions, sécurité et corrections.",
-  "ar": "الحدود المعلنة، ومنهجية أخذ العينات، والخصوصية، والشروط، والأمن، والتصويبات."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "tr-hero",
-   "variant": "classic",
-   "gradient": "calm",
-   "title": {
-    "en": "Trust is a **list of limits.**",
-    "fr": "La confiance est une **liste de limites.**",
-    "ar": "الثقة هي **قائمة من الحدود.**"
-   },
-   "lead": {
-    "en": "We publish what we do not claim, how we check ourselves and how to correct us.",
-    "fr": "Nous publions ce que nous ne revendiquons pas, la manière dont nous nous vérifions et comment nous corriger.",
-    "ar": "ننشر ما لا ندّعيه، وكيف نراجع عملنا، وكيف يمكن تصويبنا."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Declared limits",
-      "fr": "Limites déclarées",
-      "ar": "الحدود المعلنة"
-     },
-     "href": "/trust/statement/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
-    "en": "Trust",
-    "fr": "Confiance",
-    "ar": "الثقة"
-   }
+  "slug": "trust",
+  "title": {
+    "en": "Trust and limits",
+    "fr": "Confiance et limites",
+    "ar": "الثقة والحدود"
   },
-  {
-   "type": "cards",
-   "id": "tr-index",
-   "tier": "e",
-   "focus": 3,
-   "cols": 3,
-   "title": {
-    "en": "Trust pages",
-    "fr": "Pages sur la confiance",
-    "ar": "صفحات الثقة"
-   },
-   "items": [
-    {
-     "icon": "scale",
-     "title": {
-      "en": "Declared limits",
-      "fr": "Limites déclarées",
-      "ar": "الحدود المعلنة"
-     },
-     "body": {
-      "en": "No job, no return, no headcount claim.",
-      "fr": "Aucune revendication concernant les emplois, les rendements ou les effectifs.",
-      "ar": "لا ادعاء بوجود وظيفة أو عائد أو عدد موظفين."
-     },
-     "href": "/trust/statement/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    },
-    {
-     "icon": "file-search",
-     "title": {
-      "en": "5% sampling",
-      "fr": "Échantillonnage à 5 %",
-      "ar": "أخذ عينات بنسبة 5%"
-     },
-     "body": {
-      "en": "How reports are re-checked.",
-      "fr": "Comment les rapports sont revérifiés.",
-      "ar": "كيفية إعادة التحقق من التقارير."
-     },
-     "href": "/trust/sampling/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    },
-    {
-     "icon": "lock",
-     "title": {
-      "en": "Privacy",
-      "fr": "Confidentialité",
-      "ar": "الخصوصية"
-     },
-     "body": {
-      "en": "What we collect and keep.",
-      "fr": "Ce que nous recueillons et conservons.",
-      "ar": "ما نجمعه وما نحتفظ به."
-     },
-     "href": "/trust/privacy/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    },
-    {
-     "icon": "file-text",
-     "title": {
-      "en": "Terms",
-      "fr": "Conditions",
-      "ar": "الشروط"
-     },
-     "body": {
-      "en": "Demo-mode terms for pledges.",
-      "fr": "Conditions du mode démo pour les engagements.",
-      "ar": "شروط وضع العرض التجريبي للتعهدات."
-     },
-     "href": "/trust/terms/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    },
-    {
-     "icon": "shield",
-     "title": {
-      "en": "Security",
-      "fr": "Sécurité",
-      "ar": "الأمان"
-     },
-     "body": {
-      "en": "Controls and disclosure.",
-      "fr": "Contrôles et informations divulguées.",
-      "ar": "الضوابط والإفصاح."
-     },
-     "href": "/trust/security/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    },
-    {
-     "icon": "file-pen",
-     "title": {
-      "en": "Corrections",
-      "fr": "Corrections",
-      "ar": "التصحيحات"
-     },
-     "body": {
-      "en": "Report an error; 14-day answer.",
-      "fr": "Signaler une erreur ; réponse sous 14 jours.",
-      "ar": "أبلغ عن خطأ؛ والرد خلال 14 يومًا."
-     },
-     "href": "/trust/corrections/",
-     "cta": {
-      "en": "Read",
-      "fr": "Lire",
-      "ar": "اقرأ"
-     }
-    }
-   ]
+  "description": {
+    "en": "The index of every trust page: declared limits, sampling, editorial rules, corrections, privacy, cookies, data rights, terms, refunds, security, accessibility, advertising policy, imprint and live status.",
+    "fr": "L’index de toutes les pages de confiance : limites déclarées, échantillonnage, règles éditoriales, corrections, confidentialité, cookies, droits sur les données, conditions, remboursements, sécurité, accessibilité, politique publicitaire, mentions légales et statut en direct.",
+    "ar": "فهرس كل صفحات الثقة: الحدود المعلنة وأخذ العينات والقواعد التحريرية والتصويبات والخصوصية والكوكيز وحقوق البيانات والشروط والاسترداد والأمن وإمكانية الوصول وسياسة الإعلانات والإشعار القانوني والحالة الحية."
   },
-  {
-   "type": "prose",
-   "id": "tr-why",
-   "tier": "e",
-   "focus": 3,
-   "title": {
-    "en": "Why this section exists",
-    "fr": "Pourquoi cette section existe",
-    "ar": "لماذا يوجد هذا القسم"
-   },
-   "paragraphs": [
+  "sections": [
     {
-     "en": "Most of what is published here is a plan, and a plan is easy to over-sell. Each page in this section says what we claim, what we do not, and how you can check.",
-     "fr": "L’essentiel de ce qui est publié ici est un plan, et un plan se survend facilement. Chaque page de cette section dit ce que nous affirmons, ce que nous n’affirmons pas, et comment vous pouvez vérifier.",
-     "ar": "معظم ما يُنشر هنا خطة، والخطة يسهل المبالغة في بيعها. تقول كل صفحة في هذا القسم ما ندّعيه وما لا ندّعيه وكيف تتحقق."
+      "type": "hero",
+      "id": "tr-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Trust is a **list of limits.**",
+        "fr": "La confiance est une **liste de limites.**",
+        "ar": "الثقة هي **قائمة من الحدود.**"
+      },
+      "lead": {
+        "en": "We publish what we do not claim, how we check ourselves, what happens to your money and your data, and how to correct us. Fourteen pages, one index, no marketing language.",
+        "fr": "Nous publions ce que nous ne revendiquons pas, la manière dont nous nous vérifions, ce qu’il advient de votre argent et de vos données, et comment nous corriger. Quatorze pages, un index, aucun langage marketing.",
+        "ar": "ننشر ما لا ندّعيه، وكيف نراجع عملنا، وما يجري لمالك وبياناتك، وكيف يمكن تصويبنا. أربع عشرة صفحة وفهرس واحد وبلا لغة تسويقية."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Start with the declared limits",
+            "fr": "Commencer par les limites déclarées",
+            "ar": "ابدأ بالحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Trust",
+        "fr": "Confiance",
+        "ar": "الثقة"
+      }
     },
     {
-     "en": "Numbers on the site come from one settings file and from daily roll-ups. A zero is shown as a zero.",
-     "fr": "Les chiffres du site proviennent d’un seul fichier de réglages et de cumuls quotidiens. Un zéro est affiché comme un zéro.",
-     "ar": "تأتي أرقام الموقع من ملف إعدادات واحد ومن حصائل يومية. ويظهر الصفر صفرا."
+      "type": "prose",
+      "id": "tr-why",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Why a trust section exists",
+        "fr": "Pourquoi une section confiance existe",
+        "ar": "لماذا يوجد قسم للثقة"
+      },
+      "paragraphs": [
+        {
+          "en": "A programme that asks people to contribute money, time and personal data has to earn the right to ask. Most sites do this with adjectives: reliable, secure, certified, trusted. Adjectives cost nothing and prove nothing. We try to do it with statements that can be checked and that can be wrong: a number with a date, a rule with an exception written next to it, a cookie with its lifetime, a payment channel with the reason it is closed.",
+          "fr": "Un programme qui demande à des personnes de contribuer en argent, en temps et en données personnelles doit gagner le droit de le demander. La plupart des sites le font avec des adjectifs : fiable, sûr, certifié, de confiance. Les adjectifs ne coûtent rien et ne prouvent rien. Nous essayons de le faire avec des déclarations vérifiables et qui peuvent être fausses : un chiffre daté, une règle avec son exception écrite à côté, un cookie avec sa durée de vie, un canal de paiement avec la raison de sa fermeture.",
+          "ar": "البرنامج الذي يطلب من الناس مالًا ووقتًا وبيانات شخصية عليه أن يستحق حق الطلب. ومعظم المواقع تفعل ذلك بالصفات: موثوق وآمن ومعتمد. والصفات لا تكلف شيئًا ولا تثبت شيئًا. ونحاول أن نفعل ذلك بعبارات يمكن التحقق منها ويمكن أن تكون خاطئة: رقم بتاريخ، وقاعدة يُكتب استثناؤها بجوارها، وكوكي بمدة حياته، وقناة دفع مع سبب إغلاقها."
+        },
+        {
+          "en": "The pages below are written for three kinds of reader. If you are in Tunisia, they tell you which local rules we follow, which ones we are still confirming with a Tunisian lawyer and accountant, and what is not yet registered. If you are abroad, they tell you which rights you keep wherever you live. If you are a journalist, a researcher, an advertising reviewer or a possible partner, they give you the evidence in a form you can quote, with the date on which each figure was last reviewed ({{ dates.as_of }}).",
+          "fr": "Les pages ci-dessous s’adressent à trois sortes de lecteurs. Si vous êtes en Tunisie, elles disent quelles règles locales nous suivons, lesquelles nous confirmons encore avec un avocat et un comptable tunisiens, et ce qui n’est pas encore enregistré. Si vous êtes à l’étranger, elles disent quels droits vous conservez où que vous viviez. Si vous êtes journaliste, chercheur, évaluateur publicitaire ou partenaire potentiel, elles vous donnent les preuves sous une forme citable, avec la date de dernière revue de chaque chiffre ({{ dates.as_of }}).",
+          "ar": "كُتبت الصفحات أدناه لثلاثة أصناف من القراء. فإن كنت في تونس فهي تقول لك أي القواعد المحلية نتبع وأيها ما زلنا نؤكده مع محامٍ ومحاسب تونسيين وما لم يُسجَّل بعد. وإن كنت في الخارج فهي تقول لك أي الحقوق تحتفظ بها أينما سكنت. وإن كنت صحفيًا أو باحثًا أو مراجع إعلانات أو شريكًا محتملًا فهي تعطيك الأدلة بصيغة قابلة للاقتباس مع تاريخ آخر مراجعة لكل رقم ({{ dates.as_of }})."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "tr-claims",
+      "tier": "e",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "What we claim, and what we do not",
+        "fr": "Ce que nous affirmons, et ce que nous n’affirmons pas",
+        "ar": "ما ندّعيه وما لا ندّعيه"
+      },
+      "items": [
+        {
+          "icon": "scale",
+          "title": {
+            "en": "Declared limits",
+            "fr": "Limites déclarées",
+            "ar": "الحدود المعلنة"
+          },
+          "body": {
+            "en": "Six limits stated before you invest, apply or share: no job promised, a design ceiling and not a headcount, no return, a public price curve, the payment state and the programme dates.",
+            "fr": "Six limites énoncées avant que vous investissiez, postuliez ou partagiez : aucun emploi promis, un plafond de conception et non un effectif, aucun rendement, une courbe de prix publique, l’état des paiements et les dates du programme.",
+            "ar": "ست حدود تُذكر قبل أن تستثمر أو تتقدم أو تشارك: لا وظيفة موعودة، وسقف تصميمي لا عدد فعلي، ولا عائد، ومنحنى أسعار علني، وحالة الدفع، ومواعيد البرنامج."
+          },
+          "href": "/trust/statement/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "file-search",
+          "title": {
+            "en": "Sampling method",
+            "fr": "Méthode d’échantillonnage",
+            "ar": "منهجية أخذ العينات"
+          },
+          "body": {
+            "en": "How a fixed share of weekly reports is drawn at random and re-checked against source evidence, and what happens when a sample fails.",
+            "fr": "Comment une part fixe des rapports hebdomadaires est tirée au hasard et revérifiée par rapport aux preuves sources, et ce qui se passe quand un échantillon échoue.",
+            "ar": "كيف تُسحب نسبة ثابتة من التقارير الأسبوعية عشوائيًا وتُراجع على الأدلة المصدرية، وماذا يحدث حين تفشل عينة."
+          },
+          "href": "/trust/sampling/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "newspaper",
+          "title": {
+            "en": "Editorial policy",
+            "fr": "Politique éditoriale",
+            "ar": "السياسة التحريرية"
+          },
+          "body": {
+            "en": "Where facts come from, how figures are dated, what is generated and what is written by hand, and why sponsors and advertisers cannot change a verdict.",
+            "fr": "D’où viennent les faits, comment les chiffres sont datés, ce qui est généré et ce qui est écrit à la main, et pourquoi parrains et annonceurs ne peuvent pas changer un verdict.",
+            "ar": "من أين تأتي الوقائع، وكيف تُؤرَّخ الأرقام، وما المولَّد وما المكتوب يدويًا، ولماذا لا يستطيع الرعاة والمعلنون تغيير حكم."
+          },
+          "href": "/trust/editorial/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "file-pen",
+          "title": {
+            "en": "Corrections",
+            "fr": "Corrections",
+            "ar": "التصويبات"
+          },
+          "body": {
+            "en": "A form and a promise: name the page and the sentence, give your source, and receive a written answer within the stated number of days.",
+            "fr": "Un formulaire et une promesse : nommez la page et la phrase, donnez votre source et recevez une réponse écrite dans le délai indiqué.",
+            "ar": "نموذج ووعد: سمِّ الصفحة والجملة وأعطِ مصدرك وتلقَّ ردًا كتابيًا خلال المدة المعلنة."
+          },
+          "href": "/trust/corrections/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "activity",
+          "title": {
+            "en": "Live status",
+            "fr": "Statut en direct",
+            "ar": "الحالة الحية"
+          },
+          "body": {
+            "en": "Live counts, funding channels and their reasons for being open or closed, and the state of the advertising gate. Awaiting means awaiting.",
+            "fr": "Comptes en direct, canaux de financement et raisons de leur ouverture ou fermeture, état de la porte publicitaire. En attente signifie en attente.",
+            "ar": "أعداد حية وقنوات التمويل وأسباب فتحها أو إغلاقها وحالة بوابة الإعلانات. وقيد الانتظار يعني قيد الانتظار."
+          },
+          "href": "/status/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "tr-data",
+      "tier": "e",
+      "focus": 3,
+      "cols": 3,
+      "title": {
+        "en": "Your money and your data",
+        "fr": "Votre argent et vos données",
+        "ar": "مالك وبياناتك"
+      },
+      "items": [
+        {
+          "icon": "lock",
+          "title": {
+            "en": "Privacy policy",
+            "fr": "Politique de confidentialité",
+            "ar": "سياسة الخصوصية"
+          },
+          "body": {
+            "en": "What personal data is collected, why, for how long it is kept and who receives it, in plain words and with the retention periods as numbers.",
+            "fr": "Quelles données personnelles sont collectées, pourquoi, combien de temps elles sont conservées et qui les reçoit, en termes clairs et avec les durées sous forme de chiffres.",
+            "ar": "ما البيانات الشخصية التي تُجمع ولماذا وكم تُحفظ ومن يتلقاها، بكلمات واضحة ومدد الحفظ أرقامًا."
+          },
+          "href": "/trust/privacy/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "cookie",
+          "title": {
+            "en": "Cookie policy",
+            "fr": "Politique de cookies",
+            "ar": "سياسة الكوكيز"
+          },
+          "body": {
+            "en": "Every cookie and every item of local storage the site sets, one by one, with its purpose and lifetime, and how to change your choice.",
+            "fr": "Chaque cookie et chaque élément de stockage local déposé par le site, un par un, avec sa finalité et sa durée, et comment modifier votre choix.",
+            "ar": "كل كوكي وكل عنصر تخزين محلي يضعه الموقع واحدًا واحدًا بغايته ومدته، وكيف تغيّر اختيارك."
+          },
+          "href": "/trust/cookies/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "user-check",
+          "title": {
+            "en": "Your data rights",
+            "fr": "Vos droits sur les données",
+            "ar": "حقوقك في البيانات"
+          },
+          "body": {
+            "en": "How to ask for access, correction, deletion, portability or to object, what we need from you and when you will have an answer.",
+            "fr": "Comment demander l’accès, la rectification, l’effacement, la portabilité ou vous opposer, ce dont nous avons besoin et quand vous aurez une réponse.",
+            "ar": "كيف تطلب الاطلاع أو التصحيح أو المحو أو النقل أو تعترض، وما نحتاجه منك ومتى يصلك الرد."
+          },
+          "href": "/trust/data-rights/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "file-text",
+          "title": {
+            "en": "Terms of service",
+            "fr": "Conditions d’utilisation",
+            "ar": "شروط الخدمة"
+          },
+          "body": {
+            "en": "The contract between you and W5D in plain language: what you buy, what we owe you, what you owe us, and what happens when something goes wrong.",
+            "fr": "Le contrat entre vous et W5D en langage clair : ce que vous achetez, ce que nous vous devons, ce que vous nous devez, et ce qui se passe quand quelque chose tourne mal.",
+            "ar": "العقد بينك وبين W5D بلغة واضحة: ما تشتريه وما ندين لك به وما تدين لنا به وما يحدث عند حدوث خلل."
+          },
+          "href": "/trust/terms/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "database",
+          "title": {
+            "en": "Refunds and cancellations",
+            "fr": "Remboursements et annulations",
+            "ar": "الاسترداد والإلغاء"
+          },
+          "body": {
+            "en": "One rule per kind of payment, the right to change your mind, the escrow protection of pre-paid credits and the time a refund takes.",
+            "fr": "Une règle par type de paiement, le droit de changer d’avis, la protection par séquestre des crédits prépayés et le délai d’un remboursement.",
+            "ar": "قاعدة لكل نوع من الدفع وحق العدول وحماية الأرصدة المسبقة بحساب ضمان ومدة الاسترداد."
+          },
+          "href": "/trust/refunds/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "tr-org",
+      "tier": "e",
+      "focus": 3,
+      "cols": 2,
+      "title": {
+        "en": "Who we are and how we operate",
+        "fr": "Qui nous sommes et comment nous opérons",
+        "ar": "من نحن وكيف نعمل"
+      },
+      "items": [
+        {
+          "icon": "building-2",
+          "title": {
+            "en": "Imprint",
+            "fr": "Mentions légales",
+            "ar": "الإشعار القانوني"
+          },
+          "body": {
+            "en": "Who publishes the site, how to reach them, and an honest list of what is not yet registered instead of placeholder numbers.",
+            "fr": "Qui publie le site, comment le joindre, et une liste honnête de ce qui n’est pas encore enregistré au lieu de numéros fictifs.",
+            "ar": "من ينشر الموقع وكيف يُتصل به وقائمة صادقة بما لم يُسجَّل بعد بدل أرقام وهمية."
+          },
+          "href": "/trust/imprint/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "shield-check",
+          "title": {
+            "en": "Security",
+            "fr": "Sécurité",
+            "ar": "الأمن"
+          },
+          "body": {
+            "en": "The controls that protect your account and your data, what we do not claim, and how to report a vulnerability without fear.",
+            "fr": "Les contrôles qui protègent votre compte et vos données, ce que nous ne prétendons pas, et comment signaler une vulnérabilité sans crainte.",
+            "ar": "الضوابط التي تحمي حسابك وبياناتك وما لا ندّعيه وكيف تبلّغ عن ثغرة دون خوف."
+          },
+          "href": "/trust/security/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "user-check",
+          "title": {
+            "en": "Accessibility",
+            "fr": "Accessibilité",
+            "ar": "إمكانية الوصول"
+          },
+          "body": {
+            "en": "Our WCAG 2.2 AA target, what is in place, the known limits and how to report a barrier.",
+            "fr": "Notre objectif WCAG 2.2 AA, ce qui est en place, les limites connues et comment signaler un obstacle.",
+            "ar": "هدفنا WCAG 2.2 AA وما هو قائم والحدود المعروفة وكيف تبلّغ عن عائق."
+          },
+          "href": "/trust/accessibility/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        },
+        {
+          "icon": "megaphone",
+          "title": {
+            "en": "Advertising policy",
+            "fr": "Politique publicitaire",
+            "ar": "سياسة الإعلانات"
+          },
+          "body": {
+            "en": "No advertising today, where it may never appear, and why it is not part of the funding plan.",
+            "fr": "Aucune publicité aujourd’hui, où elle ne peut jamais apparaître, et pourquoi elle ne fait pas partie du plan de financement.",
+            "ar": "لا إعلانات اليوم، وأين لا يجوز أن تظهر أبدًا، ولماذا ليست جزءًا من خطة التمويل."
+          },
+          "href": "/trust/ads-policy/",
+          "cta": {
+            "en": "Read",
+            "fr": "Lire",
+            "ar": "اقرأ"
+          }
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "tr-find",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Which page answers which question",
+        "fr": "Quelle page répond à quelle question",
+        "ar": "أي صفحة تجيب عن أي سؤال"
+      },
+      "columns": [
+        {
+          "en": "If you want to know",
+          "fr": "Si vous voulez savoir",
+          "ar": "إن أردت أن تعرف"
+        },
+        {
+          "en": "Read",
+          "fr": "Lisez",
+          "ar": "اقرأ"
+        },
+        {
+          "en": "Why it matters",
+          "fr": "Pourquoi c’est important",
+          "ar": "لماذا يهم"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Whether a part is a job or an investment",
+            "fr": "Si une part est un emploi ou un investissement",
+            "ar": "هل الحصة وظيفة أم استثمار"
+          },
+          {
+            "en": "[Declared limits](/trust/statement/)",
+            "fr": "[Limites déclarées](/trust/statement/)",
+            "ar": "[الحدود المعلنة](/trust/statement/)"
+          },
+          {
+            "en": "A part funds a path. It does not promise work or a return.",
+            "fr": "Une part finance un parcours. Elle ne promet ni emploi ni rendement.",
+            "ar": "الحصة تموّل مسارًا ولا تَعِد بعمل ولا بعائد."
+          }
+        ],
+        [
+          {
+            "en": "Whether you can get your money back",
+            "fr": "Si vous pouvez être remboursé",
+            "ar": "هل يمكنك استرداد مالك"
+          },
+          {
+            "en": "[Refunds](/trust/refunds/)",
+            "fr": "[Remboursements](/trust/refunds/)",
+            "ar": "[الاسترداد](/trust/refunds/)"
+          },
+          {
+            "en": "Each payment type has its own rule, stated before you pay.",
+            "fr": "Chaque type de paiement a sa règle, énoncée avant le paiement.",
+            "ar": "لكل نوع دفع قاعدته المعلنة قبل الدفع."
+          }
+        ],
+        [
+          {
+            "en": "What happens to your personal data",
+            "fr": "Ce qu’il advient de vos données personnelles",
+            "ar": "ما يجري لبياناتك الشخصية"
+          },
+          {
+            "en": "[Privacy](/trust/privacy/) and [data rights](/trust/data-rights/)",
+            "fr": "[Confidentialité](/trust/privacy/) et [droits](/trust/data-rights/)",
+            "ar": "[الخصوصية](/trust/privacy/) و[الحقوق](/trust/data-rights/)"
+          },
+          {
+            "en": "You can ask, correct, delete and object.",
+            "fr": "Vous pouvez demander, corriger, effacer et vous opposer.",
+            "ar": "تستطيع أن تطلب وتصحح وتمحو وتعترض."
+          }
+        ],
+        [
+          {
+            "en": "Which cookies are set",
+            "fr": "Quels cookies sont déposés",
+            "ar": "ما الكوكيز الموضوعة"
+          },
+          {
+            "en": "[Cookies](/trust/cookies/)",
+            "fr": "[Cookies](/trust/cookies/)",
+            "ar": "[الكوكيز](/trust/cookies/)"
+          },
+          {
+            "en": "Optional ones load only after you choose.",
+            "fr": "Les cookies facultatifs ne se chargent qu’après votre choix.",
+            "ar": "الاختيارية لا تُحمَّل إلا بعد اختيارك."
+          }
+        ],
+        [
+          {
+            "en": "Whether a figure is current",
+            "fr": "Si un chiffre est à jour",
+            "ar": "هل الرقم حديث"
+          },
+          {
+            "en": "[Status](/status/) and [editorial policy](/trust/editorial/)",
+            "fr": "[Statut](/status/) et [politique éditoriale](/trust/editorial/)",
+            "ar": "[الحالة](/status/) و[السياسة التحريرية](/trust/editorial/)"
+          },
+          {
+            "en": "Every figure carries its date and its source.",
+            "fr": "Chaque chiffre porte sa date et sa source.",
+            "ar": "لكل رقم تاريخه ومصدره."
+          }
+        ],
+        [
+          {
+            "en": "Who is legally behind the site",
+            "fr": "Qui est juridiquement derrière le site",
+            "ar": "من يقف قانونيًا وراء الموقع"
+          },
+          {
+            "en": "[Imprint](/trust/imprint/)",
+            "fr": "[Mentions légales](/trust/imprint/)",
+            "ar": "[الإشعار القانوني](/trust/imprint/)"
+          },
+          {
+            "en": "Gaps are written as gaps, not filled with placeholders.",
+            "fr": "Les lacunes sont écrites comme des lacunes, non comblées par des valeurs fictives.",
+            "ar": "تُكتب الفجوات فجوات ولا تُملأ بقيم وهمية."
+          }
+        ],
+        [
+          {
+            "en": "How to report a mistake or a vulnerability",
+            "fr": "Comment signaler une erreur ou une vulnérabilité",
+            "ar": "كيف تبلّغ عن خطأ أو ثغرة"
+          },
+          {
+            "en": "[Corrections](/trust/corrections/) and [security](/trust/security/)",
+            "fr": "[Corrections](/trust/corrections/) et [sécurité](/trust/security/)",
+            "ar": "[التصويبات](/trust/corrections/) و[الأمن](/trust/security/)"
+          },
+          {
+            "en": "A person reads it and answers in writing.",
+            "fr": "Une personne la lit et répond par écrit.",
+            "ar": "يقرؤه شخص ويرد كتابةً."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tr-how",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "How these pages are kept honest",
+        "fr": "Comment ces pages restent honnêtes",
+        "ar": "كيف تبقى هذه الصفحات صادقة"
+      },
+      "paragraphs": [
+        {
+          "en": "Three mechanisms keep the trust pages from drifting away from reality. First, numbers are not typed into pages: prices, retention periods, response times and dates come from one settings file, so that a page cannot disagree with the checkout. Second, a linter refuses to publish a page with a hard-coded price, a missing translation or a second primary button in a section. Third, every legal page carries the date of its last review and the interval at which it is reviewed, which is {{ legal.review_months }} months at most.",
+          "fr": "Trois mécanismes empêchent les pages de confiance de s’éloigner de la réalité. D’abord, les chiffres ne sont pas saisis dans les pages : prix, durées de conservation, délais de réponse et dates viennent d’un seul fichier de paramètres, de sorte qu’une page ne peut pas contredire le paiement. Ensuite, un contrôleur refuse de publier une page avec un prix écrit en dur, une traduction manquante ou un deuxième bouton principal dans une section. Enfin, chaque page juridique porte la date de sa dernière revue et l’intervalle de revue, qui est de {{ legal.review_months }} mois au plus.",
+          "ar": "ثلاث آليات تمنع صفحات الثقة من الانحراف عن الواقع. أولًا، لا تُكتب الأرقام في الصفحات: فالأسعار ومدد الحفظ وآجال الرد والتواريخ تأتي من ملف إعدادات واحد فلا تخالف صفحة عملية الدفع. ثانيًا، يرفض مدقق نشر صفحة فيها سعر مكتوب يدويًا أو ترجمة ناقصة أو زر رئيسي ثانٍ في قسم. ثالثًا، تحمل كل صفحة قانونية تاريخ آخر مراجعة وفترة المراجعة وهي {{ legal.review_months }} أشهر على الأكثر."
+        },
+        {
+          "en": "We also say plainly what these mechanisms cannot do. They cannot tell whether a legal statement is correct under Tunisian law, which is why the legal pages are described as plain-language statements reviewed with a lawyer and an accountant, and are not offered as legal advice. They cannot make our Arabic and French read like the work of a professional editor in each language; that review is part of what the programme is meant to pay for. And they cannot check a promise we have not yet made, so the most important rule is the simplest: if a sentence on any of these pages is wrong, tell us.",
+          "fr": "Nous disons aussi clairement ce que ces mécanismes ne peuvent pas faire. Ils ne peuvent pas dire si une déclaration juridique est exacte en droit tunisien, c’est pourquoi les pages juridiques sont décrites comme des déclarations en langage clair revues avec un avocat et un comptable, et non offertes comme avis juridique. Ils ne peuvent pas faire que notre arabe et notre français se lisent comme le travail d’un éditeur professionnel dans chaque langue ; cette relecture fait partie de ce que le programme doit financer. Et ils ne peuvent pas contrôler une promesse que nous n’avons pas encore faite, de sorte que la règle la plus importante est la plus simple : si une phrase de l’une de ces pages est fausse, dites-le-nous.",
+          "ar": "ونقول بوضوح أيضًا ما لا تستطيعه هذه الآليات. فهي لا تعرف هل البيان القانوني صحيح بموجب القانون التونسي، ولذلك توصف الصفحات القانونية بأنها بيانات مبسّطة تُراجَع مع محامٍ ومحاسب ولا تُقدَّم استشارة قانونية. ولا تجعل عربيتنا وفرنسيتنا تُقرآن كعمل محرر محترف في كل لغة؛ وهذه المراجعة جزء مما ينبغي أن يموّله البرنامج. ولا تفحص وعدًا لم نقطعه بعد، فأهم القواعد أبسطها: إن كانت جملة في أي من هذه الصفحات خاطئة فأخبرنا."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "tr-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Trust, asked plainly",
+        "fr": "La confiance, demandée simplement",
+        "ar": "الثقة، سؤالًا مباشرًا"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is W5D a registered company?",
+            "fr": "W5D est-elle une société immatriculée ?",
+            "ar": "هل W5D شركة مسجّلة؟"
+          },
+          "a": {
+            "en": "Not at the last review. The [imprint](/trust/imprint/) says what exists and what is pending, and the [status page](/status/) shows which payment channels are closed for that reason.",
+            "fr": "Pas à la dernière revue. Les [mentions légales](/trust/imprint/) disent ce qui existe et ce qui est en cours, et la [page de statut](/status/) montre quels canaux de paiement sont fermés pour cette raison.",
+            "ar": "ليست كذلك عند آخر مراجعة. يقول [الإشعار القانوني](/trust/imprint/) ما هو قائم وما هو قيد الإنجاز، وتُظهر [صفحة الحالة](/status/) القنوات المغلقة لهذا السبب."
+          }
+        },
+        {
+          "q": {
+            "en": "Can I trust a figure on a page?",
+            "fr": "Puis-je me fier à un chiffre d’une page ?",
+            "ar": "هل أثق برقم في صفحة؟"
+          },
+          "a": {
+            "en": "Trust it as far as its date and its source. Live figures come from the database; design figures are labelled as estimates. A figure with no date is a defect, please report it.",
+            "fr": "Fiez-vous-y dans la mesure de sa date et de sa source. Les chiffres en direct viennent de la base ; les chiffres de conception sont étiquetés comme estimations. Un chiffre sans date est un défaut, merci de le signaler.",
+            "ar": "ثق به بقدر تاريخه ومصدره. الأرقام الحية من قاعدة البيانات، والأرقام التصميمية موسومة تقديرات. والرقم بلا تاريخ عيب فنرجو الإبلاغ عنه."
+          }
+        },
+        {
+          "q": {
+            "en": "Who checks the checkers?",
+            "fr": "Qui contrôle les contrôleurs ?",
+            "ar": "من يراقب المراقبين؟"
+          },
+          "a": {
+            "en": "You do. Corrections are public, dated and answered in writing, and nothing on these pages asks you to take our word for it when a source can be shown.",
+            "fr": "Vous. Les corrections sont publiques, datées et reçoivent une réponse écrite, et rien sur ces pages ne vous demande de nous croire sur parole quand une source peut être montrée.",
+            "ar": "أنت. التصويبات علنية ومؤرَّخة ويُرد عليها كتابةً، ولا شيء في هذه الصفحات يطلب منك تصديقنا إذا أمكن عرض مصدر."
+          }
+        },
+        {
+          "q": {
+            "en": "Are these pages legal advice?",
+            "fr": "Ces pages sont-elles un avis juridique ?",
+            "ar": "هل هذه الصفحات استشارة قانونية؟"
+          },
+          "a": {
+            "en": "No. They describe how we operate. For your own situation, ask a lawyer in your country. Each legal page says when it was last reviewed.",
+            "fr": "Non. Elles décrivent notre fonctionnement. Pour votre propre situation, consultez un avocat de votre pays. Chaque page juridique indique sa date de dernière revue.",
+            "ar": "لا. فهي تصف كيف نعمل. ولوضعك الخاص استشر محاميًا في بلدك. وتذكر كل صفحة قانونية تاريخ آخر مراجعة لها."
+          }
+        },
+        {
+          "q": {
+            "en": "Where do I start?",
+            "fr": "Par où commencer ?",
+            "ar": "من أين أبدأ؟"
+          },
+          "a": {
+            "en": "If you are about to pay: [declared limits](/trust/statement/), [refunds](/trust/refunds/), then [status](/status/). If you care about data: [privacy](/trust/privacy/) and [cookies](/trust/cookies/).",
+            "fr": "Si vous êtes sur le point de payer : [limites déclarées](/trust/statement/), [remboursements](/trust/refunds/), puis [statut](/status/). Si les données vous importent : [confidentialité](/trust/privacy/) et [cookies](/trust/cookies/).",
+            "ar": "إن كنت على وشك الدفع: [الحدود المعلنة](/trust/statement/) ثم [الاسترداد](/trust/refunds/) ثم [الحالة](/status/). وإن كانت البيانات تهمك: [الخصوصية](/trust/privacy/) و[الكوكيز](/trust/cookies/)."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tr-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Also useful",
+        "fr": "Aussi utile",
+        "ar": "مفيد أيضًا"
+      },
+      "paragraphs": [
+        {
+          "en": "The [site map](/sitemap/) lists every public page, the [contact page](/contact/) reaches a person, and the [about page](/about/) and [team page](/team/) say who we are.",
+          "fr": "Le [plan du site](/sitemap/) liste toutes les pages publiques, la [page de contact](/contact/) mène à une personne, et les pages [à propos](/about/) et [équipe](/team/) disent qui nous sommes.",
+          "ar": "تسرد [خريطة الموقع](/sitemap/) كل الصفحات العامة، وتوصلك [صفحة الاتصال](/contact/) بشخص، وتقول صفحتا [من نحن](/about/) و[الفريق](/team/) من نكون."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "tr-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Found something wrong? **Tell us.**",
+        "fr": "Quelque chose d’inexact ? **Dites-le-nous.**",
+        "ar": "وجدت ما هو خاطئ؟ **أخبرنا.**"
+      },
+      "body": {
+        "en": "Every report is read by a person and answered in writing.",
+        "fr": "Chaque signalement est lu par une personne et reçoit une réponse écrite.",
+        "ar": "يقرأ كل بلاغ شخص ويُجاب عنه كتابةً."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "File a correction",
+            "fr": "Déposer une correction",
+            "ar": "قدّم تصويبًا"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Live status",
+            "fr": "Statut en direct",
+            "ar": "الحالة الحية"
+          },
+          "href": "/status/",
+          "style": "ghost"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

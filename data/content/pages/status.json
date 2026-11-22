@@ -6,9 +6,9 @@
     "ar": "الحالة — مؤرخة وموثّقة المصادر"
   },
   "description": {
-    "en": "Public status of the programme: figures, dates and sources.",
-    "fr": "Statut public du programme : chiffres, dates et sources.",
-    "ar": "الحالة العامة للبرنامج: الأرقام والتواريخ والمصادر."
+    "en": "Public status of the programme: live figures, funding channels, what is awaiting, how to read each line, and where the figures come from.",
+    "fr": "Statut public du programme : chiffres en direct, canaux de financement, ce qui est en attente, comment lire chaque ligne et d’où viennent les chiffres.",
+    "ar": "الحالة العامة للبرنامج: الأرقام الحية وقنوات التمويل وما هو قيد الانتظار وكيف تقرأ كل سطر ومن أين تأتي الأرقام."
   },
   "sections": [
     {
@@ -22,9 +22,9 @@
         "ar": "الحالة، **مع التواريخ.**"
       },
       "lead": {
-        "en": "Every figure carries its date and its source. Awaiting means awaiting.",
-        "fr": "Chaque chiffre est accompagné de sa date et de sa source. En attente signifie en attente.",
-        "ar": "لكل رقم تاريخه ومصدره. و«قيد الانتظار» تعني أنه ما زال قيد الانتظار."
+        "en": "Every figure carries its date and its source. Awaiting means awaiting. This is the one page where a plan and a fact are kept apart on purpose, so that you can tell what exists from what is intended.",
+        "fr": "Chaque chiffre est accompagné de sa date et de sa source. En attente signifie en attente. C’est la page où un plan et un fait sont séparés exprès, pour que vous distinguiez ce qui existe de ce qui est prévu.",
+        "ar": "لكل رقم تاريخه ومصدره، و«قيد الانتظار» تعني أنه ما زال قيد الانتظار. وهذه هي الصفحة التي يُفصل فيها الخطة عن الواقع عمدًا، لتميّز ما هو موجود مما هو مقصود."
       },
       "ctas": [
         {
@@ -43,6 +43,29 @@
         "fr": "État",
         "ar": "الحالة"
       }
+    },
+    {
+      "type": "prose",
+      "id": "st-why",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Why this page exists",
+        "fr": "Pourquoi cette page existe",
+        "ar": "لماذا توجد هذه الصفحة"
+      },
+      "paragraphs": [
+        {
+          "en": "A young programme has a natural temptation: to describe what it will be in the same tense as what it is. A network of certified experts, a registered company and an open payment channel all sound alike in a sentence, but they are very different facts. This page exists so that the difference is never left to the reader’s guess. Each line below says what exists today, with the date on which that was last checked, and what is still awaiting.",
+          "fr": "Un jeune programme est naturellement tenté de décrire ce qu’il sera au même temps verbal que ce qu’il est. Un réseau d’experts certifiés, une société immatriculée et un canal de paiement ouvert se ressemblent dans une phrase, mais ce sont des faits très différents. Cette page existe pour que la différence ne soit jamais laissée à la devinette du lecteur. Chaque ligne ci-dessous dit ce qui existe aujourd’hui, avec la date de la dernière vérification, et ce qui est encore en attente.",
+          "ar": "يميل البرنامج الفتيّ بطبيعته إلى وصف ما سيكونه بالزمن نفسه الذي يصف به ما هو عليه. فشبكة الخبراء المعتمدين وشركة مسجّلة وقناة دفع مفتوحة تبدو متشابهة في جملة، لكنها وقائع شديدة الاختلاف. وهذه الصفحة موجودة كي لا يُترك الفرق لتخمين القارئ. فكل سطر أدناه يقول ما هو موجود اليوم وتاريخ آخر فحص له وما لا يزال قيد الانتظار."
+        },
+        {
+          "en": "It also protects us. A programme that publishes only its progress can be accused of hiding its gaps; one that publishes its gaps next to its progress cannot. Funders and partners, in Tunisia and elsewhere, can read this page before a conversation and ask better questions. Members can see whether what they were told matches what exists. The page is linked from the footer of every page and is listed on the [trust index](/trust/) with the rest of the evidence.",
+          "fr": "Elle nous protège aussi. Un programme qui ne publie que ses progrès peut être accusé de cacher ses lacunes ; celui qui publie ses lacunes à côté de ses progrès ne le peut pas. Les financeurs et partenaires, en Tunisie et ailleurs, peuvent lire cette page avant un entretien et poser de meilleures questions. Les membres peuvent voir si ce qu’on leur a dit correspond à ce qui existe. La page est liée depuis le pied de chaque page et listée dans l’[index de confiance](/trust/) avec le reste des preuves.",
+          "ar": "وهي تحمينا كذلك. فالبرنامج الذي ينشر تقدمه وحده يمكن اتهامه بإخفاء ثغراته، أما الذي ينشر ثغراته بجانب تقدمه فلا. ويستطيع الممولون والشركاء في تونس وغيرها قراءة هذه الصفحة قبل أي حوار وطرح أسئلة أفضل. ويرى الأعضاء إن كان ما قيل لهم يطابق الموجود. والصفحة مرتبطة من تذييل كل صفحة ومدرجة في [فهرس الثقة](/trust/) مع بقية الأدلة."
+        }
+      ]
     },
     {
       "type": "status-live",
@@ -189,9 +212,9 @@
             "ar": "قيد الانتظار"
           },
           "name": {
-            "en": "Payment provider",
-            "fr": "Prestataire de paiement",
-            "ar": "مزوّد خدمة الدفع"
+            "en": "Payment channels",
+            "fr": "Canaux de paiement",
+            "ar": "قنوات الدفع"
           },
           "date": {
             "en": "{{ dates.as_of }}",
@@ -199,18 +222,121 @@
             "ar": "{{ dates.as_of }}"
           },
           "evidence": {
-            "en": "Demo mode. No payment is taken.",
-            "fr": "Mode démo. Aucun paiement n’est effectué.",
-            "ar": "وضع تجريبي. لا تُحصّل أي مدفوعات."
+            "en": "Some channels stay closed until the business is registered. The funding channels above show which are open and why.",
+            "fr": "Certains canaux restent fermés tant que l’entreprise n’est pas immatriculée. Les canaux de financement ci-dessus montrent lesquels sont ouverts et pourquoi.",
+            "ar": "تبقى بعض القنوات مغلقة إلى أن تُسجَّل المنشأة. وتبيّن قنوات التمويل أعلاه أيها مفتوح ولماذا."
           }
         }
       ]
     },
     {
+      "type": "table",
+      "id": "st-words",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The words used on this page",
+        "fr": "Les mots employés sur cette page",
+        "ar": "الكلمات المستعملة في هذه الصفحة"
+      },
+      "columns": [
+        {
+          "en": "Word",
+          "fr": "Mot",
+          "ar": "الكلمة"
+        },
+        {
+          "en": "What it means here",
+          "fr": "Ce que cela signifie ici",
+          "ar": "معناها هنا"
+        },
+        {
+          "en": "What it does not mean",
+          "fr": "Ce que cela ne signifie pas",
+          "ar": "ما لا تعنيه"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Live",
+            "fr": "Actif",
+            "ar": "نشط"
+          },
+          {
+            "en": "A person can use it today, and the date shows when we last checked.",
+            "fr": "Une personne peut l’utiliser aujourd’hui, et la date indique notre dernière vérification.",
+            "ar": "يستطيع شخص استخدامه اليوم، والتاريخ يبيّن آخر فحص لنا."
+          },
+          {
+            "en": "That it is finished, or that it has had many users.",
+            "fr": "Qu’il est terminé, ou qu’il a eu beaucoup d’utilisateurs.",
+            "ar": "أنه منتهٍ أو أن مستخدمين كثيرين جرّبوه."
+          }
+        ],
+        [
+          {
+            "en": "Awaiting",
+            "fr": "En attente",
+            "ar": "قيد الانتظار"
+          },
+          {
+            "en": "It is planned and nothing has happened yet. No date is promised unless one is shown.",
+            "fr": "C’est prévu et rien ne s’est encore passé. Aucune date n’est promise sauf si elle est affichée.",
+            "ar": "مخطَّط له ولم يحدث شيء بعد. ولا يُعد بتاريخ ما لم يُعرض تاريخ."
+          },
+          {
+            "en": "That it is late, or that it is certain.",
+            "fr": "Qu’il est en retard, ou qu’il est certain.",
+            "ar": "أنه متأخر أو أنه مؤكد."
+          }
+        ],
+        [
+          {
+            "en": "Pending",
+            "fr": "En attente",
+            "ar": "معلّق"
+          },
+          {
+            "en": "It depends on something outside the programme, such as a registration or a decision.",
+            "fr": "Cela dépend de quelque chose d’extérieur au programme, comme une immatriculation ou une décision.",
+            "ar": "يتوقف على شيء خارج البرنامج، كتسجيل أو قرار."
+          },
+          {
+            "en": "That we control the timing.",
+            "fr": "Que nous maîtrisons le calendrier.",
+            "ar": "أننا نتحكم في التوقيت."
+          }
+        ],
+        [
+          {
+            "en": "Open and closed",
+            "fr": "Ouvert et fermé",
+            "ar": "مفتوح ومغلق"
+          },
+          {
+            "en": "Used for money channels: open means a payment can be made by that route now; closed says why.",
+            "fr": "Utilisés pour les canaux d’argent : ouvert signifie qu’on peut payer par cette voie maintenant ; fermé dit pourquoi.",
+            "ar": "تُستعمل لقنوات المال: مفتوح يعني إمكان الدفع عبرها الآن؛ ومغلق يذكر السبب."
+          },
+          {
+            "en": "That a closed channel is hidden or has been abandoned.",
+            "fr": "Qu’un canal fermé est caché ou abandonné.",
+            "ar": "أن القناة المغلقة مخفية أو متروكة."
+          }
+        ]
+      ],
+      "note": {
+        "en": "The status words are fixed. They are not softened when the news is poor.",
+        "fr": "Les mots de statut sont fixes. Ils ne sont pas adoucis quand la nouvelle est mauvaise.",
+        "ar": "كلمات الحالة ثابتة ولا تُلطَّف حين تكون الأخبار سيئة."
+      }
+    },
+    {
       "type": "prose",
       "id": "st-how",
       "tier": "e",
-      "focus": 3,
+      "focus": 2,
       "title": {
         "en": "How to read this page",
         "fr": "Comment lire cette page",
@@ -218,14 +344,230 @@
       },
       "paragraphs": [
         {
-          "en": "Every line has a status, a date and the evidence behind it. “Live” means a person can use it today; “building” and “concept” are not live and are labelled so.",
-          "fr": "Chaque ligne a un statut, une date et la preuve correspondante. « Actif » signifie qu’une personne peut l’utiliser aujourd’hui ; « en construction » et « concept » ne le sont pas et sont étiquetés ainsi.",
-          "ar": "لكل سطر حالة وتاريخ ودليل. «نشط» يعني أن شخصا يستطيع استخدامه اليوم؛ و«قيد الإنشاء» و«مفهوم» ليسا كذلك ويوسمان بذلك."
+          "en": "Every line has a status, a date and the evidence behind it. “Live” means a person can use it today; “building” and “concept” are not live and are labelled so. When the evidence is a count, the count is read from the programme’s own records at the moment the page is built, so the page cannot quietly drift away from reality.",
+          "fr": "Chaque ligne a un statut, une date et la preuve correspondante. « Actif » signifie qu’une personne peut l’utiliser aujourd’hui ; « en construction » et « concept » ne le sont pas et sont étiquetés ainsi. Quand la preuve est un décompte, il est lu dans les propres enregistrements du programme au moment où la page est construite, de sorte que la page ne puisse pas s’éloigner discrètement de la réalité.",
+          "ar": "لكل سطر حالة وتاريخ ودليل. «نشط» يعني أن شخصًا يستطيع استخدامه اليوم؛ و«قيد الإنشاء» و«مفهوم» ليسا كذلك ويوسمان بذلك. وحين يكون الدليل عددًا فإنه يُقرأ من سجلات البرنامج نفسه لحظة بناء الصفحة، فلا تستطيع الصفحة أن تنحرف بصمت عن الواقع."
         },
         {
-          "en": "The live figures come from daily roll-ups, not from targets. If a figure is zero, it is zero.",
-          "fr": "Les chiffres en direct viennent des cumuls quotidiens, pas des objectifs. Si un chiffre est zéro, il est zéro.",
-          "ar": "تأتي الأرقام الحالية من الحصائل اليومية لا من الأهداف. إن كان الرقم صفرا فهو صفر."
+          "en": "The live figures come from daily roll-ups, not from targets. If a figure is zero, it is zero. Design targets, such as the number of experts the programme is built for, appear on other pages and are always labelled as targets; they are never placed in the same row as a count of what exists. If you see a design target presented as a result anywhere on the site, that is an error, and the [corrections desk](/trust/corrections/) is the place to say so.",
+          "fr": "Les chiffres en direct viennent des cumuls quotidiens, pas des objectifs. Si un chiffre est zéro, il est zéro. Les objectifs de conception, comme le nombre d’experts pour lequel le programme est conçu, figurent sur d’autres pages et sont toujours étiquetés comme objectifs ; ils ne sont jamais placés sur la même ligne qu’un décompte de ce qui existe. Si vous voyez un objectif de conception présenté comme un résultat n’importe où sur le site, c’est une erreur, et le [pôle des corrections](/trust/corrections/) est l’endroit pour le dire.",
+          "ar": "تأتي الأرقام الحالية من الحصائل اليومية لا من الأهداف. إن كان الرقم صفرًا فهو صفر. أما الأهداف التصميمية، كعدد الخبراء الذي صُمّم البرنامج له، فتظهر في صفحات أخرى وتُوسم دائمًا بأنها أهداف، ولا توضع أبدًا في سطر واحد مع تعداد لما هو موجود. وإن رأيت هدفًا تصميميًا معروضًا كنتيجة في أي مكان من الموقع فذلك خطأ، و[مكتب التصويبات](/trust/corrections/) هو المكان للإبلاغ عنه."
+        },
+        {
+          "en": "Dates matter as much as the words. The register shows the date of the last review of the page, {{ dates.as_of }}, for lines that were checked then. A line that has not changed is not rewritten to look fresh; the date only moves when someone has actually checked the line again. If the date on a line is old, treat the line as old.",
+          "fr": "Les dates comptent autant que les mots. Le registre montre la date de la dernière revue de la page, {{ dates.as_of }}, pour les lignes vérifiées à ce moment. Une ligne qui n’a pas changé n’est pas réécrite pour paraître fraîche ; la date ne bouge que lorsque quelqu’un a réellement revérifié la ligne. Si la date d’une ligne est ancienne, considérez la ligne comme ancienne.",
+          "ar": "التواريخ تهم بقدر الكلمات. يعرض السجل تاريخ آخر مراجعة للصفحة، {{ dates.as_of }}، للأسطر التي فُحصت حينها. والسطر الذي لم يتغير لا يُعاد كتابته ليبدو جديدًا؛ ولا يتحرك التاريخ إلا حين يعيد شخص فحص السطر فعلًا. فإن كان تاريخ السطر قديمًا فعامله على أنه قديم."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "st-money",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Reading the funding channels",
+        "fr": "Lire les canaux de financement",
+        "ar": "قراءة قنوات التمويل"
+      },
+      "paragraphs": [
+        {
+          "en": "The funding block above lists each way money can reach the programme, whether that route is open or closed today, and the reason. A channel is closed when a condition that it needs is not met, for example when it requires a registered business that does not exist yet, or a minimum amount that has not been reached. Closed does not mean hidden: it is displayed so that nobody is led to a form that cannot work. The amounts shown are read from the records, so the achieved figure is what has actually been received, not what has been promised.",
+          "fr": "Le bloc de financement ci-dessus liste chaque voie par laquelle l’argent peut parvenir au programme, si cette voie est ouverte ou fermée aujourd’hui, et la raison. Un canal est fermé quand une condition dont il a besoin n’est pas remplie, par exemple lorsqu’il exige une entreprise immatriculée qui n’existe pas encore, ou un montant minimal non atteint. Fermé ne veut pas dire caché : il est affiché pour que personne ne soit conduit vers un formulaire qui ne peut pas fonctionner. Les montants affichés sont lus dans les enregistrements ; le chiffre atteint est donc ce qui a réellement été reçu, non ce qui a été promis.",
+          "ar": "تسرد كتلة التمويل أعلاه كل طريق يمكن أن يصل به المال إلى البرنامج، وهل هو مفتوح أم مغلق اليوم، والسبب. وتُغلق القناة حين لا يتحقق شرط تحتاجه، كأن تتطلب منشأة مسجّلة غير موجودة بعد أو حدًا أدنى للمبلغ لم يُبلغ. والإغلاق لا يعني الإخفاء: فهي تُعرض كي لا يُساق أحد إلى نموذج لا يمكن أن يعمل. والمبالغ المعروضة تُقرأ من السجلات، فالرقم المحقَّق هو ما استُلم فعلًا لا ما وُعد به."
+        },
+        {
+          "en": "The same block shows where the advertising gate stands: how many pages count, how many are needed and the minimum length. Advertising is a possible source of income only after those conditions are met and the policy on the [advertising page](/trust/ads-policy/) has been followed, and it is never placed on the trust pages, on this status page or at checkout. If the gate is closed, which is the honest state while the content is still being written, the block says so in plain words.",
+          "fr": "Le même bloc montre où en est la barrière publicitaire : combien de pages comptent, combien sont nécessaires et la longueur minimale. La publicité n’est une source de revenu possible qu’une fois ces conditions remplies et la politique de la [page publicité](/trust/ads-policy/) respectée, et elle n’est jamais placée sur les pages de confiance, sur cette page de statut ni à la caisse. Si la barrière est fermée, ce qui est l’état honnête tant que le contenu est en cours de rédaction, le bloc le dit en termes clairs.",
+          "ar": "تُظهر الكتلة نفسها موقف بوابة الإعلانات: كم صفحة تُحتسب وكم صفحة مطلوبة والحد الأدنى للطول. والإعلانات مصدر دخل محتمل فقط بعد استيفاء هذه الشروط واتباع السياسة المبيّنة في [صفحة الإعلانات](/trust/ads-policy/)، ولا توضع أبدًا في صفحات الثقة ولا في صفحة الحالة هذه ولا عند الدفع. وإن كانت البوابة مغلقة، وهذه هي الحالة الصادقة ما دام المحتوى قيد الكتابة، فإن الكتلة تقول ذلك بعبارات واضحة."
+        },
+        {
+          "en": "Nothing on this page is an offer to sell securities, a promise of return or a statement that any amount will be repaid. How contributions are treated, what is refunded and under which conditions are set out in the [statement of what W5D promises](/trust/statement/) and the [refund policy](/trust/refunds/).",
+          "fr": "Rien sur cette page n’est une offre de titres, une promesse de rendement ni une déclaration qu’un montant sera remboursé. Le traitement des contributions, ce qui est remboursé et à quelles conditions sont exposés dans la [déclaration de ce que W5D promet](/trust/statement/) et la [politique de remboursement](/trust/refunds/).",
+          "ar": "لا شيء في هذه الصفحة عرضٌ لبيع أوراق مالية ولا وعدٌ بعائد ولا إقرارٌ بأن أي مبلغ سيُردّ. وكيف تُعامل المساهمات وما الذي يُسترد وبأي شروط مبيّن في [بيان ما تعد به W5D](/trust/statement/) و[سياسة الاسترداد](/trust/refunds/)."
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "id": "st-next",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "What comes next, with its conditions",
+        "fr": "La suite, avec ses conditions",
+        "ar": "ما يلي، بشروطه"
+      },
+      "items": [
+        {
+          "when": {
+            "en": "Now",
+            "fr": "Maintenant",
+            "ar": "الآن"
+          },
+          "title": {
+            "en": "The public preview",
+            "fr": "L’aperçu public",
+            "ar": "المعاينة العامة"
+          },
+          "body": {
+            "en": "The catalogue, the pricing logic and the trust pages are public and can be read and tested. The register above lists what is live.",
+            "fr": "Le catalogue, la logique de prix et les pages de confiance sont publics et peuvent être lus et testés. Le registre ci-dessus liste ce qui est actif.",
+            "ar": "الفهرس ومنطق التسعير وصفحات الثقة علنية ويمكن قراءتها واختبارها. ويسرد السجل أعلاه ما هو قائم."
+          }
+        },
+        {
+          "when": {
+            "en": "Condition",
+            "fr": "Condition",
+            "ar": "الشرط"
+          },
+          "title": {
+            "en": "Registration of the business",
+            "fr": "Immatriculation de l’entreprise",
+            "ar": "تسجيل المنشأة"
+          },
+          "body": {
+            "en": "Several money channels and invoicing depend on it. It is an outside procedure, so no date is promised here; when it is done, the [imprint](/trust/imprint/) and this page change on the same day.",
+            "fr": "Plusieurs canaux d’argent et la facturation en dépendent. C’est une démarche extérieure, donc aucune date n’est promise ici ; quand elle sera faite, les [mentions légales](/trust/imprint/) et cette page changeront le même jour.",
+            "ar": "تتوقف عليه عدة قنوات مالية والفوترة. وهو إجراء خارجي فلا يُعد بتاريخ هنا؛ وحين يتم، يتغير [الإشعار القانوني](/trust/imprint/) وهذه الصفحة في اليوم نفسه."
+          }
+        },
+        {
+          "when": {
+            "en": "Then",
+            "fr": "Ensuite",
+            "ar": "بعد ذلك"
+          },
+          "title": {
+            "en": "First cohorts and first reviews",
+            "fr": "Premières cohortes et premiers avis",
+            "ar": "أولى الدفعات وأولى المراجعات"
+          },
+          "body": {
+            "en": "Certification cohorts must complete before any expert is called certified, and reviews must exist before any [sampling result](/trust/sampling/) can be published. Until then these lines stay on awaiting.",
+            "fr": "Les cohortes de certification doivent terminer avant qu’un expert soit dit certifié, et des avis doivent exister avant qu’un [résultat d’échantillonnage](/trust/sampling/) puisse être publié. D’ici là ces lignes restent en attente.",
+            "ar": "يجب أن تكتمل دفعات الاعتماد قبل أن يُسمّى أي خبير معتمدًا، وأن توجد مراجعات قبل أن تُنشر أي [نتيجة عيّنات](/trust/sampling/). وإلى ذلك الحين تبقى هذه الأسطر قيد الانتظار."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "st-world",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Locally in Tunisia, and globally",
+        "fr": "Localement en Tunisie, et à l’échelle mondiale",
+        "ar": "محليًا في تونس وعالميًا"
+      },
+      "paragraphs": [
+        {
+          "en": "The programme starts in Tunisia, and the register says so: the first line about people counts developers in Tunisia, and the money channels are described in {{ money.currency }} with the local routes first. That is a statement of where things stand, not a limit. A reader from another country sees the same figures, in the same words and dates, in Arabic, French or English, and a funder outside Tunisia can use the page to see which routes are open to them today.",
+          "fr": "Le programme démarre en Tunisie et le registre le dit : la première ligne sur les personnes compte les développeurs en Tunisie, et les canaux d’argent sont décrits en {{ money.currency }} avec les voies locales d’abord. C’est un constat de situation, non une limite. Un lecteur d’un autre pays voit les mêmes chiffres, avec les mêmes mots et dates, en arabe, en français ou en anglais, et un financeur hors de Tunisie peut utiliser la page pour voir quelles voies lui sont ouvertes aujourd’hui.",
+          "ar": "يبدأ البرنامج في تونس والسجل يقول ذلك: فالسطر الأول عن الأشخاص يحصي المطورين في تونس، وتُوصف قنوات المال بـ{{ money.currency }} مع الطرق المحلية أولًا. وهذا توصيف للوضع لا حدّ. ويرى القارئ من بلد آخر الأرقام نفسها بالكلمات والتواريخ نفسها بالعربية أو الفرنسية أو الإنجليزية، ويستطيع الممول خارج تونس استخدام الصفحة ليعرف أي الطرق مفتوحة له اليوم."
+        },
+        {
+          "en": "Local rules shape what can be open. Tax invoicing, the registration of a business, the handling of foreign currency and what a payment provider may process all follow Tunisian law and the providers’ own terms. We describe the effect on each channel and do not guess the legal detail. Where a rule decides whether a channel can open, we confirm it with a Tunisian accountant or lawyer and note the date of that review, as the [legal review](/trust/terms/) of this site requires.",
+          "fr": "Les règles locales déterminent ce qui peut être ouvert. La facturation fiscale, l’immatriculation d’une entreprise, le traitement des devises et ce qu’un prestataire de paiement peut traiter relèvent du droit tunisien et des conditions propres aux prestataires. Nous décrivons l’effet sur chaque canal et ne devinons pas le détail juridique. Quand une règle décide si un canal peut s’ouvrir, nous la confirmons avec un comptable ou un avocat tunisien et notons la date de cette revue, comme l’exige la [revue juridique](/trust/terms/) de ce site.",
+          "ar": "تحدد القواعد المحلية ما يمكن فتحه. فالفوترة الضريبية وتسجيل المنشأة والتعامل بالعملات الأجنبية وما يجوز لمزود الدفع معالجته كلها تتبع القانون التونسي وشروط المزودين أنفسهم. ونصف الأثر على كل قناة ولا نخمّن التفصيل القانوني. وحين تحسم قاعدة إمكان فتح قناة، نؤكدها مع محاسب أو محامٍ تونسي ونسجّل تاريخ تلك المراجعة، كما تتطلب [المراجعة القانونية](/trust/terms/) لهذا الموقع."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "st-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "The status page, asked plainly",
+        "fr": "La page de statut, en questions simples",
+        "ar": "صفحة الحالة بأسئلة مباشرة"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Why are some lines awaiting?",
+            "fr": "Pourquoi certaines lignes sont-elles en attente ?",
+            "ar": "لماذا بعض الأسطر قيد الانتظار؟"
+          },
+          "a": {
+            "en": "Because the thing has not happened yet. We would rather show an honest wait than a line that looks complete and is not.",
+            "fr": "Parce que la chose ne s’est pas encore produite. Nous préférons montrer une attente honnête qu’une ligne qui paraît complète et ne l’est pas.",
+            "ar": "لأن الأمر لم يحدث بعد. نفضّل أن نعرض انتظارًا صادقًا على سطر يبدو مكتملًا وليس كذلك."
+          }
+        },
+        {
+          "q": {
+            "en": "Can I pay by any route listed?",
+            "fr": "Puis-je payer par toutes les voies listées ?",
+            "ar": "هل أستطيع الدفع بأي طريق مدرج؟"
+          },
+          "a": {
+            "en": "Only by those marked open in the funding block. A closed route says why it is closed, and the reason can change when a condition is met.",
+            "fr": "Seulement par celles marquées ouvertes dans le bloc de financement. Une voie fermée dit pourquoi, et la raison peut changer quand une condition est remplie.",
+            "ar": "فقط بالطرق الموسومة مفتوحة في كتلة التمويل. والطريق المغلق يذكر سبب إغلاقه، وقد يتغير السبب حين يتحقق شرط."
+          }
+        },
+        {
+          "q": {
+            "en": "How often is the page updated?",
+            "fr": "À quelle fréquence la page est-elle mise à jour ?",
+            "ar": "كم مرة تُحدَّث الصفحة؟"
+          },
+          "a": {
+            "en": "The live figures follow the programme’s records. The statements and dates are reviewed at least every {{ legal.review_months }} months, and sooner when something changes.",
+            "fr": "Les chiffres en direct suivent les enregistrements du programme. Les déclarations et dates sont revues au moins tous les {{ legal.review_months }} mois, et plus tôt si quelque chose change.",
+            "ar": "تتبع الأرقام الحية سجلات البرنامج. وتُراجَع البيانات والتواريخ مرة كل {{ legal.review_months }} أشهر على الأقل، وأبكر إن تغيّر شيء."
+          }
+        },
+        {
+          "q": {
+            "en": "A figure looks wrong. What do I do?",
+            "fr": "Un chiffre me semble faux. Que faire ?",
+            "ar": "رقم يبدو خاطئًا. ماذا أفعل؟"
+          },
+          "a": {
+            "en": "Tell the corrections desk with the line and your source. You will be answered within {{ quality.correction_sla_days }} days and, if we were wrong, the change is dated.",
+            "fr": "Dites-le au pôle des corrections avec la ligne et votre source. On vous répondra sous {{ quality.correction_sla_days }} jours et, si nous avions tort, la modification est datée.",
+            "ar": "أخبر مكتب التصويبات مع السطر ومصدرك. سيُردّ عليك خلال {{ quality.correction_sla_days }} يومًا، وإن كنا مخطئين يُؤرَّخ التعديل."
+          }
+        },
+        {
+          "q": {
+            "en": "Is there a feed or an e-mail for changes?",
+            "fr": "Existe-t-il un flux ou un e-mail pour les changements ?",
+            "ar": "هل توجد خلاصة أو بريد للتغييرات؟"
+          },
+          "a": {
+            "en": "Yes: the dated updates by e-mail, linked below. They report changes to the register, not marketing.",
+            "fr": "Oui : les mises à jour datées par e-mail, liées ci-dessous. Elles rapportent les changements du registre, pas du marketing.",
+            "ar": "نعم: التحديثات المؤرخة بالبريد الإلكتروني، والرابط أدناه. وهي تنقل تغييرات السجل لا التسويق."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "st-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages",
+        "fr": "Pages liées",
+        "ar": "صفحات ذات صلة"
+      },
+      "paragraphs": [
+        {
+          "en": "To understand a line, go to the page that explains it. The [statement](/trust/statement/) sets out what W5D does and does not promise, the [sampling method](/trust/sampling/) explains the checks on reports, the [corrections desk](/trust/corrections/) takes errors, and the [imprint](/trust/imprint/) says who is responsible and what is registered. Everything is listed on the [trust index](/trust/), and the [investor page](/investors/) shows how the funding fits into the programme.",
+          "fr": "Pour comprendre une ligne, allez à la page qui l’explique. La [déclaration](/trust/statement/) expose ce que W5D promet et ne promet pas, la [méthode d’échantillonnage](/trust/sampling/) explique les contrôles des rapports, le [pôle des corrections](/trust/corrections/) reçoit les erreurs, et les [mentions légales](/trust/imprint/) disent qui est responsable et ce qui est immatriculé. Tout est listé dans l’[index de confiance](/trust/), et la [page investisseurs](/investors/) montre comment le financement s’insère dans le programme.",
+          "ar": "لفهم سطر ما اذهب إلى الصفحة التي تشرحه. فـ[البيان](/trust/statement/) يعرض ما تعد به W5D وما لا تعد به، و[طريقة العيّنات](/trust/sampling/) تشرح فحوص التقارير، و[مكتب التصويبات](/trust/corrections/) يتلقى الأخطاء، و[الإشعار القانوني](/trust/imprint/) يقول من المسؤول وما المسجَّل. وكل ذلك مدرج في [فهرس الثقة](/trust/)، و[صفحة المستثمرين](/investors/) تبيّن كيف يندرج التمويل في البرنامج."
         }
       ]
     },
