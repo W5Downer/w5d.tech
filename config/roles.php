@@ -7,7 +7,7 @@ return [
         'admin'    => ['dashboard', 'applicants', 'verification', 'services', 'academies', 'teams', 'weekly', 'projects', 'clients', 'quality', 'support', 'content', 'reports', 'managers', 'messages', 'investors.read', 'payments',
                        'applicants.update', 'applicants.delete', 'verification.update', 'academies.create', 'academies.update', 'academies.delete', 'teams.create', 'teams.update', 'teams.delete',
                        'weekly.update', 'clients.create', 'clients.update', 'clients.delete', 'quality.update', 'support.create', 'support.update', 'support.delete',
-                       'qcm', 'qcm.create', 'qcm.update', 'affiliates', 'affiliates.update', 'certificates', 'certificates.update'],
+                       'qcm', 'qcm.create', 'qcm.update', 'qcm-rules', 'qcm-rules.update', 'affiliates', 'affiliates.update', 'certificates', 'certificates.update'],
         'leader'   => ['dashboard', 'teams', 'weekly', 'quality', 'academies', 'reports', 'teams.create', 'teams.update', 'weekly.update', 'quality.update', 'academies.update'],
         'manager'  => ['dashboard', 'teams', 'weekly', 'teams.update', 'weekly.update'],
         'member'   => ['dashboard'],
@@ -53,5 +53,7 @@ return [
         ['n' => 34, 'slug' => 'qcm-review',          'icon' => 'clipboard-check',  'perm' => 'qcm',         'label' => ['en' => 'QCM fees & tasks', 'fr' => 'Frais et tâches QCM', 'ar' => 'رسوم الاختبار والمهام']],
         ['n' => 35, 'slug' => 'affiliates',          'icon' => 'share-2',          'perm' => 'affiliates',  'label' => ['en' => 'Affiliates', 'fr' => 'Affiliés', 'ar' => 'المُحيلون']],
         ['n' => 36, 'slug' => 'certificates',        'icon' => 'award',            'perm' => 'certificates','label' => ['en' => 'Certificates', 'fr' => 'Certificats', 'ar' => 'الشهادات']],
+        ['n' => 37, 'slug' => 'payment-methods',     'icon' => 'wallet',           'perm' => 'payment-methods','label' => ['en' => 'Payment methods', 'fr' => 'Moyens de paiement', 'ar' => 'وسائل الدفع']],
+        ['n' => 38, 'slug' => 'integrations',        'icon' => 'plug',             'perm' => 'integrations', 'label' => ['en' => 'Integrations', 'fr' => 'Intégrations', 'ar' => 'التكاملات']],
     ],
 ];

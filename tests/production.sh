@@ -78,11 +78,16 @@ run "view cache build + status (deploy step)"       bash -c 'php bin/view.php ca
 run "preflight (production copy must have 0 FAIL)"  env PREFLIGHT_ALLOW_LOCAL_URL=1 php bin/preflight.php
 run "lint"                                          php bin/lint.php
 run "view cache unit tests"                         php tests/viewcache.php
+run "generated QCM pool (520,000 questions)"        php tests/qcmgen.php
 run "production security checks"                    python3 tests/production.py "$BASE" "$PASS"
 run "smoke: every route x en/fr/ar"                 bash tests/smoke.sh "$BASE"
 run "flows (CSRF, forms, API, pricing, admin)"      python3 tests/flows.py "$BASE"
 run "auth"                                          python3 tests/auth.py "$BASE"
 run "d17 payments"                                  python3 tests/d17.py "$BASE"
+run "payment gateways + owner config"              python3 tests/gateways.py "$BASE"
+run "integrations (GA4/Ads/Meta/reCAPTCHA) + config"  python3 tests/integrations.py "$BASE"
+run "sitemap.xml (complete, indexable, no gated/noindex)"  python3 tests/sitemap.py "$BASE"
+run "motion + chromeless pages (browser)"           python3 tests/motion.py "$BASE"
 run "dashboards"                                    python3 tests/dash.py "$BASE"
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"

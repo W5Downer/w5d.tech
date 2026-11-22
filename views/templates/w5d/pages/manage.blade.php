@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', __('lbl.manage') . ' — W5D')
 @section('robots', 'noindex,follow')
+@section('chromeless', '1')
 @section('content')
   @foreach($sections as $s)@widget($s['type'], $s)@endforeach
   <x-section :d="['id' => 'mng-form', 'tier' => 'i', 'focus' => 3, 'title' => ['en' => 'Your subscription', 'fr' => 'Votre abonnement', 'ar' => 'اشتراكك']]">
@@ -11,6 +12,7 @@
         {!! csrf_field() !!}
         <x-form-field name="ref" :label="__('lbl.ref')" :required="true" :value="$ref" />
         <x-form-field name="key" :label="__('lbl.token')" :required="true" />
+        {!! \W5D\Integrations::field() !!}
         <button class="btn-focus" type="submit">{{ __('cta.open') }}</button>
       </form>
     @else

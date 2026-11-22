@@ -263,7 +263,7 @@ final class Programs
         $perLevel = [1 => 0, 2 => 0, 3 => 0, 4 => 0];
         foreach ($all as $x) if (!empty($x['active'])) $perLevel[(int)$x['level']] = ($perLevel[(int)$x['level']] ?? 0) + 1;
         return ['kind' => 'qcm-bank', 'services' => $svc, 'slug' => $slug, 'level' => $lvl, 'rows' => array_slice($rows, ($page - 1) * $per, $per), 'total' => count($rows), 'page' => $page, 'pages' => $pages,
-            'edit' => $edit, 'new' => isset($q->query['new']), 'per_level' => $perLevel, 'target' => (int)Variables::get('qcm.bank_target', 1000),
+            'edit' => $edit, 'new' => isset($q->query['new']), 'per_level' => $perLevel, 'target' => (int)Variables::get('qcm.bank_target', 1000), 'generated' => \W5D\QcmGen::enabled() ? \W5D\QcmGen::perLevel() : 0,
             'can' => ['create' => Auth::can('qcm.create'), 'update' => Auth::can('qcm.update'), 'delete' => Auth::can('qcm.delete')]];
     }
 

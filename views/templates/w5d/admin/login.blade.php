@@ -8,6 +8,7 @@
     @if(!empty($error))<p class="rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ $error }}</p>@endif
     <x-form-field name="username" :label="__('admin.user')" :required="true" />
     <div><label for="f-password" class="block text-sm font-medium mb-1">{{ __('admin.pass') }} <span aria-hidden="true">*</span></label><input class="field" id="f-password" name="password" type="password" required autocomplete="current-password"></div>
+    {!! \W5D\Integrations::field(true) !!}
     <button class="btn-peak w-full" type="submit">{{ __('admin.login') }}</button>
     <p class="text-xs text-slate-500">Rate-limited. Every sign-in is checked against an Argon2id hash.</p>
   </form>

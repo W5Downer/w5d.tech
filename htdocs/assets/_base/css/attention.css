@@ -19,7 +19,7 @@
   --g-technology:linear-gradient(135deg,#22d3ee,#8b5cf6);
   --orb-a:#8b5cf6; --orb-b:#06b6d4; --orb-c:#ec4899;
   --scrim:rgba(7,7,17,.22);
-  --font-ar:'Noto Sans Arabic','Inter',system-ui,sans-serif;
+  --font-ar:'Cairo','Noto Sans Arabic','Inter',system-ui,sans-serif;
 }
 
 /* template base */
@@ -353,15 +353,35 @@ html { scroll-behavior: smooth; }
 .code-block .tok-n { color: #f472b6; } /* name/tag */
 .code-block .tok-a { color: #38bdf8; } /* attr */
 
-/* Reduce motion */
+/* Reduce motion. Many desktops report "reduce" without the owner knowing (Windows "Show animations" off, battery saver, remote desktop),
+ * which silently killed every effect there while phones kept them. So "reduce" no longer means "nothing moves": it means CALM.
+ *  - stopped: big travelling things (marquees, floating, bouncing, spinning, sliding reveals, slider autoplay)
+ *  - kept, slower: soft blurred orbs, counters, fade-only reveals
+ * A footer button lets a visitor force full motion (html[data-motion=full]). */
 @media (prefers-reduced-motion: reduce) {
-  .orb, .aurora::before, .aurora::after, .conic-spin, .stars::before, .stars::after,
+  html:not([data-motion="full"]) :is(.aurora::before, .aurora::after, .conic-spin, .stars::before, .stars::after,
   .marquee-track, .headline-marquee, .marquee-y-track, .float-y, .breath, .bounce-y,
-  .gradient-shift, .pulse-ring::before, .typing-dot, .beam::before, .mesh-bg {
-    animation: none !important;
-  }
+  .gradient-shift, .pulse-ring::before, .typing-dot, .beam::before, .mesh-bg) { animation: none !important; }
+  html:not([data-motion="full"]) :is(.orb, .orb-a, .orb-b, .orb-c) { animation-duration: 40s !important; }
+  html:not([data-motion="full"]) [data-rv], html:not([data-motion="full"]) [data-reveal] { transform: none !important; }
+}
+@media print { [data-rv], [data-reveal] { opacity: 1 !important; transform: none !important; } }
+
+/* Desktop pointer layer (mouse/trackpad only; touch screens have no hover): lift + glow on cards, soft spotlight on heroes */
+@media (hover: hover) and (pointer: fine) {
+  a.group { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  a.group:hover { box-shadow: 0 18px 40px -22px rgba(124,58,237,.55); }
+  .btn-peak, .btn-focus { transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
+  .btn-peak:hover, .btn-focus:hover { transform: translateY(-1px); filter: brightness(1.06); }
+  .hero-dark.spotlight { background-image: radial-gradient(700px circle at var(--mx,50%) var(--my,30%), rgba(139,92,246,.16), transparent 45%); }
 }
 
+/* ---------- Chromeless pages (sign-in, payment, QCM round, certificate, unsubscribe): slim bar instead of the full navbar ---------- */
+.w5-minibar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; max-width: 72rem; margin: 0 auto; padding: .75rem 1rem; }
+.w5-minibar a.back { display: inline-flex; align-items: center; gap: .35rem; font-size: .85rem; font-weight: 600; color: #64748b; }
+.w5-minibar a.back:hover { color: #7c3aed; }
+.dark .w5-minibar a.back { color: #cbd5e1; }
+@media print { .w5-minibar { display: none !important; } }
 
 /* ---------- Reading tiers (one per section) ---------- */
 .tier-e{font-size:1.06rem;line-height:1.75}
@@ -460,7 +480,8 @@ select.field{appearance:none;background-image:linear-gradient(45deg,transparent 
 @media print{header,footer,.sticky-cta,.orb,.grid-bg{display:none!important}}
 
 /* ---------- Arabic / RTL ---------- */
-html[lang=ar] body,html[lang=ar] .font-display{font-family:var(--font-ar);letter-spacing:0}
+html[lang=ar] body,html[lang=ar] .font-display,html[lang=ar] .prose-w5 h3,html[lang=ar] .w5d-aside>header h2,html[lang=ar] button,html[lang=ar] input,html[lang=ar] select,html[lang=ar] textarea{font-family:var(--font-ar);letter-spacing:0}
+html[lang=ar] body{line-height:1.75}
 html[lang=ar] .tracking-tight,html[lang=ar] .tracking-tighter{letter-spacing:0}
 html[lang=ar] .uppercase{text-transform:none;letter-spacing:0}
 [dir=rtl] .rtl-flip{transform:scaleX(-1)}
@@ -675,3 +696,13 @@ a[data-active-link] .font-semibold{color:#6d28d9}
   .card-car-btn{width:2.5rem;height:2.5rem}
   .w5-slider [data-prev],.w5-slider [data-next]{min-width:2.5rem;min-height:2.5rem}
 }
+
+/* ---------- Cookie / measurement consent bar (shown only when a tracking integration is live) ---------- */
+.w5-consent{position:fixed;inset-inline:.75rem;bottom:.75rem;z-index:60;max-width:34rem;margin-inline:auto;padding:1rem 1.1rem;border-radius:1rem;background:rgba(255,255,255,.98);color:#0f172a;border:1px solid rgba(15,23,42,.15);box-shadow:0 18px 50px -18px rgba(0,0,0,.45)}
+.dark .w5-consent{background:rgba(10,10,24,.98);color:#e2e8f0;border-color:rgba(255,255,255,.14)}
+.w5-consent[hidden]{display:none}
+@media(max-width:1023px){.w5-consent{bottom:calc(4rem + env(safe-area-inset-bottom))}}
+@media(min-width:1024px){.w5-consent{inset-inline-start:auto;inset-inline-end:1.25rem;margin-inline:0}}
+.w5-consent a{text-decoration:underline}
+.w5-captcha{min-height:4.9rem}
+.grecaptcha-badge{visibility:visible}

@@ -2,6 +2,7 @@
 @section('title', $title . ' · W5D')
 @section('description', __('acct.guest_lead'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php
   $providers = $providers ?? [];
@@ -31,6 +32,7 @@
         <form method="post" action="{{ url('/account/login/') . $nextQ }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+          {!! \W5D\Integrations::field() !!}
           <x-form-field name="identifier" :label="__('acct.id_label')" type="text" :required="true" :errors="$errors" />
           <x-form-field name="password" :label="__('acct.password')" type="password" autocomplete="current-password" :required="true" :errors="$errors" />
           <x-form-field name="remember" :label="__('acct.remember')" type="checkbox" :errors="$errors" />
@@ -41,6 +43,7 @@
           <form method="post" action="{{ url('/account/resend/') }}" class="mt-4 rounded-lg border border-slate-200 dark:border-white/10 p-3 text-sm">
             {!! csrf_field() !!}<input type="hidden" name="email" value="{{ $resend }}">
             <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+            {!! \W5D\Integrations::field() !!}
             <button type="submit" class="btn-ghost">{{ __('acct.resend') }}</button>
           </form>
         @endif
@@ -60,6 +63,7 @@
         <form method="post" action="{{ url('/account/register/') . $nextQ }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+          {!! \W5D\Integrations::field() !!}
           <x-form-field name="name" :label="__('acct.name')" :required="true" :errors="$errors" />
           <x-form-field name="email" :label="__('acct.email')" type="email" :required="true" :errors="$errors" />
           <x-form-field name="role" :label="__('acct.role')" type="select" :options="['user' => __('acct.role_user'), 'investor' => __('acct.role_investor'), 'customer' => __('acct.role_customer')]" :errors="$errors" />
@@ -84,6 +88,7 @@
         <form method="post" action="{{ url('/account/forgot/') }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+          {!! \W5D\Integrations::field() !!}
           <x-form-field name="email" :label="__('acct.email')" type="email" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.send_link') }}</button>
         </form>
@@ -93,6 +98,7 @@
         <form method="post" action="{{ url('/account/reset/' . $token . '/') }}" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+          {!! \W5D\Integrations::field() !!}
           <x-form-field name="password" :label="__('acct.new_password')" type="password" autocomplete="new-password" :required="true" :hint="__('acct.pw_hint')" :errors="$errors" />
           <x-form-field name="password2" :label="__('acct.password2')" type="password" autocomplete="new-password" :required="true" :errors="$errors" />
           <button type="submit" class="btn-peak w-full">{{ __('acct.reset') }}</button>

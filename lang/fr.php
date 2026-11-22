@@ -12,6 +12,7 @@ return [
         'subscription' => 'Abonnement quotidien', 'checkout' => 'Paiement', 'tunisia' => 'Pôle Tunisie',
     ],
     'cta' => [
+        'partners' => 'Écrire au bureau partenaires', 'affiliate' => 'Ouvrir mon espace parrainage', 'path' => 'Choisissez votre porte',
         'invest' => 'Prendre une part aujourd’hui', 'quote' => 'Voir le prix du jour', 'register' => 'S’inscrire', 'eligibility' => 'Vérifier mon éligibilité',
         'manager' => 'Candidater comme manager', 'dossier' => 'Demander le dossier', 'read_limits' => 'Lire les limites déclarées', 'open' => 'Ouvrir',
         'back_home' => 'Retour à l’accueil', 'contact' => 'Écrire au bon service', 'subscribe' => 'Démarrer un abonnement quotidien', 'next' => 'Suivant',
@@ -61,7 +62,8 @@ return [
         'forgot' => 'Mot de passe oublié', 'reset' => 'Réinitialiser le mot de passe', 'overview' => 'Aperçu',
         'orders' => 'Mes parts', 'payments' => 'Paiements', 'applications' => 'Candidatures',
         'notifications' => 'Notifications', 'profile' => 'Profil', 'security' => 'Sécurité',
-        'pay_d17' => 'Payer avec D17', 'email' => 'E-mail', 'password' => 'Mot de passe',
+        'pay_d17' => 'Payer avec D17',
+        'pay_online' => 'en ligne', 'pay_manual' => 'vérification manuelle', 'pay_tn_only' => 'Tunisie uniquement', 'pay_online_steps' => 'Vous payez sur la page sécurisée du prestataire puis revenez. Confirmé uniquement lorsque le prestataire le confirme à notre serveur.', 'pay_steps_generic' => 'Envoyez le montant puis saisissez la référence de transaction. Un administrateur la vérifie manuellement.', 'pay_open' => 'Payer maintenant', 'pay_checking' => 'Nous vérifions votre paiement auprès du prestataire. Cette page se met à jour dès confirmation.', 'pay_recheck' => 'Vérifier à nouveau', 'pay_ok' => 'Paiement confirmé. Merci.', 'pay_failed' => 'Le paiement n’a pas abouti. Vous pouvez réessayer.', 'pay_retry' => 'Réessayer', 'pay_unavailable' => 'La page de paiement n’a pas pu s’ouvrir. Réessayez dans un instant ou choisissez un autre moyen.', 'pay_bank_title' => 'Payer par virement bancaire', 'pay_online_title' => 'Payer en ligne en toute sécurité', 'email' => 'E-mail', 'password' => 'Mot de passe',
         'password2' => 'Répéter le mot de passe', 'remember' => 'Se souvenir de moi sur cet appareil', 'name' => 'Nom complet',
         'role' => 'Je rejoins W5D en tant que', 'role_user' => 'Apprenant / membre', 'role_investor' => 'Investisseur',
         'role_customer' => 'Client', 'accept' => 'J’ai lu les limites déclarées et la note de confidentialité', 'have_account' => 'Vous avez déjà un compte ?',
@@ -92,6 +94,8 @@ return [
         'open' => 'Partager cette page', 'text' => 'W5D : cinq macro-travaux, 130 services, un parcours.',
     ],
     'ux' => [
+        'tab_learn' => 'Apprendre', 'tab_lead' => 'Diriger', 'tab_client' => 'Partenaire', 'tab_refer' => 'Parrainer', 'tab_path' => 'Démarrer',
+        'mini_home' => 'Accueil', 'mini_account' => 'Mon compte', 'mini_privacy' => 'Confidentialité', 'mini_terms' => 'Conditions', 'mini_help' => 'Aide', 'motion_full' => 'Les animations sont réduites par votre appareil. Activer toutes les animations', 'motion_auto' => 'Suivre le réglage de mon appareil (animations réduites)',
         'close' => 'Fermer', 'auth_title_login' => 'Connexion à W5D', 'auth_title_register' => 'Créez votre compte W5D',
         'auth_lead_login' => 'Reprenez où vous en étiez : vos parts, paiements et candidatures.',
         'auth_lead_register' => 'Un compte pour toutes les portes. Confirmation par e-mail requise.', 'auth_sending' => 'Veuillez patienter…',
@@ -121,5 +125,13 @@ return [
         'crud_failed' => 'Enregistrement impossible. Réessayez.', 'crud_in_use' => 'Suppression impossible : l’enregistrement est utilisé.', 'crud_scope' => 'Vous ne voyez que vos propres lignes.',
         'crud_back' => 'Retour à la liste', 'crud_new_title' => 'Nouvel enregistrement', 'crud_edit_title' => 'Modifier l’enregistrement', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Rôles et ce que chacun peut faire',
         'crud_read' => 'Lire', 'crud_create_l' => 'Créer', 'crud_update_l' => 'Modifier', 'crud_delete_l' => 'Supprimer', 'crud_yes' => 'oui', 'crud_own' => 'lignes propres',
+    ],
+    'consent' => [
+        'title' => 'Cookies et mesure d’audience', 'accept' => 'Accepter', 'refuse' => 'Refuser', 'settings' => 'Paramètres des cookies',
+        'body' => 'Avec votre accord, nous utilisons des outils Google et Meta pour compter les visites et mesurer nos publicités. Rien n’est chargé avant votre choix, et refuser ne change rien d’autre sur le site. Voir la [page confidentialité](/trust/privacy/).',
+    ],
+    'captcha' => [
+        'notice' => 'Protégé par Google reCAPTCHA : sa [politique de confidentialité](https://policies.google.com/privacy) et ses [conditions](https://policies.google.com/terms) s’appliquent.',
+        'required' => 'Veuillez d’abord cocher « Je ne suis pas un robot ».',
     ],
 ];

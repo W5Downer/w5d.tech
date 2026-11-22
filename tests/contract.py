@@ -91,7 +91,7 @@ b = call(g, 'GET', '/')[2]
 check('home: the logo link is current, no mega-menu trigger is falsely marked', not re.search(r'<li data-mega-trigger[^>]*data-active', b))
 
 section('phone tab bar: the current tab is marked')
-for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/checkout/'), ('/account/login/', '/account/login/'), ('/services/', None)):
+for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/checkout/'), ('/services/', None)):
     b = call(g, 'GET', path)[2]
     nav = re.search(r'<nav class="w5-tabbar.*?</nav>', b, re.S)
     nav = nav.group(0) if nav else ''
@@ -100,4 +100,51 @@ for path, href in (('/', '/'), ('/pricing/', '/checkout/'), ('/investors/', '/ch
         check(f'tab bar on {path}: no tab is falsely current', len(cur) == 0, cur)
     else:
         check(f'tab bar on {path}: exactly one current tab, pointing at {href}', cur == [href], cur)
+
+section('chromeless pages: slim bar, no navbar / tab bar / mega menu; everything else keeps the full chrome')
+for path in ('/account/login/', '/account/register/', '/account/forgot/'):
+    b = call(g, 'GET', path)[2]
+    check(f'{path}: minibar present', 'w5-minibar' in b)
+    check(f'{path}: no navbar, tab bar, mega menu or quick-find', not any(k in b for k in ('nav-solid', 'w5-tabbar', 'data-mega-trigger', 'quickDialog')))
+    check(f'{path}: language + theme controls still reachable', 'data-aside-open="aside-lang"' in b and 'data-theme-toggle' in b)
+for path in ('/', '/pricing/', '/certification/verify/', '/no-such-page/'):
+    b = call(g, 'GET', path)[2]
+    check(f'{path}: keeps the full navbar and tab bar', 'nav-solid' in b and 'w5-tabbar' in b and 'w5-minibar' not in b)
+
+section('reveal on scroll: sections carry data-rv, and nothing stays hidden without JS')
+b = call(g, 'GET', '/pricing/')[2]
+check('sections emit data-rv', b.count('data-rv="up"') >= 3, b.count('data-rv'))
+css = call(g, 'GET', '/assets/_base/css/attention.css')[2]
+check('reveal hiding only applies under .js', '.js [data-rv]' in css and '\n[data-rv]{' not in css)
+check('reduced motion is calm, not off (orbs slowed, reveal fade-only)', 'animation-duration: 40s' in css and 'data-motion="full"' in css)
+check('footer offers the full-motion opt-in', 'data-motion-toggle' in call(g, 'GET', '/')[2])
+
+section('mega menu: five doors, not one investor funnel')
+import json as _j
+nav = _j.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data/content/nav/main.json'), encoding='utf-8'))
+labels = [i['label']['en'] for i in nav['items']]
+check('five top-level groups', len(nav['items']) == 5, labels)
+check('investing is one group among several', sum('nvest' in l or 'Fund' in l for l in labels) <= 1 and any('Learn' in l for l in labels) and any('Lead' in l for l in labels), labels)
+hrefs = [l['href'] for i in nav['items'] for g in i['groups'] for l in g.get('items', [])]
+check('certification, referral, partners, careers all reachable from the menu', all(h in hrefs for h in ('/certification/', '/affiliate/', '/partners/', '/careers/managers/', '/join/eligibility/', '/trust/')), hrefs)
+check('every nav group has a distinct active_prefix', len({i.get('active_prefix') for i in nav['items'] if i.get('active_prefix')}) == len([i for i in nav['items'] if i.get('active_prefix')]))
+b = call(g, 'GET', '/')[2]
+check('footer columns mirror the doors', all(w in b for w in ('Learn and certify', 'Lead and partner', 'Company and trust')))
+
+section('header + tab-bar CTA follows the subject of the page')
+want = {'/': 'path', '/about/': 'path', '/for/': 'path', '/investors/': 'invest', '/pricing/': 'invest', '/trust/statement/': 'invest', '/join/': 'learn', '/how-it-works/': 'learn',
+        '/certification/': 'learn', '/services/': 'learn', '/careers/': 'lead', '/for/leader/': 'lead', '/partners/': 'client', '/for/customer/': 'client', '/affiliate/': 'affiliate', '/for/member/': 'learn'}
+for path, door in want.items():
+    b = call(g, 'GET', path)[2]
+    got = sorted(set(re.findall(r'data-cta="([a-z]+)"', b)))
+    check(f'{path}: header button is the "{door}" door', got == [door], got)
+hdr = {'invest': '/checkout/', 'learn': '/join/eligibility/', 'lead': '/careers/managers/', 'client': '/contact/?desk=partners', 'affiliate': '/account/affiliate/', 'path': '/for/'}
+for path in ('/investors/', '/join/', '/careers/', '/partners/', '/affiliate/', '/'):
+    b = call(g, 'GET', path)[2]
+    door = re.search(r'data-cta="([a-z]+)"', b).group(1)
+    nav_ = re.search(r'<nav class="w5-tabbar.*?</nav>', b, re.S).group(0)
+    hrefs_ = re.findall(r'<a href="([^"]*)"', nav_)
+    check(f'{path}: tab bar carries the same door ({hdr[door]})', hdr[door] in hrefs_, hrefs_)
+b = call(g, 'GET', '/services/affordable-housing/')[2]
+check('a service page asks for eligibility for THAT service', 'join/eligibility/?service=affordable-housing' in b)
 finish('contract')

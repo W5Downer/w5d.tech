@@ -11,7 +11,7 @@ PHP 8.4 + SQLite CMS. No framework, no Composer, no CDN, no jQuery. Written 2026
 | `views/templates/w5d/` | The single Blade-style template (layouts, pages, account, admin, components, mail) |
 | `data/content/` | Page/nav JSON, one file per page; every leaf is `{en,fr,ar}` |
 | `data/qcm/` | QCM bank, one JSON file per service (130 files, demo 5,200 questions) |
-| `config/` | `app.php`, `variables.php` (single source of numbers), `roles.php` (roles + 36 menus), `resources.php` (CRUD), `mail.php`, `certification.php`, `apidocs/*`, `oauth.php`, `social.php` |
+| `config/` | `app.php`, `variables.php` (single source of numbers), `roles.php` (roles + 38 menus), `resources.php` (CRUD), `mail.php`, `certification.php`, `apidocs/*`, `oauth.php`, `social.php` |
 | `lang/` | UI strings en/fr/ar; the linter enforces identical keys |
 | `db/migrations/` | `001`..`006` SQL migrations applied by `Migrator` |
 | `storage/` | SQLite DB, logs (`mail-*.log`), view cache, incoming uploads (gitignored) |
@@ -41,7 +41,9 @@ PHP 8.4 + SQLite CMS. No framework, no Composer, no CDN, no jQuery. Written 2026
 - Language: cookie `w5d_lang` or `/language/{code}`. `?lang=` and `/ar/` prefixes are not supported. Arabic renders RTL.
 
 ## 4. Auth, ACL, CRUD
-- **Owner and staff:** `Auth`, portal at `/{ADMIN_URL_PATH}` (default `panel-x9z`), 36 menus defined in `config/roles.php`, permission checks via `ACL::can` and `Auth::require($perm)`.
+- **Owner and staff:** `Auth`, portal at `/{ADMIN_URL_PATH}` (default `panel-x9z`), 38 menus defined in `config/roles.php`, permission checks via `ACL::can` and `Auth::require($perm)`.
+
+- **Third-party integrations (owner menu 38, `config/integrations.php`, `src/Integrations.php`):** Google Analytics 4, Tag Manager, Google Ads, Meta Pixel, reCAPTCHA (v2/v3) and search-engine verification tags, each with an Enabled switch and required-field validation (same `SettingsForm` engine as payment methods; secrets encrypted, every change logged with a reason). Trackers load only through `js/integrations.js` after the visitor accepts the cookie banner (Consent Mode default `denied`) and never on the portal, account area, payment pages, unsubscribe, certificate or API. The Content-Security-Policy is built per request by `Integrations::csp()`: strict first-party by default, each vendor's domains added only while it is live and only on the paths where it can run. reCAPTCHA is verified server-side in `Forms::guard`, `Accounts::guard` (anonymous buckets), the subscription lookup, and optionally the JSON write API and the portal sign-in; the outage policy (let through / block) is the owner's choice. Tests: `tests/integrations.py` (fake siteverify in `tests/_gwstub.py`).
 - **Public accounts:** `Account`, `$_SESSION['acct']`, e-mail verification, roles user/customer/investor/member/leader/manager (investor/leader/member/customer/user appear as `Pages::AUDIENCES`, along with owner and admin).
 - **CRUD:** `config/resources.php` + `src/Crud.php` generate list/edit/delete screens with ACL. Every POST carries a CSRF token (`Csrf`). Password hashes and tokens are never selected for display.
 - Rate limiting: `RateLimit` (login, certificate verify, QCM answers).
@@ -65,10 +67,17 @@ Public JSON API plus the private OpenAPI at `/openapi.json` (login required), ge
 - Site and flows: `smoke.sh`, `flows`, `auth`, `d17`, `dash`, `gate`, `mail`, `crud`, `viewcache.php`.
 - Browser (Playwright + chromium): `ui`, `browser`, `mobile`.
 - Programmes: `qcm` (86), `cert` (55), `affiliate` (88).
-- Contract: `contract` (34): 404/405/OPTIONS/CORS, staff overview tiles, autocomplete, active menu markers, phone tab bar.
+- Contract: `contract` (78): 404/405/OPTIONS/CORS, staff overview tiles, autocomplete, active menu markers, phone tab bar, chromeless pages, reveal wiring, five-door menu, per-subject CTA.
+- Also: `sitemap` (28), `motion` (32, Playwright: desktop vs phone animation, reduce-motion opt-in, chromeless pages), `integrations` (112), `gateways` (129), `qcmgen.php`.
 - Professionalism audits: `audit.py` (every public path x 3 languages: titles, descriptions, headings, links), `audit_auth.py` (signed-in views per role), `audit_browser.py` (console, overflow, images, tap targets, focus, active menu, RTL).
 - `production.sh`: APP_ENV=production, HTTPS proxy, trusted view cache, every suite, security checks.
 Run them all before and after every change. Never name a test file after a stdlib module (`http.py` shadowed the stdlib). Open items live in `docs/reviews/README.md`.
+
+### 8a. Front-end chrome, motion, sitemap, navigation (turn 6)
+- **Chromeless pages.** A view that declares `@section('chromeless', '1')` (sign-in/register/forgot/reset, pay, QCM round and QCM pay, unsubscribe, certificate, subscription manage) renders `partials/minibar` (brand, way out, language, theme) and `partials/footer-mini` instead of the mega-menu header, tab bar, quick-find and auth dialog. Verification page, 404 and every content page keep the full chrome.
+- **Motion.** `<x-section>` wraps its content in `data-rv="up"`; `site.js` reveals it with an IntersectionObserver (threshold 0, 6 s failsafe). OS `prefers-reduced-motion` now means *calm*: travelling/looping decoration stops, orbs slow to 40 s, reveals become a fade, counters still count. A footer button (`data-motion-toggle`, only shown when the OS asks for reduced motion) stores `w5d-motion=full` in localStorage and sets `html[data-motion=full]` for full motion. A hover/pointer layer (`@media (hover:hover) and (pointer:fine)`) lifts cards and buttons on desktop.
+- **Sitemap.** `Docs::sitemapUrls()` derives every public indexable URL from content (pages JSON minus `robots: noindex`, audiences, macros, services, projects, regions), drops guest-gated forms while their `Gate` flag is on, uses file mtime for `lastmod`, and declares no hreflang (language is cookie-based on the same URL). `tests/sitemap.py` crawls every entry in 3 languages.
+- **Navigation = five doors.** `data/content/nav/main.json`: Programme, Learn and certify, Lead and partner, Invest, Company and trust; `footer.json` mirrors them. `src/Cta.php` picks the header button, mobile-menu button and phone tab for the page subject (invest, learn, lead, client, affiliate, or the neutral "Choose your door"); a service page links to eligibility for that service. Page bodies carry their own CTAs in the content JSON.
 
 ## 9. Data model (SQLite)
 Core accounts, orders, subscriptions and payments are in 001–005. The `variable_overrides` table (path, value, changed_by, note) lets the owner override `config/variables.php` values at run time. Mail suppressions are in 004 and variable overrides in 005. Programs (affiliate, certification, QCM) are in 006.

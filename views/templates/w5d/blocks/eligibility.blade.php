@@ -6,6 +6,7 @@
     </ul>
     <form method="post" action="{{ url('/join/eligibility/') }}" class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5 space-y-3">
       {!! csrf_field() !!}<input type="hidden" name="service" value="{{ $svc }}">
+      {!! \W5D\Integrations::field() !!}
       <x-form-field name="diploma" type="select" :label="__('lbl.diploma')" :options="['licence' => 'Licence / Bachelor', 'maitrise' => 'Maîtrise / Master', 'engineer' => 'Engineer', 'phd' => 'Doctorate', 'other' => 'Other']" />
       <x-form-field name="field" :label="__('lbl.field')" />
       <button class="btn-focus w-full" type="submit">{{ __('cta.eligibility') }}</button>

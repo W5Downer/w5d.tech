@@ -2,6 +2,7 @@
 @section('title', $title . ' · W5D')
 @section('description', tr3('A timed multiple-choice round.', 'Une session chronométrée à choix multiples.', 'جولة اختبار محددة الوقت.'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php
   $open = $a['status'] === 'open';

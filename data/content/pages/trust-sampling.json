@@ -1,113 +1,149 @@
 {
- "slug": "trust-sampling",
- "title": {
-  "en": "5% sampling",
-  "fr": "Échantillonnage à 5 %",
-  "ar": "أخذ عينات بنسبة 5%"
- },
- "description": {
-  "en": "How a random 5% of reports is re-checked.",
-  "fr": "Comment un échantillon aléatoire de 5 % des rapports est vérifié une seconde fois.",
-  "ar": "كيف نعيد التحقق من 5% من التقارير عشوائيًا."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "sp-hero",
-   "variant": "classic",
-   "gradient": "sciences",
-   "title": {
-    "en": "{{ quality.sampling_percent }}% sampling, **explained.**",
-    "fr": "{{ quality.sampling_percent }} % d’échantillonnage, **en détail.**",
-    "ar": "أخذ عيّنات بنسبة {{ quality.sampling_percent }}%، **شرحٌ وافٍ.**"
-   },
-   "lead": {
-    "en": "A random subset of weekly reports is re-checked against source evidence.",
-    "fr": "Un échantillon aléatoire des rapports hebdomadaires est vérifié une seconde fois à partir des pièces justificatives.",
-    "ar": "يُعاد التحقق من عيّنة عشوائية من التقارير الأسبوعية بالرجوع إلى أدلة المصدر."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "How it works",
-      "fr": "Comment ça marche",
-      "ar": "كيف يعمل"
-     },
-     "href": "/how-it-works/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
-    "en": "Quality",
-    "fr": "Qualité",
-    "ar": "الجودة"
-   }
+  "slug": "trust-sampling",
+  "title": {
+    "en": "5% sampling",
+    "fr": "Échantillonnage à 5 %",
+    "ar": "أخذ عينات بنسبة 5%"
   },
-  {
-   "type": "prose",
-   "id": "sp-body",
-   "tier": "x",
-   "focus": 2,
-   "title": {
-    "en": "What it is",
-    "fr": "De quoi s’agit-il ?",
-    "ar": "ما المقصود بذلك"
-   },
-   "paragraphs": [
-    {
-     "en": "Each week {{ quality.sampling_percent }}% of reports are drawn at random and re-checked against the source evidence. At the design ceiling that is about {{ d.reviews_per_week }} reviews a week.",
-     "fr": "Chaque semaine, {{ quality.sampling_percent }} % des rapports sont sélectionnés au hasard et vérifiés une seconde fois à partir des pièces justificatives. Au plafond prévu par conception, cela représente environ {{ d.reviews_per_week }} vérifications par semaine.",
-     "ar": "يُختار عشوائيًا كل أسبوع {{ quality.sampling_percent }}% من التقارير، ويُعاد التحقق منها بالرجوع إلى أدلة المصدر. وعند الحد الأقصى المحدد في التصميم، يعادل ذلك نحو {{ d.reviews_per_week }} مراجعة أسبوعيًا."
-    },
-    {
-     "en": "Sampling does not replace manager review of every report; it makes weak reports risky for everyone.",
-     "fr": "L’échantillonnage ne remplace pas l’examen de chaque rapport par un responsable ; il fait peser un risque sur toute personne qui soumet un rapport de qualité insuffisante.",
-     "ar": "لا يحل أخذ العيّنات محل مراجعة المدير لكل تقرير؛ بل يجعل التقارير الضعيفة مخاطرة على الجميع."
-    },
-    {
-     "en": "The rate is fixed by doctrine and appears on every page that mentions it.",
-     "fr": "Le taux est fixé par doctrine et figure sur chaque page qui le mentionne.",
-     "ar": "يُحدَّد المعدل وفقًا للسياسة المعتمدة، ويظهر في كل صفحة تذكره."
-    }
-   ]
+  "description": {
+    "en": "How a random 5% of reports is re-checked.",
+    "fr": "Comment un échantillon aléatoire de 5 % des rapports est vérifié une seconde fois.",
+    "ar": "كيف نعيد التحقق من 5% من التقارير عشوائيًا."
   },
-  {
-   "type": "faq",
-   "id": "sp-faq",
-   "tier": "e",
-   "focus": 2,
-   "title": {
-    "en": "Sampling, asked plainly",
-    "fr": "L’échantillonnage, en questions simples",
-    "ar": "أخذ العينات بأسئلة مباشرة"
-   },
-   "items": [
+  "sections": [
     {
-     "q": {
-      "en": "Why not check everything?",
-      "fr": "Pourquoi ne pas tout vérifier ?",
-      "ar": "لماذا لا نتحقق من كل شيء؟"
-     },
-     "a": {
-      "en": "Full re-checking would cost more than the work it protects. A random sample is cheap and makes cheating risky.",
-      "fr": "Tout revérifier coûterait plus que le travail protégé. Un échantillon aléatoire est peu coûteux et rend la triche risquée.",
-      "ar": "إعادة فحص كل شيء ستكلف أكثر من العمل الذي تحميه. العينة العشوائية رخيصة وتجعل الغش مجازفة."
-     }
+      "type": "hero",
+      "id": "sp-hero",
+      "variant": "classic",
+      "gradient": "sciences",
+      "title": {
+        "en": "{{ quality.sampling_percent }}% sampling, **explained.**",
+        "fr": "{{ quality.sampling_percent }} % d’échantillonnage, **en détail.**",
+        "ar": "أخذ عيّنات بنسبة {{ quality.sampling_percent }}%، **شرحٌ وافٍ.**"
+      },
+      "lead": {
+        "en": "A random subset of weekly reports is re-checked against source evidence.",
+        "fr": "Un échantillon aléatoire des rapports hebdomadaires est vérifié une seconde fois à partir des pièces justificatives.",
+        "ar": "يُعاد التحقق من عيّنة عشوائية من التقارير الأسبوعية بالرجوع إلى أدلة المصدر."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "How it works",
+            "fr": "Comment ça marche",
+            "ar": "كيف يعمل"
+          },
+          "href": "/how-it-works/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Quality",
+        "fr": "Qualité",
+        "ar": "الجودة"
+      }
     },
     {
-     "q": {
-      "en": "What happens when a sample fails?",
-      "fr": "Que se passe-t-il quand un échantillon échoue ?",
-      "ar": "ماذا يحدث عند فشل عينة؟"
-     },
-     "a": {
-      "en": "The report is returned, the manager is told and the failure is counted in the quality figures.",
-      "fr": "Le rapport est renvoyé, le responsable est informé et l’échec est compté dans les chiffres de qualité.",
-      "ar": "يُعاد التقرير ويُبلَّغ المدير ويُحتسب الفشل في أرقام الجودة."
-     }
+      "type": "prose",
+      "id": "sp-body",
+      "tier": "x",
+      "focus": 2,
+      "title": {
+        "en": "What it is",
+        "fr": "De quoi s’agit-il ?",
+        "ar": "ما المقصود بذلك"
+      },
+      "paragraphs": [
+        {
+          "en": "Each week {{ quality.sampling_percent }}% of reports are drawn at random and re-checked against the source evidence. At the design ceiling that is about {{ d.reviews_per_week }} reviews a week.",
+          "fr": "Chaque semaine, {{ quality.sampling_percent }} % des rapports sont sélectionnés au hasard et vérifiés une seconde fois à partir des pièces justificatives. Au plafond prévu par conception, cela représente environ {{ d.reviews_per_week }} vérifications par semaine.",
+          "ar": "يُختار عشوائيًا كل أسبوع {{ quality.sampling_percent }}% من التقارير، ويُعاد التحقق منها بالرجوع إلى أدلة المصدر. وعند الحد الأقصى المحدد في التصميم، يعادل ذلك نحو {{ d.reviews_per_week }} مراجعة أسبوعيًا."
+        },
+        {
+          "en": "Sampling does not replace manager review of every report; it makes weak reports risky for everyone.",
+          "fr": "L’échantillonnage ne remplace pas l’examen de chaque rapport par un responsable ; il fait peser un risque sur toute personne qui soumet un rapport de qualité insuffisante.",
+          "ar": "لا يحل أخذ العيّنات محل مراجعة المدير لكل تقرير؛ بل يجعل التقارير الضعيفة مخاطرة على الجميع."
+        },
+        {
+          "en": "The rate is fixed by doctrine and appears on every page that mentions it.",
+          "fr": "Le taux est fixé par doctrine et figure sur chaque page qui le mentionne.",
+          "ar": "يُحدَّد المعدل وفقًا للسياسة المعتمدة، ويظهر في كل صفحة تذكره."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "sp-faq",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Sampling, asked plainly",
+        "fr": "L’échantillonnage, en questions simples",
+        "ar": "أخذ العينات بأسئلة مباشرة"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Why not check everything?",
+            "fr": "Pourquoi ne pas tout vérifier ?",
+            "ar": "لماذا لا نتحقق من كل شيء؟"
+          },
+          "a": {
+            "en": "Full re-checking would cost more than the work it protects. A random sample is cheap and makes cheating risky.",
+            "fr": "Tout revérifier coûterait plus que le travail protégé. Un échantillon aléatoire est peu coûteux et rend la triche risquée.",
+            "ar": "إعادة فحص كل شيء ستكلف أكثر من العمل الذي تحميه. العينة العشوائية رخيصة وتجعل الغش مجازفة."
+          }
+        },
+        {
+          "q": {
+            "en": "What happens when a sample fails?",
+            "fr": "Que se passe-t-il quand un échantillon échoue ?",
+            "ar": "ماذا يحدث عند فشل عينة؟"
+          },
+          "a": {
+            "en": "The report is returned, the manager is told and the failure is counted in the quality figures.",
+            "fr": "Le rapport est renvoyé, le responsable est informé et l’échec est compté dans les chiffres de qualité.",
+            "ar": "يُعاد التقرير ويُبلَّغ المدير ويُحتسب الفشل في أرقام الجودة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "sp-final",
+      "gradient": "calm",
+      "title": {
+        "en": "See the path the audit protects.",
+        "fr": "Voyez le parcours que l’audit protège.",
+        "ar": "اطّلع على المسار الذي يحميه التدقيق."
+      },
+      "body": {
+        "en": "Every certificate rests on reviewed work and a fixed random re-check.",
+        "fr": "Chaque certificat repose sur un travail revu et un recontrôle aléatoire fixe.",
+        "ar": "تقوم كل شهادة على عمل مُراجَع وإعادة فحص عشوائية ثابتة."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Check my eligibility",
+            "fr": "Vérifier mon éligibilité",
+            "ar": "تحقق من أهليتي"
+          },
+          "href": "/join/eligibility/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "How it works",
+            "fr": "Comment ça marche",
+            "ar": "كيف يعمل"
+          },
+          "href": "/how-it-works/",
+          "style": "ghost"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

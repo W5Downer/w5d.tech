@@ -2,6 +2,7 @@
 @section('title', $title . ' · W5D')
 @section('description', __('acct.pay_steps'))
 @section('robots', 'noindex,nofollow')
+@section('chromeless', '1')
 @section('content')
 @php
   $stl = match($p['status']) { 'verified','used' => 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-300', 'rejected' => 'bg-red-500/15 text-red-600 dark:text-red-300', default => 'bg-amber-500/15 text-amber-700 dark:text-amber-300' };

@@ -1,5 +1,8 @@
 # QCM bank generation prompt — W5D
 
+> **Generated pool (added in turn 6).** Besides the files in `data/qcm/`, `src/QcmGen.php` builds `qcm.generated_per_level` (default 1,000) questions per service per level on demand, from the service sheet itself: 130 services x 4 levels x 1,000 = 520,000, nothing stored. A round draws its N questions (N is set in the owner/admin portal, QCM rules) uniformly from stored + generated questions, never twice the same idea in one round. Honest limit: the generated pool is wide in wording and distractors (about 300-850 distinct questions per service-level) but bounded in concepts (about 65-200 per service-level), so it keeps rounds fresh and proves the engine; it does not replace the expert-written bank below. Switch it off or resize it in Variables -> qcm (`generated`, `generated_per_level`).
+
+
 Use this document to have an LLM (or a subject expert working with one) write **X questions for one service**, and later **X questions for one sub-service (speciality)**. Everything between the two `=====` lines is the prompt: paste it as-is, fill the `{{VARIABLES}}` at the top, and send it once per service (and per level, if you generate by level).
 
 The demo bank in `data/qcm/` (130 services × 4 levels × 10 = 5,200 questions) is generated from the service files by `tools/gen/qcm_demo.py`. It proves the engine. The production bank (target `qcm.bank_target`, default **1,000 questions per service**, all levels together) must be written by people who know the subject, with this prompt as the production line.

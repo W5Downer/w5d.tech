@@ -12,6 +12,7 @@ return [
         'subscription' => 'Daily subscription', 'checkout' => 'Checkout', 'tunisia' => 'Tunisia hub',
     ],
     'cta' => [
+        'partners' => 'Write to the partners desk', 'affiliate' => 'Open my referral panel', 'path' => 'Choose your door',
         'invest' => 'Take a part today', 'quote' => 'See today\'s price', 'register' => 'Register now', 'eligibility' => 'Check my eligibility',
         'manager' => 'Apply as manager', 'dossier' => 'Request the dossier', 'read_limits' => 'Read the declared limits', 'open' => 'Open',
         'back_home' => 'Back home', 'contact' => 'Write to the right desk', 'subscribe' => 'Start a daily subscription', 'next' => 'Next',
@@ -61,7 +62,8 @@ return [
         'forgot' => 'Forgot password', 'reset' => 'Reset password', 'overview' => 'Overview',
         'orders' => 'My parts', 'payments' => 'Payments', 'applications' => 'Applications',
         'notifications' => 'Notifications', 'profile' => 'Profile', 'security' => 'Security',
-        'pay_d17' => 'Pay with D17', 'email' => 'E-mail', 'password' => 'Password',
+        'pay_d17' => 'Pay with D17',
+        'pay_online' => 'online', 'pay_manual' => 'manual check', 'pay_tn_only' => 'Tunisia only', 'pay_online_steps' => 'You pay on the provider’s secure page and come back. Confirmed only when the provider confirms to our server.', 'pay_steps_generic' => 'Send the amount, then enter the transaction reference. An administrator verifies it by hand.', 'pay_open' => 'Pay now', 'pay_checking' => 'We are checking your payment with the provider. This page updates when it is confirmed.', 'pay_recheck' => 'Check again', 'pay_ok' => 'Payment confirmed. Thank you.', 'pay_failed' => 'The payment was not completed. You can try again.', 'pay_retry' => 'Try again', 'pay_unavailable' => 'The payment page could not be opened. Try again in a moment or choose another method.', 'pay_bank_title' => 'Pay by bank transfer', 'pay_online_title' => 'Pay securely online', 'email' => 'E-mail', 'password' => 'Password',
         'password2' => 'Repeat password', 'remember' => 'Remember me on this device', 'name' => 'Full name',
         'role' => 'I am joining as', 'role_user' => 'A learner / member', 'role_investor' => 'An investor',
         'role_customer' => 'A customer', 'accept' => 'I have read the declared limits and the privacy note', 'have_account' => 'Already have an account?',
@@ -92,6 +94,8 @@ return [
         'open' => 'Share this page', 'text' => 'W5D: five macro works, 130 services, one path.',
     ],
     'ux' => [
+        'tab_learn' => 'Learn', 'tab_lead' => 'Lead', 'tab_client' => 'Partner', 'tab_refer' => 'Refer', 'tab_path' => 'Start',
+        'mini_home' => 'Home', 'mini_account' => 'My account', 'mini_privacy' => 'Privacy', 'mini_terms' => 'Terms', 'mini_help' => 'Help', 'motion_full' => 'Animations are reduced by your device. Turn full animations on', 'motion_auto' => 'Use my device setting (reduced animations)',
         'close' => 'Close', 'auth_title_login' => 'Sign in to W5D', 'auth_title_register' => 'Create your W5D account',
         'auth_lead_login' => 'Pick up where you left off: your parts, payments and applications.',
         'auth_lead_register' => 'One account for every door. E-mail confirmation required.', 'auth_sending' => 'Please wait…',
@@ -118,5 +122,13 @@ return [
         'crud_failed' => 'Could not save. Try again.', 'crud_in_use' => 'Cannot delete: the record is in use.', 'crud_scope' => 'You see only your own rows.',
         'crud_back' => 'Back to the list', 'crud_new_title' => 'New record', 'crud_edit_title' => 'Edit record', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Roles and what each can do',
         'crud_read' => 'Read', 'crud_create_l' => 'Create', 'crud_update_l' => 'Update', 'crud_delete_l' => 'Delete', 'crud_yes' => 'yes', 'crud_own' => 'own rows',
+    ],
+    'consent' => [
+        'title' => 'Cookies and measurement', 'accept' => 'Accept', 'refuse' => 'Refuse', 'settings' => 'Cookie settings',
+        'body' => 'With your consent we use Google and Meta tools to count visits and measure our ads. Nothing is loaded before you choose, and refusing changes nothing else on the site. See the [privacy page](/trust/privacy/).',
+    ],
+    'captcha' => [
+        'notice' => 'Protected by Google reCAPTCHA: its [privacy policy](https://policies.google.com/privacy) and [terms](https://policies.google.com/terms) apply.',
+        'required' => 'Please tick “I am not a robot” first.',
     ],
 ];

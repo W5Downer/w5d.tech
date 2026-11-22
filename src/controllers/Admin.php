@@ -38,6 +38,7 @@ final class Admin
         $error = null;
         if ($q->isPost()) {
             if (!Csrf::check($q)) $error = __('msg.csrf');
+            elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $error = t(\W5D\Integrations::message());
             elseif (Auth::attempt((string)($q->post['username'] ?? ''), (string)($q->post['password'] ?? ''), $q->ip())) return Response::redirect(admin_url());
             else $error = 'Invalid credentials or too many attempts.';
         }
@@ -101,6 +102,8 @@ final class Admin
             'manager-applications' => self::vTable('SELECT id, ref, full_name, email, macro_slug AS macro, years, team_size_led AS team, region_slug AS region, score, status, created_at FROM manager_applications ORDER BY score DESC, id DESC LIMIT 300', 'manager_applications'),
             'subscriptions' => self::vTable('SELECT s.id, s.order_ref AS ref, i.full_name, i.email, s.parts_per_day AS parts, s.macro_slug AS macro, s.next_charge_on AS next_charge, s.status, s.created_at FROM investor_subscriptions s JOIN investors i ON i.id=s.investor_id ORDER BY s.id DESC LIMIT 300', 'investor_subscriptions'),
             'payments-d17' => self::vPayments(),
+            'payment-methods' => self::vPayMethods(),
+            'integrations' => self::vIntegrations(),
             'mail-outbox' => self::vTable('SELECT id, to_email AS "to", template, lang, driver, status, substr(COALESCE(error, \'\'),1,120) AS error, created_at FROM mail_outbox ORDER BY id DESC LIMIT 300'),
             'inbox' => self::vTable('SELECT id, desk, name, email, subject, substr(body,1,160) AS message, status, created_at FROM contact_messages ORDER BY id DESC LIMIT 300', 'contact_messages'),
             'investors' => self::vTable('SELECT i.id, i.full_name, i.email, i.kind, i.organisation, COUNT(o.id) AS orders, COALESCE(SUM(o.total),0) AS pledged, i.created_at FROM investors i LEFT JOIN investor_orders o ON o.investor_id=i.id GROUP BY i.id ORDER BY pledged DESC LIMIT 300'),
@@ -226,9 +229,51 @@ final class Admin
     private static function vPayments(): array
     {
         try {
-            $rows = DB::available() ? DB::all('SELECT p.id, p.ref, p.order_ref, i.full_name, i.email, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.verified_by, p.created_at FROM payments p LEFT JOIN investors i ON i.id = p.investor_id ORDER BY (p.status = \'pending\' AND p.txn_ref IS NOT NULL) DESC, p.id DESC LIMIT 300') : [];
+            $rows = DB::available() ? DB::all('SELECT p.id, p.ref, p.order_ref, i.full_name, i.email, p.method, p.provider_ref, p.gateway_status, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.verified_by, p.created_at FROM payments p LEFT JOIN investors i ON i.id = p.investor_id ORDER BY (p.status = \'pending\' AND p.txn_ref IS NOT NULL) DESC, p.id DESC LIMIT 300') : [];
         } catch (\Throwable $e) { return ['kind' => 'payments', 'rows' => [], 'error' => $e->getMessage()]; }
         return ['kind' => 'payments', 'rows' => $rows, 'enabled' => \W5D\Payments::enabled(), 'gsm' => \W5D\Payments::gsm()];
+    }
+
+    private static function vPayMethods(): array
+    {
+        $defs = \W5D\Gateways::all();
+        return \W5D\SettingsForm::view($defs, 'pay', admin_url('payment-methods/save'),
+            'Switch each payment method on or off and enter its keys. A method is offered to buyers only when it is ON and every required field is filled. Secrets are stored encrypted, are never shown again and never appear in the change log; leave a secret box empty to keep the stored value. Online methods settle only after the provider confirms the payment to this server (the browser return and the webhook are only hints).',
+            ['site' => \W5D\Env::baseUrl(), 'pending' => self::count("SELECT COUNT(*) FROM payments WHERE status = 'pending' AND provider_ref IS NOT NULL")]);
+    }
+
+    public static function savePayMethods(Request $q): Response
+    {
+        if ($r = Auth::require('payment-methods')) return $r;
+        $back = admin_url('payment-methods/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($back); }
+        $note = trim((string)($q->post['note'] ?? ''));
+        if (mb_strlen($note) < 10) { self::flash('error', 'A reason of at least 10 characters is required: every change is logged with your name and the date.'); return Response::redirect($back); }
+        [$n, $errs] = \W5D\SettingsForm::save(\W5D\Gateways::all(), 'pay', $q->post, (string)(Auth::user()['name'] ?? 'owner'), $note);
+        if ($n) self::audit('payment-methods.save', '', $n . ' setting(s) · ' . $note);
+        self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
+        return Response::redirect($back);
+    }
+
+    private static function vIntegrations(): array
+    {
+        $defs = \W5D\Integrations::all();
+        return \W5D\SettingsForm::view($defs, 'int', admin_url('integrations/save'),
+            'Switch each third-party service on or off and enter its identifiers. A service goes live only when it is ON and every required field is valid. Tracking services (Google Analytics, Tag Manager, Google Ads, Meta Pixel) load only after the visitor accepts the cookie banner and never run on this portal, the account area, payment pages or the unsubscribe page. The Content-Security-Policy opens each service\'s domains only while it is live. reCAPTCHA is checked on the server for every public form; its secret key is stored encrypted and never shown again. Every change is logged with your reason.',
+            ['site' => \W5D\Env::baseUrl()]);
+    }
+
+    public static function saveIntegrations(Request $q): Response
+    {
+        if ($r = Auth::require('integrations')) return $r;
+        $back = admin_url('integrations/');
+        if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($back); }
+        $note = trim((string)($q->post['note'] ?? ''));
+        if (mb_strlen($note) < 10) { self::flash('error', 'A reason of at least 10 characters is required: every change is logged with your name and the date.'); return Response::redirect($back); }
+        [$n, $errs] = \W5D\SettingsForm::save(\W5D\Integrations::all(), 'int', $q->post, (string)(Auth::user()['name'] ?? 'owner'), $note);
+        if ($n) self::audit('integrations.save', '', $n . ' setting(s) · ' . $note);
+        self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
+        return Response::redirect($back);
     }
 
     /** Verify or reject a D17 payment (permission: payments). Audited; the buyer is e-mailed and notified. */

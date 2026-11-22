@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, DB, Pricing, Request, Response, Rollup, Variables};
+use W5D\{Content, DB, Integrations, Pricing, Request, Response, Rollup, Variables};
 
 /** Public read-only JSON (GET) plus a few guarded write endpoints (POST). No auth, no PII in any GET. */
 final class Api
@@ -93,6 +93,7 @@ final class Api
         if ($g === 'bot') return Response::json(['ok' => true]);
         if ($g === 'rate') return Response::json(['ok' => false, 'error' => 'rate_limited'], 429, ['Retry-After' => '600']);
         if ($g === 'db') return Response::json(['ok' => false, 'error' => 'database_unavailable'], 503);
+        if ($g === 'captcha') return Response::json(['ok' => false, 'error' => 'captcha_failed', 'message' => t(Integrations::message())], 400);
         $x = $core($q->post);
         if (!$x['ok']) return Response::json(['ok' => false, 'error' => 'validation', 'errors' => self::localise($x['errors'], self::L($q))], 422);
         return Response::json(['ok' => true] + $x['data'] + $extra, 201);

@@ -1,6 +1,6 @@
 # Review as: Owner (portal super-user)
 
-**Scope:** `/panel-x9z/` (path from `ADMIN_URL_PATH`), 36 menus, CRUD with ACL, D17 verification, QCM bank/rules/review, affiliates, certificates, mail outbox, variables.
+**Scope:** `/panel-x9z/` (path from `ADMIN_URL_PATH`), 38 menus, CRUD with ACL, D17 verification, QCM bank/rules/review, affiliates, certificates, mail outbox, variables.
 
 ## Summary
 Every menu I opened rendered, on desktop and on a 390px phone, and the active portal item was marked correctly each time. The owner-only desks (QCM review, affiliate referrals and payouts, certificate issue/revoke) work end-to-end under the new suites. No data leak or ACL gap was found. Findings are mostly about guarding and polish.

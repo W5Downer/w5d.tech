@@ -5,7 +5,7 @@
   $grad = $d['gradient'] ?? null;
 @endphp
 <section @if(!empty($d['id']))id="{{ $d['id'] }}"@endif class="tier-{{ $tier }} focus-{{ $focus }} {{ $pad }} {{ $class }}" data-tier="{{ $tier }}" data-focus="{{ $focus }}" @if($grad)style="--grad: {{ g_macro($grad) === 'var(--g-focus)' ? $grad : g_macro($grad) }}"@endif>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" data-rv="up">
     @if(!$bare && (!empty($d['title']) || !empty($d['eyebrow']) || !empty($d['lead'])))
     <header class="max-w-3xl mb-10 {{ !empty($d['center']) ? 'mx-auto text-center' : '' }}">
       @if(!empty($d['eyebrow']))<p class="eyebrow">{{ rich($d['eyebrow']) }}</p>@endif

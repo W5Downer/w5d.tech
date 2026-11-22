@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, RateLimit, Request, Response, Session};
+use W5D\{Content, Csrf, DB, Integrations, RateLimit, Request, Response, Session};
 
 /**
  * Public forms. Each core*() method is shared by the HTML form and the JSON API:
@@ -52,6 +52,8 @@ final class Forms
         if (!empty($q->post['website'])) return 'bot';
         if (!DB::available()) return 'db';
         if (!RateLimit::hit($bucket . ':' . $q->ip(), $max, $window)) return 'rate';
+        // Google reCAPTCHA (owner-configured, off by default). Runs after the cheap checks so Google is only called for plausible requests.
+        if (Integrations::captcha($q, str_starts_with($bucket, 'api-') ? 'api' : 'form') !== null) return 'captcha';
         return null;
     }
 
@@ -78,6 +80,7 @@ final class Forms
         $g = self::guard($q, $bucket);
         if ($g === 'bot') return $q->wantsJson() ? Response::json(['ok' => true]) : self::done($q, ['ref' => '—'], 'ok');
         if ($g === 'rate') return self::fail($q, $back, ['_form' => self::err('Too many attempts. Try again later.', 'Trop de tentatives. Réessayez plus tard.', 'محاولات كثيرة. حاول لاحقا.')], 'rate');
+        if ($g === 'captcha') return self::fail($q, $back, ['_form' => Integrations::message()], 'captcha');
         if ($g === 'db') return self::fail($q, $back, ['_form' => self::err('The database is not initialised (run bin/migrate.php).', 'La base n’est pas initialisée (lancez bin/migrate.php).', 'قاعدة البيانات غير مهيأة (شغّل bin/migrate.php).')], 'db');
         return null;
     }
