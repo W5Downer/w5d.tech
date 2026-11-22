@@ -1,0 +1,539 @@
+{
+  "slug": "trust-accessibility",
+  "title": {
+    "en": "Accessibility statement",
+    "fr": "Déclaration d’accessibilité",
+    "ar": "بيان إمكانية الوصول"
+  },
+  "description": {
+    "en": "What W5D does so that everyone can read and use the site, what is not yet fully accessible, and how to report a barrier.",
+    "fr": "Ce que fait W5D pour que chacun puisse lire et utiliser le site, ce qui n’est pas encore pleinement accessible, et comment signaler un obstacle.",
+    "ar": "ما تفعله W5D ليتمكن الجميع من قراءة الموقع واستخدامه، وما لم يصبح بعدُ متاحًا بالكامل، وكيف تبلّغ عن عائق."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "ac-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Built to be **usable by everyone.**",
+        "fr": "Conçu pour être **utilisable par tous.**",
+        "ar": "مصمَّم ليكون **قابلًا للاستخدام للجميع.**"
+      },
+      "lead": {
+        "en": "We aim for the WCAG 2.2 level AA standard in three languages, left-to-right and right-to-left. This page says what is in place, what is not, and how to tell us when we fall short.",
+        "fr": "Nous visons la norme WCAG 2.2 niveau AA en trois langues, de gauche à droite et de droite à gauche. Cette page dit ce qui est en place, ce qui ne l’est pas, et comment nous signaler un manquement.",
+        "ar": "نستهدف معيار WCAG 2.2 المستوى AA بثلاث لغات، من اليسار إلى اليمين ومن اليمين إلى اليسار. وتبيّن هذه الصفحة ما هو قائم وما ليس قائمًا وكيف تخبرنا حين نقصّر."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Report a barrier",
+            "fr": "Signaler un obstacle",
+            "ar": "أبلغ عن عائق"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Accessibility",
+        "fr": "Accessibilité",
+        "ar": "إمكانية الوصول"
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ac-commit",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Our commitment, and its honest limits",
+        "fr": "Notre engagement et ses limites honnêtes",
+        "ar": "التزامنا وحدوده الصادقة"
+      },
+      "paragraphs": [
+        {
+          "en": "Training, certification and evidence are for people from many backgrounds: students, self-taught developers, people who use screen readers, people who cannot use a mouse, people reading on a slow phone in a shared connection, and people who read Arabic from right to left. A site that asks for trust has to be readable by all of them. We therefore treat accessibility as part of quality, not as a favour, and we test it as we test prices and links.",
+          "fr": "La formation, la certification et les preuves s’adressent à des personnes d’horizons très divers : étudiants, autodidactes, utilisateurs de lecteurs d’écran, personnes qui ne peuvent pas utiliser une souris, personnes qui lisent sur un téléphone lent avec une connexion partagée, et personnes qui lisent l’arabe de droite à gauche. Un site qui demande la confiance doit être lisible par tous. Nous traitons donc l’accessibilité comme une part de la qualité, non comme une faveur, et nous la testons comme nous testons les prix et les liens.",
+          "ar": "التدريب والاعتماد والأدلة موجهة إلى أشخاص من خلفيات كثيرة: طلاب ومطورون متعلمون ذاتيًا ومستخدمو قارئات الشاشة وأشخاص لا يستطيعون استخدام الفأرة وأشخاص يقرؤون على هاتف بطيء بإنترنت مشترك وأشخاص يقرؤون العربية من اليمين إلى اليسار. والموقع الذي يطلب الثقة يجب أن يكون مقروءًا للجميع. لذلك نعدّ إمكانية الوصول جزءًا من الجودة لا منّة، ونختبرها كما نختبر الأسعار والروابط."
+        },
+        {
+          "en": "The target is WCAG 2.2 level AA. “Target” is the exact word: we have not been audited by an independent accessibility body, and we do not claim full conformance. What we can tell you is what the code does, which is listed below, and what we know it does not do yet, which is listed further down. When an independent audit is carried out, its date and result will be added to this page and not hidden.",
+          "fr": "L’objectif est WCAG 2.2 niveau AA. « Objectif » est le mot exact : nous n’avons pas été audités par un organisme indépendant d’accessibilité et nous ne revendiquons pas une conformité totale. Ce que nous pouvons dire, c’est ce que fait le code, listé ci-dessous, et ce que nous savons qu’il ne fait pas encore, listé plus bas. Lorsqu’un audit indépendant sera réalisé, sa date et son résultat seront ajoutés à cette page et non dissimulés.",
+          "ar": "الهدف هو WCAG 2.2 المستوى AA. و«الهدف» هو اللفظ الدقيق: لم تدقق في موقعنا جهة مستقلة لإمكانية الوصول، ولا ندّعي مطابقة كاملة. ما نستطيع قوله هو ما تفعله الشيفرة وهو مذكور أدناه، وما نعلم أنها لا تفعله بعد وهو مذكور لاحقًا. وحين يُجرى تدقيق مستقل ستُضاف تاريخه ونتيجته إلى هذه الصفحة ولن تُخفى."
+        }
+      ]
+    },
+    {
+      "type": "definitions",
+      "id": "ac-inplace",
+      "tier": "x",
+      "focus": 2,
+      "title": {
+        "en": "What is in place today",
+        "fr": "Ce qui est en place aujourd’hui",
+        "ar": "ما هو قائم اليوم"
+      },
+      "items": [
+        {
+          "term": {
+            "en": "Skip link",
+            "fr": "Lien d’évitement",
+            "ar": "رابط التخطي"
+          },
+          "def": {
+            "en": "The first focusable element on every page is a link that jumps straight to the main content, so that a keyboard or screen-reader user does not have to pass the whole menu on every page.",
+            "fr": "Le premier élément focalisable de chaque page est un lien qui mène directement au contenu principal, afin qu’un utilisateur du clavier ou d’un lecteur d’écran n’ait pas à traverser tout le menu à chaque page.",
+            "ar": "أول عنصر قابل للتركيز في كل صفحة رابط ينقل مباشرة إلى المحتوى الرئيسي، فلا يضطر مستخدم لوحة المفاتيح أو قارئ الشاشة إلى المرور بكل القائمة في كل صفحة."
+          }
+        },
+        {
+          "term": {
+            "en": "Visible keyboard focus",
+            "fr": "Focus clavier visible",
+            "ar": "تركيز لوحة المفاتيح مرئي"
+          },
+          "def": {
+            "en": "Buttons, links, fields and summaries show a clear ring when reached with the keyboard. It is drawn by the style sheet for every interactive element, not left to the browser default.",
+            "fr": "Boutons, liens, champs et résumés affichent un anneau net lorsqu’ils sont atteints au clavier. Il est dessiné par la feuille de style pour chaque élément interactif, sans dépendre du comportement par défaut du navigateur.",
+            "ar": "تُظهر الأزرار والروابط والحقول والملخصات حلقة واضحة عند بلوغها بلوحة المفاتيح. وترسمها ورقة الأنماط لكل عنصر تفاعلي ولا تُترك للسلوك الافتراضي للمتصفح."
+          }
+        },
+        {
+          "term": {
+            "en": "Language and direction",
+            "fr": "Langue et direction",
+            "ar": "اللغة والاتجاه"
+          },
+          "def": {
+            "en": "Each page declares its language and its writing direction. Arabic pages are laid out right-to-left with their own style rules, not mirrored by hand, and the switch between English, French and Arabic is available on every page.",
+            "fr": "Chaque page déclare sa langue et son sens d’écriture. Les pages arabes sont mises en page de droite à gauche avec leurs propres règles de style, sans miroir manuel, et le changement entre anglais, français et arabe est disponible sur chaque page.",
+            "ar": "تعلن كل صفحة لغتها واتجاه كتابتها. وتُنسَّق الصفحات العربية من اليمين إلى اليسار بقواعد أنماط خاصة لا بقلب يدوي، ويتوفر التبديل بين الإنجليزية والفرنسية والعربية في كل صفحة."
+          }
+        },
+        {
+          "term": {
+            "en": "One main heading per page",
+            "fr": "Un seul titre principal par page",
+            "ar": "عنوان رئيسي واحد في كل صفحة"
+          },
+          "def": {
+            "en": "Every page has one top-level heading followed by section headings in order, so that a screen-reader user can list the headings and move between sections.",
+            "fr": "Chaque page a un titre de premier niveau suivi de titres de section dans l’ordre, de sorte qu’un utilisateur de lecteur d’écran puisse lister les titres et passer d’une section à l’autre.",
+            "ar": "لكل صفحة عنوان أعلى واحد تتبعه عناوين الأقسام بترتيبها، فيستطيع مستخدم قارئ الشاشة سرد العناوين والتنقل بين الأقسام."
+          }
+        },
+        {
+          "term": {
+            "en": "Labelled forms",
+            "fr": "Formulaires étiquetés",
+            "ar": "نماذج موسومة"
+          },
+          "def": {
+            "en": "Form fields have visible labels, errors are written in words and are not shown by colour alone, and every form works without a mouse.",
+            "fr": "Les champs de formulaire ont des libellés visibles, les erreurs sont écrites en toutes lettres et ne reposent pas sur la seule couleur, et chaque formulaire fonctionne sans souris.",
+            "ar": "لحقول النماذج وسوم ظاهرة، وتُكتب الأخطاء بالكلمات ولا تعتمد على اللون وحده، ويعمل كل نموذج بلا فأرة."
+          }
+        },
+        {
+          "term": {
+            "en": "Light and dark themes",
+            "fr": "Thèmes clair et sombre",
+            "ar": "السمتان الفاتحة والداكنة"
+          },
+          "def": {
+            "en": "You can switch the colour theme at any time and the choice is remembered on your device. Text colours are chosen to keep a readable contrast in both themes.",
+            "fr": "Vous pouvez changer le thème de couleurs à tout moment et le choix est mémorisé sur votre appareil. Les couleurs de texte sont choisies pour conserver un contraste lisible dans les deux thèmes.",
+            "ar": "يمكنك تبديل سمة الألوان في أي وقت ويُحفظ اختيارك على جهازك. وتُختار ألوان النص للحفاظ على تباين مقروء في السمتين."
+          }
+        },
+        {
+          "term": {
+            "en": "Works without a script for reading",
+            "fr": "Lecture possible sans script",
+            "ar": "القراءة ممكنة بلا سكربت"
+          },
+          "def": {
+            "en": "Articles, tables, prices and trust pages are plain HTML. Scripts add comfort (menus, counters, the cookie notice); they are not needed to read the content.",
+            "fr": "Articles, tableaux, prix et pages de confiance sont du HTML simple. Les scripts ajoutent du confort (menus, compteurs, avis cookies) ; ils ne sont pas nécessaires pour lire le contenu.",
+            "ar": "المقالات والجداول والأسعار وصفحات الثقة HTML بسيط. وتضيف السكربتات راحة (القوائم والعدادات وإشعار الكوكيز) ولا حاجة إليها لقراءة المحتوى."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ac-motion",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Animation and your control over it",
+        "fr": "L’animation et votre contrôle sur elle",
+        "ar": "الحركة وتحكمك فيها"
+      },
+      "paragraphs": [
+        {
+          "en": "The site uses motion on cards, counters and reveals. It runs automatically, without a click. We chose not to read your operating system’s “reduce motion” flag as a silent switch, because many desktops report that flag without the owner knowing, and the site then looked static to people who wanted to see it. The consequence is important and we state it plainly: if you are sensitive to motion, the site will not detect that for you. You have to turn it off yourself.",
+          "fr": "Le site utilise du mouvement sur les cartes, compteurs et apparitions. Il s’exécute automatiquement, sans clic. Nous avons choisi de ne pas lire l’indicateur « réduire les animations » de votre système comme un interrupteur silencieux, car de nombreux ordinateurs le signalent à l’insu de leur propriétaire, et le site paraissait alors figé à des personnes qui voulaient le voir. La conséquence est importante et nous la disons clairement : si vous êtes sensible au mouvement, le site ne le détectera pas pour vous. Vous devez le désactiver vous-même.",
+          "ar": "يستخدم الموقع الحركة في البطاقات والعدادات والظهور التدريجي، وتعمل تلقائيًا بلا نقرة. اخترنا ألا نقرأ علم «تقليل الحركة» في نظام تشغيلك كمفتاح صامت، لأن كثيرًا من الحواسيب تُبلغ عنه دون علم صاحبها فيبدو الموقع ساكنًا لمن أراد رؤيته. والنتيجة مهمة ونذكرها بوضوح: إذا كنت حساسًا للحركة فلن يكتشف الموقع ذلك عنك، وعليك أن توقفها بنفسك."
+        },
+        {
+          "en": "There is a “Reduce animations” control in the footer and in the cookie settings. It stops decorative motion on every page at once and the choice is remembered on your device, in the key `w5d-motion`. Pressing it again restores the animations. We consider this an acceptable design for decorative motion, and we list it among our known limits below, because a reader might reasonably expect the system flag to be honoured as well.",
+          "fr": "Un contrôle « Réduire les animations » existe dans le pied de page et dans les réglages des cookies. Il arrête le mouvement décoratif sur toutes les pages à la fois et le choix est mémorisé sur votre appareil, dans la clé `w5d-motion`. Un nouvel appui rétablit les animations. Nous jugeons ce dispositif acceptable pour du mouvement décoratif, et nous le listons parmi nos limites connues plus bas, car un lecteur pourrait raisonnablement s’attendre à ce que l’indicateur du système soit aussi respecté.",
+          "ar": "يوجد زر «تقليل الحركة» في التذييل وفي إعدادات الكوكيز. فهو يوقف الحركة الزخرفية في كل الصفحات دفعة واحدة ويُحفظ اختيارك على جهازك في المفتاح `w5d-motion`، ويعيد الضغط عليه الحركة. ونرى هذا تصميمًا مقبولًا للحركة الزخرفية، ونذكره بين حدودنا المعروفة أدناه، لأن القارئ قد يتوقع بحق احترام علم النظام أيضًا."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "ac-limits",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Known limits, and what we do about them",
+        "fr": "Limites connues et ce que nous en faisons",
+        "ar": "الحدود المعروفة وما نفعله بشأنها"
+      },
+      "columns": [
+        {
+          "en": "Known limit",
+          "fr": "Limite connue",
+          "ar": "الحد المعروف"
+        },
+        {
+          "en": "Effect",
+          "fr": "Effet",
+          "ar": "الأثر"
+        },
+        {
+          "en": "Plan",
+          "fr": "Plan",
+          "ar": "الخطة"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Motion is switched off by the visitor, not detected from the system",
+            "fr": "Le mouvement est désactivé par le visiteur, non détecté depuis le système",
+            "ar": "الحركة يوقفها الزائر ولا تُكتشف من النظام"
+          },
+          {
+            "en": "People who are sensitive to motion must find the control themselves.",
+            "fr": "Les personnes sensibles au mouvement doivent trouver elles-mêmes le contrôle.",
+            "ar": "على الحساسين للحركة أن يجدوا الزر بأنفسهم."
+          },
+          {
+            "en": "Keep the control in the footer and cookie settings; review the default at each audit.",
+            "fr": "Garder le contrôle dans le pied de page et les réglages des cookies ; réexaminer le défaut à chaque audit.",
+            "ar": "إبقاء الزر في التذييل وإعدادات الكوكيز ومراجعة الافتراضي عند كل تدقيق."
+          }
+        ],
+        [
+          {
+            "en": "No independent audit yet",
+            "fr": "Pas encore d’audit indépendant",
+            "ar": "لا تدقيق مستقل بعد"
+          },
+          {
+            "en": "Conformance to WCAG 2.2 AA is a target, not a certified fact.",
+            "fr": "La conformité WCAG 2.2 AA est un objectif, non un fait certifié.",
+            "ar": "المطابقة لـ WCAG 2.2 AA هدف لا حقيقة معتمدة."
+          },
+          {
+            "en": "Commission an audit once the programme has funds, and publish the result with its date.",
+            "fr": "Commander un audit lorsque le programme disposera de fonds et publier le résultat avec sa date.",
+            "ar": "تكليف تدقيق حين يتوفر تمويل للبرنامج ونشر النتيجة بتاريخها."
+          }
+        ],
+        [
+          {
+            "en": "Some generated service pages are long",
+            "fr": "Certaines pages de services générées sont longues",
+            "ar": "بعض صفحات الخدمات المولدة طويلة"
+          },
+          {
+            "en": "Long pages are harder for people who use screen magnifiers or voice control.",
+            "fr": "Les pages longues sont plus difficiles pour ceux qui utilisent une loupe d’écran ou la commande vocale.",
+            "ar": "الصفحات الطويلة أصعب على مستخدمي مكبّر الشاشة أو الأوامر الصوتية."
+          },
+          {
+            "en": "Keep section headings and anchors consistent; add a table of contents where a page is long.",
+            "fr": "Garder des titres de section et des ancres cohérents ; ajouter une table des matières quand une page est longue.",
+            "ar": "إبقاء عناوين الأقسام والمراسي متسقة وإضافة فهرس حيث تطول الصفحة."
+          }
+        ],
+        [
+          {
+            "en": "Third-party reCAPTCHA, when enabled",
+            "fr": "reCAPTCHA tiers, lorsqu’il est activé",
+            "ar": "reCAPTCHA من طرف ثالث عند تفعيله"
+          },
+          {
+            "en": "A visual challenge can be a barrier for some people.",
+            "fr": "Un défi visuel peut être un obstacle pour certaines personnes.",
+            "ar": "قد يكون التحدي البصري عائقًا لبعضهم."
+          },
+          {
+            "en": "Anyone blocked can use the e-mail address on the imprint page, which has no challenge.",
+            "fr": "Toute personne bloquée peut utiliser l’adresse e-mail de la page des mentions légales, qui n’a aucun défi.",
+            "ar": "يستطيع من أُعيق استخدام البريد المذكور في صفحة الإشعار القانوني ولا تحدٍّ فيه."
+          }
+        ],
+        [
+          {
+            "en": "Arabic and French text written by hand, not yet reviewed by native accessibility testers",
+            "fr": "Texte arabe et français écrit à la main, pas encore relu par des testeurs d’accessibilité natifs",
+            "ar": "نص عربي وفرنسي مكتوب يدويًا ولم يراجعه بعدُ مختبرون أصليون لإمكانية الوصول"
+          },
+          {
+            "en": "Wording can be clumsy for a screen reader reading aloud.",
+            "fr": "La formulation peut être maladroite pour un lecteur d’écran qui lit à voix haute.",
+            "ar": "قد تكون الصياغة ثقيلة على قارئ شاشة يقرأ بصوت عالٍ."
+          },
+          {
+            "en": "Invite reviews through the corrections desk and correct within {{ quality.correction_sla_days }} days.",
+            "fr": "Inviter des relectures via le service des corrections et corriger sous {{ quality.correction_sla_days }} jours.",
+            "ar": "دعوة المراجعات عبر مكتب التصويبات والتصحيح خلال {{ quality.correction_sla_days }} يومًا."
+          }
+        ]
+      ],
+      "note": {
+        "en": "We would rather publish a limit than hide it. A limit that is written down can be fixed and can be held against us.",
+        "fr": "Nous préférons publier une limite que la cacher. Une limite écrite peut être corrigée et peut nous être opposée.",
+        "ar": "نفضّل نشر الحد على إخفائه. فالحد المكتوب يمكن إصلاحه ويمكن أن يُحتجّ به علينا."
+      }
+    },
+    {
+      "type": "steps",
+      "id": "ac-howtest",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "How we check",
+        "fr": "Comment nous vérifions",
+        "ar": "كيف نتحقق"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Automated checks on every release",
+            "fr": "Contrôles automatiques à chaque version",
+            "ar": "فحوص آلية عند كل إصدار"
+          },
+          "body": {
+            "en": "A crawler script visits every page in all three languages and looks for pages without a language, empty links, images without a text alternative, forms without labels and pages with more than one main heading. The team runs it before a release; it is not yet a blocking step of the automated release script, and we say so rather than imply it is.",
+            "fr": "Un script d’exploration visite chaque page dans les trois langues et recherche les pages sans langue, les liens vides, les images sans alternative textuelle, les formulaires sans libellés et les pages avec plus d’un titre principal. L’équipe l’exécute avant une version ; ce n’est pas encore une étape bloquante du script de livraison automatisé, et nous le disons plutôt que de le laisser croire.",
+            "ar": "يزور سكربت زاحف كل صفحة بلغاتها الثلاث ويبحث عن صفحات بلا لغة وروابط فارغة وصور بلا بديل نصي ونماذج بلا وسوم وصفحات فيها أكثر من عنوان رئيسي. ويشغّله الفريق قبل كل إصدار؛ وهو ليس بعدُ خطوة مانعة في سكربت الإصدار الآلي، ونقول ذلك بدل أن نوحي بغيره."
+          }
+        },
+        {
+          "title": {
+            "en": "Keyboard walk-through",
+            "fr": "Parcours au clavier",
+            "ar": "جولة بلوحة المفاتيح"
+          },
+          "body": {
+            "en": "Before each major change to the template, someone goes through the main journeys with the keyboard only: menu, language switch, forms, cookie notice, checkout.",
+            "fr": "Avant chaque changement majeur du gabarit, quelqu’un parcourt les principaux parcours au clavier seul : menu, changement de langue, formulaires, avis cookies, paiement.",
+            "ar": "قبل كل تغيير كبير في القالب يجتاز شخص المسارات الرئيسية بلوحة المفاتيح وحدها: القائمة وتبديل اللغة والنماذج وإشعار الكوكيز والدفع."
+          }
+        },
+        {
+          "title": {
+            "en": "Screen-reader and zoom spot checks",
+            "fr": "Contrôles ponctuels au lecteur d’écran et au zoom",
+            "ar": "فحوص انتقائية بقارئ الشاشة والتكبير"
+          },
+          "body": {
+            "en": "We read key pages with a screen reader in each language and at 200% zoom. These are spot checks by the team, not a replacement for an audit by disabled users.",
+            "fr": "Nous lisons les pages clés avec un lecteur d’écran dans chaque langue et à 200 % de zoom. Ce sont des contrôles ponctuels de l’équipe, non un remplacement de l’audit par des utilisateurs en situation de handicap.",
+            "ar": "نقرأ الصفحات الرئيسية بقارئ شاشة في كل لغة وبتكبير 200%. وهي فحوص انتقائية من الفريق لا تغني عن تدقيق يجريه مستخدمون من ذوي الإعاقة."
+          }
+        },
+        {
+          "title": {
+            "en": "Reports from readers",
+            "fr": "Signalements des lecteurs",
+            "ar": "بلاغات القراء"
+          },
+          "body": {
+            "en": "A report is the most reliable test. It is logged, answered within {{ company.response_days }} working days and, if the barrier is real, fixed and noted on the [corrections page](/trust/corrections/).",
+            "fr": "Un signalement est le test le plus fiable. Il est consigné, reçoit une réponse sous {{ company.response_days }} jours ouvrés et, si l’obstacle est réel, il est corrigé et noté sur la [page des corrections](/trust/corrections/).",
+            "ar": "البلاغ أوثق اختبار. يُسجَّل ويُجاب عنه خلال {{ company.response_days }} أيام عمل، وإن كان العائق حقيقيًا يُصلَح ويُدوَّن في [صفحة التصويبات](/trust/corrections/)."
+          }
+        },
+        {
+          "title": {
+            "en": "Review of this statement",
+            "fr": "Révision de cette déclaration",
+            "ar": "مراجعة هذا البيان"
+          },
+          "body": {
+            "en": "The statement is re-read whenever the template changes in a way that affects navigation, colour or forms, and at least every {{ legal.review_months }} months.",
+            "fr": "La déclaration est relue chaque fois que le gabarit change d’une façon qui touche la navigation, les couleurs ou les formulaires, et au moins tous les {{ legal.review_months }} mois.",
+            "ar": "يُعاد قراءة البيان كلما تغير القالب بما يمس التنقل أو الألوان أو النماذج، وكل {{ legal.review_months }} أشهر على الأقل."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ac-law",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The legal frame, in Tunisia and elsewhere",
+        "fr": "Le cadre juridique, en Tunisie et ailleurs",
+        "ar": "الإطار القانوني في تونس وخارجها"
+      },
+      "paragraphs": [
+        {
+          "en": "Tunisian law protects the rights of persons with disabilities, including access to information and services, and sets a general direction that public and private services should be reachable by everyone. We follow that direction by choice, with the international WCAG standard as the technical yardstick, because it is the one tool that readers, testers and developers in every country already share. We do not claim to know how each Tunisian rule applies to a private training platform, and this is one of the points confirmed with a lawyer at each review.",
+          "fr": "Le droit tunisien protège les droits des personnes handicapées, notamment l’accès à l’information et aux services, et fixe une orientation générale selon laquelle les services publics et privés doivent être accessibles à tous. Nous suivons cette orientation par choix, avec la norme internationale WCAG comme référence technique, car c’est le seul outil que lecteurs, testeurs et développeurs de tous les pays partagent déjà. Nous ne prétendons pas savoir comment chaque règle tunisienne s’applique à une plateforme de formation privée, et c’est l’un des points confirmés avec un avocat à chaque revue.",
+          "ar": "يحمي القانون التونسي حقوق الأشخاص ذوي الإعاقة، ومنها النفاذ إلى المعلومات والخدمات، ويضع توجهًا عامًا بأن تكون الخدمات العامة والخاصة في متناول الجميع. ونتبع هذا التوجه اختيارًا، ونتخذ معيار WCAG الدولي مقياسًا تقنيًا لأنه الأداة الوحيدة التي يتشاركها القراء والمختبرون والمطورون في كل بلد. ولا ندّعي معرفة كيف تنطبق كل قاعدة تونسية على منصة تدريب خاصة، وهذه من النقاط التي نؤكدها مع محامٍ في كل مراجعة."
+        },
+        {
+          "en": "For readers outside Tunisia, other regimes may apply to the services you buy, such as the European accessibility rules for products and services. These rules apply to the seller when a consumer in the Union is addressed. We state our target openly so that you can judge for yourself and, if you believe we fall short of a rule that binds us, tell us through the [contact page](/contact/) so that we can answer in writing.",
+          "fr": "Pour les lecteurs hors de Tunisie, d’autres régimes peuvent s’appliquer aux services que vous achetez, comme les règles européennes d’accessibilité des produits et services. Ces règles s’appliquent au vendeur lorsqu’un consommateur de l’Union est visé. Nous énonçons notre objectif ouvertement afin que vous puissiez juger par vous-même et, si vous estimez que nous restons en deçà d’une règle qui nous lie, nous le dire via la [page de contact](/contact/) pour que nous répondions par écrit.",
+          "ar": "وللقراء خارج تونس قد تنطبق أنظمة أخرى على الخدمات التي تشترونها، مثل القواعد الأوروبية لإمكانية الوصول في المنتجات والخدمات، وهي تسري على البائع حين يُخاطَب مستهلك في الاتحاد. ونعلن هدفنا صراحةً لتحكموا بأنفسكم، وإن رأيتم أننا نقصّر عن قاعدة تلزمنا فأخبرونا عبر [صفحة الاتصال](/contact/) لنجيب كتابةً."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "ac-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Questions about accessibility",
+        "fr": "Questions sur l’accessibilité",
+        "ar": "أسئلة عن إمكانية الوصول"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Can I use the site with only a keyboard?",
+            "fr": "Puis-je utiliser le site avec le seul clavier ?",
+            "ar": "هل أستطيع استخدام الموقع بلوحة المفاتيح وحدها؟"
+          },
+          "a": {
+            "en": "Yes. Use Tab to move forward, Shift and Tab to move back, Enter to follow a link and Escape to close a menu or a dialog. The first Tab on any page reveals the skip link.",
+            "fr": "Oui. Utilisez Tab pour avancer, Maj et Tab pour reculer, Entrée pour suivre un lien et Échap pour fermer un menu ou une boîte de dialogue. Le premier appui sur Tab de chaque page révèle le lien d’évitement.",
+            "ar": "نعم. استخدم Tab للتقدم وShift مع Tab للرجوع وEnter لفتح رابط وEscape لإغلاق قائمة أو نافذة حوار. وأول ضغطة Tab في أي صفحة تُظهر رابط التخطي."
+          }
+        },
+        {
+          "q": {
+            "en": "Is the Arabic version a mirror of the English one?",
+            "fr": "La version arabe est-elle un miroir de l’anglaise ?",
+            "ar": "هل النسخة العربية مجرد عكس للإنجليزية؟"
+          },
+          "a": {
+            "en": "No. Arabic is written by hand and set with its own right-to-left rules. Numbers, code and Latin names stay left-to-right inside Arabic sentences, as a reader expects.",
+            "fr": "Non. L’arabe est écrit à la main et composé avec ses propres règles de droite à gauche. Les nombres, le code et les noms latins restent de gauche à droite à l’intérieur des phrases arabes, comme le lecteur s’y attend.",
+            "ar": "لا. العربية مكتوبة يدويًا ومنسَّقة بقواعدها الخاصة من اليمين إلى اليسار. وتبقى الأرقام والشيفرة والأسماء اللاتينية من اليسار إلى اليمين داخل الجمل العربية كما يتوقع القارئ."
+          }
+        },
+        {
+          "q": {
+            "en": "The page moves too much. What can I do?",
+            "fr": "La page bouge trop. Que faire ?",
+            "ar": "الصفحة تتحرك كثيرًا. ماذا أفعل؟"
+          },
+          "a": {
+            "en": "Press “Reduce animations” in the footer. The page reloads without decorative motion and remembers your choice. See the section on animation above for why this is a button and not automatic.",
+            "fr": "Appuyez sur « Réduire les animations » dans le pied de page. La page se recharge sans mouvement décoratif et mémorise votre choix. Voyez la section sur l’animation ci-dessus pour comprendre pourquoi c’est un bouton et non un automatisme.",
+            "ar": "اضغط «تقليل الحركة» في التذييل. تُعاد تحميل الصفحة بلا حركة زخرفية وتحفظ اختيارك. وانظر قسم الحركة أعلاه لتعرف لماذا هو زر وليس تلقائيًا."
+          }
+        },
+        {
+          "q": {
+            "en": "Can I get a document in another form?",
+            "fr": "Puis-je obtenir un document sous une autre forme ?",
+            "ar": "هل أستطيع الحصول على وثيقة بصيغة أخرى؟"
+          },
+          "a": {
+            "en": "Yes. Ask for a text version of any page, certificate or contract schedule through the [contact page](/contact/), and we will send a plain-text or large-print version within {{ company.response_days }} working days.",
+            "fr": "Oui. Demandez une version texte de toute page, de tout diplôme ou de tout calendrier de contrat via la [page de contact](/contact/), et nous enverrons une version en texte brut ou en gros caractères sous {{ company.response_days }} jours ouvrés.",
+            "ar": "نعم. اطلب نسخة نصية من أي صفحة أو شهادة أو جدول عقد عبر [صفحة الاتصال](/contact/) وسنرسل نسخة نصية عادية أو بخط كبير خلال {{ company.response_days }} أيام عمل."
+          }
+        },
+        {
+          "q": {
+            "en": "Who do I tell if I am blocked?",
+            "fr": "À qui m’adresser si je suis bloqué ?",
+            "ar": "من أخبر إذا أُعيقت؟"
+          },
+          "a": {
+            "en": "Write to {{ company.privacy_contact }} or use the [corrections desk](/trust/corrections/). Say which page, what you were trying to do and, if you can, which browser or assistive technology you use.",
+            "fr": "Écrivez à {{ company.privacy_contact }} ou utilisez le [service des corrections](/trust/corrections/). Indiquez la page, ce que vous essayiez de faire et, si possible, le navigateur ou la technologie d’assistance utilisés.",
+            "ar": "راسل {{ company.privacy_contact }} أو استخدم [مكتب التصويبات](/trust/corrections/). اذكر الصفحة وما كنت تحاول فعله، وإن أمكن المتصفح أو التقنية المساعدة المستخدمة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ac-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [editorial policy](/trust/editorial/), the [corrections page](/trust/corrections/), the [cookie policy](/trust/cookies/), the [imprint](/trust/imprint/) and the [declared limits](/trust/statement/). Every barrier we fix is noted with its date.",
+          "fr": "Lisez la [politique éditoriale](/trust/editorial/), la [page des corrections](/trust/corrections/), la [politique de cookies](/trust/cookies/), les [mentions légales](/trust/imprint/) et les [limites déclarées](/trust/statement/). Chaque obstacle levé est noté avec sa date.",
+          "ar": "اقرأ [السياسة التحريرية](/trust/editorial/) و[صفحة التصويبات](/trust/corrections/) و[سياسة الكوكيز](/trust/cookies/) و[الإشعار القانوني](/trust/imprint/) و[الحدود المعلنة](/trust/statement/). وكل عائق نزيله يُدوَّن بتاريخه."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "ac-final",
+      "gradient": "peak",
+      "title": {
+        "en": "A barrier we missed? **Tell us.**",
+        "fr": "Un obstacle que nous avons manqué ? **Dites-le-nous.**",
+        "ar": "عائق فاتنا؟ **أخبرنا.**"
+      },
+      "body": {
+        "en": "A short message is enough. We answer within {{ company.response_days }} working days.",
+        "fr": "Un court message suffit. Nous répondons sous {{ company.response_days }} jours ouvrés.",
+        "ar": "تكفي رسالة قصيرة. نجيب خلال {{ company.response_days }} أيام عمل."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Report a barrier",
+            "fr": "Signaler un obstacle",
+            "ar": "أبلغ عن عائق"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Contact",
+            "fr": "Contact",
+            "ar": "اتصل بنا"
+          },
+          "href": "/contact/",
+          "style": "ghost"
+        }
+      ]
+    }
+  ]
+}
