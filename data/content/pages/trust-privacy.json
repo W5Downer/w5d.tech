@@ -1,14 +1,14 @@
 {
   "slug": "trust-privacy",
   "title": {
-    "en": "Privacy",
-    "fr": "Confidentialité",
-    "ar": "الخصوصية"
+    "en": "Privacy policy",
+    "fr": "Politique de confidentialité",
+    "ar": "سياسة الخصوصية"
   },
   "description": {
-    "en": "What W5D collects, why, and for how long.",
-    "fr": "Ce que W5D recueille, pourquoi et pendant combien de temps.",
-    "ar": "ما الذي تجمعه W5D، ولماذا، وإلى متى تحتفظ به."
+    "en": "What W5D collects, why, on what legal basis, who receives it, how long it is kept and how to exercise your rights, under Tunisian and international rules.",
+    "fr": "Ce que W5D recueille, pourquoi, sur quelle base juridique, qui le reçoit, combien de temps il est conservé et comment exercer vos droits, selon les règles tunisiennes et internationales.",
+    "ar": "ما تجمعه W5D ولماذا وعلى أي أساس قانوني ومن يتلقاه ومدة الاحتفاظ به وكيفية ممارسة حقوقك، وفق القواعد التونسية والدولية."
   },
   "sections": [
     {
@@ -22,18 +22,18 @@
         "ar": "الخصوصية، **بعبارات واضحة.**"
       },
       "lead": {
-        "en": "We collect what a form asks for, and nothing else. No third-party trackers, no CDN, no fonts from elsewhere.",
-        "fr": "Nous collectons les données demandées dans un formulaire, et rien de plus. Aucun traceur tiers, aucun CDN, aucune police provenant d’une source externe.",
-        "ar": "نجمع البيانات التي يطلبها النموذج، ولا شيء سواها. لا أدوات تتبّع تابعة لجهات خارجية، ولا شبكة توصيل محتوى (CDN)، ولا خطوط من مصادر خارجية."
+        "en": "We collect what a form asks for, and nothing else. No data is sold, no advertising profile is built, and optional tracking stays off until you agree.",
+        "fr": "Nous collectons les données demandées dans un formulaire, et rien de plus. Aucune donnée n’est vendue, aucun profil publicitaire n’est constitué, et le suivi facultatif reste désactivé tant que vous n’avez pas donné votre accord.",
+        "ar": "نجمع ما يطلبه النموذج ولا شيء سواه. لا نبيع البيانات ولا نبني ملفًا إعلانيًا، ويبقى التتبع الاختياري معطّلًا حتى توافق عليه."
       },
       "ctas": [
         {
           "label": {
-            "en": "Contact the privacy desk",
-            "fr": "Contacter le service chargé de la confidentialité",
-            "ar": "اتصل بمكتب الخصوصية"
+            "en": "Exercise your rights",
+            "fr": "Exercer vos droits",
+            "ar": "مارس حقوقك"
           },
-          "href": "/contact/",
+          "href": "/trust/data-rights/",
           "style": "peak",
           "arrow": true
         }
@@ -46,29 +46,259 @@
     },
     {
       "type": "prose",
-      "id": "pv-body",
+      "id": "pv-who",
       "tier": "e",
       "focus": 2,
       "title": {
-        "en": "What we keep",
-        "fr": "Ce que nous conservons",
-        "ar": "البيانات التي نحتفظ بها"
+        "en": "Who is responsible for your data",
+        "fr": "Qui est responsable de vos données",
+        "ar": "من المسؤول عن بياناتك"
       },
       "paragraphs": [
         {
-          "en": "Form submissions are stored in our own database. We use one session cookie for security and one for your language choice.",
-          "fr": "Les réponses aux formulaires sont stockées dans notre propre base de données. Nous utilisons un cookie de session à des fins de sécurité et un autre pour mémoriser votre choix de langue.",
-          "ar": "تُخزَّن الطلبات المقدمة عبر النماذج في قاعدة بياناتنا الخاصة. نستخدم ملف تعريف ارتباط واحدًا للجلسة لأغراض الأمان، وآخر لاختيار اللغة."
+          "en": "The data controller is {{ company.brand }}, a Tunisian initiative operated from {{ company.country }}. Its present legal form is shown in the footer of every page and on the [imprint](/trust/imprint/); we do not state a registration number here until the owner has one to show, and we do not invent one. For any question about personal data, write to {{ company.privacy_contact }}. A person reads that mailbox, during {{ company.hours }}, and answers within {{ company.response_days }} working days.",
+          "fr": "Le responsable du traitement est {{ company.brand }}, une initiative tunisienne exploitée depuis la {{ company.country }}. Sa forme juridique actuelle figure dans le pied de page de chaque page et sur les [mentions légales](/trust/imprint/) ; nous n’indiquons pas de numéro d’immatriculation ici tant que le propriétaire n’en possède pas, et nous n’en inventons pas. Pour toute question relative aux données personnelles, écrivez à {{ company.privacy_contact }}. Une personne lit cette boîte, pendant {{ company.hours }}, et répond sous {{ company.response_days }} jours ouvrés.",
+          "ar": "المسؤول عن المعالجة هو {{ company.brand }}، مبادرة تونسية تُدار من {{ company.country }}. وتظهر صيغتها القانونية الحالية في أسفل كل صفحة وفي [الإشعار القانوني](/trust/imprint/)؛ ولا نذكر هنا رقم تسجيل ما دام المالك لا يملك رقمًا يعرضه، ولا نختلق رقمًا. لأي سؤال عن المعطيات الشخصية راسلنا على {{ company.privacy_contact }}. يقرأ شخص هذا البريد خلال {{ company.hours }} ويجيب خلال {{ company.response_days }} أيام عمل."
         },
         {
-          "en": "Applicant data follows Organic Law 2004-63 and INPDP rules. You may ask for access, correction or deletion at {{ investor.contact }}.",
-          "fr": "Les données des candidats sont traitées conformément à la Loi organique 2004-63 et aux règles de l’INPDP. Vous pouvez demander l’accès à vos données, leur rectification ou leur suppression à {{ investor.contact }}.",
-          "ar": "تخضع بيانات المتقدمين للقانون الأساسي عدد 2004-63 وقواعد INPDP. يمكنك طلب الاطلاع على بياناتك أو تصحيحها أو حذفها عبر {{ investor.contact }}."
+          "en": "This policy describes the public site, the accounts you can open on it, the forms, the certification and QCM rounds, the investor checkout, the referral programme and the sponsorship form. It does not cover other websites that you reach through a link, nor the payment providers once you are on their pages: each has its own policy, which you should read.",
+          "fr": "La présente politique décrit le site public, les comptes que vous pouvez y ouvrir, les formulaires, les parcours de certification et de QCM, le paiement des investisseurs, le programme de parrainage et le formulaire de parrainage financier. Elle ne couvre pas les autres sites auxquels vous accédez par un lien, ni les prestataires de paiement une fois sur leurs pages : chacun a sa propre politique, que vous devriez lire.",
+          "ar": "تصف هذه السياسة الموقع العام والحسابات التي يمكنك فتحها فيه والنماذج ومسارات الشهادات والاختبارات وخروج المستثمرين للدفع وبرنامج الإحالة ونموذج الرعاية. ولا تشمل المواقع الأخرى التي تصل إليها عبر رابط، ولا مزوّدي الدفع حين تصبح في صفحاتهم: لكل منهم سياسته التي ينبغي أن تقرأها."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "pv-data",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What we collect, why, and on what basis",
+        "fr": "Ce que nous collectons, pourquoi, et sur quelle base",
+        "ar": "ما نجمعه ولماذا وعلى أي أساس"
+      },
+      "columns": [
+        {
+          "en": "Data",
+          "fr": "Données",
+          "ar": "المعطيات"
         },
         {
-          "en": "We do not sell data. We do not load third-party scripts.",
-          "fr": "Nous ne vendons pas de données. Nous ne chargeons aucun script tiers.",
-          "ar": "لا نبيع البيانات. ولا نحمّل نصوصًا برمجية تابعة لجهات خارجية."
+          "en": "Why",
+          "fr": "Pourquoi",
+          "ar": "السبب"
+        },
+        {
+          "en": "Basis",
+          "fr": "Base",
+          "ar": "الأساس"
+        },
+        {
+          "en": "Kept for",
+          "fr": "Conservé",
+          "ar": "مدة الحفظ"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Account: name, e-mail, password (stored only as an Argon2id hash), language",
+            "fr": "Compte : nom, e-mail, mot de passe (conservé seulement sous forme de hachage Argon2id), langue",
+            "ar": "الحساب: الاسم والبريد وكلمة المرور (تُخزَّن فقط ببصمة Argon2id) واللغة"
+          },
+          {
+            "en": "To let you sign in, verify your address and recover your account",
+            "fr": "Pour vous permettre de vous connecter, de vérifier votre adresse et de récupérer votre compte",
+            "ar": "لتمكينك من الدخول والتحقق من بريدك واستعادة حسابك"
+          },
+          {
+            "en": "Contract",
+            "fr": "Contrat",
+            "ar": "العقد"
+          },
+          {
+            "en": "{{ privacy.retention_account_days }} days after you close the account",
+            "fr": "{{ privacy.retention_account_days }} jours après la fermeture du compte",
+            "ar": "{{ privacy.retention_account_days }} يومًا بعد إغلاق الحساب"
+          }
+        ],
+        [
+          {
+            "en": "Messages you send through the contact form, with the desk and your address",
+            "fr": "Messages envoyés par le formulaire de contact, avec le service choisi et votre adresse",
+            "ar": "الرسائل المرسلة عبر نموذج الاتصال مع المكتب المختار وعنوانك"
+          },
+          {
+            "en": "To answer you and keep a record of what was said",
+            "fr": "Pour vous répondre et conserver une trace de ce qui a été dit",
+            "ar": "للرد عليك وحفظ سجل بما قيل"
+          },
+          {
+            "en": "Legitimate interest",
+            "fr": "Intérêt légitime",
+            "ar": "المصلحة المشروعة"
+          },
+          {
+            "en": "{{ privacy.retention_messages_months }} months",
+            "fr": "{{ privacy.retention_messages_months }} mois",
+            "ar": "{{ privacy.retention_messages_months }} شهرًا"
+          }
+        ],
+        [
+          {
+            "en": "Applications and registrations: diploma, field, region, answers you give",
+            "fr": "Candidatures et inscriptions : diplôme, domaine, région, réponses fournies",
+            "ar": "طلبات التقديم والتسجيل: الشهادة والمجال والجهة والإجابات المقدَّمة"
+          },
+          {
+            "en": "To assess eligibility and place you on a certification path",
+            "fr": "Pour évaluer l’éligibilité et vous placer sur un parcours de certification",
+            "ar": "لتقييم الأهلية ووضعك على مسار اعتماد"
+          },
+          {
+            "en": "Your request",
+            "fr": "Votre demande",
+            "ar": "طلبك"
+          },
+          {
+            "en": "While the application is active, then {{ privacy.retention_account_days }} days",
+            "fr": "Tant que la candidature est active, puis {{ privacy.retention_account_days }} jours",
+            "ar": "ما دام الطلب فعّالًا ثم {{ privacy.retention_account_days }} يومًا"
+          }
+        ],
+        [
+          {
+            "en": "QCM attempts, scores and certificates",
+            "fr": "Tentatives de QCM, scores et certificats",
+            "ar": "محاولات الاختبار ونتائجها والشهادات"
+          },
+          {
+            "en": "To score you, issue a verifiable certificate and let others check it",
+            "fr": "Pour vous noter, délivrer un certificat vérifiable et permettre à des tiers de le vérifier",
+            "ar": "لتقييمك وإصدار شهادة يمكن التحقق منها وإتاحة التحقق للغير"
+          },
+          {
+            "en": "Contract",
+            "fr": "Contrat",
+            "ar": "العقد"
+          },
+          {
+            "en": "For the life of the certificate ({{ cert.validity_months }} months) and the account",
+            "fr": "Pendant la durée du certificat ({{ cert.validity_months }} mois) et du compte",
+            "ar": "طيلة مدة الشهادة ({{ cert.validity_months }} شهرًا) والحساب"
+          }
+        ],
+        [
+          {
+            "en": "Orders, pledges, subscriptions and payment references (never your card or wallet secrets)",
+            "fr": "Commandes, engagements, abonnements et références de paiement (jamais vos secrets de carte ou de portefeuille)",
+            "ar": "الطلبات والتعهدات والاشتراكات ومراجع الدفع (لا أسرار بطاقتك أو محفظتك أبدًا)"
+          },
+          {
+            "en": "To record what you paid for and to meet accounting duties",
+            "fr": "Pour enregistrer ce que vous avez payé et remplir les obligations comptables",
+            "ar": "لتسجيل ما دفعته والوفاء بالالتزامات المحاسبية"
+          },
+          {
+            "en": "Contract and legal duty",
+            "fr": "Contrat et obligation légale",
+            "ar": "العقد والالتزام القانوني"
+          },
+          {
+            "en": "{{ privacy.retention_accounting_years }} years (accounting-record retention)",
+            "fr": "{{ privacy.retention_accounting_years }} ans (conservation des pièces comptables)",
+            "ar": "{{ privacy.retention_accounting_years }} سنوات (حفظ الوثائق المحاسبية)"
+          }
+        ],
+        [
+          {
+            "en": "Referral clicks: a hashed marker, never your name or address",
+            "fr": "Clics de parrainage : un marqueur haché, jamais votre nom ni votre adresse",
+            "ar": "نقرات الإحالة: علامة مشفّرة لا اسمك ولا عنوانك"
+          },
+          {
+            "en": "To credit a verified payment to the person who referred you",
+            "fr": "Pour créditer un paiement vérifié à la personne qui vous a parrainé",
+            "ar": "لاحتساب دفع تم التحقق منه لمن أحالك"
+          },
+          {
+            "en": "Your action (following a link)",
+            "fr": "Votre action (suivre un lien)",
+            "ar": "فعلك (اتباع رابط)"
+          },
+          {
+            "en": "{{ privacy.retention_affiliate_months }} months",
+            "fr": "{{ privacy.retention_affiliate_months }} mois",
+            "ar": "{{ privacy.retention_affiliate_months }} شهرًا"
+          }
+        ],
+        [
+          {
+            "en": "Web-server logs: IP address, time, page, browser type",
+            "fr": "Journaux du serveur web : adresse IP, heure, page, type de navigateur",
+            "ar": "سجلات الخادم: عنوان IP والوقت والصفحة ونوع المتصفح"
+          },
+          {
+            "en": "To keep the site secure, stop abuse and fix faults",
+            "fr": "Pour sécuriser le site, empêcher les abus et corriger les pannes",
+            "ar": "لحماية الموقع ومنع الإساءة وإصلاح الأعطال"
+          },
+          {
+            "en": "Legitimate interest",
+            "fr": "Intérêt légitime",
+            "ar": "المصلحة المشروعة"
+          },
+          {
+            "en": "{{ privacy.retention_logs_days }} days",
+            "fr": "{{ privacy.retention_logs_days }} jours",
+            "ar": "{{ privacy.retention_logs_days }} يومًا"
+          }
+        ]
+      ],
+      "note": {
+        "en": "We do not ask for national identity numbers, health data, religion, politics or any other sensitive category. If you write such information in a free-text field, tell us and we will remove it.",
+        "fr": "Nous ne demandons ni numéro d’identité nationale, ni données de santé, ni religion, ni opinions politiques, ni aucune autre catégorie sensible. Si vous saisissez de telles informations dans un champ libre, dites-le-nous et nous les supprimerons.",
+        "ar": "لا نطلب أرقام الهوية الوطنية ولا بيانات صحية ولا دينًا ولا آراء سياسية ولا أي فئة حساسة أخرى. وإذا كتبت معلومات كهذه في حقل نصي حر فأخبرنا وسنزيلها."
+      }
+    },
+    {
+      "type": "prose",
+      "id": "pv-sharing",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Who receives your data",
+        "fr": "Qui reçoit vos données",
+        "ar": "من يتلقى بياناتك"
+      },
+      "paragraphs": [
+        {
+          "en": "We do not sell personal data and we do not rent it. Data is shared only with providers that perform a task we cannot do ourselves, and only what that task needs. Payment providers (D17, bank transfer instructions, and the online gateways Flouci, Konnect and Paymee when they are enabled) receive the amount, the order reference and the details needed to complete a payment. The mail service that carries our messages receives your address and the text of the message. The hosting provider stores the encrypted-in-transit data on our behalf.",
+          "fr": "Nous ne vendons ni ne louons de données personnelles. Les données ne sont partagées qu’avec des prestataires qui accomplissent une tâche que nous ne pouvons pas réaliser nous-mêmes, et seulement ce que cette tâche exige. Les prestataires de paiement (D17, instructions de virement bancaire, et les passerelles en ligne Flouci, Konnect et Paymee lorsqu’elles sont activées) reçoivent le montant, la référence de commande et les informations nécessaires pour mener à bien un paiement. Le service de messagerie qui achemine nos messages reçoit votre adresse et le texte du message. L’hébergeur stocke pour notre compte les données chiffrées en transit.",
+          "ar": "لا نبيع المعطيات الشخصية ولا نؤجّرها. ولا نشاركها إلا مع مزوّدين ينجزون مهمة لا نستطيع إنجازها بأنفسنا، وبقدر ما تحتاجه المهمة فقط. فمزوّدو الدفع (D17 وتعليمات التحويل البنكي، وبوابات Flouci وKonnect وPaymee عند تفعيلها) يتلقون المبلغ ومرجع الطلب والمعلومات اللازمة لإتمام الدفع. وخدمة البريد التي تنقل رسائلنا تتلقى عنوانك ونص الرسالة. ويخزّن المستضيف البيانات المشفّرة أثناء النقل نيابة عنا."
+        },
+        {
+          "en": "Where the owner switches them on, Google (Analytics, Tag Manager, Ads, reCAPTCHA) and Meta (Pixel) receive technical visit data under the conditions described in the [cookie policy](/trust/cookies/). Advertising partners are never given your account data. We may disclose data to a court, a regulator or the police when a Tunisian or applicable foreign law compels us, and we will say so when the law allows us to. If the business is ever transferred, we will tell you before your data moves and you will be able to object or delete your account.",
+          "fr": "Lorsque le propriétaire les active, Google (Analytics, Tag Manager, Ads, reCAPTCHA) et Meta (Pixel) reçoivent des données techniques de visite dans les conditions décrites dans la [politique relative aux cookies](/trust/cookies/). Les partenaires publicitaires ne reçoivent jamais les données de votre compte. Nous pouvons communiquer des données à un tribunal, à une autorité de contrôle ou à la police lorsqu’une loi tunisienne ou étrangère applicable nous y oblige, et nous vous en informerons quand la loi le permet. Si l’activité devait un jour être cédée, nous vous préviendrions avant le transfert de vos données et vous pourriez vous y opposer ou supprimer votre compte.",
+          "ar": "وعندما يفعّلها المالك، تتلقى Google (التحليلات ومدير العلامات والإعلانات وreCAPTCHA) وMeta (البكسل) بيانات زيارة تقنية وفق الشروط الواردة في [سياسة الملفات](/trust/cookies/). ولا يحصل الشركاء الإعلانيون على بيانات حسابك أبدًا. وقد نفصح عن معطيات لمحكمة أو جهة رقابية أو الشرطة حين يُلزمنا بذلك قانون تونسي أو أجنبي واجب التطبيق، وسنخبرك بذلك متى سمح القانون. وإذا نُقل النشاط يومًا فسنُعلمك قبل انتقال بياناتك ويمكنك الاعتراض أو حذف حسابك."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "pv-transfer",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Transfers outside Tunisia",
+        "fr": "Transferts hors de Tunisie",
+        "ar": "النقل خارج تونس"
+      },
+      "paragraphs": [
+        {
+          "en": "Some providers process data outside Tunisia, for example in the European Union or the United States. Organic Law 2004-63 restricts transfers of personal data abroad and gives the national authority (INPDP) a role in authorising them in some cases; the GDPR sets its own conditions for transfers out of the European Economic Area. We choose providers that document their safeguards, we send them the minimum, and we ask our Tunisian lawyer to confirm which authorisations or contractual clauses are required before any new transfer starts.",
+          "fr": "Certains prestataires traitent des données hors de Tunisie, par exemple dans l’Union européenne ou aux États-Unis. La loi organique 2004-63 encadre les transferts de données personnelles vers l’étranger et confie à l’autorité nationale (INPDP) un rôle d’autorisation dans certains cas ; le RGPD fixe ses propres conditions pour les transferts hors de l’Espace économique européen. Nous choisissons des prestataires qui documentent leurs garanties, nous leur transmettons le minimum, et nous demandons à notre avocat tunisien de confirmer quelles autorisations ou clauses contractuelles sont requises avant tout nouveau transfert.",
+          "ar": "يعالج بعض المزوّدين البيانات خارج تونس، مثل الاتحاد الأوروبي أو الولايات المتحدة. ويقيّد القانون الأساسي عدد 2004-63 نقل المعطيات الشخصية إلى الخارج ويمنح الهيئة الوطنية (INPDP) دورًا في الترخيص بذلك في بعض الحالات؛ وللائحة الأوروبية شروطها الخاصة بالنقل خارج المجال الاقتصادي الأوروبي. ونختار مزوّدين يوثّقون ضماناتهم، ونرسل لهم الحد الأدنى، ونطلب من محامينا التونسي تأكيد التراخيص أو البنود التعاقدية المطلوبة قبل بدء أي نقل جديد."
         }
       ]
     },
@@ -92,91 +322,209 @@
           "def": {
             "en": "Your account, your pledges and applications, your QCM attempts and certificates, and the messages you send us.",
             "fr": "Votre compte, vos engagements et candidatures, vos tentatives QCM et certificats, et les messages que vous nous envoyez.",
-            "ar": "حسابك والتزاماتك وطلباتك ومحاولات QCM وشهاداتك والرسائل التي ترسلها إلينا."
+            "ar": "حسابك وتعهداتك وطلباتك ومحاولات الاختبار وشهاداتك والرسائل التي ترسلها إلينا."
           }
         },
         {
           "term": {
-            "en": "What we never store",
-            "fr": "Ce que nous ne stockons jamais",
-            "ar": "ما لا نخزنه أبدا"
+            "en": "What we never keep",
+            "fr": "Ce que nous ne conservons jamais",
+            "ar": "ما لا نحتفظ به أبدًا"
           },
           "def": {
-            "en": "Your password in clear text, or the management key of a subscription in readable form.",
-            "fr": "Votre mot de passe en clair, ni la clé de gestion d’un abonnement sous forme lisible.",
-            "ar": "كلمة مرورك نصا صريحا أو مفتاح إدارة اشتراك بصيغة مقروءة."
+            "en": "Card numbers, wallet secrets, your password in readable form, or any sensitive category of data.",
+            "fr": "Numéros de carte, secrets de portefeuille, votre mot de passe en clair, ou toute catégorie sensible de données.",
+            "ar": "أرقام البطاقات وأسرار المحافظ وكلمة مرورك بصيغة مقروءة أو أي فئة حساسة من المعطيات."
           }
         },
         {
           "term": {
-            "en": "Referral links",
-            "fr": "Liens de parrainage",
-            "ar": "روابط الإحالة"
+            "en": "What we never do",
+            "fr": "Ce que nous ne faisons jamais",
+            "ar": "ما لا نفعله أبدًا"
           },
           "def": {
-            "en": "A click is counted with a hashed, short-lived marker and a cookie that lasts {{ affiliate.cookie_days }} days.",
-            "fr": "Un clic est compté avec un marqueur haché et éphémère et un cookie valable {{ affiliate.cookie_days }} jours.",
-            "ar": "تُحسب النقرة بعلامة مجزّأة قصيرة العمر وملف تعريف يدوم {{ affiliate.cookie_days }} يوما."
+            "en": "Sell data, build advertising profiles, or load third-party trackers before you agree.",
+            "fr": "Vendre des données, constituer des profils publicitaires ou charger des traceurs tiers avant votre accord.",
+            "ar": "بيع البيانات أو بناء ملفات إعلانية أو تحميل متتبعات طرف ثالث قبل موافقتك."
           }
         },
         {
           "term": {
-            "en": "Public certificate record",
-            "fr": "Fiche publique de certificat",
-            "ar": "سجل الشهادة العام"
+            "en": "Who decides",
+            "fr": "Qui décide",
+            "ar": "من يقرر"
           },
           "def": {
-            "en": "Shows service, level and dates. The holder’s name is masked.",
-            "fr": "Indique service, niveau et dates. Le nom du titulaire est masqué.",
-            "ar": "يعرض الخدمة والمستوى والتواريخ. اسم الحامل مخفي."
+            "en": "You. You can see, correct, export or delete your data, and refuse optional tracking at any time.",
+            "fr": "Vous. Vous pouvez consulter, corriger, exporter ou supprimer vos données et refuser le suivi facultatif à tout moment.",
+            "ar": "أنت. يمكنك الاطلاع على بياناتك وتصحيحها وتصديرها وحذفها ورفض التتبع الاختياري في أي وقت."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "pv-security",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "How we protect it",
+        "fr": "Comment nous la protégeons",
+        "ar": "كيف نحميها"
+      },
+      "paragraphs": [
+        {
+          "en": "Passwords are stored only as Argon2id hashes. Every state-changing form carries a CSRF token, sessions are HttpOnly and SameSite, and the site is served over HTTPS in production. Scripts load only from our own domain under a strict Content-Security-Policy, which also limits what an injected script could reach. Access to the owner portal is role-based and every sensitive action is written to an audit log. The full list of controls is on the [security page](/trust/security/).",
+          "fr": "Les mots de passe ne sont conservés que sous forme de hachages Argon2id. Chaque formulaire qui modifie un état porte un jeton CSRF, les sessions sont HttpOnly et SameSite, et le site est servi en HTTPS en production. Les scripts ne se chargent que depuis notre propre domaine sous une politique de sécurité du contenu stricte, qui limite aussi ce qu’un script injecté pourrait atteindre. L’accès au portail du propriétaire est fondé sur les rôles et chaque action sensible est inscrite dans un journal d’audit. La liste complète des contrôles figure sur la [page sécurité](/trust/security/).",
+          "ar": "لا تُخزَّن كلمات المرور إلا ببصمات Argon2id. وكل نموذج يغيّر حالة يحمل رمز CSRF، والجلسات HttpOnly وSameSite، ويُقدَّم الموقع عبر HTTPS في الإنتاج. ولا تُحمَّل النصوص البرمجية إلا من نطاقنا وفق سياسة أمان محتوى صارمة تحدّ أيضًا مما قد يصل إليه نص مُحقَن. والوصول إلى بوابة المالك قائم على الأدوار وكل إجراء حساس يُسجَّل في سجل تدقيق. وقائمة الضوابط الكاملة في [صفحة الأمان](/trust/security/)."
+        },
+        {
+          "en": "If a breach puts your personal data at risk, we will tell the people affected without undue delay and notify the competent authority within {{ legal.ack_hours }} hours of becoming aware where the law requires it, saying what happened, what data was involved and what you can do. No system is perfectly secure, and we do not claim that ours is; we claim that we try, that we log, and that we tell you.",
+          "fr": "Si une violation met vos données personnelles en danger, nous informerons les personnes concernées sans retard injustifié et nous notifierons l’autorité compétente dans les {{ legal.ack_hours }} heures suivant la prise de connaissance lorsque la loi l’exige, en indiquant ce qui s’est passé, quelles données sont concernées et ce que vous pouvez faire. Aucun système n’est parfaitement sûr, et nous ne prétendons pas que le nôtre le soit ; nous affirmons que nous essayons, que nous journalisons et que nous vous le disons.",
+          "ar": "إذا عرّض اختراق بياناتك الشخصية للخطر فسنُعلم المعنيين دون تأخير غير مبرر ونُخطر الجهة المختصة خلال {{ legal.ack_hours }} ساعة من علمنا حيث يشترط القانون، مبيّنين ما حدث والبيانات المعنية وما يمكنك فعله. ولا يوجد نظام آمن تمامًا ولا ندّعي ذلك لنظامنا؛ ما ندّعيه أننا نحاول ونسجّل ونخبرك."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "pv-special",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Children, automation and your rights in short",
+        "fr": "Enfants, automatisation et résumé de vos droits",
+        "ar": "القاصرون والأتمتة وخلاصة حقوقك"
+      },
+      "paragraphs": [
+        {
+          "en": "The site is not directed at children, and applicants must be adults able to enter a contract under Tunisian law. If you believe a child has given us data, write to us and we will delete it. Scoring of QCM rounds is automatic, but the rules are published, a result can be challenged by writing to us, and a person looks at every contested case; no decision with legal effect on you is taken by a machine alone.",
+          "fr": "Le site ne s’adresse pas aux enfants, et les candidats doivent être majeurs et capables de contracter selon le droit tunisien. Si vous pensez qu’un enfant nous a communiqué des données, écrivez-nous et nous les supprimerons. La notation des QCM est automatique, mais les règles sont publiées, un résultat peut être contesté en nous écrivant, et une personne examine chaque cas contesté ; aucune décision produisant des effets juridiques à votre égard n’est prise par une machine seule.",
+          "ar": "الموقع غير موجَّه إلى الأطفال، ويجب أن يكون المتقدمون راشدين قادرين على التعاقد وفق القانون التونسي. وإذا ظننت أن طفلًا زوّدنا ببيانات فراسلنا وسنحذفها. وتصحيح الاختبارات آلي، لكن القواعد منشورة ويمكن الطعن في النتيجة بمراسلتنا، ويراجع شخص كل حالة متنازع عليها؛ ولا يُتخذ أي قرار ذي أثر قانوني عليك بواسطة آلة وحدها."
+        },
+        {
+          "en": "You may ask to see your data, correct it, delete it, restrict or object to its use, receive a copy in a common format, withdraw consent, and complain to a regulator. The steps, the answer deadlines and the limits (for example, accounting records we must legally keep) are on the page [your data rights](/trust/data-rights/). Complaints can be addressed to the Tunisian authority (INPDP) or, if you live in the European Union, to your national supervisory authority; we would still like the chance to put it right first.",
+          "fr": "Vous pouvez demander à consulter vos données, à les corriger, à les supprimer, à en restreindre l’usage ou à vous y opposer, à en recevoir une copie dans un format courant, à retirer votre consentement et à saisir une autorité de contrôle. Les démarches, les délais de réponse et les limites (par exemple les pièces comptables que nous devons légalement conserver) figurent sur la page [vos droits sur vos données](/trust/data-rights/). Vous pouvez adresser une plainte à l’autorité tunisienne (INPDP) ou, si vous résidez dans l’Union européenne, à votre autorité de contrôle nationale ; nous aimerions toutefois avoir d’abord la possibilité de corriger la situation.",
+          "ar": "يمكنك طلب الاطلاع على بياناتك وتصحيحها وحذفها وتقييد استعمالها أو الاعتراض عليه والحصول على نسخة بصيغة شائعة وسحب موافقتك والشكوى إلى جهة رقابية. والخطوات وآجال الرد والحدود (مثل الوثائق المحاسبية التي يلزمنا القانون بحفظها) في صفحة [حقوقك في بياناتك](/trust/data-rights/). ويمكن توجيه الشكوى إلى السلطة التونسية (INPDP) أو إلى سلطتك الوطنية إن كنت مقيمًا في الاتحاد الأوروبي؛ غير أننا نرجو أن تتيح لنا فرصة التصحيح أولًا."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "pv-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Privacy, asked plainly",
+        "fr": "La confidentialité, en questions simples",
+        "ar": "أسئلة بسيطة عن الخصوصية"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is my data used to show me advertising?",
+            "fr": "Mes données servent-elles à m’afficher de la publicité ?",
+            "ar": "هل تُستخدم بياناتي لعرض إعلانات علي؟"
+          },
+          "a": {
+            "en": "No. Your account data is never given to advertisers. If advertising is ever shown, it appears only on a few public reading pages, never on your account, checkout or certificate pages; see the [advertising policy](/trust/ads-policy/).",
+            "fr": "Non. Les données de votre compte ne sont jamais transmises aux annonceurs. Si de la publicité est un jour affichée, elle n’apparaît que sur quelques pages publiques de lecture, jamais sur votre compte, le paiement ou vos certificats ; voir la [politique publicitaire](/trust/ads-policy/).",
+            "ar": "لا. لا تُمنح بيانات حسابك للمعلنين أبدًا. وإن ظهر إعلان يومًا فسيكون في بعض صفحات القراءة العامة فقط، لا في حسابك ولا في الدفع ولا في الشهادات؛ انظر [سياسة الإعلانات](/trust/ads-policy/)."
           }
         },
         {
-          "term": {
-            "en": "Your rights",
-            "fr": "Vos droits",
-            "ar": "حقوقك"
+          "q": {
+            "en": "Can I delete my account?",
+            "fr": "Puis-je supprimer mon compte ?",
+            "ar": "هل يمكنني حذف حسابي؟"
           },
-          "def": {
-            "en": "Ask to see, correct or delete your data by writing to the contact desk.",
-            "fr": "Demandez à voir, corriger ou supprimer vos données en écrivant au bureau de contact.",
-            "ar": "اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها بالكتابة إلى مكتب التواصل."
+          "a": {
+            "en": "Yes. Write to {{ company.privacy_contact }} from the address on the account. It is erased {{ privacy.retention_account_days }} days later, except records the law obliges us to keep.",
+            "fr": "Oui. Écrivez à {{ company.privacy_contact }} depuis l’adresse du compte. Il est effacé {{ privacy.retention_account_days }} jours plus tard, sauf les pièces que la loi nous oblige à conserver.",
+            "ar": "نعم. راسل {{ company.privacy_contact }} من العنوان المسجَّل في الحساب. يُمحى بعد {{ privacy.retention_account_days }} يومًا، باستثناء الوثائق التي يلزمنا القانون بحفظها."
           }
+        },
+        {
+          "q": {
+            "en": "Is my certificate public?",
+            "fr": "Mon certificat est-il public ?",
+            "ar": "هل شهادتي علنية؟"
+          },
+          "a": {
+            "en": "Only the certificate number lookup is public: anyone with the number can confirm that it exists, its level, and its dates. Your other data is not shown.",
+            "fr": "Seule la recherche par numéro de certificat est publique : toute personne disposant du numéro peut confirmer son existence, son niveau et ses dates. Vos autres données ne sont pas affichées.",
+            "ar": "التحقق برقم الشهادة وحده علني: يمكن لمن لديه الرقم أن يتأكد من وجودها ومستواها وتواريخها. ولا تُعرض بياناتك الأخرى."
+          }
+        },
+        {
+          "q": {
+            "en": "How often is this policy updated?",
+            "fr": "À quelle fréquence cette politique est-elle mise à jour ?",
+            "ar": "كم مرة تُحدَّث هذه السياسة؟"
+          },
+          "a": {
+            "en": "It is reviewed at least every {{ legal.review_months }} months and whenever a feature changes what we collect. The date of the last review is on every trust page.",
+            "fr": "Elle est revue au moins tous les {{ legal.review_months }} mois et chaque fois qu’une fonctionnalité modifie ce que nous collectons. La date de la dernière revue figure sur chaque page de confiance.",
+            "ar": "تُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل وكلما غيّرت ميزة ما نجمعه. وتاريخ آخر مراجعة على كل صفحة ثقة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "pv-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "See also the [cookie policy](/trust/cookies/), [your data rights](/trust/data-rights/), the [terms](/trust/terms/), the [refund policy](/trust/refunds/), the [security page](/trust/security/) and the [corrections form](/trust/corrections/). To report an error in this policy, write to {{ company.privacy_contact }}.",
+          "fr": "Voir aussi la [politique relative aux cookies](/trust/cookies/), [vos droits sur vos données](/trust/data-rights/), les [conditions](/trust/terms/), la [politique de remboursement](/trust/refunds/), la [page sécurité](/trust/security/) et le [formulaire de corrections](/trust/corrections/). Pour signaler une erreur dans cette politique, écrivez à {{ company.privacy_contact }}.",
+          "ar": "انظر أيضًا [سياسة الملفات](/trust/cookies/) و[حقوقك في بياناتك](/trust/data-rights/) و[الشروط](/trust/terms/) و[سياسة الاسترداد](/trust/refunds/) و[صفحة الأمان](/trust/security/) و[نموذج التصحيحات](/trust/corrections/). وللإبلاغ عن خطأ في هذه السياسة راسل {{ company.privacy_contact }}."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
         }
       ]
     },
     {
       "type": "cta",
       "id": "pv-final",
-      "gradient": "calm",
+      "gradient": "peak",
       "title": {
-        "en": "A question about **your data?**",
-        "fr": "Une question sur **vos données ?**",
-        "ar": "سؤال عن **بياناتك؟**"
+        "en": "Questions about your data? **Ask a person.**",
+        "fr": "Une question sur vos données ? **Posez-la à une personne.**",
+        "ar": "سؤال عن بياناتك؟ **اسأل شخصًا.**"
       },
       "body": {
-        "en": "Write to the privacy desk. A person answers, and corrections are public.",
-        "fr": "Écrivez au bureau confidentialité. Une personne répond, et les corrections sont publiques.",
-        "ar": "راسل مكتب الخصوصية. يجيبك شخص، والتصحيحات علنية."
+        "en": "Every request about personal data is read by a human and answered in writing.",
+        "fr": "Chaque demande relative aux données personnelles est lue par un humain et reçoit une réponse écrite.",
+        "ar": "يقرأ إنسان كل طلب يتعلق بالمعطيات الشخصية ويُجاب عنه كتابةً."
       },
       "ctas": [
         {
           "label": {
-            "en": "Contact the privacy desk",
-            "fr": "Contacter le bureau confidentialité",
-            "ar": "راسل مكتب الخصوصية"
+            "en": "Your data rights",
+            "fr": "Vos droits",
+            "ar": "حقوقك"
           },
-          "href": "/contact/",
+          "href": "/trust/data-rights/",
           "style": "peak",
           "arrow": true
         },
         {
           "label": {
-            "en": "Declared limits",
-            "fr": "Limites déclarées",
-            "ar": "الحدود المعلنة"
+            "en": "Cookie settings and policy",
+            "fr": "Cookies : paramètres et politique",
+            "ar": "الملفات: الإعدادات والسياسة"
           },
-          "href": "/trust/statement/",
+          "href": "/trust/cookies/",
           "style": "ghost"
         }
       ]

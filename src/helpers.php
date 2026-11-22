@@ -70,6 +70,7 @@ function rich(mixed $v): Html
 
 function link_to(string $path): string
 {
+    if (str_contains($path, '{{')) $path = Variables::resolve($path); // hrefs may carry tokens, e.g. mailto:{{ company.privacy_contact }}
     return preg_match('#^(https?:|mailto:|tel:|\#)#', $path) ? $path : url($path);
 }
 

@@ -1,0 +1,505 @@
+{
+  "slug": "trust-cookies",
+  "title": {
+    "en": "Cookie policy",
+    "fr": "Politique relative aux cookies",
+    "ar": "سياسة ملفات تعريف الارتباط"
+  },
+  "description": {
+    "en": "Every cookie and browser-storage key W5D uses, what it is for, how long it lasts, and how to change your choice.",
+    "fr": "Chaque cookie et chaque clé de stockage du navigateur utilisés par W5D, leur finalité, leur durée et la façon de modifier votre choix.",
+    "ar": "كل ملف تعريف ارتباط ومفتاح تخزين في المتصفح تستخدمه W5D، وغايته ومدته، وكيفية تغيير اختيارك."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "ck-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Cookies, **listed one by one.**",
+        "fr": "Les cookies, **un par un.**",
+        "ar": "ملفات تعريف الارتباط، **واحدًا واحدًا.**"
+      },
+      "lead": {
+        "en": "W5D sets only the cookies it needs to work. Anything optional stays off until you say yes, and you can change your mind at any time.",
+        "fr": "W5D ne dépose que les cookies nécessaires à son fonctionnement. Tout élément facultatif reste désactivé tant que vous n’avez pas dit oui, et vous pouvez changer d’avis à tout moment.",
+        "ar": "تضع W5D ملفات تعريف الارتباط اللازمة لعملها فقط. وكل ما هو اختياري يبقى معطّلًا حتى توافق عليه، ويمكنك تغيير رأيك في أي وقت."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Change my cookie choice",
+            "fr": "Modifier mon choix",
+            "ar": "تغيير اختياري"
+          },
+          "href": "#ck-choice",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Cookies",
+        "fr": "Cookies",
+        "ar": "ملفات الارتباط"
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ck-what",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What a cookie is, and what this page covers",
+        "fr": "Ce qu’est un cookie, et ce que couvre cette page",
+        "ar": "ما هو ملف تعريف الارتباط وما الذي تغطيه هذه الصفحة"
+      },
+      "paragraphs": [
+        {
+          "en": "A cookie is a small text file that a website asks your browser to keep. Browsers also offer a second kind of memory, called local storage, which works in a similar way but never travels to the server with each request. This policy covers both, because the rules that protect your privacy apply to any technology that stores information on your device or reads it back, whatever its name.",
+          "fr": "Un cookie est un petit fichier texte qu’un site demande à votre navigateur de conserver. Les navigateurs proposent aussi une seconde mémoire, le stockage local, qui fonctionne de façon comparable mais n’est jamais renvoyée au serveur à chaque requête. La présente politique couvre les deux, car les règles qui protègent votre vie privée s’appliquent à toute technologie qui enregistre des informations sur votre appareil ou les relit, quel que soit son nom.",
+          "ar": "ملف تعريف الارتباط ملف نصي صغير يطلب الموقع من متصفحك الاحتفاظ به. وتوفّر المتصفحات أيضًا ذاكرة ثانية تسمى التخزين المحلي، تعمل بطريقة مشابهة لكنها لا تُرسَل إلى الخادم مع كل طلب. وتشمل هذه السياسة النوعين معًا، لأن القواعد التي تحمي خصوصيتك تنطبق على كل تقنية تخزّن معلومات على جهازك أو تقرأها منه، أيًّا كان اسمها."
+        },
+        {
+          "en": "In Tunisia the governing text is Organic Law 2004-63 on the protection of personal data, supervised by the national data-protection authority (INPDP). Many visitors also come from Europe, where the GDPR and the ePrivacy rules require consent before any non-essential cookie is set. We apply the stricter of the two standards to everyone, wherever they are, so that you do not have to guess which rules apply to you.",
+          "fr": "En Tunisie, le texte de référence est la loi organique 2004-63 relative à la protection des données à caractère personnel, contrôlée par l’autorité nationale de protection des données (INPDP). De nombreux visiteurs viennent aussi d’Europe, où le RGPD et les règles ePrivacy exigent un consentement avant tout cookie non essentiel. Nous appliquons à tous, où qu’ils se trouvent, la plus stricte des deux normes, afin que vous n’ayez pas à deviner quelles règles s’appliquent à vous.",
+          "ar": "النص المرجعي في تونس هو القانون الأساسي عدد 2004-63 المتعلق بحماية المعطيات الشخصية، وتشرف عليه الهيئة الوطنية لحماية المعطيات الشخصية (INPDP). ويأتي كثير من الزوار أيضًا من أوروبا، حيث يشترط اللائحة الأوروبية لحماية البيانات (RGPD) وقواعد الخصوصية الإلكترونية الحصول على الموافقة قبل وضع أي ملف غير ضروري. ونطبّق على الجميع، أينما كانوا، أشدّ المعيارين صرامة، حتى لا تضطر إلى تخمين القواعد التي تنطبق عليك."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "ck-table",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The complete list",
+        "fr": "La liste complète",
+        "ar": "القائمة الكاملة"
+      },
+      "columns": [
+        {
+          "en": "Name",
+          "fr": "Nom",
+          "ar": "الاسم"
+        },
+        {
+          "en": "Purpose",
+          "fr": "Finalité",
+          "ar": "الغاية"
+        },
+        {
+          "en": "Lifetime",
+          "fr": "Durée",
+          "ar": "المدة"
+        },
+        {
+          "en": "Category",
+          "fr": "Catégorie",
+          "ar": "الفئة"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "`w5d_sid`",
+            "fr": "`w5d_sid`",
+            "ar": "`w5d_sid`"
+          },
+          {
+            "en": "Keeps your session: the CSRF security token on every form, your signed-in state, flash messages.",
+            "fr": "Maintient votre session : jeton de sécurité CSRF de chaque formulaire, état de connexion, messages temporaires.",
+            "ar": "يحفظ جلستك: رمز الأمان (CSRF) في كل نموذج وحالة تسجيل الدخول والرسائل المؤقتة."
+          },
+          {
+            "en": "Until you close the browser. HttpOnly, SameSite=Lax, Secure over HTTPS.",
+            "fr": "Jusqu’à la fermeture du navigateur. HttpOnly, SameSite=Lax, Secure sous HTTPS.",
+            "ar": "حتى إغلاق المتصفح. HttpOnly وSameSite=Lax وSecure عبر HTTPS."
+          },
+          {
+            "en": "Strictly necessary",
+            "fr": "Strictement nécessaire",
+            "ar": "ضروري تمامًا"
+          }
+        ],
+        [
+          {
+            "en": "`w5d_remember`",
+            "fr": "`w5d_remember`",
+            "ar": "`w5d_remember`"
+          },
+          {
+            "en": "Keeps you signed in on this device. Set only if you tick “remember me”. Stored as a random token, never as your password.",
+            "fr": "Vous garde connecté sur cet appareil. Déposé seulement si vous cochez « se souvenir de moi ». Stocké sous forme de jeton aléatoire, jamais de mot de passe.",
+            "ar": "يبقيك مسجّل الدخول على هذا الجهاز. لا يُوضع إلا إذا اخترت «تذكّرني». يُخزَّن رمزًا عشوائيًا لا كلمة مرور."
+          },
+          {
+            "en": "Up to 30 days by default; deleted when you sign out.",
+            "fr": "30 jours au maximum par défaut ; supprimé à la déconnexion.",
+            "ar": "حتى 30 يومًا افتراضيًا؛ يُحذف عند تسجيل الخروج."
+          },
+          {
+            "en": "Strictly necessary (on request)",
+            "fr": "Strictement nécessaire (à votre demande)",
+            "ar": "ضروري (بطلب منك)"
+          }
+        ],
+        [
+          {
+            "en": "`w5d_lang`",
+            "fr": "`w5d_lang`",
+            "ar": "`w5d_lang`"
+          },
+          {
+            "en": "Remembers English, French or Arabic, so the page opens in your language.",
+            "fr": "Mémorise l’anglais, le français ou l’arabe pour ouvrir la page dans votre langue.",
+            "ar": "يتذكّر الإنجليزية أو الفرنسية أو العربية لتُفتح الصفحة بلغتك."
+          },
+          {
+            "en": "One year.",
+            "fr": "Un an.",
+            "ar": "سنة واحدة."
+          },
+          {
+            "en": "Preference",
+            "fr": "Préférence",
+            "ar": "تفضيل"
+          }
+        ],
+        [
+          {
+            "en": "`w5d_ref`",
+            "fr": "`w5d_ref`",
+            "ar": "`w5d_ref`"
+          },
+          {
+            "en": "Only if you arrive through a friend’s referral link: remembers the referrer so a verified payment can be credited to them.",
+            "fr": "Seulement si vous arrivez par le lien de parrainage d’un ami : mémorise le parrain afin de lui créditer un paiement vérifié.",
+            "ar": "فقط إذا وصلت عبر رابط إحالة من صديق: يتذكّر المُحيل ليُحتسب له أي دفع تم التحقق منه."
+          },
+          {
+            "en": "{{ affiliate.cookie_days }} days.",
+            "fr": "{{ affiliate.cookie_days }} jours.",
+            "ar": "{{ affiliate.cookie_days }} يومًا."
+          },
+          {
+            "en": "Referral (only with a link)",
+            "fr": "Parrainage (avec lien uniquement)",
+            "ar": "إحالة (مع الرابط فقط)"
+          }
+        ],
+        [
+          {
+            "en": "`w5d-theme`, `w5d-motion` (local storage)",
+            "fr": "`w5d-theme`, `w5d-motion` (stockage local)",
+            "ar": "`w5d-theme` و`w5d-motion` (تخزين محلي)"
+          },
+          {
+            "en": "Light or dark theme, and whether you switched animations to calm mode.",
+            "fr": "Thème clair ou sombre, et choix éventuel du mode calme pour les animations.",
+            "ar": "السمة الفاتحة أو الداكنة، وما إذا كنت قد حوّلت الحركة إلى الوضع الهادئ."
+          },
+          {
+            "en": "Until you clear your browser data.",
+            "fr": "Jusqu’à ce que vous effaciez les données du navigateur.",
+            "ar": "حتى تمسح بيانات المتصفح."
+          },
+          {
+            "en": "Preference",
+            "fr": "Préférence",
+            "ar": "تفضيل"
+          }
+        ],
+        [
+          {
+            "en": "`w5d-cookies`, `w5d-consent` (local storage)",
+            "fr": "`w5d-cookies`, `w5d-consent` (stockage local)",
+            "ar": "`w5d-cookies` و`w5d-consent` (تخزين محلي)"
+          },
+          {
+            "en": "Records your cookie choice and its date, so we do not ask on every page.",
+            "fr": "Enregistre votre choix en matière de cookies et sa date pour ne pas vous le redemander à chaque page.",
+            "ar": "يسجّل اختيارك بشأن الملفات وتاريخه حتى لا نسألك في كل صفحة."
+          },
+          {
+            "en": "{{ privacy.consent_months }} months, then we ask again.",
+            "fr": "{{ privacy.consent_months }} mois, puis nous vous le redemandons.",
+            "ar": "{{ privacy.consent_months }} أشهر، ثم نسألك مجددًا."
+          },
+          {
+            "en": "Strictly necessary (it stores your choice)",
+            "fr": "Strictement nécessaire (il mémorise votre choix)",
+            "ar": "ضروري (يحفظ اختيارك)"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Optional measurement and advertising tools are not in this table because none loads unless the owner switches it on and you accept; the cookie notice lists them whenever they are in use.",
+        "fr": "Les outils facultatifs de mesure et de publicité ne figurent pas dans ce tableau : aucun ne se charge tant que le propriétaire ne l’a pas activé et que vous n’avez pas accepté ; l’avis sur les cookies les énumère dès qu’ils sont utilisés.",
+        "ar": "أدوات القياس والإعلان الاختيارية غير مدرجة في هذا الجدول لأن أيًّا منها لا يُحمَّل ما لم يفعّله المالك وتوافق أنت؛ ويسرد إشعار الملفات هذه الأدوات متى كانت قيد الاستخدام."
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ck-optional",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Optional tools: measurement and advertising",
+        "fr": "Outils facultatifs : mesure et publicité",
+        "ar": "الأدوات الاختيارية: القياس والإعلان"
+      },
+      "paragraphs": [
+        {
+          "en": "The site can be connected, by its owner, to Google Analytics 4, Google Tag Manager, Google Ads conversion measurement and the Meta Pixel. These are off in the code until a setting is switched on, and even then they stay off in your browser until you press “Accept all” or tick “Measurement and advertising” in the cookie settings. Refusing changes nothing else about the site: every page, form and payment works exactly the same.",
+          "fr": "Le propriétaire peut relier le site à Google Analytics 4, Google Tag Manager, à la mesure de conversions Google Ads et au pixel Meta. Ces outils sont désactivés dans le code tant qu’un réglage n’est pas activé, et même alors ils restent désactivés dans votre navigateur tant que vous n’avez pas cliqué sur « Tout accepter » ou coché « Mesure et publicité » dans les paramètres des cookies. Refuser ne change rien d’autre : chaque page, chaque formulaire et chaque paiement fonctionne exactement de la même façon.",
+          "ar": "يمكن لمالك الموقع ربطه بتحليلات Google 4 ومدير علامات Google وقياس تحويلات إعلانات Google وبكسل Meta. وهذه الأدوات معطّلة في الشيفرة حتى يُفعَّل إعداد ما، وحتى حينئذ تبقى معطّلة في متصفحك حتى تضغط «قبول الكل» أو تحدد «القياس والإعلان» في إعدادات الملفات. والرفض لا يغيّر شيئًا آخر: كل صفحة ونموذج وعملية دفع تعمل بالطريقة نفسها."
+        },
+        {
+          "en": "If you accept and later withdraw consent, the page reloads so that the tools already running stop. Withdrawing is as easy as accepting: one button in the footer, “Cookie settings”, reopens the choice. Pages that deal with evidence, status, checkout, credentials and sign-in never load advertising tools at all; see the [advertising policy](/trust/ads-policy/).",
+          "fr": "Si vous acceptez puis retirez votre consentement, la page se recharge afin que les outils déjà actifs s’arrêtent. Retirer son consentement est aussi simple que le donner : un bouton du pied de page, « Paramètres des cookies », rouvre le choix. Les pages de preuves, de statut, de paiement, d’identifiants et de connexion ne chargent jamais d’outil publicitaire ; voir la [politique publicitaire](/trust/ads-policy/).",
+          "ar": "إذا قبلت ثم سحبت موافقتك لاحقًا، تُعاد تحميل الصفحة حتى تتوقف الأدوات التي بدأت العمل. وسحب الموافقة سهل كمنحها: زر في أسفل الصفحة «إعدادات الملفات» يعيد فتح الاختيار. أما صفحات الأدلة والحالة والدفع والشهادات وتسجيل الدخول فلا تحمّل أي أداة إعلانية مطلقًا؛ انظر [سياسة الإعلانات](/trust/ads-policy/)."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ck-captcha",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "A security service we must be honest about: reCAPTCHA",
+        "fr": "Un service de sécurité dont nous devons parler franchement : reCAPTCHA",
+        "ar": "خدمة أمنية يجب أن نكون صريحين بشأنها: reCAPTCHA"
+      },
+      "paragraphs": [
+        {
+          "en": "When the owner enables Google reCAPTCHA, it loads on public pages that contain a form, to stop automated abuse such as fake sign-ups and spam. Unlike measurement tools, it is not gated behind the optional choice, because without it the protection would not work. It is a Google service: it reads signals from your browser, may set its own cookies, and Google’s privacy policy and terms apply. A notice next to the form says so whenever it is active.",
+          "fr": "Lorsque le propriétaire active Google reCAPTCHA, il se charge sur les pages publiques qui contiennent un formulaire, afin d’empêcher les abus automatisés comme les fausses inscriptions et le spam. Contrairement aux outils de mesure, il n’est pas soumis au choix facultatif, car sans lui la protection ne fonctionnerait pas. C’est un service de Google : il lit des signaux de votre navigateur, peut déposer ses propres cookies, et la politique de confidentialité et les conditions de Google s’appliquent. Un avis placé près du formulaire l’indique chaque fois qu’il est actif.",
+          "ar": "عندما يفعّل المالك Google reCAPTCHA فإنه يُحمَّل في الصفحات العامة التي تحتوي على نموذج، لمنع الإساءة الآلية مثل التسجيلات الوهمية والرسائل المزعجة. وعلى خلاف أدوات القياس لا يخضع للاختيار الاختياري، لأن الحماية لن تعمل بدونه. وهو خدمة من Google: يقرأ إشارات من متصفحك وقد يضع ملفاته الخاصة، وتنطبق سياسة خصوصية Google وشروطها. ويذكر إشعار بجوار النموذج ذلك كلما كان مفعّلًا."
+        },
+        {
+          "en": "Whether reCAPTCHA is active today is a setting, not a promise made in this text. If it is on, treat it as a third-party service that receives technical signals about your visit; if you do not want that, you can still contact us by e-mail at {{ company.privacy_contact }}.",
+          "fr": "Savoir si reCAPTCHA est actif aujourd’hui relève d’un réglage, non d’une promesse faite dans ce texte. S’il est activé, considérez-le comme un service tiers qui reçoit des signaux techniques sur votre visite ; si vous ne le souhaitez pas, vous pouvez toujours nous écrire à {{ company.privacy_contact }}.",
+          "ar": "كون reCAPTCHA مفعّلًا اليوم أم لا مسألة إعداد، وليست وعدًا في هذا النص. وإن كان مفعّلًا فاعتبره خدمة طرف ثالث تتلقى إشارات تقنية عن زيارتك؛ وإذا لم ترغب في ذلك فيمكنك دائمًا مراسلتنا على {{ company.privacy_contact }}."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "ck-choice",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Change your choice, step by step",
+        "fr": "Modifier votre choix, étape par étape",
+        "ar": "غيّر اختيارك خطوة بخطوة"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Open the settings",
+            "fr": "Ouvrir les paramètres",
+            "ar": "افتح الإعدادات"
+          },
+          "body": {
+            "en": "Use “Cookie settings” in the footer of any page, or the link at the top of this page. The notice opens with your current choice shown.",
+            "fr": "Utilisez « Paramètres des cookies » dans le pied de n’importe quelle page. L’avis s’ouvre en affichant votre choix actuel.",
+            "ar": "استخدم «إعدادات الملفات» في أسفل أي صفحة. يفتح الإشعار ويعرض اختيارك الحالي."
+          }
+        },
+        {
+          "title": {
+            "en": "Choose by category",
+            "fr": "Choisir par catégorie",
+            "ar": "اختر حسب الفئة"
+          },
+          "body": {
+            "en": "Strictly necessary cookies are always on. Measurement and advertising can be switched on or off on their own.",
+            "fr": "Les cookies strictement nécessaires sont toujours actifs. La mesure et la publicité peuvent être activées ou désactivées séparément.",
+            "ar": "الملفات الضرورية تعمل دائمًا، أما القياس والإعلان فيمكن تشغيلهما أو إيقافهما على حدة."
+          }
+        },
+        {
+          "title": {
+            "en": "Save",
+            "fr": "Enregistrer",
+            "ar": "احفظ"
+          },
+          "body": {
+            "en": "Your choice and its date are stored on your device and respected immediately. You will be asked again after {{ privacy.consent_months }} months.",
+            "fr": "Votre choix et sa date sont stockés sur votre appareil et respectés immédiatement. Nous vous le demanderons à nouveau après {{ privacy.consent_months }} mois.",
+            "ar": "يُخزَّن اختيارك وتاريخه على جهازك ويُحترم فورًا. وسنسألك مجددًا بعد {{ privacy.consent_months }} أشهر."
+          }
+        },
+        {
+          "title": {
+            "en": "Or clear everything",
+            "fr": "Ou tout effacer",
+            "ar": "أو امسح كل شيء"
+          },
+          "body": {
+            "en": "Your browser can delete all cookies and site data at any time. Doing so signs you out and asks the cookie question again.",
+            "fr": "Votre navigateur peut supprimer à tout moment tous les cookies et données de site. Cela vous déconnecte et ramène la question sur les cookies.",
+            "ar": "يمكن لمتصفحك حذف كل الملفات وبيانات الموقع في أي وقت. وذلك يُخرجك من حسابك ويعيد سؤال الملفات."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ck-law",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The legal basis, locally and globally",
+        "fr": "La base juridique, au niveau local et mondial",
+        "ar": "الأساس القانوني محليًا وعالميًا"
+      },
+      "paragraphs": [
+        {
+          "en": "Strictly necessary cookies need no consent because the site cannot deliver a service you asked for without them: a form without a security token is unsafe, and a sign-in without a session is impossible. Preference storage is used only to apply a choice you made yourself. Measurement and advertising rest solely on your consent, which must be free, specific, informed and as easy to withdraw as to give. That is why refusing is one click, never hidden behind a second screen, and never makes the site worse.",
+          "fr": "Les cookies strictement nécessaires n’exigent pas de consentement, car le site ne peut fournir un service que vous avez demandé sans eux : un formulaire sans jeton de sécurité n’est pas sûr, et une connexion sans session est impossible. Le stockage des préférences ne sert qu’à appliquer un choix que vous avez fait vous-même. La mesure et la publicité reposent uniquement sur votre consentement, qui doit être libre, spécifique, éclairé et aussi facile à retirer qu’à donner. C’est pourquoi refuser tient en un clic, n’est jamais caché derrière un second écran et ne dégrade jamais le site.",
+          "ar": "لا تحتاج الملفات الضرورية تمامًا إلى موافقة لأن الموقع لا يستطيع تقديم خدمة طلبتها بدونها: نموذج بلا رمز أمان غير آمن، وتسجيل دخول بلا جلسة مستحيل. ويُستخدم تخزين التفضيلات فقط لتطبيق اختيار اتخذته بنفسك. أما القياس والإعلان فيستندان إلى موافقتك وحدها، ويجب أن تكون حرة ومحددة ومستنيرة وبسهولة سحبها كمنحها. ولهذا يكون الرفض بنقرة واحدة، ولا يُخفى خلف شاشة ثانية، ولا يجعل الموقع أسوأ."
+        },
+        {
+          "en": "We do not use dark patterns: “Essential only” is offered next to “Accept all” on the first screen, nothing is pre-ticked, and scrolling or continuing to browse is never treated as consent. We keep a record of your choice only on your own device; on our side we keep no consent log tied to your identity. This page is reviewed against Tunisian and European requirements by a qualified lawyer before it is relied on; see the notes at the end of this page.",
+          "fr": "Nous n’utilisons pas de schémas trompeurs : « Essentiels uniquement » est proposé à côté de « Tout accepter » dès le premier écran, rien n’est pré-coché, et faire défiler la page ou poursuivre la navigation n’est jamais considéré comme un consentement. Nous ne conservons la trace de votre choix que sur votre propre appareil ; de notre côté, nous ne tenons aucun registre de consentement lié à votre identité. Cette page est confrontée aux exigences tunisiennes et européennes par un juriste qualifié avant qu’on s’y fie ; voir les notes en bas de page.",
+          "ar": "لا نستخدم أساليب التضليل: خيار «الضرورية فقط» معروض بجانب «قبول الكل» في الشاشة الأولى، ولا شيء محدد مسبقًا، ولا يُعدّ التمرير أو مواصلة التصفح موافقة أبدًا. ونحتفظ بسجل اختيارك على جهازك أنت فقط؛ ولا نحتفظ من جانبنا بسجل موافقات مرتبط بهويتك. وتُراجَع هذه الصفحة على ضوء المتطلبات التونسية والأوروبية مع محامٍ مؤهل قبل الاعتماد عليها؛ انظر الملاحظات في آخر الصفحة."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "ck-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Cookies, asked plainly",
+        "fr": "Les cookies, en questions simples",
+        "ar": "أسئلة بسيطة عن الملفات"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Do I have to accept anything to use the site?",
+            "fr": "Dois-je accepter quelque chose pour utiliser le site ?",
+            "ar": "هل يجب أن أقبل شيئًا لاستخدام الموقع؟"
+          },
+          "a": {
+            "en": "No. “Essential only” gives you the whole site. Only the optional measurement and advertising tools depend on a yes.",
+            "fr": "Non. « Essentiels uniquement » vous donne accès à tout le site. Seuls les outils facultatifs de mesure et de publicité dépendent d’un oui.",
+            "ar": "لا. «الضرورية فقط» تتيح لك الموقع كله. وحدها أدوات القياس والإعلان الاختيارية تعتمد على موافقتك."
+          }
+        },
+        {
+          "q": {
+            "en": "Does the site sell my data?",
+            "fr": "Le site vend-il mes données ?",
+            "ar": "هل يبيع الموقع بياناتي؟"
+          },
+          "a": {
+            "en": "No. See the [privacy policy](/trust/privacy/). Optional tools, when you allow them, send visit data to the provider that runs the tool.",
+            "fr": "Non. Voir la [politique de confidentialité](/trust/privacy/). Les outils facultatifs, lorsque vous les autorisez, transmettent des données de visite au fournisseur qui les exploite.",
+            "ar": "لا. انظر [سياسة الخصوصية](/trust/privacy/). وعندما تسمح بالأدوات الاختيارية فإنها ترسل بيانات الزيارة إلى المزوّد الذي يشغّلها."
+          }
+        },
+        {
+          "q": {
+            "en": "Why does the notice come back?",
+            "fr": "Pourquoi l’avis revient-il ?",
+            "ar": "لماذا يعود الإشعار؟"
+          },
+          "a": {
+            "en": "Your choice expires after {{ privacy.consent_months }} months, or if you clear your browser data, because a stale choice is not a current one.",
+            "fr": "Votre choix expire après {{ privacy.consent_months }} mois, ou si vous effacez les données du navigateur, car un choix périmé n’est plus un choix actuel.",
+            "ar": "ينتهي اختيارك بعد {{ privacy.consent_months }} أشهر أو إذا مسحت بيانات المتصفح، لأن الاختيار القديم لم يعد اختيارًا حاليًا."
+          }
+        },
+        {
+          "q": {
+            "en": "Which cookies appear if I use only my phone?",
+            "fr": "Quels cookies apparaissent si j’utilise seulement mon téléphone ?",
+            "ar": "ما الملفات التي تظهر إذا استخدمت هاتفي فقط؟"
+          },
+          "a": {
+            "en": "The same ones. The list does not depend on the device; it depends on what you do (sign in, tick “remember me”, follow a referral link).",
+            "fr": "Les mêmes. La liste ne dépend pas de l’appareil mais de ce que vous faites (vous connecter, cocher « se souvenir de moi », suivre un lien de parrainage).",
+            "ar": "الملفات نفسها. فالقائمة لا تعتمد على الجهاز بل على ما تفعله (تسجيل الدخول، أو اختيار «تذكّرني»، أو اتباع رابط إحالة)."
+          }
+        },
+        {
+          "q": {
+            "en": "How do I report a problem with this page?",
+            "fr": "Comment signaler un problème dans cette page ?",
+            "ar": "كيف أبلغ عن مشكلة في هذه الصفحة؟"
+          },
+          "a": {
+            "en": "Use the [corrections form](/trust/corrections/) or write to {{ company.privacy_contact }}; we answer within {{ quality.correction_sla_days }} days.",
+            "fr": "Utilisez le [formulaire de corrections](/trust/corrections/) ou écrivez à {{ company.privacy_contact }} ; nous répondons sous {{ quality.correction_sla_days }} jours.",
+            "ar": "استخدم [نموذج التصحيحات](/trust/corrections/) أو راسل {{ company.privacy_contact }}؛ ونجيب خلال {{ quality.correction_sla_days }} يومًا."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ck-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages",
+        "fr": "Pages liées",
+        "ar": "صفحات ذات صلة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [privacy policy](/trust/privacy/) for what we collect and keep, [your data rights](/trust/data-rights/) for how to use them, the [advertising policy](/trust/ads-policy/) for where advertising is never shown, and the [security page](/trust/security/) for how cookies are protected. The [status page](/status/) shows the current state of the integrations discussed here.",
+          "fr": "Lisez la [politique de confidentialité](/trust/privacy/) pour ce que nous collectons et conservons, [vos droits sur vos données](/trust/data-rights/) pour les exercer, la [politique publicitaire](/trust/ads-policy/) pour savoir où la publicité n’apparaît jamais, et la [page sécurité](/trust/security/) pour la protection des cookies. La [page de statut](/status/) montre l’état actuel des intégrations évoquées ici.",
+          "ar": "اقرأ [سياسة الخصوصية](/trust/privacy/) لمعرفة ما نجمعه ونحتفظ به، و[حقوقك في بياناتك](/trust/data-rights/) لمعرفة كيف تمارسها، و[سياسة الإعلانات](/trust/ads-policy/) لمعرفة أين لا يظهر الإعلان أبدًا، و[صفحة الأمان](/trust/security/) لمعرفة كيف تُحمى الملفات. وتعرض [صفحة الحالة](/status/) الوضع الحالي للتكاملات المذكورة هنا."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "ck-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Your choice, **your control.**",
+        "fr": "Votre choix, **votre contrôle.**",
+        "ar": "اختيارك، **وأنت المتحكم.**"
+      },
+      "body": {
+        "en": "Reopen the cookie settings from the footer at any time.",
+        "fr": "Rouvrez les paramètres des cookies depuis le pied de page à tout moment.",
+        "ar": "أعد فتح إعدادات الملفات من أسفل الصفحة في أي وقت."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Read the privacy policy",
+            "fr": "Lire la politique de confidentialité",
+            "ar": "اقرأ سياسة الخصوصية"
+          },
+          "href": "/trust/privacy/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Your data rights",
+            "fr": "Vos droits",
+            "ar": "حقوقك"
+          },
+          "href": "/trust/data-rights/",
+          "style": "ghost"
+        }
+      ]
+    }
+  ]
+}

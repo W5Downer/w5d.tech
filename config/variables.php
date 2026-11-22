@@ -135,11 +135,13 @@ return [
         'retention_accounting_years' => 10,  // orders, invoices and payment records (accounting-record retention; confirm with the accountant)
         'retention_logs_days'       => 30,   // web-server access logs
         'retention_affiliate_months' => 24,  // referral clicks (hashed marker only)
+        'rights_days'               => 30,   // calendar days to complete a data-rights request (acknowledged sooner, see company.response_days)
         'consent_months'            => 6,    // how long a cookie choice is remembered before we ask again
     ],
     'legal' => [
         'withdrawal_days_tn' => 10,          // working days: statutory withdrawal window for many distance contracts in Tunisia (confirm)
         'withdrawal_days_eu' => 14,          // calendar days: EU distance-selling right of withdrawal, where it applies
+        'refund_days'        => 14,          // days to return money after a refund decision (same channel as the payment)
         'ack_hours'          => 72,          // breach notification target to the regulator where required
         'review_months'      => 6,           // trust pages are reviewed at least this often
     ],
