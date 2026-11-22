@@ -104,6 +104,7 @@ final class Admin
             'payments-d17' => self::vPayments(),
             'payment-methods' => self::vPayMethods(),
             'integrations' => self::vIntegrations(),
+            'funding' => Funds::view(),
             'mail-outbox' => self::vTable('SELECT id, to_email AS "to", template, lang, driver, status, substr(COALESCE(error, \'\'),1,120) AS error, created_at FROM mail_outbox ORDER BY id DESC LIMIT 300'),
             'inbox' => self::vTable('SELECT id, desk, name, email, subject, substr(body,1,160) AS message, status, created_at FROM contact_messages ORDER BY id DESC LIMIT 300', 'contact_messages'),
             'investors' => self::vTable('SELECT i.id, i.full_name, i.email, i.kind, i.organisation, COUNT(o.id) AS orders, COALESCE(SUM(o.total),0) AS pledged, i.created_at FROM investors i LEFT JOIN investor_orders o ON o.investor_id=i.id GROUP BY i.id ORDER BY pledged DESC LIMIT 300'),

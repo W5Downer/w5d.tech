@@ -37,6 +37,12 @@ foreach (['pdo_sqlite', 'mbstring', 'json', 'openssl', 'curl'] as $x) extension_
 PHP_VERSION_ID >= 80400 ? $add('OK', 'PHP', PHP_VERSION) : $add('FAIL', 'PHP', PHP_VERSION . ' (>= 8.4 required)');
 $get('PAYMENT_MODE', 'demo') === 'demo' ? $add('OK', 'PAYMENT_MODE', 'demo (no card money moves; D17 is manual verification)') : $add('WARN', 'PAYMENT_MODE', $get('PAYMENT_MODE') . ': only after counsel + PSP contract');
 
+// ---- funding stack: configuration errors fail the deploy
+$fe = \W5D\Funding::buildErrors();
+foreach ($fe as $e) $add('FAIL', 'funding', $e);
+if (!$fe) $add('OK', 'funding tokens', 'valid; ad-revenue withdrawal ' . (\W5D\Ads::canWithdraw() ? 'allowed (matricule fiscal set)' : 'closed (accrued only)'));
+$add(\W5D\Ads::canApply() ? 'OK' : 'WARN', 'AdSense content gate', \W5D\Ads::canApplyDetail()['reason_text']);
+
 // ---- should pass (WARN)
 $md = $get('MAIL_DRIVER', 'log');
 $md === 'smtp' ? $add($get('MAIL_HOST') !== '' && $get('MAIL_USERNAME') !== '' ? 'OK' : 'WARN', 'MAIL_DRIVER', 'smtp' . ($get('MAIL_HOST') === '' ? ' but MAIL_HOST empty' : ' ' . $get('MAIL_HOST'))) : $add('WARN', 'MAIL_DRIVER', "\"$md\": mails are only written to storage/logs; set smtp + credentials, then `php bin/mail.php test you@domain fr all`");

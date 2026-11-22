@@ -98,6 +98,27 @@ foreach ($scan as $f) {
     }
 }
 
+/* ---------------------------------------------------------- 7: funding tokens (no hard-coded funding amounts; build gate) */
+// Values are read from .env, falling back to .env.example so the rule also bites on a bare checkout.
+foreach (is_file(ROOT . '/.env.example') ? file(ROOT . '/.env.example', FILE_IGNORE_NEW_LINES) : [] as $l) {
+    if (preg_match('/^([A-Z0-9_]+)=([^#\s"]*)/', trim($l), $m) && \W5D\Env::get($m[1]) === null && preg_match('/^(F\d_|RNE_|ADS_|VAT_|FUNDING_)/', $m[1])) putenv($m[1] . '=' . $m[2]);
+}
+$amt = function (string $where, string $text) use ($fail) {
+    if (($hit = \W5D\Funding::hardcodedAmount($text)) !== null) $fail('funding', $where, "hard-coded funding amount '$hit' (use a {{ funding.* }} token)");
+};
+foreach ($content as $f) {
+    $j = json_decode((string)file_get_contents($f), true);
+    if (is_array($j)) walk($j, function ($p, $n) use ($f, $amt) { if (is_string($n)) $amt($f, $n); });
+}
+foreach (['en', 'fr', 'ar'] as $l) foreach ($F[$l] as $k => $v) $amt(ROOT . "/lang/$l.php", $v);
+foreach (files(ROOT . '/views/templates', '/\.blade\.php$/') as $f) $amt($f, strip_tags(preg_replace('/\{\{--.*?--\}\}/s', '', (string)file_get_contents($f))));
+foreach (array_merge(iterator_to_array(files(ROOT . '/src', '/\.php$/'), false), iterator_to_array(files(ROOT . '/config', '/\.php$/'), false)) as $f) {
+    if (str_ends_with($f, '/config/variables.php')) continue;
+    $src = preg_replace('~/\*.*?\*/|(?<![:\'"])//[^\n]*~s', ' ', (string)file_get_contents($f));
+    $amt($f, $src);
+}
+foreach (\W5D\Funding::buildErrors() as $e) $fail('funding', ROOT . '/.env', $e);
+
 /* ---------------------------------------------------------- 6: templates compile */
 $r = \W5D\ViewCache::warm();
 foreach ($r['errors'] as $f => $m) $fail('blade', $f, $m);
