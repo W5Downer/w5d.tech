@@ -4,18 +4,21 @@
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  /* The OS "reduce motion" switch is honoured by default (many desktops have it on without the owner knowing it).
-   * A visitor can opt back in with the footer button; that choice is stored in localStorage `w5d-motion`. */
-  var osReduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  var reduce = osReduce && document.documentElement.getAttribute('data-motion') !== 'full';
+  /* Animations run automatically for everyone. A visitor who wants less movement uses the "Reduce animations" switch
+   * (footer + cookie settings); the choice is stored in localStorage `w5d-motion` = calm. The OS flag is NOT used as a silent
+   * kill switch any more (many desktops report "reduce" without the owner knowing, which made the site look static). */
+  var reduce = document.documentElement.getAttribute('data-motion') === 'calm';
   $$('[data-motion-toggle]').forEach(function (b) {
-    if (!osReduce) return;
-    b.hidden = false;
-    var full = !reduce;
-    b.textContent = full ? b.getAttribute('data-label-auto') : b.getAttribute('data-label-full');
-    b.setAttribute('aria-pressed', full ? 'true' : 'false');
+    function paint() {
+      b.hidden = false;
+      var calm = document.documentElement.getAttribute('data-motion') === 'calm';
+      b.textContent = calm ? b.getAttribute('data-label-full') : b.getAttribute('data-label-auto');
+      b.setAttribute('aria-pressed', calm ? 'true' : 'false');
+    }
+    paint();
     b.addEventListener('click', function () {
-      try { if (full) localStorage.removeItem('w5d-motion'); else localStorage.setItem('w5d-motion', 'full'); } catch (e) {}
+      var calm = document.documentElement.getAttribute('data-motion') === 'calm';
+      try { if (calm) localStorage.removeItem('w5d-motion'); else localStorage.setItem('w5d-motion', 'calm'); } catch (e) {}
       window.location.reload();
     });
   });
@@ -155,7 +158,7 @@
   });
 
   /* ---------- reveal on scroll ---------- */
-  var rv = $$('[data-rv],[data-reveal]');
+  var rv = $$('[data-rv],[data-reveal],[data-rvi]');
   function showRv(el) { el.classList.add('rv-in', 'is-visible'); }
   if (rv.length && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
@@ -262,13 +265,20 @@
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   }
 
-  /* ---------- spotlight ---------- */
-  $$('.spotlight').forEach(function (el) {
-    el.addEventListener('mousemove', function (e) {
-      var r = el.getBoundingClientRect();
-      el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-  });
+  /* ---------- spotlight (hero) + card glow (.spot): one delegated pointer listener, no per-card handlers ---------- */
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var spotRaf = 0;
+    document.addEventListener('pointermove', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('.spotlight, .spot') : null;
+      if (!el || reduce) return;
+      var x = e.clientX, y = e.clientY;
+      if (spotRaf) cancelAnimationFrame(spotRaf);
+      spotRaf = requestAnimationFrame(function () {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (x - r.left) + 'px'); el.style.setProperty('--my', (y - r.top) + 'px');
+      });
+    }, { passive: true });
+  }
 
   /* ---------- copy buttons ---------- */
   $$('[data-copy],[data-copy-text]').forEach(function (b) {

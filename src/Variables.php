@@ -111,6 +111,8 @@ final class Variables
         $d['reviews_per_week'] = (int)round($d['experts_target'] * $v['quality']['sampling_percent'] / 100);
         $d['experts_current']  = $ex['current'];
         $d['progress_pct']     = $d['experts_target'] > 0 ? round($ex['current'] / $d['experts_target'] * 100, 2) : 0;
+        $v['auth'] = ['remember_days' => max(1, (int)Env::get('AUTH_REMEMBER_DAYS', '30'))]; // sign-in cookie lifetime, same source as Account
+        $v['dates']['year_now'] = (int)date('Y'); // computed, never stored: copyright range end
         $v['counts'] = $c;
         $v['d'] = $d;
         $v['experts']['target'] = $d['experts_target'];

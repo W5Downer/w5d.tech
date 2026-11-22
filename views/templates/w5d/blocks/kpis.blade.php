@@ -1,7 +1,7 @@
 <x-section :d="$d">
   <dl class="grid gap-4 grid-cols-2 lg:grid-cols-{{ min(5, max(2, count($d['items'] ?? []))) }}">
     @foreach(($d['items'] ?? []) as $k)
-      <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5">
+      <div data-rvi="zoom" class="tilt shine rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5">
         @if(!empty($k['zero_label']) && numval($k['value']) <= 0)
         <dd class="font-display text-2xl sm:text-3xl font-bold text-brand-600 dark:text-brand-300">{{ t($k['zero_label']) }}</dd>
         @else

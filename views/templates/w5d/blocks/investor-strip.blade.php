@@ -1,6 +1,6 @@
 @php $pr = \W5D\Variables::get('price'); $v = \W5D\Variables::all(); @endphp
 <x-section :d="$d" pad="py-12">
-  <div class="rounded-3xl border border-brand-500/30 bg-gradient-to-br from-brand-500/10 to-cyan-500/10 p-6 sm:p-8 grid gap-6 lg:grid-cols-[1.3fr_1fr] items-center">
+  <div class="grad-border grad-border-live shine rounded-3xl border border-brand-500/30 bg-gradient-to-br from-brand-500/10 to-cyan-500/10 p-6 sm:p-8 grid gap-6 lg:grid-cols-[1.3fr_1fr] items-center">
     <div>
       <p class="tier-badge">{{ t($d['eyebrow'] ?? '') }}</p>
       <h2 class="font-display text-2xl sm:text-3xl font-bold mt-2 text-slate-900 dark:text-white">{{ hl($d['title'] ?? '') }}</h2>
