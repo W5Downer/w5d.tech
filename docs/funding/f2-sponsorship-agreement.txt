@@ -1,0 +1,21 @@
+W5D TECH — RESTRICTED SPONSORSHIP AGREEMENT (channel F2)
+Template for review by a Tunisian lawyer before any signature. It is not legal advice and it is not an offer to anyone until counsel has approved it.
+Sponsor: {{sponsor_name}}   Agreement reference: {{agreement_ref}}   Date: {{date}}   Amount in the schedule: {{amount_tnd}} TND (minimum set by the programme: {{f2_min_tnd}} TND)
+
+[restriction] RESTRICTION OF USE. The sum paid under this agreement is restricted to one purpose: the activation of the company registry file of W5D TECH (registry fees, registration formalities and the activation of the registered entity). The sum is held apart in a restricted registry activation fund, is published on the status page as restricted, and is not used for salaries, marketing, equipment or any other purpose.
+
+[refund] REFUND CONDITION. If the registry activation does not take place, or is abandoned, the full sum is refunded to the Sponsor by the same payment channel within the number of days written in the schedule. The refund is an obligation of W5D TECH, not a favour, and it needs no justification from the Sponsor.
+
+[no-return] NO RETURN. This is a sponsorship, not a loan and not an investment. It earns no interest, no dividend, no share, no repayment and no promise of any kind other than the refund condition above. The Sponsor receives named, dated acknowledgement on the status page if the Sponsor agrees to it in writing.
+
+[independence] INDEPENDENCE. A sponsorship gives no right to direct, edit or approve the content, the evidence, the sampling, the corrections or the certification decisions of W5D TECH. Sponsors are listed; they do not steer.
+
+[records] RECORDS. W5D TECH records the sum with its date when it is received, and records its use or its refund with the date. These records are published as totals on the status page. Personal details of the Sponsor stay private unless the Sponsor agrees in writing.
+
+[law] LAW AND DISPUTES. The parties write here the governing law and the competent court after the advice of counsel. Until counsel has completed this clause the template must not be signed.
+
+[fr-restriction] RESTRICTION D’AFFECTATION. La somme versée est affectée à un seul objet : l’activation du dossier d’immatriculation au registre de W5D TECH. Elle est isolée dans un fonds d’activation restreint, publié comme restreint sur la page de statut, et ne sert ni aux salaires, ni au marketing, ni à aucun autre usage.
+
+[fr-refund] CONDITION DE REMBOURSEMENT. Si l’activation du registre n’a pas lieu, ou est abandonnée, la somme est intégralement remboursée au parrain par le même canal de paiement, dans le délai inscrit à l’annexe.
+
+[fr-no-return] AUCUN RENDEMENT. Il s’agit d’un parrainage, non d’un prêt ni d’un investissement : ni intérêt, ni dividende, ni part, ni remboursement autre que la condition ci-dessus.

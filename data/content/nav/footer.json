@@ -232,9 +232,17 @@
           "label": {
             "en": "Contact",
             "fr": "Contact",
-            "ar": "اتصل بنا"
+            "ar": "اتصل"
           },
           "href": "/contact/"
+        },
+        {
+          "label": {
+            "en": "Trust index",
+            "fr": "Index de confiance",
+            "ar": "فهرس الثقة"
+          },
+          "href": "/trust/"
         },
         {
           "label": {
@@ -246,11 +254,27 @@
         },
         {
           "label": {
-            "en": "5% sampling",
-            "fr": "Échantillonnage à 5 %",
-            "ar": "أخذ عينات بنسبة 5%"
+            "en": "{{ quality.sampling_percent }}% sampling",
+            "fr": "Échantillonnage à {{ quality.sampling_percent }} %",
+            "ar": "عيّنات {{ quality.sampling_percent }}%"
           },
           "href": "/trust/sampling/"
+        },
+        {
+          "label": {
+            "en": "Editorial policy",
+            "fr": "Politique éditoriale",
+            "ar": "السياسة التحريرية"
+          },
+          "href": "/trust/editorial/"
+        },
+        {
+          "label": {
+            "en": "Corrections",
+            "fr": "Corrections",
+            "ar": "التصويبات"
+          },
+          "href": "/trust/corrections/"
         },
         {
           "label": {
@@ -262,11 +286,35 @@
         },
         {
           "label": {
+            "en": "Cookies",
+            "fr": "Cookies",
+            "ar": "ملفات الارتباط"
+          },
+          "href": "/trust/cookies/"
+        },
+        {
+          "label": {
+            "en": "Your data rights",
+            "fr": "Vos droits sur les données",
+            "ar": "حقوقك في بياناتك"
+          },
+          "href": "/trust/data-rights/"
+        },
+        {
+          "label": {
             "en": "Terms",
             "fr": "Conditions",
             "ar": "الشروط"
           },
           "href": "/trust/terms/"
+        },
+        {
+          "label": {
+            "en": "Refunds",
+            "fr": "Remboursements",
+            "ar": "الاسترداد"
+          },
+          "href": "/trust/refunds/"
         },
         {
           "label": {
@@ -278,16 +326,32 @@
         },
         {
           "label": {
-            "en": "Corrections",
-            "fr": "Corrections",
-            "ar": "التصحيحات"
+            "en": "Accessibility",
+            "fr": "Accessibilité",
+            "ar": "إتاحة الوصول"
           },
-          "href": "/trust/corrections/"
+          "href": "/trust/accessibility/"
+        },
+        {
+          "label": {
+            "en": "Advertising policy",
+            "fr": "Politique publicitaire",
+            "ar": "سياسة الإعلانات"
+          },
+          "href": "/trust/ads-policy/"
+        },
+        {
+          "label": {
+            "en": "Imprint",
+            "fr": "Mentions légales",
+            "ar": "الإشعار القانوني"
+          },
+          "href": "/trust/imprint/"
         },
         {
           "label": {
             "en": "Status",
-            "fr": "État",
+            "fr": "Statut",
             "ar": "الحالة"
           },
           "href": "/status/"

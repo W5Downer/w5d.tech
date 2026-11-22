@@ -275,8 +275,8 @@ html { scroll-behavior: smooth; }
 @keyframes beamMove { to { left: 130%; } }
 
 /* Tilt on hover */
-.tilt { transition: transform .35s ease; transform-style: preserve-3d; }
-.tilt:hover { transform: perspective(800px) rotateX(4deg) rotateY(-4deg) translateY(-4px); }
+.tilt { transition: transform .35s ease, box-shadow .35s ease, border-color .25s ease; transform-style: preserve-3d; }
+@media (hover: hover) and (pointer: fine) { .tilt:hover { transform: perspective(800px) rotateX(4deg) rotateY(-4deg) translateY(-4px); box-shadow: 0 22px 44px -24px rgba(124,58,237,.6); } }
 
 /* 3D card stack */
 .stack-3d > * { transition: transform .4s ease, box-shadow .4s ease; }
@@ -353,19 +353,19 @@ html { scroll-behavior: smooth; }
 .code-block .tok-n { color: #f472b6; } /* name/tag */
 .code-block .tok-a { color: #38bdf8; } /* attr */
 
-/* Reduce motion. Many desktops report "reduce" without the owner knowing (Windows "Show animations" off, battery saver, remote desktop),
- * which silently killed every effect there while phones kept them. So "reduce" no longer means "nothing moves": it means CALM.
- *  - stopped: big travelling things (marquees, floating, bouncing, spinning, sliding reveals, slider autoplay)
- *  - kept, slower: soft blurred orbs, counters, fade-only reveals
- * A footer button lets a visitor force full motion (html[data-motion=full]). */
-@media (prefers-reduced-motion: reduce) {
-  html:not([data-motion="full"]) :is(.aurora::before, .aurora::after, .conic-spin, .stars::before, .stars::after,
+/* Calm mode: ONLY when the visitor switches "Reduce animations" on (html[data-motion=calm], stored in localStorage w5d-motion).
+ * Animations are on by default on every device; the OS flag is not used as a silent kill switch.
+ *  - stopped: big travelling things (marquees, floating, bouncing, spinning, sliding reveals, slider autoplay, card tilt/shine)
+ *  - kept, slower: soft blurred orbs, counters, fade-only reveals */
+html[data-motion="calm"] :is(.aurora::before, .aurora::after, .conic-spin, .stars::before, .stars::after,
   .marquee-track, .headline-marquee, .marquee-y-track, .float-y, .breath, .bounce-y,
   .gradient-shift, .pulse-ring::before, .typing-dot, .beam::before, .mesh-bg) { animation: none !important; }
-  html:not([data-motion="full"]) :is(.orb, .orb-a, .orb-b, .orb-c) { animation-duration: 40s !important; }
-  html:not([data-motion="full"]) [data-rv], html:not([data-motion="full"]) [data-reveal] { transform: none !important; }
-}
-@media print { [data-rv], [data-reveal] { opacity: 1 !important; transform: none !important; } }
+html[data-motion="calm"] :is(.orb, .orb-a, .orb-b, .orb-c) { animation-duration: 40s !important; }
+html[data-motion="calm"] [data-rv], html[data-motion="calm"] [data-reveal] { transform: none !important; }
+html[data-motion="calm"] [data-rvi].rv-in { animation-name: rviFade; }
+html[data-motion="calm"] :is(.tilt, .stack-3d > *):hover { transform: none !important; }
+html[data-motion="calm"] .shine:hover::after { animation: none; }
+@media print { [data-rv], [data-reveal], [data-rvi] { opacity: 1 !important; transform: none !important; animation: none !important; } }
 
 /* Desktop pointer layer (mouse/trackpad only; touch screens have no hover): lift + glow on cards, soft spotlight on heroes */
 @media (hover: hover) and (pointer: fine) {
@@ -706,3 +706,55 @@ a[data-active-link] .font-semibold{color:#6d28d9}
 .w5-consent a{text-decoration:underline}
 .w5-captcha{min-height:4.9rem}
 .grecaptcha-badge{visibility:visible}
+
+
+/* ---------- Card motion layer (ported from the static template: tilt, shine, grad-border, stagger, spotlight, reveal variants) ----------
+ * Used by the Blade widgets: cards, macro-cards, project-cards, path-chooser, steps, pipeline, roster, team, kpis, service-catalog,
+ * timeline, faq, quote, investor-strip, cta. Reveal-per-item uses an ANIMATION with fill-mode "backwards" so it never freezes the
+ * hover transform (a transition-based [data-rv] on the same element would). */
+.js [data-rvi] { opacity: 0; }
+.js [data-rvi].rv-in { opacity: 1; animation: rviUp .75s cubic-bezier(.2,.7,.2,1) backwards; animation-delay: var(--d, 0s); }
+.js [data-rvi="zoom"].rv-in { animation-name: rviZoom; }
+.js [data-rvi="left"].rv-in { animation-name: rviLeft; }
+.js [data-rvi="right"].rv-in { animation-name: rviRight; }
+@keyframes rviUp    { from { opacity: 0; transform: translateY(26px); } }
+@keyframes rviZoom  { from { opacity: 0; transform: scale(.94); } }
+@keyframes rviLeft  { from { opacity: 0; transform: translateX(26px); } }
+@keyframes rviRight { from { opacity: 0; transform: translateX(-26px); } }
+@keyframes rviFade  { from { opacity: 0; } }
+[dir="rtl"] .js [data-rvi="left"].rv-in { animation-name: rviRight; }
+[dir="rtl"] .js [data-rvi="right"].rv-in { animation-name: rviLeft; }
+/* stagger: delays follow the child position (cards in a grid, items in a list) */
+[data-rvi]:nth-child(1) { --d: .02s } [data-rvi]:nth-child(2) { --d: .09s } [data-rvi]:nth-child(3) { --d: .16s } [data-rvi]:nth-child(4) { --d: .23s }
+[data-rvi]:nth-child(5) { --d: .30s } [data-rvi]:nth-child(6) { --d: .37s } [data-rvi]:nth-child(7) { --d: .44s } [data-rvi]:nth-child(n+8) { --d: .5s }
+/* pointer glow that follows the cursor inside a card (needs js/site.js; invisible without a mouse) */
+.spot { position: relative; }
+.spot::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s ease; z-index: 1;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(139,92,246,.20), transparent 70%); }
+@media (hover: hover) and (pointer: fine) { .spot:hover::before { opacity: 1; } }
+/* icon chips and arrows react to the card they sit in */
+.group .chip-fx { transition: transform .3s ease, background-color .3s ease; }
+.group:hover .chip-fx { transform: scale(1.12) rotate(-4deg); background-color: rgba(139,92,246,.2); }
+.group .arrow-fx { transition: transform .25s ease; }
+.group:hover .arrow-fx { transform: translateX(4px); }
+[dir="rtl"] .group:hover .arrow-fx { transform: translateX(-4px); }
+html[data-motion="calm"] .group:hover .chip-fx, html[data-motion="calm"] .group:hover .arrow-fx { transform: none; }
+/* investor strip / feature frames: animated gradient hairline */
+.grad-border-live::before { background-size: 220% 220%; animation: gradBorderMove 7s linear infinite; }
+@keyframes gradBorderMove { 0% { background-position: 0% 50%; } 100% { background-position: 220% 50%; } }
+html[data-motion="calm"] .grad-border-live::before { animation: none; }
+/* CTA band: slow light sweep (own class; the static template's .beam is absolutely positioned and would pull the band out of flow) */
+.cta-live { overflow: hidden; }
+.cta-live::after { content: ""; position: absolute; top: 0; left: -40%; width: 40%; height: 100%; pointer-events: none; z-index: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,.16), transparent 80%); transform: skewX(-18deg); animation: ctaSweep 9s ease-in-out infinite; }
+@keyframes ctaSweep { 0%, 55% { left: -40%; } 100% { left: 140%; } }
+html[data-motion="calm"] .cta-live::after { animation: none; display: none; }
+
+/* ---------- Cookie notice (always on until a choice is made; reopened from the footer) ---------- */
+.w5-cookies { max-width: 30rem; max-height: calc(100vh - 6rem); overflow-y: auto; animation: ckIn .45s cubic-bezier(.2,.7,.2,1) both; }
+.w5-cookies summary { list-style: none; } .w5-cookies summary::-webkit-details-marker { display: none; }
+.w5-cookies summary::after { content: "+"; float: inline-end; font-weight: 700; } .w5-cookies details[open] summary::after { content: "–"; }
+.w5-cookies .btn-focus, .w5-cookies .btn-ghost { padding: .5rem 1rem; }
+@keyframes ckIn { from { opacity: 0; transform: translateY(18px) scale(.98); } }
+html[data-motion="calm"] .w5-cookies { animation: none; }
+@media print { .w5-consent { display: none !important; } }

@@ -2,5 +2,6 @@
   <a class="btn-link" href="{{ url('/trust/privacy/') }}">{{ __('ux.mini_privacy') }}</a>
   <a class="btn-link" href="{{ url('/trust/terms/') }}">{{ __('ux.mini_terms') }}</a>
   <a class="btn-link" href="{{ url('/contact/') }}">{{ __('ux.mini_help') }}</a>
-  @if(!empty((\W5D\Integrations::pageConfig() ?? [])['track']))<button type="button" class="btn-link" data-consent-open>{{ __('consent.settings') }}</button>@endif
+  <a class="btn-link" href="{{ url('/trust/cookies/') }}">{{ __('footer.cookies') }}</a>
+  <button type="button" class="btn-link" data-cookie-open>{{ __('consent.settings') }}</button>
 </footer>

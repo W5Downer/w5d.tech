@@ -116,6 +116,35 @@ return [
         'generated_per_level' => 1000, // generated questions per service per level (0-5000): 130 services x 4 levels x 1000 = 520,000
         'show_answers_practice' => 1,  // 1 = practice rounds reveal the correct answers and explanations
     ],
+    // Business identity shown in the footer, e-mails and legal pages. Only facts the owner can stand behind: no invented
+    // registration numbers. Registry fields stay empty until the matricule fiscal / RNE entry exists (see Funding, /status/).
+    'company' => [
+        'brand'       => 'W5D TECH',
+        'country'     => 'Tunisia',
+        'since'       => 2026,          // first year of operation (copyright range start)
+        'legal_form'  => 'pending',     // pending | auto_entrepreneur | company  (drives the footer wording)
+        'hours'       => 'Mon-Fri 09:00-17:00 (Africa/Tunis)',
+        'response_days' => 5,           // working days to answer a message
+        'privacy_contact' => 'owner@w5d.tech',
+    ],
+    // Retention and legal-reference tokens used by the trust pages. These are COMMITMENTS the owner must be able to keep, and legal
+    // references the owner's accountant/lawyer must confirm (see docs/LEGAL-REVIEW.md). Change here, never in the page text.
+    'privacy' => [
+        'retention_messages_months' => 24,   // contact-form messages and replies
+        'retention_account_days'    => 30,   // days after an account is closed before it is erased (except records the law requires)
+        'retention_accounting_years' => 10,  // orders, invoices and payment records (accounting-record retention; confirm with the accountant)
+        'retention_logs_days'       => 30,   // web-server access logs
+        'retention_affiliate_months' => 24,  // referral clicks (hashed marker only)
+        'rights_days'               => 30,   // calendar days to complete a data-rights request (acknowledged sooner, see company.response_days)
+        'consent_months'            => 6,    // how long a cookie choice is remembered before we ask again
+    ],
+    'legal' => [
+        'withdrawal_days_tn' => 10,          // working days: statutory withdrawal window for many distance contracts in Tunisia (confirm)
+        'withdrawal_days_eu' => 14,          // calendar days: EU distance-selling right of withdrawal, where it applies
+        'refund_days'        => 14,          // days to return money after a refund decision (same channel as the payment)
+        'ack_hours'          => 72,          // breach notification target to the regulator where required
+        'review_months'      => 6,           // trust pages are reviewed at least this often
+    ],
     'investor' => [
         'min_parts_per_day' => 1,
         'max_parts_per_day' => 1000,

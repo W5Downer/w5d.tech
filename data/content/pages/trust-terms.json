@@ -1,149 +1,391 @@
 {
- "slug": "trust-terms",
- "title": {
-  "en": "Terms of use",
-  "fr": "Conditions d’utilisation",
-  "ar": "شروط الاستخدام"
- },
- "description": {
-  "en": "Demo-mode terms for pledges and subscriptions.",
-  "fr": "Conditions en mode démo pour les engagements et les abonnements.",
-  "ar": "شروط الوضع التجريبي للتعهدات والاشتراكات."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "tm-hero",
-   "variant": "classic",
-   "gradient": "calm",
-   "title": {
-    "en": "Terms, **demo mode.**",
-    "fr": "Conditions, **mode démo.**",
-    "ar": "الشروط، **في الوضع التجريبي.**"
-   },
-   "lead": {
-    "en": "These terms apply while no payment provider is connected.",
-    "fr": "Ces conditions s’appliquent tant qu’aucun fournisseur de paiement n’est connecté.",
-    "ar": "تسري هذه الشروط ما دام مزوّد الدفع غير متصل."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Declared limits",
-      "fr": "Limites déclarées",
-      "ar": "الحدود المعلنة"
-     },
-     "href": "/trust/statement/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
-    "en": "Terms",
-    "fr": "Conditions",
-    "ar": "الشروط"
-   }
+  "slug": "trust-terms",
+  "title": {
+    "en": "Terms of use",
+    "fr": "Conditions d’utilisation",
+    "ar": "شروط الاستخدام"
   },
-  {
-   "type": "prose",
-   "id": "tm-body",
-   "tier": "i",
-   "focus": 2,
-   "title": {
-    "en": "Pledges and subscriptions",
-    "fr": "Engagements et abonnements",
-    "ar": "التعهدات والاشتراكات"
-   },
-   "paragraphs": [
-    {
-     "en": "A pledge records an intention at a dated price. No payment is taken and no money moves in demo mode.",
-     "fr": "Un engagement consigne une intention à un prix daté. En mode démo, aucun paiement n’est prélevé et aucun argent ne circule.",
-     "ar": "يسجّل التعهد نيةً بالسعر المحدد في التاريخ. لا تُحصّل أي مدفوعات ولا تُحوّل أي أموال في الوضع التجريبي."
-    },
-    {
-     "en": "You may pause, resume or cancel with your management key at any time. Cancelling stops all future days.",
-     "fr": "Vous pouvez mettre en pause, reprendre ou annuler à tout moment à l’aide de votre clé de gestion. L’annulation met fin à tous les jours futurs.",
-     "ar": "يمكنك إيقاف الاشتراك مؤقتًا أو استئنافه أو إلغاءه في أي وقت باستخدام مفتاح الإدارة. ويؤدي الإلغاء إلى إيقاف جميع الأيام اللاحقة."
-    },
-    {
-     "en": "Real-payment terms will be published and shown before any charge.",
-     "fr": "Les conditions applicables aux paiements réels seront publiées et présentées avant tout prélèvement.",
-     "ar": "ستُنشر شروط الدفع الفعلي وتُعرض قبل تحصيل أي مبلغ."
-    }
-   ]
+  "description": {
+    "en": "The rules for using W5D: accounts, pledges and payments, certificates, referrals, acceptable use, liability, changes and governing law.",
+    "fr": "Les règles d’utilisation de W5D : comptes, engagements et paiements, certificats, parrainage, usage acceptable, responsabilité, modifications et droit applicable.",
+    "ar": "قواعد استخدام W5D: الحسابات والتعهدات والمدفوعات والشهادات والإحالة والاستعمال المقبول والمسؤولية والتعديلات والقانون الواجب التطبيق."
   },
-  {
-   "type": "definitions",
-   "id": "tm-key",
-   "tier": "x",
-   "focus": 2,
-   "title": {
-    "en": "The terms in one glance",
-    "fr": "Les conditions en un coup d’œil",
-    "ar": "الشروط في لمحة"
-   },
-   "items": [
+  "sections": [
     {
-     "term": {
-      "en": "What a part is",
-      "fr": "Ce qu’est une part",
-      "ar": "ما هي الحصة"
-     },
-     "def": {
-      "en": "A dated contribution to a certification path. Not a loan, share, deposit or job.",
-      "fr": "Une contribution datée à un parcours de certification. Ni prêt, ni action, ni dépôt, ni emploi.",
-      "ar": "مساهمة مؤرخة في مسار اعتماد. ليست قرضا ولا سهما ولا وديعة ولا وظيفة."
-     }
+      "type": "hero",
+      "id": "tm-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Terms, **in plain language.**",
+        "fr": "Les conditions, **en langage clair.**",
+        "ar": "الشروط، **بلغة واضحة.**"
+      },
+      "lead": {
+        "en": "What you can expect from W5D, what W5D expects from you, and what happens when something goes wrong. Read it once, before you pledge or register.",
+        "fr": "Ce que vous pouvez attendre de W5D, ce que W5D attend de vous et ce qui se passe quand quelque chose tourne mal. Lisez-le une fois, avant de vous engager ou de vous inscrire.",
+        "ar": "ما يمكنك توقعه من W5D وما تتوقعه W5D منك وما يحدث عند حدوث خلل. اقرأها مرة واحدة قبل أن تتعهد أو تسجّل."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Declared limits",
+            "fr": "Limites déclarées",
+            "ar": "الحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Terms",
+        "fr": "Conditions",
+        "ar": "الشروط"
+      }
     },
     {
-     "term": {
-      "en": "Refunds",
-      "fr": "Remboursements",
-      "ar": "الاستردادات"
-     },
-     "def": {
-      "en": "Judged case by case in writing; nothing is promised in advance.",
-      "fr": "Examinés au cas par cas, par écrit ; rien n’est promis à l’avance.",
-      "ar": "تُبحث كل حالة كتابيا؛ ولا يُوعد بشيء مسبقا."
-     }
+      "type": "prose",
+      "id": "tm-scope",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Who these terms are between, and what they cover",
+        "fr": "Entre qui sont ces conditions, et ce qu’elles couvrent",
+        "ar": "بين من هذه الشروط وما الذي تغطيه"
+      },
+      "paragraphs": [
+        {
+          "en": "These terms are an agreement between you and {{ company.brand }}, operated from {{ company.country }}. They cover the public site, the accounts, forms and tools on it, the investor pledges and daily subscriptions, the certification and QCM rounds, the referral programme and the sponsorship and pre-sale channels. Where a specific page, for example the [refund policy](/trust/refunds/) or the [advertising policy](/trust/ads-policy/), says more about one topic, the specific page governs that topic.",
+          "fr": "Les présentes conditions forment un accord entre vous et {{ company.brand }}, exploitée depuis la {{ company.country }}. Elles couvrent le site public, les comptes, formulaires et outils qu’il propose, les engagements d’investisseurs et abonnements quotidiens, les parcours de certification et de QCM, le programme de parrainage et les canaux de parrainage financier et de prévente. Lorsqu’une page spécifique, par exemple la [politique de remboursement](/trust/refunds/) ou la [politique publicitaire](/trust/ads-policy/), en dit davantage sur un sujet, c’est elle qui prévaut pour ce sujet.",
+          "ar": "هذه الشروط اتفاق بينك وبين {{ company.brand }} التي تُدار من {{ company.country }}. وتغطي الموقع العام وما فيه من حسابات ونماذج وأدوات، وتعهدات المستثمرين والاشتراكات اليومية، وجولات الاعتماد والاختبارات، وبرنامج الإحالة، وقناتي الرعاية والبيع المسبق. وحيث تقول صفحة محددة، مثل [سياسة الاسترداد](/trust/refunds/) أو [سياسة الإعلانات](/trust/ads-policy/)، أكثر عن موضوع بعينه فالصفحة المحددة هي المرجع في ذلك الموضوع."
+        },
+        {
+          "en": "Who we are is stated on the [imprint](/trust/imprint/). The present legal form of the business is shown in the footer of every page; W5D does not state a registration number until the owner holds one, and does not describe itself as a company before it is one. By creating an account, placing a pledge or using a tool, you accept these terms. If you do not accept them, please do not use those parts of the site; browsing and reading remain open to everyone.",
+          "fr": "Qui nous sommes est indiqué dans les [mentions légales](/trust/imprint/). La forme juridique actuelle de l’activité figure dans le pied de page de chaque page ; W5D n’indique pas de numéro d’immatriculation tant que le propriétaire n’en détient pas et ne se présente pas comme une société avant de l’être. En créant un compte, en passant un engagement ou en utilisant un outil, vous acceptez ces conditions. Si vous ne les acceptez pas, merci de ne pas utiliser ces parties du site ; la navigation et la lecture restent ouvertes à tous.",
+          "ar": "من نحن مذكور في [الإشعار القانوني](/trust/imprint/). وتظهر الصيغة القانونية الحالية للنشاط في أسفل كل صفحة؛ ولا تذكر W5D رقم تسجيل ما دام المالك لا يملكه، ولا تصف نفسها شركةً قبل أن تكون كذلك. وبإنشاء حساب أو إجراء تعهد أو استخدام أداة تقبل هذه الشروط. وإن لم تقبلها فلا تستخدم تلك الأجزاء من الموقع؛ فالتصفح والقراءة متاحان للجميع."
+        }
+      ]
     },
     {
-     "term": {
-      "en": "Your account",
-      "fr": "Votre compte",
-      "ar": "حسابك"
-     },
-     "def": {
-      "en": "You are responsible for your password. We never ask for it.",
-      "fr": "Vous êtes responsable de votre mot de passe. Nous ne le demandons jamais.",
-      "ar": "أنت مسؤول عن كلمة مرورك. لا نطلبها أبدا."
-     }
+      "type": "definitions",
+      "id": "tm-key",
+      "tier": "x",
+      "focus": 2,
+      "title": {
+        "en": "The terms in one glance",
+        "fr": "Les conditions en un coup d’œil",
+        "ar": "الشروط في لمحة"
+      },
+      "items": [
+        {
+          "term": {
+            "en": "What a part is",
+            "fr": "Ce qu’est une part",
+            "ar": "ما هي الحصة"
+          },
+          "def": {
+            "en": "A dated contribution to a certification path. Not a loan, share, deposit or job.",
+            "fr": "Une contribution datée à un parcours de certification. Ni un prêt, ni une action, ni un dépôt, ni un emploi.",
+            "ar": "مساهمة مؤرخة في مسار اعتماد. وليست قرضًا ولا سهمًا ولا وديعة ولا وظيفة."
+          }
+        },
+        {
+          "term": {
+            "en": "Refunds",
+            "fr": "Remboursements",
+            "ar": "الاسترداد"
+          },
+          "def": {
+            "en": "Stated per payment type on the [refund page](/trust/refunds/) before you pay; otherwise decided in writing.",
+            "fr": "Énoncés par type de paiement sur la [page remboursements](/trust/refunds/) avant que vous payiez ; sinon décidés par écrit.",
+            "ar": "مبيّن لكل نوع دفع في [صفحة الاسترداد](/trust/refunds/) قبل أن تدفع؛ وإلا فيُقرَّر كتابةً."
+          }
+        },
+        {
+          "term": {
+            "en": "Your account",
+            "fr": "Votre compte",
+            "ar": "حسابك"
+          },
+          "def": {
+            "en": "You are responsible for your password. We never ask for it, by any channel.",
+            "fr": "Vous êtes responsable de votre mot de passe. Nous ne le demandons jamais, par aucun canal.",
+            "ar": "أنت مسؤول عن كلمة مرورك. ولا نطلبها منك أبدًا بأي وسيلة."
+          }
+        },
+        {
+          "term": {
+            "en": "Certificates",
+            "fr": "Certificats",
+            "ar": "الشهادات"
+          },
+          "def": {
+            "en": "A certificate proves a passed round at a date. It can be revoked if it was issued in error or obtained unfairly.",
+            "fr": "Un certificat atteste un parcours réussi à une date. Il peut être révoqué s’il a été délivré par erreur ou obtenu de façon déloyale.",
+            "ar": "تثبت الشهادة اجتياز جولة في تاريخ ما. ويمكن إلغاؤها إن صدرت بالخطأ أو نيلت بطريق غير عادل."
+          }
+        },
+        {
+          "term": {
+            "en": "Referral commissions",
+            "fr": "Commissions de parrainage",
+            "ar": "عمولات الإحالة"
+          },
+          "def": {
+            "en": "Declared rates on verified payments, paid by hand after a hold. Not an income promise.",
+            "fr": "Taux déclarés sur des paiements vérifiés, versés manuellement après une période de rétention. Pas une promesse de revenu.",
+            "ar": "نسب معلنة على مدفوعات تم التحقق منها، تُصرف يدويًا بعد فترة تعليق. وليست وعدًا بدخل."
+          }
+        },
+        {
+          "term": {
+            "en": "Advertising",
+            "fr": "Publicité",
+            "ar": "الإعلانات"
+          },
+          "def": {
+            "en": "Never on evidence, status, checkout, credential or account pages. Ads are third-party content, not endorsed by us.",
+            "fr": "Jamais sur les pages de preuves, de statut, de paiement, d’identifiants ou de compte. Les annonces sont des contenus de tiers, non cautionnés par nous.",
+            "ar": "لا تظهر أبدًا في صفحات الأدلة أو الحالة أو الدفع أو الشهادات أو الحساب. والإعلانات محتوى طرف ثالث لا نزكّيه."
+          }
+        }
+      ]
     },
     {
-     "term": {
-      "en": "Certificates",
-      "fr": "Certificats",
-      "ar": "الشهادات"
-     },
-     "def": {
-      "en": "A certificate proves a passed round at a date. It can be revoked if it was issued in error or obtained unfairly.",
-      "fr": "Un certificat prouve une session réussie à une date. Il peut être révoqué s’il a été délivré par erreur ou obtenu de façon déloyale.",
-      "ar": "تثبت الشهادة جولة ناجحة بتاريخ. ويمكن إلغاؤها إن صدرت بالخطأ أو نيلت بغير وجه حق."
-     }
+      "type": "prose",
+      "id": "tm-accounts",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Accounts and your responsibilities",
+        "fr": "Comptes et vos responsabilités",
+        "ar": "الحسابات ومسؤولياتك"
+      },
+      "paragraphs": [
+        {
+          "en": "You must be an adult able to enter a contract under Tunisian law, and the details you give must be true and current. You are responsible for what happens under your account, so choose a password that you use nowhere else and tell us at once if you think someone else has it. We may suspend an account that is used to attack the site, to harvest other people’s data, to pass the QCM by cheating or to place false orders, and we will tell you why.",
+          "fr": "Vous devez être majeur et capable de contracter selon le droit tunisien, et les informations que vous fournissez doivent être exactes et à jour. Vous êtes responsable de ce qui se passe avec votre compte : choisissez un mot de passe que vous n’utilisez nulle part ailleurs et prévenez-nous aussitôt si vous pensez que quelqu’un d’autre le détient. Nous pouvons suspendre un compte utilisé pour attaquer le site, collecter les données d’autrui, tricher au QCM ou passer de fausses commandes, et nous vous en indiquerons la raison.",
+          "ar": "يجب أن تكون راشدًا قادرًا على التعاقد وفق القانون التونسي، وأن تكون بياناتك صحيحة ومحدّثة. وأنت مسؤول عما يجري تحت حسابك، فاختر كلمة مرور لا تستعملها في أي مكان آخر وأخبرنا فورًا إن ظننت أن غيرك يعرفها. ويجوز لنا تعليق حساب يُستعمل لمهاجمة الموقع أو جمع بيانات الآخرين أو الغش في الاختبار أو إجراء طلبات كاذبة، وسنبيّن لك السبب."
+        },
+        {
+          "en": "Acceptable use is simple. Do not try to break, overload or bypass the site; do not scrape personal data; do not impersonate anyone; do not use the contact forms for spam or abuse; do not upload anything unlawful. Security researchers acting in good faith are welcome, and the rules for them are on the [security page](/trust/security/). You keep ownership of what you write to us, and you give us the right to use it only to answer you and to run the service you asked for.",
+          "fr": "L’usage acceptable est simple. N’essayez pas de casser, de surcharger ou de contourner le site ; ne collectez pas de données personnelles ; n’usurpez l’identité de personne ; n’utilisez pas les formulaires de contact pour du spam ou des abus ; ne déposez rien d’illicite. Les chercheurs en sécurité de bonne foi sont les bienvenus, et les règles qui les concernent figurent sur la [page sécurité](/trust/security/). Vous restez propriétaire de ce que vous nous écrivez, et vous nous donnez le droit de l’utiliser uniquement pour vous répondre et exécuter le service que vous avez demandé.",
+          "ar": "الاستعمال المقبول بسيط. لا تحاول تعطيل الموقع أو إغراقه أو الالتفاف عليه؛ ولا تجمع بيانات شخصية؛ ولا تنتحل صفة أحد؛ ولا تستعمل نماذج الاتصال للرسائل المزعجة أو الإساءة؛ ولا ترفع أي محتوى غير قانوني. والباحثون الأمنيون حسنو النية مرحَّب بهم، وقواعدهم في [صفحة الأمان](/trust/security/). وتبقى مالكًا لما تكتبه إلينا، وتمنحنا حق استعماله فقط للرد عليك وتشغيل الخدمة التي طلبتها."
+        }
+      ]
     },
     {
-     "term": {
-      "en": "Referral commissions",
-      "fr": "Commissions de parrainage",
-      "ar": "عمولات الإحالة"
-     },
-     "def": {
-      "en": "Declared rates on verified payments, paid by hand after a hold. Not an income promise.",
-      "fr": "Taux déclarés sur des paiements vérifiés, versés à la main après une période d’attente. Pas une promesse de revenu.",
-      "ar": "نسب معلنة على مدفوعات موثقة تُصرف يدويا بعد فترة احتجاز. ليست وعدا بدخل."
-     }
+      "type": "prose",
+      "id": "tm-pledges",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Pledges, subscriptions and payments",
+        "fr": "Engagements, abonnements et paiements",
+        "ar": "التعهدات والاشتراكات والمدفوعات"
+      },
+      "paragraphs": [
+        {
+          "en": "A pledge records an intention to contribute at a dated price. Prices follow a public function of programme progress and time, capped at {{ pricing.cap }} times the base price, and the price you see when you confirm is the price you pay. Payment is taken only through the methods enabled on the site at that moment, which may include D17, bank transfer and the online gateways Flouci, Konnect and Paymee. If no payment method is enabled, a pledge is recorded and no money moves; the order page says which case applies to you, so you are never left guessing. Taxes and provider fees, if any, are shown before you confirm.",
+          "fr": "Un engagement consigne l’intention de contribuer à un prix daté. Les prix suivent une fonction publique de l’avancement du programme et du temps, plafonnée à {{ pricing.cap }} fois le prix de base, et le prix que vous voyez lorsque vous confirmez est celui que vous payez. Le paiement n’est prélevé que par les moyens activés sur le site à cet instant, qui peuvent inclure D17, le virement bancaire et les passerelles en ligne Flouci, Konnect et Paymee. Si aucun moyen de paiement n’est activé, un engagement est enregistré sans mouvement d’argent ; la page de commande indique quel cas vous concerne, de sorte que vous n’avez jamais à deviner. Les taxes et frais du prestataire, le cas échéant, sont indiqués avant la confirmation.",
+          "ar": "يسجّل التعهد نية المساهمة بسعر مؤرخ. وتتبع الأسعار دالة علنية لتقدم البرنامج والوقت، بسقف {{ pricing.cap }} أضعاف السعر الأساسي، والسعر الذي تراه عند التأكيد هو السعر الذي تدفعه. ولا يُقبض الدفع إلا بالوسائل المفعّلة في الموقع لحظتها، وقد تشمل D17 والتحويل البنكي وبوابات Flouci وKonnect وPaymee. وإذا لم تكن أي وسيلة دفع مفعّلة يُسجَّل التعهد دون حركة مال؛ وتبيّن صفحة الطلب أي حالة تخصك فلا تضطر إلى التخمين. وتُعرض الضرائب ورسوم المزوّد، إن وُجدت، قبل التأكيد."
+        },
+        {
+          "en": "A pledge funds a published programme. It is not a loan to us, not a share in us, not a deposit, and carries no promised return, dividend or resale value; read the [declared limits](/trust/statement/). You may pause, resume or cancel a subscription at any time with the management key shown on your order; cancelling stops all future days. A payment is final once confirmed, except for the refunds and withdrawal rights on the [refund page](/trust/refunds/) and any right the law gives you that cannot be waived.",
+          "fr": "Un engagement finance un programme publié. Ce n’est ni un prêt à notre profit, ni une participation dans notre capital, ni un dépôt, et il ne comporte aucun rendement, dividende ni valeur de revente promis ; lisez les [limites déclarées](/trust/statement/). Vous pouvez suspendre, reprendre ou annuler un abonnement à tout moment avec la clé de gestion indiquée sur votre commande ; l’annulation arrête tous les jours à venir. Un paiement est définitif une fois confirmé, sauf pour les remboursements et droits de rétractation de la [page remboursements](/trust/refunds/) et tout droit que la loi vous reconnaît et auquel on ne peut renoncer.",
+          "ar": "يموّل التعهد برنامجًا منشورًا. وهو ليس قرضًا لنا ولا حصة فينا ولا وديعة، ولا يحمل عائدًا ولا ربحًا ولا قيمة إعادة بيع موعودة؛ اقرأ [الحدود المعلنة](/trust/statement/). ويمكنك إيقاف الاشتراك أو استئنافه أو إلغاؤه في أي وقت بمفتاح الإدارة الظاهر على طلبك؛ ويوقف الإلغاء كل الأيام القادمة. والدفع نهائي متى تأكد، باستثناء الاسترداد وحقوق العدول في [صفحة الاسترداد](/trust/refunds/) وأي حق يمنحه لك القانون ولا يجوز التنازل عنه."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tm-cert",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Certificates, referrals and sponsorship",
+        "fr": "Certificats, parrainage et parrainage financier",
+        "ar": "الشهادات والإحالة والرعاية"
+      },
+      "paragraphs": [
+        {
+          "en": "A certificate states that you passed a named round, at a level, on a date, and it stays valid for {{ cert.validity_months }} months. It is not a diploma recognised by the State, it is not a licence to practise a regulated profession, and it is not a promise of a job. We may revoke a certificate that was issued in error or obtained by cheating, and we record the date and the reason; the verification page then shows that it is revoked.",
+          "fr": "Un certificat atteste que vous avez réussi un parcours désigné, à un niveau et à une date, et il reste valide {{ cert.validity_months }} mois. Ce n’est pas un diplôme reconnu par l’État, ni une autorisation d’exercer une profession réglementée, ni une promesse d’emploi. Nous pouvons révoquer un certificat délivré par erreur ou obtenu en trichant, en consignant la date et le motif ; la page de vérification indique alors qu’il est révoqué.",
+          "ar": "تفيد الشهادة أنك اجتزت جولة معيّنة بمستوى معيّن في تاريخ معيّن، وتبقى صالحة {{ cert.validity_months }} شهرًا. وهي ليست شهادة معترفًا بها من الدولة، ولا ترخيصًا لمزاولة مهنة منظّمة، ولا وعدًا بوظيفة. ويجوز لنا إلغاء شهادة صدرت بالخطأ أو نيلت بالغش مع تسجيل التاريخ والسبب؛ وتظهر صفحة التحقق حينئذ أنها ملغاة."
+        },
+        {
+          "en": "Referral commissions are paid at the declared rate on payments that have been verified, after a hold of {{ affiliate.hold_days }} days, and only once the payable balance reaches the minimum shown in the programme. They are not salary and not an income promise; a referral that turns out to be self-dealing or fraudulent earns nothing. Sponsorship of the registry activation and pre-paid credits are separate channels, each with its own contract template, and each opens only when its protective clauses are in place, as the [status page](/status/) shows.",
+          "fr": "Les commissions de parrainage sont versées au taux déclaré sur les paiements vérifiés, après une rétention de {{ affiliate.hold_days }} jours, et seulement lorsque le solde payable atteint le minimum indiqué dans le programme. Ce n’est ni un salaire ni une promesse de revenu ; un parrainage qui s’avère être de l’auto-parrainage ou frauduleux ne rapporte rien. Le parrainage financier de l’activation du registre et les crédits prépayés sont des canaux distincts, chacun avec son modèle de contrat, et chacun ne s’ouvre que lorsque ses clauses protectrices sont en place, comme le montre la [page de statut](/status/).",
+          "ar": "تُصرف عمولات الإحالة بالنسبة المعلنة على المدفوعات التي تم التحقق منها، بعد تعليق مدته {{ affiliate.hold_days }} يومًا، ولا يتم ذلك إلا حين يبلغ الرصيد المستحق الحد الأدنى المبيّن في البرنامج. وهي ليست راتبًا ولا وعدًا بدخل؛ والإحالة التي تتبيّن أنها ذاتية أو احتيالية لا تُدرّ شيئًا. أما رعاية تفعيل السجل والأرصدة المسبقة الدفع فقناتان منفصلتان لكل منهما نموذج عقد خاص، ولا تُفتح أي منهما إلا إذا توافرت بنودها الحامية، كما تبيّن [صفحة الحالة](/status/)."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tm-liability",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Liability, availability and your statutory rights",
+        "fr": "Responsabilité, disponibilité et vos droits légaux",
+        "ar": "المسؤولية والإتاحة وحقوقك القانونية"
+      },
+      "paragraphs": [
+        {
+          "en": "W5D is a programme under construction, and the site is offered as it is. We work to keep it available and correct, we publish what is live and what is not on the [status page](/status/), and we fix errors you report within {{ quality.correction_sla_days }} days; but we cannot promise that it will never be interrupted or free of mistakes. To the extent the law allows, we are not liable for indirect loss, for lost opportunity, or for the results of decisions you take on the basis of a plan, a design figure or an estimate that is labelled as such.",
+          "fr": "W5D est un programme en construction, et le site est fourni en l’état. Nous nous efforçons de le maintenir disponible et exact, nous publions ce qui est actif et ce qui ne l’est pas sur la [page de statut](/status/), et nous corrigeons les erreurs que vous signalez sous {{ quality.correction_sla_days }} jours ; mais nous ne pouvons promettre qu’il ne sera jamais interrompu ni exempt d’erreurs. Dans la mesure permise par la loi, nous ne sommes pas responsables des pertes indirectes, des opportunités manquées ni des conséquences de décisions que vous prenez sur la base d’un plan, d’un chiffre de conception ou d’une estimation présentés comme tels.",
+          "ar": "W5D برنامج قيد البناء، ويُقدَّم الموقع كما هو. ونعمل على إبقائه متاحًا وصحيحًا، وننشر ما هو فعّال وما ليس كذلك في [صفحة الحالة](/status/)، ونصحّح الأخطاء التي تبلغنا بها خلال {{ quality.correction_sla_days }} يومًا؛ لكننا لا نعد بأنه لن ينقطع أبدًا أو يخلو من الأخطاء. وفي الحدود التي يسمح بها القانون لا نتحمل المسؤولية عن الخسارة غير المباشرة ولا عن ضياع الفرص ولا عن نتائج قرارات تتخذها استنادًا إلى خطة أو رقم تصميم أو تقدير موسوم بذلك."
+        },
+        {
+          "en": "Nothing in these terms limits liability that the law does not allow us to limit, such as liability for fraud, for intentional fault or for rights that a consumer cannot waive under Tunisian consumer law or the law of the country where the consumer lives. If part of these terms is found unenforceable, the rest stays in force.",
+          "fr": "Rien dans ces conditions ne limite une responsabilité que la loi ne nous permet pas de limiter, comme la responsabilité en cas de fraude, de faute intentionnelle ou de droits auxquels un consommateur ne peut renoncer en vertu du droit tunisien de la consommation ou du droit du pays où il réside. Si une partie de ces conditions est jugée inapplicable, le reste demeure en vigueur.",
+          "ar": "ليس في هذه الشروط ما يحدّ من مسؤولية لا يجيز القانون لنا تحديدها، كالمسؤولية عن الغش أو الخطأ العمد أو الحقوق التي لا يجوز للمستهلك التنازل عنها بموجب قانون حماية المستهلك التونسي أو قانون بلد إقامته. وإذا تبيّن أن جزءًا من هذه الشروط غير قابل للتطبيق بقي الباقي ساريًا."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tm-law",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Changes, governing law and disputes",
+        "fr": "Modifications, droit applicable et litiges",
+        "ar": "التعديلات والقانون الواجب التطبيق والنزاعات"
+      },
+      "paragraphs": [
+        {
+          "en": "We may change these terms when the programme or the law changes. A change that reduces your rights or alters a price you have already confirmed does not apply to you without your agreement; other changes take effect when published, with the date of the last review at the foot of the page. Material changes are announced on the [status page](/status/) and, for account holders, by e-mail.",
+          "fr": "Nous pouvons modifier ces conditions lorsque le programme ou la loi évolue. Une modification qui réduit vos droits ou change un prix que vous avez déjà confirmé ne vous est pas applicable sans votre accord ; les autres modifications prennent effet à leur publication, avec la date de la dernière revue en bas de page. Les modifications importantes sont annoncées sur la [page de statut](/status/) et, pour les titulaires de compte, par e-mail.",
+          "ar": "قد نعدّل هذه الشروط حين يتغير البرنامج أو القانون. والتعديل الذي ينتقص من حقوقك أو يغيّر سعرًا أكدته سابقًا لا يسري عليك دون موافقتك؛ وتسري التعديلات الأخرى عند نشرها مع تاريخ آخر مراجعة في أسفل الصفحة. وتُعلن التعديلات الجوهرية في [صفحة الحالة](/status/) وبالبريد لأصحاب الحسابات."
+        },
+        {
+          "en": "These terms are governed by Tunisian law, and the Tunisian courts have jurisdiction, without prejudice to any mandatory right a consumer has under the law of the country where he or she lives. Before going to court, please write to us through the [contact form](/contact/); most disagreements end there. The exact competent court and any mediation or arbitration clause are confirmed with a Tunisian lawyer and are not invented here.",
+          "fr": "Ces conditions sont régies par le droit tunisien, et les tribunaux tunisiens sont compétents, sans préjudice de tout droit impératif dont le consommateur dispose en vertu du droit du pays où il réside. Avant de saisir un tribunal, écrivez-nous par le [formulaire de contact](/contact/) ; la plupart des désaccords s’y règlent. Le tribunal compétent exact et toute clause de médiation ou d’arbitrage sont confirmés avec un avocat tunisien et ne sont pas inventés ici.",
+          "ar": "تخضع هذه الشروط للقانون التونسي وتختص بها المحاكم التونسية، دون المساس بأي حق آمر للمستهلك بموجب قانون بلد إقامته. وقبل اللجوء إلى المحكمة راسلنا عبر [نموذج الاتصال](/contact/)؛ فمعظم الخلافات تنتهي هناك. ويُؤكَّد مع محامٍ تونسي المحكمة المختصة الدقيقة وأي بند وساطة أو تحكيم، ولا نختلقها هنا."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "tm-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Terms, asked plainly",
+        "fr": "Les conditions, en questions simples",
+        "ar": "أسئلة بسيطة عن الشروط"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Can I use W5D without an account?",
+            "fr": "Puis-je utiliser W5D sans compte ?",
+            "ar": "هل يمكنني استخدام W5D بلا حساب؟"
+          },
+          "a": {
+            "en": "You can read every public page, take the eligibility check and use the free tools. An account is needed to pledge, register, sit a QCM round or manage a subscription.",
+            "fr": "Vous pouvez lire toutes les pages publiques, passer le test d’éligibilité et utiliser les outils gratuits. Un compte est nécessaire pour vous engager, vous inscrire, passer un QCM ou gérer un abonnement.",
+            "ar": "يمكنك قراءة كل الصفحات العامة وإجراء اختبار الأهلية واستخدام الأدوات المجانية. ويلزم حساب للتعهد أو التسجيل أو اجتياز اختبار أو إدارة اشتراك."
+          }
+        },
+        {
+          "q": {
+            "en": "Is a part an investment in a company?",
+            "fr": "Une part est-elle un investissement dans une société ?",
+            "ar": "هل الحصة استثمار في شركة؟"
+          },
+          "a": {
+            "en": "No. It funds a certification programme at a published price. It gives no ownership, vote, dividend or claim on assets.",
+            "fr": "Non. Elle finance un programme de certification à un prix publié. Elle ne confère ni propriété, ni vote, ni dividende, ni créance sur des actifs.",
+            "ar": "لا. هي تموّل برنامج اعتماد بسعر منشور. ولا تمنح ملكية ولا صوتًا ولا ربحًا ولا حقًا في الأصول."
+          }
+        },
+        {
+          "q": {
+            "en": "What if the site is down when I need it?",
+            "fr": "Et si le site est indisponible quand j’en ai besoin ?",
+            "ar": "ماذا لو تعطل الموقع حين أحتاجه؟"
+          },
+          "a": {
+            "en": "Write to us. If an outage stopped you from completing a paid round, we give you another attempt or a refund.",
+            "fr": "Écrivez-nous. Si une panne vous a empêché de terminer un parcours payant, nous vous offrons une nouvelle tentative ou un remboursement.",
+            "ar": "راسلنا. وإذا منعك انقطاع من إكمال جولة مدفوعة فسنمنحك محاولة أخرى أو استردادًا."
+          }
+        },
+        {
+          "q": {
+            "en": "Can the terms change after I paid?",
+            "fr": "Les conditions peuvent-elles changer après mon paiement ?",
+            "ar": "هل يمكن أن تتغير الشروط بعد دفعي؟"
+          },
+          "a": {
+            "en": "Only in ways that do not reduce your rights or change a price you confirmed, unless you agree.",
+            "fr": "Seulement d’une manière qui ne réduit pas vos droits ni ne change un prix confirmé, sauf accord de votre part.",
+            "ar": "فقط بطرق لا تنتقص من حقوقك ولا تغيّر سعرًا أكدته، إلا إذا وافقت."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "tm-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [declared limits](/trust/statement/), the [refund policy](/trust/refunds/), the [privacy policy](/trust/privacy/), the [cookie policy](/trust/cookies/), the [advertising policy](/trust/ads-policy/), the [accessibility statement](/trust/accessibility/) and the [imprint](/trust/imprint/).",
+          "fr": "Lisez les [limites déclarées](/trust/statement/), la [politique de remboursement](/trust/refunds/), la [politique de confidentialité](/trust/privacy/), la [politique relative aux cookies](/trust/cookies/), la [politique publicitaire](/trust/ads-policy/), la [déclaration d’accessibilité](/trust/accessibility/) et les [mentions légales](/trust/imprint/).",
+          "ar": "اقرأ [الحدود المعلنة](/trust/statement/) و[سياسة الاسترداد](/trust/refunds/) و[سياسة الخصوصية](/trust/privacy/) و[سياسة الملفات](/trust/cookies/) و[سياسة الإعلانات](/trust/ads-policy/) و[بيان إتاحة الوصول](/trust/accessibility/) و[الإشعار القانوني](/trust/imprint/)."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "tm-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Read it once. **Then decide.**",
+        "fr": "Lisez-le une fois. **Puis décidez.**",
+        "ar": "اقرأها مرة. **ثم قرّر.**"
+      },
+      "body": {
+        "en": "Nothing here is hidden in small print; if something is unclear, ask.",
+        "fr": "Rien ici n’est caché en petits caractères ; si quelque chose n’est pas clair, demandez.",
+        "ar": "لا شيء هنا مخبأ في الحروف الصغيرة؛ وإن لم يتضح شيء فاسأل."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Declared limits",
+            "fr": "Limites déclarées",
+            "ar": "الحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Refund policy",
+            "fr": "Politique de remboursement",
+            "ar": "سياسة الاسترداد"
+          },
+          "href": "/trust/refunds/",
+          "style": "ghost"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

@@ -6,9 +6,9 @@
     "ar": "الأمان"
   },
   "description": {
-    "en": "Security controls and responsible disclosure.",
-    "fr": "Mesures de sécurité et procédure de divulgation responsable.",
-    "ar": "ضوابط الأمان والإبلاغ المسؤول عن الثغرات."
+    "en": "The security controls built into the site, what has and has not been independently tested, how to report a vulnerability, and how we handle one.",
+    "fr": "Les mesures de sécurité intégrées au site, ce qui a été ou non testé de façon indépendante, comment signaler une vulnérabilité et comment nous la traitons.",
+    "ar": "ضوابط الأمان المدمجة في الموقع، وما اختُبر وما لم يُختبر باستقلالية، وكيفية الإبلاغ عن ثغرة، وكيف نتعامل معها."
   },
   "sections": [
     {
@@ -22,9 +22,9 @@
         "ar": "الأمان، **قابل للتحقق.**"
       },
       "lead": {
-        "en": "Strict CSP, no inline scripts, CSRF tokens, rate limits, hashed secrets, an obfuscated owner mount.",
-        "fr": "CSP stricte, aucun script en ligne, jetons CSRF, limites de débit, secrets hachés, point de montage du propriétaire obfusqué.",
-        "ar": "سياسة أمن محتوى (CSP) صارمة، ولا نصوص برمجية مضمنة، ورموز CSRF، وحدود لمعدل الطلبات، وأسرار مجزأة، وموضع تثبيت المالك مخفي الهوية."
+        "en": "Strict CSP, no inline scripts, CSRF tokens, rate limits, hashed secrets. Each control below can be checked in the page source or in the response headers. We also say what has not been tested by anyone outside.",
+        "fr": "CSP stricte, aucun script en ligne, jetons CSRF, limites de débit, secrets hachés. Chaque mesure ci-dessous peut être vérifiée dans le code source de la page ou dans les en-têtes de réponse. Nous disons aussi ce que personne d’extérieur n’a testé.",
+        "ar": "سياسة أمن محتوى (CSP) صارمة، ولا نصوص برمجية مضمنة، ورموز CSRF، وحدود لمعدل الطلبات، وأسرار مجزأة. ويمكن التحقق من كل ضابط أدناه في مصدر الصفحة أو في ترويسات الاستجابة. ونقول أيضًا ما لم يختبره أحد من الخارج."
       },
       "ctas": [
         {
@@ -33,7 +33,7 @@
             "fr": "Signaler une vulnérabilité",
             "ar": "أبلغ عن ثغرة"
           },
-          "href": "/trust/corrections/",
+          "href": "/contact/",
           "style": "peak",
           "arrow": true
         }
@@ -45,14 +45,37 @@
       }
     },
     {
+      "type": "prose",
+      "id": "sc-approach",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "How we think about security",
+        "fr": "Notre approche de la sécurité",
+        "ar": "كيف نفكر في الأمان"
+      },
+      "paragraphs": [
+        {
+          "en": "A site that asks people for their name, their e-mail address, their work history and sometimes a payment must keep that information safe, and it must be honest about how. We therefore prefer controls that are simple, that can be inspected, and that remove a risk instead of adding a promise. The site is written in plain PHP with a small SQLite database. It uses no framework package manager and loads nothing from third-party servers by default, which removes a whole family of supply-chain risks that come from code we have never read.",
+          "fr": "Un site qui demande aux gens leur nom, leur adresse e-mail, leur parcours et parfois un paiement doit protéger ces informations, et être honnête sur la manière. Nous préférons donc des mesures simples, inspectables, qui suppriment un risque au lieu d’ajouter une promesse. Le site est écrit en PHP simple avec une petite base SQLite. Il n’utilise aucun gestionnaire de paquets de framework et ne charge rien depuis des serveurs tiers par défaut, ce qui supprime toute une famille de risques de chaîne d’approvisionnement venant de code que nous n’avons jamais lu.",
+          "ar": "الموقع الذي يطلب من الناس أسماءهم وبريدهم الإلكتروني وسيرتهم المهنية وأحيانًا دفعة مالية عليه أن يحفظ هذه المعلومات، وأن يكون صادقًا في كيفية ذلك. لذلك نفضّل ضوابط بسيطة قابلة للفحص تزيل خطرًا بدل أن تضيف وعدًا. الموقع مكتوب بلغة PHP العادية مع قاعدة بيانات SQLite صغيرة. ولا يستخدم مدير حزم لإطار عمل ولا يحمّل شيئًا من خوادم طرف ثالث افتراضيًا، فيزول بذلك صنف كامل من مخاطر سلسلة التوريد الآتية من شيفرة لم نقرأها قط."
+        },
+        {
+          "en": "Security is also a matter of being straightforward about limits. This page lists what is in place today, what depends on how the site is hosted, and what has not yet been verified by an independent party. It is read together with the [privacy notice](/trust/privacy/), which explains what data we hold, and the [cookie notice](/trust/cookies/), which lists every cookie.",
+          "fr": "La sécurité est aussi affaire de franchise sur les limites. Cette page liste ce qui est en place aujourd’hui, ce qui dépend de l’hébergement du site et ce qui n’a pas encore été vérifié par un tiers indépendant. Elle se lit avec l’[avis de confidentialité](/trust/privacy/), qui explique quelles données nous détenons, et l’[avis sur les cookies](/trust/cookies/), qui liste chaque cookie.",
+          "ar": "الأمان كذلك مسألة صراحة بشأن الحدود. تسرد هذه الصفحة ما هو قائم اليوم، وما يتوقف على طريقة استضافة الموقع، وما لم يتحقق منه طرف مستقل بعد. وتُقرأ مع [إشعار الخصوصية](/trust/privacy/) الذي يشرح البيانات التي نحتفظ بها، و[إشعار ملفات تعريف الارتباط](/trust/cookies/) الذي يسرد كل ملف."
+        }
+      ]
+    },
+    {
       "type": "definitions",
       "id": "sc-list",
       "tier": "x",
       "focus": 2,
       "title": {
-        "en": "Controls",
-        "fr": "Mesures de contrôle",
-        "ar": "الضوابط"
+        "en": "Controls in place",
+        "fr": "Mesures en place",
+        "ar": "الضوابط القائمة"
       },
       "items": [
         {
@@ -62,9 +85,9 @@
             "ar": "CSP"
           },
           "def": {
-            "en": "script-src 'self'; no inline scripts",
-            "fr": "script-src 'self'; pas de scripts intégrés",
-            "ar": "script-src 'self'; لا توجد نصوص برمجية مضمنة"
+            "en": "Content Security Policy: `script-src 'self'`, no inline scripts. Only scripts served by this site run. Optional analytics are added to the policy only after the owner enables them.",
+            "fr": "Politique de sécurité du contenu : `script-src 'self'`, pas de scripts intégrés. Seuls les scripts servis par ce site s’exécutent. Les outils d’analyse optionnels ne sont ajoutés à la politique qu’une fois activés par le propriétaire.",
+            "ar": "سياسة أمن المحتوى: `script-src 'self'` ولا نصوص مضمنة. لا يعمل إلا ما يخدمه هذا الموقع من نصوص. ولا تُضاف أدوات التحليل الاختيارية إلى السياسة إلا بعد أن يفعّلها المالك."
           }
         },
         {
@@ -74,9 +97,9 @@
             "ar": "CSRF"
           },
           "def": {
-            "en": "Token on every state-changing form",
-            "fr": "Jeton sur chaque formulaire qui modifie l’état",
-            "ar": "رمز مميز في كل نموذج يغيّر الحالة"
+            "en": "A token on every form that changes state. A request without a valid token is refused. Payment-provider notifications, which come from outside, are the one exception and are verified by other means.",
+            "fr": "Un jeton sur chaque formulaire qui modifie l’état. Une requête sans jeton valide est refusée. Les notifications des prestataires de paiement, qui viennent de l’extérieur, sont la seule exception et sont vérifiées autrement.",
+            "ar": "رمز مميز على كل نموذج يغيّر الحالة. ويُرفض أي طلب بلا رمز صالح. وإشعارات مزودي الدفع القادمة من الخارج هي الاستثناء الوحيد وتُتحقق بوسائل أخرى."
           }
         },
         {
@@ -86,9 +109,9 @@
             "ar": "كلمات المرور"
           },
           "def": {
-            "en": "Argon2id; owner secret from the environment",
-            "fr": "Argon2id ; secret du propriétaire issu de l’environnement",
-            "ar": "Argon2id؛ السرّ الخاص بالمالك مأخوذ من البيئة"
+            "en": "Member passwords are stored only as Argon2id hashes, never in readable form, and are re-hashed when the algorithm settings improve. The owner secret is read from the server environment and is never stored in the content or the database.",
+            "fr": "Les mots de passe des membres ne sont conservés que sous forme de hachages Argon2id, jamais en clair, et sont re-hachés quand les réglages de l’algorithme évoluent. Le secret du propriétaire est lu dans l’environnement du serveur et n’est jamais stocké dans le contenu ni dans la base.",
+            "ar": "تُخزَّن كلمات مرور الأعضاء على هيئة تجزئة Argon2id فقط ولا تُحفظ مقروءة أبدًا، وتُعاد تجزئتها عند تحسّن إعدادات الخوارزمية. ويُقرأ سرّ المالك من بيئة الخادم ولا يُخزَّن في المحتوى ولا في قاعدة البيانات."
           }
         },
         {
@@ -98,9 +121,9 @@
             "ar": "حدود المعدل"
           },
           "def": {
-            "en": "Per IP and action",
-            "fr": "Par adresse IP et par action",
-            "ar": "لكل عنوان IP ولكل إجراء"
+            "en": "Per IP address and per action: sign-in, sign-up, password reset, e-mail verification, forms and certificate checks each have their own ceiling and window, which slows guessing and abuse.",
+            "fr": "Par adresse IP et par action : connexion, inscription, réinitialisation du mot de passe, vérification d’e-mail, formulaires et vérifications de certificat ont chacun leur plafond et leur fenêtre, ce qui ralentit les essais et les abus.",
+            "ar": "لكل عنوان IP ولكل إجراء: لتسجيل الدخول والتسجيل وإعادة تعيين كلمة المرور وتأكيد البريد والنماذج والتحقق من الشهادات سقفها ونافذتها، مما يبطئ التخمين وسوء الاستخدام."
           }
         },
         {
@@ -110,9 +133,21 @@
             "ar": "ملفات تعريف الارتباط"
           },
           "def": {
-            "en": "HttpOnly, SameSite, Secure over HTTPS",
-            "fr": "HttpOnly, SameSite, Secure sur HTTPS",
-            "ar": "HttpOnly وSameSite وSecure عبر HTTPS"
+            "en": "Session and sign-in cookies are HttpOnly and SameSite, and Secure when the site is served over HTTPS, so a script on a page cannot read them.",
+            "fr": "Les cookies de session et de connexion sont HttpOnly et SameSite, et Secure quand le site est servi en HTTPS : un script de page ne peut donc pas les lire.",
+            "ar": "ملفات الجلسة وتسجيل الدخول HttpOnly وSameSite، وSecure حين يُخدَّم الموقع عبر HTTPS، فلا يستطيع نص في الصفحة قراءتها."
+          }
+        },
+        {
+          "term": {
+            "en": "Response headers",
+            "fr": "En-têtes de réponse",
+            "ar": "ترويسات الاستجابة"
+          },
+          "def": {
+            "en": "`X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN` and a strict referrer policy on every response; HSTS is added in production when the site is served over HTTPS.",
+            "fr": "`X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN` et une politique de référent stricte sur chaque réponse ; HSTS est ajouté en production quand le site est servi en HTTPS.",
+            "ar": "`X-Content-Type-Options: nosniff` و`X-Frame-Options: SAMEORIGIN` وسياسة إحالة صارمة في كل استجابة؛ ويُضاف HSTS في الإنتاج حين يُخدَّم الموقع عبر HTTPS."
           }
         },
         {
@@ -122,49 +157,373 @@
             "ar": "التبعيات"
           },
           "def": {
-            "en": "No Composer, no CDN",
-            "fr": "Pas de Composer, pas de CDN",
-            "ar": "لا Composer ولا CDN"
+            "en": "No Composer packages, no CDN, no third-party fonts. Fewer dependencies mean fewer places for someone else’s flaw to become ours.",
+            "fr": "Pas de paquets Composer, pas de CDN, pas de polices tierces. Moins de dépendances, moins d’endroits où le défaut d’un autre devient le nôtre.",
+            "ar": "لا حزم Composer ولا شبكة توصيل محتوى ولا خطوط من أطراف ثالثة. وكلما قلّت التبعيات قلّت الأماكن التي يتحول فيها عيب غيرنا إلى عيبنا."
           }
         }
       ]
     },
     {
       "type": "prose",
+      "id": "sc-data",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Your data and the database",
+        "fr": "Vos données et la base",
+        "ar": "بياناتك وقاعدة البيانات"
+      },
+      "paragraphs": [
+        {
+          "en": "Database queries use bound parameters, so text typed into a form is treated as data and not as part of a command. Pages escape what they print, which together with the script policy limits the damage of an injected string. Password hashes, tokens and secrets are never selected for display, never sent to the browser and never written to the logs that we read.",
+          "fr": "Les requêtes à la base utilisent des paramètres liés : le texte saisi dans un formulaire est traité comme une donnée, non comme une partie d’une commande. Les pages échappent ce qu’elles affichent, ce qui, avec la politique de scripts, limite les dégâts d’une chaîne injectée. Les hachages de mots de passe, les jetons et les secrets ne sont jamais sélectionnés pour affichage, jamais envoyés au navigateur et jamais écrits dans les journaux que nous lisons.",
+          "ar": "تستخدم استعلامات قاعدة البيانات معاملات مربوطة، فيُعامَل النص المكتوب في النموذج على أنه بيانات لا جزءًا من أمر. وتُهرِّب الصفحات ما تطبعه، وهذا مع سياسة النصوص يحدّ من ضرر سلسلة محقونة. أما تجزئات كلمات المرور والرموز والأسرار فلا تُحدَّد للعرض ولا تُرسل إلى المتصفح ولا تُكتب في السجلات التي نقرؤها."
+        },
+        {
+          "en": "We hold only what a feature needs, and for no longer than the [privacy notice](/trust/privacy/) says. Payment card numbers are never entered on this site: card payments, when a channel is open, take place on the payment provider’s own page. You can ask to see, correct or delete your data at any time through the steps in [your data rights](/trust/data-rights/).",
+          "fr": "Nous ne détenons que ce dont une fonction a besoin, et pas plus longtemps que ne le dit l’[avis de confidentialité](/trust/privacy/). Les numéros de carte bancaire ne sont jamais saisis sur ce site : les paiements par carte, quand un canal est ouvert, se font sur la page propre du prestataire. Vous pouvez demander à voir, corriger ou supprimer vos données à tout moment par les démarches de [vos droits sur les données](/trust/data-rights/).",
+          "ar": "لا نحتفظ إلا بما تحتاجه الخاصية، ولمدة لا تزيد عما يقوله [إشعار الخصوصية](/trust/privacy/). ولا تُدخل أرقام البطاقات المصرفية في هذا الموقع أبدًا: فالدفع بالبطاقة، حين تُفتح قناته، يتم في صفحة مزود الدفع نفسه. ويمكنك طلب الاطلاع على بياناتك أو تصحيحها أو حذفها في أي وقت وفق خطوات [حقوقك في بياناتك](/trust/data-rights/)."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "sc-state",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What is verified, and by whom",
+        "fr": "Ce qui est vérifié, et par qui",
+        "ar": "ما الذي جرى التحقق منه ومن قبل من"
+      },
+      "columns": [
+        {
+          "en": "Area",
+          "fr": "Domaine",
+          "ar": "المجال"
+        },
+        {
+          "en": "Status at {{ dates.as_of }}",
+          "fr": "État au {{ dates.as_of }}",
+          "ar": "الحالة في {{ dates.as_of }}"
+        },
+        {
+          "en": "What it means",
+          "fr": "Ce que cela signifie",
+          "ar": "ماذا يعني ذلك"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Automated tests in the project",
+            "fr": "Tests automatisés du projet",
+            "ar": "الاختبارات الآلية في المشروع"
+          },
+          {
+            "en": "Run by the owner before each release",
+            "fr": "Exécutés par le propriétaire avant chaque version",
+            "ar": "يشغّلها المالك قبل كل إصدار"
+          },
+          {
+            "en": "They check that forms carry tokens, that secrets are not exposed and that the policy headers are sent. They are our own checks, not an outside opinion.",
+            "fr": "Ils vérifient que les formulaires portent des jetons, que les secrets ne sont pas exposés et que les en-têtes de politique sont envoyés. Ce sont nos propres contrôles, non un avis extérieur.",
+            "ar": "تتحقق من أن النماذج تحمل رموزًا وأن الأسرار غير مكشوفة وأن ترويسات السياسة تُرسل. وهي فحوصنا نحن لا رأي طرف خارجي."
+          }
+        ],
+        [
+          {
+            "en": "Independent penetration test",
+            "fr": "Test d’intrusion indépendant",
+            "ar": "اختبار اختراق مستقل"
+          },
+          {
+            "en": "Not done",
+            "fr": "Non réalisé",
+            "ar": "لم يُجرَ"
+          },
+          {
+            "en": "No outside firm has tested the site. We will not say it is certified or audited until that has happened and the date and scope can be shown.",
+            "fr": "Aucune société extérieure n’a testé le site. Nous ne dirons pas qu’il est certifié ou audité tant que ce n’est pas arrivé et que la date et le périmètre ne peuvent être montrés.",
+            "ar": "لم تختبر أي جهة خارجية الموقع. ولن نقول إنه معتمد أو مدقَّق قبل أن يحدث ذلك ويمكن إظهار تاريخه ونطاقه."
+          }
+        ],
+        [
+          {
+            "en": "Hosting and network layer",
+            "fr": "Hébergement et couche réseau",
+            "ar": "الاستضافة وطبقة الشبكة"
+          },
+          {
+            "en": "Depends on the host",
+            "fr": "Dépend de l’hébergeur",
+            "ar": "يتوقف على المستضيف"
+          },
+          {
+            "en": "Encryption in transit, server patching and backups are the host’s part. The [imprint](/trust/imprint/) says how to ask who the host is.",
+            "fr": "Le chiffrement en transit, les correctifs du serveur et les sauvegardes relèvent de l’hébergeur. Les [mentions légales](/trust/imprint/) disent comment demander qui est l’hébergeur.",
+            "ar": "التشفير أثناء النقل وتحديث الخادم والنسخ الاحتياطي من شأن المستضيف. ويبيّن [الإشعار القانوني](/trust/imprint/) كيف تسأل عن هوية المستضيف."
+          }
+        ],
+        [
+          {
+            "en": "Bug bounty",
+            "fr": "Prime aux bogues",
+            "ar": "مكافأة الثغرات"
+          },
+          {
+            "en": "None",
+            "fr": "Aucune",
+            "ar": "لا توجد"
+          },
+          {
+            "en": "We thank reporters and credit them if they wish, but we do not pay rewards.",
+            "fr": "Nous remercions ceux qui signalent et les citons s’ils le souhaitent, mais nous ne versons pas de récompense.",
+            "ar": "نشكر المبلّغين ونذكرهم إن رغبوا، لكننا لا ندفع مكافآت."
+          }
+        ]
+      ],
+      "note": {
+        "en": "A short list of things that are not done is more useful than a long list of things that are.",
+        "fr": "Une courte liste de ce qui n’est pas fait est plus utile qu’une longue liste de ce qui l’est.",
+        "ar": "قائمة قصيرة بما لم يُنجز أنفع من قائمة طويلة بما أُنجز."
+      }
+    },
+    {
+      "type": "prose",
       "id": "sc-report",
       "tier": "e",
-      "focus": 3,
+      "focus": 2,
       "title": {
-        "en": "Reporting a vulnerability",
+        "en": "Report a vulnerability",
         "fr": "Signaler une vulnérabilité",
         "ar": "الإبلاغ عن ثغرة"
       },
       "paragraphs": [
         {
-          "en": "Write to the security contact published in security.txt. Tell us what you found, how to reproduce it and what it could expose. Do not access other people’s data, and do not run denial-of-service tests.",
-          "fr": "Écrivez au contact sécurité publié dans security.txt. Dites-nous ce que vous avez trouvé, comment le reproduire et ce que cela pourrait exposer. N’accédez pas aux données d’autrui et ne lancez pas de tests de déni de service.",
-          "ar": "راسل جهة الأمان المنشورة في security.txt. أخبرنا بما وجدت وكيف تعيد إنتاجه وما قد يكشفه. لا تصل إلى بيانات الآخرين ولا تجرِ اختبارات حجب الخدمة."
+          "en": "A machine-readable contact is published at `/.well-known/security.txt`, and it points back to this page as the policy. If you find a weakness, write to the address in that file, or use the [contact desks](/contact/) and say that it is a security matter. Describe what you saw, where, and how we can reproduce it. Please do not put a working exploit or personal data in the first message.",
+          "fr": "Un contact lisible par machine est publié à `/.well-known/security.txt` et renvoie à cette page comme politique. Si vous trouvez une faiblesse, écrivez à l’adresse de ce fichier ou utilisez les [pôles de contact](/contact/) en précisant qu’il s’agit d’une question de sécurité. Décrivez ce que vous avez vu, où, et comment nous pouvons le reproduire. Merci de ne mettre ni exploit fonctionnel ni données personnelles dans le premier message.",
+          "ar": "يُنشر عنوان تواصل قابل للقراءة الآلية في `/.well-known/security.txt` ويحيل إلى هذه الصفحة بوصفها السياسة. فإذا وجدت ضعفًا فاكتب إلى العنوان الوارد في ذلك الملف أو استخدم [مكاتب التواصل](/contact/) واذكر أنه شأن أمني. صف ما رأيته وأين وكيف يمكننا إعادة إنتاجه. ولا تضع في الرسالة الأولى استغلالًا عاملًا ولا بيانات شخصية."
         },
         {
-          "en": "We acknowledge a report, fix what is real and credit the reporter if they wish. We do not threaten good-faith researchers.",
-          "fr": "Nous accusons réception, corrigeons ce qui est réel et citons la personne si elle le souhaite. Nous ne menaçons pas les chercheurs de bonne foi.",
-          "ar": "نؤكد استلام البلاغ ونصلح ما هو حقيقي وننسب الفضل للمبلّغ إن رغب. ولا نهدد الباحثين حسني النية."
+          "en": "We ask researchers acting in good faith to follow three rules: do not read, change or keep other people’s data, beyond what is needed to show the problem; do not degrade the service for others, for example by flooding it; and give us a reasonable time to fix the problem before you publish it. In return we will not pursue anyone who follows these rules, and we will answer.",
+          "fr": "Nous demandons aux chercheurs de bonne foi de suivre trois règles : ne pas lire, modifier ni conserver les données d’autrui au-delà de ce qu’exige la démonstration ; ne pas dégrader le service pour les autres, par exemple en le saturant ; et nous laisser un délai raisonnable pour corriger avant de publier. En retour, nous ne poursuivrons personne qui respecte ces règles, et nous répondrons.",
+          "ar": "نطلب من الباحثين حسني النية اتباع ثلاث قواعد: ألا يقرؤوا بيانات الآخرين أو يغيروها أو يحتفظوا بها بأكثر مما يلزم لإظهار المشكلة؛ وألا يعطلوا الخدمة عن غيرهم كإغراقها بالطلبات؛ وأن يمنحونا وقتًا معقولًا للإصلاح قبل النشر. وفي المقابل لن نلاحق من يتبع هذه القواعد، وسنرد عليه."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "sc-handle",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "What happens after you report",
+        "fr": "Que se passe-t-il après votre signalement",
+        "ar": "ماذا يحدث بعد بلاغك"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Acknowledge",
+            "fr": "Accusé de réception",
+            "ar": "الإقرار بالاستلام"
+          },
+          "body": {
+            "en": "You receive an acknowledgement within {{ legal.ack_hours }} hours on working days. If you do not, write again: a lost message is more likely than a refusal to answer.",
+            "fr": "Vous recevez un accusé de réception sous {{ legal.ack_hours }} heures ouvrées. Sinon, réécrivez : un message perdu est plus probable qu’un refus de répondre.",
+            "ar": "تصلك رسالة إقرار بالاستلام خلال {{ legal.ack_hours }} ساعة في أيام العمل. وإن لم تصلك فأعد الكتابة: فضياع الرسالة أرجح من الامتناع عن الرد."
+          }
+        },
+        {
+          "title": {
+            "en": "Confirm",
+            "fr": "Confirmation",
+            "ar": "التأكيد"
+          },
+          "body": {
+            "en": "We try to reproduce the problem and tell you whether we consider it confirmed, and how serious we think it is.",
+            "fr": "Nous essayons de reproduire le problème et vous disons si nous le tenons pour confirmé et quelle gravité nous lui donnons.",
+            "ar": "نحاول إعادة إنتاج المشكلة ونخبرك إن كنا نعدّها مؤكدة وما درجة خطورتها في تقديرنا."
+          }
+        },
+        {
+          "title": {
+            "en": "Fix",
+            "fr": "Correction",
+            "ar": "الإصلاح"
+          },
+          "body": {
+            "en": "The fix is made and tested. Serious problems come before everything else on the list; minor ones are scheduled with the next release.",
+            "fr": "Le correctif est réalisé et testé. Les problèmes graves passent avant tout le reste ; les mineurs sont planifiés avec la version suivante.",
+            "ar": "يُنجز الإصلاح ويُختبر. وتتقدم المشكلات الخطيرة على كل ما سواها، وتُجدول البسيطة مع الإصدار التالي."
+          }
+        },
+        {
+          "title": {
+            "en": "Tell the people affected",
+            "fr": "Informer les personnes concernées",
+            "ar": "إبلاغ المتضررين"
+          },
+          "body": {
+            "en": "If personal data was exposed, the people concerned are told clearly and without delay, together with what they should do. The [privacy notice](/trust/privacy/) describes how.",
+            "fr": "Si des données personnelles ont été exposées, les personnes concernées en sont informées clairement et sans délai, avec ce qu’elles doivent faire. L’[avis de confidentialité](/trust/privacy/) décrit la manière.",
+            "ar": "إذا انكشفت بيانات شخصية يُبلَّغ المعنيون بوضوح ودون تأخير مع ما ينبغي لهم فعله. ويصف [إشعار الخصوصية](/trust/privacy/) الكيفية."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "sc-you",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What you can do to stay safe",
+        "fr": "Ce que vous pouvez faire pour rester en sécurité",
+        "ar": "ما يمكنك فعله لتبقى آمنًا"
+      },
+      "paragraphs": [
+        {
+          "en": "Most account takeovers do not break the site; they use a password reused from somewhere else. Use a long password that you use only here, and change it if you suspect it has leaked. Sign out on a shared computer. We will never ask for your password by e-mail or by message, and a message that does is not from us. If you receive one, forward it to us through the [contact desks](/contact/).",
+          "fr": "La plupart des prises de contrôle de compte ne cassent pas le site ; elles utilisent un mot de passe réutilisé ailleurs. Utilisez un mot de passe long, propre à ce site, et changez-le si vous le croyez divulgué. Déconnectez-vous sur un ordinateur partagé. Nous ne demanderons jamais votre mot de passe par e-mail ni par message, et un message qui le fait ne vient pas de nous. Si vous en recevez un, transmettez-le-nous via les [pôles de contact](/contact/).",
+          "ar": "معظم حالات الاستيلاء على الحسابات لا تكسر الموقع، بل تستعمل كلمة مرور أُعيد استخدامها في مكان آخر. استخدم كلمة مرور طويلة خاصة بهذا الموقع وحده، وغيّرها إن اشتبهت في تسريبها. وسجّل الخروج على الحاسوب المشترك. ولن نطلب منك كلمة المرور بالبريد ولا برسالة أبدًا، وأي رسالة تطلبها ليست منا. وإن وصلتك واحدة فأرسلها إلينا عبر [مكاتب التواصل](/contact/)."
+        },
+        {
+          "en": "Check the address bar before you type anything. Payments, certificates and receipts you receive from us carry a verification code that anyone can check on this site. If you doubt a certificate or a payment page, check it there rather than trusting the message that led you to it. The [status page](/status/) says which payment channels are open, so a request to pay by a channel that is closed is a warning sign.",
+          "fr": "Vérifiez la barre d’adresse avant de saisir quoi que ce soit. Les paiements, certificats et reçus que vous recevez de nous portent un code de vérification que chacun peut contrôler sur ce site. Si vous doutez d’un certificat ou d’une page de paiement, vérifiez-le là plutôt que de croire le message qui vous y a conduit. La [page de statut](/status/) dit quels canaux de paiement sont ouverts : une demande de paiement par un canal fermé est donc un signal d’alerte.",
+          "ar": "تحقق من شريط العنوان قبل أن تكتب أي شيء. فالمدفوعات والشهادات والإيصالات التي تتلقاها منا تحمل رمز تحقق يستطيع أي شخص فحصه في هذا الموقع. وإن شككت في شهادة أو صفحة دفع فتحقق منها هناك ولا تثق بالرسالة التي أوصلتك إليها. و[صفحة الحالة](/status/) تقول أي قنوات الدفع مفتوحة، فطلب الدفع عبر قناة مغلقة علامة تحذير."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "sc-world",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Locally in Tunisia, and globally",
+        "fr": "Localement en Tunisie, et à l’échelle mondiale",
+        "ar": "محليًا في تونس وعالميًا"
+      },
+      "paragraphs": [
+        {
+          "en": "Security rules are not the same everywhere, and we do not claim a standard we have not been assessed against. Personal data of people in Tunisia is subject to Tunisian data-protection law, and people elsewhere may have rights under the law of their own country, such as European rules for visitors from Europe. We handle a request from any country with the same steps. Which rules apply to a given case, and what notice authorities require after a data breach, is a point we confirm with a Tunisian lawyer rather than assume.",
+          "fr": "Les règles de sécurité ne sont pas les mêmes partout, et nous ne revendiquons aucune norme à laquelle nous n’avons pas été évalués. Les données personnelles des personnes en Tunisie relèvent du droit tunisien de la protection des données, et les personnes d’ailleurs peuvent avoir des droits selon la loi de leur pays, comme les règles européennes pour les visiteurs d’Europe. Nous traitons une demande de n’importe quel pays par les mêmes étapes. Les règles applicables à un cas donné, et la notification que les autorités exigent après une violation de données, sont des points que nous confirmons avec un avocat tunisien au lieu de les supposer.",
+          "ar": "قواعد الأمان ليست واحدة في كل مكان، ولا ندّعي معيارًا لم نُقيَّم عليه. فبيانات الأشخاص في تونس تخضع للقانون التونسي لحماية المعطيات الشخصية، وقد يتمتع الأشخاص في بلدان أخرى بحقوق بموجب قانون بلدهم، كالقواعد الأوروبية لزوار أوروبا. ونعالج الطلب من أي بلد بالخطوات نفسها. وما القواعد المنطبقة على حالة بعينها، وما الإخطار الذي تشترطه السلطات بعد خرق للبيانات، أمور نؤكدها مع محامٍ تونسي ولا نفترضها."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "sc-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Security, asked plainly",
+        "fr": "La sécurité, en questions simples",
+        "ar": "الأمان بأسئلة مباشرة"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is the site certified or audited?",
+            "fr": "Le site est-il certifié ou audité ?",
+            "ar": "هل الموقع معتمد أو مدقَّق؟"
+          },
+          "a": {
+            "en": "No. We run our own automated checks, but no independent firm has tested it. We will say so on this page, with the date and scope, if that changes.",
+            "fr": "Non. Nous exécutons nos propres contrôles automatisés, mais aucune société indépendante ne l’a testé. Nous le dirons sur cette page, avec la date et le périmètre, si cela change.",
+            "ar": "لا. نشغّل فحوصنا الآلية الخاصة لكن لم تختبره أي جهة مستقلة. وسنقول ذلك في هذه الصفحة بتاريخه ونطاقه إن تغيّر الأمر."
+          }
+        },
+        {
+          "q": {
+            "en": "Do you store my card number?",
+            "fr": "Conservez-vous mon numéro de carte ?",
+            "ar": "هل تخزنون رقم بطاقتي؟"
+          },
+          "a": {
+            "en": "No. Card details are never entered on this site. When a card channel is open, you pay on the provider’s own page.",
+            "fr": "Non. Les données de carte ne sont jamais saisies sur ce site. Quand un canal carte est ouvert, vous payez sur la page propre du prestataire.",
+            "ar": "لا. لا تُدخل بيانات البطاقة في هذا الموقع أبدًا. وحين تُفتح قناة البطاقة تدفع في صفحة المزود نفسه."
+          }
+        },
+        {
+          "q": {
+            "en": "Can anyone read my password?",
+            "fr": "Quelqu’un peut-il lire mon mot de passe ?",
+            "ar": "هل يستطيع أحد قراءة كلمة مروري؟"
+          },
+          "a": {
+            "en": "No. Only a one-way hash is stored. We cannot tell you your password, only let you set a new one.",
+            "fr": "Non. Seul un hachage à sens unique est conservé. Nous ne pouvons pas vous dire votre mot de passe, seulement vous en faire définir un nouveau.",
+            "ar": "لا. لا يُخزَّن إلا تجزئة أحادية الاتجاه. لا نستطيع إخبارك بكلمة مرورك، بل نتيح لك تعيين كلمة جديدة فقط."
+          }
+        },
+        {
+          "q": {
+            "en": "What if I find a weakness?",
+            "fr": "Et si je trouve une faiblesse ?",
+            "ar": "ماذا لو وجدت ضعفًا؟"
+          },
+          "a": {
+            "en": "Write to the address in `/.well-known/security.txt`, or use the contact desks. You get an acknowledgement within {{ legal.ack_hours }} working hours, and we will not pursue good-faith reporters.",
+            "fr": "Écrivez à l’adresse de `/.well-known/security.txt` ou utilisez les pôles de contact. Vous recevez un accusé sous {{ legal.ack_hours }} heures ouvrées, et nous ne poursuivrons pas les signalements de bonne foi.",
+            "ar": "اكتب إلى العنوان الوارد في `/.well-known/security.txt` أو استخدم مكاتب التواصل. يصلك إقرار خلال {{ legal.ack_hours }} ساعة عمل، ولن نلاحق المبلّغين حسني النية."
+          }
+        },
+        {
+          "q": {
+            "en": "Do you pay for reports?",
+            "fr": "Payez-vous les signalements ?",
+            "ar": "هل تدفعون مقابل البلاغات؟"
+          },
+          "a": {
+            "en": "No. We thank and, if you wish, credit you, but there is no reward programme.",
+            "fr": "Non. Nous vous remercions et, si vous le souhaitez, vous citons, mais il n’existe pas de programme de récompense.",
+            "ar": "لا. نشكرك ونذكرك إن رغبت، لكن لا يوجد برنامج مكافآت."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "sc-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages",
+        "fr": "Pages liées",
+        "ar": "صفحات ذات صلة"
+      },
+      "paragraphs": [
+        {
+          "en": "Security connects to the rest of the trust pages: the [privacy notice](/trust/privacy/) says what we hold, [your data rights](/trust/data-rights/) says how to act on it, the [accessibility statement](/trust/accessibility/) covers how the site works for everyone, and the [imprint](/trust/imprint/) says who is responsible. Everything is indexed on the [trust index](/trust/), and the live state of the programme is on the [status page](/status/).",
+          "fr": "La sécurité se relie au reste des pages de confiance : l’[avis de confidentialité](/trust/privacy/) dit ce que nous détenons, [vos droits sur les données](/trust/data-rights/) dit comment agir, la [déclaration d’accessibilité](/trust/accessibility/) couvre le fonctionnement du site pour tous, et les [mentions légales](/trust/imprint/) disent qui est responsable. Tout est indexé dans l’[index de confiance](/trust/) et l’état en direct du programme est sur la [page de statut](/status/).",
+          "ar": "يرتبط الأمان ببقية صفحات الثقة: فـ[إشعار الخصوصية](/trust/privacy/) يقول ما نحتفظ به، و[حقوقك في بياناتك](/trust/data-rights/) يقول كيف تتصرف حياله، و[بيان إتاحة الوصول](/trust/accessibility/) يغطي عمل الموقع للجميع، و[الإشعار القانوني](/trust/imprint/) يقول من المسؤول. وكل ذلك مفهرس في [فهرس الثقة](/trust/)، والحالة الحية للبرنامج في [صفحة الحالة](/status/)."
         }
       ]
     },
     {
       "type": "cta",
       "id": "sc-final",
-      "gradient": "calm",
+      "gradient": "peak",
       "title": {
-        "en": "Found a weakness? **Tell us first.**",
-        "fr": "Une faille ? **Dites-le-nous d’abord.**",
-        "ar": "وجدت ثغرة؟ **أخبرنا أولا.**"
+        "en": "Found something? Tell us.",
+        "fr": "Vous avez trouvé quelque chose ? Dites-le-nous.",
+        "ar": "وجدت شيئًا؟ أخبرنا."
       },
       "body": {
-        "en": "Responsible reports are read by a person and answered.",
-        "fr": "Les signalements responsables sont lus par une personne et reçoivent une réponse.",
-        "ar": "يقرأ شخص البلاغات المسؤولة ويرد عليها."
+        "en": "A short, precise report helps us fix it quickly. If it is about a wrong figure instead of a weakness, the corrections desk is the right place.",
+        "fr": "Un signalement bref et précis nous aide à corriger vite. S’il s’agit d’un chiffre erroné et non d’une faiblesse, le pôle des corrections est le bon endroit.",
+        "ar": "بلاغ موجز ودقيق يساعدنا على الإصلاح بسرعة. وإن كان الأمر رقمًا خاطئًا لا ضعفًا أمنيًا فمكتب التصويبات هو المكان المناسب."
       },
       "ctas": [
         {
@@ -173,9 +532,18 @@
             "fr": "Signaler une vulnérabilité",
             "ar": "أبلغ عن ثغرة"
           },
-          "href": "/trust/corrections/",
+          "href": "/contact/",
           "style": "peak",
           "arrow": true
+        },
+        {
+          "label": {
+            "en": "Report a wrong figure",
+            "fr": "Signaler un chiffre erroné",
+            "ar": "أبلغ عن رقم خاطئ"
+          },
+          "href": "/trust/corrections/",
+          "style": "ghost"
         }
       ]
     }

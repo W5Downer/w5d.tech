@@ -1,0 +1,483 @@
+{
+  "slug": "trust-ads-policy",
+  "title": {
+    "en": "Advertising policy",
+    "fr": "Politique publicitaire",
+    "ar": "سياسة الإعلانات"
+  },
+  "description": {
+    "en": "Whether W5D shows ads, where they may never appear, how revenue is treated, and why advertising is not part of the plan.",
+    "fr": "Si W5D affiche des publicités, où elles ne peuvent jamais apparaître, comment les revenus sont traités, et pourquoi la publicité ne fait pas partie du plan.",
+    "ar": "هل تعرض W5D إعلانات، وأين لا يجوز أن تظهر أبدًا، وكيف تُعامل الإيرادات، ولماذا الإعلان ليس جزءًا من الخطة."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "ad-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Advertising is **not** the plan.",
+        "fr": "La publicité **n’est pas** le plan.",
+        "ar": "الإعلان **ليس** هو الخطة."
+      },
+      "lead": {
+        "en": "Today W5D shows no advertising. If it ever does, it will be on reading pages only, clearly labelled, and never on pages where you pay, sign in, verify a credential or read evidence.",
+        "fr": "Aujourd’hui W5D n’affiche aucune publicité. Si elle le fait un jour, ce sera sur des pages de lecture uniquement, clairement signalées, et jamais sur les pages où vous payez, vous connectez, vérifiez un diplôme ou lisez des preuves.",
+        "ar": "اليوم لا تعرض W5D أي إعلان. وإن فعلت يومًا فسيكون على صفحات القراءة فقط وبوسم واضح، ولن يكون أبدًا على الصفحات التي تدفع فيها أو تسجّل الدخول أو تتحقق من شهادة أو تقرأ أدلة."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Read the declared limits",
+            "fr": "Lire les limites déclarées",
+            "ar": "اقرأ الحدود المعلنة"
+          },
+          "href": "/trust/statement/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Advertising",
+        "fr": "Publicité",
+        "ar": "الإعلانات"
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ad-state",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Where things stand today",
+        "fr": "Où en sont les choses aujourd’hui",
+        "ar": "أين نقف اليوم"
+      },
+      "paragraphs": [
+        {
+          "en": "This page exists so that a decision about advertising is made in the open, in advance, instead of being improvised later under financial pressure. The honest state is simple. No advertising code is installed on this site. No advertising network has approved W5D. No advertising revenue has been received, and the plan to certify experts, publish evidence and deliver services does not rely on any.",
+          "fr": "Cette page existe pour qu’une décision sur la publicité soit prise au grand jour, à l’avance, plutôt qu’improvisée plus tard sous pression financière. L’état réel est simple. Aucun code publicitaire n’est installé sur ce site. Aucun réseau publicitaire n’a approuvé W5D. Aucun revenu publicitaire n’a été perçu, et le plan de certification d’experts, de publication de preuves et de livraison de services ne s’appuie sur aucun.",
+          "ar": "وُجدت هذه الصفحة ليُتخذ القرار بشأن الإعلانات علنًا ومسبقًا، لا ارتجالًا لاحقًا تحت ضغط مالي. والحال بسيطة وصادقة: لا يوجد أي كود إعلاني مثبّت في هذا الموقع، ولم تعتمد W5D أي شبكة إعلانية، ولم نتلقَّ أي إيراد إعلاني، وخطة اعتماد الخبراء ونشر الأدلة وتقديم الخدمات لا تعتمد على أي منها."
+        },
+        {
+          "en": "The state is also enforced in code, not only promised in text. The site keeps an advertising status setting whose default is “not applied”. While that status is not “verified”, no page can print an advertisement, and the status cannot move to “applied” unless a content check passes. We describe that check below so that you can see how high the bar is set.",
+          "fr": "L’état est aussi imposé dans le code, pas seulement promis dans un texte. Le site conserve un paramètre d’état publicitaire dont la valeur par défaut est « non demandé ». Tant que cet état n’est pas « vérifié », aucune page ne peut afficher une publicité, et l’état ne peut passer à « demandé » que si un contrôle de contenu est réussi. Nous décrivons ce contrôle plus bas pour que vous voyiez la hauteur de la barre.",
+          "ar": "والحالة مفروضة في الشيفرة أيضًا لا في النص وحده. فللموقع إعداد لحالة الإعلانات قيمته الافتراضية «لم يُقدَّم طلب». وما دامت الحالة ليست «موثّقة» فلا تستطيع أي صفحة طباعة إعلان، ولا تنتقل الحالة إلى «قُدِّم طلب» إلا إذا نجح فحص المحتوى. ونصف الفحص أدناه لترى ارتفاع الحد المطلوب."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "ad-where",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Where an ad may, and may never, appear",
+        "fr": "Où une publicité peut, et ne peut jamais, apparaître",
+        "ar": "أين يجوز الإعلان وأين لا يجوز أبدًا"
+      },
+      "columns": [
+        {
+          "en": "Area",
+          "fr": "Zone",
+          "ar": "المنطقة"
+        },
+        {
+          "en": "Ads allowed",
+          "fr": "Publicité autorisée",
+          "ar": "الإعلان مسموح"
+        },
+        {
+          "en": "Why",
+          "fr": "Pourquoi",
+          "ar": "السبب"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Service and macro-work reading pages",
+            "fr": "Pages de lecture des services et des macro-métiers",
+            "ar": "صفحات قراءة الخدمات والمجالات الكبرى"
+          },
+          {
+            "en": "Only after approval",
+            "fr": "Seulement après approbation",
+            "ar": "بعد الموافقة فقط"
+          },
+          {
+            "en": "These are articles to read. They are the only place where an advertisement does not interfere with a decision.",
+            "fr": "Ce sont des articles à lire. C’est le seul endroit où une publicité n’interfère pas avec une décision.",
+            "ar": "هذه مقالات للقراءة، وهي المكان الوحيد الذي لا يتدخل فيه الإعلان في قرار."
+          }
+        ],
+        [
+          {
+            "en": "Trust, evidence, status and corrections pages",
+            "fr": "Pages de confiance, de preuves, de statut et de corrections",
+            "ar": "صفحات الثقة والأدلة والحالة والتصويبات"
+          },
+          {
+            "en": "Never",
+            "fr": "Jamais",
+            "ar": "أبدًا"
+          },
+          {
+            "en": "Evidence must not be sold next to its own advertiser.",
+            "fr": "Une preuve ne doit pas être vendue à côté de son propre annonceur.",
+            "ar": "لا يجوز أن يُباع الدليل بجوار معلنه."
+          }
+        ],
+        [
+          {
+            "en": "Checkout, subscription, sponsor and payment screens",
+            "fr": "Écrans de paiement, d’abonnement, de parrainage",
+            "ar": "شاشات الدفع والاشتراك والرعاية"
+          },
+          {
+            "en": "Never",
+            "fr": "Jamais",
+            "ar": "أبدًا"
+          },
+          {
+            "en": "A banner beside a payment form can be mistaken for part of the payment.",
+            "fr": "Une bannière à côté d’un formulaire de paiement peut être prise pour une partie du paiement.",
+            "ar": "قد يُظن الشعار بجوار نموذج الدفع جزءًا منه."
+          }
+        ],
+        [
+          {
+            "en": "Certification, certificates and verification",
+            "fr": "Certification, diplômes et vérification",
+            "ar": "الاعتماد والشهادات والتحقق"
+          },
+          {
+            "en": "Never",
+            "fr": "Jamais",
+            "ar": "أبدًا"
+          },
+          {
+            "en": "A credential must be verifiable without any commercial context.",
+            "fr": "Un diplôme doit être vérifiable sans aucun contexte commercial.",
+            "ar": "يجب أن تكون الشهادة قابلة للتحقق بلا أي سياق تجاري."
+          }
+        ],
+        [
+          {
+            "en": "Accounts, owner portal, contact forms, API, newsletter, affiliate and join pages",
+            "fr": "Comptes, portail propriétaire, formulaires de contact, API, lettre d’information, affiliation et inscription",
+            "ar": "الحسابات ولوحة المالك ونماذج الاتصال والواجهة البرمجية والنشرة والإحالة والانضمام"
+          },
+          {
+            "en": "Never",
+            "fr": "Jamais",
+            "ar": "أبدًا"
+          },
+          {
+            "en": "Personal data is handled there; nothing from a third party may sit beside it.",
+            "fr": "On y traite des données personnelles ; rien d’un tiers ne peut s’y trouver à côté.",
+            "ar": "تُعالَج فيها بيانات شخصية، ولا يجوز أن يوضع بجوارها شيء من طرف ثالث."
+          }
+        ]
+      ],
+      "note": {
+        "en": "The list of places where an ad is forbidden is enforced by the code that decides whether an ad slot may print at all, not by editorial habit.",
+        "fr": "La liste des endroits où la publicité est interdite est appliquée par le code qui décide si un emplacement publicitaire peut s’afficher, non par une habitude éditoriale.",
+        "ar": "قائمة الأماكن الممنوع فيها الإعلان يفرضها الكود الذي يقرر هل يجوز طباعة موضع إعلاني أصلًا، لا العادة التحريرية."
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ad-gate",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The content bar that comes first",
+        "fr": "Le seuil de contenu qui passe en premier",
+        "ar": "حدّ المحتوى الذي يأتي أولًا"
+      },
+      "paragraphs": [
+        {
+          "en": "An advertising network should not be asked to approve a thin site, and a thin site should not be dressed up to deserve one. So W5D applies to no advertising programme until a measured threshold is met: at least {{ funding.ads_min_pages }} substantive pages, of which at least five are service briefs, at least five are pages about the large problems the macro works address, and at least five are evidence or trust pages. A page counts only if its rendered main text holds at least {{ funding.ads_min_words }} words; shorter pages are listed as thin and are not counted.",
+          "fr": "Il ne faut pas demander à un réseau publicitaire d’approuver un site mince, ni maquiller un site mince pour qu’il le mérite. W5D ne postule donc à aucun programme publicitaire tant qu’un seuil mesuré n’est pas atteint : au moins {{ funding.ads_min_pages }} pages substantielles, dont au moins cinq fiches de services, au moins cinq pages sur les grands problèmes que traitent les macro-métiers, et au moins cinq pages de preuves ou de confiance. Une page ne compte que si son texte principal rendu contient au moins {{ funding.ads_min_words }} mots ; les pages plus courtes sont listées comme minces et ne sont pas comptées.",
+          "ar": "لا ينبغي أن نطلب من شبكة إعلانية الموافقة على موقع هزيل، ولا أن نُجمّل موقعًا هزيلًا ليستحقها. لذلك لا تتقدم W5D إلى أي برنامج إعلاني قبل بلوغ حدّ مقيس: ما لا يقل عن {{ funding.ads_min_pages }} صفحة جوهرية، منها خمس على الأقل ملخصات خدمات، وخمس على الأقل عن المشكلات الكبرى التي تعالجها المجالات الكبرى، وخمس على الأقل صفحات أدلة أو ثقة. ولا تُحتسب الصفحة إلا إذا بلغ نصها الرئيسي المعروض {{ funding.ads_min_words }} كلمة على الأقل؛ أما الأقصر فتُدرج ضعيفة ولا تُحتسب."
+        },
+        {
+          "en": "The check renders the actual pages and counts the words a reader sees, not the words stored in files. It writes its result to a report that the application reads. If the report is missing or out of date, the answer is “not computed”, and the gate stays closed. A gate that opens when nobody has looked is not a gate.",
+          "fr": "Le contrôle rend les pages réelles et compte les mots que voit le lecteur, non ceux stockés dans des fichiers. Il écrit son résultat dans un rapport que l’application lit. Si le rapport manque ou est périmé, la réponse est « non calculé » et la porte reste fermée. Une porte qui s’ouvre quand personne n’a regardé n’est pas une porte.",
+          "ar": "يعرض الفحص الصفحات الفعلية ويعدّ الكلمات التي يراها القارئ لا المخزّنة في الملفات، ويكتب نتيجته في تقرير يقرؤه التطبيق. فإذا غاب التقرير أو قدم عهده فالجواب «لم يُحسب» وتبقى البوابة مغلقة. والبوابة التي تنفتح حين لا ينظر أحد ليست بوابة."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "ad-steps",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "What would have to happen, in order",
+        "fr": "Ce qui devrait se passer, dans l’ordre",
+        "ar": "ما الذي يجب أن يحدث، بالترتيب"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "The content bar is met",
+            "fr": "Le seuil de contenu est atteint",
+            "ar": "بلوغ حدّ المحتوى"
+          },
+          "body": {
+            "en": "The measured report shows enough substantive pages in each category, and this policy page exists and is published.",
+            "fr": "Le rapport mesuré montre assez de pages substantielles dans chaque catégorie, et la présente page de politique existe et est publiée.",
+            "ar": "يُظهر التقرير المقيس صفحات جوهرية كافية في كل فئة، وتكون صفحة السياسة هذه موجودة ومنشورة."
+          }
+        },
+        {
+          "title": {
+            "en": "Cookie consent is in place",
+            "fr": "Le consentement aux cookies est en place",
+            "ar": "وجود موافقة الكوكيز"
+          },
+          "body": {
+            "en": "Advertising scripts set third-party cookies. They load only after you choose to allow them in the [cookie notice](/trust/cookies/), and never before.",
+            "fr": "Les scripts publicitaires déposent des cookies tiers. Ils ne se chargent qu’après votre choix de les autoriser dans l’[avis cookies](/trust/cookies/), jamais avant.",
+            "ar": "تضع النصوص الإعلانية كوكيز من طرف ثالث. ولا تُحمَّل إلا بعد اختيارك السماح بها في [إشعار الكوكيز](/trust/cookies/)، لا قبله أبدًا."
+          }
+        },
+        {
+          "title": {
+            "en": "The owner applies and records it",
+            "fr": "Le propriétaire postule et l’enregistre",
+            "ar": "يتقدم المالك ويسجّل ذلك"
+          },
+          "body": {
+            "en": "The status moves from “not applied” to “pending”. The result, approval or refusal, is recorded as it happens, with the date.",
+            "fr": "L’état passe de « non demandé » à « en attente ». Le résultat, approbation ou refus, est enregistré au moment où il survient, avec la date.",
+            "ar": "تنتقل الحالة من «لم يُقدَّم طلب» إلى «قيد الانتظار». وتُسجَّل النتيجة، قبولًا أو رفضًا، لحظة حدوثها مع التاريخ."
+          }
+        },
+        {
+          "title": {
+            "en": "Placement is added, and only where allowed",
+            "fr": "L’emplacement est ajouté, et seulement là où c’est permis",
+            "ar": "يُضاف الموضع، وحيث يُسمح فقط"
+          },
+          "body": {
+            "en": "Only after approval does any slot exist, and only on the reading pages in the table above, each labelled as an advertisement.",
+            "fr": "Ce n’est qu’après approbation qu’un emplacement existe, uniquement sur les pages de lecture du tableau ci-dessus, chacun signalé comme publicité.",
+            "ar": "لا يوجد أي موضع إلا بعد الموافقة، وعلى صفحات القراءة في الجدول أعلاه فقط، ويُوسم كل موضع بأنه إعلان."
+          }
+        },
+        {
+          "title": {
+            "en": "Revenue is accrued, not spent",
+            "fr": "Les revenus sont constatés, non dépensés",
+            "ar": "تُسجَّل الإيرادات ولا تُنفق"
+          },
+          "body": {
+            "en": "See the next section. Withdrawal is blocked until the business can legally receive money.",
+            "fr": "Voir la section suivante. Le retrait est bloqué tant que l’entreprise ne peut pas légalement recevoir d’argent.",
+            "ar": "انظر القسم التالي. يُمنع السحب حتى يصبح بإمكان النشاط تلقي المال قانونيًا."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ad-revenue",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "How advertising revenue is treated",
+        "fr": "Comment les revenus publicitaires sont traités",
+        "ar": "كيف تُعامل الإيرادات الإعلانية"
+      },
+      "paragraphs": [
+        {
+          "en": "Advertising networks pay the account holder only after a threshold and only to a bank account whose holder matches the tax identity on file. For a business in Tunisia that means a valid tax registration number, called the matricule fiscal, and a legal status that allows receiving foreign currency. Until the business has both, W5D treats any advertising earnings as accrued, not received: the amount is shown as a number in the funding settings, it is declared when it is actually paid, and it is never withdrawn, spent or counted in the funding plan before then.",
+          "fr": "Les réseaux publicitaires ne paient le titulaire du compte qu’après un seuil et uniquement sur un compte bancaire dont le titulaire correspond à l’identité fiscale déclarée. Pour une entreprise en Tunisie, cela suppose un matricule fiscal valide et un statut juridique permettant de recevoir des devises. Tant que l’entreprise n’a pas les deux, W5D traite tout gain publicitaire comme constaté, non perçu : le montant figure comme un nombre dans les paramètres de financement, il est déclaré lorsqu’il est effectivement payé, et il n’est jamais retiré, dépensé ni compté dans le plan de financement avant cela.",
+          "ar": "لا تدفع الشبكات الإعلانية لصاحب الحساب إلا بعد بلوغ حدّ معين، ولا تدفع إلا إلى حساب بنكي يطابق صاحبه الهوية الضريبية المسجلة. وللنشاط في تونس يعني ذلك معرّفًا جبائيًا صالحًا يُسمى المعرّف الجبائي، ووضعًا قانونيًا يسمح باستلام العملة الأجنبية. وإلى أن يتوفر الأمران تعامل W5D أي أرباح إعلانية على أنها مستحقة لا مقبوضة: يظهر المبلغ رقمًا في إعدادات التمويل، ويُصرَّح به حين يُدفع فعلًا، ولا يُسحب ولا يُنفق ولا يُحتسب في خطة التمويل قبل ذلك."
+        },
+        {
+          "en": "In practice this is two switches kept apart on purpose: whether an advertising application may be filed, and whether any withdrawal may be made. The second one stays off until a valid tax number exists and a Tunisian accountant has confirmed the treatment. This is a point of law and of tax; we do not guess at it and we do not pre-book a figure that has not arrived.",
+          "fr": "En pratique, ce sont deux interrupteurs volontairement séparés : une demande publicitaire peut-elle être déposée, et un retrait peut-il être effectué. Le second reste coupé tant qu’un numéro fiscal valide n’existe pas et qu’un comptable tunisien n’a pas confirmé le traitement. C’est une question de droit et de fiscalité ; nous ne la devinons pas et nous ne comptabilisons pas d’avance un montant qui n’est pas arrivé.",
+          "ar": "عمليًا هما مفتاحان منفصلان عمدًا: هل يجوز تقديم طلب إعلاني، وهل يجوز أي سحب. ويبقى الثاني مطفأً حتى يوجد معرّف جبائي صالح ويؤكد محاسب تونسي المعالجة. وهذه مسألة قانون وجباية، فلا نخمّن فيها ولا نسجّل مسبقًا رقمًا لم يصل."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ad-ethics",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What an advertisement means, and does not mean",
+        "fr": "Ce que signifie une publicité, et ce qu’elle ne signifie pas",
+        "ar": "ما يعنيه الإعلان وما لا يعنيه"
+      },
+      "paragraphs": [
+        {
+          "en": "An advertisement on a W5D page is third-party content. It is selected by the advertising network, not by W5D, and it is not an endorsement, a recommendation, a partnership or a certification by W5D. A certified expert, a sponsor or a service provider cannot buy placement inside our evidence or influence a rating, a certification result or an editorial verdict by advertising. The [editorial policy](/trust/editorial/) states this separation as a rule that applies to everyone, including us.",
+          "fr": "Une publicité sur une page W5D est un contenu tiers. Elle est choisie par le réseau publicitaire, non par W5D, et elle ne constitue ni une recommandation, ni un partenariat, ni une certification de W5D. Un expert certifié, un parrain ou un prestataire ne peut pas acheter de placement dans nos preuves ni influencer une note, un résultat de certification ou un verdict éditorial par la publicité. La [politique éditoriale](/trust/editorial/) énonce cette séparation comme une règle qui s’applique à tous, nous compris.",
+          "ar": "الإعلان على صفحة من W5D محتوى طرف ثالث، تختاره الشبكة الإعلانية لا W5D، وليس تزكية ولا توصية ولا شراكة ولا اعتمادًا من W5D. ولا يستطيع خبير معتمد أو راعٍ أو مزوّد خدمة شراء موضع داخل أدلتنا، ولا التأثير بالإعلان في تقييم أو نتيجة اعتماد أو حكم تحريري. وتنص [السياسة التحريرية](/trust/editorial/) على هذا الفصل قاعدةً تسري على الجميع بمن فيهم نحن."
+        },
+        {
+          "en": "We will not run advertising that is misleading, that targets children, or that promotes products that are unlawful in Tunisia or in the country of the reader, and we will not place advertising that promises income or guaranteed returns beside content about funding. We use the controls the networks offer to block categories, and we remove an advertisement quickly when a reader reports it through the [corrections desk](/trust/corrections/).",
+          "fr": "Nous n’afficherons pas de publicité trompeuse, ciblant les enfants, ou faisant la promotion de produits illicites en Tunisie ou dans le pays du lecteur, et nous ne placerons pas de publicité promettant des revenus ou des rendements garantis à côté d’un contenu sur le financement. Nous utilisons les contrôles offerts par les réseaux pour bloquer des catégories, et nous retirons rapidement une publicité signalée par un lecteur via le [service des corrections](/trust/corrections/).",
+          "ar": "لن نعرض إعلانًا مضللًا أو موجّهًا للأطفال أو يروّج لمنتجات غير مشروعة في تونس أو في بلد القارئ، ولن نضع إعلانًا يعد بدخل أو بعوائد مضمونة بجوار محتوى عن التمويل. ونستخدم أدوات الحجب التي تتيحها الشبكات لمنع فئات معينة، ونزيل الإعلان سريعًا إذا أبلغ عنه قارئ عبر [مكتب التصويبات](/trust/corrections/)."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ad-privacy",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Your data and your choice",
+        "fr": "Vos données et votre choix",
+        "ar": "بياناتك واختيارك"
+      },
+      "paragraphs": [
+        {
+          "en": "Advertising is the most data-hungry use of a web page, so it is also where your control matters most. If advertising is ever enabled, the scripts will load only after you accept the “all cookies” choice, and your choice can be changed at any time from the footer. Declining costs you nothing: the site works the same, and no advertising request is made to a third party. How we handle every cookie is listed in the [cookie policy](/trust/cookies/), and your rights over data, including the right to object, are in the [data rights page](/trust/data-rights/).",
+          "fr": "La publicité est l’usage le plus gourmand en données d’une page web ; c’est donc aussi là que votre contrôle compte le plus. Si la publicité est un jour activée, les scripts ne se chargeront qu’après votre choix « tous les cookies », et votre choix peut être modifié à tout moment depuis le pied de page. Refuser ne vous coûte rien : le site fonctionne de la même façon, et aucune requête publicitaire n’est envoyée à un tiers. La façon dont nous traitons chaque cookie est détaillée dans la [politique de cookies](/trust/cookies/), et vos droits sur les données, dont le droit d’opposition, figurent sur la page [vos droits](/trust/data-rights/).",
+          "ar": "الإعلان أكثر استخدامات صفحات الويب نهمًا للبيانات، ولذلك فهو أيضًا الموضع الذي تهمّ فيه سيطرتك أكثر. فإذا فُعّل يومًا فلن تُحمَّل نصوصه إلا بعد اختيارك «قبول كل الكوكيز»، ويمكنك تغيير اختيارك في أي وقت من التذييل. والرفض لا يكلفك شيئًا: يعمل الموقع بالطريقة نفسها ولا يُرسَل أي طلب إعلاني إلى طرف ثالث. وطريقة معالجتنا لكل كوكي مفصلة في [سياسة الكوكيز](/trust/cookies/)، وحقوقك في البيانات، ومنها حق الاعتراض، في صفحة [حقوقك](/trust/data-rights/)."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "ad-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Questions about advertising",
+        "fr": "Questions sur la publicité",
+        "ar": "أسئلة عن الإعلانات"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Is W5D funded by advertising?",
+            "fr": "W5D est-elle financée par la publicité ?",
+            "ar": "هل تُموَّل W5D بالإعلانات؟"
+          },
+          "a": {
+            "en": "No. The plan is funded by the contributions, subscriptions and services described in the [declared limits](/trust/statement/). Advertising is not counted in it.",
+            "fr": "Non. Le plan est financé par les contributions, abonnements et services décrits dans les [limites déclarées](/trust/statement/). La publicité n’y est pas comptée.",
+            "ar": "لا. تُموَّل الخطة بالمساهمات والاشتراكات والخدمات الموصوفة في [الحدود المعلنة](/trust/statement/). ولا يدخل الإعلان في حسابها."
+          }
+        },
+        {
+          "q": {
+            "en": "Will I see ads today?",
+            "fr": "Verrai-je des publicités aujourd’hui ?",
+            "ar": "هل سأرى إعلانات اليوم؟"
+          },
+          "a": {
+            "en": "No. No advertising code exists on this site. You can confirm it in the live [status page](/status/).",
+            "fr": "Non. Aucun code publicitaire n’existe sur ce site. Vous pouvez le vérifier sur la [page de statut](/status/).",
+            "ar": "لا. لا يوجد أي كود إعلاني في هذا الموقع، ويمكنك التحقق في [صفحة الحالة](/status/) الحية."
+          }
+        },
+        {
+          "q": {
+            "en": "Can an advertiser influence what you publish?",
+            "fr": "Un annonceur peut-il influencer ce que vous publiez ?",
+            "ar": "هل يستطيع معلن التأثير في ما تنشرون؟"
+          },
+          "a": {
+            "en": "No. Advertisers have no access to editorial decisions, ratings or certification results. See the [editorial policy](/trust/editorial/).",
+            "fr": "Non. Les annonceurs n’ont aucun accès aux décisions éditoriales, aux notes ou aux résultats de certification. Voir la [politique éditoriale](/trust/editorial/).",
+            "ar": "لا. لا وصول للمعلنين إلى القرارات التحريرية أو التقييمات أو نتائج الاعتماد. انظر [السياسة التحريرية](/trust/editorial/)."
+          }
+        },
+        {
+          "q": {
+            "en": "What is the difference between an advertisement and a sponsorship?",
+            "fr": "Quelle différence entre une publicité et un parrainage ?",
+            "ar": "ما الفرق بين الإعلان والرعاية؟"
+          },
+          "a": {
+            "en": "An advertisement is chosen by a network and shown to anonymous readers. A sponsorship of the registry activation is a written agreement between named parties, governed by a contract and by the [refund rules](/trust/refunds/). See the [sponsor page](/sponsor/).",
+            "fr": "Une publicité est choisie par un réseau et montrée à des lecteurs anonymes. Un parrainage de l’activation du registre est une convention écrite entre parties nommées, régie par un contrat et par les [règles de remboursement](/trust/refunds/). Voir la [page parrainage](/sponsor/).",
+            "ar": "الإعلان تختاره شبكة ويُعرض على قراء مجهولين. أما رعاية تفعيل السجل فاتفاق مكتوب بين أطراف مسماة، يحكمه عقد و[قواعد الاسترداد](/trust/refunds/). انظر [صفحة الرعاية](/sponsor/)."
+          }
+        },
+        {
+          "q": {
+            "en": "What if the network rejects the site?",
+            "fr": "Et si le réseau refuse le site ?",
+            "ar": "وماذا لو رفضت الشبكة الموقع؟"
+          },
+          "a": {
+            "en": "Then nothing changes in the programme. We record the refusal, improve the content that was judged thin, and apply again only when the bar is met once more.",
+            "fr": "Alors rien ne change dans le programme. Nous enregistrons le refus, améliorons le contenu jugé mince et ne postulons à nouveau que lorsque le seuil est de nouveau atteint.",
+            "ar": "عندها لا يتغير شيء في البرنامج. نسجّل الرفض ونحسّن المحتوى الذي عُدّ هزيلًا، ولا نتقدم مجددًا إلا حين يُبلَغ الحد من جديد."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ad-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [cookie policy](/trust/cookies/), the [editorial policy](/trust/editorial/), the [privacy policy](/trust/privacy/), the [declared limits](/trust/statement/), the [imprint](/trust/imprint/) and the live [status page](/status/). Advertising rules of the networks change often; we read them again at each review.",
+          "fr": "Lisez la [politique de cookies](/trust/cookies/), la [politique éditoriale](/trust/editorial/), la [politique de confidentialité](/trust/privacy/), les [limites déclarées](/trust/statement/), les [mentions légales](/trust/imprint/) et la [page de statut](/status/). Les règles publicitaires des réseaux changent souvent ; nous les relisons à chaque revue.",
+          "ar": "اقرأ [سياسة الكوكيز](/trust/cookies/) و[السياسة التحريرية](/trust/editorial/) و[سياسة الخصوصية](/trust/privacy/) و[الحدود المعلنة](/trust/statement/) و[الإشعار القانوني](/trust/imprint/) و[صفحة الحالة](/status/) الحية. وقواعد الشبكات الإعلانية تتغير كثيرًا، فنقرؤها من جديد عند كل مراجعة."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "ad-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Seen an ad where it should not be? **Tell us.**",
+        "fr": "Une publicité là où il ne faudrait pas ? **Dites-le-nous.**",
+        "ar": "رأيت إعلانًا حيث لا ينبغي؟ **أخبرنا.**"
+      },
+      "body": {
+        "en": "A report takes one minute and is answered within {{ company.response_days }} working days.",
+        "fr": "Un signalement prend une minute et reçoit une réponse sous {{ company.response_days }} jours ouvrés.",
+        "ar": "البلاغ يستغرق دقيقة ويُجاب عنه خلال {{ company.response_days }} أيام عمل."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Report a problem",
+            "fr": "Signaler un problème",
+            "ar": "أبلغ عن مشكلة"
+          },
+          "href": "/trust/corrections/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Cookie settings",
+            "fr": "Réglages des cookies",
+            "ar": "إعدادات الكوكيز"
+          },
+          "href": "/trust/cookies/",
+          "style": "ghost"
+        }
+      ]
+    }
+  ]
+}

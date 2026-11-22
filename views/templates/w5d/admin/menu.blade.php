@@ -232,6 +232,9 @@
 @elseif($v['kind'] === 'certificates')
   @include('admin.certificates')
 
+@elseif($v['kind'] === 'funding')
+  @include('admin.funding')
+
 @elseif($v['kind'] === 'api')
   @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])
 

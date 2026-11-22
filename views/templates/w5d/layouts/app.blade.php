@@ -91,6 +91,7 @@
     @include('partials.quickfind')
   @endif
   <script src="{{ asset('js/site.js') }}" defer></script>
+  @include('partials.cookies')
   @include('partials.integrations')
   @stack('scripts')
 </body>

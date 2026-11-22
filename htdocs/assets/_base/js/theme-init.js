@@ -2,7 +2,7 @@
 (function () {
   var d = document.documentElement, t = null, t0 = Date.now(), done = false;
   d.classList.add('js');
-  try { if (localStorage.getItem('w5d-motion') === 'full') d.setAttribute('data-motion', 'full'); } catch (e) {}
+  try { if (localStorage.getItem('w5d-motion') === 'calm') d.setAttribute('data-motion', 'calm'); } catch (e) {} /* animations are ON by default; only the visitor's own switch makes them calm */
   try { t = localStorage.getItem('w5d-theme'); } catch (e) {}
   if (t === 'light') d.classList.remove('dark'); else d.classList.add('dark');
 

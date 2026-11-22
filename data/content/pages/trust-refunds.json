@@ -1,0 +1,471 @@
+{
+  "slug": "trust-refunds",
+  "title": {
+    "en": "Refunds and cancellations",
+    "fr": "Remboursements et annulations",
+    "ar": "الاسترداد والإلغاء"
+  },
+  "description": {
+    "en": "When you can cancel, when you can be refunded, how long it takes, and what happens to pre-paid credits and sponsorships.",
+    "fr": "Quand vous pouvez annuler, quand vous pouvez être remboursé, en combien de temps, et ce qu’il advient des crédits prépayés et des parrainages.",
+    "ar": "متى يمكنك الإلغاء ومتى تُسترد أموالك وكم يستغرق ذلك، وما مصير الأرصدة المسبقة الدفع وعقود الرعاية."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "rf-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Refunds, **in writing.**",
+        "fr": "Les remboursements, **par écrit.**",
+        "ar": "الاسترداد، **كتابةً.**"
+      },
+      "lead": {
+        "en": "Every payment type has its own rule, and all of them are stated here before you pay. If a rule does not fit your case, we decide it in writing, not by silence.",
+        "fr": "Chaque type de paiement a sa propre règle, et toutes sont énoncées ici avant que vous payiez. Si une règle ne convient pas à votre cas, nous tranchons par écrit, jamais par le silence.",
+        "ar": "لكل نوع من الدفع قاعدته الخاصة، وكلها مذكورة هنا قبل أن تدفع. وإذا لم تناسب قاعدة حالتك فنفصل فيها كتابةً لا بالصمت."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Request a refund",
+            "fr": "Demander un remboursement",
+            "ar": "اطلب استردادًا"
+          },
+          "href": "/contact/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Refunds",
+        "fr": "Remboursements",
+        "ar": "الاسترداد"
+      }
+    },
+    {
+      "type": "prose",
+      "id": "rf-principles",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Principles before the details",
+        "fr": "Les principes avant les détails",
+        "ar": "المبادئ قبل التفاصيل"
+      },
+      "paragraphs": [
+        {
+          "en": "W5D sells access to a published programme: contributions to certification paths (called parts), daily subscriptions, pre-paid service credits, optional certification and QCM rounds, and, separately, sponsorships of the registry activation. None of them is a loan, a share or a deposit, and none of them carries a promised return. Because the offer is a programme that is still being built, we treat your right to change your mind generously, and we put every condition in front of you before payment, not after.",
+          "fr": "W5D vend l’accès à un programme publié : des contributions à des parcours de certification (appelées parts), des abonnements quotidiens, des crédits de services prépayés, des parcours optionnels de certification et de QCM et, séparément, des parrainages de l’activation du registre. Aucun n’est un prêt, une action ou un dépôt, et aucun ne comporte de rendement promis. Comme l’offre est un programme encore en construction, nous traitons généreusement votre droit de changer d’avis, et nous plaçons chaque condition sous vos yeux avant le paiement, non après.",
+          "ar": "تبيع W5D النفاذ إلى برنامج منشور: مساهمات في مسارات اعتماد (تسمى حصصًا) واشتراكات يومية وأرصدة خدمات مسبقة الدفع وجولات اعتماد واختبارات اختيارية، وبشكل منفصل رعاية تفعيل السجل. ولا شيء منها قرض أو سهم أو وديعة، ولا يحمل أي منها عائدًا موعودًا. ولأن العرض برنامج لا يزال قيد البناء فإننا نتعامل بسخاء مع حقك في تغيير رأيك، ونضع كل شرط أمامك قبل الدفع لا بعده."
+        },
+        {
+          "en": "Three rules apply to every case. First, a refund goes back by the same channel that carried the payment, so that money is never routed to a third party. Second, we decide in writing and give the reason. Third, we never ask you to give up a statutory right in exchange for a refund. If this page and a mandatory law disagree, the law wins and we apply it.",
+          "fr": "Trois règles s’appliquent à tous les cas. Premièrement, un remboursement revient par le même canal que celui du paiement, afin que l’argent ne soit jamais acheminé vers un tiers. Deuxièmement, nous décidons par écrit en indiquant le motif. Troisièmement, nous ne vous demandons jamais de renoncer à un droit légal en échange d’un remboursement. Si la présente page et une loi impérative divergent, la loi l’emporte et nous l’appliquons.",
+          "ar": "تسري ثلاث قواعد على كل الحالات. أولًا، يعود المبلغ المسترد عبر القناة نفسها التي حملت الدفع، حتى لا يُوجَّه المال إلى طرف ثالث. ثانيًا، نقرر كتابةً ونذكر السبب. ثالثًا، لا نطلب منك أبدًا التنازل عن حق قانوني مقابل الاسترداد. وإذا تعارضت هذه الصفحة مع قانون آمر فالقانون هو الغالب ونطبّقه."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "rf-table",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "What applies to what",
+        "fr": "Ce qui s’applique à quoi",
+        "ar": "ما ينطبق على ماذا"
+      },
+      "columns": [
+        {
+          "en": "Purchase",
+          "fr": "Achat",
+          "ar": "الشراء"
+        },
+        {
+          "en": "Can you cancel?",
+          "fr": "Pouvez-vous annuler ?",
+          "ar": "هل يمكنك الإلغاء؟"
+        },
+        {
+          "en": "Refund",
+          "fr": "Remboursement",
+          "ar": "الاسترداد"
+        },
+        {
+          "en": "How long",
+          "fr": "Délai",
+          "ar": "المدة"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Pledge of parts (one-off)",
+            "fr": "Engagement de parts (ponctuel)",
+            "ar": "تعهد بحصص (مرة واحدة)"
+          },
+          {
+            "en": "Yes, until payment is confirmed. Afterwards, within the withdrawal period below.",
+            "fr": "Oui, jusqu’à la confirmation du paiement. Ensuite, dans le délai de rétractation ci-dessous.",
+            "ar": "نعم حتى تأكيد الدفع. وبعده خلال مهلة العدول أدناه."
+          },
+          {
+            "en": "Full refund inside the withdrawal period; after it, case by case in writing.",
+            "fr": "Remboursement intégral dans le délai de rétractation ; au-delà, au cas par cas par écrit.",
+            "ar": "استرداد كامل خلال مهلة العدول؛ وبعدها حسب الحالة كتابةً."
+          },
+          {
+            "en": "Decision within {{ company.response_days }} working days; money back within {{ legal.refund_days }} days of the decision.",
+            "fr": "Décision sous {{ company.response_days }} jours ouvrés ; remboursement sous {{ legal.refund_days }} jours après la décision.",
+            "ar": "القرار خلال {{ company.response_days }} أيام عمل؛ والمبلغ خلال {{ legal.refund_days }} يومًا من القرار."
+          }
+        ],
+        [
+          {
+            "en": "Daily subscription",
+            "fr": "Abonnement quotidien",
+            "ar": "اشتراك يومي"
+          },
+          {
+            "en": "Yes, at any time, with your management key. Cancelling stops all future days.",
+            "fr": "Oui, à tout moment, avec votre clé de gestion. L’annulation arrête tous les jours à venir.",
+            "ar": "نعم في أي وقت بمفتاح الإدارة. ويوقف الإلغاء كل الأيام القادمة."
+          },
+          {
+            "en": "Days not yet delivered are not charged; days already delivered are not refunded unless the service failed.",
+            "fr": "Les jours non encore fournis ne sont pas facturés ; les jours déjà fournis ne sont pas remboursés sauf défaillance du service.",
+            "ar": "لا تُحتسب الأيام التي لم تُقدَّم بعد؛ ولا تُسترد الأيام المُقدَّمة إلا عند إخفاق الخدمة."
+          },
+          {
+            "en": "Effective the same day.",
+            "fr": "Effectif le jour même.",
+            "ar": "يسري في اليوم نفسه."
+          }
+        ],
+        [
+          {
+            "en": "Certification or QCM round",
+            "fr": "Parcours de certification ou de QCM",
+            "ar": "جولة اعتماد أو اختبار"
+          },
+          {
+            "en": "Yes, before you start the round.",
+            "fr": "Oui, avant de commencer le parcours.",
+            "ar": "نعم قبل أن تبدأ الجولة."
+          },
+          {
+            "en": "Refunded in full before the start. After a round has been taken it cannot be refunded, except if a technical fault on our side prevented a fair attempt.",
+            "fr": "Remboursé intégralement avant le début. Une fois le parcours passé, il n’est plus remboursable, sauf si une panne de notre côté a empêché une tentative équitable.",
+            "ar": "يُسترد كاملًا قبل البدء. وبعد إجراء الجولة لا يُسترد إلا إذا حال عطل من جانبنا دون محاولة عادلة."
+          },
+          {
+            "en": "Retake or refund within {{ legal.refund_days }} days of the decision.",
+            "fr": "Nouvelle tentative ou remboursement sous {{ legal.refund_days }} jours après la décision.",
+            "ar": "إعادة المحاولة أو الاسترداد خلال {{ legal.refund_days }} يومًا من القرار."
+          }
+        ],
+        [
+          {
+            "en": "Pre-paid service credits (pre-sale)",
+            "fr": "Crédits de services prépayés (prévente)",
+            "ar": "أرصدة خدمات مسبقة الدفع (بيع مسبق)"
+          },
+          {
+            "en": "Yes, until the condition in the contract is met.",
+            "fr": "Oui, jusqu’à la réalisation de la condition du contrat.",
+            "ar": "نعم حتى يتحقق الشرط الوارد في العقد."
+          },
+          {
+            "en": "Your payment is held in escrow and is returned in full if the condition is not met by the contract date. See the section on pre-sale below.",
+            "fr": "Votre paiement est conservé sous séquestre et vous est rendu intégralement si la condition n’est pas remplie à la date du contrat. Voir la section sur la prévente ci-dessous.",
+            "ar": "يُحفظ دفعك في حساب ضمان ويُرد كاملًا إذا لم يتحقق الشرط في تاريخ العقد. انظر قسم البيع المسبق أدناه."
+          },
+          {
+            "en": "As written in the contract schedule.",
+            "fr": "Selon le calendrier du contrat.",
+            "ar": "وفق جدول العقد."
+          }
+        ],
+        [
+          {
+            "en": "Sponsorship of the registry activation",
+            "fr": "Parrainage de l’activation du registre",
+            "ar": "رعاية تفعيل السجل"
+          },
+          {
+            "en": "Before the agreement is signed, yes.",
+            "fr": "Avant la signature de la convention, oui.",
+            "ar": "نعم قبل توقيع الاتفاقية."
+          },
+          {
+            "en": "Refunded in full if the registry activation does not take place or is abandoned. See the section on sponsorship below.",
+            "fr": "Remboursé intégralement si l’activation du registre n’a pas lieu ou est abandonnée. Voir la section sur le parrainage ci-dessous.",
+            "ar": "يُسترد كاملًا إن لم يتم تفعيل السجل أو تم التخلي عنه. انظر قسم الرعاية أدناه."
+          },
+          {
+            "en": "As written in the agreement schedule.",
+            "fr": "Selon l’annexe de la convention.",
+            "ar": "وفق جدول الاتفاقية."
+          }
+        ]
+      ],
+      "note": {
+        "en": "The numbers on this page come from the settings file and are shown with the date of the last review. Where a number is a legal period, it is confirmed with a Tunisian lawyer before it is relied on.",
+        "fr": "Les chiffres de cette page proviennent du fichier de paramètres et sont affichés avec la date de la dernière revue. Lorsqu’un chiffre est un délai légal, il est confirmé avec un avocat tunisien avant qu’on s’y fie.",
+        "ar": "الأرقام في هذه الصفحة مصدرها ملف الإعدادات وتُعرض مع تاريخ آخر مراجعة. وحيث يكون الرقم أجلًا قانونيًا فإنه يُؤكَّد مع محامٍ تونسي قبل الاعتماد عليه."
+      }
+    },
+    {
+      "type": "prose",
+      "id": "rf-withdrawal",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The right to change your mind",
+        "fr": "Le droit de changer d’avis",
+        "ar": "حق العدول"
+      },
+      "paragraphs": [
+        {
+          "en": "Tunisian consumer law gives a buyer who contracts at a distance a period to withdraw without giving a reason; for many distance contracts it is {{ legal.withdrawal_days_tn }} working days from receiving the goods or, for services, from the conclusion of the contract. European law gives a comparable right of {{ legal.withdrawal_days_eu }} calendar days to consumers in the Union. We grant the longer of the two where both could apply, and we do not make you prove a reason. Exceptions exist: a service that you asked to start at once and that has been fully delivered can lose the right, and the law lists which cases. We confirm the exact exceptions with a lawyer and state them to you plainly when they apply.",
+          "fr": "Le droit tunisien de la consommation accorde à l’acheteur qui contracte à distance un délai de rétractation sans motif ; pour de nombreux contrats à distance il est de {{ legal.withdrawal_days_tn }} jours ouvrés à compter de la réception des biens ou, pour les services, de la conclusion du contrat. Le droit européen accorde un droit comparable de {{ legal.withdrawal_days_eu }} jours calendaires aux consommateurs de l’Union. Nous accordons le plus long des deux lorsque les deux peuvent s’appliquer, et nous ne vous demandons pas de justifier votre choix. Des exceptions existent : un service dont vous avez demandé le démarrage immédiat et qui a été entièrement fourni peut faire perdre ce droit, et la loi énumère les cas. Nous confirmons les exceptions exactes avec un avocat et vous les indiquons clairement lorsqu’elles s’appliquent.",
+          "ar": "يمنح قانون حماية المستهلك التونسي المشتري الذي يتعاقد عن بعد مهلة للعدول دون إبداء سبب؛ وهي في كثير من العقود عن بعد {{ legal.withdrawal_days_tn }} أيام عمل من استلام السلعة أو، في الخدمات، من إبرام العقد. ويمنح القانون الأوروبي حقًا مماثلًا مدته {{ legal.withdrawal_days_eu }} يومًا للمستهلكين في الاتحاد. ونمنح الأطول من المهلتين حيث يمكن انطباقهما، ولا نطلب منك إثبات سبب. وثمة استثناءات: فالخدمة التي طلبت بدءها فورًا وسُلّمت كاملة قد تفقد الحق، ويعدّد القانون الحالات. ونؤكد الاستثناءات الدقيقة مع محامٍ ونبيّنها لك بوضوح حين تنطبق."
+        },
+        {
+          "en": "To withdraw, write to us through the [contact form](/contact/) (desk “investors”) or by e-mail with your order reference. You do not need a special form. A simple sentence such as “I withdraw from order [reference]” is enough, and the date we receive it is the date of withdrawal.",
+          "fr": "Pour vous rétracter, écrivez-nous par le [formulaire de contact](/contact/) (service « investisseurs ») ou par e-mail en indiquant la référence de votre commande. Aucun formulaire particulier n’est requis. Une phrase simple comme « Je me rétracte de la commande [référence] » suffit, et la date de réception de votre message est la date de rétractation.",
+          "ar": "للعدول راسلنا عبر [نموذج الاتصال](/contact/) (مكتب «المستثمرون») أو بالبريد مع مرجع طلبك. لا يلزم نموذج خاص. تكفي جملة بسيطة مثل «أعدل عن الطلب [المرجع]»، وتاريخ استلامنا لها هو تاريخ العدول."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "rf-presale",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Pre-paid credits are held in escrow",
+        "fr": "Les crédits prépayés sont placés sous séquestre",
+        "ar": "الأرصدة المسبقة الدفع تُحفظ في حساب ضمان"
+      },
+      "paragraphs": [
+        {
+          "en": "Pre-sale is the case where you pay before the business can legally invoice, so it carries the strictest protection. The pre-sale contract has a condition precedent, written word for word on its first page: the contract takes effect only when {{ funding.f4_condition }} has happened. Until then your payment is held in escrow, W5D cannot spend it, and it is not counted as a sale or as revenue. If the condition has not happened by the date in the contract, the escrow agent returns your full payment. You may also withdraw before the condition is met.",
+          "fr": "La prévente est le cas où vous payez avant que l’entreprise puisse légalement facturer ; elle bénéficie donc de la protection la plus stricte. Le contrat de prévente comporte une condition suspensive, écrite mot pour mot en première page : le contrat ne prend effet que lorsque {{ funding.f4_condition }} s’est produit. D’ici là, votre paiement est conservé sous séquestre, W5D ne peut pas le dépenser, et il n’est compté ni comme une vente ni comme un revenu. Si la condition ne s’est pas produite à la date du contrat, l’agent séquestre vous rend l’intégralité de votre paiement. Vous pouvez aussi vous rétracter avant la réalisation de la condition.",
+          "ar": "البيع المسبق هو الحالة التي تدفع فيها قبل أن يستطيع النشاط إصدار فاتورة قانونيًا، ولذلك يحظى بأشد الحماية. ويتضمن عقد البيع المسبق شرطًا واقفًا مكتوبًا حرفيًا في صفحته الأولى: لا يسري العقد إلا عند حدوث {{ funding.f4_condition }}. وإلى ذلك الحين يُحفظ دفعك في حساب ضمان، ولا تستطيع W5D إنفاقه، ولا يُحتسب بيعًا ولا إيرادًا. وإذا لم يتحقق الشرط في التاريخ المذكور في العقد يعيد وكيل الضمان إليك دفعك كاملًا. ويمكنك أيضًا العدول قبل تحقق الشرط."
+        },
+        {
+          "en": "This channel is available only when the contract template contains that condition and an escrow agent has been named. If either is missing, the channel is closed and the site says so on the [status page](/status/). A credit is personal to you and cannot be moved to another account or turned into cash; it can only be used for the named service.",
+          "fr": "Ce canal n’est disponible que lorsque le modèle de contrat comporte cette condition et qu’un agent séquestre a été désigné. Si l’un des deux manque, le canal est fermé et le site l’indique sur la [page de statut](/status/). Un crédit est personnel et ne peut ni être transféré vers un autre compte ni être converti en espèces ; il ne sert qu’au service désigné.",
+          "ar": "لا تتاح هذه القناة إلا حين يتضمن نموذج العقد ذلك الشرط ويُسمّى وكيل ضمان. فإذا غاب أحدهما أُغلقت القناة وبيّن الموقع ذلك في [صفحة الحالة](/status/). والرصيد شخصي لا يُنقل إلى حساب آخر ولا يتحول إلى نقد؛ ولا يُستعمل إلا للخدمة المسماة."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "rf-sponsor",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Sponsorship of the registry activation",
+        "fr": "Parrainage de l’activation du registre",
+        "ar": "رعاية تفعيل السجل"
+      },
+      "paragraphs": [
+        {
+          "en": "A sponsorship is not a loan and not an investment: it earns no interest, no dividend and no share, and nothing is repaid except through the refund condition. The sum is restricted to one purpose, the activation of the company registry file, and is kept apart from other money. If the registry activation does not take place or is abandoned, the full sum is refunded to the sponsor by the same channel within the days written in the agreement. The agreement template states the restriction, the refund and the no-return clause on its first page.",
+          "fr": "Un parrainage n’est ni un prêt ni un investissement : il ne rapporte ni intérêt, ni dividende, ni part, et rien n’est remboursé hors la condition de remboursement. La somme est affectée à un seul objet, l’activation du dossier d’immatriculation, et conservée à part des autres fonds. Si l’activation du registre n’a pas lieu ou est abandonnée, la somme est intégralement remboursée au parrain par le même canal dans les jours inscrits à la convention. Le modèle de convention énonce en première page la restriction, le remboursement et la clause d’absence de rendement.",
+          "ar": "الرعاية ليست قرضًا ولا استثمارًا: لا تدرّ فائدة ولا ربحًا ولا سهمًا، ولا يُسدَّد شيء إلا عبر شرط الاسترداد. والمبلغ مخصص لغرض واحد هو تفعيل ملف السجل، ويُحفظ بمعزل عن بقية الأموال. وإذا لم يتم تفعيل السجل أو تم التخلي عنه يُسترد المبلغ كاملًا للراعي عبر القناة نفسها خلال الأيام المذكورة في الاتفاقية. ويذكر نموذج الاتفاقية في صفحته الأولى التخصيص والاسترداد وبند عدم العائد."
+        },
+        {
+          "en": "Like pre-sale, this channel opens only if its template carries the restriction and the refund clause. The amounts received and refunded are published as totals on the [status page](/status/). To sponsor, see the [sponsorship page](/sponsor/) when it is open.",
+          "fr": "Comme la prévente, ce canal ne s’ouvre que si son modèle comporte la restriction et la clause de remboursement. Les montants reçus et remboursés sont publiés en totaux sur la [page de statut](/status/). Pour parrainer, voir la [page de parrainage](/sponsor/) lorsqu’elle est ouverte.",
+          "ar": "وكالبيع المسبق لا تُفتح هذه القناة إلا إذا حمل نموذجها بند التخصيص وبند الاسترداد. وتُنشر المبالغ المستلمة والمستردة مجاميع في [صفحة الحالة](/status/). وللرعاية انظر [صفحة الرعاية](/sponsor/) عندما تكون مفتوحة."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "id": "rf-how",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "How to ask for a refund",
+        "fr": "Comment demander un remboursement",
+        "ar": "كيف تطلب استردادًا"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "1. Write to us",
+            "fr": "1. Écrivez-nous",
+            "ar": "1. راسلنا"
+          },
+          "body": {
+            "en": "Use the [contact form](/contact/) with your order reference, or reply to the confirmation e-mail.",
+            "fr": "Utilisez le [formulaire de contact](/contact/) avec votre référence de commande, ou répondez à l’e-mail de confirmation.",
+            "ar": "استخدم [نموذج الاتصال](/contact/) مع مرجع الطلب أو ردّ على رسالة التأكيد."
+          }
+        },
+        {
+          "title": {
+            "en": "2. We acknowledge",
+            "fr": "2. Nous accusons réception",
+            "ar": "2. نؤكد الاستلام"
+          },
+          "body": {
+            "en": "A person answers within {{ company.response_days }} working days and may ask one question to match the request to the payment.",
+            "fr": "Une personne répond sous {{ company.response_days }} jours ouvrés et peut poser une question pour rapprocher la demande du paiement.",
+            "ar": "يجيب شخص خلال {{ company.response_days }} أيام عمل وقد يطرح سؤالًا لمطابقة الطلب بالدفع."
+          }
+        },
+        {
+          "title": {
+            "en": "3. We decide in writing",
+            "fr": "3. Nous décidons par écrit",
+            "ar": "3. نقرر كتابةً"
+          },
+          "body": {
+            "en": "You receive the decision and the reason. If we refuse, we cite the rule and tell you how to appeal.",
+            "fr": "Vous recevez la décision et son motif. En cas de refus, nous citons la règle et vous indiquons comment faire appel.",
+            "ar": "يصلك القرار وسببه. وإن رفضنا ذكرنا القاعدة وبيّنا لك طريق التظلم."
+          }
+        },
+        {
+          "title": {
+            "en": "4. Money goes back",
+            "fr": "4. L’argent vous est rendu",
+            "ar": "4. يعود المال"
+          },
+          "body": {
+            "en": "By the same channel, within {{ legal.refund_days }} days of the decision. Bank and wallet fees charged by the provider are refunded when the fault is ours.",
+            "fr": "Par le même canal, sous {{ legal.refund_days }} jours après la décision. Les frais bancaires ou de portefeuille prélevés par le prestataire sont remboursés lorsque la faute nous incombe.",
+            "ar": "عبر القناة نفسها خلال {{ legal.refund_days }} يومًا من القرار. وتُسترد رسوم البنك أو المحفظة التي يقتطعها المزوّد حين يكون الخطأ منا."
+          }
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "rf-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Refunds, asked plainly",
+        "fr": "Les remboursements, en questions simples",
+        "ar": "أسئلة بسيطة عن الاسترداد"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "What if I paid the wrong amount?",
+            "fr": "Et si j’ai payé un mauvais montant ?",
+            "ar": "ماذا لو دفعت مبلغًا خاطئًا؟"
+          },
+          "a": {
+            "en": "Tell us the reference. An overpayment is returned in full; an underpayment can be completed or refunded, as you prefer.",
+            "fr": "Indiquez-nous la référence. Un trop-perçu est rendu intégralement ; un paiement insuffisant peut être complété ou remboursé, selon votre préférence.",
+            "ar": "أخبرنا بالمرجع. يُرد الدفع الزائد كاملًا، ويمكن إتمام الناقص أو استرداده كما تفضّل."
+          }
+        },
+        {
+          "q": {
+            "en": "Is a part resold or paid back with profit?",
+            "fr": "Une part est-elle revendue ou remboursée avec profit ?",
+            "ar": "هل تُعاد بيع الحصة أو تُسترد بربح؟"
+          },
+          "a": {
+            "en": "No. A part funds a published programme at a published price. No return, dividend or resale value is promised; see the [declared limits](/trust/statement/).",
+            "fr": "Non. Une part finance un programme publié à un prix publié. Aucun rendement, dividende ni valeur de revente n’est promis ; voir les [limites déclarées](/trust/statement/).",
+            "ar": "لا. الحصة تموّل برنامجًا منشورًا بسعر منشور. ولا يُوعد بعائد ولا ربح ولا قيمة إعادة بيع؛ انظر [الحدود المعلنة](/trust/statement/)."
+          }
+        },
+        {
+          "q": {
+            "en": "Can I get a refund after the programme date?",
+            "fr": "Puis-je être remboursé après la date du programme ?",
+            "ar": "هل يمكن الاسترداد بعد تاريخ البرنامج؟"
+          },
+          "a": {
+            "en": "Judged case by case in writing. The programme clock runs from {{ dates.start }} to {{ dates.deadline }}, and dates are shown on every order.",
+            "fr": "Examiné au cas par cas par écrit. L’horloge du programme court du {{ dates.start }} au {{ dates.deadline }}, et les dates figurent sur chaque commande.",
+            "ar": "يُبتّ فيه حسب الحالة كتابةً. وتمتد ساعة البرنامج من {{ dates.start }} إلى {{ dates.deadline }}، وتظهر التواريخ على كل طلب."
+          }
+        },
+        {
+          "q": {
+            "en": "Who pays the transfer fees?",
+            "fr": "Qui paie les frais de transfert ?",
+            "ar": "من يدفع رسوم التحويل؟"
+          },
+          "a": {
+            "en": "The provider’s fee on a refund that is our fault is ours. If you withdraw inside the withdrawal period, we do not charge for processing.",
+            "fr": "Les frais du prestataire sur un remboursement dû à notre faute sont à notre charge. Si vous vous rétractez dans le délai, nous ne facturons aucun frais de traitement.",
+            "ar": "رسوم المزوّد على استرداد سببه خطؤنا علينا. وإذا عدلت ضمن المهلة فلا نقتطع رسوم معالجة."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "rf-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [terms](/trust/terms/), the [declared limits](/trust/statement/), the [privacy policy](/trust/privacy/) and the [imprint](/trust/imprint/). The numbers on this page are settings, shown with their review date.",
+          "fr": "Lisez les [conditions](/trust/terms/), les [limites déclarées](/trust/statement/), la [politique de confidentialité](/trust/privacy/) et les [mentions légales](/trust/imprint/). Les chiffres de cette page sont des paramètres, affichés avec leur date de revue.",
+          "ar": "اقرأ [الشروط](/trust/terms/) و[الحدود المعلنة](/trust/statement/) و[سياسة الخصوصية](/trust/privacy/) و[الإشعار القانوني](/trust/imprint/). والأرقام في هذه الصفحة إعدادات تُعرض مع تاريخ مراجعتها."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "rf-final",
+      "gradient": "peak",
+      "title": {
+        "en": "A question about money? **Ask before you pay.**",
+        "fr": "Une question d’argent ? **Posez-la avant de payer.**",
+        "ar": "سؤال عن المال؟ **اسأل قبل أن تدفع.**"
+      },
+      "body": {
+        "en": "We would rather answer a question than handle a dispute.",
+        "fr": "Nous préférons répondre à une question que traiter un litige.",
+        "ar": "نفضّل الإجابة عن سؤال على معالجة نزاع."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Write to us",
+            "fr": "Écrivez-nous",
+            "ar": "راسلنا"
+          },
+          "href": "/contact/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "Read the terms",
+            "fr": "Lire les conditions",
+            "ar": "اقرأ الشروط"
+          },
+          "href": "/trust/terms/",
+          "style": "ghost"
+        }
+      ]
+    }
+  ]
+}

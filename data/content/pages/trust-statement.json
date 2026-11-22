@@ -1,209 +1,508 @@
 {
- "slug": "trust-statement",
- "title": {
-  "en": "Declared limits",
-  "fr": "Limites déclarées",
-  "ar": "الحدود المعلنة"
- },
- "description": {
-  "en": "What W5D does not promise: no job, no return, no headcount claim, and how the price works.",
-  "fr": "Ce que W5D ne promet pas : aucun emploi, aucun rendement, aucune promesse d’effectif, et le fonctionnement du prix.",
-  "ar": "ما لا تعد به W5D: لا وظيفة، ولا عائد، ولا ادعاء بشأن عدد العاملين، وكيفية احتساب السعر."
- },
- "sections": [
-  {
-   "type": "hero",
-   "id": "ts-hero",
-   "variant": "classic",
-   "gradient": "calm",
-   "title": {
-    "en": "Declared **limits.**",
-    "fr": "Limites **déclarées.**",
-    "ar": "حدود **معلنة.**"
-   },
-   "lead": {
-    "en": "Read this before you invest, apply or share.",
-    "fr": "Lisez ceci avant d’investir, de postuler ou de partager.",
-    "ar": "اقرأ هذا قبل أن تستثمر أو تتقدم بطلب أو تشارك."
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Back to investing",
-      "fr": "Retour à l’investissement",
-      "ar": "العودة إلى الاستثمار"
-     },
-     "href": "/investors/",
-     "style": "peak",
-     "arrow": true
-    }
-   ],
-   "eyebrow": {
-    "en": "Statement",
-    "fr": "Déclaration",
-    "ar": "بيان"
-   }
+  "slug": "trust-statement",
+  "title": {
+    "en": "Declared limits",
+    "fr": "Limites déclarées",
+    "ar": "الحدود المعلنة"
   },
-  {
-   "type": "prose",
-   "id": "ts-jobs",
-   "tier": "e",
-   "focus": 3,
-   "title": {
-    "en": "1. A part is an investment in a path, not a job",
-    "fr": "1. Une part est un investissement dans un parcours, pas un emploi",
-    "ar": "1. الحصة استثمار في مسار، وليست وظيفة"
-   },
-   "paragraphs": [
-    {
-     "en": "W5D does not promise employment to anyone who buys a part, registers or is certified. Posts are created as certified headcount and funded capacity grow.",
-     "fr": "W5D ne promet pas d’emploi à quiconque achète une part, s’inscrit ou obtient une certification. Les postes sont créés à mesure que les effectifs certifiés et la capacité financée augmentent.",
-     "ar": "لا تعد W5D بالتوظيف لأي شخص يشتري حصة أو يسجل أو يحصل على شهادة. تُنشأ الوظائف مع نمو عدد العاملين المعتمدين والقدرة الممولة."
-    }
-   ]
+  "description": {
+    "en": "Six limits to read before you invest, apply or share: no job promised, a design ceiling, no return, a public price curve, the real payment state and the programme dates.",
+    "fr": "Six limites à lire avant d’investir, de postuler ou de partager : aucun emploi promis, un plafond de conception, aucun rendement, une courbe de prix publique, l’état réel des paiements et les dates du programme.",
+    "ar": "ست حدود تُقرأ قبل أن تستثمر أو تتقدم أو تشارك: لا وظيفة موعودة، وسقف تصميمي، ولا عائد، ومنحنى أسعار علني، وحالة الدفع الفعلية، ومواعيد البرنامج."
   },
-  {
-   "type": "prose",
-   "id": "ts-design",
-   "tier": "e",
-   "focus": 2,
-   "title": {
-    "en": "2. The headcount is a design equation",
-    "fr": "2. L’effectif est une équation de conception",
-    "ar": "2. عدد العاملين معادلة تصميمية"
-   },
-   "paragraphs": [
+  "sections": [
     {
-     "en": "\"{{ d.experts_target }} experts\" is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. It is a design ceiling, not a claim of employment.",
-     "fr": "\"{{ d.experts_target }} experts\" correspond à {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. Il s’agit d’un plafond théorique, et non d’une promesse d’emploi.",
-     "ar": "\"{{ d.experts_target }} خبيرًا\" تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. وهذا سقف تخطيطي، وليس ادعاءً بالتوظيف."
+      "type": "hero",
+      "id": "ts-hero",
+      "variant": "classic",
+      "gradient": "calm",
+      "title": {
+        "en": "Declared **limits.**",
+        "fr": "**Limites** déclarées.",
+        "ar": "**الحدود** المعلنة."
+      },
+      "lead": {
+        "en": "Read this before you invest, apply or share. It is the shortest honest description of what W5D is, and of what it is not.",
+        "fr": "Lisez ceci avant d’investir, de postuler ou de partager. C’est la description honnête la plus courte de ce qu’est W5D, et de ce qu’elle n’est pas.",
+        "ar": "اقرأ هذا قبل أن تستثمر أو تتقدم أو تشارك. هو أقصر وصف صادق لما هي عليه W5D ولما ليست عليه."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Back to investing",
+            "fr": "Retour à l’investissement",
+            "ar": "العودة إلى الاستثمار"
+          },
+          "href": "/investors/",
+          "style": "peak",
+          "arrow": true
+        }
+      ],
+      "eyebrow": {
+        "en": "Statement",
+        "fr": "Déclaration",
+        "ar": "البيان"
+      }
     },
     {
-     "en": "Today in Tunisia, delivery team: {{ experts.developers_today|devs }}; {{ d.experts_current|certs }} (as of {{ dates.as_of }}).",
-     "fr": "Aujourd’hui, en Tunisie, équipe de livraison : {{ experts.developers_today|devs }} ; {{ d.experts_current|certs }} (au {{ dates.as_of }}).",
-     "ar": "اليوم: يعمل في تونس {{ experts.developers_today|devs }}؛ و{{ d.experts_current|certs }} (حتى {{ dates.as_of }})."
-    }
-   ]
-  },
-  {
-   "type": "prose",
-   "id": "ts-returns",
-   "tier": "e",
-   "focus": 2,
-   "title": {
-    "en": "3. No return is promised",
-    "fr": "3. Aucun rendement n’est promis",
-    "ar": "3. لا يوجد عائد مضمون"
-   },
-   "paragraphs": [
-    {
-     "en": "No return, dividend or resale value is promised. A part funds a published programme at a published price.",
-     "fr": "Aucun rendement, dividende ni valeur de revente n’est promis. Une partie finance un programme publié à un prix publié.",
-     "ar": "لا يوجد عائد أو توزيعات أرباح أو قيمة إعادة بيع مضمونة. يموّل جزءٌ من المبلغ برنامجًا معلنًا بسعر معلن."
-    }
-   ]
-  },
-  {
-   "type": "prose",
-   "id": "ts-price",
-   "tier": "i",
-   "focus": 2,
-   "title": {
-    "en": "4. The price function",
-    "fr": "4. La fonction de prix",
-    "ar": "4. معادلة السعر"
-   },
-   "paragraphs": [
-    {
-     "en": "price = base × (1 + α·p^k) × (1 + β·t^m), capped at {{ pricing.cap }}× base, with base {{ money.base_day }} {{ money.currency }} per day. The curve is public; constants change only with a dated, logged entry.",
-     "fr": "price = base × (1 + α·p^k) × (1 + β·t^m), plafonné à {{ pricing.cap }}× base, avec une base de {{ money.base_day }} {{ money.currency }} par jour. La courbe est publique ; les constantes ne changent qu’au moyen d’une entrée datée et consignée.",
-     "ar": "السعر = الأساس × (1 + α·p^k) × (1 + β·t^m)، بحد أقصى {{ pricing.cap }}× الأساس، حيث يبلغ الأساس {{ money.base_day }} {{ money.currency }} لليوم. المنحنى معلن؛ ولا تتغير الثوابت إلا بإدخال مؤرّخ ومسجّل."
-    }
-   ],
-   "ctas": [
-    {
-     "label": {
-      "en": "See the curve",
-      "fr": "Voir la courbe",
-      "ar": "اطّلع على المنحنى"
-     },
-     "href": "/pricing/",
-     "style": "link",
-     "arrow": true
-    }
-   ]
-  },
-  {
-   "type": "prose",
-   "id": "ts-demo",
-   "tier": "e",
-   "focus": 2,
-   "title": {
-    "en": "5. Demo mode",
-    "fr": "5. Mode démo",
-    "ar": "5. الوضع التجريبي"
-   },
-   "paragraphs": [
-    {
-     "en": "While the payment provider is not connected, pledges are recorded and no payment is taken. Terms for real payments will be shown before you confirm.",
-     "fr": "Tant que le fournisseur de paiement n’est pas connecté, les engagements sont enregistrés et aucun paiement n’est prélevé. Les conditions applicables aux paiements réels seront présentées avant votre confirmation.",
-     "ar": "ما دام مزوّد الدفع غير متصل، تُسجّل التعهدات ولا تُحصّل أي مدفوعات. ستُعرض شروط الدفع الفعلي قبل التأكيد."
-    }
-   ]
-  },
-  {
-   "type": "prose",
-   "id": "ts-offer",
-   "tier": "i",
-   "focus": 1,
-   "title": {
-    "en": "6. Dates",
-    "fr": "6. Dates",
-    "ar": "6. التواريخ"
-   },
-   "paragraphs": [
-    {
-     "en": "Programme clock: {{ dates.start }} to {{ dates.deadline }}. Promotional offer on the Admin Dashboard licence valid before {{ dates.offer_year }}.",
-     "fr": "Période du programme : du {{ dates.start }} au {{ dates.deadline }}. Offre promotionnelle sur la licence du tableau de bord d’administration, valable avant le {{ dates.offer_year }}.",
-     "ar": "الفترة الزمنية للبرنامج: من {{ dates.start }} إلى {{ dates.deadline }}. يسري العرض الترويجي على ترخيص لوحة تحكم المسؤول قبل {{ dates.offer_year }}."
-    }
-   ]
-  },
-  {
-   "type": "cta",
-   "id": "ts-final",
-   "gradient": "peak",
-   "title": {
-    "en": "Understood? **Continue.**",
-    "fr": "Vous avez compris ? **Continuer.**",
-    "ar": "هل اتضح؟ **تابع.**"
-   },
-   "body": {
-    "en": "",
-    "fr": "",
-    "ar": ""
-   },
-   "ctas": [
-    {
-     "label": {
-      "en": "Take a part today",
-      "fr": "Prendre une part aujourd’hui",
-      "ar": "احصل على حصة اليوم"
-     },
-     "href": "/checkout/",
-     "style": "peak",
-     "arrow": true
+      "type": "prose",
+      "id": "ts-intro",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Why limits come first",
+        "fr": "Pourquoi les limites passent en premier",
+        "ar": "لماذا تأتي الحدود أولًا"
+      },
+      "paragraphs": [
+        {
+          "en": "A young programme is tempted to lead with its ambition. W5D leads with its limits, because the ambition is easy to see and the limits are what a careful person needs to know. The six statements below are the ones that matter most before money, time or reputation is committed. They are written to be quoted, and each one can be checked against another page of this site or against the live figures on the [status page](/status/).",
+          "fr": "Un jeune programme est tenté de commencer par son ambition. W5D commence par ses limites, car l’ambition se voit facilement et les limites sont ce qu’une personne prudente doit savoir. Les six déclarations ci-dessous sont celles qui comptent le plus avant d’engager de l’argent, du temps ou une réputation. Elles sont écrites pour être citées, et chacune peut être vérifiée sur une autre page de ce site ou sur les chiffres en direct de la [page de statut](/status/).",
+          "ar": "يميل البرنامج الفتيّ إلى أن يبدأ بطموحه. أما W5D فتبدأ بحدودها، لأن الطموح سهل الرؤية والحدود هي ما يحتاج الشخص الحذر إلى معرفته. والبيانات الست أدناه هي الأهم قبل التزام مال أو وقت أو سمعة. وهي مكتوبة لتُقتبس، ويمكن التحقق من كل منها في صفحة أخرى من هذا الموقع أو في الأرقام الحية في [صفحة الحالة](/status/)."
+        },
+        {
+          "en": "These limits apply wherever you live. A reader in Tunisia will find that some of them point to rules of Tunisian law that we are still confirming with a lawyer and an accountant; a reader abroad will find that none of them removes the rights you keep under the law of your own country. Where a limit and a mandatory law disagree, the law wins.",
+          "fr": "Ces limites s’appliquent où que vous viviez. Un lecteur en Tunisie verra que certaines renvoient à des règles du droit tunisien que nous confirmons encore avec un avocat et un comptable ; un lecteur à l’étranger verra qu’aucune ne supprime les droits qu’il conserve selon la loi de son pays. Lorsqu’une limite et une loi impérative divergent, la loi l’emporte.",
+          "ar": "تسري هذه الحدود أينما كنت. فقارئ في تونس سيجد أن بعضها يحيل إلى قواعد من القانون التونسي ما زلنا نؤكدها مع محامٍ ومحاسب، وقارئ في الخارج سيجد أن أيًّا منها لا يُسقط الحقوق التي يحتفظ بها بموجب قانون بلده. وحيث تخالف حدٌّ قانونًا آمرًا فالقانون هو الغالب."
+        }
+      ]
     },
     {
-     "label": {
-      "en": "File a correction",
-      "fr": "Signaler une correction",
-      "ar": "الإبلاغ عن تصحيح"
-     },
-     "href": "/trust/corrections/",
-     "style": "ghost"
+      "type": "prose",
+      "id": "ts-jobs",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "1. A part is an investment in a path, not a job",
+        "fr": "1. Une part est un investissement dans un parcours, pas un emploi",
+        "ar": "1. الحصة استثمار في مسار لا وظيفة"
+      },
+      "paragraphs": [
+        {
+          "en": "W5D does not promise employment to anyone who buys a part, registers or is certified. Posts are created as certified headcount and funded capacity grow.",
+          "fr": "W5D ne promet d’emploi à personne qui achète une part, s’inscrit ou est certifié. Les postes sont créés à mesure que l’effectif certifié et la capacité financée augmentent.",
+          "ar": "لا تَعِد W5D بوظيفة لأي شخص يشتري حصة أو يسجّل أو يُعتمد. وتُنشأ الوظائف مع نمو العدد المعتمد والطاقة الممولة."
+        },
+        {
+          "en": "What a part does buy is access to a published path: training, a certification attempt, a place in a registry that other people can check, and the work that the programme actually has at the time. Some certified people will be offered work; the number is whatever the programme can fund, and it is reported on the status page as a count, not as a hope. A certificate records a demonstrated result on a test. It is a path, not a job, and it promises neither work nor income.",
+          "fr": "Ce qu’une part achète, c’est l’accès à un parcours publié : une formation, une tentative de certification, une place dans un registre que d’autres peuvent vérifier, et le travail que le programme a réellement à ce moment-là. Certaines personnes certifiées recevront une offre de travail ; le nombre est ce que le programme peut financer, et il est publié sur la page de statut comme un compte, non comme un espoir. Un certificat consigne un résultat démontré lors d’un test. C’est un parcours, pas un emploi, et il ne promet ni travail ni revenu.",
+          "ar": "ما تشتريه الحصة هو النفاذ إلى مسار منشور: تدريب ومحاولة اعتماد ومكان في سجل يمكن لآخرين التحقق منه والعمل الذي يتوفر لدى البرنامج فعلًا في حينه. وسيُعرض العمل على بعض المعتمدين؛ وعددهم هو ما يستطيع البرنامج تمويله، ويُنشر في صفحة الحالة عددًا لا أملًا. والشهادة تسجّل نتيجة مثبتة في اختبار. هي مسار لا وظيفة، ولا تَعِد بعمل ولا بدخل."
+        },
+        {
+          "en": "If you are in Tunisia and thinking of a part as a route to a job, the honest reading is this: the programme may create work, it has not yet created any at scale, and the only date by which anything is measured is the programme clock below. If you are abroad and thinking of a part as a way to support a path for others, the same reading applies. Do not buy a part on the strength of a job that has not been offered to you in writing.",
+          "fr": "Si vous êtes en Tunisie et pensez à une part comme à une voie vers un emploi, la lecture honnête est la suivante : le programme peut créer du travail, il n’en a pas encore créé à grande échelle, et la seule date à laquelle quoi que ce soit se mesure est l’horloge du programme ci-dessous. Si vous êtes à l’étranger et pensez à une part comme à un moyen de soutenir un parcours pour d’autres, la même lecture s’applique. N’achetez pas une part en vous fondant sur un emploi qui ne vous a pas été offert par écrit.",
+          "ar": "إن كنت في تونس وتنظر إلى الحصة طريقًا إلى وظيفة فالقراءة الصادقة هي: قد يوجد البرنامج عملًا ولم يوجد منه بعدُ شيئًا بحجم كبير، والتاريخ الوحيد الذي يُقاس به شيء هو ساعة البرنامج أدناه. وإن كنت في الخارج وتنظر إلى الحصة وسيلة لدعم مسار لغيرك فالقراءة نفسها تنطبق. فلا تشترِ حصة اعتمادًا على وظيفة لم تُعرض عليك كتابةً."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-design",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "2. The headcount is a design equation",
+        "fr": "2. L’effectif est une équation de conception",
+        "ar": "2. العدد معادلة تصميمية"
+      },
+      "paragraphs": [
+        {
+          "en": "“{{ d.experts_target }} experts” is {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. It is a design ceiling, not a claim of employment.",
+          "fr": "« {{ d.experts_target }} experts » vaut {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. C’est un plafond de conception, non une affirmation d’emploi.",
+          "ar": "«{{ d.experts_target }} خبير» تساوي {{ counts.macros }} × {{ experts.services_per_macro }} × {{ experts.per_service }}. وهو سقف تصميمي لا ادعاء بتوظيف."
+        },
+        {
+          "en": "Today in Tunisia, delivery team: {{ experts.developers_today|devs }}; {{ d.experts_current|certs }} (as of {{ dates.as_of }}).",
+          "fr": "Aujourd’hui en Tunisie, équipe de livraison : {{ experts.developers_today|devs }} ; {{ d.experts_current|certs }} (au {{ dates.as_of }}).",
+          "ar": "اليوم في تونس، فريق التسليم: {{ experts.developers_today|devs }}؛ {{ d.experts_current|certs }} (حتى {{ dates.as_of }})."
+        },
+        {
+          "en": "The first number is a calculation from the shape of the catalogue: so many macro works, so many services in each, so many expert posts per service. The number of posts per service is an estimate that the programme will review against how many people actually pass certification. The second line is the fact. When the gap between the two is large, as it is today, the right word for the first number is “ambition”, and the right word for the second is “reality”. We show both on purpose.",
+          "fr": "Le premier nombre est un calcul à partir de la forme du catalogue : tant de macro-métiers, tant de services dans chacun, tant de postes d’experts par service. Le nombre de postes par service est une estimation que le programme révisera au vu du nombre de personnes qui réussissent réellement la certification. La seconde ligne est le fait. Quand l’écart entre les deux est grand, comme aujourd’hui, le bon mot pour le premier nombre est « ambition », et pour le second « réalité ». Nous montrons les deux à dessein.",
+          "ar": "الرقم الأول حساب من شكل الفهرس: كذا مجالًا كبيرًا وكذا خدمة في كل منها وكذا وظيفة خبير لكل خدمة. وعدد الوظائف لكل خدمة تقدير سيراجعه البرنامج في ضوء عدد من يجتازون الاعتماد فعلًا. والسطر الثاني هو الواقع. وحين تكون الفجوة بينهما كبيرة كما هي اليوم فالكلمة الصحيحة للرقم الأول «طموح» وللثاني «واقع». ونعرض الاثنين عمدًا."
+        },
+        {
+          "en": "The delivery team today is small, and the owner is both the publisher and a developer. We say so because it affects what we can deliver and how fast, and because a reader deciding whether to rely on us should know how many people are behind the work. The [team page](/team/) names the people and the [editorial policy](/trust/editorial/) explains how that conflict is handled.",
+          "fr": "L’équipe de livraison est aujourd’hui petite, et le propriétaire est à la fois l’éditeur et un développeur. Nous le disons parce que cela influe sur ce que nous pouvons livrer et à quelle vitesse, et parce qu’un lecteur qui décide de s’appuyer sur nous doit savoir combien de personnes sont derrière le travail. La [page de l’équipe](/team/) nomme les personnes et la [politique éditoriale](/trust/editorial/) explique comment ce conflit est traité.",
+          "ar": "فريق التسليم اليوم صغير، والمالك هو الناشر وهو أيضًا مطوّر. ونقول ذلك لأنه يؤثر في ما نستطيع تسليمه وبأي سرعة، ولأن من يقرر الاعتماد علينا ينبغي أن يعرف كم شخصًا وراء العمل. وتذكر [صفحة الفريق](/team/) الأشخاص، وتشرح [السياسة التحريرية](/trust/editorial/) كيف يُعالج هذا التضارب."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-returns",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "3. No return is promised",
+        "fr": "3. Aucun rendement n’est promis",
+        "ar": "3. لا عائد موعود"
+      },
+      "paragraphs": [
+        {
+          "en": "No return, dividend or resale value is promised. A part funds a published programme at a published price.",
+          "fr": "Aucun rendement, dividende ni valeur de revente n’est promis. Une part finance un programme publié à un prix publié.",
+          "ar": "لا يُوعَد بعائد ولا بأرباح موزعة ولا بقيمة إعادة بيع. الحصة تموّل برنامجًا منشورًا بسعر منشور."
+        },
+        {
+          "en": "A part is not a share in a company, a loan, a deposit or a financial product, and nothing on this site should be read as an invitation to expect a financial gain. If the programme succeeds, the benefit is the path that exists: trained people, certificates that can be verified and services that can be delivered. If it falls short, the [refund rules](/trust/refunds/) say what happens to money that has not yet been used for what it was paid for.",
+          "fr": "Une part n’est ni une action d’une société, ni un prêt, ni un dépôt, ni un produit financier, et rien sur ce site ne doit être lu comme une invitation à attendre un gain financier. Si le programme réussit, le bénéfice est le parcours qui existe : des personnes formées, des certificats vérifiables et des services livrables. S’il échoue, les [règles de remboursement](/trust/refunds/) disent ce qu’il advient de l’argent qui n’a pas encore servi à ce pour quoi il a été payé.",
+          "ar": "الحصة ليست سهمًا في شركة ولا قرضًا ولا وديعة ولا منتجًا ماليًا، ولا ينبغي أن يُقرأ شيء في هذا الموقع دعوةً إلى توقع ربح مالي. فإن نجح البرنامج كانت الفائدة هي المسار القائم: أشخاص مدرَّبون وشهادات يمكن التحقق منها وخدمات يمكن تسليمها. وإن قصّر فإن [قواعد الاسترداد](/trust/refunds/) تقول ما يجري للمال الذي لم يُستعمل بعدُ فيما دُفع لأجله."
+        },
+        {
+          "en": "Funding that comes from elsewhere, such as sponsorships or advertising, is described on its own pages and is never counted as a return to people who buy parts. Advertising is not part of the plan at all; see the [advertising policy](/trust/ads-policy/). Anyone who tells you in the name of W5D that a part will pay back more than it cost is not speaking for us, and we ask you to tell us through the [corrections desk](/trust/corrections/).",
+          "fr": "Les financements venant d’ailleurs, comme les parrainages ou la publicité, sont décrits sur leurs propres pages et ne sont jamais comptés comme un rendement pour ceux qui achètent des parts. La publicité ne fait pas du tout partie du plan ; voir la [politique publicitaire](/trust/ads-policy/). Quiconque vous dit au nom de W5D qu’une part rapportera plus qu’elle n’a coûté ne parle pas pour nous, et nous vous demandons de nous le signaler via le [service des corrections](/trust/corrections/).",
+          "ar": "التمويل القادم من جهات أخرى، كالرعاية أو الإعلانات، موصوف في صفحاته الخاصة ولا يُحتسب أبدًا عائدًا لمن يشترون الحصص. والإعلان ليس جزءًا من الخطة أصلًا؛ انظر [سياسة الإعلانات](/trust/ads-policy/). ومن يقول لك باسم W5D إن الحصة ستعود بأكثر مما كلّفت فلا يتحدث باسمنا، ونرجو أن تخبرنا عبر [مكتب التصويبات](/trust/corrections/)."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-price",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "4. The price function",
+        "fr": "4. La fonction de prix",
+        "ar": "4. دالة السعر"
+      },
+      "paragraphs": [
+        {
+          "en": "price = base × (1 + α·p^k) × (1 + β·t^m), capped at {{ pricing.cap }}× base, with base {{ money.base_day }} {{ money.currency }} per day. The curve is public; constants change only with a dated, logged entry.",
+          "fr": "prix = base × (1 + α·p^k) × (1 + β·t^m), plafonné à {{ pricing.cap }}× la base, avec une base de {{ money.base_day }} {{ money.currency }} par jour. La courbe est publique ; les constantes ne changent qu’avec une entrée datée et consignée.",
+          "ar": "السعر = الأساس × (1 + α·p^k) × (1 + β·t^m)، بسقف {{ pricing.cap }} أضعاف الأساس، والأساس {{ money.base_day }} {{ money.currency }} في اليوم. والمنحنى علني، ولا تتغير الثوابت إلا بقيد مؤرَّخ ومسجَّل."
+        },
+        {
+          "en": "In words: the price of a day rises with the share of the programme that has already been funded, which is p, and with the share of the programme clock that has already passed, which is t. Early supporters pay less because they carry more risk, and the cap prevents the price from running away. Nobody is shown a different price from anyone else for the same day and the same moment, and the checkout shows the exact amount, with the formula’s inputs, before you confirm.",
+          "fr": "En mots : le prix d’un jour augmente avec la part du programme déjà financée, qui est p, et avec la part de l’horloge du programme déjà écoulée, qui est t. Les premiers soutiens paient moins parce qu’ils portent plus de risque, et le plafond empêche le prix de s’emballer. Personne ne voit un prix différent de celui d’un autre pour le même jour et le même moment, et le paiement affiche le montant exact, avec les entrées de la formule, avant que vous confirmiez.",
+          "ar": "بالكلمات: يرتفع سعر اليوم بارتفاع نسبة ما موِّل من البرنامج وهي p، وبارتفاع نسبة ما مضى من ساعة البرنامج وهي t. يدفع الداعمون الأوائل أقل لأنهم يتحملون مخاطرة أكبر، ويمنع السقف جموح السعر. ولا يُعرض على أحد سعر مختلف عن غيره لليوم نفسه واللحظة نفسها، وتُظهر صفحة الدفع المبلغ بدقة مع مدخلات المعادلة قبل أن تؤكد."
+        },
+        {
+          "en": "Prices are shown in {{ money.currency }}. If you pay from another country, your bank or provider may convert the amount and may charge for it; that charge is theirs, not ours, and it is not part of the price. Because the numbers come from one settings file, a price on a page can never disagree with the price at checkout: if you ever see two prices, one of them is a bug and we want to hear about it.",
+          "fr": "Les prix sont affichés en {{ money.currency }}. Si vous payez depuis un autre pays, votre banque ou prestataire peut convertir le montant et le facturer ; ces frais sont les leurs, non les nôtres, et ne font pas partie du prix. Comme les chiffres viennent d’un seul fichier de paramètres, un prix sur une page ne peut jamais contredire le prix au paiement : si vous voyez deux prix, l’un est un bogue et nous voulons le savoir.",
+          "ar": "تُعرض الأسعار بـ{{ money.currency }}. وإن دفعت من بلد آخر فقد يحوّل مصرفك أو مزودك المبلغ وقد يتقاضى عليه رسمًا؛ وهذا الرسم له لا لنا، وليس من السعر. ولأن الأرقام من ملف إعدادات واحد فلا يمكن أن يخالف سعر في صفحة سعر الدفع: فإن رأيت سعرين فأحدهما خلل ونريد أن نعلم به."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-pay",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "5. Payment state: what is open, what is closed",
+        "fr": "5. État des paiements : ce qui est ouvert, ce qui est fermé",
+        "ar": "5. حالة الدفع: ما هو مفتوح وما هو مغلق"
+      },
+      "paragraphs": [
+        {
+          "en": "Money is accepted only through a channel that the [status page](/status/) shows as open, with the reason when it is closed. Where no channel is open for your situation, a pledge is recorded as an intention and no money moves. Terms for real payments are shown before you confirm.",
+          "fr": "L’argent n’est accepté que par un canal que la [page de statut](/status/) montre comme ouvert, avec la raison lorsqu’il est fermé. Lorsqu’aucun canal n’est ouvert pour votre situation, un engagement est enregistré comme une intention et aucun argent ne bouge. Les conditions des paiements réels sont affichées avant que vous confirmiez.",
+          "ar": "لا يُقبل المال إلا عبر قناة تُظهرها [صفحة الحالة](/status/) مفتوحة، مع السبب حين تكون مغلقة. وحيث لا توجد قناة مفتوحة لوضعك يُسجَّل التعهد نيةً ولا يتحرك مال. وتُعرض شروط المدفوعات الفعلية قبل أن تؤكد."
+        },
+        {
+          "en": "Payment is not a single on/off switch, and the honest picture is more detailed than that. The programme does not yet have every legal element that some channels require, such as a registered business and a tax identifier, so those channels are closed and say why. Others, such as a bank transfer or a mobile wallet, can be open, and when they are, the amount, the reference and the conditions are shown to you in full. The state is read live from the settings, so it cannot say “open” while the code says “closed”.",
+          "fr": "Le paiement n’est pas un simple interrupteur, et le tableau honnête est plus détaillé. Le programme ne dispose pas encore de tous les éléments juridiques que certains canaux exigent, comme une entreprise immatriculée et un identifiant fiscal ; ces canaux sont donc fermés et disent pourquoi. D’autres, comme un virement bancaire ou un portefeuille mobile, peuvent être ouverts, et dans ce cas le montant, la référence et les conditions vous sont montrés en entier. L’état est lu en direct depuis les paramètres, il ne peut donc pas dire « ouvert » quand le code dit « fermé ».",
+          "ar": "الدفع ليس مجرد مفتاح تشغيل وإيقاف، والصورة الصادقة أكثر تفصيلًا من ذلك. فالبرنامج لا يملك بعدُ كل العناصر القانونية التي تتطلبها بعض القنوات، كنشاط مسجّل ومعرّف جبائي، فتلك القنوات مغلقة وتقول لماذا. وقنوات أخرى، كالتحويل المصرفي أو المحفظة المحمولة، قد تكون مفتوحة، وحينها يُعرض عليك المبلغ والمرجع والشروط كاملة. وتُقرأ الحالة حيّة من الإعدادات فلا يمكن أن تقول «مفتوح» بينما تقول الشيفرة «مغلق»."
+        },
+        {
+          "en": "Pre-paid credits and sponsorships of the registry activation follow stricter rules, because they are paid before the business can legally invoice. They are held in escrow under a written condition and returned if it is not met; the [refund rules](/trust/refunds/) and the [terms](/trust/terms/) set this out. A payment that has been received is acknowledged in writing, and a payment that cannot be accepted is returned by the same channel.",
+          "fr": "Les crédits prépayés et les parrainages de l’activation du registre suivent des règles plus strictes, car ils sont payés avant que l’entreprise puisse légalement facturer. Ils sont conservés sous séquestre sous une condition écrite et rendus si elle n’est pas remplie ; les [règles de remboursement](/trust/refunds/) et les [conditions](/trust/terms/) l’exposent. Un paiement reçu est confirmé par écrit, et un paiement qui ne peut pas être accepté est rendu par le même canal.",
+          "ar": "تخضع الأرصدة المسبقة الدفع ورعاية تفعيل السجل لقواعد أشد، لأنها تُدفع قبل أن يستطيع النشاط قانونيًا إصدار فاتورة. وتُحفظ في حساب ضمان بشرط مكتوب وتُرد إن لم يتحقق؛ وتبين ذلك [قواعد الاسترداد](/trust/refunds/) و[الشروط](/trust/terms/). ويُقرّ كتابةً بالمبلغ المستلم، ويُرد المبلغ الذي لا يمكن قبوله عبر القناة نفسها."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-offer",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "6. Dates",
+        "fr": "6. Dates",
+        "ar": "6. المواعيد"
+      },
+      "paragraphs": [
+        {
+          "en": "Programme clock: {{ dates.start }} to {{ dates.deadline }}. Promotional offer on the Admin Dashboard licence valid before {{ dates.offer_year }}.",
+          "fr": "Horloge du programme : du {{ dates.start }} au {{ dates.deadline }}. Offre promotionnelle sur la licence Admin Dashboard valable avant {{ dates.offer_year }}.",
+          "ar": "ساعة البرنامج: من {{ dates.start }} إلى {{ dates.deadline }}. والعرض الترويجي على رخصة Admin Dashboard ساري قبل {{ dates.offer_year }}."
+        },
+        {
+          "en": "The programme clock is the period in which the price curve runs: t is zero on the first date and one on the last. A date is a commitment about when something will be measured, not a promise that something will be finished by then. Dates can move, and when one moves, the change is published with the reason and the day it was made, and orders already placed keep the dates under which they were placed.",
+          "fr": "L’horloge du programme est la période pendant laquelle la courbe de prix s’exécute : t vaut zéro à la première date et un à la dernière. Une date est un engagement sur le moment où quelque chose sera mesuré, non une promesse que quelque chose sera terminé à ce moment. Les dates peuvent bouger, et quand l’une bouge, le changement est publié avec la raison et le jour où il a été fait, et les commandes déjà passées conservent les dates sous lesquelles elles ont été passées.",
+          "ar": "ساعة البرنامج هي الفترة التي يجري فيها منحنى السعر: t صفر في التاريخ الأول وواحد في الأخير. والتاريخ التزام بموعد قياس شيء ما لا وعد بإنجازه حينئذ. وقد تتحرك المواعيد، وحين يتحرك أحدها يُنشر التغيير مع السبب ويوم إجرائه، وتحتفظ الطلبات المقدمة بالمواعيد التي قُدّمت بموجبها."
+        },
+        {
+          "en": "The offer mentioned in this limit is a promotional condition on one product. It has a date after which it ends, and after that date the normal price applies. We write the date down so that nobody has to guess whether an offer that appears again is the same one or a new one.",
+          "fr": "L’offre mentionnée dans cette limite est une condition promotionnelle sur un produit. Elle a une date après laquelle elle prend fin, et après cette date le prix normal s’applique. Nous écrivons la date pour que personne n’ait à deviner si une offre qui réapparaît est la même ou une nouvelle.",
+          "ar": "العرض المذكور في هذا الحد شرط ترويجي على منتج واحد. له تاريخ ينتهي بعده، وبعده يسري السعر العادي. ونكتب التاريخ حتى لا يضطر أحد إلى التخمين هل العرض الذي يظهر من جديد هو نفسه أم عرض جديد."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "ts-sum",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "The six limits at a glance",
+        "fr": "Les six limites en un coup d’œil",
+        "ar": "الحدود الست في لمحة"
+      },
+      "columns": [
+        {
+          "en": "Limit",
+          "fr": "Limite",
+          "ar": "الحد"
+        },
+        {
+          "en": "What we say",
+          "fr": "Ce que nous disons",
+          "ar": "ما نقوله"
+        },
+        {
+          "en": "What we do not say",
+          "fr": "Ce que nous ne disons pas",
+          "ar": "ما لا نقوله"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Job",
+            "fr": "Emploi",
+            "ar": "الوظيفة"
+          },
+          {
+            "en": "A part buys access to a path.",
+            "fr": "Une part achète l’accès à un parcours.",
+            "ar": "تشتري الحصة النفاذ إلى مسار."
+          },
+          {
+            "en": "That a part leads to a job.",
+            "fr": "Qu’une part mène à un emploi.",
+            "ar": "أن الحصة تفضي إلى وظيفة."
+          }
+        ],
+        [
+          {
+            "en": "Headcount",
+            "fr": "Effectif",
+            "ar": "العدد"
+          },
+          {
+            "en": "A design ceiling, shown beside today’s fact.",
+            "fr": "Un plafond de conception, montré à côté du fait d’aujourd’hui.",
+            "ar": "سقف تصميمي معروض بجوار واقع اليوم."
+          },
+          {
+            "en": "That this many people work for W5D.",
+            "fr": "Que tant de personnes travaillent pour W5D.",
+            "ar": "أن هذا العدد يعمل لدى W5D."
+          }
+        ],
+        [
+          {
+            "en": "Return",
+            "fr": "Rendement",
+            "ar": "العائد"
+          },
+          {
+            "en": "A part funds a programme at a published price.",
+            "fr": "Une part finance un programme à un prix publié.",
+            "ar": "تموّل الحصة برنامجًا بسعر منشور."
+          },
+          {
+            "en": "Any dividend, profit or resale value.",
+            "fr": "Aucun dividende, profit ou valeur de revente.",
+            "ar": "أي أرباح أو قيمة إعادة بيع."
+          }
+        ],
+        [
+          {
+            "en": "Price",
+            "fr": "Prix",
+            "ar": "السعر"
+          },
+          {
+            "en": "A public curve, a cap and a date for every constant change.",
+            "fr": "Une courbe publique, un plafond et une date pour chaque changement de constante.",
+            "ar": "منحنى علني وسقف وتاريخ لكل تغيير في الثوابت."
+          },
+          {
+            "en": "A private price for a favoured buyer.",
+            "fr": "Un prix privé pour un acheteur favorisé.",
+            "ar": "سعر خاص لمشترٍ مفضَّل."
+          }
+        ],
+        [
+          {
+            "en": "Payment",
+            "fr": "Paiement",
+            "ar": "الدفع"
+          },
+          {
+            "en": "Only open channels take money; closed ones say why.",
+            "fr": "Seuls les canaux ouverts prennent de l’argent ; les fermés disent pourquoi.",
+            "ar": "القنوات المفتوحة وحدها تقبل المال، والمغلقة تقول لماذا."
+          },
+          {
+            "en": "That a closed channel will work soon.",
+            "fr": "Qu’un canal fermé fonctionnera bientôt.",
+            "ar": "أن قناة مغلقة ستعمل قريبًا."
+          }
+        ],
+        [
+          {
+            "en": "Dates",
+            "fr": "Dates",
+            "ar": "المواعيد"
+          },
+          {
+            "en": "When things are measured; changes are logged.",
+            "fr": "Quand les choses sont mesurées ; les changements sont consignés.",
+            "ar": "متى تُقاس الأشياء؛ والتغييرات مسجَّلة."
+          },
+          {
+            "en": "That anything will be finished by a date.",
+            "fr": "Que quoi que ce soit sera terminé à une date.",
+            "ar": "أن شيئًا سينجز بحلول تاريخ."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "ts-faq",
+      "tier": "i",
+      "focus": 2,
+      "title": {
+        "en": "Questions about the limits",
+        "fr": "Questions sur les limites",
+        "ar": "أسئلة عن الحدود"
+      },
+      "items": [
+        {
+          "q": {
+            "en": "Why publish limits instead of benefits?",
+            "fr": "Pourquoi publier des limites plutôt que des bénéfices ?",
+            "ar": "لماذا ننشر الحدود لا الفوائد؟"
+          },
+          "a": {
+            "en": "The benefits are described on the programme pages. The limits are here because a decision is only informed when the person deciding knows where the claims stop.",
+            "fr": "Les bénéfices sont décrits sur les pages du programme. Les limites sont ici parce qu’une décision n’est éclairée que lorsque celui qui décide sait où les affirmations s’arrêtent.",
+            "ar": "الفوائد موصوفة في صفحات البرنامج. والحدود هنا لأن القرار لا يكون مستنيرًا إلا إذا عرف صاحبه أين تنتهي الادعاءات."
+          }
+        },
+        {
+          "q": {
+            "en": "Can the limits change?",
+            "fr": "Les limites peuvent-elles changer ?",
+            "ar": "هل يمكن أن تتغير الحدود؟"
+          },
+          "a": {
+            "en": "Yes, in writing. A change is dated, the reason is given, and orders placed before the change keep the terms they were placed under. The review date is shown on this page.",
+            "fr": "Oui, par écrit. Un changement est daté, le motif est donné, et les commandes passées avant le changement conservent les conditions sous lesquelles elles ont été passées. La date de revue est affichée sur cette page.",
+            "ar": "نعم، كتابةً. التغيير مؤرَّخ ويُذكر سببه، وتحتفظ الطلبات السابقة للتغيير بالشروط التي قُدّمت بموجبها. وتاريخ المراجعة معروض في هذه الصفحة."
+          }
+        },
+        {
+          "q": {
+            "en": "I am in Tunisia. Is anything different for me?",
+            "fr": "Je suis en Tunisie. Y a-t-il une différence pour moi ?",
+            "ar": "أنا في تونس. هل ثمة فرق بالنسبة لي؟"
+          },
+          "a": {
+            "en": "The limits are the same. The legal frame that surrounds them is Tunisian, and the points still being confirmed with a lawyer are marked on the [terms](/trust/terms/) and the [imprint](/trust/imprint/).",
+            "fr": "Les limites sont les mêmes. Le cadre juridique qui les entoure est tunisien, et les points encore en cours de confirmation avec un avocat sont signalés dans les [conditions](/trust/terms/) et les [mentions légales](/trust/imprint/).",
+            "ar": "الحدود هي نفسها. والإطار القانوني المحيط بها تونسي، والنقاط التي ما زالت تُؤكَّد مع محامٍ مشار إليها في [الشروط](/trust/terms/) و[الإشعار القانوني](/trust/imprint/)."
+          }
+        },
+        {
+          "q": {
+            "en": "I am abroad. Which law protects me?",
+            "fr": "Je suis à l’étranger. Quelle loi me protège ?",
+            "ar": "أنا في الخارج. أي قانون يحميني؟"
+          },
+          "a": {
+            "en": "The terms are governed by Tunisian law, but you keep every mandatory consumer right you have where you live. See the [refund rules](/trust/refunds/) for the withdrawal period that applies to you.",
+            "fr": "Les conditions sont régies par le droit tunisien, mais vous conservez tous les droits impératifs de consommateur dont vous disposez là où vous vivez. Voir les [règles de remboursement](/trust/refunds/) pour le délai de rétractation qui vous concerne.",
+            "ar": "تخضع الشروط للقانون التونسي، لكنك تحتفظ بكل حقوق المستهلك الآمرة التي تملكها حيث تقيم. انظر [قواعد الاسترداد](/trust/refunds/) لمهلة العدول التي تنطبق عليك."
+          }
+        },
+        {
+          "q": {
+            "en": "Where do I report a limit that is wrong?",
+            "fr": "Où signaler une limite inexacte ?",
+            "ar": "أين أبلّغ عن حد غير صحيح؟"
+          },
+          "a": {
+            "en": "Use the [corrections desk](/trust/corrections/). Name the limit, say what is wrong and give your source. You will have a written answer within {{ quality.correction_sla_days }} days.",
+            "fr": "Utilisez le [service des corrections](/trust/corrections/). Nommez la limite, dites ce qui est inexact et donnez votre source. Vous aurez une réponse écrite sous {{ quality.correction_sla_days }} jours.",
+            "ar": "استخدم [مكتب التصويبات](/trust/corrections/). سمِّ الحد وقل ما الخطأ وأعطِ مصدرك. سيصلك رد كتابي خلال {{ quality.correction_sla_days }} يومًا."
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "ts-related",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Related pages and review",
+        "fr": "Pages liées et revue",
+        "ar": "صفحات ذات صلة والمراجعة"
+      },
+      "paragraphs": [
+        {
+          "en": "Read the [terms](/trust/terms/), the [refund rules](/trust/refunds/), the [sampling method](/trust/sampling/), the [editorial policy](/trust/editorial/) and the live [status page](/status/). The [pricing page](/pricing/) shows the curve with today’s inputs.",
+          "fr": "Lisez les [conditions](/trust/terms/), les [règles de remboursement](/trust/refunds/), la [méthode d’échantillonnage](/trust/sampling/), la [politique éditoriale](/trust/editorial/) et la [page de statut](/status/) en direct. La [page des prix](/pricing/) montre la courbe avec les entrées du jour.",
+          "ar": "اقرأ [الشروط](/trust/terms/) و[قواعد الاسترداد](/trust/refunds/) و[منهجية أخذ العينات](/trust/sampling/) و[السياسة التحريرية](/trust/editorial/) و[صفحة الحالة](/status/) الحية. وتعرض [صفحة الأسعار](/pricing/) المنحنى بمدخلات اليوم."
+        },
+        {
+          "en": "This page is a plain-language statement of how W5D operates. It is not legal advice, and it is reviewed against Tunisian law with a qualified Tunisian lawyer and accountant before it is relied on. Last review: {{ dates.as_of }}; reviewed at least every {{ legal.review_months }} months.",
+          "fr": "Cette page est une déclaration en langage clair de la façon dont W5D fonctionne. Elle ne constitue pas un avis juridique ; elle est confrontée au droit tunisien avec un avocat et un comptable tunisiens qualifiés avant qu’on s’y fie. Dernière revue : {{ dates.as_of }} ; revue au moins tous les {{ legal.review_months }} mois.",
+          "ar": "هذه الصفحة عرض مبسّط لطريقة عمل W5D، وليست استشارة قانونية؛ وتُراجَع على ضوء القانون التونسي مع محامٍ ومحاسب تونسيين مؤهلين قبل الاعتماد عليها. آخر مراجعة: {{ dates.as_of }}؛ وتُراجَع مرة كل {{ legal.review_months }} أشهر على الأقل."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "ts-final",
+      "gradient": "peak",
+      "title": {
+        "en": "Understood? **Continue.**",
+        "fr": "Compris ? **Continuez.**",
+        "ar": "فهمت؟ **تابع.**"
+      },
+      "body": {
+        "en": "If a limit does not suit you, you have lost nothing by reading it. If it does, the next step is the path itself.",
+        "fr": "Si une limite ne vous convient pas, vous n’avez rien perdu en la lisant. Si elle vous convient, la prochaine étape est le parcours lui-même.",
+        "ar": "إن لم يناسبك حد فلم تخسر شيئًا بقراءته. وإن ناسبك فالخطوة التالية هي المسار نفسه."
+      },
+      "ctas": [
+        {
+          "label": {
+            "en": "Take a part today",
+            "fr": "Prendre une part aujourd’hui",
+            "ar": "احصل على حصة اليوم"
+          },
+          "href": "/checkout/",
+          "style": "peak",
+          "arrow": true
+        },
+        {
+          "label": {
+            "en": "File a correction",
+            "fr": "Déposer une correction",
+            "ar": "قدّم تصويبًا"
+          },
+          "href": "/trust/corrections/",
+          "style": "ghost"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

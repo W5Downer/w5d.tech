@@ -1,6 +1,6 @@
 /* integrations.js — third-party services, configured by the owner (portal → Integrations). External file: CSP script-src 'self'.
  * Config arrives in the data-w5d-int attribute of this script tag (JSON, no secrets). Nothing here runs unless the owner enabled it.
- *  - consent: trackers load ONLY after the visitor accepts (localStorage "w5d-consent"); "Refuse" keeps everything off; choice can be changed from the footer.
+ *  - consent: trackers load ONLY after the visitor accepts in the cookie notice (js/cookies.js; localStorage "w5d-consent"); refusing keeps everything off; the choice can be changed from the footer.
  *  - reCAPTCHA v3 (invisible) / v2 (checkbox) on every <form> that carries [data-captcha] / [data-captcha-v2]; works for forms injected later (sign-in modal).
  */
 (function () {
@@ -51,18 +51,12 @@
     }
   }
 
+  /* The notice itself lives in js/cookies.js (always on, every page). It tells us the choice through the "w5d:consent" event
+   * and keeps the legacy localStorage record; trackers start only when measure = true. */
   function setupConsent(t) {
-    var bar = $('[data-consent]');
     var c = stored();
-    function show() { if (bar) { bar.hidden = false; var b = $('[data-consent-accept]', bar); if (b && document.activeElement === document.body) { /* do not steal focus */ } } }
-    function hide() { if (bar) bar.hidden = true; }
-    if (c && c.a) loadTrackers(t); else if (!c) show();
-    $$('[data-consent-accept]').forEach(function (b) { b.addEventListener('click', function () { save(true); hide(); loadTrackers(t); }); });
-    $$('[data-consent-refuse]').forEach(function (b) { b.addEventListener('click', function () {
-      var was = loaded; save(false); hide();
-      if (was) location.reload(); // trackers already ran: reload so they stop (cookies they set can be cleared in the browser)
-    }); });
-    $$('[data-consent-open]').forEach(function (b) { b.addEventListener('click', function () { show(); if (bar) { var f = $('button', bar); if (f) f.focus(); } }); });
+    if (c && c.a) loadTrackers(t);
+    document.addEventListener('w5d:consent', function (e) { if (e.detail && e.detail.measure) loadTrackers(t); });
   }
   if (cfg.track) setupConsent(cfg.track);
 

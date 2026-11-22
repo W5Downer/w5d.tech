@@ -116,8 +116,8 @@ b = call(g, 'GET', '/pricing/')[2]
 check('sections emit data-rv', b.count('data-rv="up"') >= 3, b.count('data-rv'))
 css = call(g, 'GET', '/assets/_base/css/attention.css')[2]
 check('reveal hiding only applies under .js', '.js [data-rv]' in css and '\n[data-rv]{' not in css)
-check('reduced motion is calm, not off (orbs slowed, reveal fade-only)', 'animation-duration: 40s' in css and 'data-motion="full"' in css)
-check('footer offers the full-motion opt-in', 'data-motion-toggle' in call(g, 'GET', '/')[2])
+check('animations are automatic; calm mode is the visitor switch (html[data-motion=calm]), not the OS flag', 'animation-duration: 40s' in css and 'html[data-motion="calm"]' in css and 'html:not([data-motion="full"])' not in css)
+check('footer offers the reduce-animations switch', 'data-motion-toggle' in call(g, 'GET', '/')[2])
 
 section('mega menu: five doors, not one investor funnel')
 import json as _j

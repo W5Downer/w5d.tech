@@ -58,6 +58,30 @@ PAYMENT_D17_GSM=+21620123456
 PAYMENT_D17_NAME="W5D TECH"
 VIEW_CACHE=true
 VIEW_CACHE_CHECK=false
+FUNDING_MODE=PRE_REGISTRY
+F1_AUTO_ENTREPRENEUR_ENABLED=true
+F1_TAX_RATE=0.005
+F2_SPONSORSHIP_ENABLED=true
+F2_SPONSORSHIP_MIN_TND=2700
+F2_FUNDS_RESTRICTED=true
+F2_REFUND_IF_ACTIVATION_FAILS=true
+F3_PARTS_UNDER_PERSONAL_FILE=true
+F4_PRE_SOLD_CREDITS_ENABLED=true
+F4_CONDITION_PRECEDENT="matricule_fiscal_issued"
+F4_ESCROW_REQUIRED=true
+F5_STARTUP_ACT_APPLICATION=pending
+F6_OWNER_SALARY_DEFERRED=true
+F6_OWNER_SALARY_PUBLISHED=true
+RNE_ACTIVATION_FEE_TND=25
+RNE_BUDGET_TND=1500
+VAT_MATRICULE_FISCAL=
+ADS_STATUS=not_applied
+ADS_MIN_CONTENT_PAGES=30
+ADS_MIN_PAGE_WORDS=200
+ADS_WITHDRAWAL_ALLOWED=false
+ADS_ACCRUED_USD=0
+ADS_ACCRUED_TND=0
+ADS_WITHDRAWN_TND=0
 EOF
 chmod 600 "$PT/app/.env"
 echo "copy ready: $(du -sh "$PT/app" | cut -f1)"
@@ -77,6 +101,8 @@ export PYTHONPATH="$PT/app/tests/_prod" W5D_OWNER_PASS="$PASS" SMOKE_CURL_OPTS="
 run "view cache build + status (deploy step)"       bash -c 'php bin/view.php cache && php bin/view.php status'
 run "preflight (production copy must have 0 FAIL)"  env PREFLIGHT_ALLOW_LOCAL_URL=1 php bin/preflight.php
 run "lint"                                          php bin/lint.php
+run "funding stack + AdSense fail-closed (tests 1-8)"  php tests/funding.php
+run "trust pages: real content, 900 words x3, links, footer, sitemap" php tests/trust.php
 run "view cache unit tests"                         php tests/viewcache.php
 run "generated QCM pool (520,000 questions)"        php tests/qcmgen.php
 run "production security checks"                    python3 tests/production.py "$BASE" "$PASS"

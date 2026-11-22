@@ -1,0 +1,33 @@
+<?php
+/** Public wording for Funding::channelAvailable() and Ads::canApplyDetail() reason codes (en, fr, ar). Placeholders: :counted :needed :min :n */
+$L = fn(string $en, string $fr, string $ar) => ['en' => $en, 'fr' => $fr, 'ar' => $ar];
+return [
+    'ok' => $L('Open: every condition is met.', 'Ouvert : toutes les conditions sont remplies.', 'مفتوح: كل الشروط مستوفاة.'),
+    'f5_filed' => $L('Filed: the application exists, and any benefit depends on the decision, not on the filing.', 'Déposée : le dossier existe, et tout avantage dépend de la décision, pas du dépôt.', 'مُقدَّم: الطلب موجود، وأي ميزة تتوقف على القرار لا على التقديم.'),
+    'disabled' => $L('Switched off in the configuration.', 'Désactivé dans la configuration.', 'معطّل في الإعدادات.'),
+    'unknown_channel' => $L('Unknown channel.', 'Canal inconnu.', 'قناة غير معروفة.'),
+    'check_failed' => $L('The check could not run, so the channel stays closed.', 'La vérification n’a pas pu s’exécuter : le canal reste fermé.', 'تعذّر إجراء التحقق، لذا تبقى القناة مغلقة.'),
+    'registration_not_recorded' => $L('Closed: the owner’s auto-entrepreneur registration is not recorded yet.', 'Fermé : l’immatriculation auto-entrepreneur du propriétaire n’est pas encore enregistrée.', 'مغلق: لم يُسجَّل بعد تسجيل المالك كمقاول ذاتي.'),
+    'registration_date_invalid' => $L('Closed: the recorded registration has no valid date.', 'Fermé : l’immatriculation enregistrée n’a pas de date valide.', 'مغلق: التسجيل المسجّل بلا تاريخ صالح.'),
+    'restriction_token_off' => $L('Closed: sponsorship funds are not declared restricted.', 'Fermé : les fonds de parrainage ne sont pas déclarés affectés.', 'مغلق: أموال الرعاية غير معلنة كمقيّدة.'),
+    'refund_token_off' => $L('Closed: sponsorship funds are not declared refundable if activation fails.', 'Fermé : les fonds de parrainage ne sont pas déclarés remboursables si l’activation échoue.', 'مغلق: أموال الرعاية غير معلنة كقابلة للاسترداد إن فشل التفعيل.'),
+    'template_missing' => $L('Closed: the agreement template cannot be read.', 'Fermé : le modèle de contrat est illisible.', 'مغلق: تعذّرت قراءة نموذج الاتفاقية.'),
+    'restriction_clause_missing' => $L('Closed: the sponsorship agreement has no restriction clause.', 'Fermé : l’accord de parrainage n’a pas de clause d’affectation.', 'مغلق: اتفاقية الرعاية بلا بند تقييد الاستخدام.'),
+    'refund_clause_missing' => $L('Closed: the sponsorship agreement has no refund clause.', 'Fermé : l’accord de parrainage n’a pas de clause de remboursement.', 'مغلق: اتفاقية الرعاية بلا بند استرداد.'),
+    'part_transferable' => $L('Closed: the parts code contains a transfer or money-withdrawal path.', 'Fermé : le code des parts contient un chemin de transfert ou de retrait.', 'مغلق: شيفرة الحصص فيها مسار تحويل أو سحب نقدي.'),
+    'escrow_not_required' => $L('Closed: pre-sold credits need escrow.', 'Fermé : les crédits prévendus exigent un séquestre.', 'مغلق: الأرصدة المباعة مسبقا تتطلب حساب ضمان.'),
+    'condition_token_empty' => $L('Closed: no condition precedent is configured.', 'Fermé : aucune condition suspensive n’est configurée.', 'مغلق: لم يُضبط أي شرط واقف.'),
+    'condition_missing' => $L('Closed: the pre-sale contract does not contain the condition precedent verbatim.', 'Fermé : le contrat de prévente ne contient pas la condition suspensive mot pour mot.', 'مغلق: عقد البيع المسبق لا يتضمن الشرط الواقف حرفيا.'),
+    'escrow_clause_missing' => $L('Closed: the pre-sale contract has no escrow clause.', 'Fermé : le contrat de prévente n’a pas de clause de séquestre.', 'مغلق: عقد البيع المسبق بلا بند حساب ضمان.'),
+    'status_invalid' => $L('Closed: the application status is not a known value.', 'Fermé : le statut de la candidature n’est pas une valeur connue.', 'مغلق: حالة الطلب ليست قيمة معروفة.'),
+    'not_applied' => $L('Closed: no application has been filed.', 'Fermé : aucune candidature n’a été déposée.', 'مغلق: لم يُقدَّم أي طلب.'),
+    'threshold_missing' => $L('Closed: the page threshold is not set.', 'Fermé : le seuil de pages n’est pas défini.', 'مغلق: حد الصفحات غير محدد.'),
+    'gate_not_computed' => $L('Closed: the content gate has not been computed yet.', 'Fermé : la barrière de contenu n’a pas encore été calculée.', 'مغلق: لم يُحسب بعد شرط المحتوى.'),
+    'gate_stale' => $L('Closed: content changed since the gate was computed.', 'Fermé : le contenu a changé depuis le calcul de la barrière.', 'مغلق: تغيّر المحتوى منذ حساب الشرط.'),
+    'too_few_pages' => $L('Closed: :counted substantive pages of :needed needed (a page under :min words does not count).', 'Fermé : :counted pages substantielles sur :needed requises (une page de moins de :min mots ne compte pas).', 'مغلق: :counted صفحة جوهرية من :needed مطلوبة (الصفحة بأقل من :min كلمة لا تُحتسب).'),
+    'too_few_service' => $L('Closed: at least 5 service briefs are needed.', 'Fermé : au moins 5 fiches de service sont nécessaires.', 'مغلق: يلزم 5 ملخصات خدمة على الأقل.'),
+    'too_few_macro' => $L('Closed: at least 5 macro-problem pages are needed.', 'Fermé : au moins 5 pages de macro-problèmes sont nécessaires.', 'مغلق: يلزم 5 صفحات للمشكلات الكبرى على الأقل.'),
+    'too_few_trust' => $L('Closed: at least 5 evidence and trust pages are needed.', 'Fermé : au moins 5 pages de preuves et de confiance sont nécessaires.', 'مغلق: يلزم 5 صفحات أدلة وثقة على الأقل.'),
+    'policy_missing' => $L('Closed: the page /trust/ads-policy/ does not exist.', 'Fermé : la page /trust/ads-policy/ n’existe pas.', 'مغلق: صفحة /trust/ads-policy/ غير موجودة.'),
+    'consent_missing' => $L('Closed: the consent mechanism is not recorded.', 'Fermé : le mécanisme de consentement n’est pas enregistré.', 'مغلق: آلية الموافقة غير مسجّلة.'),
+];

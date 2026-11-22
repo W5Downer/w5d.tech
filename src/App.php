@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds};
 
 final class App
 {
@@ -93,6 +93,7 @@ final class App
         $r->any('/contact', [Forms::class, 'contact']);
         $r->any('/careers/managers', [Forms::class, 'managers']);
         $r->any('/newsletter', [Forms::class, 'newsletter']);
+        $r->any('/sponsor', [Funds::class, 'sponsor']);
 
         // ---- investor demo flows ----
         $r->any('/checkout', [Checkout::class, 'wizard']);
@@ -208,6 +209,9 @@ final class App
         $r->post($m . '/affiliates/payout', [Programs::class, 'payoutSettle']);
         $r->post($m . '/certificates/issue', [Programs::class, 'certIssue']);
         $r->post($m . '/certificates/revoke', [Programs::class, 'certRevoke']);
+        // funding stack (src/controllers/Funds.php)
+        $r->get($m . '/funding/download', [Funds::class, 'download']);
+        foreach (['record' => 'record', 'sponsorship' => 'sponsorship', 'presale' => 'presale', 'ads-rejection' => 'adsRejection', 'ads-reapplied' => 'adsReapplied'] as $seg => $fn) $r->post($m . '/funding/' . $seg, [Funds::class, $fn]);
         // CRUD with ACL (src/Crud.php): static segments first, then the generic menu
         $r->get($m . '/{menu}/new', [Admin::class, 'crudNew']);
         $r->get($m . '/{menu}/{id}/edit', [Admin::class, 'crudEdit']);

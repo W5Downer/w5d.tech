@@ -3,7 +3,7 @@
   $tone = $d['gradient'] ?? 'peak';
   $center = $variant !== 'product';
 @endphp
-<section @if(!empty($d['id']))id="{{ $d['id'] }}"@endif class="tier-e focus-5 hero-dark pt-36 pb-20 sm:pb-24" data-tier="e" data-focus="5" data-tone="{{ $tone }}">
+<section @if(!empty($d['id']))id="{{ $d['id'] }}"@endif class="tier-e focus-5 hero-dark spotlight pt-36 pb-20 sm:pb-24" data-tier="e" data-focus="5" data-tone="{{ $tone }}">
   <div class="absolute inset-0 grid-bg pointer-events-none -z-10"></div>
   <div class="orb-a"></div><div class="orb-b"></div><div class="orb-c"></div>
   <div class="relative mx-auto {{ $center ? 'max-w-5xl' : 'max-w-7xl lg:grid-cols-2 items-center' }} px-4 sm:px-6 lg:px-8 grid gap-12">

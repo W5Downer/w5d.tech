@@ -1,0 +1,21 @@
+W5D TECH — PRE-SOLD SERVICE CREDITS CONTRACT (channel F4)
+Template for review by a Tunisian lawyer and accountant before any signature. It is not legal advice and it is not an offer until counsel has approved it.
+Client: {{client_name}}   Contract reference: {{contract_ref}}   Date: {{date}}   Price in the schedule: {{amount_tnd}} TND for {{credits}} service credits
+
+[condition-precedent] CONDITION PRECEDENT. This contract takes effect, and the credits become usable, only when the following condition is met: matricule_fiscal_issued. Until it is met no sale is completed, no invoice is issued for these credits and no service is delivered under them.
+
+[escrow] ESCROW. Until the condition precedent is met the Client’s payment is held in escrow with the escrow agent named in the schedule ({{escrow_agent}}). W5D TECH cannot spend it, and it is not counted as revenue or as a completed sale on the status page. It is shown apart, as escrowed.
+
+[refund] REFUND. If the condition precedent is not met by the date written in the schedule, the escrow agent returns the full payment to the Client. The Client may also withdraw before the condition is met and receive the full payment back.
+
+[credits] SERVICE CREDITS. A credit entitles the Client to one unit of a named W5D service under the published terms of that service. Credits are personal to the Client: they cannot be transferred, are not redeemable for money and are not a financial instrument.
+
+[no-return] NO RETURN. Credits earn nothing by themselves. They are prepayment for services, not an investment.
+
+[delivery] DELIVERY. Delivery follows the published quality rules (sampling, corrections, evidence). Nothing in this contract promises an outcome, a result or an income to the Client.
+
+[law] LAW AND DISPUTES. Governing law, competent court, invoicing and the tax treatment of the escrowed sum are completed after the advice of counsel and the accountant. Until then the template must not be signed.
+
+[fr-condition-precedent] CONDITION SUSPENSIVE. Le contrat ne prend effet, et les crédits ne sont utilisables, que lorsque la condition suivante est remplie : matricule_fiscal_issued. Tant qu’elle ne l’est pas, aucune vente n’est conclue, aucune facture n’est émise et aucun service n’est livré.
+
+[fr-escrow] SÉQUESTRE. Jusqu’à la réalisation de la condition, le paiement du client est conservé sous séquestre ; il ne peut être dépensé et n’est compté ni comme recette ni comme vente conclue.
