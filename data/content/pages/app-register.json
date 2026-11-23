@@ -54,7 +54,7 @@
    "id": "reg-form",
    "tier": "e",
    "focus": 4,
-   "action": "/app/register",
+   "action": "/app/register/",
    "title": {
     "en": "Applicant file",
     "fr": "Dossier de candidature",

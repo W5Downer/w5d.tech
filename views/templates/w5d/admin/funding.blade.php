@@ -46,7 +46,7 @@
 </div>
 
 <h2 class="font-display font-semibold mt-10 mb-3">F2 · Restricted sponsorships</h2>
-<p class="text-sm mb-3 text-slate-600 dark:text-slate-400">Templates: <a class="btn-link" href="{{ $b . 'download?kind=f2&pdf=1' }}">sponsorship agreement (PDF)</a>. Public form: <a class="btn-link" href="{{ url('/sponsor/') }}">/sponsor/</a>. A pledge is not money: it counts only after you record the signed agreement and the arrival date.</p>
+<p class="text-sm mb-3 text-slate-600 dark:text-slate-400">Templates: <a class="btn-link" href="{{ $b . 'download/?kind=f2&pdf=1' }}">sponsorship agreement (PDF)</a>. Public form: <a class="btn-link" href="{{ url('/sponsor/') }}">/sponsor/</a>. A pledge is not money: it counts only after you record the signed agreement and the arrival date.</p>
 @if(!$v['sponsorships'])<p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-5 text-sm text-slate-500">No pledge yet.</p>@else
 <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><thead><tr><th>Ref</th><th>Sponsor</th><th class="text-end">Amount</th><th>Status</th><th>Action</th></tr></thead><tbody>
 @foreach($v['sponsorships'] as $s)
@@ -54,13 +54,13 @@
   <td>@if($can)
     @if($s['status'] === 'pledged')<form method="post" action="{{ $b . 'sponsorship' }}" class="flex flex-wrap gap-1.5 items-center">{!! csrf_field() !!}<input type="hidden" name="id" value="{{ $s['id'] }}"><input class="field !py-1 text-xs w-36" name="agreement_ref" placeholder="Signed agreement ref" aria-label="Agreement reference"><input class="field !py-1 text-xs" type="date" name="on" aria-label="Date received"><button class="btn-focus !py-1 !px-2 text-xs" name="status" value="received" type="submit">Mark received</button><button class="btn-ghost !py-1 !px-2 text-xs" name="status" value="cancelled" type="submit">Cancel</button></form>
     @elseif($s['status'] === 'received')<form method="post" action="{{ $b . 'sponsorship' }}" class="flex gap-1.5 items-center">{!! csrf_field() !!}<input type="hidden" name="id" value="{{ $s['id'] }}"><input class="field !py-1 text-xs" type="date" name="on" aria-label="Date refunded"><button class="btn-ghost !py-1 !px-2 text-xs" name="status" value="refunded" type="submit">Refund</button></form>@endif
-    <a class="btn-link text-xs" href="{{ $b . 'download?kind=f2&id=' . $s['id'] }}">Agreement (.txt)</a>
+    <a class="btn-link text-xs" href="{{ $b . 'download/?kind=f2&id=' . $s['id'] }}">Agreement (.txt)</a>
   @endif</td></tr>
 @endforeach</tbody></table></div>
 @endif
 
 <h2 class="font-display font-semibold mt-10 mb-3">F4 · Pre-sold credits (escrow until “{{ $tk['f4_condition'] }}”)</h2>
-<p class="text-sm mb-3 text-slate-600 dark:text-slate-400">Template: <a class="btn-link" href="{{ $b . 'download?kind=f4&pdf=1' }}">pre-sale contract (PDF)</a>. Condition met now: <strong data-condition-met="{{ $v['condition_met'] ? '1' : '0' }}">{{ $v['condition_met'] ? 'yes' : 'no' }}</strong>. A pre-sale is never a completed sale before that.</p>
+<p class="text-sm mb-3 text-slate-600 dark:text-slate-400">Template: <a class="btn-link" href="{{ $b . 'download/?kind=f4&pdf=1' }}">pre-sale contract (PDF)</a>. Condition met now: <strong data-condition-met="{{ $v['condition_met'] ? '1' : '0' }}">{{ $v['condition_met'] ? 'yes' : 'no' }}</strong>. A pre-sale is never a completed sale before that.</p>
 @if($can)
 <form method="post" action="{{ $b . 'presale' }}" class="mb-4 flex flex-wrap gap-2 items-end">{!! csrf_field() !!}<input type="hidden" name="do" value="add">
   <label class="text-xs">Client<input class="field !py-1 text-sm block" name="client_name" required maxlength="120"></label>
@@ -75,7 +75,7 @@
 @foreach($v['presales'] as $p)
   <tr><td class="font-mono text-xs">{{ $p['ref'] }}</td><td>{{ $p['client_name'] }}<br><span class="text-xs text-slate-500">{{ $p['email'] }}</span></td><td class="text-end tabular-nums">{{ number_format((float)$p['amount_tnd'], 2) }}</td><td>{{ $p['credits'] }}</td><td><span class="tier-badge">{{ $p['status'] }}</span>@if($p['escrow_ref'])<br><span class="text-xs">{{ $p['escrow_ref'] }} · {{ $p['escrowed_on'] }}</span>@endif</td>
   <td>@if($can)<form method="post" action="{{ $b . 'presale' }}" class="flex flex-wrap gap-1.5 items-center">{!! csrf_field() !!}<input type="hidden" name="id" value="{{ $p['id'] }}"><input class="field !py-1 text-xs" type="date" name="on" aria-label="Date">@if($p['status'] === 'draft')<input class="field !py-1 text-xs w-32" name="escrow_ref" placeholder="Escrow ref" aria-label="Escrow reference"><button class="btn-focus !py-1 !px-2 text-xs" name="do" value="escrowed" type="submit">Escrowed</button>@endif @if($p['status'] === 'escrowed')<button class="btn-focus !py-1 !px-2 text-xs" name="do" value="completed" type="submit">Complete</button>@endif @if(in_array($p['status'], ['draft', 'escrowed'], true))<button class="btn-ghost !py-1 !px-2 text-xs" name="do" value="refunded" type="submit">Refund</button>@endif</form>
-    <a class="btn-link text-xs" href="{{ $b . 'download?kind=f4&id=' . $p['id'] }}">Contract (.txt)</a>@endif</td></tr>
+    <a class="btn-link text-xs" href="{{ $b . 'download/?kind=f4&id=' . $p['id'] }}">Contract (.txt)</a>@endif</td></tr>
 @endforeach</tbody></table></div>
 @endif
 

@@ -96,3 +96,14 @@ Core accounts, orders, subscriptions and payments are in 001–005. The `variabl
 
 ## 10. Operations
 Dev server: `php -S 0.0.0.0:8080 -t htdocs` (start detached with `setsid -f`). Secrets live in `.env` (never committed). Production notes are in `README.md` and `AGENTS.md`.
+
+## Verification map added 2026-11-23
+| Concern | Code | Guard |
+|---|---|---|
+| Google OAuth data use / branding | `config/oauth.php`, `src/OAuth.php`, `Accounts::socialCallback`, home/privacy/terms sections | `tests/google.py` |
+| SMTP transport | `Mail::smtp()` | `tests/smtp.py` + `tests/_smtpstub.py` (no TLS) |
+| PWA installability | `Pwa` controller, `portal.js`, admin layout | `tests/pwa.py`, `tests/pwa_install.py` |
+| UX friction | templates, content links | `tests/ux.py` |
+| Console code (mail down) | `bin/staff-code.php`, `StaffAuth::issueLocal()` | `tests/breakglass.py` |
+| Users vs Team screens | `config/resources.php` (`users` where-clause, `team`) | `tests/breakglass.py` |
+| FR/AR consistency | `tr3()`, `config/help.php`, content JSON | `tests/i18n.py`, `docs/review-checklist.md` |

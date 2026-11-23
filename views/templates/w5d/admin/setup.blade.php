@@ -44,7 +44,7 @@
      'keys' => ['VAT_MATRICULE_FISCAL', 'F5_STARTUP_ACT_APPLICATION'], 'link' => [$L('funding/'), tr3('Open Funding', 'Ouvrir Financement', 'افتح التمويل')]],
     ['id' => 'check',
      'title' => tr3("Apply and verify", "Appliquer et vérifier", "التطبيق والتحقق"),
-     'body' => tr3("Rebuild the view cache, run the preflight (it must show 0 FAIL), then reload this page: every row above should read set where it matters. Finally open System to confirm there are no errors.", "Reconstruisez le cache des vues, lancez le preflight (il doit afficher 0 FAIL), puis rechargez cette page : chaque ligne utile ci-dessus doit être « défini ». Enfin ouvrez Système pour vérifier l'absence d'erreurs.", "أعد بناء ذاكرة العروض، شغّل preflight (يجب ألا يظهر أي FAIL)، ثم أعد تحميل هذه الصفحة: يجب أن تظهر الصفوف المهمة «مضبوط». ثم افتح النظام للتأكد من عدم وجود أخطاء."),
+     'body' => tr3("Rebuild the view cache, run the preflight (it must show 0 FAIL), then reload this page: every row above should read set where it matters. Finally open System to confirm there are no errors.", "Reconstruisez le cache des vues, lancez le preflight (il doit afficher 0 FAIL), puis rechargez cette page : chaque ligne utile ci-dessus doit être « défini ». Enfin ouvrez Système pour vérifier l'absence d'erreurs.", "أعد بناء ذاكرة العروض، شغّل preflight (يجب أن تظهر 0 FAIL)، ثم أعد تحميل هذه الصفحة: يجب أن تظهر الصفوف المهمة «مضبوط». ثم افتح النظام للتأكد من عدم وجود أخطاء."),
      'vars' => [], 'code' => "php bin/view.php cache\nphp bin/preflight.php", 'link' => [$L('system/'), tr3('Open System', 'Ouvrir Système', 'افتح النظام')]],
   ];
 

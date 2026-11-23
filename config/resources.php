@@ -162,13 +162,15 @@ return [
     ],
     'users' => [
         // password_hash and tokens are never selected, shown or written here.
-        'table' => 'users', 'perm' => 'users', 'actions' => ['update'],
+        // Public accounts only. Team roles (admin/leader/manager/member) are created and changed in the Team menu (e-mail code sign-in),
+        // so this screen can neither promote a public account to the team nor edit a team member.
+        'table' => 'users', 'perm' => 'users', 'actions' => ['update'], 'where' => "role_slug NOT IN ('admin','leader','manager','member')",
         'title' => $L('User', 'Utilisateur', 'مستخدم'), 'order' => 'id DESC',
         'list' => 'id, name, email, role_slug AS role, lang, active, CASE WHEN email_verified_at IS NULL THEN \'no\' ELSE \'yes\' END AS verified, COALESCE(last_login_at, \'\') AS last_login, created_at',
         'fields' => [
             'email' => ['ro', $L('E-mail', 'E-mail', 'البريد')],
             'name' => ['text', $L('Name', 'Nom', 'الاسم'), 'max' => 120],
-            'role_slug' => ['select', $L('Role', 'Rôle', 'الدور'), 'req' => true, 'options' => ['admin' => 'admin', 'leader' => 'leader', 'manager' => 'manager', 'member' => 'member', 'investor' => 'investor', 'customer' => 'customer', 'user' => 'user']],
+            'role_slug' => ['select', $L('Role', 'Rôle', 'الدور'), 'req' => true, 'options' => ['investor' => 'investor', 'customer' => 'customer', 'user' => 'user']],
             'active' => ['bool', $L('Active', 'Actif', 'نشط'), 'default' => 1],
         ],
     ],

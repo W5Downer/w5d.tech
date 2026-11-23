@@ -11,7 +11,7 @@
   <div class="grow min-w-[16rem]"><label for="bk-svc" class="block text-xs mb-1">Service</label><select id="bk-svc" name="service" class="field">@foreach($svcs as $k => $n)<option value="{{ $k }}" @if($k === $slug) selected @endif>{{ $n }}</option>@endforeach</select></div>
   <div><label for="bk-lv" class="block text-xs mb-1">Level</label><select id="bk-lv" name="level" class="field"><option value="0">All</option>@foreach([1,2,3,4] as $l)<option value="{{ $l }}" @if($lv === $l) selected @endif>L{{ $l }}</option>@endforeach</select></div>
   <button class="btn-focus" type="submit">Show</button>
-  <a class="btn-ghost" href="{{ $base . 'export?service=' . rawurlencode($slug) }}">{{ icon('download', 'w-4 h-4') }} Export JSON</a>
+  <a class="btn-ghost" href="{{ $base . 'export/?service=' . rawurlencode($slug) }}">{{ icon('download', 'w-4 h-4') }} Export JSON</a>
   @if($can['create'])<a class="btn-peak" href="{{ $q(['new' => 1]) }}">{{ icon('plus', 'w-4 h-4') }} New question</a>@endif
 </form>
 

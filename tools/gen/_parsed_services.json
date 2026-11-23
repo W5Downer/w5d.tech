@@ -1836,7 +1836,7 @@
   "diploma": "licence | maîtrise",
   "cohort": "30–40",
   "region": "Tunis, Kairouan and regional partner institutions, with remote preparation where compatible with Real placement",
-  "short_en": "The service provides sROI, community consultation, reporting.",
+  "short_en": "The service provides SROI, community consultation, reporting.",
   "short_fr": "Mesurer les effets culturels sans les surestimer.",
   "short_ar": "قياس الأثر الثقافي دون مبالغة.",
   "long_en": [
@@ -2706,7 +2706,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Kasserine, Kairouan, Gafsa and authorised coastal project sites, conditional on local commissioning",
-  "short_en": "The service provides eDGE/LEED assessment, retrofit plans.",
+  "short_en": "The service provides EDGE/LEED assessment, retrofit plans.",
   "short_fr": "Préparer des bâtiments à une certification vérifiable.",
   "short_ar": "إعداد المباني لشهادة قابلة للتحقق.",
   "long_en": [
@@ -5403,7 +5403,7 @@
   "diploma": "licence | maîtrise | ingénieur | doctorat",
   "cohort": "30–40",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides fAIR data, repositories, DMPs.",
+  "short_en": "The service provides FAIR data, repositories, DMPs.",
   "short_fr": "Organiser des données de recherche réutilisables.",
   "short_ar": "تنظيم بيانات بحث قابلة لإعادة الاستخدام.",
   "long_en": [
@@ -5838,7 +5838,7 @@
   "diploma": "maîtrise | ingénieur | doctorat",
   "cohort": "30–40",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides pV testing, storage chemistry, grid studies.",
+  "short_en": "The service provides PV testing, storage chemistry, grid studies.",
   "short_fr": "Tester les solutions énergétiques renouvelables.",
   "short_ar": "اختبار حلول الطاقة المتجددة.",
   "long_en": [
@@ -5925,7 +5925,7 @@
   "diploma": "licence | maîtrise | ingénieur | doctorat",
   "cohort": "30–40",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides hACCP, labelling, cohort analysis.",
+  "short_en": "The service provides HACCP, labelling, cohort analysis.",
   "short_fr": "Renforcer la sécurité alimentaire et les analyses nutritionnelles.",
   "short_ar": "تعزيز سلامة الغذاء والتحليل التغذوي.",
   "long_en": [
@@ -6012,7 +6012,7 @@
   "diploma": "maîtrise | doctorat",
   "cohort": "40–50",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides dNA, ballistics, digital forensics.",
+  "short_en": "The service provides DNA, ballistics, digital forensics.",
   "short_fr": "Soutenir des expertises judiciaires traçables.",
   "short_ar": "دعم خبرات قضائية قابلة للتتبع.",
   "long_en": [
@@ -6447,7 +6447,7 @@
   "diploma": "maîtrise | doctorat",
   "cohort": "40–50",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides iSO 17025, audits, method validation.",
+  "short_en": "The service provides ISO 17025, audits, method validation.",
   "short_fr": "Préparer les laboratoires à une accréditation réelle.",
   "short_ar": "إعداد المختبرات لاعتماد فعلي.",
   "long_en": [
@@ -6621,7 +6621,7 @@
   "diploma": "maîtrise | ingénieur | doctorat",
   "cohort": "30–40",
   "region": "regional university/laboratory hubs linked to Kairouan, Sfax and the north-west; field locations follow approved protocols",
-  "short_en": "The service provides eDC, query resolution, reporting.",
+  "short_en": "The service provides EDC, query resolution, reporting.",
   "short_fr": "Fiabiliser les données des essais cliniques.",
   "short_ar": "تحسين موثوقية بيانات التجارب السريرية.",
   "long_en": [
@@ -7230,7 +7230,7 @@
   "diploma": "licence | maîtrise",
   "cohort": "30–40",
   "region": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
-  "short_en": "The service provides gDPR-style compliance, DPIAs.",
+  "short_en": "The service provides GDPR-style compliance, DPIAs.",
   "short_fr": "Protéger les personnes dans les traitements de données.",
   "short_ar": "حماية الأشخاص أثناء معالجة البيانات.",
   "long_en": [
@@ -7752,7 +7752,7 @@
   "diploma": "licence | maîtrise",
   "cohort": "40–50",
   "region": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
-  "short_en": "The service provides mRV, policy alignment, reporting.",
+  "short_en": "The service provides MRV, policy alignment, reporting.",
   "short_fr": "Relier les engagements climatiques aux données vérifiables.",
   "short_ar": "ربط الالتزامات المناخية ببيانات قابلة للتحقق.",
   "long_en": [
@@ -7839,7 +7839,7 @@
   "diploma": "licence | maîtrise",
   "cohort": "30–40",
   "region": "Tunis and participating interior-region public-service partners; placements follow current legal mandates",
-  "short_en": "The service provides mTEF, cash management, internal audit.",
+  "short_en": "The service provides MTEF, cash management, internal audit.",
   "short_fr": "Fiabiliser la programmation et le suivi budgétaires.",
   "short_ar": "تحسين موثوقية البرمجة والمتابعة الميزانيتية.",
   "long_en": [
@@ -9144,7 +9144,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides sOC, pentesting, incident response.",
+  "short_en": "The service provides SOC, pentesting, incident response.",
   "short_fr": "Détecter et traiter les incidents de cybersécurité.",
   "short_ar": "كشف حوادث الأمن السيبراني ومعالجتها.",
   "long_en": [
@@ -9579,7 +9579,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides sSO, eKYC, credential wallets.",
+  "short_en": "The service provides SSO, eKYC, credential wallets.",
   "short_fr": "Vérifier les identités en limitant les données collectées.",
   "short_ar": "التحقق من الهوية مع الحد من جمع البيانات.",
   "long_en": [
@@ -9753,7 +9753,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides gIS, satellite analytics, mapping.",
+  "short_en": "The service provides GIS, satellite analytics, mapping.",
   "short_fr": "Produire des cartes avec provenance et incertitude.",
   "short_ar": "إنتاج خرائط موثقة المصدر وعدم اليقين.",
   "long_en": [
@@ -10101,7 +10101,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides iSO 27001, audits, policies.",
+  "short_en": "The service provides ISO 27001, audits, policies.",
   "short_fr": "Gouverner les risques informatiques avec des preuves.",
   "short_ar": "حوكمة المخاطر المعلوماتية بأدلة.",
   "long_en": [
@@ -10536,7 +10536,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides cNC, additive, lean production.",
+  "short_en": "The service provides CNC, additive, lean production.",
   "short_fr": "Moderniser la production avec contrôle qualité.",
   "short_ar": "تحديث الإنتاج مع ضبط الجودة.",
   "long_en": [
@@ -11058,7 +11058,7 @@
   "diploma": "licence | maîtrise | ingénieur",
   "cohort": "30–40",
   "region": "Tunis, Sfax and Sousse delivery hubs with supported interior-region access; field posts follow host readiness",
-  "short_en": "The service provides eV charging, fleet telematics, ticketing.",
+  "short_en": "The service provides EV charging, fleet telematics, ticketing.",
   "short_fr": "Déployer des transports connectés accessibles.",
   "short_ar": "نشر حلول نقل مترابطة وميسرة.",
   "long_en": [
