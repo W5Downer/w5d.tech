@@ -119,10 +119,13 @@ run "dashboards"                                    python3 tests/dash.py "$BASE
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"
 run "CRUD + ACL"                                    python3 tests/crud.py "$BASE"
+run "team sign-in (@team e-mail + code) + privacy"  python3 tests/staff.py "$BASE"
 if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
   run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
   run "mobile audit (Playwright)"                   python3 tests/mobile.py "$BASE"
+  run "help icons: tooltips + popups (Playwright)"   python3 tests/help.py "$BASE"
+  run "installable portal + offline indicator (Playwright)" python3 tests/pwa.py "$BASE"
 fi
 
 step "post-run: no unhandled exceptions in the production log"

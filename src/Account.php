@@ -5,7 +5,7 @@ namespace W5D;
 
 /**
  * Public accounts (users table): register, e-mail verification, login, remember-me, password reset, social login.
- * Session key $_SESSION['acct']. The owner (WEBMASTER_* in .env) keeps its separate Auth session and signs in from the same form.
+ * Session key $_SESSION['acct']. Team addresses (owner, admin, leader, manager, member) never use this form: they sign in at the portal login with an e-mailed code (StaffAuth).
  */
 final class Account
 {
