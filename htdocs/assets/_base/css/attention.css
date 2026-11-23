@@ -758,3 +758,23 @@ html[data-motion="calm"] .cta-live::after { animation: none; display: none; }
 @keyframes ckIn { from { opacity: 0; transform: translateY(18px) scale(.98); } }
 html[data-motion="calm"] .w5-cookies { animation: none; }
 @media print { .w5-consent { display: none !important; } }
+
+
+/* ===== Contextual help (tooltip + popup) ===== */
+.w5-help{position:relative;display:inline-flex;vertical-align:middle}
+.w5-help-btn{min-width:2.5rem;min-height:2.5rem}
+.w5-help-tip{position:absolute;z-index:70;top:calc(100% + .35rem);inset-inline-end:0;width:max-content;max-width:min(20rem,calc(100vw - 2rem));padding:.7rem .85rem;border-radius:.75rem;font-size:.8125rem;line-height:1.5;font-weight:400;text-align:start;background:#0f172a;color:#f1f5f9;border:1px solid rgba(148,163,184,.25);box-shadow:0 14px 40px rgba(2,6,23,.35)}
+.w5-help-tip[hidden]{display:none}
+.dark .w5-help-tip{background:#1e1b4b;border-color:rgba(167,139,250,.35)}
+.w5-help--start .w5-help-tip{inset-inline-end:auto;inset-inline-start:0}
+.w5-help-dialog .w5-dialog-card{max-width:30rem}
+
+/* ===== Portal PWA: offline banner, install button, busy buttons ===== */
+.w5-offline-banner{position:sticky;top:0;z-index:80;display:flex;align-items:center;gap:.6rem;padding:.55rem 1rem;font-size:.8125rem;background:#92400e;color:#fffbeb;border-bottom:1px solid rgba(0,0,0,.2)}
+.w5-offline-banner[hidden]{display:none}
+.w5-offline-banner.is-nudge{animation:w5-nudge .5s ease 2}
+@keyframes w5-nudge{50%{background:#b45309}}
+[data-pwa-install][hidden],[data-pwa-ios][hidden]{display:none!important}
+button.is-busy,.btn-peak.is-busy,.btn-focus.is-busy{opacity:.65;cursor:progress;pointer-events:none}
+html.no-loader #w5d-loader{display:none!important}
+@media (prefers-reduced-motion: reduce){.w5-offline-banner.is-nudge{animation:none}}

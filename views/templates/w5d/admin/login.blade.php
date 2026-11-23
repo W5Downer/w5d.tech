@@ -3,7 +3,7 @@
 @section('content')
 <div class="min-h-screen flex items-center justify-center p-4">
   <div class="w-full max-w-sm rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-ink-900/70 p-6 sm:p-8 space-y-4" data-staff-login data-step="{{ $step }}">
-    <div class="flex items-center gap-3"><img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-9 w-auto shrink-0" decoding="async"><h1 class="font-display text-xl font-bold text-slate-900 dark:text-white">{{ tr3('Team sign-in', 'Connexion équipe', 'دخول الفريق') }}</h1></div>
+    <div class="flex items-center gap-3"><img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-9 w-auto shrink-0" decoding="async"><h1 class="font-display text-xl font-bold text-slate-900 dark:text-white">{{ tr3('Team sign-in', 'Connexion équipe', 'دخول الفريق') }}</h1>{{ help_btn('admin.login', tr3('Team sign-in', 'Connexion équipe', 'دخول الفريق'), 'end', 'page') }}</div>
     @if(!empty($expired))<p class="rounded-lg bg-amber-500/10 border border-amber-500/40 p-3 text-sm" role="status">{{ tr3('You were signed out after a period without activity. Sign in again.', 'Vous avez été déconnecté après une période d’inactivité. Reconnectez-vous.', 'تم تسجيل خروجك بعد فترة بلا نشاط. سجّل الدخول من جديد.') }}</p>@endif
     @if(!empty($error))<p class="rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ $error }}</p>@endif
     @if($step === 'email')

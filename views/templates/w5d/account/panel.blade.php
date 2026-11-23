@@ -35,7 +35,7 @@
     </aside>
 
     <div>
-      <h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{{ $title }}</h1>
+      <div class="flex items-center gap-3"><h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white min-w-0">{{ $title }}</h1>{{ help_btn('account.' . $panel, (string)$title, 'start', 'page') }}</div>
       @if(!empty($flash))<p class="mt-4 rounded-lg p-3 text-sm {{ $flash['kind'] === 'ok' ? 'bg-emerald-500/10 border border-emerald-500/40' : 'bg-red-500/10 border border-red-500/40' }}" role="status">{{ t($flash['msg']) }}</p>@endif
       @if(!empty($errors['_form']))<p class="mt-4 rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ t($errors['_form']) }}</p>@endif
 

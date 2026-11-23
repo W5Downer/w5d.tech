@@ -552,6 +552,67 @@
   /* ---------- CRUD: confirm before destructive submits ---------- */
   $$('form[data-confirm]').forEach(function (f) { f.addEventListener('submit', function (e) { if (!window.confirm(f.getAttribute('data-confirm'))) e.preventDefault(); }); });
 
+  /* ---------- contextual help: tooltips (hover / focus / tap) and popups ---------- */
+  (function () {
+    var tips = $$('[data-help="tip"]'), hov = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+    function hide(w) { var t = w.querySelector('.w5-help-tip'), b = w.querySelector('button'); if (t) t.hidden = true; if (b) b.setAttribute('aria-expanded', 'false'); w._pin = false; }
+    function show(w) {
+      tips.forEach(function (o) { if (o !== w) hide(o); });
+      var t = w.querySelector('.w5-help-tip'), b = w.querySelector('button'); t.style.transform = ''; t.hidden = false; b.setAttribute('aria-expanded', 'true');
+      var r = t.getBoundingClientRect(), vw = document.documentElement.clientWidth, dx = 0;   /* keep the bubble inside the screen (phones, RTL) */
+      if (r.left < 8) dx = 8 - r.left; else if (r.right > vw - 8) dx = vw - 8 - r.right;
+      if (dx) t.style.transform = 'translateX(' + Math.round(dx) + 'px)';
+    }
+    tips.forEach(function (w) {
+      var b = w.querySelector('button'), t = w.querySelector('.w5-help-tip'); if (!b || !t) return;
+      b.addEventListener('click', function (e) { e.stopPropagation(); if (w._pin) hide(w); else { show(w); w._pin = true; } });
+      if (hov) {
+        w.addEventListener('mouseenter', function () { show(w); });
+        w.addEventListener('mouseleave', function () { if (!w._pin) hide(w); });
+        w.addEventListener('focusin', function () { show(w); });
+        w.addEventListener('focusout', function () { if (!w._pin) hide(w); });
+      }
+    });
+    document.addEventListener('click', function (e) { tips.forEach(function (w) { if (!w.contains(e.target)) hide(w); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      tips.forEach(function (w) { var t = w.querySelector('.w5-help-tip'); if (t && !t.hidden) { hide(w); var b = w.querySelector('button'); b && b.focus(); } });
+    });
+    $$('[data-help-pop]').forEach(function (b) {
+      var d = document.getElementById(b.getAttribute('data-help-pop')); if (!d) return;
+      d.classList.add('w5-help-dialog');
+      b.addEventListener('click', function () { if (d.showModal) { if (!d.open) d.showModal(); } else d.setAttribute('open', ''); document.documentElement.classList.add('dlg-open'); var ok = d.querySelector('.btn-focus'); ok && ok.focus(); });
+      d.addEventListener('click', function (e) { if (e.target === d) d.close ? d.close() : d.removeAttribute('open'); });
+      d.addEventListener('close', function () { if (!document.querySelector('dialog[open]')) document.documentElement.classList.remove('dlg-open'); b.focus(); });
+      $$('[data-help-close]', d).forEach(function (c) { c.addEventListener('click', function () { d.close ? d.close() : d.removeAttribute('open'); }); });
+    });
+  })();
+
+  /* ---------- no wasted clicks: a POST form can only be sent once; the code field sends itself ---------- */
+  (function () {
+    document.addEventListener('submit', function (e) {
+      var f = e.target; if (!f || f.tagName !== 'FORM' || e.defaultPrevented) return;
+      if ((f.getAttribute('method') || 'get').toLowerCase() !== 'post') return;
+      if (f._sent) { e.preventDefault(); return; }
+      if (document.documentElement.classList.contains('is-offline') && !f._warned) {
+        f._warned = true; e.preventDefault();
+        var ban = $('[data-offline-banner]'); if (ban) { ban.hidden = false; ban.classList.remove('is-nudge'); void ban.offsetWidth; ban.classList.add('is-nudge'); }
+        return;
+      }
+      f._sent = true;
+      var btns = $$('button[type=submit],button:not([type]),input[type=submit]', f);
+      setTimeout(function () { btns.forEach(function (b) { b.classList.add('is-busy'); b.setAttribute('aria-busy', 'true'); b.disabled = true; }); }, 0);
+      setTimeout(function () { f._sent = false; btns.forEach(function (b) { b.classList.remove('is-busy'); b.removeAttribute('aria-busy'); b.disabled = false; }); }, 10000);
+    });
+    window.addEventListener('pageshow', function (e) { if (e.persisted) $$('form').forEach(function (f) { f._sent = false; $$('button.is-busy', f).forEach(function (b) { b.classList.remove('is-busy'); b.disabled = false; }); }); });
+    $$('[data-staff-login] input[name=code]').forEach(function (i) {
+      i.addEventListener('input', function () {
+        var d = i.value.replace(/\D/g, '').slice(0, 6); if (d !== i.value.replace(/\s/g, '')) i.value = d;
+        if (d.length === 6 && i.form && i.form.requestSubmit) i.form.requestSubmit();
+      });
+    });
+  })();
+
   /* owner/staff panel: phone drawer */
   (function () {
     var nav = document.getElementById('adminNav'), tg = $('[data-admin-nav-toggle]');
