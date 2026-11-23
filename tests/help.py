@@ -42,7 +42,7 @@ with sync_playwright() as pw:
     br = pw.chromium.launch()
     for (w, hgt, lang) in ((360, 740, 'en'), (390, 800, 'ar'), (1280, 800, 'fr')):
         mobile = w < 1000
-        c = br.new_context(viewport={'width': w, 'height': hgt}, is_mobile=mobile, has_touch=mobile)
+        c = br.new_context(viewport={'width': w, 'height': hgt}, is_mobile=mobile, has_touch=mobile, ignore_https_errors=True, service_workers='block')
         p = c.new_page(); errs = []
         p.on('pageerror', lambda e: errs.append(str(e)))
         p.on('console', lambda m: errs.append(m.text) if m.type == 'error' else None)

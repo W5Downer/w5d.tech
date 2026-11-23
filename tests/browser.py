@@ -26,6 +26,7 @@ with sync_playwright() as pw:
     errors = []
     def newctx(**kw):
         kw.setdefault('ignore_https_errors', True)
+        kw.setdefault('service_workers', 'block')   # the portal worker is covered by tests/pwa.py; a self-signed cert would make its registration log noise here
         c = br.new_context(**kw); p = c.new_page()
         p.on('pageerror', lambda e: errors.append(str(e)))
         p.on('console', lambda m: errors.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)

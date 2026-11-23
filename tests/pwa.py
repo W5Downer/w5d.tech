@@ -56,7 +56,7 @@ check('public site manifest never names the portal', s == 200 and MOUNT.strip('/
 # ---------- browser
 with sync_playwright() as pw:
     br = pw.chromium.launch()
-    c = br.new_context(viewport={'width': 390, 'height': 800}, is_mobile=True, has_touch=True, service_workers='allow')
+    c = br.new_context(viewport={'width': 390, 'height': 800}, is_mobile=True, has_touch=True, service_workers='allow', ignore_https_errors=True)
     p = c.new_page(); errs = []
     p.on('pageerror', lambda e: errs.append(str(e)))
     p.on('console', lambda m: errs.append(m.text) if m.type == 'error' else None)

@@ -124,8 +124,9 @@ if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
   run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
   run "mobile audit (Playwright)"                   python3 tests/mobile.py "$BASE"
-  run "help icons: tooltips + popups (Playwright)"   python3 tests/help.py "$BASE"
-  run "installable portal + offline indicator (Playwright)" python3 tests/pwa.py "$BASE"
+  # service workers cannot register behind the throw-away self-signed certificate: these two use the plain-HTTP port of the SAME production copy (127.0.0.1 is a secure context)
+  run "help icons: tooltips + popups (Playwright)"   python3 tests/help.py "http://127.0.0.1:$PHP_PORT"
+  run "installable portal + offline indicator (Playwright)" python3 tests/pwa.py "http://127.0.0.1:$PHP_PORT"
 fi
 
 step "post-run: no unhandled exceptions in the production log"
