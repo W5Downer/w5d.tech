@@ -521,6 +521,11 @@ The **Pricing** page uses the `w5d` template's pricing section as its skeleton b
 | 23 | **Compliance & Privacy** | Consent, retention, DSR, country law profile |
 | 24 | **Audit Log & Corrections** | Every approval/edit with user and timestamp; 14‑day correction SLA |
 | 25 | **System & Storage** | Storage health, DB driver, archive status, backup status, queues |
+| 26–39 | **Later menus** | Manager applications, subscriptions, D17 payments, mail outbox, API & Docs, inbox, QCM rules/bank/review, affiliates, certificates, payment methods, integrations, funding |
+| 40 | **Team** | Owner-only: create and manage team members (admin, leader, manager, member) by @team e-mail; they sign in with an e-mailed code |
+| 41 | **Setup guide** | Owner-only: step-by-step `.env` variables with live set/unset state (values never shown) and how to get paid for each registry status of the company |
+
+Every portal page and account panel carries a help icon (tooltip or popup, en/fr/ar). The portal is installable as an app (Chrome/Edge/Android; iOS: Share → Add to Home Screen) and shows an offline indicator; it never stores private pages offline.
 
 The **Progressive Pricing** menu (14) shows the current α, β, `p_prog`, `p_time`, and cap; a live preview of the price curve at 0 / 0.25 / 0.5 / 0.75 / 1.0 progress; and a **Publish** button that writes a dated commit to `config/variables.php`. Every published change is logged in `audit_log` with the previous and new constants.
 
@@ -652,7 +657,8 @@ mkdir -p storage/{cache/views,logs,uploads,archive}
 cp .env.example .env
 # Edit .env:
 #   APP_URL, APP_BASE_PATH, ADMIN_URL_PATH
-#   WEBMASTER_USERNAME, WEBMASTER_PASSWORD_HASH
+#   OWNER_EMAIL (owner@your-team-domain), STAFF_EMAIL_DOMAIN (default w5d.tech), MAIL_DRIVER=smtp + SMTP_* (the sign-in code is e-mailed)
+#   Owner portal: Setup guide menu walks through every variable step by step
 #   DB_DRIVER=sqlite (default)
 #   STORAGE_DRIVER, ARCHIVE_DRIVER, BACKUP_DRIVER
 #   (S3 fields if any driver = external)
@@ -663,9 +669,8 @@ cp .env.example .env
 php bin/migrate.php
 php bin/sync-content.php
 
-# 4. Generate the webmaster password hash
-php -r "echo password_hash('YourStrongPassword', PASSWORD_DEFAULT), PHP_EOL;"
-# Paste into .env → WEBMASTER_PASSWORD_HASH
+# 4. Team sign-in has no password: owner, admins, leaders, managers and members sign in with their @STAFF_EMAIL_DOMAIN
+#    address and a 6-digit code sent by e-mail (needs working SMTP; see bin/preflight.php).
 
 # 5. Point Apache document root at the repository root
 ```

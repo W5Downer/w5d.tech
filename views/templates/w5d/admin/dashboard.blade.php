@@ -12,7 +12,7 @@
   ];
 @endphp
 <header class="flex flex-wrap items-end justify-between gap-4 mb-8">
-  <div><p class="eyebrow">{{ __('admin.title') }}</p><h1 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Command Center</h1><p class="text-sm text-slate-500 mt-1">Figures as of {{ \W5D\Variables::get('dates.as_of') }} · payment mode <strong>{{ \W5D\Env::get('PAYMENT_MODE', 'demo') }}</strong></p></div>
+  <div><p class="eyebrow">{{ __('admin.title') }}</p><div class="flex items-center gap-3"><h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Command Center</h1><span class="hidden lg:inline-flex">{{ help_btn('admin.command-center', 'Command Center', 'start', 'page') }}</span></div><p class="text-sm text-slate-500 mt-1">Figures as of {{ \W5D\Variables::get('dates.as_of') }} · payment mode <strong>{{ \W5D\Env::get('PAYMENT_MODE', 'demo') }}</strong></p></div>
   @if($canSeed)
   <div class="flex gap-2">
     <form method="post" action="{{ admin_url('seed') }}">{!! csrf_field() !!}<input type="hidden" name="do" value="seed"><button class="btn-focus text-sm" type="submit">{{ icon('database', 'w-4 h-4') }} {{ __('admin.demo_data') }}</button></form>

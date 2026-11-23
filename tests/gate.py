@@ -92,9 +92,11 @@ for path in ('/subscription/', '/app/register/', '/careers/managers/'):
 
 print('owner can switch the gate off (flag) and on again')
 env = dict(l.split('=', 1) for l in open(os.path.join(ROOT, '.env')).read().splitlines() if '=' in l and not l.startswith('#'))
-o = _client()
-t = _csrf(o, BASE, '/account/login/')
-s, h, b = call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')})
+from _staff import staff_login
+try:
+    o = staff_login(BASE, ROOT, None, '/' + env.get('ADMIN_URL_PATH', 'panel-x9z').strip('/')); s, h = 302, {}
+except RuntimeError:
+    o = _client(); s, h = 500, {}
 if s == 302 and 'login' not in h.get('Location', ''):
     M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z').strip('/')
     def flag(v):

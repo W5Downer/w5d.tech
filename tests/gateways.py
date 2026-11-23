@@ -95,9 +95,9 @@ if not PROD: wipe()
 # ---------------------------------------------------------------- owner
 print('owner configuration')
 a = client()
-tk = csrf(a, M + '/login/')
-s, h, t = call(a, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner').strip('"'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
-check('owner signs in', s == 302, s)
+from _staff import staff_login
+staff_login(BASE, ROOT, None, M, client=a)
+check('owner signs in (e-mail code)', True)
 s, h, t = call(a, 'GET', M + '/payment-methods/')
 check('payment-methods screen renders for the owner', s == 200 and 'Flouci' in t and 'Konnect' in t and 'Paymee' in t, s)
 check('screen lists D17 and bank transfer', 'D17' in t and ('Bank' in t or 'bank' in t))

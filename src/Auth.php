@@ -4,35 +4,20 @@ declare(strict_types=1);
 namespace W5D;
 
 /**
- * Owner/portal authentication. The webmaster account lives in .env
- * (WEBMASTER_USERNAME / WEBMASTER_PASSWORD_HASH, Argon2id or bcrypt).
+ * Portal session. There is NO password for portal roles: the owner (OWNER_EMAIL in .env) and every team member
+ * (admin, leader, manager, member) sign in with an @w5d.tech address and an e-mailed one-time code (StaffAuth).
  * Role + permission matrix is declared in config/roles.php (ACL).
  */
 final class Auth
 {
-    public static function check(): bool { return !empty($_SESSION['uid']); }
+    public static function check(): bool { return !empty($_SESSION['uid']) && StaffAuth::alive(); }
     public static function user(): ?array { return self::check() ? ($_SESSION['user'] ?? null) : null; }
     public static function role(): string { return (string)(self::user()['role'] ?? 'guest'); }
-
-    public static function attempt(string $user, string $pass, string $ip): bool
-    {
-        if (!RateLimit::hit('login:' . $ip, 8, 900)) return false;
-        $u = (string)Env::get('WEBMASTER_USERNAME', 'owner');
-        $h = (string)Env::get('WEBMASTER_PASSWORD_HASH', '');
-        if ($h === '' || !hash_equals($u, $user) || !password_verify($pass, $h)) {
-            usleep(250000);
-            return false;
-        }
-        session_regenerate_id(true);
-        $_SESSION['uid'] = 1;
-        $_SESSION['user'] = ['id' => 1, 'name' => $u, 'role' => 'owner', 'country' => 'tn'];
-        return true;
-    }
 
     public static function logout(): void
     {
         $_SESSION = [];
-        session_regenerate_id(true);
+        if (session_status() === PHP_SESSION_ACTIVE) session_regenerate_id(true);
     }
 
     public static function can(string $perm): bool

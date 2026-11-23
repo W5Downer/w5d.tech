@@ -26,6 +26,7 @@ with sync_playwright() as pw:
     errors = []
     def newctx(**kw):
         kw.setdefault('ignore_https_errors', True)
+        kw.setdefault('service_workers', 'block')   # the portal worker is covered by tests/pwa.py; a self-signed cert would make its registration log noise here
         c = br.new_context(**kw); p = c.new_page()
         p.on('pageerror', lambda e: errors.append(str(e)))
         p.on('console', lambda m: errors.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)
@@ -146,9 +147,9 @@ with sync_playwright() as pw:
     # ---------------- owner CRUD on a phone ----------------
     print('owner CRUD on a phone')
     c, p = newctx(viewport={'width': 360, 'height': 740}, is_mobile=True, has_touch=True)
-    p.goto(BASE + ADMIN + '/login/')
-    p.fill('input[name=username]', OWNER_USER); p.fill('input[name=password]', OWNER_PASS)
-    p.click('form button[type=submit]'); p.wait_for_load_state('load')
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from _staff import pw_login
+    pw_login(p, BASE, ADMIN)
     check('owner signed in on phone', '/login' not in p.url, p.url)
     for path in ('/campaigns/', '/campaigns/new/', '/teams/', '/clients/new/', '/support/', '/payroll/', '/users/', '/api-docs/'):
         r = p.goto(BASE + ADMIN + path); p.wait_for_timeout(200)

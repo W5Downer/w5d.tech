@@ -5,11 +5,12 @@ namespace W5D;
 
 /**
  * Public accounts (users table): register, e-mail verification, login, remember-me, password reset, social login.
- * Session key $_SESSION['acct']. The owner (WEBMASTER_* in .env) keeps its separate Auth session and signs in from the same form.
+ * Session key $_SESSION['acct']. Team addresses (owner, admin, leader, manager, member) never use this form: they sign in at the portal login with an e-mailed code (StaffAuth).
  */
 final class Account
 {
     public const SELF_ROLES = ['user', 'investor', 'customer'];
+    /** Public accounts can never be created with the team domain. */
     public const ROLES = ['owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user'];
     public const STAFF = ['admin', 'leader', 'manager'];
     private const COOKIE = 'w5d_remember';
@@ -37,17 +38,23 @@ final class Account
 
     public static function signedIn(): bool { return self::check() || Auth::check(); }
 
-    public static function login(array $u, bool $remember = false): void
+    public static function login(array $u, bool $remember = false, bool $viaStaffCode = false): void
     {
         session_regenerate_id(true);
         $_SESSION['acct'] = ['id' => (int)$u['id'], 'name' => (string)($u['name'] ?: strstr($u['email'], '@', true)), 'email' => $u['email'], 'role' => (string)$u['role_slug'], 'lang' => (string)($u['lang'] ?? 'en')];
         DB::q("UPDATE users SET last_login_at = CURRENT_TIMESTAMP WHERE id = ?", [$u['id']]);
-        if (in_array($u['role_slug'], self::STAFF, true) && $u['email_verified_at']) {
+        if ($viaStaffCode && in_array($u['role_slug'], self::STAFF, true) && $u['email_verified_at']) {
             // staff roles also open the portal with the ACL of their role (config/roles.php)
             $_SESSION['uid'] = (int)$u['id'];
             $_SESSION['user'] = ['id' => (int)$u['id'], 'name' => $_SESSION['acct']['name'], 'role' => (string)$u['role_slug'], 'country' => 'tn'];
         }
-        if ($remember) self::remember((int)$u['id']);
+        if ($remember && !self::isTeam($u)) self::remember((int)$u['id']);
+    }
+
+    /** Team accounts (@w5d.tech or a team role) never use a password or a remember-me cookie. */
+    public static function isTeam(array $u): bool
+    {
+        return in_array((string)($u['role_slug'] ?? ''), StaffAuth::ROLES, true) || StaffAuth::isStaffEmail((string)($u['email'] ?? ''));
     }
 
     public static function logout(bool $regen = true): void
@@ -121,6 +128,7 @@ final class Account
 
     public static function sendReset(array $u): bool
     {
+        if (self::isTeam($u)) return false; // team members have no password to reset
         $tok = self::issueToken((int)$u['id'], 'reset', 3600);
         return Mail::send($u['email'], 'password_reset', ['name' => $u['name'] ?: '', 'url' => abs_url('/account/reset/' . $tok . '/'), 'minutes' => 60], $u['lang'] ?? null);
     }
@@ -152,7 +160,7 @@ final class Account
             $t = self::readToken((string)$_COOKIE[self::COOKIE], 'remember', true);
             if (!$t) { self::cookieSet('', time() - 3600); return; }
             $u = DB::one('SELECT * FROM users WHERE id = ? AND active = 1', [$t['user_id']]);
-            if (!$u || !$u['email_verified_at']) { self::cookieSet('', time() - 3600); return; }
+            if (!$u || !$u['email_verified_at'] || self::isTeam($u)) { self::cookieSet('', time() - 3600); return; }
             self::login($u, true);
         } catch (\Throwable) {}
     }

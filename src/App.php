@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds, Pwa};
 
 final class App
 {
@@ -14,6 +14,7 @@ final class App
         mb_internal_encoding('UTF-8');
         if (PHP_SAPI !== 'cli') Session::start();
         else $_SESSION = $_SESSION ?? [];
+        if (PHP_SAPI !== 'cli') StaffAuth::alive();
         if (PHP_SAPI !== 'cli') { try { Account::restore(); } catch (\Throwable $e) { /* DB not ready: stay a guest */ } }
         ViewEnv::share('currentLang', Lang::current());
     }
@@ -191,6 +192,9 @@ final class App
         $m = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
         $r->any($m . '/login', [Admin::class, 'login']);
         $r->post($m . '/logout', [Admin::class, 'logout']);
+        $r->get($m . '/manifest.webmanifest', [Pwa::class, 'manifest']);
+        $r->get($m . '/sw.js', [Pwa::class, 'worker']);
+        $r->get($m . '/offline', [Pwa::class, 'offline']);
         $r->get($m, [Admin::class, 'dashboard']);
         $r->post($m . '/progressive-pricing/publish', [Admin::class, 'publishPricing']);
         $r->post($m . '/variables/save', [Admin::class, 'saveVariables']);

@@ -188,7 +188,7 @@ final class Docs
         // pages served by code, with no JSON file of their own
         $u['/certification/verify/'] = ['pr' => .4, 'mod' => $mt($root . '/pages/certification.json')];
         $u['/sitemap/'] = ['pr' => .3, 'mod' => $mt(__FILE__)];
-        foreach (Pages::AUDIENCES as $a) $u['/for/' . $a . '/'] ??= ['pr' => .7, 'mod' => $mt($root . '/pages/for.json')];
+        foreach (array_diff(Pages::AUDIENCES, Pages::PRIVATE_AUDIENCES) as $a) $u['/for/' . $a . '/'] ??= ['pr' => .7, 'mod' => $mt($root . '/pages/for.json')];
 
         $coll = ['macros' => ['/macro-works/', .8], 'services' => ['/services/', .5], 'projects' => ['/projects/', .6]];
         foreach ($coll as $c => [$base, $pr]) {
@@ -251,8 +251,8 @@ final class Docs
 
     public static function robots(Request $q): Response
     {
-        $admin = '/' . trim((string)Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/');
-        $dis = [$admin . '/', '/account/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote', '/developers/', '/agents/', '/api/openapi.json', '/openapi.json', '/api/agents.json', '/api/docs/', '/llms.txt', '/llms-full.txt', '/.well-known/agents.json'];
+        // The portal mount is secret: it is never printed here (the portal answers noindex + no-store on its own).
+        $dis = ['/account/', '/for/owner/', '/for/admin/', '/for/leader/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote', '/developers/', '/agents/', '/api/openapi.json', '/openapi.json', '/api/agents.json', '/api/docs/', '/llms.txt', '/llms-full.txt', '/.well-known/agents.json'];
         $o = "User-agent: *\nAllow: /\n" . implode('', array_map(fn($d) => "Disallow: $d\n", $dis)) . "\nSitemap: " . Env::baseUrl() . "/sitemap.xml\n# API documentation is private: sign in and open API & Docs in your dashboard.\n";
         return Response::text($o, 'text/plain');
     }

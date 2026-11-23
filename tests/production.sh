@@ -35,15 +35,16 @@ stop_servers
 rm -rf "$PT"; mkdir -p "$PT/app"
 ( cd "$ROOT" && tar --exclude=./.git --exclude=./storage --exclude=./tools/node_modules --exclude=./tests/__pycache__ --exclude='*.pyc' -cf - . ) | ( cd "$PT/app" && tar -xf - )
 mkdir -p "$PT/app/storage"/{logs,sessions,cache,framework/views,uploads,archive,backups}
-HASH=$(php -r 'echo password_hash($argv[1], PASSWORD_ARGON2ID);' "$PASS")
 cat > "$PT/app/.env" <<EOF
 APP_ENV=production
 APP_URL=$BASE
 APP_BASE_PATH=
 APP_LANG=en
 ADMIN_URL_PATH=panel-x9z
-WEBMASTER_USERNAME=owner
-WEBMASTER_PASSWORD_HASH='$HASH'
+OWNER_EMAIL=owner@w5d.tech
+STAFF_EMAIL_DOMAIN=w5d.tech
+STAFF_CODE_TTL_MIN=10
+STAFF_IDLE_MINUTES=30
 DB_DRIVER=sqlite
 DB_PATH=storage/w5d.sqlite
 STORAGE_DRIVER=null
@@ -99,7 +100,7 @@ cd "$PT/app"
 export PYTHONPATH="$PT/app/tests/_prod" W5D_OWNER_PASS="$PASS" SMOKE_CURL_OPTS="-k"
 
 run "view cache build + status (deploy step)"       bash -c 'php bin/view.php cache && php bin/view.php status'
-run "preflight (production copy must have 0 FAIL)"  env PREFLIGHT_ALLOW_LOCAL_URL=1 php bin/preflight.php
+run "preflight (production copy must have 0 FAIL)"  env PREFLIGHT_ALLOW_LOCAL_URL=1 PREFLIGHT_ALLOW_LOG_MAIL=1 php bin/preflight.php
 run "lint"                                          php bin/lint.php
 run "funding stack + AdSense fail-closed (tests 1-8)"  php tests/funding.php
 run "trust pages: real content, 900 words x3, links, footer, sitemap" php tests/trust.php
@@ -118,10 +119,14 @@ run "dashboards"                                    python3 tests/dash.py "$BASE
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"
 run "CRUD + ACL"                                    python3 tests/crud.py "$BASE"
+run "team sign-in (@team e-mail + code) + privacy"  python3 tests/staff.py "$BASE"
 if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
   run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
   run "mobile audit (Playwright)"                   python3 tests/mobile.py "$BASE"
+  # service workers cannot register behind the throw-away self-signed certificate: these two use the plain-HTTP port of the SAME production copy (127.0.0.1 is a secure context)
+  run "help icons: tooltips + popups (Playwright)"   python3 tests/help.py "http://127.0.0.1:$PHP_PORT"
+  run "installable portal + offline indicator (Playwright)" python3 tests/pwa.py "http://127.0.0.1:$PHP_PORT"
 fi
 
 step "post-run: no unhandled exceptions in the production log"

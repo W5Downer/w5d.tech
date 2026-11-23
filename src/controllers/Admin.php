@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{ACL, ApiGuide, Auth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
+use W5D\{ACL, ApiGuide, Auth, Funding, Gateways, StaffAuth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
 
 /** Owner portal. Mounted at /{ADMIN_URL_PATH}. Every action re-checks session, permission and CSRF. */
 final class Admin
@@ -35,14 +35,34 @@ final class Admin
     public static function login(Request $q): Response
     {
         if (Auth::check()) return Response::redirect(admin_url());
-        $error = null;
+        $err = null; $step = 'email'; $email = (string)($_SESSION['staff_pending'] ?? '');
+        $expired = !empty($_SESSION['_staff_expired']); unset($_SESSION['_staff_expired']);
+        $m = fn(string $en, string $fr, string $ar) => t(['en' => $en, 'fr' => $fr, 'ar' => $ar]);
         if ($q->isPost()) {
-            if (!Csrf::check($q)) $error = __('msg.csrf');
-            elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $error = t(\W5D\Integrations::message());
-            elseif (Auth::attempt((string)($q->post['username'] ?? ''), (string)($q->post['password'] ?? ''), $q->ip())) return Response::redirect(admin_url());
-            else $error = 'Invalid credentials or too many attempts.';
-        }
-        return self::page('admin.login', ['title' => __('admin.login'), 'error' => $error]);
+            $do = (string)($q->post['do'] ?? 'request');
+            if (!Csrf::check($q)) $err = __('msg.csrf');
+            elseif ($do === 'reset') { unset($_SESSION['staff_pending']); $email = ''; }
+            elseif ($do === 'request') {
+                $email = StaffAuth::normalize((string)($q->post['email'] ?? ''));
+                if (!StaffAuth::isStaffEmail($email)) $err = $m('Use your @' . StaffAuth::domain() . ' e-mail address.', 'Utilisez votre adresse e-mail @' . StaffAuth::domain() . '.', 'استخدم بريدك @' . StaffAuth::domain() . '.');
+                elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $err = t(\W5D\Integrations::message());
+                else {
+                    $r = StaffAuth::request($email, $q->ip(), lang());
+                    if ($r['ok']) { $_SESSION['staff_pending'] = $email; $step = 'code'; }
+                    else $err = $r['error'] === 'rate' ? $m('Too many requests. Wait a few minutes and try again.', 'Trop de demandes. Patientez quelques minutes.', 'طلبات كثيرة. انتظر بضع دقائق.') : $m('The service is temporarily unavailable.', 'Le service est momentanément indisponible.', 'الخدمة غير متاحة مؤقتا.');
+                }
+            } elseif ($do === 'verify') {
+                $step = 'code';
+                if ($email === '') { $step = 'email'; $err = $m('Start again: enter your e-mail address.', 'Recommencez : saisissez votre adresse e-mail.', 'ابدأ من جديد: أدخل بريدك.'); }
+                else {
+                    $who = StaffAuth::verify($email, (string)($q->post['code'] ?? ''), $q->ip());
+                    if ($who) { unset($_SESSION['staff_pending']); $land = StaffAuth::signIn($who, $email); self::audit('login.code', $email, $who['role']); return Response::redirect($land); }
+                    $err = $m('This code is wrong, expired or already used. Ask for a new one.', 'Ce code est faux, expiré ou déjà utilisé. Demandez-en un nouveau.', 'الرمز خاطئ أو منتهٍ أو مستعمل. اطلب رمزا جديدا.');
+                }
+            }
+            if ($email !== '' && $do !== 'reset' && $step === 'email' && !$err) $step = 'code';
+        } elseif ($email !== '') $step = 'code';
+        return self::page('admin.login', ['title' => __('admin.login'), 'error' => $err, 'step' => $step, 'email' => $email, 'masked' => $email !== '' ? StaffAuth::mask($email) : '', 'expired' => $expired, 'ttl' => StaffAuth::ttlMinutes()]);
     }
 
     public static function logout(Request $q): Response
@@ -117,6 +137,7 @@ final class Admin
             'content' => self::vList(array_map(fn($p) => ['slug' => $p['slug'], 'title' => t($p['title'], 'en'), 'sections' => count($p['sections'] ?? []), 'robots' => $p['robots'] ?? 'index,follow'], array_values(Content::all('pages'))), ['note' => 'Pages are JSON section lists rendered by blocks. Edit data/content/pages/*.json.']),
             'variables' => self::vVariables(),
             'system' => self::vSystem(),
+            'setup-guide' => self::vSetup(),
             'api-docs' => self::vApi($q),
             // Operational screens backed by the platform tables (read-only lists; never expose secrets).
             'countries' => self::vTable('SELECT country_id AS id, iso, name_en AS name, currency, timezone, active, created_at FROM countries ORDER BY country_id'),
@@ -254,6 +275,23 @@ final class Admin
         if ($n) self::audit('payment-methods.save', '', $n . ' setting(s) · ' . $note);
         self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
         return Response::redirect($back);
+    }
+
+    /** Owner setup guide: live state only (set / empty / ok), never a secret value. */
+    private static function vSetup(): array
+    {
+        $set = fn(string $k): bool => trim((string)Env::get($k, '')) !== '';
+        $keys = ['OWNER_EMAIL', 'STAFF_EMAIL_DOMAIN', 'APP_URL', 'ADMIN_URL_PATH', 'MAIL_DRIVER', 'MAIL_HOST', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'MAIL_FOOTER_ADDRESS',
+            'PAYMENT_MODE', 'PAYMENT_D17_ENABLED', 'PAYMENT_D17_GSM', 'VAT_MATRICULE_FISCAL', 'FUNDING_MODE', 'F1_AUTO_ENTREPRENEUR_ENABLED', 'F2_SPONSORSHIP_ENABLED', 'F4_PRE_SOLD_CREDITS_ENABLED',
+            'F5_STARTUP_ACT_APPLICATION', 'ADS_STATUS', 'RNE_BUDGET_TND'];
+        $state = [];
+        foreach ($keys as $k) $state[$k] = $set($k);
+        $pay = [];
+        foreach (Gateways::all() as $id => $def) $pay[$id] = ['name' => $def['name'], 'kind' => $def['kind'], 'on' => Gateways::on($id), 'ready' => Gateways::enabled($id), 'missing' => Gateways::missing($id)];
+        $lf = (string)Variables::get('company.legal_form');
+        return ['kind' => 'setup', 'env' => $state, 'driver' => (string)Env::get('MAIL_DRIVER', 'log'), 'prod' => Env::get('APP_ENV', 'production') === 'production', 'channels' => Funding::all(), 'pay' => $pay,
+            'legal_form' => in_array($lf, ['pending', 'auto_entrepreneur', 'company'], true) ? $lf : 'pending', 'payment_mode' => (string)Env::get('PAYMENT_MODE', 'demo'), 'tokens' => Funding::tokens(),
+            'domain' => StaffAuth::domain(), 'owner' => StaffAuth::mask(StaffAuth::ownerEmail())];
     }
 
     private static function vIntegrations(): array

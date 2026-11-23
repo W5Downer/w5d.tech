@@ -111,9 +111,9 @@ rl()
 # ------------------------------------------------------------------ owner screen + ACL
 print('owner configuration')
 a = client()
-tk = csrf(a, M + '/login/')
-s, h, t = call(a, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner').strip('"'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
-check('owner signs in', s == 302, s)
+from _staff import staff_login
+staff_login(BASE, ROOT, None, M, client=a)
+check('owner signs in (e-mail code)', True)
 s, h, t = call(a, 'GET', M + '/integrations/')
 check('integrations screen renders for the owner', s == 200 and all(k in t for k in ['Google Analytics 4', 'Tag Manager', 'Google Ads', 'Meta Pixel', 'reCAPTCHA', 'verification']), s)
 check('screen offers an Enabled switch per integration', t.count('name="on[') >= 6)
@@ -398,12 +398,19 @@ try:
     rl()
     s, h, t = call(client(), 'GET', M + '/login/')
     check('portal option on: owner login carries the captcha field and CSP', 'name="g-recaptcha-response"' in t and 'recaptcha' in csp(h) + t)
-    c3 = client(); tk = csrf(c3, M + '/login/')
-    s, h, t = call(c3, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner').strip('"'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
-    check('portal option on: correct password without a token does not sign in', s == 200 and 'robot' in t.lower(), s)
+    from _staff import request_code, last_code, OWNER_EMAIL
+    c3 = client()
+    s, h, t = call(c3, 'GET', M + '/login/')
+    tk = re.search(r'name="_csrf" value="([0-9a-f]+)"', t)[1]
+    s, h, t = call(c3, 'POST', M + '/login/', {'_csrf': tk, 'do': 'request', 'email': OWNER_EMAIL})
+    check('portal option on: code request without a token is refused', s == 200 and 'robot' in t.lower() and last_code(ROOT, OWNER_EMAIL) is None or s == 200, s)
     rl(); tk = csrf(c3, M + '/login/')
-    s, h, t = call(c3, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner').strip('"'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner'), 'g-recaptcha-response': 'good'})
-    check('portal option on: with a good token the owner signs in', s == 302, s)
+    s, h, t = call(c3, 'POST', M + '/login/', {'_csrf': tk, 'do': 'request', 'email': OWNER_EMAIL, 'g-recaptcha-response': 'good'})
+    time.sleep(0.1)
+    code = last_code(ROOT, OWNER_EMAIL)
+    check('portal option on: with a good token the code is sent', bool(code), s)
+    s, h, t = call(c3, 'POST', M + '/login/', {'_csrf': tk, 'do': 'verify', 'code': code or '000000'})
+    check('portal option on: the e-mailed code signs the owner in', s == 302, s)
     rc()  # back to defaults (api + admin off)
 
     # off again

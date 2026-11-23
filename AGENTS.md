@@ -98,7 +98,7 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 ## 7. OPEN ITEMS (honest list, highest value first)
 
 1. **Not tested on the real host** (Apache + ModSecurity + real TLS + real SMTP). `production.sh` simulates production on PHP's built-in server only. After upload run: `php bin/preflight.php`, `php bin/mail.php test you@domain fr all`, then the checklist in section 8.
-2. **Owner action required before go-live** (cannot be done by an agent): real `WEBMASTER_PASSWORD_HASH`; SMTP credentials + `MAIL_FOOTER_ADDRESS`; real `PAYMENT_D17_GSM` (dev value `+21620123456` is a demo); `SOCIAL_*` profile URLs; cron for `bin/rollup.php` and `bin/backup.php`.
+2. **Owner action required before go-live** (cannot be done by an agent): real `OWNER_EMAIL` on the team domain with a working mailbox (the sign-in code is e-mailed; no password exists); SMTP credentials + `MAIL_FOOTER_ADDRESS`; real `PAYMENT_D17_GSM` (dev value `+21620123456` is a demo); `SOCIAL_*` profile URLs; cron for `bin/rollup.php` and `bin/backup.php`.
 3. **Social share images are generated placeholders** (`htdocs/assets/_base/images/social/`). Replace with final art per `docs/social-share-image-prompts.md` (same filenames).
 4. **Admin screens are read-only lists** except: status editing (manager applications, inbox, subscriptions), D17 review, pricing publish, variables, seed. No create/edit UI for teams, cohorts, payroll, tickets, campaigns, clients, quality. Tables and ACL permissions exist; building edit forms is the next feature area (follow the `reviewPayment` pattern: permission check, CSRF, audit row, flash).
 5. **Admin table headers/notes are English only** (owner-only screens); lint exempts them. i18n them if non-English staff will use the portal.

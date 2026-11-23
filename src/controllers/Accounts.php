@@ -75,13 +75,12 @@ final class Accounts
         if ($r = self::guard($q, 'acct-login', $back, 20, 900)) return $r;
         $id = trim((string)($q->post['identifier'] ?? '')); $pw = (string)($q->post['password'] ?? '');
         $bad = ['_form' => self::m('Wrong e-mail or password.', 'E-mail ou mot de passe incorrect.', 'البريد أو كلمة المرور غير صحيحة.')];
-        $owner = (string)Env::get('WEBMASTER_USERNAME', 'owner');
-        if ($id !== '' && !str_contains($id, '@') && hash_equals($owner, $id)) {
-            return Auth::attempt($id, $pw, $q->ip()) ? Response::redirect(admin_url()) : self::bounce($q, $back, $bad);
-        }
+        $teamMsg = self::m('Team members sign in with their @' . \W5D\StaffAuth::domain() . ' address and an e-mailed code: use the team sign-in page.', 'L’équipe se connecte avec son adresse @' . \W5D\StaffAuth::domain() . ' et un code reçu par e-mail : utilisez la page de connexion équipe.', 'يسجّل الفريق الدخول بعنوان @' . \W5D\StaffAuth::domain() . ' ورمز يصل بالبريد: استخدم صفحة دخول الفريق.');
+        if ($id !== '' && \W5D\StaffAuth::isStaffEmail($id)) return self::bounce($q, $back, ['_form' => $teamMsg]); // no password path exists for team addresses; the sign-in URL is never printed here
         $email = mb_strtolower($id);
         if (!RateLimit::hit('acct-login-e:' . sha1($email), 8, 900)) return self::bounce($q, $back, ['_form' => self::m('Too many attempts. Try again later.', 'Trop de tentatives. Réessayez plus tard.', 'محاولات كثيرة. حاول لاحقا.')]);
         $u = filter_var($email, FILTER_VALIDATE_EMAIL) ? Account::byEmail($email) : null;
+        if ($u && Account::isTeam($u)) return self::bounce($q, $back, ['_form' => $teamMsg]);
         if (!$u || !$u['password_hash'] || !password_verify($pw, $u['password_hash'])) { usleep(250000); return self::bounce($q, $back, $bad); }
         if (!(int)$u['active']) return self::bounce($q, $back, ['_form' => self::m('This account is disabled. Contact the desk.', 'Ce compte est désactivé. Contactez le bureau.', 'هذا الحساب معطّل. تواصل مع المكتب.')]);
         if (!$u['email_verified_at'] && Env::bool('AUTH_REQUIRE_VERIFIED', true)) {
@@ -123,6 +122,7 @@ final class Accounts
         $e = [];
         Forms::required($q->post, ['name'], $e);
         $email = Forms::email($q->post, 'email', $e);
+        if ($email !== '' && \W5D\StaffAuth::isStaffEmail($email)) $e['email'] = self::m('Addresses @' . \W5D\StaffAuth::domain() . ' are for the team and cannot be used for a public account.', 'Les adresses @' . \W5D\StaffAuth::domain() . ' sont réservées à l’équipe et ne peuvent pas servir à un compte public.', 'عناوين @' . \W5D\StaffAuth::domain() . ' مخصصة للفريق ولا تصلح لحساب عام.');
         $pw = (string)($q->post['password'] ?? '');
         $e += Account::passwordErrors($pw, $email);
         if ($pw !== (string)($q->post['password2'] ?? '')) $e['password2'] = self::m('The two passwords differ.', 'Les deux mots de passe diffèrent.', 'كلمتا المرور غير متطابقتين.');
@@ -223,7 +223,7 @@ final class Accounts
         if (!$u) {
             if (!$pr['email'] || !$pr['verified']) { self::flash('error', self::m('The provider did not share a verified e-mail address.', 'Le fournisseur n’a pas partagé d’adresse e-mail vérifiée.', 'لم يشارك المزوّد بريدا إلكترونيا موثّقا.')); return Response::redirect(url('/account/login/')); }
             $u = Account::byEmail($pr['email']);
-            if ($u && !in_array($u['role_slug'], Account::SELF_ROLES, true)) { self::flash('error', self::m('Staff accounts must sign in with their password.', 'Les comptes du personnel doivent se connecter avec leur mot de passe.', 'حسابات الفريق تسجّل الدخول بكلمة المرور.')); return Response::redirect(url('/account/login/')); }
+            if (\W5D\StaffAuth::isStaffEmail((string)$pr['email']) || ($u && (Account::isTeam($u) || !in_array($u['role_slug'], Account::SELF_ROLES, true)))) { self::flash('error', self::m('Team accounts sign in with an e-mailed code on the team sign-in page.', 'Les comptes de l’équipe se connectent avec un code par e-mail sur la page de connexion équipe.', 'حسابات الفريق تسجّل الدخول برمز بريدي في صفحة دخول الفريق.')); return Response::redirect(url('/account/login/')); }
             if (!$u) { $id = Account::create($pr['email'], $pr['name'], null, 'user', true, lang()); $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]); Affiliate::attach((int)$id); Affiliate::onVerified((int)$id); }
             elseif (!$u['email_verified_at']) { DB::q('UPDATE users SET email_verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$u['id']]); $u['email_verified_at'] = date('Y-m-d H:i:s'); }
             DB::q('INSERT OR IGNORE INTO social_accounts(user_id, provider, provider_uid, email) VALUES (?,?,?,?)', [$u['id'], $p, $pr['uid'], $pr['email']]);

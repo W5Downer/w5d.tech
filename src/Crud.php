@@ -47,8 +47,10 @@ final class Crud
         $d = self::def($slug);
         if (!$d || !DB::available()) return [];
         $sql = "SELECT {$d['list']} FROM {$d['table']}";
-        $p = [];
-        if ($col = self::scopeCol($role, $d)) { $sql .= " WHERE $col = ?"; $p[] = $uid; }
+        $p = []; $w = [];
+        if (!empty($d['where'])) $w[] = '(' . $d['where'] . ')';
+        if ($col = self::scopeCol($role, $d)) { $w[] = "$col = ?"; $p[] = $uid; }
+        if ($w) $sql .= ' WHERE ' . implode(' AND ', $w);
         return DB::all($sql . " ORDER BY {$d['order']} LIMIT 300", $p);
     }
 
@@ -58,6 +60,7 @@ final class Crud
         $d = self::def($slug);
         if (!$d || $id < 1) return null;
         $sql = 'SELECT id, ' . implode(', ', array_keys($d['fields'])) . " FROM {$d['table']} WHERE id = ?";
+        if (!empty($d['where'])) $sql .= ' AND (' . $d['where'] . ')';
         $p = [$id];
         if ($col = self::scopeCol($role, $d)) { $sql .= " AND $col = ?"; $p[] = $uid; }
         $r = DB::all($sql, $p);

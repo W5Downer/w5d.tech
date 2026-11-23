@@ -31,23 +31,16 @@ def call(c, m, p, d=None): return _call(c, BASE, m, p, d)
 
 
 def staff(role, prefix):
-    run = str(int(time.time() * 1000))[-9:]
-    email = f'{prefix}{run}@mail.test'; pw = 'Str0ngPass-' + run
-    c = _client()
-    t = _csrf(c, BASE, '/account/register/')
-    call(c, 'POST', '/account/register/', {'_csrf': t, 'name': f'{role} crud', 'email': email, 'password': pw, 'password2': pw, 'role': 'user', 'accept': '1'})
-    call(c, 'GET', f'/account/verify/{verify_token(ROOT, email)}/')
-    sql(f"UPDATE users SET role_slug='{role}' WHERE email='{email}'")
-    t = _csrf(c, BASE, '/account/login/')
-    s, h, b = call(c, 'POST', '/account/login/', {'_csrf': t, 'identifier': email, 'password': pw})
+    from _staff import make_team, staff_login
+    email = make_team(role, prefix, name=f'{role} crud')
+    c = staff_login(BASE, ROOT, email, M)
     uid = int(sql(f"SELECT id FROM users WHERE email='{email}'"))
     return c, uid
 
 
 def owner():
-    o = _client(); t = _csrf(o, BASE, '/account/login/')
-    call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')})
-    return o
+    from _staff import staff_login
+    return staff_login(BASE, ROOT, None, M)
 
 
 def post(c, path, data, token_from):

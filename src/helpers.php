@@ -152,6 +152,38 @@ function numval(mixed $v): float
 /** Inline 3-language literal for the active language. */
 function tr3(string $en, string $fr, string $ar): string { return t(['en' => $en, 'fr' => $fr, 'ar' => $ar]); }
 
+/**
+ * Contextual help icon for a dashboard page (config/help.php). Mode "tip" renders a tooltip (hover, tap or keyboard),
+ * mode "pop" renders a popup dialog. Returns '' when the page has no entry, so a missing key never breaks a page.
+ * $uid keeps element ids unique when the same help is rendered twice on one page (phone top bar + desktop corner).
+ */
+function help_btn(string $key, string $title = '', string $variant = 'end', string $uid = ''): Html
+{
+    static $all = null;
+    $all ??= (static fn() => require ROOT . '/config/help.php')();
+    $h = $all[$key] ?? null;
+    if (!$h) return new Html('');
+    $i = ['en' => 1, 'fr' => 2, 'ar' => 3][lang()] ?? 1;
+    $text = (string)($h[$i] ?? $h[1]);
+    $id = 'help-' . preg_replace('/[^a-z0-9]+/i', '-', $key) . ($uid !== '' ? '-' . $uid : '');
+    $label = tr3('Help about this page', 'Aide sur cette page', 'مساعدة حول هذه الصفحة');
+    $ico = (string)icon('circle-help', 'w-5 h-5');
+    $btn = 'w5-help-btn btn-ghost rounded-full w-10 h-10 inline-flex items-center justify-center shrink-0';
+    if ($h[0] === 'pop') {
+        $close = tr3('Close', 'Fermer', 'إغلاق');
+        $ok = tr3('Got it', 'Compris', 'فهمت');
+        $head = $title !== '' ? $title : tr3('Help', 'Aide', 'مساعدة');
+        return new Html('<span class="w5-help" data-help="pop" data-help-key="' . e($key) . '"><button type="button" class="' . $btn . '" data-help-pop="' . e($id) . '" aria-haspopup="dialog" aria-label="' . e($label) . '">' . $ico . '</button>'
+            . '<dialog id="' . e($id) . '" class="w5-dialog" aria-labelledby="' . e($id) . '-t"><div class="w5-dialog-card" role="document">'
+            . '<button type="button" class="w5-dialog-x btn-ghost rounded-full w-9 h-9 inline-flex items-center justify-center" data-help-close aria-label="' . e($close) . '">' . icon('x', 'w-5 h-5') . '</button>'
+            . '<p class="eyebrow">' . e(tr3('Help', 'Aide', 'مساعدة')) . '</p><h2 id="' . e($id) . '-t" class="font-display text-xl font-bold pe-8">' . e($head) . '</h2>'
+            . '<p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">' . e($text) . '</p>'
+            . '<div class="mt-5 flex justify-end"><button type="button" class="btn-focus" data-help-close>' . e($ok) . '</button></div></div></dialog></span>');
+    }
+    return new Html('<span class="w5-help w5-help--' . e($variant) . '" data-help="tip" data-help-key="' . e($key) . '"><button type="button" class="' . $btn . '" aria-expanded="false" aria-controls="' . e($id) . '" aria-label="' . e($label) . '">' . $ico . '</button>'
+        . '<span id="' . e($id) . '" role="tooltip" class="w5-help-tip" hidden>' . e($text) . '</span></span>');
+}
+
 /** Inline brand SVG (simple-icons subset, vendored locally). */
 function brand(string $name, string $class = 'w-5 h-5'): Html
 {

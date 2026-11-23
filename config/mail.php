@@ -3,6 +3,7 @@
 return [
     'types' => [
         'verify_email'   => ['subject' => ['en' => 'Confirm your W5D e-mail address', 'fr' => 'Confirmez votre adresse e-mail W5D', 'ar' => 'أكّد عنوان بريدك الإلكتروني في W5D']],
+        'staff_code'     => ['subject' => ['en' => 'Your W5D team sign-in code', 'fr' => 'Votre code de connexion équipe W5D', 'ar' => 'رمز دخول فريق W5D']],
         'password_reset' => ['subject' => ['en' => 'Reset your W5D password', 'fr' => 'Réinitialisez votre mot de passe W5D', 'ar' => 'أعد تعيين كلمة مرور W5D']],
         'order_receipt'  => ['subject' => ['en' => 'Your W5D pledge :ref', 'fr' => 'Votre engagement W5D :ref', 'ar' => 'التزامك في W5D :ref']],
         'payment_status' => ['subject' => ['en' => 'W5D payment :ref: :status', 'fr' => 'Paiement W5D :ref : :status', 'ar' => 'دفعة W5D :ref: :status']],

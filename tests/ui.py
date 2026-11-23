@@ -164,7 +164,10 @@ with sync_playwright() as pw:
     c, p = newctx(viewport={'width': 1280, 'height': 800})
     for aud in ('owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user'):
         r = p.goto(BASE + f'/for/{aud}/')
-        check(f'/for/{aud}/ 200 + single h1', r.status == 200 and p.locator('h1').count() == 1)
+        if aud in ('owner', 'admin', 'leader'):   # team doors: 404 for a guest (see tests/staff.py for the signed-in side)
+            check(f'/for/{aud}/ is 404 for a guest', r.status == 404)
+        else:
+            check(f'/for/{aud}/ 200 + single h1', r.status == 200 and p.locator('h1').count() == 1)
     p.goto(BASE + '/')
     import json
     ld = p.evaluate("[...document.querySelectorAll('script[type=\"application/ld+json\"]')].map(s=>s.textContent)")

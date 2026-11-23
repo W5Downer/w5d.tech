@@ -5,7 +5,7 @@ declare(strict_types=1);
 // Run it on the production host after uploading and editing .env; the dev .env is expected to FAIL.
 require __DIR__ . '/_boot.php';
 
-use W5D\{Env, DB, ViewCache};
+use W5D\{Env, DB, ViewCache, StaffAuth};
 
 $rows = [];
 $add = function (string $level, string $check, string $detail) use (&$rows) { $rows[] = [$level, $check, $detail]; };
@@ -18,11 +18,15 @@ if (str_starts_with($url, 'https://') && !str_contains($url, 'localhost')) $add(
 elseif (str_starts_with($url, 'https://') && getenv('PREFLIGHT_ALLOW_LOCAL_URL') === '1') $add('WARN', 'APP_URL', "$url (localhost allowed by PREFLIGHT_ALLOW_LOCAL_URL=1; only for tests/production.sh)");
 else $add('FAIL', 'APP_URL', "is \"$url\", must be the public https origin (canonical, hreflang, sitemap, mail links)");
 
-$hash = $get('WEBMASTER_PASSWORD_HASH');
-if ($hash === '' || !str_starts_with($hash, '$')) $add('FAIL', 'WEBMASTER_PASSWORD_HASH', 'empty or not a password_hash() value');
-elseif (password_verify('w5d-demo-owner', $hash)) $add('FAIL', 'WEBMASTER_PASSWORD_HASH', 'still the public demo password (w5d-demo-owner): generate a new hash');
-else $add('OK', 'WEBMASTER_PASSWORD_HASH', password_get_info($hash)['algoName'] . ' hash set, not the demo password');
-$get('WEBMASTER_PASSWORD') === '' ? $add('OK', 'WEBMASTER_PASSWORD', 'no plaintext password in .env') : $add('FAIL', 'WEBMASTER_PASSWORD', 'plaintext password present in .env (tests only; remove)');
+$domain = strtolower(ltrim($get('STAFF_EMAIL_DOMAIN', 'w5d.tech'), '@'));
+$owner = strtolower($get('OWNER_EMAIL'));
+if ($owner === '') $add('FAIL', 'OWNER_EMAIL', 'empty: the owner signs in with a code mailed to this address (set owner@' . $domain . ')');
+elseif (!filter_var($owner, FILTER_VALIDATE_EMAIL) || !str_ends_with($owner, '@' . $domain)) $add('FAIL', 'OWNER_EMAIL', "must be a valid address on @$domain");
+else $add('OK', 'OWNER_EMAIL', StaffAuth::mask($owner) . ' (code sign-in, no password exists)');
+$get('WEBMASTER_PASSWORD_HASH') === '' && $get('WEBMASTER_PASSWORD') === '' ? $add('OK', 'legacy password vars', 'none (portal has no password)') : $add('WARN', 'legacy password vars', 'WEBMASTER_PASSWORD* are ignored since the code sign-in; remove them from .env');
+$get('MAIL_DRIVER', 'log') === 'log' ? $add(getenv('PREFLIGHT_ALLOW_LOG_MAIL') === '1' ? 'WARN' : 'FAIL', 'MAIL_DRIVER', 'log: sign-in codes would never reach the team. Use smtp/mail, or set PREFLIGHT_ALLOW_LOG_MAIL=1 for tests/production.sh only') : $add('OK', 'MAIL_DRIVER', $get('MAIL_DRIVER') . ' (delivers the sign-in codes)');
+(int)$get('STAFF_CODE_TTL_MIN', '10') >= 3 && (int)$get('STAFF_CODE_TTL_MIN', '10') <= 30 ? $add('OK', 'STAFF_CODE_TTL_MIN', $get('STAFF_CODE_TTL_MIN', '10') . ' min') : $add('FAIL', 'STAFF_CODE_TTL_MIN', 'keep between 3 and 30 minutes');
+(int)$get('STAFF_IDLE_MINUTES', '30') >= 5 && (int)$get('STAFF_IDLE_MINUTES', '30') <= 120 ? $add('OK', 'STAFF_IDLE_MINUTES', $get('STAFF_IDLE_MINUTES', '30') . ' min idle timeout') : $add('FAIL', 'STAFF_IDLE_MINUTES', 'keep between 5 and 120 minutes');
 
 $adm = trim($get('ADMIN_URL_PATH'), '/');
 ($adm !== '' && !in_array($adm, ['admin', 'panel', 'panel-admin', 'dashboard'], true)) ? $add('OK', 'ADMIN_URL_PATH', 'obfuscated mount set') : $add('FAIL', 'ADMIN_URL_PATH', 'empty or guessable');

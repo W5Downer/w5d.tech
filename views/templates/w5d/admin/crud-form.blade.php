@@ -7,7 +7,7 @@
 @endphp
 <header class="mb-6">
   <p class="eyebrow">{{ t($menu['label']) }}</p>
-  <h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{{ $editing ? __('ux.crud_edit_title') . ' #' . $row['id'] : __('ux.crud_new_title') }}</h1>
+  <div class="flex items-center gap-3"><h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white min-w-0">{{ $editing ? __('ux.crud_edit_title') . ' #' . $row['id'] : __('ux.crud_new_title') }}</h1>{{ help_btn('admin.crud-form', t($menu['label']), 'start', 'page') }}</div>
   <p class="text-sm text-slate-500 mt-1">{{ t($def['title']) }}</p>
 </header>
 <form method="post" action="{{ admin_url($slug . '/save') }}" class="max-w-2xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-8 space-y-4" novalidate>

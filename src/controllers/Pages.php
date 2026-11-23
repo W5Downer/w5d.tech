@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Request, Response, ViewEnv, Variables};
+use W5D\{Content, Request, Response, ViewEnv, Variables, Auth};
 
 /** Public pages. JSON-driven pages render through the generic view; entity pages are assembled from content. */
 final class Pages
@@ -40,13 +40,28 @@ final class Pages
     }
 
     public const AUDIENCES = ['owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user'];
+    /** Doors that belong to the team: visible only to a signed-in person of that role (the owner sees all three). Everyone else gets a 404. */
+    public const PRIVATE_AUDIENCES = ['owner', 'admin', 'leader'];
+
+    /** May the current visitor see this audience door? Public doors: always. Team doors: only the matching signed-in role. */
+    public static function canSeeAudience(string $a): bool
+    {
+        if (!in_array($a, self::PRIVATE_AUDIENCES, true)) return in_array($a, self::AUDIENCES, true);
+        $r = Auth::check() ? Auth::role() : 'guest';
+        if ($r === 'owner') return true;
+        return $a === 'leader' ? in_array($r, ['leader', 'manager'], true) : $r === $a;
+    }
+
+    /** @return list<string> the doors the current visitor may see (hub, quick-find, aside). */
+    public static function visibleAudiences(): array { return array_values(array_filter(self::AUDIENCES, [self::class, 'canSeeAudience'])); }
 
     /** Audience homepage /for/{audience}/ (owner, admin, leader, member, investor, customer, user). */
     public static function audience(Request $q): Response
     {
         $a = (string)($q->params['aud'] ?? '');
-        if (!in_array($a, self::AUDIENCES, true)) return self::notFound($q);
-        return self::page($q, 'for-' . $a);
+        if (!in_array($a, self::AUDIENCES, true) || !self::canSeeAudience($a)) return self::notFound($q);
+        $r = self::page($q, 'for-' . $a);
+        return in_array($a, self::PRIVATE_AUDIENCES, true) ? $r->withHeaders(['X-Robots-Tag' => 'noindex, nofollow', 'Cache-Control' => 'no-store, private']) : $r;
     }
 
     public static function trust(Request $q): Response { return self::page($q, 'trust-' . ($q->params['page'] ?? '')); }

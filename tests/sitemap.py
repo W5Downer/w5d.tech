@@ -54,7 +54,8 @@ for coll, base in (('macros', '/macro-works/'), ('services', '/services/'), ('pr
 regions = json.load(open(f'{ROOT}/data/countries/tn.json', encoding='utf-8')).get('regions', [])
 check(f'every region present ({len(regions)})', all(f"/tn/{r['slug']}/" in paths for r in regions))
 check('index pages present', all(p in paths for p in want))
-check('every audience page present', all(f'/for/{a}/' in paths for a in ('owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user')))
+check('every public audience page present', all(f'/for/{a}/' in paths for a in ('member', 'investor', 'customer', 'user')))
+check('private audience doors (owner/admin/leader) are NOT listed', not any(f'/for/{a}/' in paths for a in ('owner', 'admin', 'leader')))
 check('certification verify + human sitemap present', '/certification/verify/' in paths and '/sitemap/' in paths)
 
 section('what must NOT be there')

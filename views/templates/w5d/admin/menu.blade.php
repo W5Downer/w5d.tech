@@ -1,7 +1,7 @@
 @extends('admin.layout')
 @section('title', t($menu['label']))
 @section('content')
-<header class="mb-6"><p class="eyebrow">{{ __('admin.title') }}</p><h1 class="font-display text-3xl font-bold flex items-center gap-3 text-slate-900 dark:text-white">{{ icon($menu['icon'], 'w-7 h-7 text-brand-500') }} {{ t($menu['label']) }}</h1></header>
+<header class="mb-6"><p class="eyebrow">{{ __('admin.title') }}</p><div class="flex items-center gap-3"><h1 class="font-display text-2xl sm:text-3xl font-bold flex items-center gap-3 text-slate-900 dark:text-white min-w-0">{{ icon($menu['icon'], 'w-7 h-7 text-brand-500 shrink-0') }} <span class="min-w-0">{{ t($menu['label']) }}</span></h1><span class="hidden lg:inline-flex">{{ help_btn('admin.' . $menu['slug'], t($menu['label']), 'start', 'page') }}</span></div></header>
 
 @if($v['kind'] === 'crud')
   @php $can = $v['can']; $slug = $v['slug']; $d = $v['def']; @endphp
@@ -234,6 +234,8 @@
 
 @elseif($v['kind'] === 'funding')
   @include('admin.funding')
+@elseif($v['kind'] === 'setup')
+  @include('admin.setup')
 
 @elseif($v['kind'] === 'api')
   @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])
