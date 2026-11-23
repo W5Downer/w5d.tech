@@ -164,15 +164,48 @@ check(f'public registration with @{DOM} is refused', not db("SELECT 1 FROM users
 em = make_team('admin', 'p')
 t = _csrf(c, BASE, '/account/login/')
 s, h, b = _call(c, BASE, 'POST', '/account/login/', {'_csrf': t, 'id': em, 'email': em, 'password': 'anything-123456'})
-check('public password login for a team address is refused', portal(c)[0] in (301, 302) and _call(c, BASE, 'GET', '/account/')[0] in (301, 302, 200) and 'acct' not in str(h.get('Set-Cookie', '')) or True)
+check('public password login for a team address is not a success redirect to the account', not (s in (301, 302) and h.get('Location', '').rstrip('/').endswith('/account')), f'{s} {h.get("Location")}')
+check('…the answer points the person to the team sign-in', 'e-mailed code' in b or 'code reçu' in b or 'برمز' in b or s in (301, 302), b[:100])
 s, h, b = _call(c, BASE, 'GET', '/account/')
-check('…and no account session was opened for it', s in (301, 302), str(s))
+check('…and no account session was opened for it (/account/ redirects to login)', s in (301, 302) and '/account/login' in h.get('Location', ''), f'{s} {h.get("Location")}')
+check('…nor a portal session', portal(c)[0] in (301, 302))
 t = _csrf(c, BASE, '/account/forgot/')
 s, h, b = _call(c, BASE, 'POST', '/account/forgot/', {'_csrf': t, 'email': em})
 check('password reset for a team address sends no reset link', not [1 for f in __import__('glob').glob(os.path.join(ROOT, 'storage/logs/mail-*.log')) if re.search(r'to=' + re.escape(em) + r'[^\n]*\n(?:.*\n){0,30}?.*/account/reset', open(f, encoding='utf-8', errors='replace').read())])
 
-# ---- idle timeout (session file edit is not reliable across PHP configs: assert the configured value only)
-check('idle timeout configured and bounded', 5 <= int(ENV.get('STAFF_IDLE_MINUTES') or 30) <= 480)
+# ---- idle + absolute timeout: age the real PHP session file of a signed-in client (storage/sessions/sess_<id>)
+def sid_of(cl):
+    return next((ck.value for ck in cl[1] if ck.name == 'w5d_sid'), None)
+def age_session(cl, key, seconds):
+    sid = sid_of(cl); f = os.path.join(ROOT, 'storage/sessions', 'sess_' + str(sid))
+    raw = open(f, 'rb').read().decode('utf-8', 'replace')
+    m = re.search(rf'{key}\|i:(\d+);', raw)
+    if not m: return False
+    new = raw.replace(m.group(0), f'{key}|i:{int(m.group(1)) - seconds};', 1)
+    open(f, 'wb').write(new.encode('utf-8'))
+    return True
+idle_min = int(ENV.get('STAFF_IDLE_MINUTES') or 30)
+check('idle timeout configured and bounded', 5 <= idle_min <= 480, str(idle_min))
+for role in ('owner', 'manager'):
+    cl = staff_login(BASE, ROOT) if role == 'owner' else staff_login(BASE, ROOT, make_team('manager', 'i'))
+    check(f'{role}: session file found for the idle test', sid_of(cl) and os.path.isfile(os.path.join(ROOT, 'storage/sessions', 'sess_' + sid_of(cl))))
+    check(f'{role}: active before the idle period', portal(cl)[0] == 200)
+    check(f'{role}: aged by (idle - 2 min) is still valid', age_session(cl, 'staff_last', idle_min * 60 - 120) and portal(cl)[0] == 200)
+    # the request above slid the window (staff_last = now): age the full limit plus a minute
+    check(f'{role}: aged beyond the idle limit', age_session(cl, 'staff_last', idle_min * 60 + 60))
+    s, h, b = portal(cl)
+    check(f'{role}: idle session is ended (redirect to login)', s in (301, 302) and '/login' in h.get('Location', ''), f'{s} {h.get("Location")}')
+    s, h, b = _call(cl, BASE, 'GET', MOUNT + '/login/')
+    check(f'{role}: login page says the session ended after inactivity', s == 200 and ('period without activity' in b or 'inactivité' in b or 'بلا نشاط' in b))
+    check(f'{role}: idle session can no longer read private pages', portal(cl, '/setup-guide/')[0] in (301, 302))
+    if role == 'manager':
+        check(f'{role}: public account session of a team user ended too', _call(cl, BASE, 'GET', '/account/')[0] in (301, 302))
+cl = staff_login(BASE, ROOT)
+check('absolute limit: aged 12 h 5 min since sign-in', age_session(cl, 'staff_at', 12 * 3600 + 300))
+s, h, b = portal(cl)
+check('absolute limit: session ended even though it was active a moment ago', s in (301, 302) and '/login' in h.get('Location', ''), f'{s}')
+cl = staff_login(BASE, ROOT)
+check('sign in again works after an idle logout', portal(cl)[0] == 200)
 
 # ---- sign-out
 c = staff_login(BASE, ROOT)
