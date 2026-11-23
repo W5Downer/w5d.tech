@@ -1,0 +1,164 @@
+@php
+  $env = $v['env']; $tk = $v['tokens']; $lf = $v['legal_form'];
+  $yes = tr3('set', 'défini', 'مضبوط'); $no = tr3('empty', 'vide', 'فارغ');
+  $pill = fn($ok) => $ok ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300' : 'border-amber-500/40 bg-amber-500/10 text-amber-800 dark:text-amber-200';
+  $L = fn($key) => admin_url($key);
+
+  // Step-by-step .env guide. Each var: [NAME, example/placeholder, what it does]. No secret is ever printed back.
+  $steps = [
+    ['id' => 'open',
+     'title' => tr3("Open and protect the .env file", "Ouvrir et protéger le fichier .env", "افتح ملف .env واحمِه"),
+     'body' => tr3("The file is called .env and sits at the project root, next to htdocs/ (never inside htdocs/). Edit it on the server over SFTP or SSH. Keep it readable by the PHP user only and never commit it.", "Le fichier s'appelle .env et se trouve à la racine du projet, à côté de htdocs/ (jamais dedans). Modifiez-le sur le serveur en SFTP ou SSH. Il ne doit être lisible que par l'utilisateur PHP et ne jamais être versionné.", "اسم الملف .env ويوجد في جذر المشروع بجانب htdocs/ (وليس بداخله). عدّله على الخادم عبر SFTP أو SSH. اجعله مقروءا لمستخدم PHP فقط ولا تضفه إلى Git."),
+     'code' => "chmod 600 .env\nphp bin/preflight.php",
+     'vars' => []],
+    ['id' => 'site',
+     'title' => tr3("Site address and portal path", "Adresse du site et chemin du portail", "عنوان الموقع ومسار البوابة"),
+     'body' => tr3("APP_URL must be the public https origin: it feeds canonical links, the sitemap and every e-mail link. ADMIN_URL_PATH is the hidden mount of this portal: pick something unguessable and tell it only to the team.", "APP_URL doit être l'origine https publique : elle alimente les liens canoniques, le sitemap et tous les liens des e-mails. ADMIN_URL_PATH est le chemin caché de ce portail : choisissez une valeur introuvable et ne la donnez qu'à l'équipe.", "يجب أن يكون APP_URL هو العنوان العام https: منه تُبنى الروابط القياسية وخريطة الموقع وروابط البريد. ADMIN_URL_PATH هو المسار المخفي لهذه البوابة: اختر قيمة يصعب تخمينها ولا تشاركها إلا مع الفريق."),
+     'vars' => [['APP_ENV', 'production', tr3('hides stack traces, forces Secure cookies', 'masque les traces, force les cookies Secure', 'يخفي تتبع الأخطاء ويفرض ملفات تعريف Secure')], ['APP_URL', 'https://your-domain', ''], ['ADMIN_URL_PATH', 'a-long-random-word', tr3('no slashes; not admin/panel/dashboard', 'sans slash ; pas admin/panel/dashboard', 'بدون شرطة مائلة؛ ليس admin/panel/dashboard')]],
+     'keys' => ['APP_URL', 'ADMIN_URL_PATH']],
+    ['id' => 'mail',
+     'title' => tr3("Outgoing e-mail (do this BEFORE the team sign-in)", "E-mail sortant (À FAIRE AVANT la connexion d'équipe)", "البريد الصادر (قبل تسجيل دخول الفريق)"),
+     'body' => tr3("Team sign-in codes travel by e-mail. With MAIL_DRIVER=log nothing is sent: codes are only written to storage/logs, which is fine for a test copy and useless in production. Use smtp with your provider's credentials, then send yourself a test.", "Les codes de connexion de l'équipe voyagent par e-mail. Avec MAIL_DRIVER=log rien n'est envoyé : les codes sont seulement écrits dans storage/logs, utile en test, inutile en production. Utilisez smtp avec les identifiants de votre fournisseur, puis envoyez-vous un test.", "تصل رموز دخول الفريق عبر البريد. مع MAIL_DRIVER=log لا يُرسل شيء: تُكتب الرموز في storage/logs فقط، وهذا مناسب للاختبار وغير مفيد في الإنتاج. استعمل smtp ببيانات مزوّدك ثم أرسل لنفسك رسالة تجريبية."),
+     'vars' => [['MAIL_DRIVER', 'smtp', 'log | smtp | mail'], ['MAIL_HOST', 'smtp.provider.example', ''], ['MAIL_PORT', '587', tr3('587 with tls, 465 with ssl', '587 avec tls, 465 avec ssl', '587 مع tls و465 مع ssl')], ['MAIL_ENCRYPTION', 'tls', ''], ['MAIL_USERNAME', 'user', ''], ['MAIL_PASSWORD', '••••••', tr3('secret: never shown again here', 'secret : jamais ré-affiché ici', 'سرّي: لا يُعرض هنا مجددا')], ['MAIL_FROM_ADDRESS', 'no-reply@your-domain', tr3('use an address on a domain with SPF/DKIM', 'adresse d\'un domaine avec SPF/DKIM', 'عنوان من نطاق مضبوط عليه SPF/DKIM')], ['MAIL_FOOTER_ADDRESS', '(your real postal line)', tr3('required in every e-mail footer; never invent one', 'obligatoire dans chaque pied d\'e-mail ; n\'en inventez pas', 'مطلوب في تذييل كل رسالة؛ لا تختلق عنوانا')]],
+     'code' => "php bin/mail.php test you@your-domain en all",
+     'keys' => ['MAIL_HOST', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'MAIL_FOOTER_ADDRESS']],
+    ['id' => 'team',
+     'title' => tr3("Team sign-in: owner address and domain", "Connexion d'équipe : adresse du propriétaire et domaine", "دخول الفريق: عنوان المالك والنطاق"),
+     'body' => tr3("Nobody has a password. The owner, admins, super managers, managers and members sign in with a 6-digit code mailed to an address on STAFF_EMAIL_DOMAIN. OWNER_EMAIL must be a mailbox you can really read. Add the other people in the Team menu. Before closing this session, open a private window and sign in once to prove the code arrives.", "Personne n'a de mot de passe. Propriétaire, admins, super-managers, managers et membres se connectent avec un code à 6 chiffres envoyé à une adresse du domaine STAFF_EMAIL_DOMAIN. OWNER_EMAIL doit être une boîte que vous lisez réellement. Ajoutez les autres personnes dans le menu Équipe. Avant de fermer cette session, ouvrez une fenêtre privée et connectez-vous une fois pour prouver que le code arrive.", "لا توجد كلمات مرور. يدخل المالك والمشرفون والمدراء الأعلى والمدراء والأعضاء برمز من 6 أرقام يُرسل إلى عنوان ضمن STAFF_EMAIL_DOMAIN. يجب أن يكون OWNER_EMAIL صندوقا تقرؤه فعلا. أضف الآخرين من قائمة الفريق. قبل إغلاق هذه الجلسة افتح نافذة خاصة وسجّل الدخول مرة للتأكد من وصول الرمز."),
+     'vars' => [['OWNER_EMAIL', 'owner@' . $v['domain'], tr3('currently', 'actuellement', 'حاليا') . ' ' . $v['owner']], ['STAFF_EMAIL_DOMAIN', $v['domain'], tr3('only addresses on this domain can ever sign in', 'seules les adresses de ce domaine peuvent se connecter', 'فقط عناوين هذا النطاق يمكنها الدخول')], ['STAFF_CODE_TTL_MIN', '10', tr3('code validity in minutes (3-30)', 'validité du code en minutes (3-30)', 'مدة صلاحية الرمز بالدقائق (3-30)')], ['STAFF_IDLE_MINUTES', '30', tr3('automatic sign-out after inactivity (5-120)', 'déconnexion automatique après inactivité (5-120)', 'خروج تلقائي بعد الخمول (5-120)')]],
+     'keys' => ['OWNER_EMAIL', 'STAFF_EMAIL_DOMAIN'], 'link' => [$L('team/'), tr3('Open Team', 'Ouvrir Équipe', 'افتح الفريق')]],
+    ['id' => 'pay',
+     'title' => tr3("Payments", "Paiements", "المدفوعات"),
+     'body' => tr3("PAYMENT_MODE=demo records orders but moves no money: leave it until your accountant and a payment provider contract allow otherwise. D17 can be set here; bank transfer, Flouci, Konnect and Paymee are configured in the Payment methods menu (secrets are stored encrypted and never shown again).", "PAYMENT_MODE=demo enregistre les commandes sans mouvement d'argent : laissez-le tant que votre comptable et un contrat avec un prestataire de paiement ne l'autorisent pas. D17 se règle ici ; virement, Flouci, Konnect et Paymee se configurent dans le menu Moyens de paiement (secrets chiffrés, jamais ré-affichés).", "PAYMENT_MODE=demo يسجّل الطلبات دون تحريك أي مال: اتركه حتى يسمح محاسبك وعقد مع مزوّد دفع بغير ذلك. يمكن ضبط D17 هنا، أما التحويل البنكي وFlouci وKonnect وPaymee فتُضبط من قائمة طرق الدفع (الأسرار مشفّرة ولا تُعرض مجددا)."),
+     'vars' => [['PAYMENT_MODE', 'demo', 'demo | (live only after counsel + provider contract)'], ['PAYMENT_D17_ENABLED', 'true', ''], ['PAYMENT_D17_GSM', '+216XXXXXXXX', tr3('YOUR wallet number, not the demo one', 'VOTRE numéro de portefeuille, pas celui de démo', 'رقم محفظتك أنت وليس رقم العرض')], ['PAYMENT_D17_NAME', '(account holder)', '']],
+     'keys' => ['PAYMENT_D17_GSM'], 'link' => [$L('payment-methods/'), tr3('Open Payment methods', 'Ouvrir Moyens de paiement', 'افتح طرق الدفع')]],
+    ['id' => 'fund',
+     'title' => tr3("Funding switches and registry data", "Interrupteurs de financement et données d'immatriculation", "مفاتيح التمويل وبيانات التسجيل"),
+     'body' => tr3("Every funding switch is a token: a channel opens only when its token AND its safeguards are in place (the Funding menu shows why a channel is closed). VAT_MATRICULE_FISCAL stays empty until the tax authority issues the number: never type a placeholder. The legal form shown in the footer is the variable company.legal_form in Variables & Vocabularies.", "Chaque interrupteur de financement est un jeton : un canal ne s'ouvre que si son jeton ET ses garde-fous sont en place (le menu Financement explique pourquoi un canal est fermé). VAT_MATRICULE_FISCAL reste vide tant que l'administration fiscale n'a pas délivré le numéro : ne saisissez jamais de valeur factice. La forme juridique du pied de page est la variable company.legal_form dans Variables et vocabulaires.", "كل مفتاح تمويل هو رمز: لا تُفتح القناة إلا مع رمزها وضماناتها (قائمة التمويل تشرح سبب الإغلاق). يبقى VAT_MATRICULE_FISCAL فارغا حتى تمنح الإدارة الجبائية الرقم: لا تكتب قيمة وهمية. الشكل القانوني في التذييل هو المتغير company.legal_form في المتغيرات والمفردات."),
+     'vars' => [['FUNDING_MODE', 'PRE_REGISTRY', ''], ['F1_AUTO_ENTREPRENEUR_ENABLED', 'true', tr3('opens only after the registration is recorded with a date', 'ne s\'ouvre qu\'après enregistrement daté de l\'immatriculation', 'لا تُفتح إلا بعد تسجيل التسجيل مع تاريخه')], ['F2_SPONSORSHIP_ENABLED', 'true', ''], ['F4_PRE_SOLD_CREDITS_ENABLED', 'true', ''], ['F5_STARTUP_ACT_APPLICATION', 'not_applied', 'not_applied | pending | applied | approved'], ['VAT_MATRICULE_FISCAL', '(empty until issued)', tr3('real number only', 'numéro réel uniquement', 'الرقم الحقيقي فقط')], ['ADS_STATUS', 'not_applied', tr3('AdSense stays closed until verified', 'AdSense reste fermé tant que non vérifié', 'يبقى AdSense مغلقا حتى التحقق')]],
+     'keys' => ['VAT_MATRICULE_FISCAL', 'F5_STARTUP_ACT_APPLICATION'], 'link' => [$L('funding/'), tr3('Open Funding', 'Ouvrir Financement', 'افتح التمويل')]],
+    ['id' => 'check',
+     'title' => tr3("Apply and verify", "Appliquer et vérifier", "التطبيق والتحقق"),
+     'body' => tr3("Rebuild the view cache, run the preflight (it must show 0 FAIL), then reload this page: every row above should read set where it matters. Finally open System to confirm there are no errors.", "Reconstruisez le cache des vues, lancez le preflight (il doit afficher 0 FAIL), puis rechargez cette page : chaque ligne utile ci-dessus doit être « défini ». Enfin ouvrez Système pour vérifier l'absence d'erreurs.", "أعد بناء ذاكرة العروض، شغّل preflight (يجب ألا يظهر أي FAIL)، ثم أعد تحميل هذه الصفحة: يجب أن تظهر الصفوف المهمة «مضبوط». ثم افتح النظام للتأكد من عدم وجود أخطاء."),
+     'vars' => [], 'code' => "php bin/view.php cache\nphp bin/preflight.php", 'link' => [$L('system/'), tr3('Open System', 'Ouvrir Système', 'افتح النظام')]],
+  ];
+
+  // How to get paid, per registry status (company.legal_form). Research to verify with a Tunisian accountant and lawyer.
+  $paths = [
+    'pending' => [
+      'title' => tr3("Not registered yet (pending)", "Pas encore immatriculé (pending)", "غير مسجّل بعد (pending)"),
+      'lead' => tr3("You may collect nothing as revenue yet. The goal of this stage is to finance the registration itself, in the open, with money that can be returned.", "Aucun encaissement ne doit être traité comme un chiffre d'affaires. Ce stade sert à financer l'immatriculation elle-même, en toute transparence, avec de l'argent restituable.", "لا يجوز اعتبار أي مبلغ إيرادا بعد. هدف هذه المرحلة تمويل التسجيل نفسه بشفافية وبأموال قابلة للاسترجاع."),
+      'do' => [
+        tr3("Keep PAYMENT_MODE=demo: orders are recorded, no card or wallet money moves.", "Gardez PAYMENT_MODE=demo : les commandes sont enregistrées, aucun argent de carte ou portefeuille ne circule.", "أبقِ PAYMENT_MODE=demo: تُسجَّل الطلبات ولا يتحرك مال البطاقات أو المحافظ."),
+        tr3("Channel F2 (restricted sponsorship): sponsors give for the registration only, and the money is refundable if activation fails. Needs F2 tokens on and the agreement clauses present.", "Canal F2 (parrainage restreint) : les parrains financent uniquement l'immatriculation, remboursable si l'activation échoue. Exige les jetons F2 et les clauses de l'accord.", "القناة F2 (رعاية مقيّدة): يموّل الرعاة التسجيل فقط والمبلغ قابل للاسترداد إن فشل التفعيل. تتطلب رموز F2 وبنود الاتفاق."),
+        tr3("Channel F4 (pre-sold credits): held in escrow, not a sale, until the condition precedent (the tax number issued) is met.", "Canal F4 (crédits pré-vendus) : placés sous séquestre, ce n'est pas une vente, tant que la condition suspensive (numéro fiscal délivré) n'est pas remplie.", "القناة F4 (أرصدة مسبقة البيع): تُحفظ في حساب ضمان وليست بيعا حتى يتحقق الشرط الواقف (صدور المعرّف الجبائي)."),
+        tr3("Channel F5: file the Startup Act application and record only its real status in F5_STARTUP_ACT_APPLICATION.", "Canal F5 : déposez la demande Startup Act et ne renseignez que son statut réel dans F5_STARTUP_ACT_APPLICATION.", "القناة F5: قدّم ملف Startup Act وسجّل حالته الحقيقية فقط في F5_STARTUP_ACT_APPLICATION."),
+        tr3("Money arrives by D17 or bank transfer; an administrator verifies each payment by hand in the D17 payments menu before anything is marked received.", "L'argent arrive par D17 ou virement ; un administrateur vérifie chaque paiement à la main dans le menu Paiements D17 avant de le marquer reçu.", "يصل المال عبر D17 أو التحويل؛ ويتحقق مشرف من كل دفعة يدويا في قائمة مدفوعات D17 قبل اعتبارها مستلمة."),
+      ],
+      'dont' => tr3("Do not issue invoices with VAT, do not show a registration number, do not switch PAYMENT_MODE to live, and do not promise a return to anyone.", "N'émettez pas de factures avec TVA, n'affichez aucun numéro d'immatriculation, ne passez pas PAYMENT_MODE en réel et ne promettez aucun rendement.", "لا تُصدر فواتير بالأداء على القيمة المضافة، ولا تعرض رقم تسجيل، ولا تحوّل PAYMENT_MODE إلى حقيقي، ولا تعد أحدا بعائد."),
+      'next' => tr3("Next: once the authority issues the auto-entrepreneur registration, record its reference and date in Funding.", "Ensuite : dès que l'autorité délivre l'immatriculation auto-entrepreneur, enregistrez sa référence et sa date dans Financement.", "التالي: عند صدور تسجيل المقاول الذاتي سجّل مرجعه وتاريخه في قائمة التمويل."),
+    ],
+    'auto_entrepreneur' => [
+      'title' => tr3("Auto-entrepreneur (registered individual)", "Auto-entrepreneur (personne physique immatriculée)", "مقاول ذاتي (شخص طبيعي مسجّل)"),
+      'lead' => tr3("You can invoice as an individual under the regime. The activity must be eligible and the regime has limits: confirm both with your accountant before relying on them.", "Vous pouvez facturer en tant que personne physique sous ce régime. L'activité doit être éligible et le régime a des plafonds : confirmez les deux avec votre comptable avant de vous y fier.", "يمكنك الفوترة كشخص طبيعي ضمن هذا النظام. يجب أن يكون النشاط مؤهلا وللنظام سقوف: تأكد من الأمرين مع محاسبك قبل الاعتماد عليه."),
+      'do' => [
+        tr3("In Funding, record the registration reference exactly as issued, with its real date (append-only). Channel F1 opens; its tax-rate token is currently shown below.", "Dans Financement, enregistrez la référence exactement comme délivrée, avec sa vraie date (ajout seul). Le canal F1 s'ouvre ; son jeton de taux est affiché ci-dessous.", "في قائمة التمويل سجّل المرجع كما صدر مع تاريخه الحقيقي (إضافة فقط). تُفتح القناة F1 ورمز نسبتها معروض أدناه."),
+        tr3("In Variables, set company.legal_form to auto_entrepreneur so the footer and the imprint page say so.", "Dans Variables, réglez company.legal_form sur auto_entrepreneur pour que le pied de page et la page mentions le disent.", "في المتغيرات اضبط company.legal_form على auto_entrepreneur ليظهر ذلك في التذييل وصفحة البيانات القانونية."),
+        tr3("Get paid on D17 or by bank transfer into an account in your own name (enter it in Payment methods); verify each payment by hand.", "Encaissez par D17 ou virement sur un compte à votre nom (à saisir dans Moyens de paiement) ; vérifiez chaque paiement à la main.", "استلم الدفعات عبر D17 أو تحويل إلى حساب باسمك (يُدخل في طرق الدفع) وتحقق من كل دفعة يدويا."),
+        tr3("Flouci, Konnect and Paymee need their own merchant contract: ask each provider whether they onboard your status, then enter the keys they give you. Test in their sandbox first.", "Flouci, Konnect et Paymee exigent leur propre contrat marchand : demandez à chacun s'il accepte votre statut, puis saisissez les clés fournies. Testez d'abord dans leur bac à sable.", "Flouci وKonnect وPaymee تتطلب عقد تاجر خاصا بها: اسأل كل مزوّد هل يقبل وضعك ثم أدخل المفاتيح المسلّمة. اختبر أولا في بيئتها التجريبية."),
+        tr3("Keep PAYMENT_MODE=demo until counsel confirms the setup and a provider contract is signed; then switch deliberately and test with a small real payment.", "Gardez PAYMENT_MODE=demo jusqu'à confirmation du conseil et signature d'un contrat prestataire ; basculez ensuite volontairement et testez avec un petit paiement réel.", "أبقِ PAYMENT_MODE=demo حتى يؤكد المستشار الإعداد ويُوقَّع عقد مع مزوّد؛ ثم حوّل عن قصد وجرّب بدفعة حقيقية صغيرة."),
+      ],
+      'dont' => tr3("Do not invoice VAT unless you are subject to it, and do not describe the business as a company.", "Ne facturez pas de TVA si vous n'y êtes pas assujetti et ne présentez pas l'activité comme une société.", "لا تفرض الأداء على القيمة المضافة إن لم تكن خاضعا له، ولا تقدّم النشاط على أنه شركة."),
+      'next' => tr3("Next: when a company is formed and the tax number is issued, move to the company status.", "Ensuite : à la création d'une société et à la délivrance du numéro fiscal, passez au statut société.", "التالي: عند تأسيس شركة وصدور المعرّف الجبائي انتقل إلى وضع الشركة."),
+    ],
+    'company' => [
+      'title' => tr3("Registered company", "Société immatriculée", "شركة مسجّلة"),
+      'lead' => tr3("Revenue belongs to the company: its bank account, its invoices, its tax number. This is the status in which online payment providers normally onboard you.", "Le chiffre d'affaires appartient à la société : son compte bancaire, ses factures, son numéro fiscal. C'est le statut avec lequel les prestataires de paiement en ligne vous acceptent normalement.", "الإيراد يخص الشركة: حسابها البنكي وفواتيرها ومعرّفها الجبائي. هذا هو الوضع الذي يقبلك فيه مزوّدو الدفع عادة."),
+      'do' => [
+        tr3("Put the issued tax number in VAT_MATRICULE_FISCAL (real value only). The F4 condition precedent is then met, and escrowed pre-sale money can follow the contract's release terms.", "Saisissez le numéro fiscal délivré dans VAT_MATRICULE_FISCAL (valeur réelle uniquement). La condition suspensive F4 est alors remplie et les fonds séquestrés suivent les modalités de libération du contrat.", "ضع المعرّف الجبائي الصادر في VAT_MATRICULE_FISCAL (قيمة حقيقية فقط). يتحقق الشرط الواقف للقناة F4 وتتبع الأموال المودعة شروط الإفراج في العقد."),
+        tr3("Set company.legal_form to company in Variables, and complete the imprint page with the real company details from your registration extract (never invent them).", "Réglez company.legal_form sur company dans Variables et complétez la page mentions avec les vraies informations de votre extrait d'immatriculation (jamais inventées).", "اضبط company.legal_form على company في المتغيرات وأكمل صفحة البيانات القانونية بالمعلومات الحقيقية من مستخرج التسجيل (لا تختلقها)."),
+        tr3("Open a bank account in the company's name and enter it in Payment methods (bank transfer). Keep D17 only if the wallet is the company's.", "Ouvrez un compte bancaire au nom de la société et saisissez-le dans Moyens de paiement (virement). Gardez D17 seulement si le portefeuille est celui de la société.", "افتح حسابا بنكيا باسم الشركة وأدخله في طرق الدفع (التحويل). أبقِ D17 فقط إن كانت المحفظة للشركة."),
+        tr3("Sign merchant contracts as the company with Flouci, Konnect and/or Paymee, paste their keys in Payment methods, test in sandbox, then test one small real payment.", "Signez les contrats marchands au nom de la société avec Flouci, Konnect et/ou Paymee, collez leurs clés dans Moyens de paiement, testez en bac à sable puis avec un petit paiement réel.", "وقّع عقود التاجر باسم الشركة مع Flouci و/أو Konnect و/أو Paymee، والصق مفاتيحها في طرق الدفع، واختبر في البيئة التجريبية ثم بدفعة حقيقية صغيرة."),
+        tr3("Only then, with counsel's written agreement, set PAYMENT_MODE away from demo, and issue invoices with the tax treatment your accountant defines.", "Ensuite seulement, avec l'accord écrit du conseil, sortez PAYMENT_MODE de demo et émettez des factures selon le traitement fiscal défini par votre comptable.", "بعد ذلك فقط وبموافقة المستشار الكتابية أخرج PAYMENT_MODE من وضع demo وأصدر الفواتير بالمعالجة الجبائية التي يحددها محاسبك."),
+      ],
+      'dont' => tr3("Do not mix personal and company money, and do not reuse the individual's accounts for company revenue.", "Ne mélangez pas l'argent personnel et celui de la société, ne réutilisez pas les comptes de la personne physique pour le chiffre d'affaires de la société.", "لا تخلط المال الشخصي بمال الشركة ولا تستعمل حسابات الشخص الطبيعي لإيراد الشركة."),
+      'next' => tr3("Next: review docs/LEGAL-REVIEW.md with your lawyer before announcing live payments.", "Ensuite : relisez docs/LEGAL-REVIEW.md avec votre avocat avant d'annoncer les paiements réels.", "التالي: راجع docs/LEGAL-REVIEW.md مع محاميك قبل الإعلان عن المدفوعات الحقيقية."),
+    ],
+  ];
+@endphp
+
+<div class="max-w-4xl" data-setup-guide>
+  <p class="text-sm text-slate-600 dark:text-slate-400">{{ tr3("Two guides in one page: how to fill the .env file, and how money can reach you at each registry status. The status badges are live (they read the running configuration); secret values are never printed.", "Deux guides en une page : comment remplir le fichier .env, et comment l'argent peut vous parvenir selon chaque statut d'immatriculation. Les badges sont en direct (ils lisent la configuration active) ; les secrets ne sont jamais affichés.", "دليلان في صفحة واحدة: كيف تملأ ملف .env، وكيف يصلك المال حسب كل وضع تسجيل. الشارات مباشرة (تقرأ الإعداد الجاري) ولا تُعرض الأسرار أبدا.") }}</p>
+  <p class="mt-3 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm" role="note">{{ tr3("This is operating guidance, not legal or tax advice. The wording around each status is research to verify with a Tunisian accountant and lawyer (docs/LEGAL-REVIEW.md). Nothing on this page promises a return or creates a registration number.", "Ceci est un guide d'exploitation, pas un avis juridique ou fiscal. Le contenu de chaque statut est de la recherche à faire valider par un comptable et un avocat tunisiens (docs/LEGAL-REVIEW.md). Rien ici ne promet un rendement ni ne crée un numéro d'immatriculation.", "هذا إرشاد تشغيلي وليس استشارة قانونية أو جبائية. صياغة كل وضع بحث يجب أن يراجعه محاسب ومحامٍ تونسيان (docs/LEGAL-REVIEW.md). لا شيء هنا يعد بعائد أو يُنشئ رقم تسجيل.") }}</p>
+
+  <nav class="mt-5 flex flex-wrap gap-2 text-sm" aria-label="{{ tr3('On this page', 'Sur cette page', 'في هذه الصفحة') }}">
+    <a class="btn-ghost" href="#env-guide">{{ icon('list-checks', 'w-4 h-4') }} {{ tr3('.env step by step', '.env pas à pas', '.env خطوة بخطوة') }}</a>
+    <a class="btn-ghost" href="#get-paid">{{ icon('landmark', 'w-4 h-4') }} {{ tr3('Getting paid by status', 'Être payé selon le statut', 'كيف تُدفع حسب الوضع') }}</a>
+    <a class="btn-ghost" href="#live-state">{{ icon('activity', 'w-4 h-4') }} {{ tr3('Live state', 'État en direct', 'الحالة المباشرة') }}</a>
+  </nav>
+
+  {{-- ============ Part 1: .env ============ --}}
+  <h2 id="env-guide" class="font-display text-2xl font-bold mt-10 mb-4 scroll-mt-20">{{ tr3("Part 1 · The .env file, step by step", "Partie 1 · Le fichier .env, pas à pas", "الجزء 1 · ملف .env خطوة بخطوة") }}</h2>
+  @if($v['driver'] === 'log')
+    <p class="mb-4 rounded-xl border border-red-500/40 bg-red-500/10 p-3 text-sm" role="alert" data-setup-mail-warning>{{ tr3("MAIL_DRIVER is still log: sign-in codes are not being delivered by e-mail. Do step 3 first.", "MAIL_DRIVER est encore log : les codes de connexion ne sont pas envoyés par e-mail. Faites d'abord l'étape 3.", "MAIL_DRIVER ما زال log: رموز الدخول لا تُرسل بالبريد. نفّذ الخطوة 3 أولا.") }}</p>
+  @endif
+  <ol class="space-y-5">
+  @foreach($steps as $i => $st)
+    <li class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-4 sm:p-5" id="step-{{ $st['id'] }}" data-step="{{ $st['id'] }}">
+      <h3 class="font-display font-semibold flex items-start gap-3"><span class="tier-badge shrink-0" aria-hidden="true">{{ $i + 1 }}</span><span>{{ $st['title'] }}</span></h3>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{{ $st['body'] }}</p>
+      @if(!empty($st['vars']))
+      <div class="mt-3 overflow-x-auto rounded-xl border border-slate-200 dark:border-white/10">
+        <table class="w5-table w5-stack"><thead><tr><th scope="col">{{ tr3('Variable', 'Variable', 'المتغير') }}</th><th scope="col">{{ tr3('Example', 'Exemple', 'مثال') }}</th><th scope="col">{{ tr3('Notes', 'Notes', 'ملاحظات') }}</th><th scope="col">{{ tr3('Now', 'Maintenant', 'الآن') }}</th></tr></thead><tbody>
+        @foreach($st['vars'] as $r)
+          <tr><td data-label="{{ tr3('Variable', 'Variable', 'المتغير') }}"><code dir="ltr">{{ $r[0] }}</code></td><td data-label="{{ tr3('Example', 'Exemple', 'مثال') }}"><code dir="ltr">{{ $r[1] }}</code></td><td data-label="{{ tr3('Notes', 'Notes', 'ملاحظات') }}" class="text-xs text-slate-500">{{ $r[2] }}</td>
+            <td data-label="{{ tr3('Now', 'Maintenant', 'الآن') }}">@if(array_key_exists($r[0], $env))<span class="tier-badge {{ $pill($env[$r[0]]) }}" data-env="{{ $r[0] }}" data-set="{{ $env[$r[0]] ? '1' : '0' }}">{{ $env[$r[0]] ? $yes : $no }}</span>@else<span class="text-xs text-slate-400">—</span>@endif</td></tr>
+        @endforeach
+        </tbody></table>
+      </div>
+      @endif
+      @if(!empty($st['code']))
+        <div class="mt-3 flex items-start gap-2"><pre id="code-{{ $st['id'] }}" class="flex-1 min-w-0 overflow-x-auto rounded-lg bg-slate-900 text-slate-100 text-xs p-3" dir="ltr">{{ $st['code'] }}</pre>
+        <button type="button" class="btn-ghost shrink-0" data-copy="code-{{ $st['id'] }}" aria-label="{{ tr3('Copy', 'Copier', 'نسخ') }}">{{ icon('copy', 'w-4 h-4') }}</button></div>
+      @endif
+      @if(!empty($st['link']))<p class="mt-3"><a class="btn-link" href="{{ $st['link'][0] }}">{{ $st['link'][1] }} →</a></p>@endif
+    </li>
+  @endforeach
+  </ol>
+
+  {{-- ============ Part 2: getting paid per status ============ --}}
+  <h2 id="get-paid" class="font-display text-2xl font-bold mt-12 mb-2 scroll-mt-20">{{ tr3("Part 2 · How to get paid, by registry status", "Partie 2 · Comment être payé, selon le statut d'immatriculation", "الجزء 2 · كيف تُدفع حسب وضع التسجيل") }}</h2>
+  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">{{ tr3("Your current status is read from the variable company.legal_form and highlighted. Change it in Variables & Vocabularies only when the registration is real.", "Votre statut actuel est lu depuis la variable company.legal_form et mis en évidence. Ne le changez dans Variables et vocabulaires que lorsque l'immatriculation est réelle.", "يُقرأ وضعك الحالي من المتغير company.legal_form ويُبرز. لا تغيّره في المتغيرات والمفردات إلا عند وجود تسجيل حقيقي.") }}</p>
+  <div class="space-y-5">
+  @foreach($paths as $key => $p)
+    <section class="rounded-2xl border p-4 sm:p-5 {{ $key === $lf ? 'border-brand-500/60 bg-brand-500/5 ring-1 ring-brand-500/30' : 'border-slate-200 dark:border-white/10 bg-white dark:bg-white/5' }}" data-status="{{ $key }}" data-current="{{ $key === $lf ? '1' : '0' }}" @if($key === $lf) aria-current="true" @endif>
+      <h3 class="font-display font-semibold flex flex-wrap items-center gap-2">{{ $p['title'] }} @if($key === $lf)<span class="tier-badge">{{ tr3('your status now', 'votre statut actuel', 'وضعك الحالي') }}</span>@endif</h3>
+      <p class="mt-2 text-sm">{{ $p['lead'] }}</p>
+      <ol class="mt-3 list-decimal ps-5 space-y-1.5 text-sm text-slate-700 dark:text-slate-300">@foreach($p['do'] as $d)<li>{{ $d }}</li>@endforeach</ol>
+      <p class="mt-3 rounded-lg border border-red-500/30 bg-red-500/5 p-2.5 text-sm"><strong>{{ tr3('Avoid:', 'À éviter :', 'تجنّب:') }}</strong> {{ $p['dont'] }}</p>
+      <p class="mt-2 text-sm text-slate-500">{{ $p['next'] }}</p>
+    </section>
+  @endforeach
+  </div>
+
+  {{-- ============ Live state ============ --}}
+  <h2 id="live-state" class="font-display text-2xl font-bold mt-12 mb-3 scroll-mt-20">{{ tr3("Live state", "État en direct", "الحالة المباشرة") }}</h2>
+  <p class="mb-3 text-sm text-slate-600 dark:text-slate-400">{{ tr3("Payment mode:", "Mode de paiement :", "وضع الدفع:") }} <code>{{ $v['payment_mode'] }}</code> · {{ tr3("Registry status:", "Statut :", "الوضع:") }} <code>{{ $lf }}</code> · {{ tr3("Startup Act application:", "Demande Startup Act :", "ملف Startup Act:") }} <code>{{ $tk['f5_status'] }}</code></p>
+  <h3 class="font-display font-semibold mb-2">{{ tr3('Funding channels', 'Canaux de financement', 'قنوات التمويل') }}</h3>
+  <div class="grid gap-3 sm:grid-cols-2">
+  @foreach($v['channels'] as $c)
+    <div class="rounded-2xl border p-3 text-sm {{ $pill($c['available']) }}" data-channel="{{ $c['channel'] }}" data-available="{{ $c['available'] ? '1' : '0' }}"><p class="font-semibold">{{ $c['channel'] }} · {{ $c['available'] ? tr3('open', 'ouvert', 'مفتوحة') : tr3('closed', 'fermé', 'مغلقة') }}</p><p class="mt-1">{{ $c['reason_text'] }}</p></div>
+  @endforeach
+  </div>
+  <h3 class="font-display font-semibold mt-6 mb-2">{{ tr3('Payment methods', 'Moyens de paiement', 'طرق الدفع') }}</h3>
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
+    <table class="w5-table w5-stack"><thead><tr><th scope="col">{{ tr3('Method', 'Moyen', 'الطريقة') }}</th><th scope="col">{{ tr3('Type', 'Type', 'النوع') }}</th><th scope="col">{{ tr3('State', 'État', 'الحالة') }}</th><th scope="col">{{ tr3('Missing', 'Manquant', 'ناقص') }}</th></tr></thead><tbody>
+    @foreach($v['pay'] as $id => $m)
+      <tr data-method="{{ $id }}"><td data-label="{{ tr3('Method', 'Moyen', 'الطريقة') }}">{{ $m['name'] }}</td><td data-label="{{ tr3('Type', 'Type', 'النوع') }}">{{ $m['kind'] === 'online' ? tr3('online', 'en ligne', 'عبر الإنترنت') : tr3('manual check', 'vérification manuelle', 'تحقق يدوي') }}</td>
+        <td data-label="{{ tr3('State', 'État', 'الحالة') }}"><span class="tier-badge {{ $pill($m['ready']) }}">{{ $m['ready'] ? tr3('offered', 'proposé', 'معروضة') : ($m['on'] ? tr3('on, incomplete', 'activé, incomplet', 'مفعّلة وناقصة') : tr3('off', 'désactivé', 'معطّلة')) }}</span></td>
+        <td data-label="{{ tr3('Missing', 'Manquant', 'ناقص') }}" class="text-xs">{{ $m['missing'] ? implode(', ', $m['missing']) : '—' }}</td></tr>
+    @endforeach
+    </tbody></table>
+  </div>
+  <p class="mt-4 text-sm"><a class="btn-link" href="{{ $L('payment-methods/') }}">{{ tr3('Configure payment methods', 'Configurer les moyens de paiement', 'إعداد طرق الدفع') }} →</a> · <a class="btn-link" href="{{ $L('funding/') }}">{{ tr3('Open Funding', 'Ouvrir Financement', 'افتح التمويل') }} →</a> · <a class="btn-link" href="{{ $L('variables/') }}">{{ tr3('Open Variables', 'Ouvrir Variables', 'افتح المتغيرات') }} →</a></p>
+</div>

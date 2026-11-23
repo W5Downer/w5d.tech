@@ -234,6 +234,8 @@
 
 @elseif($v['kind'] === 'funding')
   @include('admin.funding')
+@elseif($v['kind'] === 'setup')
+  @include('admin.setup')
 
 @elseif($v['kind'] === 'api')
   @include('partials.api-guide', ['guide' => $v['guide'], 'tabs' => $v['tabs'], 'as' => $v['as'], 'tab_base' => $v['tab_base'], 'role' => $v['role']])

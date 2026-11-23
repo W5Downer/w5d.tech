@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{ACL, ApiGuide, Auth, StaffAuth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
+use W5D\{ACL, ApiGuide, Auth, Funding, Gateways, StaffAuth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
 
 /** Owner portal. Mounted at /{ADMIN_URL_PATH}. Every action re-checks session, permission and CSRF. */
 final class Admin
@@ -137,6 +137,7 @@ final class Admin
             'content' => self::vList(array_map(fn($p) => ['slug' => $p['slug'], 'title' => t($p['title'], 'en'), 'sections' => count($p['sections'] ?? []), 'robots' => $p['robots'] ?? 'index,follow'], array_values(Content::all('pages'))), ['note' => 'Pages are JSON section lists rendered by blocks. Edit data/content/pages/*.json.']),
             'variables' => self::vVariables(),
             'system' => self::vSystem(),
+            'setup-guide' => self::vSetup(),
             'api-docs' => self::vApi($q),
             // Operational screens backed by the platform tables (read-only lists; never expose secrets).
             'countries' => self::vTable('SELECT country_id AS id, iso, name_en AS name, currency, timezone, active, created_at FROM countries ORDER BY country_id'),
@@ -274,6 +275,23 @@ final class Admin
         if ($n) self::audit('payment-methods.save', '', $n . ' setting(s) · ' . $note);
         self::flash($errs ? 'error' : 'ok', ($n ? $n . ' change(s) saved. ' : 'Nothing changed. ') . ($errs ? 'Not saved or not enabled: ' . implode('; ', $errs) . '.' : ''));
         return Response::redirect($back);
+    }
+
+    /** Owner setup guide: live state only (set / empty / ok), never a secret value. */
+    private static function vSetup(): array
+    {
+        $set = fn(string $k): bool => trim((string)Env::get($k, '')) !== '';
+        $keys = ['OWNER_EMAIL', 'STAFF_EMAIL_DOMAIN', 'APP_URL', 'ADMIN_URL_PATH', 'MAIL_DRIVER', 'MAIL_HOST', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'MAIL_FOOTER_ADDRESS',
+            'PAYMENT_MODE', 'PAYMENT_D17_ENABLED', 'PAYMENT_D17_GSM', 'VAT_MATRICULE_FISCAL', 'FUNDING_MODE', 'F1_AUTO_ENTREPRENEUR_ENABLED', 'F2_SPONSORSHIP_ENABLED', 'F4_PRE_SOLD_CREDITS_ENABLED',
+            'F5_STARTUP_ACT_APPLICATION', 'ADS_STATUS', 'RNE_BUDGET_TND'];
+        $state = [];
+        foreach ($keys as $k) $state[$k] = $set($k);
+        $pay = [];
+        foreach (Gateways::all() as $id => $def) $pay[$id] = ['name' => $def['name'], 'kind' => $def['kind'], 'on' => Gateways::on($id), 'ready' => Gateways::enabled($id), 'missing' => Gateways::missing($id)];
+        $lf = (string)Variables::get('company.legal_form');
+        return ['kind' => 'setup', 'env' => $state, 'driver' => (string)Env::get('MAIL_DRIVER', 'log'), 'prod' => Env::get('APP_ENV', 'production') === 'production', 'channels' => Funding::all(), 'pay' => $pay,
+            'legal_form' => in_array($lf, ['pending', 'auto_entrepreneur', 'company'], true) ? $lf : 'pending', 'payment_mode' => (string)Env::get('PAYMENT_MODE', 'demo'), 'tokens' => Funding::tokens(),
+            'domain' => StaffAuth::domain(), 'owner' => StaffAuth::mask(StaffAuth::ownerEmail())];
     }
 
     private static function vIntegrations(): array
