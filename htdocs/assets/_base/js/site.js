@@ -569,14 +569,14 @@
       if (hov) {
         w.addEventListener('mouseenter', function () { show(w); });
         w.addEventListener('mouseleave', function () { if (!w._pin) hide(w); });
-        w.addEventListener('focusin', function () { show(w); });
+        w.addEventListener('focusin', function () { if (!w._quiet) show(w); });
         w.addEventListener('focusout', function () { if (!w._pin) hide(w); });
       }
     });
     document.addEventListener('click', function (e) { tips.forEach(function (w) { if (!w.contains(e.target)) hide(w); }); });
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
-      tips.forEach(function (w) { var t = w.querySelector('.w5-help-tip'); if (t && !t.hidden) { hide(w); var b = w.querySelector('button'); b && b.focus(); } });
+      tips.forEach(function (w) { var t = w.querySelector('.w5-help-tip'); if (t && !t.hidden) { hide(w); var b = w.querySelector('button'); w._quiet = true; b && b.focus(); w._quiet = false; } });
     });
     $$('[data-help-pop]').forEach(function (b) {
       var d = document.getElementById(b.getAttribute('data-help-pop')); if (!d) return;

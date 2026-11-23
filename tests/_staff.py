@@ -33,7 +33,7 @@ def last_code(root, email, since=None):
     for f in sorted(glob.glob(os.path.join(root, 'storage/logs/mail-*.log'))):
         txt = open(f, encoding='utf-8', errors='replace').read()
         for m in re.finditer(r'\[(\d{4}-\d\d-\d\dT[\d:+]+)\] \[staff_code\] to=' + re.escape(email) + r' [^\n]*\n(.*?)(?=\n\[\d{4}-\d\d-\d\dT|\Z)', txt, re.S):
-            c = re.search(r'Code\s*\n\s*(\d{3}) (\d{3})', m.group(2))
+            c = re.search(r'^\s*(\d{3}) (\d{3})\s*$', m.group(2), re.M)  # label is translated (Code / Code / الرمز): match the grouped digits only
             if c:
                 best = c.group(1) + c.group(2)
     return best
@@ -104,6 +104,11 @@ def pw_login(page, base, mount=MOUNT, email=None, root=ROOT):
     if not code:
         return False
     page.fill('input[name=code]', code)
-    page.click('form[data-once] button[type=submit]')
+    # six digits auto-submit the form (UX: no extra tap); fall back to the button if the page is still on the login step
+    try:
+        page.wait_for_url(lambda u: '/login' not in u, timeout=4000)
+    except Exception:
+        if '/login' in page.url:
+            page.click('form[data-once] button[type=submit]')
     page.wait_for_load_state('load')
     return '/login' not in page.url
