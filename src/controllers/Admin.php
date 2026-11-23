@@ -283,7 +283,7 @@ final class Admin
         $set = fn(string $k): bool => trim((string)Env::get($k, '')) !== '';
         $keys = ['OWNER_EMAIL', 'STAFF_EMAIL_DOMAIN', 'APP_URL', 'ADMIN_URL_PATH', 'MAIL_DRIVER', 'MAIL_HOST', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'MAIL_FOOTER_ADDRESS',
             'PAYMENT_MODE', 'PAYMENT_D17_ENABLED', 'PAYMENT_D17_GSM', 'VAT_MATRICULE_FISCAL', 'FUNDING_MODE', 'F1_AUTO_ENTREPRENEUR_ENABLED', 'F2_SPONSORSHIP_ENABLED', 'F4_PRE_SOLD_CREDITS_ENABLED',
-            'F5_STARTUP_ACT_APPLICATION', 'ADS_STATUS', 'RNE_BUDGET_TND'];
+            'F5_STARTUP_ACT_APPLICATION', 'ADS_STATUS', 'RNE_BUDGET_TND', 'OAUTH_GOOGLE_CLIENT_ID', 'OAUTH_GOOGLE_CLIENT_SECRET'];
         $state = [];
         foreach ($keys as $k) $state[$k] = $set($k);
         $pay = [];

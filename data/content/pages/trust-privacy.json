@@ -286,6 +286,34 @@
     },
     {
       "type": "prose",
+      "id": "pv-google",
+      "tier": "e",
+      "focus": 2,
+      "title": {
+        "en": "Google sign-in and Google user data",
+        "fr": "Connexion Google et données utilisateur Google",
+        "ar": "الدخول عبر Google وبيانات مستخدم Google"
+      },
+      "paragraphs": [
+        {
+          "en": "Signing in with Google is an option, never a requirement. When you use it, Google tells W5D three things: a stable account identifier, your name and your e-mail address with the information that Google has verified it. W5D requests only the scopes openid, email and profile. It requests no access to Gmail, Drive, Contacts, Calendar, YouTube or any other Google product, and it does not keep a token that would let it act in your Google account: the token is used once, on our server, to read those three items, and is then discarded. Google also offers a profile picture; W5D does not store it.",
+          "fr": "La connexion avec Google est une option, jamais une obligation. Lorsque vous l’utilisez, Google transmet à W5D trois éléments : un identifiant de compte stable, votre nom et votre adresse e-mail avec l’indication que Google l’a vérifiée. W5D ne demande que les périmètres openid, email et profile. Il ne demande aucun accès à Gmail, Drive, Contacts, Agenda, YouTube ni à aucun autre produit Google, et ne conserve aucun jeton lui permettant d’agir dans votre compte Google : le jeton sert une seule fois, sur notre serveur, à lire ces trois éléments, puis il est abandonné. Google propose aussi une photo de profil ; W5D ne la conserve pas.",
+          "ar": "الدخول عبر Google خيار وليس إلزامًا. عند استعماله تُعلِم Google منصة W5D بثلاثة أمور: معرّفًا ثابتًا للحساب واسمك وبريدك الإلكتروني مع إشارة إلى أن Google وثّقه. ولا تطلب W5D سوى النطاقات openid وemail وprofile. ولا تطلب أي وصول إلى Gmail أو Drive أو جهات الاتصال أو التقويم أو YouTube أو أي منتج آخر من Google، ولا تحتفظ برمز يتيح لها التصرف في حسابك على Google: يُستعمل الرمز مرة واحدة على خادمنا لقراءة هذه العناصر الثلاثة ثم يُهمَل. وتتيح Google كذلك صورة ملف شخصي؛ ولا تخزّنها W5D."
+        },
+        {
+          "en": "What we do with it: create your W5D account, recognise you the next time you sign in, and send the e-mails that the account needs (confirmation, receipts, security notices). Nothing else. We do not use Google user data for advertising, profiling, credit or insurance decisions, or to build a data set; we do not sell it, rent it or transfer it to data brokers or advertising platforms; no person reads it except where you ask us for help or the law requires it. We do not use it, or any other personal data, to train generative or other artificial-intelligence models.",
+          "fr": "Ce que nous en faisons : créer votre compte W5D, vous reconnaître à la connexion suivante et envoyer les e-mails dont le compte a besoin (confirmation, reçus, avis de sécurité). Rien d’autre. Nous n’utilisons pas les données utilisateur Google pour la publicité, le profilage, des décisions de crédit ou d’assurance, ni pour constituer un jeu de données ; nous ne les vendons pas, ne les louons pas et ne les transférons ni à des courtiers de données ni à des plateformes publicitaires ; aucune personne ne les lit, sauf si vous nous demandez de l’aide ou si la loi l’exige. Nous ne les utilisons pas, ni aucune autre donnée personnelle, pour entraîner des modèles d’intelligence artificielle générative ou autres.",
+          "ar": "ما نفعله بها: إنشاء حسابك في W5D والتعرّف عليك عند دخولك التالي وإرسال الرسائل التي يحتاجها الحساب (التأكيد والإيصالات وإشعارات الأمان). لا شيء غير ذلك. لا نستعمل بيانات مستخدم Google في الإعلان أو التنميط أو قرارات الائتمان أو التأمين أو بناء قاعدة بيانات؛ ولا نبيعها ولا نؤجّرها ولا ننقلها إلى سماسرة بيانات أو منصات إعلانية؛ ولا يطّلع عليها أي شخص إلا إذا طلبت مساعدتنا أو أوجب القانون ذلك. ولا نستعملها، ولا أي بيانات شخصية أخرى، لتدريب نماذج الذكاء الاصطناعي التوليدي أو غيرها."
+        },
+        {
+          "en": "W5D’s use and transfer to any other app of information received from Google APIs will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. You can stop using Google sign-in at any time: remove W5D under “Third-party apps with account access” in your Google Account, then ask us to delete your account on the [data rights](/trust/data-rights/) page. W5D contains no feature that creates, edits or hosts images, video or audio of people, so no Google data can reach such a feature.",
+          "fr": "L’utilisation par W5D, et le transfert à toute autre application, des informations reçues des API Google respecteront la [Politique relative aux données utilisateur des services d’API Google](https://developers.google.com/terms/api-services-user-data-policy), y compris les exigences d’utilisation limitée. Vous pouvez cesser d’utiliser la connexion Google à tout moment : retirez W5D dans « Applications tierces ayant accès au compte » de votre compte Google, puis demandez-nous de supprimer votre compte sur la page [droits sur les données](/trust/data-rights/). W5D ne comporte aucune fonction qui crée, modifie ou héberge des images, vidéos ou voix de personnes ; aucune donnée Google ne peut donc y parvenir.",
+          "ar": "يلتزم استعمال W5D، ونقلها إلى أي تطبيق آخر، للمعلومات الواردة من واجهات Google البرمجية بـ[سياسة بيانات المستخدم لخدمات Google API](https://developers.google.com/terms/api-services-user-data-policy)، بما فيها متطلبات الاستخدام المحدود. ويمكنك التوقف عن استعمال الدخول عبر Google في أي وقت: أزل W5D من «تطبيقات الجهات الخارجية التي لها حق الوصول إلى الحساب» في حساب Google، ثم اطلب منا حذف حسابك في صفحة [حقوق البيانات](/trust/data-rights/). ولا تحتوي W5D على أي ميزة تنشئ صورًا أو مقاطع فيديو أو أصواتًا لأشخاص أو تعدّلها أو تستضيفها، ولذلك لا يمكن لأي بيانات من Google أن تصل إلى ميزة كهذه."
+        }
+      ]
+    },
+    {
+      "type": "prose",
       "id": "pv-transfer",
       "tier": "e",
       "focus": 2,

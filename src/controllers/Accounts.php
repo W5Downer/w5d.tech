@@ -227,7 +227,7 @@ final class Accounts
             if (!$u) { $id = Account::create($pr['email'], $pr['name'], null, 'user', true, lang()); $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]); Affiliate::attach((int)$id); Affiliate::onVerified((int)$id); }
             elseif (!$u['email_verified_at']) { DB::q('UPDATE users SET email_verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$u['id']]); $u['email_verified_at'] = date('Y-m-d H:i:s'); }
             DB::q('INSERT OR IGNORE INTO social_accounts(user_id, provider, provider_uid, email) VALUES (?,?,?,?)', [$u['id'], $p, $pr['uid'], $pr['email']]);
-            if ($pr['avatar'] && !$u['avatar_url'] && preg_match('#^https://#', (string)$pr['avatar'])) DB::q('UPDATE users SET avatar_url = ? WHERE id = ?', [$pr['avatar'], $u['id']]);
+            // The provider's profile picture is deliberately NOT stored: nothing displays it (data minimisation, stated in the privacy policy).
         }
         Account::login($u, false);
         $n = Account::safeNext($pr['next'] ?? null);

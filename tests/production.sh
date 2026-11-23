@@ -120,6 +120,7 @@ run "sign-in gate"                                  python3 tests/gate.py "$BASE
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"
 run "CRUD + ACL"                                    python3 tests/crud.py "$BASE"
 run "team sign-in (@team e-mail + code) + privacy"  python3 tests/staff.py "$BASE"
+run "Google OAuth branding / user-data policy guard" python3 tests/google.py "$BASE"
 if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
   run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
