@@ -11,8 +11,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DBPATH = os.path.join(ROOT, 'storage/w5d.sqlite')
 env = dict(l.split('=', 1) for l in open(os.path.join(ROOT, '.env')).read().splitlines() if '=' in l and not l.startswith('#'))
 M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z').strip('/')
-OWNER_USER = env.get('WEBMASTER_USERNAME', 'owner')
-OWNER_PASS = os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')
 _n = [0]
 ok = bad = 0
 
@@ -119,30 +117,14 @@ def new_user(role='user', name='Prog Tester', prefix='pg'):
 
 
 def staff(role):
-    """Register + verify, promote the account, THEN sign in (role is read at login)."""
-    c = _client()
-    reset_rl()
-    rid = uniq()
-    email = f'st{role[:3]}{rid}@mail.test'
-    pw = 'Str0ngPass-' + rid
-    t = _csrf(c, BASE, '/account/register/')
-    call(c, 'POST', '/account/register/', {'_csrf': t, 'name': 'Staff ' + role, 'email': email, 'password': pw, 'password2': pw, 'role': 'user', 'accept': '1'})
-    tok = verify_token(ROOT, email)
-    call(c, 'GET', f'/account/verify/{tok}/')
-    run('UPDATE users SET role_slug = ? WHERE email = ?', (role, email))
-    t = _csrf(c, BASE, '/account/login/')
-    s, h, b = call(c, 'POST', '/account/login/', {'_csrf': t, 'identifier': email, 'password': pw})
-    if s != 302:
-        raise RuntimeError(f'staff login failed ({s})')
-    return c
+    """Team member with `role`: created by SQL, signed in through the real e-mail code flow."""
+    from _staff import staff_client
+    return staff_client(BASE, role, ROOT, 'st', M)
 
 
 def owner():
-    reset_rl()
-    o = _client()
-    t = _csrf(o, BASE, '/account/login/')
-    call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': OWNER_USER, 'password': OWNER_PASS})
-    return o
+    from _staff import staff_login
+    return staff_login(BASE, ROOT, None, M)
 
 
 def loc(h):

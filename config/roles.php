@@ -56,5 +56,7 @@ return [
         ['n' => 37, 'slug' => 'payment-methods',     'icon' => 'wallet',           'perm' => 'payment-methods','label' => ['en' => 'Payment methods', 'fr' => 'Moyens de paiement', 'ar' => 'وسائل الدفع']],
         ['n' => 38, 'slug' => 'integrations',        'icon' => 'plug',             'perm' => 'integrations', 'label' => ['en' => 'Integrations', 'fr' => 'Intégrations', 'ar' => 'التكاملات']],
         ['n' => 39, 'slug' => 'funding',             'icon' => 'landmark',         'perm' => 'funding',      'label' => ['en' => 'Funding & AdSense', 'fr' => 'Financement et AdSense', 'ar' => 'التمويل وAdSense']],
+        ['n' => 40, 'slug' => 'team',                'icon' => 'user-check',       'perm' => 'team',         'label' => ['en' => 'Team access', 'fr' => 'Accès de l’équipe', 'ar' => 'صلاحيات الفريق']],
+        ['n' => 41, 'slug' => 'setup-guide',         'icon' => 'book-open',        'perm' => 'setup',        'label' => ['en' => 'Setup guide (.env & payments)', 'fr' => 'Guide de mise en place (.env et paiements)', 'ar' => 'دليل الإعداد (.env والمدفوعات)']],
     ],
 ];

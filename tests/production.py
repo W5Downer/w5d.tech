@@ -65,7 +65,7 @@ print('internals are not reachable')
 for p in ('/.env', '/.env.example', '/src/App.php', '/config/app.php', '/config/mail.php', '/storage/w5d.sqlite', '/storage/app.key', '/storage/logs/', '/data/content/pages/home.json', '/db/migrations/001_initial.sql',
           '/README.md', '/LICENSE', '/bin/health.php', '/bin/preflight.php', '/tests/flows.py', '/tools/package.json', '/lang/en.php', '/views/templates/w5d/pages/page.blade.php', '/docs/pricing.md', '/.git/config', '/.git/HEAD', '/index.php', '/htdocs/index.php', '/vendor/autoload.php', '/phpinfo.php'):
     s, h, t, c = get(p)
-    leaked = any(x in t for x in ('<?php', 'WEBMASTER_PASSWORD_HASH', 'SQLite format 3', '[core]', 'ref: refs/heads', 'APP_KEY'))
+    leaked = any(x in t for x in ('<?php', 'OWNER_EMAIL=', 'SQLite format 3', '[core]', 'ref: refs/heads', 'APP_KEY'))
     check(f'{p} -> not served (got {s})', s in (301, 302, 303, 400, 403, 404) and not leaked and (s != 200))
 s, h, t, c = get('/.git/config/')
 check('/.git/config/ (after canonical redirect) still 404', s == 404)
@@ -74,7 +74,7 @@ check('path traversal does not leak', 'root:' not in t)
 s, h, t, c = get('/%2e%2e%2f%2e%2e%2fetc%2fpasswd/')
 check('encoded traversal does not leak', 'root:' not in t and s in (301, 400, 404))
 s, h, t, c = get('/assets/../.env')
-check('assets/../.env does not leak', 'WEBMASTER_PASSWORD_HASH' not in t)
+check('assets/../.env does not leak', 'OWNER_EMAIL=' not in t)
 s, h, t, c = get('/assets/_base/css/attention.css%00.php')
 check('NUL byte request is refused', s in (400, 404))
 
@@ -108,7 +108,7 @@ check('no third-party origins loaded (CDN/fonts/analytics)', not re.search(r'(sr
 s, h, t, c = get('/sitemap.xml')
 check('sitemap.xml 200 xml, all <loc> on the https origin', s == 200 and 'xml' in h.get('content-type', '') and t.count('<loc>') >= EXPECT_LOCS and all(u.startswith(origin) for u in re.findall(r'<loc>([^<]+)</loc>', t)), f'{t.count("<loc>")} locs, expected >= {EXPECT_LOCS}')
 s, h, t, c = get('/robots.txt')
-check('robots.txt disallows admin/account/pay and lists https sitemap', 'Disallow: /panel-x9z/' in t and 'Disallow: /account/' in t and f'Sitemap: {origin}/sitemap.xml' in t, t[:200])
+check('robots.txt disallows account/pay/private doors, never prints the portal path, lists https sitemap', 'Disallow: /account/' in t and 'panel-x9z' not in t and 'Disallow: /for/owner/' in t and f'Sitemap: {origin}/sitemap.xml' in t, t[:200])
 s, h, t, c = get('/.well-known/security.txt')
 check('security.txt has Contact + future Expires + https Canonical', s == 200 and 'Contact:' in t and f'Canonical: {origin}/' in t and re.search(r'Expires: (20[2-9]\d)', t) is not None, t[:200])
 for p, ct in (('/manifest.webmanifest', 'json'), ('/humans.txt', 'text')):
@@ -152,7 +152,11 @@ s, h, t, c = get('/admin/')
 check('guessable /admin/ is 404', s == 404)
 s, h, t, c = get(adm + '/login/')
 check('portal login is noindex + no-store', 'noindex' in h.get('x-robots-tag', '') + t and 'no-store' in h.get('cache-control', ''))
-if PASS:
+if True:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from _staff import last_code, reset_rl
+    OWNER = 'owner@w5d.tech'
+    reset_rl(ROOT)
     jar = urllib.request.HTTPCookieProcessor()
     op = urllib.request.build_opener(urllib.request.HTTPSHandler(context=CTX), jar, NoRedirect)
     def rq(path, data=None):
@@ -161,15 +165,25 @@ if PASS:
         except urllib.error.HTTPError as e: r = e
         return (r.status if hasattr(r, 'status') else r.code), {k.lower(): v for k, v in r.headers.items()}, r.read().decode('utf-8', 'replace')
     s, h, t = rq(adm + '/login/'); tok = re.search(r'name="_csrf" value="([0-9a-f]+)"', t)[1]
+    check('portal login has no password field', 'type="password"' not in t)
     s, h, t = rq(adm + '/login/', {'_csrf': tok, 'username': 'owner', 'password': 'w5d-demo-owner'})
-    check('demo password is REJECTED in production', not (s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm)), f'{s} {h.get("location")}')
-    s, h, t = rq(adm + '/login/'); tok = re.search(r'name="_csrf" value="([0-9a-f]+)"', t)[1]
-    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'username': 'owner', 'password': PASS})
-    check('production owner password signs in', s in (302, 303), f'{s}')
+    check('password sign-in does not exist (demo password REJECTED)', not (s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm)), f'{s} {h.get("location")}')
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'request', 'email': 'someone@gmail.com'})
+    check('a non-team address gets no code', last_code(ROOT, 'someone@gmail.com') is None)
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'request', 'email': OWNER})
+    import time; time.sleep(0.2)
+    code = last_code(ROOT, OWNER)
+    check('owner code mailed (6 digits)', bool(code and re.fullmatch(r'\d{6}', code)), code)
+    bad_code = '000000' if code != '000000' else '111111'
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'verify', 'code': bad_code})
+    check('wrong code is REJECTED in production', not (s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm)), f'{s}')
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'verify', 'code': code})
+    check('production owner signs in with the e-mailed code', s in (302, 303), f'{s}')
+    op2 = urllib.request.build_opener(urllib.request.HTTPSHandler(context=CTX), urllib.request.HTTPCookieProcessor(), NoRedirect)
     s, h, t = rq(adm + '/')
     check('dashboard renders in production (no debug output)', s == 200 and 'Command Center' in t and 'Stack trace' not in t and '<pre>' not in t[:2000])
     s, h, t = rq(adm + '/system/')
-    check('system screen never prints secrets', s == 200 and 'WEBMASTER_PASSWORD_HASH' not in t and '$argon2' not in t and 'MAIL_PASSWORD' not in t)
+    check('system screen never prints secrets', s == 200 and 'OWNER_EMAIL' not in t and '$argon2' not in t and 'MAIL_PASSWORD' not in t)
     s, h, t = rq(adm + '/users/')
     check('users screen never prints password hashes', s == 200 and '$argon2' not in t and '$2y$' not in t)
 

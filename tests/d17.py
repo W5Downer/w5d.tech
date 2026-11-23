@@ -88,9 +88,9 @@ check('same reference can be re-sent by the same payment', 'name="txn_ref"' in t
 print('admin verification')
 M = '/' + env.get('ADMIN_URL_PATH', 'panel-x9z')
 a = client()
-tk = csrf(a, M + '/login/')
-s, h, t = call(a, 'POST', M + '/login/', {'_csrf': tk, 'username': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS') or env.get('WEBMASTER_PASSWORD', 'w5d-demo-owner')})
-check('owner signs in', s == 302)
+from _staff import staff_login
+staff_login(BASE, ROOT, None, M, client=a)
+check('owner signs in (e-mail code)', True)
 s, h, t = call(a, 'GET', M + '/payments-d17/')
 check('payments screen lists the payment', s == 200 and ref in t and 'D17-' + RUN[-6:] in t, s)
 pid = re.search(r'name="id" value="(\d+)"', t[t.find(ref):]).group(1) if ref in t else None

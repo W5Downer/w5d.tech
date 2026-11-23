@@ -17,7 +17,7 @@ final class QuickPaths
         $defs = [
             ['invest', 'coins', '/checkout/'],
             ['learn', 'graduation-cap', '/join/eligibility/'],
-            ['manage', 'users', '/for/leader/'],
+            ['manage', 'users', '/careers/managers/'],
             ['client', 'briefcase', '/partners/'],
             ['status', 'activity', '/status/'],
             ['help', 'life-buoy', '/faq/'],
@@ -46,7 +46,7 @@ final class QuickPaths
         $foot = Content::get('nav', 'footer')['columns'] ?? [];
         foreach ($foot as $col) foreach ($col['items'] ?? [] as $l) $add(t($l['label']), link_to($l['href']), t($col['heading']));
         foreach (Content::all('macros') as $m) $add(t($m['name']), url('/macro-works/' . $m['slug'] . '/'), t($m['tagline'] ?? []));
-        foreach (\W5D\Controllers\Pages::AUDIENCES as $a) $add(ucfirst($a), url('/for/' . $a . '/'), __('nav.audiences'));
+        foreach (\W5D\Controllers\Pages::visibleAudiences() as $a) $add(ucfirst($a), url('/for/' . $a . '/'), __('nav.audiences'));
         return $rows;
     }
 }

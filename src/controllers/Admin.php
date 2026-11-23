@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{ACL, ApiGuide, Auth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
+use W5D\{ACL, ApiGuide, Auth, StaffAuth, Content, Crud, Csrf, DB, Dash, Env, Pricing, Request, Response, Rollup, Variables, ViewEnv};
 
 /** Owner portal. Mounted at /{ADMIN_URL_PATH}. Every action re-checks session, permission and CSRF. */
 final class Admin
@@ -35,14 +35,34 @@ final class Admin
     public static function login(Request $q): Response
     {
         if (Auth::check()) return Response::redirect(admin_url());
-        $error = null;
+        $err = null; $step = 'email'; $email = (string)($_SESSION['staff_pending'] ?? '');
+        $expired = !empty($_SESSION['_staff_expired']); unset($_SESSION['_staff_expired']);
+        $m = fn(string $en, string $fr, string $ar) => t(['en' => $en, 'fr' => $fr, 'ar' => $ar]);
         if ($q->isPost()) {
-            if (!Csrf::check($q)) $error = __('msg.csrf');
-            elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $error = t(\W5D\Integrations::message());
-            elseif (Auth::attempt((string)($q->post['username'] ?? ''), (string)($q->post['password'] ?? ''), $q->ip())) return Response::redirect(admin_url());
-            else $error = 'Invalid credentials or too many attempts.';
-        }
-        return self::page('admin.login', ['title' => __('admin.login'), 'error' => $error]);
+            $do = (string)($q->post['do'] ?? 'request');
+            if (!Csrf::check($q)) $err = __('msg.csrf');
+            elseif ($do === 'reset') { unset($_SESSION['staff_pending']); $email = ''; }
+            elseif ($do === 'request') {
+                $email = StaffAuth::normalize((string)($q->post['email'] ?? ''));
+                if (!StaffAuth::isStaffEmail($email)) $err = $m('Use your @' . StaffAuth::domain() . ' e-mail address.', 'Utilisez votre adresse e-mail @' . StaffAuth::domain() . '.', 'استخدم بريدك @' . StaffAuth::domain() . '.');
+                elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $err = t(\W5D\Integrations::message());
+                else {
+                    $r = StaffAuth::request($email, $q->ip(), lang());
+                    if ($r['ok']) { $_SESSION['staff_pending'] = $email; $step = 'code'; }
+                    else $err = $r['error'] === 'rate' ? $m('Too many requests. Wait a few minutes and try again.', 'Trop de demandes. Patientez quelques minutes.', 'طلبات كثيرة. انتظر بضع دقائق.') : $m('The service is temporarily unavailable.', 'Le service est momentanément indisponible.', 'الخدمة غير متاحة مؤقتا.');
+                }
+            } elseif ($do === 'verify') {
+                $step = 'code';
+                if ($email === '') { $step = 'email'; $err = $m('Start again: enter your e-mail address.', 'Recommencez : saisissez votre adresse e-mail.', 'ابدأ من جديد: أدخل بريدك.'); }
+                else {
+                    $who = StaffAuth::verify($email, (string)($q->post['code'] ?? ''), $q->ip());
+                    if ($who) { unset($_SESSION['staff_pending']); $land = StaffAuth::signIn($who, $email); self::audit('login.code', $email, $who['role']); return Response::redirect($land); }
+                    $err = $m('This code is wrong, expired or already used. Ask for a new one.', 'Ce code est faux, expiré ou déjà utilisé. Demandez-en un nouveau.', 'الرمز خاطئ أو منتهٍ أو مستعمل. اطلب رمزا جديدا.');
+                }
+            }
+            if ($email !== '' && $do !== 'reset' && $step === 'email' && !$err) $step = 'code';
+        } elseif ($email !== '') $step = 'code';
+        return self::page('admin.login', ['title' => __('admin.login'), 'error' => $err, 'step' => $step, 'email' => $email, 'masked' => $email !== '' ? StaffAuth::mask($email) : '', 'expired' => $expired, 'ttl' => StaffAuth::ttlMinutes()]);
     }
 
     public static function logout(Request $q): Response

@@ -148,6 +148,18 @@ return [
             'active' => ['bool', $L('Active', 'Active', 'نشطة'), 'default' => 1],
         ],
     ],
+    'team' => [
+        // Team access: the ONLY place a team address is created. Sign-in is by e-mailed code (StaffAuth); there is no password column here.
+        'table' => 'users', 'perm' => 'team', 'actions' => ['create', 'update'], 'where' => "role_slug IN ('admin','leader','manager','member')",
+        'title' => $L('Team member', 'Membre de l’équipe', 'عضو فريق'), 'order' => 'id DESC',
+        'list' => 'id, name, email, role_slug AS role, active, COALESCE(last_login_at, \'\') AS last_login, created_at',
+        'fields' => [
+            'email' => ['email', $L('Team e-mail (the sign-in address)', 'E-mail d’équipe (adresse de connexion)', 'بريد الفريق (عنوان الدخول)'), 'req' => true, 'max' => 120, 'pattern' => '/^[A-Za-z0-9._%+\-]+@' . preg_quote(\W5D\StaffAuth::domain(), '/') . '$/'],
+            'name' => ['text', $L('Name', 'Nom', 'الاسم'), 'req' => true, 'max' => 120],
+            'role_slug' => ['select', $L('Role', 'Rôle', 'الدور'), 'req' => true, 'options' => ['admin' => 'admin', 'leader' => 'leader (super manager)', 'manager' => 'manager', 'member' => 'member']],
+            'active' => ['bool', $L('Active (can sign in)', 'Actif (peut se connecter)', 'نشط (يمكنه الدخول)'), 'default' => 1],
+        ],
+    ],
     'users' => [
         // password_hash and tokens are never selected, shown or written here.
         'table' => 'users', 'perm' => 'users', 'actions' => ['update'],

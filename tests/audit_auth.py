@@ -137,28 +137,13 @@ def reset_rl():
 
 
 def staff(role):
-    reset_rl()
-    c = _client()
-    run = str(int(time.time() * 1000))[-9:]
-    email = f'st{role}{run}@mail.test'
-    pw = 'Str0ngPass-' + run
-    t = _csrf(c, BASE, '/account/register/')
-    _call(c, BASE, 'POST', '/account/register/', {'_csrf': t, 'name': 'Staff ' + role, 'email': email, 'password': pw, 'password2': pw, 'role': 'user', 'accept': '1'})
-    from _acct import verify_token
-    tok = verify_token(ROOT, email)
-    _call(c, BASE, 'GET', f'/account/verify/{tok}/')
-    sql(f"UPDATE users SET role_slug='{role}' WHERE email='{email}'")
-    t = _csrf(c, BASE, '/account/login/')
-    _call(c, BASE, 'POST', '/account/login/', {'_csrf': t, 'identifier': email, 'password': pw})
-    return c
+    from _staff import staff_client
+    return staff_client(BASE, role, ROOT, 'au', M)
 
 
 def owner():
-    reset_rl()
-    o = _client()
-    t = _csrf(o, BASE, '/account/login/')
-    _call(o, BASE, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')})
-    return o
+    from _staff import staff_login
+    return staff_login(BASE, ROOT, None, M)
 
 
 def perms_for(role):

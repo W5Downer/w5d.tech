@@ -8,6 +8,7 @@ role inside each dashboard, no admin mount leaking into account pages, permissio
 import os, re, shutil, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _acct import signed_in, _client, _call, _csrf
+from _staff import staff_login, make_team
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080').rstrip('/')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,17 +40,21 @@ for lang in ('en', 'fr', 'ar'):
     s = urllib.request.urlopen(req).status
     html = urllib.request.urlopen(req).read().decode()
     check(f'hub 200 [{lang}]', s == 200)
-    check(f'hub has 7 audience cards [{lang}]', len(re.findall(r'data-hub-card="', html)) == 7, len(re.findall(r'data-hub-card="', html)))
+    check(f'guests see 4 audience cards (owner/admin/leader doors are private) [{lang}]', len(re.findall(r'data-hub-card="', html)) == 4, len(re.findall(r'data-hub-card="', html)))
 check('hub no longer links to the (private) /developers/ page', '/developers/' not in html and '/llms.txt' not in html)
 s, h, b = call(g, 'GET', '/for/')
 check('guest sees no "signed in as" banner', 'data-hub-me' not in b)
 check('hub declaration sentence', 'Everyone sees the limits first' in b)
 for a in AUD:
     s, h, b = call(g, 'GET', f'/for/{a}/')
-    check(f'/for/{a}/ renders a dashboard preview', s == 200 and f'data-dash-preview="{a}"' in b, s)
-check('owner preview says portal', 'admin portal' in call(g, 'GET', '/for/owner/')[2].lower())
+    if a in ('owner', 'admin', 'leader'):
+        check(f'guest: /for/{a}/ is private (404, not rendered)', s == 404 and 'data-dash-preview' not in b, s)
+    else:
+        check(f'/for/{a}/ renders a dashboard preview', s == 200 and f'data-dash-preview="{a}"' in b, s)
+_oc = staff_login(BASE, ROOT, None, M)
+check('owner preview says portal (owner only)', 'admin portal' in call(_oc, 'GET', '/for/owner/')[2].lower())
 check('investor preview says account', 'inside your account' in call(g, 'GET', '/for/investor/')[2].lower())
-check('admin mount never appears on public pages', M.strip('/') not in call(g, 'GET', '/for/admin/')[2] and M.strip('/') not in call(g, 'GET', '/developers/')[2])
+check('admin mount never appears on public pages', M.strip('/') not in call(g, 'GET', '/for/member/')[2] and M.strip('/') not in call(g, 'GET', '/developers/')[2])
 _s, _h, _b = call(g, 'GET', '/developers/')
 check('guest: /developers/ is private (302 to sign-in, noindex)', _s == 302 and '/account/login/' in _h.get('Location', '') and 'noindex' in _h.get('X-Robots-Tag', ''), (_s, _h.get('Location')))
 for _p in ('/openapi.json', '/api/openapi.json', '/llms.txt', '/llms-full.txt', '/api/agents.json', '/.well-known/agents.json', '/api/docs/developers.json'):
@@ -60,10 +65,19 @@ _s, _h, _b = call(g, 'GET', '/robots.txt'); check('robots disallows the private 
 _s, _h, _b = call(g, 'GET', '/api/price.json'); check('data API stays public', _s == 200)
 
 def account_as(role, label, prefix):
-    """Register + verify a throw-away account, give it `role` in the DB, then sign in (so the session carries that role)."""
+    """Public roles: register + verify + password sign-in. Team roles: @w5d.tech row + e-mail code (the only way in)."""
     import time
     from _acct import verify_token
     shutil.rmtree(os.path.join(ROOT, 'storage/cache/rl'), ignore_errors=True)
+    if role in ('admin', 'leader', 'manager', 'member'):
+        email = make_team(role, prefix, name=label)
+        c = _client()
+        from _staff import request_code, last_code
+        (s0, h0, b0), t = request_code(c, BASE, email, M)
+        time.sleep(0.05)
+        code = last_code(ROOT, email)
+        s, h, b = call(c, 'POST', M + '/login/', {'_csrf': t, 'do': 'verify', 'code': code})
+        return c, email, s, h
     run = str(int(time.time() * 1000))[-9:]
     email = f'{prefix}{run}@mail.test'; pw = 'Str0ngPass-' + run
     c = _client()
@@ -130,8 +144,7 @@ for role in ('admin', 'leader', 'manager'):
     check(f'{role}: variables page is forbidden (403, friendly page)', s == 403 and '403' in b, s)
 
 print('owner: every guide inside the portal')
-o = _client(); t = _csrf(o, BASE, '/account/login/')
-s, h, b = call(o, 'POST', '/account/login/', {'_csrf': t, 'identifier': env.get('WEBMASTER_USERNAME', 'owner'), 'password': os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')})
+o = staff_login(BASE, ROOT, None, M)
 s, h, b = call(o, 'GET', M + '/')
 check('owner desk shown', s == 200 and 'data-desk-role="owner"' in b)
 for a in AUD + ['manager', 'developer']:

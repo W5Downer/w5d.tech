@@ -235,5 +235,6 @@
         }
       ]
     }
-  ]
+  ],
+  "robots": "noindex,nofollow"
 }

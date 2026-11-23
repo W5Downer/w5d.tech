@@ -14,6 +14,7 @@ final class App
         mb_internal_encoding('UTF-8');
         if (PHP_SAPI !== 'cli') Session::start();
         else $_SESSION = $_SESSION ?? [];
+        if (PHP_SAPI !== 'cli') StaffAuth::alive();
         if (PHP_SAPI !== 'cli') { try { Account::restore(); } catch (\Throwable $e) { /* DB not ready: stay a guest */ } }
         ViewEnv::share('currentLang', Lang::current());
     }

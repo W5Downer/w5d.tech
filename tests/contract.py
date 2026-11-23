@@ -133,7 +133,7 @@ check('footer columns mirror the doors', all(w in b for w in ('Learn and certify
 
 section('header + tab-bar CTA follows the subject of the page')
 want = {'/': 'path', '/about/': 'path', '/for/': 'path', '/investors/': 'invest', '/pricing/': 'invest', '/trust/statement/': 'invest', '/join/': 'learn', '/how-it-works/': 'learn',
-        '/certification/': 'learn', '/services/': 'learn', '/careers/': 'lead', '/for/leader/': 'lead', '/partners/': 'client', '/for/customer/': 'client', '/affiliate/': 'affiliate', '/for/member/': 'learn'}
+        '/certification/': 'learn', '/services/': 'learn', '/careers/': 'lead', '/partners/': 'client', '/for/customer/': 'client', '/affiliate/': 'affiliate', '/for/member/': 'learn'}
 for path, door in want.items():
     b = call(g, 'GET', path)[2]
     got = sorted(set(re.findall(r'data-cta="([a-z]+)"', b)))

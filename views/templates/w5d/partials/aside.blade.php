@@ -28,7 +28,7 @@
   $roleLabel = ['owner' => tr3('Owner', 'Propriétaire', 'المالك'), 'admin' => tr3('Administrator', 'Administrateur', 'مسؤول'), 'leader' => tr3('Team leader', 'Chef d’équipe', 'قائد فريق'), 'manager' => tr3('Team leader', 'Chef d’équipe', 'قائد فريق'),
     'member' => tr3('Member', 'Membre', 'عضو'), 'investor' => __('acct.role_investor'), 'customer' => __('acct.role_customer'), 'user' => __('acct.role_user')][$uRole] ?? '';
   $audKey = $uRole === 'manager' ? 'leader' : $uRole;
-  $audKeys = ['owner', 'admin', 'leader', 'member', 'investor', 'customer', 'user'];
+  $audKeys = \W5D\Controllers\Pages::visibleAudiences();
   $audName = ['owner' => tr3('Owner', 'Propriétaire', 'المالك'), 'admin' => tr3('Admin', 'Admin', 'المسؤول'), 'leader' => tr3('Leader', 'Leader', 'القائد'), 'member' => tr3('Member', 'Membre', 'العضو'),
     'investor' => tr3('Investor', 'Investisseur', 'المستثمر'), 'customer' => tr3('Customer', 'Client', 'العميل'), 'user' => tr3('User', 'Utilisateur', 'المستخدم')];
   $pNote = $uA ? \W5D\Account::unread() : 0;

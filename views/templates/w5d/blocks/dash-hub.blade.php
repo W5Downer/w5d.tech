@@ -1,6 +1,6 @@
 @php
   $me = \W5D\Dash::current();
-  $aud = \W5D\Controllers\Pages::AUDIENCES;
+  $aud = \W5D\Controllers\Pages::visibleAudiences();
   $href = fn($k) => url('/for/' . $k . '/');
 @endphp
 <x-section :d="$d" pad="py-12">

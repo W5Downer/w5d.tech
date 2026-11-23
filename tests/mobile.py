@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 shutil.rmtree(os.path.join(ROOT, 'storage/cache/rl'), ignore_errors=True)
 OWNER_USER = os.environ.get('W5D_OWNER_USER', 'owner'); OWNER_PASS = os.environ.get('W5D_OWNER_PASS', 'w5d-demo-owner')
 ADMIN = '/' + (os.environ.get('W5D_ADMIN_PATH', 'panel-x9z')).strip('/')
-PUBLIC = ['/', '/for/', '/for/investor/', '/for/owner/', '/join/', '/pricing/', '/investors/', '/checkout/', '/subscription/', '/careers/', '/contact/', '/faq/', '/status/', '/macro-works/', '/services/', '/projects/', '/account/login/', '/account/register/', '/account/forgot/', '/trust/', '/join/eligibility/', '/for/leader/', '/countries/tunisia/', '/how-it-works/', '/about/', '/newsletter/', '/certification/', '/affiliate/', '/certification/verify/']
+PUBLIC = ['/', '/for/', '/for/investor/', '/join/', '/pricing/', '/investors/', '/checkout/', '/subscription/', '/careers/', '/contact/', '/faq/', '/status/', '/macro-works/', '/services/', '/projects/', '/account/login/', '/account/register/', '/account/forgot/', '/trust/', '/join/eligibility/', '/countries/tunisia/', '/how-it-works/', '/about/', '/newsletter/', '/certification/', '/affiliate/', '/certification/verify/']
 ADMIN_PAGES = ['/', '/applicants/', '/services/', '/progressive-pricing/', '/investors/', '/variables/', '/payments-d17/', '/subscriptions/', '/inbox/', '/audit/', '/system/', '/quality/', '/manager-applications/', '/campaigns/', '/campaigns/new/', '/teams/', '/teams/new/', '/clients/', '/clients/new/', '/support/', '/payroll/', '/users/', '/academies/', '/verification/', '/weekly/', '/api-docs/']
 ok = bad = 0
 JS = """() => {
@@ -55,8 +55,9 @@ with sync_playwright() as pw:
         if lang != 'en': p.goto(BASE + f'/language/{lang}?r=%2F')
         p.goto(BASE + ADMIN + '/login/')
         audit(p, ADMIN + '/login/', f'{w}/{lang} admin')
-        p.fill('input[name=username]', OWNER_USER); p.fill('input[name=password]', OWNER_PASS)
-        p.click('form button[type=submit]'); p.wait_for_load_state('load')
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from _staff import pw_login
+        pw_login(p, BASE, ADMIN)
         signed = '/login' not in p.url
         check(f'{w}/{lang} owner signs in', signed, p.url)
         if signed:
