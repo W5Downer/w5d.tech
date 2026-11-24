@@ -46,7 +46,7 @@ for lang in ('en', 'fr', 'ar'):
     check(f'[{lang}] purpose section is visible text, not hidden', 'hidden' not in (re.match(r'<section[^>]*>', sec).group(0) if sec else 'hidden') and 'display:none' not in sec)
     check(f'[{lang}] home has exactly one h1', len(re.findall(r'<h1[ >]', h)) == 1)
     check(f'[{lang}] home footer links privacy + terms', h.count('/trust/privacy/') >= 2 and h.count('/trust/terms/') >= 2)
-    first = h.find('home-purpose'); check(f'[{lang}] purpose section sits near the top (before the 4th section)', 0 < first and len(re.findall(r'<section ', h[:first])) <= 3, str(len(re.findall(r'<section ', h[:first]))))
+    first = h.find('home-purpose'); check(f'[{lang}] purpose section is on the home page, after the hero and the carousel, not at the top', first > 0 and len(re.findall(r'<section ', h[:first])) >= 4, str(len(re.findall(r'<section ', h[:first]))))
     # privacy + terms
     s, p = fetch(BASE, '/trust/privacy/', lang)
     check(f'[{lang}] privacy has the Google section', 'id="pv-google"' in p and POLICY in p)

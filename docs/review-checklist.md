@@ -20,7 +20,7 @@ Known, reviewed differences are listed in `KNOWN` inside that file with the reas
 |---|---|---|---|
 | A1 | Help texts (54 screens, tooltip and popup) | `config/help.php` | Natural register for staff, correct technical terms (cache, preflight, SMTP, webhook), no calques |
 | A2 | Owner Setup guide (every step, three languages) | `views/templates/w5d/admin/setup.blade.php`, page `/panel/setup-guide/` | Steps can be followed by someone who has never edited `.env`; Google Cloud Console step uses the console's real Arabic/French menu names |
-| A3 | Team sign-in page and the code e-mail | `views/templates/w5d/admin/login.blade.php`, `mail/staff_code.blade.php` | Clear that there is no password, that nobody will ask for the code, how long it lives |
+| A3 | Team sign-in page and the code e-mail | `views/templates/w5d/admin/login.blade.php`, `mail/staff_code.blade.php` | Password form first and "send me a code instead" second are clear; nobody will ask for the code; how long it lives |
 | A4 | Google purpose, data-use and NCII statements | `home.json` section `home-purpose`, `trust-privacy.json` `pv-google`, `trust-terms.json` `tm-content`, the note under the Google button | Same meaning as the English; Limited Use sentence is not softened |
 | A5 | Arabic numerals and plurals | any text with counts | "two" as dual (ملفين) is intended; check Arabic plural agreement after `{{ tokens }}` are substituted |
 | A6 | Arabic typography | any page in Arabic | Mixed Latin/Arabic runs (brand, ENV names) keep their order; punctuation does not jump to the wrong end |

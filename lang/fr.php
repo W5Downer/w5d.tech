@@ -145,7 +145,7 @@ return [
         'crud_none' => 'Aucun enregistrement.', 'crud_search' => 'Rechercher', 'crud_rows' => 'lignes', 'crud_owner_only' => 'Propriétaire uniquement',
         'docs_title' => 'API et docs', 'docs_private' => 'Documentation privée. Visible uniquement une fois connecté.',
         'f_required' => 'Obligatoire', 'f_toolong' => 'Trop long', 'f_invalid' => 'Valeur invalide', 'f_range' => 'Plage autorisée',
-        'crud_failed' => 'Enregistrement impossible. Réessayez.', 'crud_in_use' => 'Suppression impossible : l’enregistrement est utilisé.', 'crud_scope' => 'Vous ne voyez que vos propres lignes.',
+        'crud_failed' => 'Enregistrement impossible. Réessayez.', 'crud_self' => 'Vous ne pouvez pas supprimer le compte avec lequel vous êtes connecté.', 'crud_in_use' => 'Suppression impossible : l’enregistrement est utilisé.', 'crud_scope' => 'Vous ne voyez que vos propres lignes.',
         'crud_back' => 'Retour à la liste', 'crud_new_title' => 'Nouvel enregistrement', 'crud_edit_title' => 'Modifier l’enregistrement', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Rôles et ce que chacun peut faire',
         'crud_read' => 'Lire', 'crud_create_l' => 'Créer', 'crud_update_l' => 'Modifier', 'crud_delete_l' => 'Supprimer', 'crud_yes' => 'oui', 'crud_own' => 'lignes propres',
     ],

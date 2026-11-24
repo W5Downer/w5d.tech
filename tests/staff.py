@@ -48,11 +48,12 @@ for f in ('/robots.txt', '/sitemap.xml', '/llms.txt'):
 s, h, b = _call(g, BASE, 'GET', '/robots.txt')
 check('robots.txt disallows the three private doors', all(f'Disallow: /for/{a}/' in b for a in ('owner', 'admin', 'leader')))
 
-# ---- login form: domain rule, no enumeration, no password
+# ---- login form: domain rule, no enumeration, password OR code
 reset_rl(); c = _client()
 t = _csrf(c, BASE, MOUNT + '/login/')
 s, h, b = _call(c, BASE, 'GET', MOUNT + '/login/')
-check('login form has email, no password field', 'name="email"' in b and 'type="password"' not in b)
+check('login form has email, a password field and a "send me a code" alternative', 'name="email"' in b and 'type="password"' in b and 'value="request"' in b and 'value="password"' in b)
+check('login form shows a human placeholder, not template syntax', '{{' not in b and 'StaffAuth' not in b)
 check('login form is CSRF protected', 'name="_csrf"' in b)
 s, h, b = _call(c, BASE, 'POST', MOUNT + '/login/', {'do': 'request', 'email': OWNER_EMAIL})
 check('POST without CSRF token is refused', 'data-step="code"' not in b, 'step moved to code without a token')

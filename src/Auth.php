@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace W5D;
 
 /**
- * Portal session. There is NO password for portal roles: the owner (OWNER_EMAIL in .env) and every team member
- * (admin, leader, manager, member) sign in with an @w5d.tech address and an e-mailed one-time code (StaffAuth).
+ * Portal session. The owner (OWNER_EMAIL in .env) and every team member (admin, leader, manager, member) sign in with an
+ * @w5d.tech address and a password OR an e-mailed one-time code (StaffAuth).
  * Role + permission matrix is declared in config/roles.php (ACL).
  */
 final class Auth

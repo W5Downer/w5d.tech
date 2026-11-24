@@ -165,9 +165,27 @@ if True:
         except urllib.error.HTTPError as e: r = e
         return (r.status if hasattr(r, 'status') else r.code), {k.lower(): v for k, v in r.headers.items()}, r.read().decode('utf-8', 'replace')
     s, h, t = rq(adm + '/login/'); tok = re.search(r'name="_csrf" value="([0-9a-f]+)"', t)[1]
-    check('portal login has no password field', 'type="password"' not in t)
-    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'username': 'owner', 'password': 'w5d-demo-owner'})
-    check('password sign-in does not exist (demo password REJECTED)', not (s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm)), f'{s} {h.get("location")}')
+    check('portal login has a password field and a "send me a code" alternative', 'type="password"' in t and 'value="request"' in t)
+    check('portal login shows no template syntax in placeholders', '{{' not in t and 'StaffAuth' not in t)
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'password', 'email': OWNER, 'password': 'w5d-demo-owner'})
+    check('the old demo password is REJECTED', not (s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm)), f'{s} {h.get("location")}')
+    s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'password', 'email': 'someone@gmail.com', 'password': PASS or 'x'})
+    check('password sign-in for a non-team address is REJECTED', not (s in (302, 303)), f'{s}')
+    if PASS:
+        # separate cookie jar so the code-flow checks below start from a signed-out session
+        opp = urllib.request.build_opener(urllib.request.HTTPSHandler(context=CTX), urllib.request.HTTPCookieProcessor(), NoRedirect)
+        def rqp(path, data=None):
+            body = urllib.parse.urlencode(data).encode() if data is not None else None
+            try: r = opp.open(urllib.request.Request(BASE + path, data=body, method='POST' if body else 'GET'), timeout=30)
+            except urllib.error.HTTPError as e: r = e
+            return (r.status if hasattr(r, 'status') else r.code), {k.lower(): v for k, v in r.headers.items()}, r.read().decode('utf-8', 'replace')
+        s, h, t = rqp(adm + '/login/'); tk2 = re.search(r'name="_csrf" value="([0-9a-f]+)"', t)[1]
+        s, h, t = rqp(adm + '/login/', {'_csrf': tk2, 'do': 'password', 'email': OWNER, 'password': PASS + 'x'})
+        check('production: wrong password is REJECTED', not (s in (302, 303)), f'{s}')
+        s, h, t = rqp(adm + '/login/', {'_csrf': tk2, 'do': 'password', 'email': OWNER, 'password': PASS})
+        check('production owner signs in with the password (hash from .env)', s in (302, 303) and h.get('location', '').rstrip('/').endswith(adm), f'{s} {h.get("location")}')
+        s, h, t = rqp(adm + '/')
+        check('…and the dashboard opens with that session', s == 200 and 'Command Center' in t, f'{s}')
     s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'request', 'email': 'someone@gmail.com'})
     check('a non-team address gets no code', last_code(ROOT, 'someone@gmail.com') is None)
     s, h, t = rq(adm + '/login/', {'_csrf': tok, 'do': 'request', 'email': OWNER})

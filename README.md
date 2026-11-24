@@ -522,7 +522,7 @@ The **Pricing** page uses the `w5d` template's pricing section as its skeleton b
 | 24 | **Audit Log & Corrections** | Every approval/edit with user and timestamp; 14‑day correction SLA |
 | 25 | **System & Storage** | Storage health, DB driver, archive status, backup status, queues |
 | 26–39 | **Later menus** | Manager applications, subscriptions, D17 payments, mail outbox, API & Docs, inbox, QCM rules/bank/review, affiliates, certificates, payment methods, integrations, funding |
-| 40 | **Team** | Owner-only: create and manage team members (admin, leader, manager, member) by @team e-mail; they sign in with an e-mailed code |
+| 40 | **Team** | Owner-only: create and manage team members (admin, leader, manager, member) by @team e-mail; they sign in with a password (optional, set in Team) or an e-mailed code |
 | 41 | **Setup guide** | Owner-only: step-by-step `.env` variables with live set/unset state (values never shown) and how to get paid for each registry status of the company |
 
 Every portal page and account panel carries a help icon (tooltip or popup, en/fr/ar). The portal is installable as an app (Chrome/Edge/Android; iOS: Share → Add to Home Screen) and shows an offline indicator; it never stores private pages offline.
@@ -669,8 +669,10 @@ cp .env.example .env
 php bin/migrate.php
 php bin/sync-content.php
 
-# 4. Team sign-in has no password: owner, admins, leaders, managers and members sign in with their @STAFF_EMAIL_DOMAIN
-#    address and a 6-digit code sent by e-mail (needs working SMTP; see bin/preflight.php).
+# 4. Team sign-in: owner, admins, leaders, managers and members sign in with their @STAFF_EMAIL_DOMAIN address and EITHER a
+#    password OR a 6-digit code sent by e-mail (the code needs working SMTP; see bin/preflight.php).
+#    Owner password: php bin/password-hash.php  ->  paste the hash in .env as WEBMASTER_PASSWORD_HASH='...' (single quotes).
+#    Team passwords are set by the owner in the Team menu (write-only field, stored as Argon2id).
 
 # 5. Point Apache document root at the repository root
 ```

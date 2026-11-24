@@ -42,6 +42,17 @@ final class Admin
             $do = (string)($q->post['do'] ?? 'request');
             if (!Csrf::check($q)) $err = __('msg.csrf');
             elseif ($do === 'reset') { unset($_SESSION['staff_pending']); $email = ''; }
+            elseif ($do === 'password') {
+                $email = StaffAuth::normalize((string)($q->post['email'] ?? ''));
+                if (!StaffAuth::isStaffEmail($email)) $err = $m('Use your @' . StaffAuth::domain() . ' e-mail address.', 'Utilisez votre adresse e-mail @' . StaffAuth::domain() . '.', 'استخدم بريدك @' . StaffAuth::domain() . '.');
+                elseif (\W5D\Integrations::captcha($q, 'admin') !== null) $err = t(\W5D\Integrations::message());
+                else {
+                    $who = StaffAuth::verifyPassword($email, (string)($q->post['password'] ?? ''), $q->ip());
+                    if ($who) { unset($_SESSION['staff_pending']); $land = StaffAuth::signIn($who, $email); self::audit('login.password', $email, $who['role']); return Response::redirect($land); }
+                    $err = $m('Wrong e-mail or password. You can also ask for a code by e-mail.', 'E-mail ou mot de passe incorrect. Vous pouvez aussi demander un code par e-mail.', 'البريد أو كلمة المرور غير صحيحة. يمكنك أيضا طلب رمز بالبريد.');
+                }
+                $step = 'email';
+            }
             elseif ($do === 'request') {
                 $email = StaffAuth::normalize((string)($q->post['email'] ?? ''));
                 if (!StaffAuth::isStaffEmail($email)) $err = $m('Use your @' . StaffAuth::domain() . ' e-mail address.', 'Utilisez votre adresse e-mail @' . StaffAuth::domain() . '.', 'استخدم بريدك @' . StaffAuth::domain() . '.');
@@ -60,7 +71,7 @@ final class Admin
                     $err = $m('This code is wrong, expired or already used. Ask for a new one.', 'Ce code est faux, expiré ou déjà utilisé. Demandez-en un nouveau.', 'الرمز خاطئ أو منتهٍ أو مستعمل. اطلب رمزا جديدا.');
                 }
             }
-            if ($email !== '' && $do !== 'reset' && $step === 'email' && !$err) $step = 'code';
+            if ($email !== '' && $do !== 'reset' && $do !== 'password' && $step === 'email' && !$err) $step = 'code';
         } elseif ($email !== '') $step = 'code';
         return self::page('admin.login', ['title' => __('admin.login'), 'error' => $err, 'step' => $step, 'email' => $email, 'masked' => $email !== '' ? StaffAuth::mask($email) : '', 'expired' => $expired, 'ttl' => StaffAuth::ttlMinutes()]);
     }
@@ -211,17 +222,17 @@ final class Admin
         if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($list); }
         $role = Auth::role(); $uid = self::uid();
         if ($id && !Crud::find($slug, $id, $role, $uid)) { self::flash('error', __('ux.crud_missing')); return Response::redirect($list); }
-        [$vals, $err] = Crud::validate($d, $q->post, $role, $uid);
+        [$vals, $err] = Crud::validate($d, $q->post, $role, $uid, $id === 0);
         if ($err) {
             $_SESSION['_errors'] = $err;
-            $_SESSION['_old'] = array_map(fn($v) => is_scalar($v) ? (string)$v : '', array_intersect_key($q->post, $d['fields']));
+            $_SESSION['_old'] = array_map(fn($v) => is_scalar($v) ? (string)$v : '', array_diff_key(array_intersect_key($q->post, $d['fields']), array_flip(Crud::secretFields($d))));
             foreach ($d['fields'] as $n => $f) if ($f[0] === 'bool') $_SESSION['_old'][$n] = ($q->post[$n] ?? '') === '1' ? '1' : '0';
             self::flash('error', __('ux.crud_invalid'));
             return Response::redirect($form);
         }
         try {
-            if ($id) { Crud::update($slug, $id, $vals, $role, $uid); self::audit('crud.update', $d['table'] . '#' . $id, json_encode($vals, JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_updated')); }
-            else { $nid = Crud::create($slug, $vals, $uid); self::audit('crud.create', $d['table'] . '#' . $nid, json_encode($vals, JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_created')); }
+            if ($id) { Crud::update($slug, $id, $vals, $role, $uid); self::audit('crud.update', $d['table'] . '#' . $id, json_encode(Crud::redact($d, $vals), JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_updated')); }
+            else { $nid = Crud::create($slug, $vals, $uid); self::audit('crud.create', $d['table'] . '#' . $nid, json_encode(Crud::redact($d, $vals), JSON_UNESCAPED_UNICODE) ?: ''); self::flash('ok', __('ux.crud_created')); }
         } catch (\Throwable $e) { self::flash('error', __('ux.crud_failed')); }
         return Response::redirect($list);
     }
@@ -235,6 +246,11 @@ final class Admin
         $list = admin_url($slug . '/');
         if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($list); }
         $id = (int)($q->post['id'] ?? 0);
+        if ($d['table'] === 'users' && $id > 0) { // nobody removes the account they are signed in with
+            $me = strtolower((string)(Auth::user()['email'] ?? $_SESSION['acct']['email'] ?? ''));
+            $row = DB::one('SELECT email FROM users WHERE id = ?', [$id]);
+            if ($row && (strtolower((string)$row['email']) === $me || (Auth::role() !== 'owner' && $id === self::uid()))) { self::flash('error', __('ux.crud_self')); return Response::redirect($list); }
+        }
         try {
             if ($id > 0 && Crud::delete($slug, $id, Auth::role(), self::uid())) { self::audit('crud.delete', $d['table'] . '#' . $id); self::flash('ok', __('ux.crud_deleted')); }
             else self::flash('error', __('ux.crud_missing'));

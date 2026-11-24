@@ -142,7 +142,7 @@ return [
         'crud_none' => 'No records yet.', 'crud_search' => 'Search', 'crud_rows' => 'rows', 'crud_owner_only' => 'Owner only', 'docs_title' => 'API & Docs',
         'docs_private' => 'Private documentation. Only signed-in people see it.',
         'f_required' => 'Required', 'f_toolong' => 'Too long', 'f_invalid' => 'Invalid value', 'f_range' => 'Allowed range',
-        'crud_failed' => 'Could not save. Try again.', 'crud_in_use' => 'Cannot delete: the record is in use.', 'crud_scope' => 'You see only your own rows.',
+        'crud_failed' => 'Could not save. Try again.', 'crud_self' => 'You cannot delete the account you are signed in with.', 'crud_in_use' => 'Cannot delete: the record is in use.', 'crud_scope' => 'You see only your own rows.',
         'crud_back' => 'Back to the list', 'crud_new_title' => 'New record', 'crud_edit_title' => 'Edit record', 'crud_perms' => 'Permissions', 'crud_matrix' => 'Roles and what each can do',
         'crud_read' => 'Read', 'crud_create_l' => 'Create', 'crud_update_l' => 'Update', 'crud_delete_l' => 'Delete', 'crud_yes' => 'yes', 'crud_own' => 'own rows',
     ],

@@ -15,7 +15,7 @@
   @if($editing)<input type="hidden" name="id" value="{{ $row['id'] }}">@endif
   @foreach($def['fields'] as $name => $f)
     @php
-      $type = $f[0]; $label = t($f[1]); $id = 'cf-' . $name;
+      $type = (!empty($f['create_only']) && $editing) ? 'ro' : $f[0]; $label = t($f[1]); $id = 'cf-' . $name;
       $val = old($name, (string)($row[$name] ?? ($f['default'] ?? '')));
       $err = $errors[$name] ?? null;
       $req = !empty($f['req']);
@@ -36,6 +36,9 @@
           <select class="field" id="{{ $id }}" name="{{ $name }}" @if($req) required @endif>
             @foreach(\W5D\Crud::options($f) as $ov => $ol)<option value="{{ $ov }}" @if((string)$val === (string)$ov) selected @endif>{{ $ol }}</option>@endforeach
           </select>
+        @elseif($type === 'password')
+          <input class="field" id="{{ $id }}" name="{{ $name }}" type="password" value="" autocomplete="new-password" maxlength="200" dir="ltr">
+          <p class="text-xs mt-1 text-slate-500">{{ tr3('Leave empty to keep the current password. At least 10 characters with letters and a digit. It is stored hashed and never shown.', 'Laissez vide pour conserver le mot de passe actuel. Au moins 10 caractères avec des lettres et un chiffre. Il est stocké haché et jamais affiché.', 'اتركه فارغا للإبقاء على كلمة المرور الحالية. 10 أحرف على الأقل مع حروف ورقم. تُخزَّن مشفّرة ولا تُعرض أبدا.') }}</p>
         @elseif($type === 'textarea')
           <textarea class="field" id="{{ $id }}" name="{{ $name }}" rows="5" @if(isset($f['max'])) maxlength="{{ $f['max'] }}" @endif @if($req) required @endif>{{ $val }}</textarea>
         @else

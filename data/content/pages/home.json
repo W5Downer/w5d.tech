@@ -17,59 +17,6 @@
       "source": "home"
     },
     {
-      "type": "prose",
-      "id": "home-purpose",
-      "tier": "e",
-      "focus": 3,
-      "eyebrow": {
-        "en": "What this site is for",
-        "fr": "À quoi sert ce site",
-        "ar": "ما غرض هذا الموقع"
-      },
-      "title": {
-        "en": "W5D in plain words: **purpose, accounts, Google sign-in**",
-        "fr": "W5D en clair : **objet, comptes, connexion Google**",
-        "ar": "W5D بوضوح: **الغرض والحسابات والدخول عبر Google**"
-      },
-      "paragraphs": [
-        {
-          "en": "W5D is a Tunisian programme that organises supervised, reviewable work for graduates across five macro works and {{ counts.services }} services. This website lets a visitor read how the programme works, take a part that funds a certification path, apply as an expert-team manager, check eligibility, sit the certification QCM, and follow their own orders, payments and certificates in a personal account. It is a business and training site. It is not a social network, a photo or video service, or a place where people upload files.",
-          "fr": "W5D est un programme tunisien qui organise un travail supervisé et vérifiable pour des diplômés, à travers cinq macro-œuvres et {{ counts.services }} services. Ce site permet de lire le fonctionnement du programme, de prendre une part qui finance un parcours de certification, de postuler comme responsable d’équipe d’experts, de vérifier son admissibilité, de passer le QCM de certification et de suivre ses commandes, paiements et certificats dans un compte personnel. C’est un site d’activité et de formation. Ce n’est ni un réseau social, ni un service de photos ou de vidéos, ni un lieu où l’on téléverse des fichiers.",
-          "ar": "W5D برنامج تونسي ينظّم عملاً خاضعًا للإشراف وقابلاً للمراجعة للخريجين عبر خمسة أعمال كبرى و{{ counts.services }} خدمة. يتيح هذا الموقع للزائر أن يقرأ كيف يعمل البرنامج، وأن يشتري حصة تموّل مسار اعتماد، وأن يتقدم لمنصب مدير فريق خبراء، وأن يتحقق من أهليته، وأن يجتاز اختبار الاعتماد، وأن يتابع طلباته ومدفوعاته وشهاداته في حساب شخصي. هو موقع أعمال وتكوين، وليس شبكة اجتماعية ولا خدمة صور أو فيديو ولا مكانًا لرفع الملفات."
-        },
-        {
-          "en": "**Sign in with Google is optional.** If you choose “Continue with Google”, W5D asks Google only for your name and your verified e-mail address (the scopes openid, email and profile). We use them for one purpose: to create or open your W5D account. We do not read your Gmail, Drive, Contacts, Calendar or any other Google service. We do not keep your Google profile picture. We do not sell this data, share it with advertisers or use it for advertising. You can always use an e-mail address instead. W5D’s use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.",
-          "fr": "**La connexion avec Google est facultative.** Si vous choisissez « Continuer avec Google », W5D demande à Google uniquement votre nom et votre adresse e-mail vérifiée (les périmètres openid, email et profile). Nous les utilisons pour un seul objectif : créer ou ouvrir votre compte W5D. Nous ne lisons ni votre Gmail, ni Drive, ni Contacts, ni Agenda, ni aucun autre service Google. Nous ne conservons pas votre photo de profil Google. Nous ne vendons pas ces données, ne les partageons pas avec des annonceurs et ne les utilisons pas pour de la publicité. Vous pouvez toujours utiliser une adresse e-mail à la place. L’utilisation par W5D des informations reçues des API Google respecte la [Politique relative aux données utilisateur des services d’API Google](https://developers.google.com/terms/api-services-user-data-policy), y compris les exigences d’utilisation limitée.",
-          "ar": "**الدخول عبر Google اختياري.** إذا اخترت «المتابعة عبر Google» فإن W5D تطلب من Google اسمك وبريدك الإلكتروني الموثّق فقط (النطاقات openid وemail وprofile). نستعملهما لغرض واحد: إنشاء حسابك في W5D أو فتحه. لا نقرأ Gmail ولا Drive ولا جهات الاتصال ولا التقويم ولا أي خدمة أخرى من Google. ولا نحتفظ بصورة ملفك الشخصي في Google. ولا نبيع هذه البيانات ولا نشاركها مع المعلنين ولا نستعملها في الإعلانات. ويمكنك دائمًا استعمال بريد إلكتروني بدلاً من ذلك. ويلتزم استعمال W5D للمعلومات الواردة من واجهات Google البرمجية بـ[سياسة بيانات المستخدم لخدمات Google API](https://developers.google.com/terms/api-services-user-data-policy)، بما فيها متطلبات الاستخدام المحدود."
-        },
-        {
-          "en": "**No generated or intimate imagery.** W5D does not create, edit, host or distribute images, video or audio of people. It does not use Google APIs, or any data it receives from Google, to train artificial-intelligence models or to produce sexual or intimate content. Non-consensual intimate imagery, including AI-generated imagery, is forbidden on every part of the service and would be reported to the authorities. Details are in the [privacy policy](/trust/privacy/) and the [terms](/trust/terms/).",
-          "fr": "**Aucune image générée ni intime.** W5D ne crée, ne modifie, n’héberge et ne diffuse aucune image, vidéo ou voix de personnes. W5D n’utilise ni les API Google ni les données reçues de Google pour entraîner des modèles d’intelligence artificielle ou produire des contenus sexuels ou intimes. Les images intimes non consenties, y compris celles générées par IA, sont interdites sur tout le service et seraient signalées aux autorités. Le détail figure dans la [politique de confidentialité](/trust/privacy/) et les [conditions](/trust/terms/).",
-          "ar": "**لا صور مولَّدة ولا حميمة.** لا تنشئ W5D صورًا أو مقاطع فيديو أو أصواتًا لأشخاص ولا تعدّلها ولا تستضيفها ولا توزّعها. ولا تستعمل واجهات Google البرمجية ولا أي بيانات تتلقاها من Google لتدريب نماذج الذكاء الاصطناعي أو لإنتاج محتوى جنسي أو حميم. والصور الحميمة غير الرضائية، بما فيها المولَّدة بالذكاء الاصطناعي، محظورة في كل أجزاء الخدمة وسيُبلَّغ عنها السلطات. التفاصيل في [سياسة الخصوصية](/trust/privacy/) و[الشروط](/trust/terms/)."
-        }
-      ],
-      "ctas": [
-        {
-          "label": {
-            "en": "Privacy policy",
-            "fr": "Politique de confidentialité",
-            "ar": "سياسة الخصوصية"
-          },
-          "href": "/trust/privacy/",
-          "style": "ghost"
-        },
-        {
-          "label": {
-            "en": "Terms of use",
-            "fr": "Conditions d’utilisation",
-            "ar": "شروط الاستخدام"
-          },
-          "href": "/trust/terms/",
-          "style": "ghost"
-        }
-      ]
-    },
-    {
       "type": "path-chooser",
       "id": "home-paths",
       "tier": "e",
@@ -622,6 +569,59 @@
           "href": "/about/",
           "style": "link",
           "arrow": true
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "id": "home-purpose",
+      "tier": "e",
+      "focus": 3,
+      "eyebrow": {
+        "en": "What this site is for",
+        "fr": "À quoi sert ce site",
+        "ar": "ما غرض هذا الموقع"
+      },
+      "title": {
+        "en": "W5D in plain words: **purpose, accounts, Google sign-in**",
+        "fr": "W5D en clair : **objet, comptes, connexion Google**",
+        "ar": "W5D بوضوح: **الغرض والحسابات والدخول عبر Google**"
+      },
+      "paragraphs": [
+        {
+          "en": "W5D is a Tunisian programme that organises supervised, reviewable work for graduates across five macro works and {{ counts.services }} services. This website lets a visitor read how the programme works, take a part that funds a certification path, apply as an expert-team manager, check eligibility, sit the certification QCM, and follow their own orders, payments and certificates in a personal account. It is a business and training site. It is not a social network, a photo or video service, or a place where people upload files.",
+          "fr": "W5D est un programme tunisien qui organise un travail supervisé et vérifiable pour des diplômés, à travers cinq macro-œuvres et {{ counts.services }} services. Ce site permet de lire le fonctionnement du programme, de prendre une part qui finance un parcours de certification, de postuler comme responsable d’équipe d’experts, de vérifier son admissibilité, de passer le QCM de certification et de suivre ses commandes, paiements et certificats dans un compte personnel. C’est un site d’activité et de formation. Ce n’est ni un réseau social, ni un service de photos ou de vidéos, ni un lieu où l’on téléverse des fichiers.",
+          "ar": "W5D برنامج تونسي ينظّم عملاً خاضعًا للإشراف وقابلاً للمراجعة للخريجين عبر خمسة أعمال كبرى و{{ counts.services }} خدمة. يتيح هذا الموقع للزائر أن يقرأ كيف يعمل البرنامج، وأن يشتري حصة تموّل مسار اعتماد، وأن يتقدم لمنصب مدير فريق خبراء، وأن يتحقق من أهليته، وأن يجتاز اختبار الاعتماد، وأن يتابع طلباته ومدفوعاته وشهاداته في حساب شخصي. هو موقع أعمال وتكوين، وليس شبكة اجتماعية ولا خدمة صور أو فيديو ولا مكانًا لرفع الملفات."
+        },
+        {
+          "en": "**Sign in with Google is optional.** If you choose “Continue with Google”, W5D asks Google only for your name and your verified e-mail address (the scopes openid, email and profile). We use them for one purpose: to create or open your W5D account. We do not read your Gmail, Drive, Contacts, Calendar or any other Google service. We do not keep your Google profile picture. We do not sell this data, share it with advertisers or use it for advertising. You can always use an e-mail address instead. W5D’s use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.",
+          "fr": "**La connexion avec Google est facultative.** Si vous choisissez « Continuer avec Google », W5D demande à Google uniquement votre nom et votre adresse e-mail vérifiée (les périmètres openid, email et profile). Nous les utilisons pour un seul objectif : créer ou ouvrir votre compte W5D. Nous ne lisons ni votre Gmail, ni Drive, ni Contacts, ni Agenda, ni aucun autre service Google. Nous ne conservons pas votre photo de profil Google. Nous ne vendons pas ces données, ne les partageons pas avec des annonceurs et ne les utilisons pas pour de la publicité. Vous pouvez toujours utiliser une adresse e-mail à la place. L’utilisation par W5D des informations reçues des API Google respecte la [Politique relative aux données utilisateur des services d’API Google](https://developers.google.com/terms/api-services-user-data-policy), y compris les exigences d’utilisation limitée.",
+          "ar": "**الدخول عبر Google اختياري.** إذا اخترت «المتابعة عبر Google» فإن W5D تطلب من Google اسمك وبريدك الإلكتروني الموثّق فقط (النطاقات openid وemail وprofile). نستعملهما لغرض واحد: إنشاء حسابك في W5D أو فتحه. لا نقرأ Gmail ولا Drive ولا جهات الاتصال ولا التقويم ولا أي خدمة أخرى من Google. ولا نحتفظ بصورة ملفك الشخصي في Google. ولا نبيع هذه البيانات ولا نشاركها مع المعلنين ولا نستعملها في الإعلانات. ويمكنك دائمًا استعمال بريد إلكتروني بدلاً من ذلك. ويلتزم استعمال W5D للمعلومات الواردة من واجهات Google البرمجية بـ[سياسة بيانات المستخدم لخدمات Google API](https://developers.google.com/terms/api-services-user-data-policy)، بما فيها متطلبات الاستخدام المحدود."
+        },
+        {
+          "en": "**No generated or intimate imagery.** W5D does not create, edit, host or distribute images, video or audio of people. It does not use Google APIs, or any data it receives from Google, to train artificial-intelligence models or to produce sexual or intimate content. Non-consensual intimate imagery, including AI-generated imagery, is forbidden on every part of the service and would be reported to the authorities. Details are in the [privacy policy](/trust/privacy/) and the [terms](/trust/terms/).",
+          "fr": "**Aucune image générée ni intime.** W5D ne crée, ne modifie, n’héberge et ne diffuse aucune image, vidéo ou voix de personnes. W5D n’utilise ni les API Google ni les données reçues de Google pour entraîner des modèles d’intelligence artificielle ou produire des contenus sexuels ou intimes. Les images intimes non consenties, y compris celles générées par IA, sont interdites sur tout le service et seraient signalées aux autorités. Le détail figure dans la [politique de confidentialité](/trust/privacy/) et les [conditions](/trust/terms/).",
+          "ar": "**لا صور مولَّدة ولا حميمة.** لا تنشئ W5D صورًا أو مقاطع فيديو أو أصواتًا لأشخاص ولا تعدّلها ولا تستضيفها ولا توزّعها. ولا تستعمل واجهات Google البرمجية ولا أي بيانات تتلقاها من Google لتدريب نماذج الذكاء الاصطناعي أو لإنتاج محتوى جنسي أو حميم. والصور الحميمة غير الرضائية، بما فيها المولَّدة بالذكاء الاصطناعي، محظورة في كل أجزاء الخدمة وسيُبلَّغ عنها السلطات. التفاصيل في [سياسة الخصوصية](/trust/privacy/) و[الشروط](/trust/terms/)."
+        }
+      ],
+      "ctas": [
+        {
+          "label": {
+            "en": "Privacy policy",
+            "fr": "Politique de confidentialité",
+            "ar": "سياسة الخصوصية"
+          },
+          "href": "/trust/privacy/",
+          "style": "ghost"
+        },
+        {
+          "label": {
+            "en": "Terms of use",
+            "fr": "Conditions d’utilisation",
+            "ar": "شروط الاستخدام"
+          },
+          "href": "/trust/terms/",
+          "style": "ghost"
         }
       ]
     },
