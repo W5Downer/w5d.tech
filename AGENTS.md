@@ -13,7 +13,8 @@ Content = JSON in `data/content/`. State = SQLite in `storage/w5d.sqlite` (auto-
 ```bash
 cd /home/user/webapp
 php -S 0.0.0.0:8080 -t htdocs htdocs/index.php       # dev server (must be started with setsid/background in the sandbox)
-# owner portal: /panel-x9z/login/   user: owner   dev password: w5d-demo-owner  (DEV ONLY; production rejects it, see preflight)
+# owner portal: /panel-x9z/login/   owner@w5d.tech + password (hash in .env WEBMASTER_PASSWORD_HASH, made with php bin/password-hash.php) OR e-mailed code
+# (the dev .env of this sandbox uses a dev-only password; production.sh builds its own hash for the throw-away copy)
 ```
 
 Docroot is `htdocs/`. A root `.htaccess` + `index.php` exist only for hosts that force docroot = repo root.
@@ -98,7 +99,7 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 ## 7. OPEN ITEMS (honest list, highest value first)
 
 1. **Not tested on the real host** (Apache + ModSecurity + real TLS + real SMTP). `production.sh` simulates production on PHP's built-in server only. After upload run: `php bin/preflight.php`, `php bin/mail.php test you@domain fr all`, then the checklist in section 8.
-2. **Owner action required before go-live** (cannot be done by an agent): real `OWNER_EMAIL` on the team domain with a working mailbox (the sign-in code is e-mailed; no password exists); SMTP credentials + `MAIL_FOOTER_ADDRESS`; real `PAYMENT_D17_GSM` (dev value `+21620123456` is a demo); `SOCIAL_*` profile URLs; cron for `bin/rollup.php` and `bin/backup.php`.
+2. **Owner action required before go-live** (cannot be done by an agent): real `OWNER_EMAIL` on the team domain with a working mailbox (the sign-in code is e-mailed) and `WEBMASTER_PASSWORD_HASH` made with `php bin/password-hash.php` (single-quoted in `.env`; never a plain password); SMTP credentials + `MAIL_FOOTER_ADDRESS`; real `PAYMENT_D17_GSM` (dev value `+21620123456` is a demo); `SOCIAL_*` profile URLs; cron for `bin/rollup.php` and `bin/backup.php`.
 3. **Social share images are generated placeholders** (`htdocs/assets/_base/images/social/`). Replace with final art per `docs/social-share-image-prompts.md` (same filenames).
 4. **Admin screens are read-only lists** except: status editing (manager applications, inbox, subscriptions), D17 review, pricing publish, variables, seed. No create/edit UI for teams, cohorts, payroll, tickets, campaigns, clients, quality. Tables and ACL permissions exist; building edit forms is the next feature area (follow the `reviewPayment` pattern: permission check, CSRF, audit row, flash).
 5. **Admin table headers/notes are English only** (owner-only screens); lint exempts them. i18n them if non-English staff will use the portal.
@@ -137,3 +138,14 @@ Everything from the 2026-11-17 notes plus, this session: all 31 admin menus are 
 - Forms: `<x-form-field>` derives `autocomplete`/`inputmode`; password fields use `current-password`/`new-password`.
 - Reviews per audience with real findings: `docs/reviews/`. Architecture map: `docs/ARCHITECTURE.md`.
 - OPEN (see `docs/reviews/README.md`): language URLs + hreflang, localised `/api/quote` errors, member overview tiles, per-request role refresh, `qcm-rules` case in `crud.py`, human RTL/screen-reader review, real SMTP/D17.
+
+
+## Round addendum (2026-11-23): Google verification + verification gaps closed
+- **Google branding fix**: home page section `home-purpose` (purpose, Google data = openid/email/profile only, Limited Use link, no AI training, no NCII incl. AI-generated), `pv-google` in privacy, `tm-content` in terms, data note under the Google button (only when Google is configured), provider avatar NOT stored. Guard: `tests/google.py`. Only Google can confirm acceptance: retry in Cloud Console after deploying to the public https domain (Setup guide has a Google step).
+- **SMTP**: `tests/smtp.py` runs a throw-away `php -S` with `MAIL_DRIVER=smtp MAIL_ENCRYPTION=none` against `tests/_smtpstub.py` (AUTH PLAIN/LOGIN/none, MIME, dot-stuffing, failures recorded as `failed`, login page neutral). It cannot test STARTTLS/SSL certificate checks, SPF/DKIM/DMARC or inbox placement: check those with `php bin/mail.php test` on the real host.
+- **PWA**: `tests/pwa_install.py` uses CDP `Page.getInstallabilityErrors` (must be empty), synthetic `beforeinstallprompt`/`appinstalled`, iOS Safari/Chrome user agents, standalone display-mode. Real-device install stays manual (docs/review-checklist.md C3). Runs on the plain-HTTP port of the production copy (service workers).
+- **UX audit** (`tests/ux.py`): every portal/account/public link must answer without a redirect (gate redirects to sign-in excepted); destructive forms need `data-confirm`, routine ones must not have it; links to `.../download` and `.../export` need the trailing slash (`/x/?q=`), `/app/register/` too. Resend-code flow is covered.
+- **Break-glass**: `bin/staff-code.php` (CLI only). **Users screen** (`config/resources.php` `users`) now lists public accounts only and offers only investor/customer/user; team roles are managed in the Team menu.
+- **i18n guard** (`tests/i18n.py`): numbers/links/code tokens/placeholders equal across en/fr/ar, Arabic script present, French not a copy, Setup guide skeleton equal. Reviewed exceptions live in `KNOWN` with a reason. It does NOT judge naturalness: see `docs/review-checklist.md`.
+- Idle (30 min) and absolute (12 h) staff timeouts are simulated in `tests/staff.py` by ageing the session file.
+- Content fixes found by the i18n guard: 17 English service summaries began `The service provides iSO/gDPR/…` (wrong capitalisation, also fixed in `tools/gen/_parsed_services.json`); `Fri 12:00` left untranslated in 22 fr/ar texts; `environ 10` vs `ten`.

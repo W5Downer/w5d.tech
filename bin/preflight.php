@@ -20,10 +20,14 @@ else $add('FAIL', 'APP_URL', "is \"$url\", must be the public https origin (cano
 
 $domain = strtolower(ltrim($get('STAFF_EMAIL_DOMAIN', 'w5d.tech'), '@'));
 $owner = strtolower($get('OWNER_EMAIL'));
-if ($owner === '') $add('FAIL', 'OWNER_EMAIL', 'empty: the owner signs in with a code mailed to this address (set owner@' . $domain . ')');
+if ($owner === '') $add('FAIL', 'OWNER_EMAIL', 'empty: the owner signs in with a password or a code mailed to this address (set owner@' . $domain . ')');
 elseif (!filter_var($owner, FILTER_VALIDATE_EMAIL) || !str_ends_with($owner, '@' . $domain)) $add('FAIL', 'OWNER_EMAIL', "must be a valid address on @$domain");
-else $add('OK', 'OWNER_EMAIL', StaffAuth::mask($owner) . ' (code sign-in, no password exists)');
-$get('WEBMASTER_PASSWORD_HASH') === '' && $get('WEBMASTER_PASSWORD') === '' ? $add('OK', 'legacy password vars', 'none (portal has no password)') : $add('WARN', 'legacy password vars', 'WEBMASTER_PASSWORD* are ignored since the code sign-in; remove them from .env');
+else $add('OK', 'OWNER_EMAIL', StaffAuth::mask($owner) . ' (password or e-mailed code)');
+$wh = $get('WEBMASTER_PASSWORD_HASH');
+if ($wh === '') $add('WARN', 'WEBMASTER_PASSWORD_HASH', 'empty: the owner can only sign in with the e-mailed code (make a hash with php bin/password-hash.php)');
+elseif (!str_starts_with($wh, '$argon2') && !str_starts_with($wh, '$2y$')) $add('FAIL', 'WEBMASTER_PASSWORD_HASH', 'is not an Argon2id/bcrypt hash (make one with php bin/password-hash.php; quote it in single quotes)');
+else $add('OK', 'WEBMASTER_PASSWORD_HASH', 'set (' . explode('$', $wh)[1] . ')');
+$get('WEBMASTER_PASSWORD') !== '' ? $add('FAIL', 'WEBMASTER_PASSWORD', 'plain-text password in .env: remove it and keep only the hash') : null;
 $get('MAIL_DRIVER', 'log') === 'log' ? $add(getenv('PREFLIGHT_ALLOW_LOG_MAIL') === '1' ? 'WARN' : 'FAIL', 'MAIL_DRIVER', 'log: sign-in codes would never reach the team. Use smtp/mail, or set PREFLIGHT_ALLOW_LOG_MAIL=1 for tests/production.sh only') : $add('OK', 'MAIL_DRIVER', $get('MAIL_DRIVER') . ' (delivers the sign-in codes)');
 (int)$get('STAFF_CODE_TTL_MIN', '10') >= 3 && (int)$get('STAFF_CODE_TTL_MIN', '10') <= 30 ? $add('OK', 'STAFF_CODE_TTL_MIN', $get('STAFF_CODE_TTL_MIN', '10') . ' min') : $add('FAIL', 'STAFF_CODE_TTL_MIN', 'keep between 3 and 30 minutes');
 (int)$get('STAFF_IDLE_MINUTES', '30') >= 5 && (int)$get('STAFF_IDLE_MINUTES', '30') <= 120 ? $add('OK', 'STAFF_IDLE_MINUTES', $get('STAFF_IDLE_MINUTES', '30') . ' min idle timeout') : $add('FAIL', 'STAFF_IDLE_MINUTES', 'keep between 5 and 120 minutes');

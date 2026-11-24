@@ -4,8 +4,10 @@ declare(strict_types=1);
 namespace W5D;
 
 /**
- * Team sign-in: owner, admin, leader (super manager), manager and member sign in ONLY with an @w5d.tech e-mail address and a
- * one-time 6-digit code sent to that mailbox. There is no password for these roles.
+ * Team sign-in: owner, admin, leader (super manager), manager and member sign in with their @w5d.tech e-mail address and EITHER
+ * their password OR a one-time 6-digit code sent to that mailbox (the code stays available when a password is forgotten).
+ *  - passwords: the owner's is WEBMASTER_PASSWORD_HASH in .env (Argon2id/bcrypt, made with bin/password-hash.php); team members'
+ *    live in users.password_hash and are set by the owner in Team access. Hashes are never selected for display, logged or mailed.
  *  - the owner is the address in OWNER_EMAIL (.env); everyone else is a row in `users` created by the owner (Users, Roles & Permissions);
  *  - the code is stored as a keyed hash, lives STAFF_CODE_TTL_MIN minutes, works once, and dies after 5 wrong guesses;
  *  - the answer never says whether an address is authorised (no account enumeration);
@@ -64,6 +66,27 @@ final class StaffAuth
             usleep(random_int(120000, 260000)); // similar timing whether or not the address is authorised
         }
         return ['ok' => true, 'error' => null];
+    }
+
+    private const DUMMY_HASH = '$2y$10$usesomesillystringforsaltuQ3m1Ykq0m0b0Qv0c0w0e0r0t0y0u0i0o';
+
+    /** Password sign-in for an authorised team address. Same null answer for every failure (no account enumeration). */
+    public static function verifyPassword(string $email, string $password, string $ip): ?array
+    {
+        $email = self::normalize($email);
+        if (!self::isStaffEmail($email) || $password === '' || strlen($password) > 400 || !DB::available()) return null;
+        if (!RateLimit::hit('staff-pw-ip:' . $ip, 12, 900) || !RateLimit::hit('staff-pw-e:' . sha1($email), 6, 900)) return null;
+        $who = self::resolve($email);
+        $hash = '';
+        if ($who) {
+            $hash = $who['role'] === 'owner' ? trim((string)Env::get('WEBMASTER_PASSWORD_HASH', '')) : (string)($who['user']['password_hash'] ?? '');
+        }
+        $ok = password_verify($password, $hash !== '' ? $hash : self::DUMMY_HASH); // always one verify: similar timing for unknown / no-password addresses
+        if (!$who || $hash === '' || !$ok) { usleep(random_int(150000, 300000)); return null; }
+        if ($who['role'] !== 'owner' && password_needs_rehash($hash, defined('PASSWORD_ARGON2ID') ? PASSWORD_ARGON2ID : PASSWORD_DEFAULT)) {
+            DB::q('UPDATE users SET password_hash = ? WHERE id = ?', [Account::hash($password), $who['user']['id']]);
+        }
+        return $who;
     }
 
     /** Console / break-glass: issue a code without sending mail (bin/staff-code.php). Returns the code or null. */

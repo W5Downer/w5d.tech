@@ -158,22 +158,73 @@ def draw(idx, key, c, k, n):
     im.convert('RGB').save(f'{OUT}/img-{idx:04d}.jpg', quality=72, optimize=True, progressive=True)
 
 
-def write_md(man):
-    L = ['# Card image prompts', '',
-         'Every card element on the site has one image (or a small carousel). The files in `htdocs/assets/_base/images/cards/` are',
-         'indexed **placeholders** (`img-NNNN.jpg`, 640x360). To replace one, generate an image from its prompt below and save it',
-         'under the same file name (1280x720 JPEG recommended). The index is stable: it never changes when other cards are added.',
-         '', 'Regenerate this file and the placeholders with `python3 tools/gen/card_images.py`.', '',
-         f'Total: **{sum(len(c["images"]) for c in man["cards"].values())}** images for **{len(man["cards"])}** cards.', '']
-    page = None
+PART = 50                                   # images per prompts file: ~40 KB, small enough for any viewer or editor preview
+MD_DIR = f'{ROOT}/docs/card-image-prompts'
+
+
+def flat(man):
+    """Every image, ordered by its stable index: (index, key, card, k, n)."""
+    out = []
     for key, c in man['cards'].items():
-        if c['page'] != page:
-            page = c['page']; L += [f'## {page}', '']
-        for im in c['images']:
-            L += [f'### IMG-{im["index"]:04d} · {c["title"]}', '',
-                  f'- Card key: `{key}` ({c["kind"]})', f'- File: `htdocs/assets/_base/images/cards/img-{im["index"]:04d}.jpg`',
-                  '- Prompt:', '', '```text', im['prompt'], '```', '']
-    with open(MD, 'w', encoding='utf8') as f: f.write('\n'.join(L))
+        for k, im in enumerate(c['images']):
+            out.append((im['index'], key, c, k, len(c['images']), im['prompt']))
+    return sorted(out, key=lambda r: r[0])
+
+
+def part_name(first):
+    return f'img-{first:04d}-{first + PART - 1:04d}.md'
+
+
+def write_md(man):
+    rows = flat(man)
+    os.makedirs(MD_DIR, exist_ok=True)
+    for f in glob.glob(f'{MD_DIR}/img-*.md'): os.remove(f)
+    parts = {}
+    for r in rows: parts.setdefault(((r[0] - 1) // PART) * PART + 1, []).append(r)
+    for first, items in parts.items():
+        L = [f'# Card image prompts: IMG-{first:04d} to IMG-{first + PART - 1:04d}', '',
+             f'[Back to the index](../card-image-prompts.md). {len(items)} image(s) in this file. To replace a placeholder, generate an image',
+             'from its prompt and save it under the file name shown (1280x720 JPEG recommended). The index never changes when other cards are added.', '']
+        for idx, key, c, k, n, prompt in items:
+            car = f' · image {k + 1} of {n}' if n > 1 else ''
+            L += [f'## IMG-{idx:04d} · {c["title"]}{car}', '',
+                  f'- Card key: `{key}` ({c["kind"]}, {c["page"]} page)', f'- File: `htdocs/assets/_base/images/cards/img-{idx:04d}.jpg`',
+                  '- Prompt:', '', '```text', prompt, '```', '']
+        with open(f'{MD_DIR}/{part_name(first)}', 'w', encoding='utf8') as f: f.write('\n'.join(L))
+    used = {r[0] for r in rows}
+    retired = [i for i in range(1, max(used) + 1) if i not in used]
+    I = ['# Card image prompts', '',
+         'Every card element on the site has one image (or a small carousel). The files in `htdocs/assets/_base/images/cards/` are',
+         'indexed **placeholders** (`img-NNNN.jpg`, 640x360). To replace one, generate an image from its prompt and save it under the same',
+         'file name (1280x720 JPEG recommended). The index is stable: it never changes when other cards are added.', '',
+         'The prompts are split into small files by index range so that no single document is too long to open or to preview in full.',
+         'Regenerate everything (placeholders, manifest, these files) with `python3 tools/gen/card_images.py`.', '',
+         f'Total: **{len(rows)}** images for **{len(man["cards"])}** cards (IMG-{min(used):04d} to IMG-{max(used):04d}).', '',
+         '| Range | Images | Pages covered | File |', '|---|---|---|---|']
+    for first, items in parts.items():
+        pg = []
+        for r in items:
+            if r[2]['page'] not in pg: pg.append(r[2]['page'])
+        I.append(f'| IMG-{first:04d} to IMG-{first + PART - 1:04d} | {len(items)} | {", ".join(pg)} | [{part_name(first)}](card-image-prompts/{part_name(first)}) |')
+    if retired:
+        def rng(v):
+            o = []; st = pv = v[0]
+            for x in v[1:] + [None]:
+                if x is not None and x == pv + 1: pv = x; continue
+                o.append(f'IMG-{st:04d}' if st == pv else f'IMG-{st:04d} to IMG-{pv:04d}'); st = pv = x
+            return ', '.join(o)
+        I += ['', f'Retired indices (their cards were removed from the site, so they have no prompt): {rng(retired)}.']
+    with open(MD, 'w', encoding='utf8') as f: f.write('\n'.join(I) + '\n')
+
+
+def check_md(man):
+    """Every image index appears exactly once in the split files and no file is long enough to be cut off."""
+    want = sorted(r[0] for r in flat(man)); got = []
+    for f in glob.glob(f'{MD_DIR}/img-*.md'):
+        t = open(f, encoding='utf8').read()
+        if len(t.encode()) > 80000: return False
+        got += [int(x) for x in re.findall(r'^## IMG-(\d{4}) ', t, re.M)]
+    return sorted(got) == want and os.path.getsize(MD) < 20000
 
 
 def main():
@@ -181,7 +232,7 @@ def main():
     man = build_manifest(cards)
     if '--check' in sys.argv:
         cur = load(MANIFEST) if os.path.exists(MANIFEST) else {}
-        ok = cur == man and all(os.path.exists(f'{OUT}/img-{i["index"]:04d}.jpg') for c in man['cards'].values() for i in c['images'])
+        ok = cur == man and check_md(man) and all(os.path.exists(f'{OUT}/img-{i["index"]:04d}.jpg') for c in man['cards'].values() for i in c['images'])
         print('cards manifest up to date' if ok else 'cards manifest OUT OF DATE: run python3 tools/gen/card_images.py')
         sys.exit(0 if ok else 1)
     os.makedirs(OUT, exist_ok=True); os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)

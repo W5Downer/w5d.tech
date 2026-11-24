@@ -82,15 +82,72 @@ s, h, b = call(o, 'GET', M + '/nonexistent-menu/new/')
 check('unknown resource → 404', s == 404, s)
 
 print('undeclared actions exist for nobody (owner included)')
-s, h, b = post(o, M + '/applicants/save', {'full_name': 'Nope Created', 'status': 'registered'}, M + '/applicants/')
-check('applicants: create is not declared → 403', s == 403 and sql("SELECT COUNT(*) FROM applicants WHERE full_name='Nope Created'") == '0', s)
-s, h, b = call(o, 'GET', M + '/users/new/')
-check('users: no create form → 403', s == 403, s)
-s, h, b = post(o, M + '/users/delete', {'id': '999'}, M + '/users/')
-check('users: delete is not declared → 403', s == 403, s)
+s, h, b = post(o, M + '/mail-outbox/save', {'to_email': 'nope@example.com'}, M + '/mail-outbox/')
+check('mail-outbox: create is not declared → 403', s == 403, s)
+s, h, b = call(o, 'GET', M + '/inbox/new/')
+check('inbox: no create form → 403', s == 403, s)
+s, h, b = post(o, M + '/subscriptions/delete', {'id': '999999'}, M + '/subscriptions/')
+check('subscriptions: delete is declared (unknown id is a clean refusal, not a crash)', s in (302, 404), s)
+s, h, b = post(o, M + '/mail-outbox/save', {'id': '1', 'to_email': 'x@example.com'}, M + '/mail-outbox/')
+check('mail-outbox: update is not declared → 403', s == 403, s)
 s, h, b = call(o, 'GET', M + '/users/')
 check('users list never exposes hashes or tokens', 'password' not in b.lower().replace('password_', '') or 'argon2' not in b.lower() and '$2y$' not in b)
 check('users list has Edit but no Delete/New', '/users/new/' not in b and 'name="id"' in b or True)
+
+
+print('owner CRUD on the widened resources: write-only password, guards, immutability, self-protection')
+import sqlite3
+tagm = 'crudteam' + str(int(time.time()))[-7:]
+tem = tagm + '@' + (env.get('STAFF_EMAIL_DOMAIN') or 'w5d.tech')
+PW = 'Zq7-Long-Test-Pass-91'
+s, h, b = call(o, 'GET', M + '/team/new/')
+check('team: new form has a write-only password field', s == 200 and 'type="password"' in b and 'name="password_hash"' in b, s)
+s, h, b = post(o, M + '/team/save', {'email': tem, 'name': 'Crud Team', 'role_slug': 'member', 'password_hash': PW, 'active': '1'}, M + '/team/new/')
+row = sql(f"SELECT id || '|' || COALESCE(password_hash,'') FROM users WHERE email='{tem}'")
+tid = row.split('|', 1)[0] if row else ''
+check('team: member created with an Argon2id/bcrypt hash, never the plain password', s == 302 and tid and row.split('|', 1)[1].startswith(('$argon2', '$2y$')) and PW not in row, f'{s} {row[:30]}')
+check('team: audit trail never contains the password or a hash', PW not in sql("SELECT group_concat(COALESCE(detail,''),' ') FROM (SELECT detail FROM audit_log ORDER BY id DESC LIMIT 20)") and '$argon2' not in sql("SELECT group_concat(COALESCE(detail,''),' ') FROM (SELECT detail FROM audit_log ORDER BY id DESC LIMIT 20)"))
+if tid:
+    s, h, b = call(o, 'GET', f'{M}/team/{tid}/edit/')
+    check('team: edit form never echoes the hash or the password', s == 200 and PW not in b and '$argon2' not in b and '$2y$' not in b, s)
+    h0 = row.split('|', 1)[1]
+    s, h, b = post(o, M + '/team/save', {'id': tid, 'email': tem, 'name': 'Crud Team 2', 'role_slug': 'member', 'password_hash': '', 'active': '1'}, f'{M}/team/{tid}/edit/')
+    h1 = sql(f"SELECT COALESCE(password_hash,'') FROM users WHERE id={tid}")
+    check('team: empty password on edit keeps the stored hash', s == 302 and h1 == h0, s)
+    s, h, b = post(o, M + '/team/save', {'id': tid, 'email': tem, 'name': 'Crud Team 2', 'role_slug': 'member', 'password_hash': 'short', 'active': '1'}, f'{M}/team/{tid}/edit/')
+    check('team: a weak password is refused and the hash is unchanged', sql(f"SELECT COALESCE(password_hash,'') FROM users WHERE id={tid}") == h0)
+    # the member can now sign in with that password at the portal
+    from _staff import password_login
+    c2, s2, h2, b2 = password_login(BASE, tem, PW, ROOT, M)
+    check('team: the new member signs in with the password set by the owner', s2 == 302, s2)
+    s, h, b = post(o, M + '/team/delete', {'id': tid}, M + '/team/')
+    check('team: member deleted', sql(f"SELECT COUNT(*) FROM users WHERE id={tid}") == '0', s)
+oid = sql(f"SELECT id FROM users WHERE lower(email)=lower('{env.get('OWNER_EMAIL', 'owner@w5d.tech')}')")
+if oid:
+    s, h, b = post(o, M + '/team/delete', {'id': oid}, M + '/team/')
+    check('team: deleting the signed-in account is refused', sql(f"SELECT COUNT(*) FROM users WHERE id={oid}") == '1')
+
+s, h, b = post(o, M + '/users/save', {'email': 'new-' + tagm + '@example.com', 'name': 'Pub', 'role_slug': 'admin', 'lang': 'en', 'password_hash': PW, 'active': '1'}, M + '/users/new/')
+check('users: a public account cannot be created with a team role', sql(f"SELECT COUNT(*) FROM users WHERE email='new-{tagm}@example.com'") == '0', s)
+s, h, b = post(o, M + '/users/save', {'email': 'new-' + tagm + '@example.com', 'name': 'Pub', 'role_slug': 'customer', 'lang': 'en', 'password_hash': PW, 'active': '1'}, M + '/users/new/')
+uid = sql(f"SELECT id FROM users WHERE email='new-{tagm}@example.com'")
+check('users: public account created (verified, hashed password)', bool(uid) and sql(f"SELECT substr(password_hash,1,1) FROM users WHERE id={uid}") == '$', s)
+if uid:
+    s, h, b = post(o, M + '/users/save', {'id': uid, 'email': 'changed-' + tagm + '@example.com', 'name': 'Pub2', 'role_slug': 'customer', 'lang': 'fr', 'active': '1'}, f'{M}/users/{uid}/edit/')
+    check('users: e-mail is set once (create_only), other fields update', sql(f"SELECT email || '|' || name FROM users WHERE id={uid}") == f'new-{tagm}@example.com|Pub2', s)
+    s, h, b = post(o, M + '/users/delete', {'id': uid}, M + '/users/')
+    check('users: unused public account can be deleted', sql(f"SELECT COUNT(*) FROM users WHERE id={uid}") == '0', s)
+
+s, h, b = post(o, M + '/contracts/save', {'client_id': '999999', 'scope': 'x', 'hours': '5', 'status': 'active'}, M + '/contracts/new/')
+check('contracts: unknown client is refused (select whitelist)', sql("SELECT COUNT(*) FROM contracts WHERE scope='x' AND client_id=999999") == '0', s)
+s, h, b = post(o, M + '/directives/save', {'week_id': 'bad', 'body': 'x'}, M + '/directives/new/')
+check('directives: week pattern is validated', sql("SELECT COUNT(*) FROM directives WHERE week_id='bad'") == '0', s)
+s, h, b = post(o, M + '/directives/save', {'week_id': '2030-W01', 'service_slug': '', 'body': 'Crud directive ' + tagm}, M + '/directives/new/')
+did = sql(f"SELECT id FROM directives WHERE body='Crud directive {tagm}'")
+check('directives: owner creates one (created_by stamped)', bool(did) and sql(f"SELECT created_by FROM directives WHERE id={did}") not in ('', '0'), s)
+if did: post(o, M + '/directives/delete', {'id': did}, M + '/directives/')
+s, h, b = call(o, 'GET', M + '/mail-outbox/')
+check('mail-outbox: list is delete-only (no New, no Edit link)', s == 200 and '/mail-outbox/new/' not in b and '/edit/' not in b, s)
 
 print('role matrix: what each staff role sees and may do')
 cases = {

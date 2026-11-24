@@ -177,7 +177,7 @@
       "fr": "Inscrivez-vous maintenant",
       "ar": "سجّل الآن"
      },
-     "href": "/app/register",
+     "href": "/app/register/",
      "style": "peak",
      "arrow": true
     }

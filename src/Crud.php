@@ -25,7 +25,7 @@ final class Crud
     {
         $d = self::def($slug);
         if (!$d || !in_array($action, $d['actions'], true)) return false;
-        return ACL::can($role, $d['perm']) && ACL::can($role, $d['perm'] . '.' . $action);
+        return ACL::can($role, $d['perm']) && ACL::can($role, ($d['wperm'] ?? $d['perm']) . '.' . $action);
     }
 
     /** @return list<string> writes this role may perform on the resource */
@@ -59,7 +59,9 @@ final class Crud
     {
         $d = self::def($slug);
         if (!$d || $id < 1) return null;
-        $sql = 'SELECT id, ' . implode(', ', array_keys($d['fields'])) . " FROM {$d['table']} WHERE id = ?";
+        $pk = $d['pk'] ?? 'id';
+        $cols = array_keys(array_filter($d['fields'], fn($f) => $f[0] !== 'password'));
+        $sql = "SELECT $pk AS id" . ($cols ? ', ' . implode(', ', $cols) : '') . " FROM {$d['table']} WHERE $pk = ?";
         if (!empty($d['where'])) $sql .= ' AND (' . $d['where'] . ')';
         $p = [$id];
         if ($col = self::scopeCol($role, $d)) { $sql .= " AND $col = ?"; $p[] = $uid; }
@@ -68,13 +70,23 @@ final class Crud
     }
 
     /** @return array{0:array<string,mixed>,1:array<string,string>} [values to write, errors per field] */
-    public static function validate(array $d, array $post, string $role, int $uid): array
+    public static function validate(array $d, array $post, string $role, int $uid, bool $creating = true): array
     {
         $vals = []; $err = [];
         $lock = self::scopeCol($role, $d);
         foreach ($d['fields'] as $name => $f) {
             $type = $f[0];
             if ($type === 'ro') continue;
+            if (!$creating && !empty($f['create_only'])) continue; // identity-like fields are set once, when the record is created
+            if ($type === 'password') {
+                // write-only: empty keeps the stored hash; a value is checked, hashed (Argon2id) and never echoed, logged or kept in the session
+                $pw = is_scalar($post[$name] ?? '') ? (string)$post[$name] : '';
+                if ($pw === '') { if ($creating && !empty($f['req'])) $err[$name] = __('ux.f_required'); continue; }
+                $pe = Account::passwordErrors($pw, is_scalar($post['email'] ?? '') ? (string)$post['email'] : '');
+                if ($pe) { $err[$name] = t($pe['password']); continue; }
+                $vals[$name] = Account::hash($pw);
+                continue;
+            }
             if (($f['scope_lock'] ?? false) && $lock === $name) { $vals[$name] = $uid; continue; }
             $raw = $post[$name] ?? '';
             $raw = is_scalar($raw) ? trim((string)$raw) : '';
@@ -123,7 +135,8 @@ final class Crud
     public static function create(string $slug, array $vals, int $uid): int
     {
         $d = self::def($slug);
-        return (int)DB::insert($d['table'], ['country_id' => 'tn'] + $vals + self::stamp($d, $uid));
+        $extra = isset($d['on_create']) ? ($d['on_create'])($vals, $uid) : [];
+        return (int)DB::insert($d['table'], (empty($d['no_country']) ? ['country_id' => 'tn'] : []) + $vals + $extra + self::stamp($d, $uid));
     }
 
     public static function update(string $slug, int $id, array $vals, string $role, int $uid): bool
@@ -131,7 +144,7 @@ final class Crud
         $d = self::def($slug);
         $vals += self::stamp($d, $uid);
         $set = implode(', ', array_map(fn($c) => "$c = ?", array_keys($vals)));
-        $sql = "UPDATE {$d['table']} SET $set WHERE id = ?";
+        $sql = "UPDATE {$d['table']} SET $set WHERE " . ($d['pk'] ?? 'id') . ' = ?';
         $p = [...array_values($vals), $id];
         if ($col = self::scopeCol($role, $d)) { $sql .= " AND $col = ?"; $p[] = $uid; }
         return DB::q($sql, $p)->rowCount() > 0;
@@ -140,10 +153,33 @@ final class Crud
     public static function delete(string $slug, int $id, string $role, int $uid): bool
     {
         $d = self::def($slug);
-        $sql = "DELETE FROM {$d['table']} WHERE id = ?";
+        foreach ($d['in_use'] ?? [] as $guard) {
+            if ((int)DB::val($guard, [$id]) > 0) throw new \RuntimeException('in use');
+        }
+        $sql = "DELETE FROM {$d['table']} WHERE " . ($d['pk'] ?? 'id') . ' = ?';
         $p = [$id];
         if ($col = self::scopeCol($role, $d)) { $sql .= " AND $col = ?"; $p[] = $uid; }
-        return DB::q($sql, $p)->rowCount() > 0;
+        $pdo = DB::pdo(); $own = !$pdo->inTransaction();
+        if ($own) $pdo->beginTransaction();
+        try {
+            $n = DB::q($sql, $p)->rowCount();
+            if ($n > 0) foreach ($d['cascade'] ?? [] as $tbl => $col2) DB::q("DELETE FROM $tbl WHERE $col2 = ?", [$id]);
+            if ($own) $pdo->commit();
+        } catch (\Throwable $e) { if ($own && $pdo->inTransaction()) $pdo->rollBack(); throw $e; }
+        return $n > 0;
+    }
+
+    /** Names of write-only secret fields (password type): never echoed, never audited, never kept in the session. */
+    public static function secretFields(array $d): array
+    {
+        return array_keys(array_filter($d['fields'], fn($f) => $f[0] === 'password'));
+    }
+
+    /** Values safe to put in the audit trail. */
+    public static function redact(array $d, array $vals): array
+    {
+        foreach (self::secretFields($d) as $n) if (isset($vals[$n])) $vals[$n] = '(changed)';
+        return $vals;
     }
 
     /** Read-only permission matrix for the owner's "Users, Roles & Permissions" screen. */

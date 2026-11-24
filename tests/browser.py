@@ -18,6 +18,17 @@ def check(name, cond, extra=''):
     if cond: ok += 1; print(f'  ok   {name}')
     else: bad += 1; print(f'  FAIL {name} {extra}')
 
+def open_login(p):
+    """Open the sign-in modal from whichever entry point the header shows at this width: the text link (tablet) or,
+    on desktop where the bar is kept uncrowded, the account icon -> panel -> Sign in button."""
+    link = p.locator('header a[data-auth-open="login"]')
+    if link.count() and link.first.is_visible():
+        link.first.click()
+    else:
+        p.click('header [data-aside-open="aside-user"]'); p.wait_for_timeout(450)
+        p.click('#aside-user a[data-auth-open="login"]')
+    p.wait_for_selector('#authDialog[open] form[data-auth-form]')
+
 def dlg_open(p, sel): return p.evaluate("(s)=>{const d=document.querySelector(s);return !!d&&d.open}", sel)
 def fits(p): return p.evaluate("()=>{const d=document.documentElement;return d.scrollWidth<=d.clientWidth+1}")
 
@@ -37,17 +48,17 @@ with sync_playwright() as pw:
     c, p = newctx(viewport={'width': 1366, 'height': 800})
     p.goto(BASE + '/'); p.wait_for_load_state('networkidle')
     check('dialog closed at load', not dlg_open(p, '#authDialog'))
-    p.click('header a[data-auth-open="login"]'); p.wait_for_selector('#authDialog[open] form[data-auth-form]')
+    open_login(p)
     check('login modal opens with form', p.locator('#authDialog input[name=identifier]').count() == 1)
     check('URL unchanged (no navigation)', p.url.rstrip('/') == BASE)
     check('focus lands in dialog', p.evaluate("()=>document.getElementById('authDialog').contains(document.activeElement)"))
     p.keyboard.press('Escape'); p.wait_for_timeout(150)
     check('Esc closes', not dlg_open(p, '#authDialog'))
-    p.click('header a[data-auth-open="login"]'); p.wait_for_selector('#authDialog[open] form[data-auth-form]')
+    open_login(p)
     p.click('[data-auth-close]'); p.wait_for_timeout(150)
     check('close button closes', not dlg_open(p, '#authDialog'))
     # wrong credentials
-    p.click('header a[data-auth-open="login"]'); p.wait_for_selector('#authDialog[open] form[data-auth-form]')
+    open_login(p)
     p.fill('#am-identifier', 'nobody@mail.test'); p.fill('#am-password', 'wrong-password-1')
     p.click('#authDialog [data-submit]'); p.wait_for_selector('#authDialog [data-form-error]:not(.hidden), #authDialog [data-err]:not(:empty)', timeout=8000)
     check('wrong login shows an error, stays open', dlg_open(p, '#authDialog'))
@@ -77,7 +88,7 @@ with sync_playwright() as pw:
     if tok:
         p.goto(BASE + f'/account/verify/{tok}/')
         p.goto(BASE + '/'); p.wait_for_load_state('networkidle')
-        p.click('header a[data-auth-open="login"]'); p.wait_for_selector('#authDialog[open] form[data-auth-form]')
+        open_login(p)
         p.fill('#am-identifier', email); p.fill('#am-password', pw_); p.click('#authDialog [data-submit]')
         p.wait_for_function("()=>!document.getElementById('authDialog')", timeout=10000); p.wait_for_load_state('networkidle')
         check('modal login signs in (header shows account state)', p.locator('header [data-auth-open="login"]').count() == 0 and p.locator('#authDialog').count() == 0)

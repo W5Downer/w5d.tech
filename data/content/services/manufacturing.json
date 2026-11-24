@@ -10,7 +10,7 @@
   "ar": "التصنيع المتقدم"
  },
  "short": {
-  "en": "The service provides cNC, additive, lean production.",
+  "en": "The service provides CNC, additive, lean production.",
   "fr": "Moderniser la production avec contrôle qualité.",
   "ar": "تحديث الإنتاج مع ضبط الجودة."
  },
@@ -110,7 +110,7 @@
  "kpi": {
   "en": "Proposed thresholds: **≥9 of 10 eligible weekly reports** submitted by Fri 12:00; **≥2 accepted manufacturing process audits** per team-week, subject to case complexity; **≤1 evidence-related rework request** per team-week. Approved leave/adjustments change the eligible denominator, and critical safety/privacy defects override a green score. These are pilot targets, not established README thresholds.",
   "fr": "Seuils proposés : **≥9 des 10 rapports hebdomadaires admissibles** soumis d’ici ven. 12:00 ; **≥2 audits des processus de fabrication acceptés** par équipe-semaine, selon la complexité du cas ; **≤1 demande de reprise liée aux éléments probants** par équipe-semaine. Les congés et aménagements approuvés modifient le dénominateur admissible, et les défauts critiques de sécurité ou de confidentialité prévalent sur un résultat vert. Il s’agit d’objectifs pilotes, et non de seuils établis dans le README.",
-  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول Fri 12:00؛ و**≥2 من تدقيقات عمليات التصنيع المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، فيما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. وهذه أهداف تجريبية، وليست حدوداً معتمدة في README."
+  "ar": "الحدود المقترحة: تقديم **≥9 من أصل 10 تقارير أسبوعية مستوفية للشروط** بحلول الجمعة 12:00؛ و**≥2 من تدقيقات عمليات التصنيع المقبولة** لكل فريق في الأسبوع، رهناً بتعقيد الحالة؛ و**≤1 طلب لإعادة العمل بسبب الأدلة** لكل فريق في الأسبوع. وتؤدي الإجازات/التعديلات المعتمدة إلى تغيير المقام المؤهل، فيما تتغلب العيوب الحرجة المتعلقة بالسلامة/الخصوصية على أي تقييم أخضر. وهذه أهداف تجريبية، وليست حدوداً معتمدة في README."
  },
  "boundary": {
   "en": "first-article verification and machine safety precede production changes",

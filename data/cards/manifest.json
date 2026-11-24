@@ -1,6 +1,90 @@
 {
- "next": 290,
+ "next": 369,
  "cards": {
+  "steps:aff-how:0": {
+   "kind": "steps",
+   "page": "affiliate",
+   "title": "Apply",
+   "tone": null,
+   "images": [
+    {
+     "index": 290,
+     "prompt": "Illustration for the card \"Apply\" (affiliate page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Sign in, open the affiliate panel and apply. A person reviews each application unless the owner has opened automatic approval.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:aff-how:1": {
+   "kind": "steps",
+   "page": "affiliate",
+   "title": "Share your link",
+   "tone": null,
+   "images": [
+    {
+     "index": 291,
+     "prompt": "Illustration for the card \"Share your link\" (affiliate page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Copy the link or your code. Clicks are counted without storing anything about the visitor beyond a hashed, short-lived marker.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:aff-how:2": {
+   "kind": "steps",
+   "page": "affiliate",
+   "title": "Wait for the hold",
+   "tone": null,
+   "images": [
+    {
+     "index": 292,
+     "prompt": "Illustration for the card \"Wait for the hold\" (affiliate page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A commission stays pending for days so that a reversed or failed payment never leaves a debt behind.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:aff-how:3": {
+   "kind": "steps",
+   "page": "affiliate",
+   "title": "Request a payout",
+   "tone": null,
+   "images": [
+    {
+     "index": 293,
+     "prompt": "Illustration for the card \"Request a payout\" (affiliate page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: From you can request a payout. The owner settles it by hand and records the reference.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:reg-next:0": {
+   "kind": "steps",
+   "page": "app-register",
+   "title": "Verification",
+   "tone": null,
+   "images": [
+    {
+     "index": 294,
+     "prompt": "Illustration for the card \"Verification\" (app-register page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A person checks identity and diploma. You are told by e-mail and in your notifications.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:reg-next:1": {
+   "kind": "steps",
+   "page": "app-register",
+   "title": "Practice",
+   "tone": null,
+   "images": [
+    {
+     "index": 295,
+     "prompt": "Illustration for the card \"Practice\" (app-register page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Free QCM practice rounds are open from your account straight away.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:reg-next:2": {
+   "kind": "steps",
+   "page": "app-register",
+   "title": "Certification",
+   "tone": null,
+   "images": [
+    {
+     "index": 296,
+     "prompt": "Illustration for the card \"Certification\" (app-register page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A graded round can issue a certificate when you meet the requirements set for your level.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
   "roster:car-roles:0": {
    "kind": "roster",
    "page": "careers",
@@ -82,6 +166,126 @@
     {
      "index": 7,
      "prompt": "Illustration for the card \"Pilot\" (careers page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A one-month pilot with a small team, reviewed before any larger responsibility.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-purposes:0": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "Practice",
+   "tone": null,
+   "images": [
+    {
+     "index": 297,
+     "prompt": "Illustration for the card \"Practice\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Free. A random service at your level, the right answers and explanations shown at the end. No certificate.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-purposes:1": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "Certification",
+   "tone": null,
+   "images": [
+    {
+     "index": 298,
+     "prompt": "Illustration for the card \"Certification\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A graded round that can issue a certificate. It may require a minimum level, a practice score, a task or a number of affiliates.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-purposes:2": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "Upgrade",
+   "tone": null,
+   "images": [
+    {
+     "index": 299,
+     "prompt": "Illustration for the card \"Upgrade\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A graded round at the next level for an existing certificate holder. A fee for a new attempt may apply, set by the owner.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-levels:0": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "L1 Foundations",
+   "tone": null,
+   "images": [
+    {
+     "index": 300,
+     "prompt": "Illustration for the card \"L1 Foundations\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Vocabulary, evidence rules and the boundary of the service.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-levels:1": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "L2 Practice",
+   "tone": null,
+   "images": [
+    {
+     "index": 301,
+     "prompt": "Illustration for the card \"L2 Practice\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Applied judgement on realistic cases.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-levels:2": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "L3 Review",
+   "tone": null,
+   "images": [
+    {
+     "index": 302,
+     "prompt": "Illustration for the card \"L3 Review\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Checking other people’s work against a rubric.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:cert-levels:3": {
+   "kind": "steps",
+   "page": "certification",
+   "title": "L4 Lead",
+   "tone": null,
+   "images": [
+    {
+     "index": 303,
+     "prompt": "Illustration for the card \"L4 Lead\" (certification page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Method, risk and sign-off for a team.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:done-next:0": {
+   "kind": "steps",
+   "page": "checkout-done",
+   "title": "Keep the reference",
+   "tone": null,
+   "images": [
+    {
+     "index": 304,
+     "prompt": "Illustration for the card \"Keep the reference\" (checkout-done page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The reference and the schedule are your proof. Your account shows them under Orders at any time.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:done-next:1": {
+   "kind": "steps",
+   "page": "checkout-done",
+   "title": "Pay, if payment is open",
+   "tone": null,
+   "images": [
+    {
+     "index": 305,
+     "prompt": "Illustration for the card \"Pay, if payment is open\" (checkout-done page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: With D17 you send the transfer yourself and enter its reference. A person checks it by hand; until then the status stays awaiting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:done-next:2": {
+   "kind": "steps",
+   "page": "checkout-done",
+   "title": "Follow the progress",
+   "tone": null,
+   "images": [
+    {
+     "index": 306,
+     "prompt": "Illustration for the card \"Follow the progress\" (checkout-done page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Status changes are e-mailed and listed in your notifications. The public status page shows the programme as it really is.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -805,6 +1009,54 @@
     }
    ]
   },
+  "steps:how-path:0": {
+   "kind": "steps",
+   "page": "how-it-works",
+   "title": "Create an account",
+   "tone": null,
+   "images": [
+    {
+     "index": 307,
+     "prompt": "Illustration for the card \"Create an account\" (how-it-works page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Confirm your e-mail. Your dashboard opens with the panels for your role.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:how-path:1": {
+   "kind": "steps",
+   "page": "how-it-works",
+   "title": "Practise",
+   "tone": null,
+   "images": [
+    {
+     "index": 308,
+     "prompt": "Illustration for the card \"Practise\" (how-it-works page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Free QCM rounds across the services show you the format and the level.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:how-path:2": {
+   "kind": "steps",
+   "page": "how-it-works",
+   "title": "Sit a graded round",
+   "tone": null,
+   "images": [
+    {
+     "index": 309,
+     "prompt": "Illustration for the card \"Sit a graded round\" (how-it-works page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: When you meet the requirements, a graded round can issue a certificate valid for months.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:how-path:3": {
+   "kind": "steps",
+   "page": "how-it-works",
+   "title": "Move up",
+   "tone": null,
+   "images": [
+    {
+     "index": 310,
+     "prompt": "Illustration for the card \"Move up\" (how-it-works page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: An upgrade round at the next level builds on your certificate. Delivery work follows certified headcount and funded capacity.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
   "steps:inv-how:0": {
    "kind": "steps",
    "page": "investors",
@@ -838,6 +1090,42 @@
     {
      "index": 70,
      "prompt": "Illustration for the card \"Confirm\" (investors page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: You receive a reference and a management key. Pause, resume or cancel from the manage page.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:thx-next:0": {
+   "kind": "steps",
+   "page": "join-thanks",
+   "title": "Received",
+   "tone": null,
+   "images": [
+    {
+     "index": 311,
+     "prompt": "Illustration for the card \"Received\" (join-thanks page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Your file is recorded with a date. You get an e-mail and a notification in your account.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:thx-next:1": {
+   "kind": "steps",
+   "page": "join-thanks",
+   "title": "Checked by a person",
+   "tone": null,
+   "images": [
+    {
+     "index": 312,
+     "prompt": "Illustration for the card \"Checked by a person\" (join-thanks page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Identity and diploma are checked by hand. Nothing is automatic and nothing is guaranteed.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:thx-next:2": {
+   "kind": "steps",
+   "page": "join-thanks",
+   "title": "Practise while you wait",
+   "tone": null,
+   "images": [
+    {
+     "index": 313,
+     "prompt": "Illustration for the card \"Practise while you wait\" (join-thanks page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Open the QCM panel for free practice rounds on the services. A certificate comes only from a passed graded round.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -925,6 +1213,42 @@
     }
    ]
   },
+  "steps:mng-how:0": {
+   "kind": "steps",
+   "page": "subscription-manage",
+   "title": "Find it",
+   "tone": null,
+   "images": [
+    {
+     "index": 314,
+     "prompt": "Illustration for the card \"Find it\" (subscription-manage page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Enter the reference (ORD-…) and the management key that was shown once when you created it.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:mng-how:1": {
+   "kind": "steps",
+   "page": "subscription-manage",
+   "title": "Choose an action",
+   "tone": null,
+   "images": [
+    {
+     "index": 315,
+     "prompt": "Illustration for the card \"Choose an action\" (subscription-manage page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Pause, resume or cancel. Cancelling stops future charges and cannot be undone; you can start a new subscription instead.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:mng-how:2": {
+   "kind": "steps",
+   "page": "subscription-manage",
+   "title": "Lost the key?",
+   "tone": null,
+   "images": [
+    {
+     "index": 316,
+     "prompt": "Illustration for the card \"Lost the key?\" (subscription-manage page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The key is stored only as a hash, so nobody can read it back. Sign in and open Orders, or write to the investors desk with your reference.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
   "team:team-people:open:0": {
    "kind": "team",
    "page": "team",
@@ -973,75 +1297,627 @@
     }
    ]
   },
-  "cards:tr-index:0": {
+  "steps:ac-howtest:0": {
+   "kind": "steps",
+   "page": "trust-accessibility",
+   "title": "Automated checks on every release",
+   "tone": null,
+   "images": [
+    {
+     "index": 317,
+     "prompt": "Illustration for the card \"Automated checks on every release\" (trust-accessibility page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A crawler script visits every page in all three languages and looks for pages without a language, empty links, images without a text alternative, forms without labels and pages with more than one main heading. The team r. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ac-howtest:1": {
+   "kind": "steps",
+   "page": "trust-accessibility",
+   "title": "Keyboard walk-through",
+   "tone": null,
+   "images": [
+    {
+     "index": 318,
+     "prompt": "Illustration for the card \"Keyboard walk-through\" (trust-accessibility page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Before each major change to the template, someone goes through the main journeys with the keyboard only: menu, language switch, forms, cookie notice, checkout.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ac-howtest:2": {
+   "kind": "steps",
+   "page": "trust-accessibility",
+   "title": "Screen-reader and zoom spot checks",
+   "tone": null,
+   "images": [
+    {
+     "index": 319,
+     "prompt": "Illustration for the card \"Screen-reader and zoom spot checks\" (trust-accessibility page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: We read key pages with a screen reader in each language and at 200% zoom. These are spot checks by the team, not a replacement for an audit by disabled users.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ac-howtest:3": {
+   "kind": "steps",
+   "page": "trust-accessibility",
+   "title": "Reports from readers",
+   "tone": null,
+   "images": [
+    {
+     "index": 320,
+     "prompt": "Illustration for the card \"Reports from readers\" (trust-accessibility page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A report is the most reliable test. It is logged, answered within working days and, if the barrier is real, fixed and noted on the [corrections page](/trust/corrections/).. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ac-howtest:4": {
+   "kind": "steps",
+   "page": "trust-accessibility",
+   "title": "Review of this statement",
+   "tone": null,
+   "images": [
+    {
+     "index": 321,
+     "prompt": "Illustration for the card \"Review of this statement\" (trust-accessibility page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The statement is re-read whenever the template changes in a way that affects navigation, colour or forms, and at least every months.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ad-steps:0": {
+   "kind": "steps",
+   "page": "trust-ads-policy",
+   "title": "The content bar is met",
+   "tone": null,
+   "images": [
+    {
+     "index": 322,
+     "prompt": "Illustration for the card \"The content bar is met\" (trust-ads-policy page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The measured report shows enough substantive pages in each category, and this policy page exists and is published.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ad-steps:1": {
+   "kind": "steps",
+   "page": "trust-ads-policy",
+   "title": "Cookie consent is in place",
+   "tone": null,
+   "images": [
+    {
+     "index": 323,
+     "prompt": "Illustration for the card \"Cookie consent is in place\" (trust-ads-policy page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Advertising scripts set third-party cookies. They load only after you choose to allow them in the [cookie notice](/trust/cookies/), and never before.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ad-steps:2": {
+   "kind": "steps",
+   "page": "trust-ads-policy",
+   "title": "The owner applies and records it",
+   "tone": null,
+   "images": [
+    {
+     "index": 324,
+     "prompt": "Illustration for the card \"The owner applies and records it\" (trust-ads-policy page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The status moves from “not applied” to “pending”. The result, approval or refusal, is recorded as it happens, with the date.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ad-steps:3": {
+   "kind": "steps",
+   "page": "trust-ads-policy",
+   "title": "Placement is added, and only where allowed",
+   "tone": null,
+   "images": [
+    {
+     "index": 325,
+     "prompt": "Illustration for the card \"Placement is added, and only where allowed\" (trust-ads-policy page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Only after approval does any slot exist, and only on the reading pages in the table above, each labelled as an advertisement.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ad-steps:4": {
+   "kind": "steps",
+   "page": "trust-ads-policy",
+   "title": "Revenue is accrued, not spent",
+   "tone": null,
+   "images": [
+    {
+     "index": 326,
+     "prompt": "Illustration for the card \"Revenue is accrued, not spent\" (trust-ads-policy page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: See the next section. Withdrawal is blocked until the business can legally receive money.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ck-choice:0": {
+   "kind": "steps",
+   "page": "trust-cookies",
+   "title": "Open the settings",
+   "tone": null,
+   "images": [
+    {
+     "index": 327,
+     "prompt": "Illustration for the card \"Open the settings\" (trust-cookies page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Use “Cookie settings” in the footer of any page, or the link at the top of this page. The notice opens with your current choice shown.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ck-choice:1": {
+   "kind": "steps",
+   "page": "trust-cookies",
+   "title": "Choose by category",
+   "tone": null,
+   "images": [
+    {
+     "index": 328,
+     "prompt": "Illustration for the card \"Choose by category\" (trust-cookies page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Strictly necessary cookies are always on. Measurement and advertising can be switched on or off on their own.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ck-choice:2": {
+   "kind": "steps",
+   "page": "trust-cookies",
+   "title": "Save",
+   "tone": null,
+   "images": [
+    {
+     "index": 329,
+     "prompt": "Illustration for the card \"Save\" (trust-cookies page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Your choice and its date are stored on your device and respected immediately. You will be asked again after months.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ck-choice:3": {
+   "kind": "steps",
+   "page": "trust-cookies",
+   "title": "Or clear everything",
+   "tone": null,
+   "images": [
+    {
+     "index": 330,
+     "prompt": "Illustration for the card \"Or clear everything\" (trust-cookies page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Your browser can delete all cookies and site data at any time. Doing so signs you out and asks the cookie question again.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:co-how:0": {
+   "kind": "steps",
+   "page": "trust-corrections",
+   "title": "You report",
+   "tone": null,
+   "images": [
+    {
+     "index": 331,
+     "prompt": "Illustration for the card \"You report\" (trust-corrections page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Use the form on this page, name the page or the figure and give your source if you have one. You receive a reference so that you can follow up. A report with a source is dealt with faster, but a report without one is sti. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:co-how:1": {
+   "kind": "steps",
+   "page": "trust-corrections",
+   "title": "We check",
+   "tone": null,
+   "images": [
+    {
+     "index": 332,
+     "prompt": "Illustration for the card \"We check\" (trust-corrections page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A person other than the author of the original text reads the report, goes to the source and decides whether it is right, partly right or mistaken. You are told the answer and the reason within days.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:co-how:2": {
+   "kind": "steps",
+   "page": "trust-corrections",
+   "title": "We publish",
+   "tone": null,
+   "images": [
+    {
+     "index": 333,
+     "prompt": "Illustration for the card \"We publish\" (trust-corrections page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: When we were wrong, the page is changed and the change is dated. A correction that matters, such as a figure that people may have used to decide, is noted on the page itself rather than replaced silently.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:dr-how:0": {
+   "kind": "steps",
+   "page": "trust-data-rights",
+   "title": "1. You write",
+   "tone": null,
+   "images": [
+    {
+     "index": 334,
+     "prompt": "Illustration for the card \"1. You write\" (trust-data-rights page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Send a message to from the address on your account. Say which right you want to use. No form is required.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:dr-how:1": {
+   "kind": "steps",
+   "page": "trust-data-rights",
+   "title": "2. We confirm",
+   "tone": null,
+   "images": [
+    {
+     "index": 335,
+     "prompt": "Illustration for the card \"2. We confirm\" (trust-data-rights page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A person acknowledges your request within working days and, if needed, asks one question to confirm who you are.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:dr-how:2": {
+   "kind": "steps",
+   "page": "trust-data-rights",
+   "title": "3. We act",
+   "tone": null,
+   "images": [
+    {
+     "index": 336,
+     "prompt": "Illustration for the card \"3. We act\" (trust-data-rights page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: We complete the request within days. If it is complex, we tell you why and how much longer we need, before the deadline.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:dr-how:3": {
+   "kind": "steps",
+   "page": "trust-data-rights",
+   "title": "4. We tell you",
+   "tone": null,
+   "images": [
+    {
+     "index": 337,
+     "prompt": "Illustration for the card \"4. We tell you\" (trust-data-rights page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: You receive a written answer that says what we did, or, if we refuse, which rule stops us and how to complain.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ed-flow:0": {
+   "kind": "steps",
+   "page": "trust-editorial",
+   "title": "Draft from sources",
+   "tone": null,
+   "images": [
+    {
+     "index": 338,
+     "prompt": "Illustration for the card \"Draft from sources\" (trust-editorial page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A draft is written from the settings file, the database or a named source. Figures are tokens, never typed.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ed-flow:1": {
+   "kind": "steps",
+   "page": "trust-editorial",
+   "title": "Automatic checks",
+   "tone": null,
+   "images": [
+    {
+     "index": 339,
+     "prompt": "Illustration for the card \"Automatic checks\" (trust-editorial page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A linter blocks a hard-coded price, a missing translation, a broken token or a second primary button in a section.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ed-flow:2": {
+   "kind": "steps",
+   "page": "trust-editorial",
+   "title": "Review by a person",
+   "tone": null,
+   "images": [
+    {
+     "index": 340,
+     "prompt": "Illustration for the card \"Review by a person\" (trust-editorial page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The owner reads the page. Legal pages also go to the Tunisian lawyer and accountant, and the review date is shown.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ed-flow:3": {
+   "kind": "steps",
+   "page": "trust-editorial",
+   "title": "Publication and history",
+   "tone": null,
+   "images": [
+    {
+     "index": 341,
+     "prompt": "Illustration for the card \"Publication and history\" (trust-editorial page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The change is committed to version control with a message that says what changed. The history is the record.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:ed-flow:4": {
+   "kind": "steps",
+   "page": "trust-editorial",
+   "title": "Correction when wrong",
+   "tone": null,
+   "images": [
+    {
+     "index": 342,
+     "prompt": "Illustration for the card \"Correction when wrong\" (trust-editorial page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A report through the [corrections desk](/trust/corrections/) gets an answer within days. If we were wrong, the fix is published and dated.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:rf-how:0": {
+   "kind": "steps",
+   "page": "trust-refunds",
+   "title": "1. Write to us",
+   "tone": null,
+   "images": [
+    {
+     "index": 343,
+     "prompt": "Illustration for the card \"1. Write to us\" (trust-refunds page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Use the [contact form](/contact/) with your order reference, or reply to the confirmation e-mail.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:rf-how:1": {
+   "kind": "steps",
+   "page": "trust-refunds",
+   "title": "2. We acknowledge",
+   "tone": null,
+   "images": [
+    {
+     "index": 344,
+     "prompt": "Illustration for the card \"2. We acknowledge\" (trust-refunds page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A person answers within working days and may ask one question to match the request to the payment.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:rf-how:2": {
+   "kind": "steps",
+   "page": "trust-refunds",
+   "title": "3. We decide in writing",
+   "tone": null,
+   "images": [
+    {
+     "index": 345,
+     "prompt": "Illustration for the card \"3. We decide in writing\" (trust-refunds page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: You receive the decision and the reason. If we refuse, we cite the rule and tell you how to appeal.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:rf-how:3": {
+   "kind": "steps",
+   "page": "trust-refunds",
+   "title": "4. Money goes back",
+   "tone": null,
+   "images": [
+    {
+     "index": 346,
+     "prompt": "Illustration for the card \"4. Money goes back\" (trust-refunds page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: By the same channel, within days of the decision. Bank and wallet fees charged by the provider are refunded when the fault is ours.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sp-steps:0": {
+   "kind": "steps",
+   "page": "trust-sampling",
+   "title": "Draw",
+   "tone": null,
+   "images": [
+    {
+     "index": 347,
+     "prompt": "Illustration for the card \"Draw\" (trust-sampling page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: At the end of each reporting week, the accepted reports are listed and % of them are drawn at random. The draw does not look at who wrote a report, how long they have been in the programme or how their earlier reports fa. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sp-steps:1": {
+   "kind": "steps",
+   "page": "trust-sampling",
+   "title": "Re-check",
+   "tone": null,
+   "images": [
+    {
+     "index": 348,
+     "prompt": "Illustration for the card \"Re-check\" (trust-sampling page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: A reviewer who did not write and did not accept the report goes back to the source evidence cited in it, and checks that each claim is supported by what the source actually says. The reviewer works from the evidence, not. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sp-steps:2": {
+   "kind": "steps",
+   "page": "trust-sampling",
+   "title": "Decide",
+   "tone": null,
+   "images": [
+    {
+     "index": 349,
+     "prompt": "Illustration for the card \"Decide\" (trust-sampling page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The result is one of three: confirmed, confirmed with a note, or failed. A failure needs a written reason that points to the specific claim and the specific source, so that the person concerned can answer it.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sp-steps:3": {
+   "kind": "steps",
+   "page": "trust-sampling",
+   "title": "Record",
+   "tone": null,
+   "images": [
+    {
+     "index": 350,
+     "prompt": "Illustration for the card \"Record\" (trust-sampling page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: Every result is counted in the quality figures, including the confirmations. A figure that only counted failures would look worse than it is, and a figure that hid them would look better than it is. Both would be mislead. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sc-handle:0": {
+   "kind": "steps",
+   "page": "trust-security",
+   "title": "Acknowledge",
+   "tone": null,
+   "images": [
+    {
+     "index": 351,
+     "prompt": "Illustration for the card \"Acknowledge\" (trust-security page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: You receive an acknowledgement within hours on working days. If you do not, write again: a lost message is more likely than a refusal to answer.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sc-handle:1": {
+   "kind": "steps",
+   "page": "trust-security",
+   "title": "Confirm",
+   "tone": null,
+   "images": [
+    {
+     "index": 352,
+     "prompt": "Illustration for the card \"Confirm\" (trust-security page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: We try to reproduce the problem and tell you whether we consider it confirmed, and how serious we think it is.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sc-handle:2": {
+   "kind": "steps",
+   "page": "trust-security",
+   "title": "Fix",
+   "tone": null,
+   "images": [
+    {
+     "index": 353,
+     "prompt": "Illustration for the card \"Fix\" (trust-security page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: The fix is made and tested. Serious problems come before everything else on the list; minor ones are scheduled with the next release.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "steps:sc-handle:3": {
+   "kind": "steps",
+   "page": "trust-security",
+   "title": "Tell the people affected",
+   "tone": null,
+   "images": [
+    {
+     "index": 354,
+     "prompt": "Illustration for the card \"Tell the people affected\" (trust-security page): one stage of a process shown as a tangible step, with a path of light leading on to the next stage. Context: If personal data was exposed, the people concerned are told clearly and without delay, together with what they should do. The [privacy notice](/trust/privacy/) describes how.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-claims:0": {
    "kind": "cards",
    "page": "trust",
    "title": "Declared limits",
    "tone": null,
    "images": [
     {
-     "index": 82,
-     "prompt": "Illustration for the card \"Declared limits\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: No job, no return, no headcount claim.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "index": 355,
+     "prompt": "Illustration for the card \"Declared limits\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Six limits stated before you invest, apply or share: no job promised, a design ceiling and not a headcount, no return, a public price curve, the payment state and the programme dates.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
-  "cards:tr-index:1": {
+  "cards:tr-claims:1": {
    "kind": "cards",
    "page": "trust",
-   "title": "5% sampling",
+   "title": "Sampling method",
    "tone": null,
    "images": [
     {
-     "index": 83,
-     "prompt": "Illustration for the card \"5% sampling\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: How reports are re-checked.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "index": 356,
+     "prompt": "Illustration for the card \"Sampling method\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: How a fixed share of weekly reports is drawn at random and re-checked against source evidence, and what happens when a sample fails.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
-  "cards:tr-index:2": {
+  "cards:tr-claims:2": {
    "kind": "cards",
    "page": "trust",
-   "title": "Privacy",
+   "title": "Editorial policy",
    "tone": null,
    "images": [
     {
-     "index": 84,
-     "prompt": "Illustration for the card \"Privacy\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: What we collect and keep.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "index": 357,
+     "prompt": "Illustration for the card \"Editorial policy\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Where facts come from, how figures are dated, what is generated and what is written by hand, and why sponsors and advertisers cannot change a verdict.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
-  "cards:tr-index:3": {
-   "kind": "cards",
-   "page": "trust",
-   "title": "Terms",
-   "tone": null,
-   "images": [
-    {
-     "index": 85,
-     "prompt": "Illustration for the card \"Terms\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Demo-mode terms for pledges.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
-    }
-   ]
-  },
-  "cards:tr-index:4": {
-   "kind": "cards",
-   "page": "trust",
-   "title": "Security",
-   "tone": null,
-   "images": [
-    {
-     "index": 86,
-     "prompt": "Illustration for the card \"Security\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Controls and disclosure.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
-    }
-   ]
-  },
-  "cards:tr-index:5": {
+  "cards:tr-claims:3": {
    "kind": "cards",
    "page": "trust",
    "title": "Corrections",
    "tone": null,
    "images": [
     {
-     "index": 87,
-     "prompt": "Illustration for the card \"Corrections\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Report an error; 14-day answer.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "index": 358,
+     "prompt": "Illustration for the card \"Corrections\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: A form and a promise: name the page and the sentence, give your source, and receive a written answer within the stated number of days.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-claims:4": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Live status",
+   "tone": null,
+   "images": [
+    {
+     "index": 359,
+     "prompt": "Illustration for the card \"Live status\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Live counts, funding channels and their reasons for being open or closed, and the state of the advertising gate. Awaiting means awaiting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-data:0": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Privacy policy",
+   "tone": null,
+   "images": [
+    {
+     "index": 360,
+     "prompt": "Illustration for the card \"Privacy policy\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: What personal data is collected, why, for how long it is kept and who receives it, in plain words and with the retention periods as numbers.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-data:1": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Cookie policy",
+   "tone": null,
+   "images": [
+    {
+     "index": 361,
+     "prompt": "Illustration for the card \"Cookie policy\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Every cookie and every item of local storage the site sets, one by one, with its purpose and lifetime, and how to change your choice.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-data:2": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Your data rights",
+   "tone": null,
+   "images": [
+    {
+     "index": 362,
+     "prompt": "Illustration for the card \"Your data rights\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: How to ask for access, correction, deletion, portability or to object, what we need from you and when you will have an answer.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-data:3": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Terms of service",
+   "tone": null,
+   "images": [
+    {
+     "index": 363,
+     "prompt": "Illustration for the card \"Terms of service\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: The contract between you and W5D in plain language: what you buy, what we owe you, what you owe us, and what happens when something goes wrong.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-data:4": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Refunds and cancellations",
+   "tone": null,
+   "images": [
+    {
+     "index": 364,
+     "prompt": "Illustration for the card \"Refunds and cancellations\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: One rule per kind of payment, the right to change your mind, the escrow protection of pre-paid credits and the time a refund takes.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-org:0": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Imprint",
+   "tone": null,
+   "images": [
+    {
+     "index": 365,
+     "prompt": "Illustration for the card \"Imprint\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Who publishes the site, how to reach them, and an honest list of what is not yet registered instead of placeholder numbers.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-org:1": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Security",
+   "tone": null,
+   "images": [
+    {
+     "index": 366,
+     "prompt": "Illustration for the card \"Security\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: The controls that protect your account and your data, what we do not claim, and how to report a vulnerability without fear.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-org:2": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Accessibility",
+   "tone": null,
+   "images": [
+    {
+     "index": 367,
+     "prompt": "Illustration for the card \"Accessibility\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: Our WCAG 2.2 AA target, what is in place, the known limits and how to report a barrier.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+    }
+   ]
+  },
+  "cards:tr-org:3": {
+   "kind": "cards",
+   "page": "trust",
+   "title": "Advertising policy",
+   "tone": null,
+   "images": [
+    {
+     "index": 368,
+     "prompt": "Illustration for the card \"Advertising policy\" (trust page): an editorial scene that explains the idea of the card in one clear visual metaphor. Context: No advertising today, where it may never appear, and why it is not part of the funding plan.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -1805,7 +2681,7 @@
    "images": [
     {
      "index": 174,
-     "prompt": "Illustration for the card \"Cultural Impact Assessment\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides sROI, community consultation, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Cultural Impact Assessment\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides SROI, community consultation, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -1925,7 +2801,7 @@
    "images": [
     {
      "index": 184,
-     "prompt": "Illustration for the card \"Green Building Certification\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides eDGE/LEED assessment, retrofit plans.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Green Building Certification\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides EDGE/LEED assessment, retrofit plans.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2297,7 +3173,7 @@
    "images": [
     {
      "index": 215,
-     "prompt": "Illustration for the card \"Research Data Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides fAIR data, repositories, DMPs.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Research Data Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides FAIR data, repositories, DMPs.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2357,7 +3233,7 @@
    "images": [
     {
      "index": 220,
-     "prompt": "Illustration for the card \"Renewable Energy Science\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides pV testing, storage chemistry, grid studies.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Renewable Energy Science\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides PV testing, storage chemistry, grid studies.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2369,7 +3245,7 @@
    "images": [
     {
      "index": 221,
-     "prompt": "Illustration for the card \"Food Safety & Nutrition Science\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides hACCP, labelling, cohort analysis.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Food Safety & Nutrition Science\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides HACCP, labelling, cohort analysis.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2381,7 +3257,7 @@
    "images": [
     {
      "index": 222,
-     "prompt": "Illustration for the card \"Forensic Science Support\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides dNA, ballistics, digital forensics.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Forensic Science Support\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides DNA, ballistics, digital forensics.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2441,7 +3317,7 @@
    "images": [
     {
      "index": 227,
-     "prompt": "Illustration for the card \"Laboratory Accreditation Support\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides iSO 17025, audits, method validation.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Laboratory Accreditation Support\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides ISO 17025, audits, method validation.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2465,7 +3341,7 @@
    "images": [
     {
      "index": 229,
-     "prompt": "Illustration for the card \"Clinical Trials Data Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides eDC, query resolution, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Clinical Trials Data Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides EDC, query resolution, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2549,7 +3425,7 @@
    "images": [
     {
      "index": 236,
-     "prompt": "Illustration for the card \"Data Protection & Privacy\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides gDPR-style compliance, DPIAs.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Data Protection & Privacy\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides GDPR-style compliance, DPIAs.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2621,7 +3497,7 @@
    "images": [
     {
      "index": 242,
-     "prompt": "Illustration for the card \"Climate Governance & NDCs\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides mRV, policy alignment, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Climate Governance & NDCs\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides MRV, policy alignment, reporting.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2633,7 +3509,7 @@
    "images": [
     {
      "index": 243,
-     "prompt": "Illustration for the card \"Public Financial Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides mTEF, cash management, internal audit.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Public Financial Management\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides MTEF, cash management, internal audit.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2813,7 +3689,7 @@
    "images": [
     {
      "index": 258,
-     "prompt": "Illustration for the card \"Cybersecurity Operations\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides sOC, pentesting, incident response.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Cybersecurity Operations\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides SOC, pentesting, incident response.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2873,7 +3749,7 @@
    "images": [
     {
      "index": 263,
-     "prompt": "Illustration for the card \"Digital Identity & Authentication\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides sSO, eKYC, credential wallets.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Digital Identity & Authentication\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides SSO, eKYC, credential wallets.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2897,7 +3773,7 @@
    "images": [
     {
      "index": 265,
-     "prompt": "Illustration for the card \"Geospatial & Remote Sensing\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides gIS, satellite analytics, mapping.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Geospatial & Remote Sensing\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides GIS, satellite analytics, mapping.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -2945,7 +3821,7 @@
    "images": [
     {
      "index": 269,
-     "prompt": "Illustration for the card \"IT Governance & Compliance\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides iSO 27001, audits, policies.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"IT Governance & Compliance\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides ISO 27001, audits, policies.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -3005,7 +3881,7 @@
    "images": [
     {
      "index": 274,
-     "prompt": "Illustration for the card \"Advanced Manufacturing\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides cNC, additive, lean production.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Advanced Manufacturing\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides CNC, additive, lean production.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },
@@ -3077,7 +3953,7 @@
    "images": [
     {
      "index": 280,
-     "prompt": "Illustration for the card \"Transportation Technology\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides eV charging, fleet telematics, ticketing.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
+     "prompt": "Illustration for the card \"Transportation Technology\" (services page): the main deliverable of the service as a simple object on a tidy desk, one expert silhouette (no face). Context: The service provides EV charging, fleet telematics, ticketing.. Flat editorial illustration with soft depth, rounded geometric shapes, a palette of violet, indigo, cyan and a touch of pink on a deep ink-violet or light lavender ground, subtle grid texture, generous negative space, calm and honest mood. No text, no letters, no logos, no watermarks, no recognisable real people, no money piles, no promise of profit. 16:9, 1280x720."
     }
    ]
   },

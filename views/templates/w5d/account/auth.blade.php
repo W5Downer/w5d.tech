@@ -55,6 +55,7 @@
                 <a class="btn-ghost justify-center" href="{{ url('/account/social/' . $k . '/') . $nextQ }}">{{ brand($k, 'w-4 h-4') }} {{ $p['label'] }}</a>
               @endforeach
             </div>
+            @if(isset($providers['google']))<p class="mt-3 text-xs text-slate-500 text-center" data-google-note>{{ tr3('Google sign-in shares only your name and verified e-mail with W5D, used to create or open your account. Nothing else is read.', 'La connexion Google ne partage avec W5D que votre nom et votre e-mail vérifié, utilisés pour créer ou ouvrir votre compte. Rien d’autre n’est lu.', 'يشارك الدخول عبر Google مع W5D اسمك وبريدك الموثّق فقط لإنشاء حسابك أو فتحه. لا يُقرأ شيء آخر.') }} <a class="underline" href="{{ url('/trust/privacy/') }}#pv-google">{{ __('footer.privacy') }}</a></p>@endif
           </div>
         @endif
         <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.no_account') }} <a class="btn-link" href="{{ url('/account/register/') . $nextQ }}">{{ __('acct.register') }}</a></p>
@@ -80,6 +81,7 @@
                 <a class="btn-ghost justify-center" href="{{ url('/account/social/' . $k . '/') }}">{{ brand($k, 'w-4 h-4') }} {{ $p['label'] }}</a>
               @endforeach
             </div>
+            @if(isset($providers['google']))<p class="mt-3 text-xs text-slate-500 text-center" data-google-note>{{ tr3('Google sign-in shares only your name and verified e-mail with W5D, used to create or open your account. Nothing else is read.', 'La connexion Google ne partage avec W5D que votre nom et votre e-mail vérifié, utilisés pour créer ou ouvrir votre compte. Rien d’autre n’est lu.', 'يشارك الدخول عبر Google مع W5D اسمك وبريدك الموثّق فقط لإنشاء حسابك أو فتحه. لا يُقرأ شيء آخر.') }} <a class="underline" href="{{ url('/trust/privacy/') }}#pv-google">{{ __('footer.privacy') }}</a></p>@endif
           </div>
         @endif
         <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.have_account') }} <a class="btn-link" href="{{ url('/account/login/') . $nextQ }}">{{ __('acct.login') }}</a></p>

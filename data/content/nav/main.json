@@ -130,7 +130,7 @@
                 "fr": "Ouvrir un dossier de candidature lié à Dyon",
                 "ar": "افتح ملف متقدم مرتبطًا بـ Dyon"
               },
-              "href": "/app/register"
+              "href": "/app/register/"
             },
             {
               "icon": "route",

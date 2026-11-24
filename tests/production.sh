@@ -84,6 +84,8 @@ ADS_ACCRUED_USD=0
 ADS_ACCRUED_TND=0
 ADS_WITHDRAWN_TND=0
 EOF
+# owner password hash made with the real CLI tool (single-quoted: an Argon2id hash contains $)
+printf "WEBMASTER_PASSWORD_HASH='%s'\n" "$(printf '%s\n' "$PASS" | php "$ROOT/bin/password-hash.php" --stdin)" >> "$PT/app/.env"
 chmod 600 "$PT/app/.env"
 echo "copy ready: $(du -sh "$PT/app" | cut -f1)"
 
@@ -119,14 +121,21 @@ run "dashboards"                                    python3 tests/dash.py "$BASE
 run "sign-in gate"                                  python3 tests/gate.py "$BASE"
 run "mail + unsubscribe"                            python3 tests/mail.py "$BASE"
 run "CRUD + ACL"                                    python3 tests/crud.py "$BASE"
-run "team sign-in (@team e-mail + code) + privacy"  python3 tests/staff.py "$BASE"
+run "team sign-in (password or e-mailed code) + privacy"  python3 tests/staff.py "$BASE"
+run "Google OAuth branding / user-data policy guard" python3 tests/google.py "$BASE"
+run "FR/AR consistency (numbers, links, tokens, script, setup guide)" python3 tests/i18n.py "$BASE"
+run "break-glass staff code script + Users screen limits" python3 tests/breakglass.py "$BASE"
+run "UX audit: links, redirects, confirms, resend-code flow" python3 tests/ux.py "$BASE"
+run "SMTP transport against a stub relay (auth, MIME, failures)" python3 tests/smtp.py
 if [ "$QUICK" = 0 ]; then
   run "browser UI (Playwright)"                     python3 tests/ui.py "$BASE"
   run "auth modals / quick-find / tab bar (Playwright)" python3 tests/browser.py "$BASE"
   run "mobile audit (Playwright)"                   python3 tests/mobile.py "$BASE"
+  run "nav + portal shell layout, login placeholders (Playwright)" python3 tests/nav.py "$BASE"
   # service workers cannot register behind the throw-away self-signed certificate: these two use the plain-HTTP port of the SAME production copy (127.0.0.1 is a secure context)
   run "help icons: tooltips + popups (Playwright)"   python3 tests/help.py "http://127.0.0.1:$PHP_PORT"
   run "installable portal + offline indicator (Playwright)" python3 tests/pwa.py "http://127.0.0.1:$PHP_PORT"
+  run "PWA installability (Chromium verdict, install events, iOS hint)" python3 tests/pwa_install.py "http://127.0.0.1:$PHP_PORT"
 fi
 
 step "post-run: no unhandled exceptions in the production log"

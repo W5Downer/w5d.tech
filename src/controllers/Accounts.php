@@ -75,7 +75,7 @@ final class Accounts
         if ($r = self::guard($q, 'acct-login', $back, 20, 900)) return $r;
         $id = trim((string)($q->post['identifier'] ?? '')); $pw = (string)($q->post['password'] ?? '');
         $bad = ['_form' => self::m('Wrong e-mail or password.', 'E-mail ou mot de passe incorrect.', 'البريد أو كلمة المرور غير صحيحة.')];
-        $teamMsg = self::m('Team members sign in with their @' . \W5D\StaffAuth::domain() . ' address and an e-mailed code: use the team sign-in page.', 'L’équipe se connecte avec son adresse @' . \W5D\StaffAuth::domain() . ' et un code reçu par e-mail : utilisez la page de connexion équipe.', 'يسجّل الفريق الدخول بعنوان @' . \W5D\StaffAuth::domain() . ' ورمز يصل بالبريد: استخدم صفحة دخول الفريق.');
+        $teamMsg = self::m('Team members sign in with their @' . \W5D\StaffAuth::domain() . ' address and a password or an e-mailed code: use the team sign-in page.', 'L’équipe se connecte avec son adresse @' . \W5D\StaffAuth::domain() . ' et un mot de passe ou un code reçu par e-mail : utilisez la page de connexion équipe.', 'يسجّل الفريق الدخول بعنوان @' . \W5D\StaffAuth::domain() . ' ورمز يصل بالبريد: استخدم صفحة دخول الفريق.');
         if ($id !== '' && \W5D\StaffAuth::isStaffEmail($id)) return self::bounce($q, $back, ['_form' => $teamMsg]); // no password path exists for team addresses; the sign-in URL is never printed here
         $email = mb_strtolower($id);
         if (!RateLimit::hit('acct-login-e:' . sha1($email), 8, 900)) return self::bounce($q, $back, ['_form' => self::m('Too many attempts. Try again later.', 'Trop de tentatives. Réessayez plus tard.', 'محاولات كثيرة. حاول لاحقا.')]);
@@ -227,7 +227,7 @@ final class Accounts
             if (!$u) { $id = Account::create($pr['email'], $pr['name'], null, 'user', true, lang()); $u = DB::one('SELECT * FROM users WHERE id = ?', [$id]); Affiliate::attach((int)$id); Affiliate::onVerified((int)$id); }
             elseif (!$u['email_verified_at']) { DB::q('UPDATE users SET email_verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$u['id']]); $u['email_verified_at'] = date('Y-m-d H:i:s'); }
             DB::q('INSERT OR IGNORE INTO social_accounts(user_id, provider, provider_uid, email) VALUES (?,?,?,?)', [$u['id'], $p, $pr['uid'], $pr['email']]);
-            if ($pr['avatar'] && !$u['avatar_url'] && preg_match('#^https://#', (string)$pr['avatar'])) DB::q('UPDATE users SET avatar_url = ? WHERE id = ?', [$pr['avatar'], $u['id']]);
+            // The provider's profile picture is deliberately NOT stored: nothing displays it (data minimisation, stated in the privacy policy).
         }
         Account::login($u, false);
         $n = Account::safeNext($pr['next'] ?? null);

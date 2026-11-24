@@ -254,7 +254,8 @@ final class Qcm
             $used[$pos] = 1;
             $q = $pos < count($stored) ? $stored[$pos] : QcmGen::question($slug, $level, $pos - count($stored) + 1);
             if (!$q) continue;
-            $key = !empty($q['gen']) ? QcmGen::concept($q) : $q['id'];
+            // one idea once per round, whether it comes from the stored bank or from the generated pool (a stored question and a generated one can say the same thing)
+            $key = QcmGen::concept($q);
             if (isset($seen[$key])) continue;
             $seen[$key] = 1;
             $ch = $q['choices']; shuffle($ch);

@@ -92,8 +92,9 @@ def pw_login(page, base, mount=MOUNT, email=None, root=ROOT):
     email = email or OWNER_EMAIL
     reset_rl(root)
     page.goto(base.rstrip('/') + mount + '/login/')
-    page.fill('input[name=email]', email)
-    page.click('form[data-once] button[type=submit]')
+    # the page offers a password form first and "send me a code instead" second: use the code form
+    page.fill('form:has(input[name=do][value=request]) input[name=email]', email)
+    page.click('form:has(input[name=do][value=request]) button[type=submit]')
     page.wait_for_load_state('load')
     code = None
     for _ in range(20):
@@ -109,6 +110,16 @@ def pw_login(page, base, mount=MOUNT, email=None, root=ROOT):
         page.wait_for_url(lambda u: '/login' not in u, timeout=4000)
     except Exception:
         if '/login' in page.url:
-            page.click('form[data-once] button[type=submit]')
+            page.click('form:has(input[name=do][value=verify]) button[type=submit]')
     page.wait_for_load_state('load')
     return '/login' not in page.url
+
+
+def password_login(base, email, password, root=ROOT, mount=MOUNT, client=None):
+    """Stdlib: sign in with the portal password form. Returns (client, status, headers, body)."""
+    base = base.rstrip('/')
+    reset_rl(root)
+    c = client or _client()
+    t = _csrf(c, base, mount + '/login/')
+    s, h, b = _call(c, base, 'POST', mount + '/login/', {'_csrf': t, 'do': 'password', 'email': email, 'password': password})
+    return c, s, h, b
