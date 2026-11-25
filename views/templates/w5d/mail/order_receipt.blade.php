@@ -8,6 +8,7 @@
   [tr3('Parts', 'Parts', 'الحصص'), $parts . ' × ' . $days],
   [tr3('Starts', 'Début', 'البدء'), $start],
   [tr3('Total of the schedule', 'Total du calendrier', 'مجموع الجدول'), number_format((float)$total, 2) . ' ' . $currency],
+  ...(!empty($fee) ? [[tr3('Transaction fee', 'Frais de transaction', 'رسوم العملية'), number_format((float)$fee, 2) . ' ' . $currency], [tr3('To pay', 'À payer', 'المبلغ المستحق'), number_format((float)($due ?? $total), 2) . ' ' . $currency]] : []),
 ]" />
 @if(!empty($method))
 <h2 class="t-main" style="font-size:18px;margin:24px 0 8px;color:#0f172a;">{{ tr3('Pay with', 'Payer avec', 'الدفع عبر') }} {{ $method_name }}</h2>
@@ -23,7 +24,7 @@
 @endif
 <x-mail-button :href="$pay_url" :label="tr3('Open the payment page', 'Ouvrir la page de paiement', 'افتح صفحة الدفع')" />
 @else
-<x-mail-note tone="info">{{ tr3('Demo mode: no payment is taken and no money moves.', 'Mode démo : aucun paiement n’est prélevé.', 'الوضع التجريبي: لا يُحصَّل أي دفع ولا تتحرك أموال.') }}</x-mail-note>
+<x-mail-note tone="info">{{ tr3('No payment was requested with this pledge. If payments open later, you will receive the amount and the steps before anything is charged.', 'Aucun paiement n’a été demandé avec cet engagement. Si les paiements ouvrent plus tard, vous recevrez le montant et les étapes avant tout prélèvement.', 'لم يُطلب أي دفع مع هذا الالتزام. إذا فُتح الدفع لاحقا ستصلك قيمة المبلغ والخطوات قبل أي خصم.') }}</x-mail-note>
 @endif
 @if(!empty($key))<x-mail-p>{{ tr3('Management key (shown once):', 'Clé de gestion (affichée une fois) :', 'مفتاح الإدارة (يظهر مرة واحدة):') }} <code dir="ltr" style="background:#eef2ff;color:#3730a3;padding:3px 8px;border-radius:6px;font-size:13px;">{{ $key }}</code></x-mail-p>@endif
 @endsection

@@ -387,14 +387,14 @@ final class Accounts
             $u = DB::one('SELECT id FROM users WHERE email = ?', [$o['email']]);
             $nm = Gateways::short($m);
             if ($u) Account::notify((int)$u['id'], tr3($nm . ' reference received', 'Référence ' . $nm . ' reçue', 'تم استلام مرجع ' . $nm), $p['ref'] . ' · ' . $txn, '/account/payments/');
-            Mail::staff($nm . ' payment to verify', ['payment' => $p['ref'], 'order' => $ref, 'amount' => number_format((float)$p['amount'], 2) . ' ' . $p['currency'], 'sender' => $gsm, 'txn' => $txn]);
+            Mail::staff($nm . ' payment to verify', ['payment' => $p['ref'], 'order' => $ref, 'amount' => number_format(Payments::due($p), 2) . ' ' . $p['currency'], 'fee' => number_format((float)$p['fee'], 2) . ' ' . $p['currency'] . ' (' . $p['fee_payer'] . ')', 'sender' => $gsm, 'txn' => $txn]);
             self::flash('ok', self::m('Thank you. An administrator will verify the transfer by hand and we will e-mail you.', 'Merci. Un administrateur vérifiera le virement manuellement et nous vous écrirons.', 'شكرا. سيتحقق مسؤول من التحويل يدويا وسنراسلك.'));
             return Response::redirect(url($back));
         }
         $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]);
         // A buyer who lands here while the provider has not yet confirmed (webhook still on its way) gets one look-up, rate-limited.
         if ($online && $p['status'] === 'pending' && $p['provider_ref'] && !empty($q->query['w']) && (!$p['checked_at'] || time() - (int)strtotime($p['checked_at'] . ' UTC') > 6)) { Payments::sync($p, 'pay-page'); $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]); }
-        return self::page($q, 'account.pay', ['title' => Gateways::short($m), 'o' => $o, 'p' => $p, 'm' => $m, 'online' => $online, 'ins' => $online ? null : Gateways::instructions($m, (float)$p['amount']), 'sig' => $sig, 'waiting' => $online && $p['status'] === 'pending' && !empty($q->query['w'])]);
+        return self::page($q, 'account.pay', ['title' => Gateways::short($m), 'o' => $o, 'p' => $p, 'm' => $m, 'online' => $online, 'ins' => $online ? null : Gateways::instructions($m, Payments::due($p)), 'sig' => $sig, 'waiting' => $online && $p['status'] === 'pending' && !empty($q->query['w'])]);
     }
 
     /* ======================= admin: D17 verification + user roles ======================= */

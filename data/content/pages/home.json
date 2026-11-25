@@ -419,9 +419,9 @@
         "ar": "احصل على حصتك الأولى **اليوم**."
       },
       "body": {
-        "en": "It takes three steps. In demo mode no money moves; your pledge and your reference are recorded.",
-        "fr": "Trois étapes suffisent. En mode démo, aucun mouvement d’argent n’a lieu ; votre engagement et votre référence sont enregistrés.",
-        "ar": "تتم العملية في ثلاث خطوات. في الوضع التجريبي، لا تُحوَّل أي أموال؛ ويُسجَّل تعهّدك والمرجع الخاص بك."
+        "en": "It takes three short steps: your details, your parts, then payment.",
+        "fr": "Trois courtes étapes : vos coordonnées, vos parts, puis le paiement.",
+        "ar": "ثلاث خطوات قصيرة: بياناتك، ثم حصصك، ثم الدفع."
       },
       "ctas": [
         {

@@ -1,9 +1,9 @@
 /** Mirrors the w5d template's inline tailwind.config (brand / ink palette, Inter + Space Grotesk). */
 module.exports = {
   darkMode: 'class',
-  content: ['../views/**/*.php', '../src/**/*.php', '../htdocs/assets/_base/js/site.js', '../data/content/**/*.json'],
+  content: ['../views/**/*.php', '../src/**/*.php', '../config/**/*.php', '../htdocs/assets/_base/js/*.js', '../data/content/**/*.json'],
   safelist: [
-    { pattern: /^(sm:|md:|lg:)?grid-cols-(1|2|3|4|5|6)$/ },{ pattern: /^(bg|text|border|from|to|via)-(emerald|rose|amber|sky|violet|cyan|indigo)-(300|400|500|600|700)(\/\d+)?$/ }],
+    { pattern: /^(sm:|md:|lg:)?grid-cols-(1|2|3|4|5|6)$/ },{ pattern: /^(bg|text|border|from|to|via)-(emerald|rose|amber|sky|violet|cyan|indigo)-(300|400|500|600|700)$/ }],
   theme: {
     extend: {
       colors: {

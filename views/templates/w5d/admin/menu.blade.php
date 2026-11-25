@@ -128,6 +128,7 @@
       @if($it['src'] === 'env')<p class="mt-2 text-xs text-slate-500">Currently read from the server .env. Saving here takes over from .env.</p>@endif
       @if(!empty($it['hook']))<p class="mt-3 text-xs">Webhook URL to register at the provider: <code class="font-mono select-all" dir="ltr">{{ $it['hook'] }}</code></p>@endif
       @if(!empty($it['note']))<p class="mt-2 text-xs text-amber-700 dark:text-amber-300">{{ $it['note'] }}</p>@endif
+      @if(!empty($it['fee_note']))<p class="mt-2 text-xs text-slate-600 dark:text-slate-300"><strong>Fees:</strong> {{ $it['fee_note'] }}</p>@endif
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         @foreach($it['fields'] as $f)
           @php $fid = 'f-' . $it['id'] . '-' . $f['k']; $nm = 'f[' . $it['id'] . '][' . $f['k'] . ']'; @endphp
@@ -141,7 +142,7 @@
               @if($f['is_set'])<label class="mt-1 flex items-center gap-2 text-xs text-slate-500"><input type="checkbox" name="clear[{{ $it['id'] }}][{{ $f['k'] }}]" value="1"> erase the stored value</label>@endif</div>
           @else
             <div><label for="{{ $fid }}" class="block text-sm font-medium mb-1">{{ $f['label'] }}@if(!empty($f['req'])) <span class="text-red-500" aria-hidden="true">*</span>@endif</label>
-              <input id="{{ $fid }}" type="{{ $f['t'] === 'int' ? 'number' : 'text' }}" name="{{ $nm }}" class="field" dir="ltr" value="{{ $f['value'] }}" maxlength="300" @if($f['t'] === 'int') min="{{ $f['min'] ?? 0 }}" max="{{ $f['max'] ?? '' }}" @endif @if(!empty($f['hint']))placeholder="{{ $f['hint'] }}"@endif spellcheck="false"></div>
+              <input id="{{ $fid }}" type="{{ $f['t'] === 'int' ? 'number' : 'text' }}" name="{{ $nm }}" class="field" dir="ltr" value="{{ $f['value'] }}" maxlength="300" @if($f['t'] === 'int') min="{{ $f['min'] ?? 0 }}" max="{{ $f['max'] ?? '' }}" @endif @if(in_array($f['t'], ['pct', 'dec'], true)) inputmode="decimal" pattern="[0-9]+([.,][0-9]{1,3})?" data-unit="{{ $f['t'] === 'pct' ? '%' : 'TND' }}" @endif @if(!empty($f['hint']))placeholder="{{ $f['hint'] }}"@endif spellcheck="false"></div>
           @endif
         @endforeach
       </div>

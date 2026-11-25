@@ -73,7 +73,7 @@ return [
     ],
     'msg' => [
         'thanks' => 'Thank you. Your request is recorded.', 'error' => 'Please correct the highlighted fields.', 'csrf' => 'Session expired. Reload and try again.',
-        'rate' => 'Too many attempts. Try again later.', 'demo' => 'Demo mode: no payment is taken. Your pledge is recorded and no money moves.',
+        'rate' => 'Too many attempts. Try again later.', 'pay_closed' => 'Payments are not open yet: your pledge is recorded and nothing is charged.',
         'dup_email' => 'This email is already registered.', 'invalid_email' => 'Enter a valid email address.', 'not_found' => 'We could not find that page.',
     ],
     'admin' => [
@@ -102,9 +102,9 @@ return [
         'amount' => 'Amount', 'date' => 'Date', 'phone' => 'Phone',
         'language' => 'Language', 'member_since' => 'Member since', 'verified' => 'E-mail confirmed',
         'not_verified' => 'E-mail not confirmed', 'pay_title' => 'Pay with D17 (Tunisia only)', 'pay_steps' => 'Send the amount by D17 to the number below, then enter the transaction reference. An administrator verifies it by hand.',
-        'pay_to' => 'Send to', 'pay_holder' => 'Account holder', 'pay_amount' => 'Amount',
+        'pay_to' => 'Send to', 'pay_holder' => 'Account holder', 'pay_fee' => 'Transaction fee', 'pay_fee_incl' => ':fee on top of the price of :price', 'pay_amount' => 'Amount',
         'pay_sender' => 'Your D17 number (+216…)', 'pay_txn' => 'D17 transaction reference', 'pay_submit' => 'I sent the payment',
-        'pay_status' => 'Payment status', 'pay_demo' => 'Order and payment are real records; no card is charged.', 'st_pending' => 'Waiting for verification',
+        'pay_status' => 'Payment status', 'st_pending' => 'Waiting for verification',
         'st_verified' => 'Verified', 'st_rejected' => 'Rejected', 'st_awaiting' => 'Awaiting payment',
         'sec_sessions' => 'Remember-me sessions', 'sec_password' => 'Change password', 'sec_tip' => 'Use a password you use nowhere else. Changing it signs out all remembered devices.',
         'none_orders' => 'You have no parts yet.', 'none_pays' => 'No payment recorded.', 'none_apps' => 'No application yet.',

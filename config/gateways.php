@@ -2,7 +2,7 @@
 /**
  * Payment methods. Everything here is owner-configurable in the portal (Payment methods menu); nothing is secret in this file.
  * kind: manual = the buyer sends money and a person verifies; online = hosted payment page + server-side verification.
- * Field types: bool | text | secret | select | int | url. A "req" field must be filled for the method to be offered.
+ * Field types: bool | text | secret | select | int | pct (0-100, up to 3 decimals) | dec (amount, up to 3 decimals) | url. A "req" field must be filled for the method to be offered.
  * Secrets are stored encrypted (src/Settings.php) and are never shown again after saving.
  */
 return [
@@ -14,7 +14,11 @@ return [
             ['k' => 'gsm', 't' => 'text', 'label' => 'D17 receiving number (+216…)', 'req' => true, 'pattern' => '/^\+?\d{8,15}$/'],
             ['k' => 'holder', 't' => 'text', 'label' => 'Account holder name', 'default' => 'W5D TECH'],
             ['k' => 'note', 't' => 'text', 'label' => 'Note shown to the buyer', 'default' => ''],
+            ['k' => 'fee_pct', 't' => 'pct', 'label' => 'Transaction fee (% of the amount)', 'default' => '1', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_fixed', 't' => 'dec', 'label' => 'Fixed fee per transaction (TND)', 'default' => '0', 'min' => 0, 'max' => 100],
+            ['k' => 'fee_payer', 't' => 'select', 'label' => 'Who bears the fee', 'options' => ['seller' => 'We absorb it (the buyer pays the published price)', 'buyer' => 'Added to the buyer total (we receive the full price)'], 'default' => 'seller'],
         ],
+        'fee_note' => 'Default 1 %. La Poste Tunisienne publishes a merchant tariff that can be lower (free for very small payments, about half a percent above a small threshold): confirm the rate in your own D17 merchant agreement and edit it here.',
     ],
     'bank' => [
         'name' => 'Bank transfer (RIB / IBAN)', 'kind' => 'manual', 'icon' => 'landmark',
@@ -25,7 +29,11 @@ return [
             ['k' => 'iban', 't' => 'text', 'label' => 'RIB / IBAN', 'req' => true, 'pattern' => '/^[A-Za-z0-9 ]{10,40}$/'],
             ['k' => 'bic', 't' => 'text', 'label' => 'BIC / SWIFT (optional)', 'pattern' => '/^[A-Za-z0-9]{0,11}$/'],
             ['k' => 'note', 't' => 'text', 'label' => 'Note shown to the buyer', 'default' => ''],
+            ['k' => 'fee_pct', 't' => 'pct', 'label' => 'Transaction fee (% of the amount)', 'default' => '0', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_fixed', 't' => 'dec', 'label' => 'Fixed fee per transaction (TND)', 'default' => '0', 'min' => 0, 'max' => 100],
+            ['k' => 'fee_payer', 't' => 'select', 'label' => 'Who bears the fee', 'options' => ['seller' => 'We absorb it (the buyer pays the published price)', 'buyer' => 'Added to the buyer total (we receive the full price)'], 'default' => 'seller'],
         ],
+        'fee_note' => 'Default 0: incoming transfers are normally free; the cost, if any, depends on your bank (check its tariff for incoming transfers).',
     ],
     'flouci' => [
         'name' => 'Flouci (business API)', 'kind' => 'online', 'icon' => 'wallet', 'currency' => 'TND', 'unit' => 'millimes',
@@ -38,7 +46,12 @@ return [
             ['k' => 'webhook_version', 't' => 'select', 'label' => 'Webhook format', 'options' => ['2' => '2 — signed JSON POST (recommended)', '1' => '1 — signed GET'], 'default' => '2'],
             ['k' => 'accept_card', 't' => 'bool', 'label' => 'Accept bank cards on the Flouci page', 'default' => '1'],
             ['k' => 'timeout', 't' => 'int', 'label' => 'Payment session timeout (seconds)', 'default' => '1200', 'min' => 120, 'max' => 86400],
+            ['k' => 'fee_pct', 't' => 'pct', 'label' => 'Transaction fee: Tunisian cards and wallets (% of the amount)', 'default' => '1.3', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_intl_pct', 't' => 'pct', 'label' => 'Transaction fee: international cards (% of the amount, information only)', 'default' => '3', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_fixed', 't' => 'dec', 'label' => 'Fixed fee per transaction (TND)', 'default' => '0', 'min' => 0, 'max' => 100],
+            ['k' => 'fee_payer', 't' => 'select', 'label' => 'Who bears the fee', 'options' => ['seller' => 'We absorb it (the buyer pays the published price)', 'buyer' => 'Added to the buyer total (we receive the full price)'], 'default' => 'seller'],
         ],
+        'fee_note' => 'Published by Flouci (business offer): 1.3 % excl. VAT for Tunisian cards and wallets, 3 % excl. VAT for international cards, no set-up fee. VAT is charged on top of the fee: check your contract.',
     ],
     'konnect' => [
         'name' => 'Konnect (wallet, card, e-DINAR)', 'kind' => 'online', 'icon' => 'credit-card', 'currency' => 'TND', 'unit' => 'millimes',
@@ -50,7 +63,12 @@ return [
             ['k' => 'wallet_id', 't' => 'text', 'label' => 'Receiver wallet ID', 'req' => true, 'pattern' => '/^[A-Za-z0-9_\-]{6,80}$/'],
             ['k' => 'base_url', 't' => 'url', 'label' => 'API base URL override (leave empty for the default of the environment)', 'default' => ''],
             ['k' => 'lifespan', 't' => 'int', 'label' => 'Payment lifespan (minutes)', 'default' => '20', 'min' => 5, 'max' => 1440],
+            ['k' => 'fee_pct', 't' => 'pct', 'label' => 'Transaction fee: Tunisian cards and wallets (% of the amount)', 'default' => '1.3', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_intl_pct', 't' => 'pct', 'label' => 'Transaction fee: international cards (% of the amount, information only)', 'default' => '2.9', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_fixed', 't' => 'dec', 'label' => 'Fixed fee per transaction (TND)', 'default' => '0', 'min' => 0, 'max' => 100],
+            ['k' => 'fee_payer', 't' => 'select', 'label' => 'Who bears the fee', 'options' => ['seller' => 'We absorb it (the buyer pays the published price)', 'buyer' => 'Added to the buyer total (we receive the full price)'], 'default' => 'seller'],
         ],
+        'fee_note' => 'Published by Konnect: 1.3 % for Tunisian cards and e-DINAR, 2.9 % for international cards, no subscription. Withdrawals to your bank carry a separate fee (about 2 TND per transfer) that is not a per-sale fee: check your Konnect dashboard.',
     ],
     'paymee' => [
         'name' => 'Paymee (wallet, card, e-DINAR)', 'kind' => 'online', 'icon' => 'banknote', 'currency' => 'TND', 'unit' => 'dinars',
@@ -61,6 +79,11 @@ return [
             ['k' => 'api_token', 't' => 'secret', 'label' => 'API token', 'req' => true],
             ['k' => 'vendor', 't' => 'text', 'label' => 'Vendor (account ID)', 'req' => true, 'pattern' => '/^[A-Za-z0-9_\-]{1,40}$/'],
             ['k' => 'base_url', 't' => 'url', 'label' => 'API base URL override (leave empty for the default of the environment)', 'default' => ''],
+            ['k' => 'fee_pct', 't' => 'pct', 'label' => 'Transaction fee: Tunisian cards and wallets (% of the amount)', 'default' => '1.9', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_intl_pct', 't' => 'pct', 'label' => 'Transaction fee: international cards (% of the amount, information only)', 'default' => '2.9', 'min' => 0, 'max' => 20],
+            ['k' => 'fee_fixed', 't' => 'dec', 'label' => 'Fixed fee per transaction (TND)', 'default' => '0', 'min' => 0, 'max' => 100],
+            ['k' => 'fee_payer', 't' => 'select', 'label' => 'Who bears the fee', 'options' => ['seller' => 'We absorb it (the buyer pays the published price)', 'buyer' => 'Added to the buyer total (we receive the full price)'], 'default' => 'seller'],
         ],
+        'fee_note' => 'Rates reported for Paymee in 2026: 1.9 % for Tunisian cards and e-DINAR, 2.9 % for international cards. These come from secondary sources: confirm them in your Paymee contract and edit here.',
     ],
 ];

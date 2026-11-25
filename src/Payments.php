@@ -16,6 +16,9 @@ final class Payments
     public static function holder(): string { return Gateways::cfg('d17', 'holder'); }
     public static function note(): string { return Gateways::cfg('d17', 'note'); }
 
+    /** What the buyer is asked to send for this payment row (published price, plus the fee when the buyer bears it). */
+    public static function due(array $p): float { return round((float)($p['charge'] ?? 0) > 0 ? (float)$p['charge'] : (float)$p['amount'], 2); }
+
     /** Any method the buyer can pick right now. */
     public static function methods(): array { return Gateways::enabledIds(); }
     public static function anyEnabled(): bool { return Gateways::any(); }
@@ -41,7 +44,8 @@ final class Payments
     public static function create(string $orderRef, int $investorId, float $amount, string $method = 'd17'): string
     {
         $ref = 'PAY-' . strtoupper(bin2hex(random_bytes(4)));
-        DB::insert('payments', ['ref' => $ref, 'order_ref' => $orderRef, 'investor_id' => $investorId, 'method' => $method, 'amount' => round($amount, 2), 'currency' => (string)Variables::get('money.currency', 'TND'), 'status' => 'pending']);
+        $f = Gateways::fee($method, $amount);   // snapshot: later changes of the owner's rates never rewrite an existing payment
+        DB::insert('payments', ['ref' => $ref, 'order_ref' => $orderRef, 'investor_id' => $investorId, 'method' => $method, 'amount' => round($amount, 2), 'fee' => $f['fee'], 'fee_payer' => $f['payer'], 'charge' => $f['charge'], 'currency' => (string)Variables::get('money.currency', 'TND'), 'status' => 'pending']);
         return $ref;
     }
 

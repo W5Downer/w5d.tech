@@ -23,8 +23,9 @@
           <dt class="text-slate-500">{{ $row[0] }}</dt><dd class="font-semibold" dir="auto">{{ $row[1] }}@if($row[2]) <button type="button" class="btn-link text-xs ms-2" data-copy-text="{{ $row[1] }}">{{ __('cta.copy') }}</button>@endif</dd>
           @endforeach
         @else
-          <dt class="text-slate-500">{{ __('acct.pay_amount') }}</dt><dd class="font-semibold">{{ number_format((float)$p['amount'], 2) }} {{ $p['currency'] }}</dd>
+          <dt class="text-slate-500">{{ __('acct.pay_amount') }}</dt><dd class="font-semibold">{{ number_format(\W5D\Payments::due($p), 2) }} {{ $p['currency'] }}</dd>
         @endif
+        @if($p['fee_payer'] === 'buyer' && (float)$p['fee'] > 0)<dt class="text-slate-500">{{ __('acct.pay_fee') }}</dt><dd>{{ __('acct.pay_fee_incl', ['fee' => number_format((float)$p['fee'], 2) . ' ' . $p['currency'], 'price' => number_format((float)$p['amount'], 2) . ' ' . $p['currency']]) }}</dd>@endif
         <dt class="text-slate-500">{{ __('acct.status') }}</dt><dd><span class="rounded-full px-2 py-0.5 text-xs {{ $stl }}">{{ $stx }}</span>@if($p['status'] === 'rejected' && $p['note']) <span class="text-xs">{{ $p['note'] }}</span>@endif</dd>
         @if(!$online && $p['txn_ref'])<dt class="text-slate-500">{{ __('acct.pay_txn') }}</dt><dd class="font-mono">{{ $p['txn_ref'] }}</dd>@endif
       </dl>

@@ -36,6 +36,38 @@ final class Gateways
     /** Short label for the buyer. */
     public static function short(string $id): string { return trim(explode('(', self::name($id))[0]); }
 
+    /* ---------------------------------------------------------------- transaction fees */
+
+    private static function num(string $id, string $k): float
+    {
+        $v = str_replace(',', '.', self::cfg($id, $k));
+        return is_numeric($v) ? max(0.0, (float)$v) : 0.0;
+    }
+
+    /**
+     * Fee for one transaction of $amount (the published price), from the owner's per-method variables.
+     * @return array{pct:float,fixed:float,fee:float,payer:string,charge:float,net:float}
+     *   fee = percent of the amount + fixed fee; charge = what the buyer pays; net = what we keep.
+     *   The provider's VAT on its fee is NOT modelled: it is in the provider contract, not in this app.
+     */
+    public static function fee(string $id, float $amount): array
+    {
+        $amount = round(max(0.0, $amount), 2);
+        $pct = self::num($id, 'fee_pct'); $fixed = self::num($id, 'fee_fixed');
+        $payer = self::cfg($id, 'fee_payer') === 'buyer' ? 'buyer' : 'seller';
+        $fee = $amount > 0 ? round($amount * $pct / 100 + $fixed, 2) : 0.0;
+        if ($payer === 'buyer') return ['pct' => $pct, 'fixed' => $fixed, 'fee' => $fee, 'payer' => $payer, 'charge' => round($amount + $fee, 2), 'net' => $amount];
+        return ['pct' => $pct, 'fixed' => $fixed, 'fee' => $fee, 'payer' => $payer, 'charge' => $amount, 'net' => round($amount - $fee, 2)];
+    }
+
+    /** Buyer-facing one-liner, e.g. "+ 1.00 TND fee (1 %)"; empty when the buyer pays nothing extra. */
+    public static function feeBuyerLine(string $id, float $amount): string
+    {
+        $f = self::fee($id, $amount);
+        if ($f['payer'] !== 'buyer' || $f['fee'] <= 0) return '';
+        return number_format($f['fee'], 2) . ' ' . (string)Variables::get('money.currency', 'TND');
+    }
+
     /** Rows shown to the buyer for a manual method: [label, value, copyable] */
     public static function instructions(string $id, float $amount): array
     {
@@ -83,7 +115,7 @@ final class Gateways
     {
         $fail = fn(string $why) => ['ok' => false, 'url' => null, 'ref' => null, 'error' => $why];
         if (!self::enabled($id) || !self::online($id)) return $fail('method not available');
-        $amount = round((float)$p['amount'], 2);
+        $amount = Payments::due($p);
         if ($amount <= 0 || $amount > 100000 || (string)$p['currency'] !== 'TND') return $fail('invalid amount or currency');
         $base = self::base($id); $pr = (string)$p['ref'];
         [$fn, $ln] = self::names((string)($buyer['name'] ?? ''));
@@ -140,7 +172,8 @@ final class Gateways
         $pref = (string)($p['provider_ref'] ?? '');
         if (!self::online($id) || $pref === '' || !self::enabled($id)) return $out('error', '', 'not verifiable');
         $base = self::base($id);
-        $expectMilli = self::millimes((float)$p['amount']);
+        $due = Payments::due($p);
+        $expectMilli = self::millimes($due);
         switch ($id) {
             case 'flouci':
                 $r = Http::request('GET', $base . '/api/v2/verify_payment/' . rawurlencode($pref), self::flouciAuth());
@@ -172,7 +205,7 @@ final class Gateways
                 $d = is_array($j['data'] ?? null) ? $j['data'] : null;
                 if ($r['status'] !== 200 || !$d) return $out('error', 'http ' . $r['status']);
                 if (!empty($d['payment_status'])) {
-                    if (isset($d['amount']) && is_numeric($d['amount']) && abs((float)$d['amount'] - round((float)$p['amount'], 2)) > 0.001) return $out('failed', 'paid', 'amount mismatch: got ' . $d['amount'] . ' expected ' . number_format((float)$p['amount'], 2, '.', ''));
+                    if (isset($d['amount']) && is_numeric($d['amount']) && abs((float)$d['amount'] - $due) > 0.001) return $out('failed', 'paid', 'amount mismatch: got ' . $d['amount'] . ' expected ' . number_format($due, 2, '.', ''));
                     return $out('paid', 'paid');
                 }
                 return $out('pending', 'unpaid');

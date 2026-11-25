@@ -128,9 +128,9 @@
     }
    ],
    "note": {
-    "en": "Demo mode: no payment is taken.",
-    "fr": "Mode démo : aucun paiement n’est effectué.",
-    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+    "en": "You see the full amount and any fee before you confirm.",
+    "fr": "Vous voyez le montant total et les frais éventuels avant de confirmer.",
+    "ar": "ترى المبلغ الكامل وأي رسوم قبل أن تؤكد."
    }
   }
  ]
