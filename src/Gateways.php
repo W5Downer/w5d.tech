@@ -68,18 +68,28 @@ final class Gateways
         return number_format($f['fee'], 2) . ' ' . (string)Variables::get('money.currency', 'TND');
     }
 
-    /** Rows shown to the buyer for a manual method: [label, value, copyable] */
+    /** Rows shown to the buyer for a manual method: [label, value, copyable]. Driven by the 'show' list in config/gateways.php. */
     public static function instructions(string $id, float $amount): array
     {
         $cur = (string)Variables::get('money.currency', 'TND');
         $rows = [];
-        if ($id === 'd17') $rows = [[tr3('Send to', 'Envoyer au', 'أرسل إلى'), self::cfg('d17', 'gsm'), true], [tr3('Account holder', 'Titulaire', 'صاحب الحساب'), self::cfg('d17', 'holder'), false]];
-        if ($id === 'bank') {
-            $rows = [[tr3('Bank', 'Banque', 'البنك'), self::cfg('bank', 'bank_name'), false], [tr3('Account holder', 'Titulaire', 'صاحب الحساب'), self::cfg('bank', 'holder'), false], [tr3('RIB / IBAN', 'RIB / IBAN', 'RIB / IBAN'), self::cfg('bank', 'iban'), true]];
-            if (self::cfg('bank', 'bic') !== '') $rows[] = ['BIC / SWIFT', self::cfg('bank', 'bic'), true];
-        }
+        foreach ((self::def($id)['show'] ?? []) as [$label, $key, $copy]) $rows[] = [is_array($label) ? t($label) : (string)$label, self::cfg($id, (string)$key), (bool)$copy];
         $rows[] = [tr3('Amount', 'Montant', 'المبلغ'), number_format($amount, 2) . ' ' . $cur, false];
         return ['rows' => array_values(array_filter($rows, fn($r) => $r[1] !== '')), 'note' => self::cfg($id, 'note')];
+    }
+
+    /** Does this manual method identify the sender by a Tunisian phone number (wallets) or by a free name/account (bank, postal)? */
+    public static function senderIsPhone(string $id): bool { return (self::def($id)['sender'] ?? 'name') === 'gsm'; }
+
+    /** Manual methods the buyer can pick right now. */
+    public static function manualIds(): array { return array_values(array_filter(self::enabledIds(), fn($i) => !self::online($i))); }
+
+    /** Step-by-step guide (what / owner / buyer / check) in the current language, or null. */
+    public static function guide(string $id): ?array
+    {
+        $g = self::def($id)['guide'] ?? null;
+        if (!$g) return null;
+        return ['what' => t($g['what']), 'owner' => array_map('t', $g['owner']), 'buyer' => array_map('t', $g['buyer']), 'check' => t($g['check'])];
     }
 
     /* ---------------------------------------------------------------- helpers */

@@ -381,18 +381,18 @@
   /* ---------- live price quote (calls the same published function through /api/quote) ---------- */
   $$('[data-quote]').forEach(function (box) {
     var form = box.closest('form') || document, out = {
-      unit: $('[data-q-unit]', box), total: $('[data-q-total]', box), rows: $('[data-q-rows]', box), note: $('[data-q-note]', box)
+      unit: $$('[data-q-unit]', box), total: $$('[data-q-total]', box), rows: $('[data-q-rows]', box), note: $('[data-q-note]', box)
     };
     var timer;
     function fmt(n) { return Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
-    function read(n, d) { var f = form.querySelector('[name="' + n + '"]'); return f ? f.value : d; }
+    function read(n, d) { var f = form.querySelector('[name="' + n + '"]:checked') || form.querySelector('[name="' + n + '"]'); return f ? f.value : d; }
     function refresh() {
       var q = new URLSearchParams({ parts: read('parts_per_day', 1), days: read('days', 30), start: read('start_on', ''), cadence: read('cadence', 'daily') });
       fetch(box.getAttribute('data-quote') + '?' + q.toString(), { headers: { Accept: 'application/json' } })
         .then(function (r) { return r.json(); })
         .then(function (j) {
-          if (out.unit) out.unit.textContent = fmt(j.today.unit) + ' ' + j.currency;
-          if (out.total) out.total.textContent = fmt(j.schedule.total) + ' ' + j.currency;
+          out.unit.forEach(function (el) { el.textContent = fmt(j.today.unit) + ' ' + j.currency; });
+          out.total.forEach(function (el) { el.textContent = fmt(j.schedule.total) + ' ' + j.currency; });
           if (out.rows) {
             var h = '', rows = j.schedule.rows, show = rows.length > 14 ? rows.slice(0, 7).concat([null], rows.slice(-6)) : rows;
             show.forEach(function (r) {
@@ -402,18 +402,52 @@
             out.rows.innerHTML = h;
           }
           if (out.note) out.note.textContent = 'p = ' + j.p + ' · t(today) = ' + j.t;
+          document.dispatchEvent(new CustomEvent('quote:update', { detail: { total: j.schedule.total, currency: j.currency } }));
         }).catch(function () {});
     }
-    $$('input,select', form).forEach(function (f) { f.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(refresh, 200); }); });
+    $$('input,select', form).forEach(function (f) { f.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(refresh, 200); }); f.addEventListener('change', function () { clearTimeout(timer); timer = setTimeout(refresh, 200); }); });
     refresh();
+  });
+
+  /* ---------- quick-pick buttons: <button data-set="field=value"> fills a field and refreshes the quote ---------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-set]') : null;
+    if (!b) return;
+    var kv = b.getAttribute('data-set').split('='), f = document.querySelector('[name="' + kv[0] + '"]');
+    if (!f) return;
+    f.value = kv[1]; f.dispatchEvent(new Event('input', { bubbles: true })); f.dispatchEvent(new Event('change', { bubbles: true }));
+  });
+
+  /* ---------- payment cards: show the fee of the selected method on the live total ---------- */
+  $$('[data-paybox]').forEach(function (box) {
+    var total = 0, cur = 'TND';
+    function fmt(n) { return Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+    function paint() {
+      var sel = box.querySelector('input[name="payment_method"]:checked');
+      $$('[data-pm-fee]', box).forEach(function (el) {
+        var c = el.closest('.pm-card'), pct = parseFloat(c.getAttribute('data-fee-pct') || '0'), fx = parseFloat(c.getAttribute('data-fee-fixed') || '0');
+        var fee = total > 0 ? Math.round((total * pct / 100 + fx) * 100) / 100 : 0;
+        if (c.getAttribute('data-fee-payer') === 'buyer' && fee > 0) el.textContent = el.getAttribute('data-t-buyer').replace('%s', fmt(fee) + ' ' + cur);
+        else el.textContent = el.getAttribute('data-t-none');
+      });
+      var due = total, fee2 = 0;
+      if (sel) { var c2 = sel.closest('.pm-card'); if (c2 && c2.getAttribute('data-fee-payer') === 'buyer' && total > 0) { fee2 = Math.round((total * parseFloat(c2.getAttribute('data-fee-pct') || '0') / 100 + parseFloat(c2.getAttribute('data-fee-fixed') || '0')) * 100) / 100; due = total + fee2; } }
+      $$('[data-pay-fee]').forEach(function (el) { el.textContent = fee2 > 0 ? fmt(fee2) + ' ' + cur : '—'; });
+      $$('[data-pay-due]').forEach(function (el) { el.textContent = total > 0 ? fmt(due) + ' ' + cur : '—'; });
+    }
+    document.addEventListener('quote:update', function (e) { total = e.detail.total; cur = e.detail.currency; paint(); });
+    box.addEventListener('change', paint);
+    paint();
   });
 
   /* ---------- review mirror (wizard final step shows the typed values) ---------- */
   document.addEventListener('wizard:review', function () {
     $$('[data-mirror]').forEach(function (el) {
-      var f = document.querySelector('[name="' + el.getAttribute('data-mirror') + '"]');
+      var n = el.getAttribute('data-mirror'), f = document.querySelector('[name="' + n + '"]:checked') || document.querySelector('[name="' + n + '"]');
       if (!f) return;
-      el.textContent = f.tagName === 'SELECT' ? f.options[f.selectedIndex].text : f.value;
+      if (f.tagName === 'SELECT') el.textContent = f.options[f.selectedIndex].text;
+      else if (f.type === 'radio') { var l = f.closest('label'); el.textContent = l ? l.textContent.trim() : f.value; }
+      else el.textContent = f.value;
     });
   });
 

@@ -39,9 +39,13 @@
         @if($p['provider_ref'] && $p['status'] === 'pending')<button type="submit" name="do" value="check" class="btn-ghost w-full">{{ __('acct.pay_recheck') }}</button>@endif
       </form>
       @elseif($p['status'] !== 'verified')
+      @php $gd0 = \W5D\Gateways::guide($m); @endphp
+      @if($gd0)<details class="mt-6 rounded-xl border border-slate-200 dark:border-white/10 p-4 text-sm" open><summary class="cursor-pointer font-semibold">{{ tr3('How to pay, step by step', 'Comment payer, pas à pas', 'كيف تدفع خطوة بخطوة') }}</summary>
+        <ol class="mt-3 list-decimal ps-5 space-y-1">@foreach($gd0['buyer'] as $st)<li>{{ $st }}</li>@endforeach</ol></details>@endif
       <form method="post" action="{{ url('/pay/' . $o['ref'] . '/') . '?s=' . $sig }}" class="mt-6 space-y-4" novalidate>
         {!! csrf_field() !!}<input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
-        <x-form-field name="sender_gsm" :label="$m === 'd17' ? __('acct.pay_sender') : tr3('Sender name or account', 'Nom ou compte de l’émetteur', 'اسم أو حساب المرسل')" :type="$m === 'd17' ? 'tel' : 'text'" :required="true" :value="$p['sender_gsm'] ?? ($m === 'd17' ? ($o['phone'] ?? '') : '')" :errors="$errors" />
+        @php $isPhone = \W5D\Gateways::senderIsPhone($m); $gd = \W5D\Gateways::guide($m); @endphp
+        <x-form-field name="sender_gsm" :label="$isPhone ? __('acct.pay_sender') : tr3('Sender name or account', 'Nom ou compte de l’émetteur', 'اسم أو حساب المرسل')" :type="$isPhone ? 'tel' : 'text'" :required="true" :value="$p['sender_gsm'] ?? ($isPhone ? ($o['phone'] ?? '') : '')" :errors="$errors" />
         <x-form-field name="txn_ref" :label="__('acct.pay_txn')" :required="true" :value="$p['txn_ref'] ?? ''" :errors="$errors" />
         <button type="submit" class="btn-peak w-full">{{ __('acct.pay_submit') }}</button>
       </form>

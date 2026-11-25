@@ -13,9 +13,7 @@
 @if(!empty($method))
 <h2 class="t-main" style="font-size:18px;margin:24px 0 8px;color:#0f172a;">{{ tr3('Pay with', 'Payer avec', 'الدفع عبر') }} {{ $method_name }}</h2>
 @if(!empty($manual))
-@if(!empty($d17))
-<x-mail-p>{{ tr3('Send', 'Envoyez', 'أرسل') }} <strong>{{ number_format((float)$d17['amount'], 2) }} {{ $currency }}</strong> {{ tr3('by D17 to', 'par D17 au', 'عبر D17 إلى الرقم') }} <strong dir="ltr">{{ $d17['gsm'] }}</strong>@if(!empty($d17['name'])) ({{ $d17['name'] }})@endif.</x-mail-p>
-@elseif(!empty($manual_rows))
+@if(!empty($manual_rows))
 <x-mail-box :rows="array_map(fn($r) => [$r[0], $r[1]], $manual_rows)" />
 @endif
 <x-mail-note tone="info">{{ tr3('Then enter your transaction reference on the payment page. An administrator verifies it by hand; your pledge stays “awaiting verification” until then.', 'Saisissez ensuite votre référence de transaction sur la page de paiement. Un administrateur la vérifie manuellement ; votre engagement reste « en attente de vérification » d’ici là.', 'ثم أدخل مرجع عمليتك في صفحة الدفع. يتحقق منها مسؤول يدويا؛ ويبقى التزامك «بانتظار التحقق» حتى ذلك الحين.') }}</x-mail-note>

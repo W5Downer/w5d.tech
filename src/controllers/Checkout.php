@@ -72,10 +72,9 @@ final class Checkout
         $kind = Forms::str($in, 'kind', 20) === 'company' ? 'company' : 'individual';
         $method = (string)($in['payment_method'] ?? '');
         if ($method !== '' && !Gateways::enabled($method)) { $e['payment_method'] = Forms::err('This payment method is not available right now.', 'Ce moyen de paiement n’est pas disponible pour le moment.', 'وسيلة الدفع هذه غير متاحة حاليا.'); $method = ''; }
-        $d17 = $method === 'd17';
         if ($method !== '' && (Gateways::def($method)['tn_only'] ?? false)) {
             $gsm = Payments::tnGsm(Forms::str($in, 'phone', 40));
-            if (!$gsm) $e['phone'] = Forms::err('D17 is for Tunisian numbers only: give a +216 phone number.', 'D17 est réservé aux numéros tunisiens : indiquez un numéro +216.', 'D17 للأرقام التونسية فقط: أدخل رقم هاتف +216.');
+            if (!$gsm) $e['phone'] = Forms::err('This payment method is for Tunisian phone numbers only: give a +216 number.', 'Ce moyen de paiement est réservé aux numéros tunisiens : indiquez un numéro +216.', 'وسيلة الدفع هذه للأرقام التونسية فقط: أدخل رقم هاتف +216.');
         }
         if ($e) return ['ok' => false, 'errors' => $e];
 
@@ -109,9 +108,9 @@ final class Checkout
         Mail::send($mailTo, 'order_receipt', [
             'name' => Forms::str($in, 'full_name', 120), 'ref' => $ref, 'parts' => $parts, 'days' => $days, 'start' => $start->format('Y-m-d'),
             'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'key' => $token,
-            'd17' => $d17 ? Payments::instructions((float)($fee['charge'] ?? $q['schedule']['total'])) : null, 'pay_url' => $method !== '' ? Payments::absLink($ref) : null,
+            'pay_url' => $method !== '' ? Payments::absLink($ref) : null,
             'fee' => $fee && $fee['payer'] === 'buyer' ? $fee['fee'] : 0, 'due' => $fee ? $fee['charge'] : (float)$q['schedule']['total'],
-            'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => $method === 'bank' ? Gateways::instructions('bank', (float)($fee['charge'] ?? $q['schedule']['total']))['rows'] : [],
+            'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => ($method !== '' && !Gateways::online($method)) ? Gateways::instructions($method, (float)($fee['charge'] ?? $q['schedule']['total']))['rows'] : [],
         ], lang());
         if ($method !== '') Mail::staff('New order · ' . Gateways::short($method), ['order' => $ref, 'payment' => $payRef, 'amount' => number_format((float)$q['schedule']['total'], 2) . ' ' . $q['currency']]);
         return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'none: pledge recorded, no payment method chosen' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'fee' => $fee['fee'] ?? 0, 'fee_payer' => $fee['payer'] ?? null, 'amount_due' => $fee['charge'] ?? $q['schedule']['total'], 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'pay_url' => $payUrl, 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];

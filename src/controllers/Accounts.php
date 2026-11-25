@@ -371,9 +371,9 @@ final class Accounts
             }
             $e = [];
             $gsm = null;
-            if ($m === 'd17') {
+            if (Gateways::senderIsPhone($m)) {
                 $gsm = Payments::tnGsm((string)($q->post['sender_gsm'] ?? ''));
-                if (!$gsm) $e['sender_gsm'] = self::m('D17 is for Tunisian numbers only: use +216 followed by 8 digits.', 'D17 est réservé aux numéros tunisiens : +216 suivi de 8 chiffres.', 'D17 للأرقام التونسية فقط: +216 متبوعا بـ 8 أرقام.');
+                if (!$gsm) $e['sender_gsm'] = self::m('This wallet is for Tunisian numbers only: use +216 followed by 8 digits.', 'Ce portefeuille est réservé aux numéros tunisiens : +216 suivi de 8 chiffres.', 'هذه المحفظة للأرقام التونسية فقط: +216 متبوعا بـ 8 أرقام.');
             } else {
                 $gsm = mb_substr(trim((string)($q->post['sender_gsm'] ?? '')), 0, 60);
                 if ($gsm === '') $e['sender_gsm'] = self::m('Enter the name or account of the sender.', 'Saisissez le nom ou le compte de l’émetteur.', 'أدخل اسم أو حساب المرسل.');

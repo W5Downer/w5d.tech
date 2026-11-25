@@ -70,6 +70,7 @@
     @yield('content')
   @endauth
   <script src="{{ asset('js/site.js') }}" defer></script>
+  <script src="{{ asset('js/forms.js') }}" defer></script>
   <script src="{{ asset('js/portal.js') }}" defer></script>
   @include('partials.integrations')
 </body>
