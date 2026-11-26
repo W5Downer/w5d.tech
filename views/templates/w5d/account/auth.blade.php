@@ -61,7 +61,7 @@
         <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ __('acct.no_account') }} <a class="btn-link" href="{{ url('/account/register/') . $nextQ }}">{{ __('acct.register') }}</a></p>
 
       @elseif($mode === 'register')
-        <form method="post" action="{{ url('/account/register/') . $nextQ }}" class="mt-6 space-y-4" novalidate>
+        <form method="post" action="{{ url('/account/register/') . $nextQ }}" data-draft="register" class="mt-6 space-y-4" novalidate>
           {!! csrf_field() !!}
           <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
           {!! \W5D\Integrations::field() !!}
