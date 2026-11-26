@@ -7,7 +7,7 @@ placeholder for each image and write docs/card-image-prompts.md (one prompt per 
 
 Indices are stable: a card key that already exists in data/cards/manifest.json keeps its indices; new
 cards get the next free index. Replace a placeholder by dropping a real image with the same file name
-(htdocs/assets/_base/images/cards/img-NNNN.jpg, 1280x720 recommended, 16:9).
+(htdocs/assets/_base/images/cards/img-NNNN.webp, 1280x720 recommended, 16:9).
 """
 import glob, json, os, re, sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -155,7 +155,9 @@ def draw(idx, key, c, k, n):
         tile = Image.new('RGBA', (58, 58), (0, 0, 0, 0)); td = ImageDraw.Draw(tile)
         td.rounded_rectangle([0, 0, 57, 57], radius=14, fill=(255, 255, 255, 235)); tile.alpha_composite(lg, (6, 6))
         im.alpha_composite(tile, (W - 78, 16))
-    im.convert('RGB').save(f'{OUT}/img-{idx:04d}.jpg', quality=72, optimize=True, progressive=True)
+    rgb = im.convert('RGB')
+    rgb.save(f'{OUT}/img-{idx:04d}.webp', 'WEBP', quality=74, method=6)
+    rgb.resize((320, 180), Image.LANCZOS).save(f'{OUT}/img-{idx:04d}-320.webp', 'WEBP', quality=72, method=6)
 
 
 PART = 50                                   # images per prompts file: ~40 KB, small enough for any viewer or editor preview
@@ -188,14 +190,14 @@ def write_md(man):
         for idx, key, c, k, n, prompt in items:
             car = f' · image {k + 1} of {n}' if n > 1 else ''
             L += [f'## IMG-{idx:04d} · {c["title"]}{car}', '',
-                  f'- Card key: `{key}` ({c["kind"]}, {c["page"]} page)', f'- File: `htdocs/assets/_base/images/cards/img-{idx:04d}.jpg`',
+                  f'- Card key: `{key}` ({c["kind"]}, {c["page"]} page)', f'- File: `htdocs/assets/_base/images/cards/img-{idx:04d}.webp`',
                   '- Prompt:', '', '```text', prompt, '```', '']
         with open(f'{MD_DIR}/{part_name(first)}', 'w', encoding='utf8') as f: f.write('\n'.join(L))
     used = {r[0] for r in rows}
     retired = [i for i in range(1, max(used) + 1) if i not in used]
     I = ['# Card image prompts', '',
          'Every card element on the site has one image (or a small carousel). The files in `htdocs/assets/_base/images/cards/` are',
-         'indexed **placeholders** (`img-NNNN.jpg`, 640x360). To replace one, generate an image from its prompt and save it under the same',
+         'indexed **placeholders** (`img-NNNN.webp`, 640x360). To replace one, generate an image from its prompt and save it under the same',
          'file name (1280x720 JPEG recommended). The index is stable: it never changes when other cards are added.', '',
          'The prompts are split into small files by index range so that no single document is too long to open or to preview in full.',
          'Regenerate everything (placeholders, manifest, these files) with `python3 tools/gen/card_images.py`.', '',
@@ -232,7 +234,7 @@ def main():
     man = build_manifest(cards)
     if '--check' in sys.argv:
         cur = load(MANIFEST) if os.path.exists(MANIFEST) else {}
-        ok = cur == man and check_md(man) and all(os.path.exists(f'{OUT}/img-{i["index"]:04d}.jpg') for c in man['cards'].values() for i in c['images'])
+        ok = cur == man and check_md(man) and all(os.path.exists(f'{OUT}/img-{i["index"]:04d}.webp') for c in man['cards'].values() for i in c['images'])
         print('cards manifest up to date' if ok else 'cards manifest OUT OF DATE: run python3 tools/gen/card_images.py')
         sys.exit(0 if ok else 1)
     os.makedirs(OUT, exist_ok=True); os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
