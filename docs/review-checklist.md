@@ -50,6 +50,7 @@ Extends `docs/LEGAL-REVIEW.md`. Items added or touched in this round:
 | C5 | Billing with real money | Tests use a local gateway stub and manual-method fixtures; real provider fees, refunds, tax and the legal text on invoices need the owner and an accountant | Issue one small invoice to yourself, pay it with each enabled method, check the e-mail, the invoice page and the audit log; then keep plans and fees switched off until the accountant agrees |
 | C6 | Image library on the real host | Tests run with the local PHP build | Upload one picture and one small ZIP in the portal Images screen; if it says WebP is unavailable, ask the host to enable `gd` with WebP and `zip` (see System) |
 | C7 | `bin/install.php` on the real host | Only run against throw-away folders here | Follow the first-upload track of the Setup guide on the server and keep the installer output |
+| C8 | Browser installer (`/install/`) and `CRON_MODE=web` / `request` on the real host | Run only against a local PHP server and a throw-away copy; shared hosts differ (sessions, file ownership, `fastcgi_finish_request`, outside-timer reachability) | On a staging copy of the real host: finish the wizard, delete the installer files with the button (or by hand), check `php bin/preflight.php`, then confirm each job in `php bin/cron.php --status` / System runs under your chosen mode |
 
 ## Sign-off
 

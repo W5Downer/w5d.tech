@@ -41,7 +41,16 @@ foreach (['storage', 'storage/logs', 'storage/sessions', 'storage/framework/view
 }
 try { DB::available() ? $add('OK', 'database', $get('DB_DRIVER', 'sqlite') . ' reachable, ' . count(DB::all("SELECT name FROM sqlite_master WHERE type='table'")) . ' tables') : $add('FAIL', 'database', 'not reachable'); }
 catch (Throwable $e) { $add('FAIL', 'database', $e->getMessage()); }
-foreach (['pdo_sqlite', 'mbstring', 'json', 'openssl', 'curl'] as $x) extension_loaded($x) ? null : $add('FAIL', "php ext $x", 'missing');
+foreach (\W5D\SysCheck::requirements(null, false, false) as $r) { // same report as the browser installer (sodium, ctype, session, filter included)
+    if ($r['group'] === 'ext' && !$r['ok']) $add('FAIL', 'php ext ' . $r['name'], $r['detail']);
+}
+// Scheduled jobs: one crontab line, or CRON_MODE=web (outside pinger), or CRON_MODE=request (no cron at all).
+$cm = \W5D\Cron::mode();
+if ($cm === 'web' && strlen(\W5D\Cron::token()) < 24) $add('FAIL', 'CRON_TOKEN', 'CRON_MODE=web needs CRON_TOKEN of at least 24 characters (make one: php bin/cron.php --token)');
+$cs = \W5D\Cron::status();
+$add($cs['level'] === 'ok' ? 'OK' : 'WARN', 'scheduled jobs', 'CRON_MODE=' . $cm . ': ' . $cs['text'] . ($cs['level'] === 'ok' ? '' : ($cm === 'system' ? ' (crontab line: */5 * * * * php ' . ROOT . '/bin/cron.php)' : '')));
+// Installer files must not stay on a live server.
+foreach (\W5D\SysCheck::installerFiles() as $f) $add('WARN', 'installer file', $f . ' is still on the server: delete it now that the site is installed (rm -r ' . ROOT . '/' . rtrim($f, '/') . ')');
 // Owner image library (menu "Image library"): GD with WebP converts pictures, zip reads ZIP uploads. Missing = the tool says so; the public site is unaffected.
 \W5D\Images::gdOk() ? $add('OK', 'php ext gd (WebP)', 'image library can convert pictures') : $add('WARN', 'php ext gd (WebP)', 'missing: the owner image library cannot convert pictures until the host enables gd with WebP');
 \W5D\Images::zipOk() ? $add('OK', 'php ext zip', 'ZIP uploads work') : $add('WARN', 'php ext zip', 'missing: ZIP uploads are disabled (single pictures still work)');

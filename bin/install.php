@@ -7,6 +7,7 @@ declare(strict_types=1);
  *   php bin/install.php --check                 read-only: report what is missing, change nothing
  *   php bin/install.php --yes --url=https://example.org --owner=owner@example.org [--mount=my-secret-path] [--domain=example.org]
  *                                               non-interactive (CI, provisioning scripts)
+ *   ... add --cron=system|web|request to choose how scheduled jobs run (default system; web = outside pinger + secret URL; request = no cron at all)
  *   php bin/install.php --force-env             rebuild .env from .env.example (the old one is kept as .env.bak-<time>)
  *
  * What it does (each step prints OK / WARN / FAIL and is safe to repeat):
@@ -67,12 +68,12 @@ echo "Project folder: $root\n";
 /* ---------------------------------------------------------------- 1. PHP and extensions */
 $head('1. PHP and extensions');
 PHP_VERSION_ID >= 80400 ? $say('OK', 'PHP', PHP_VERSION) : $say('FAIL', 'PHP', PHP_VERSION . ' is too old: 8.4 or newer is required (ask the host to select PHP 8.4 for this site and for the command line)');
-foreach (['pdo_sqlite' => 'database', 'mbstring' => 'text', 'json' => 'data', 'openssl' => 'encryption and signing', 'curl' => 'payment providers and OAuth'] as $x => $why) {
-    extension_loaded($x) ? $say('OK', "ext $x", $why) : $say('FAIL', "ext $x", "missing ($why): enable it in the hosting panel or php.ini");
+if (!defined('ROOT')) define('ROOT', $root);
+require_once $root . '/src/SysCheck.php'; // the same report the browser installer shows
+foreach (\W5D\SysCheck::requirements(null, false, false) as $r) {
+    if (in_array($r['group'], ['dir', 'file', 'php'], true)) continue; // PHP version above, folders in step 2, .env in step 3
+    $r['ok'] ? $say('OK', $r['name'], $r['detail']) : $say($r['need'] === 'required' ? 'FAIL' : 'WARN', $r['name'], $r['detail']);
 }
-extension_loaded('gd') && function_exists('imagewebp') ? $say('OK', 'ext gd (WebP)', 'owner image library can convert pictures') : $say('WARN', 'ext gd (WebP)', 'missing: the image library cannot convert pictures; the public site is unaffected');
-extension_loaded('zip') ? $say('OK', 'ext zip', 'ZIP uploads work') : $say('WARN', 'ext zip', 'missing: ZIP uploads are disabled; single pictures still work');
-defined('PASSWORD_ARGON2ID') ? $say('OK', 'Argon2id', 'available for password hashes') : $say('WARN', 'Argon2id', 'not compiled in: hashes fall back to bcrypt (still safe)');
 is_file($root . '/htdocs/index.php') ? $say('OK', 'htdocs/index.php', 'front controller found') : $say('FAIL', 'htdocs/index.php', 'missing: was the upload complete?');
 if ($fails) { echo "\nFix the FAIL lines above, then run this command again.\n"; exit(1); }
 
@@ -123,6 +124,11 @@ if (is_file($envFile) && !isset($opt['force-env'])) {
     if ($mount === '') { $mount = 'p-' . bin2hex(random_bytes(6)); $generatedMount = $mount; }
     if (!preg_match('/^[A-Za-z0-9_\-]{6,60}$/', $mount) || in_array(strtolower($mount), ['admin', 'panel', 'panel-admin', 'dashboard'], true)) { $say('FAIL', 'ADMIN_URL_PATH', 'use 6-60 letters/digits/-/_ and not admin, panel or dashboard'); exit(1); }
 
+    $cronMode = strtolower((string)($opt['cron'] ?? 'system'));
+    if (!in_array($cronMode, ['system', 'web', 'request'], true)) { $say('FAIL', '--cron', 'use system, web or request (see docs/INSTALL.md, "No cron on this host")'); exit(1); }
+    $cronToken = $cronMode === 'web' ? bin2hex(random_bytes(20)) : '';
+    foreach (['CRON_MODE' => $cronMode, 'CRON_TOKEN' => $cronToken] as $k => $v) $envText = $setEnv($envText, $k, $v);
+
     foreach (['APP_ENV' => 'production', 'APP_URL' => $url, 'OWNER_EMAIL' => $owner, 'STAFF_EMAIL_DOMAIN' => $domain, 'ADMIN_URL_PATH' => $mount,
               'CONTACT_EMAIL' => $owner, 'SEO_ORG_EMAIL' => $owner, 'MAIL_REPLY_TO' => $owner, 'MAIL_FROM_ADDRESS' => 'no-reply@' . $domain, 'PAYMENT_MODE' => 'demo'] as $k => $v) $envText = $setEnv($envText, $k, $v);
 
@@ -160,6 +166,11 @@ if ($check) {
     $dbf = "$root/storage/w5d.sqlite"; if (is_file($dbf)) @chmod($dbf, 0600);
 }
 
+if (!$check && is_file($envFile) && $fails === 0 && !is_file("$root/storage/installed.lock")) { // same lock the browser installer writes: /install/ stays closed
+    @file_put_contents("$root/storage/installed.lock", 'installed ' . date('c') . " by bin/install.php\\n");
+    @chmod("$root/storage/installed.lock", 0600);
+}
+
 /* ---------------------------------------------------------------- 6. caches + preflight */
 $head('5. View cache and preflight');
 if (!$check && is_file($envFile)) {
@@ -181,17 +192,22 @@ echo "  2. Turn HTTPS on for the domain (the site refuses to behave as productio
 echo "  3. Portal address (write it down, share it only with the team):  $urlShown/$mountShown/\n";
 echo "  4. In .env set MAIL_DRIVER=smtp and the SMTP values, then:  php bin/mail.php test you@your-domain en all\n";
 echo "     Until mail really sends, nobody can receive a sign-in code. Break-glass from this shell:  php bin/staff-code.php $" . "OWNER_EMAIL\n";
-echo "  5. Add these cron lines (crontab -e; replace the php path if your host uses another):\n";
-$cron = [
-    ['*/10 * * * *', 'bin/payments-sync.php', 'recheck online payments that stayed pending'],
-    ['15 6 * * *', 'bin/billing.php', 'renewal invoices, grace periods'],
-    ['5 * * * *', 'bin/rollup.php', 'dashboard figures'],
-    ['30 3 * * *', 'bin/backup.php', 'consistent database snapshot: ship storage/backups/latest.sqlite off the server'],
-    ['45 3 * * 0', 'bin/archive.php', 'weekly clean-up'],
-    ['*/15 * * * *', 'bin/health.php', 'storage thresholds'],
-];
-foreach ($cron as [$when, $script, $why]) printf("       %-13s %s %s/%s   # %s\n", $when, $php, $root, $script, $why);
+$cronNow = preg_match('/^CRON_MODE=(\w+)/m', (string)$envText, $cm) ? $cm[1] : 'system';
+echo "  5. Scheduled jobs (payments sync, billing, rollup, backup, archive, health): ONE line is enough.\n";
+if ($cronNow === 'web') {
+    $tok = preg_match('/^CRON_TOKEN=(\S+)/m', (string)$envText, $ct) ? trim($ct[1], "'\" ") : '<CRON_TOKEN>';
+    echo "     CRON_MODE=web: have a free outside timer (cron-job.org, UptimeRobot, ...) open this address every 5 minutes (keep it secret):\n";
+    echo "       $urlShown/cron/$tok/\n";
+} elseif ($cronNow === 'request') {
+    echo "     CRON_MODE=request: no cron at all; visitors' page views run the due jobs (1 job per request, after the page is sent).\n";
+    echo "     Nothing runs while nobody visits, so keep an eye on the System screen of the portal. A real cron line is better when you can get one.\n";
+} else {
+    printf("       %-13s %s %s/bin/cron.php\n", '*/5 * * * *', $php, $root);
+    echo "     No crontab on this host (shared hosting)? Re-run with --force-env --cron=web (outside timer) or set CRON_MODE=web|request in .env (docs/INSTALL.md, \"No cron on this host\").\n";
+}
 echo "  6. Open the portal, sign in, then follow Setup guide > \"After the first sign-in\" (payment methods, plans, variables, team).\n";
 echo "  7. Leave PAYMENT_MODE=demo until your accountant and a provider contract say otherwise.\n";
+echo "  8. DELETE THE INSTALLATION FILES when you are done: the folder install/ (browser installer) and this file bin/install.php.\n";
+echo "       rm -r $root/install $root/bin/install.php      (preflight and the System screen warn until they are gone)\n";
 echo "\nResult: " . ($fails ? "$fails FAIL" : 'no FAIL') . ", $warns WARN.\n";
 exit($fails ? 1 : 0);

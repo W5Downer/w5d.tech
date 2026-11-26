@@ -58,7 +58,11 @@ try:
     check('the stored hash verifies the password', v == 'yes')
     check('database migrated, content synced, signing key created (mode 600)', os.path.getsize(f'{T}/storage/w5d.sqlite') > 100000 and 'content tables' in o and stat.S_IMODE(os.stat(f'{T}/storage/app.key').st_mode) == 0o600)
     check('view cache compiled', 'compiled' in o and os.path.isdir(f'{T}/storage/framework/views'))
-    check('cron lines for payments-sync, billing, rollup, backup, archive, health', all(s in o for s in ('payments-sync.php', 'billing.php', 'rollup.php', 'backup.php', 'archive.php', 'health.php')))
+    check('ONE cron line (bin/cron.php every 5 minutes) plus the no-cron options', '*/5 * * * *' in o and 'bin/cron.php' in o and 'CRON_MODE=web|request' in o and 'No crontab' in o, o[-900:])
+    check('.env: CRON_MODE=system by default, CRON_TOKEN empty', g('CRON_MODE') == 'system' and (g('CRON_TOKEN') or '') == '')
+    check('lock file written (mode 600) so /install/ stays closed', stat.S_IMODE(os.stat(f'{T}/storage/installed.lock').st_mode) == 0o600)
+    check('tells the owner to delete install/ and bin/install.php', 'DELETE THE INSTALLATION FILES' in o and 'rm -r' in o and '/install ' in o)
+    check('sodium is part of the extension report', 'sodium' in o)
     check('tells the owner mail must really send before anyone can sign in', 'MAIL_DRIVER=smtp' in o and 'staff-code.php' in o)
     check('leaves PAYMENT_MODE=demo and says so', 'PAYMENT_MODE=demo' in o)
 
@@ -74,6 +78,18 @@ try:
     check('--force-env keeps a timestamped backup of the old .env', any(f.startswith('.env.bak-') for f in os.listdir(T)) and c == 0)
     bak = [f for f in os.listdir(T) if f.startswith('.env.bak-')]
     check('the backup is mode 600 and holds the old content', bak and stat.S_IMODE(os.stat(f'{T}/{bak[0]}').st_mode) == 0o600 and open(f'{T}/{bak[0]}').read() == before)
+
+    fresh()
+    c, ow = inst('--yes', '--url=https://shop.example.org', '--owner=boss@example.org', '--cron=web')
+    envw = open(f'{T}/.env').read()
+    gw = lambda k: (re.search(rf'^{k}=(.*)$', envw, re.M) or [None, None])[1]
+    check('--cron=web: random CRON_TOKEN (>= 24 chars) written and its URL printed', gw('CRON_MODE') == 'web' and len(gw('CRON_TOKEN') or '') >= 24 and f"https://shop.example.org/cron/{gw('CRON_TOKEN')}/" in ow, ow[-600:])
+    fresh()
+    c, orq = inst('--yes', '--url=https://shop.example.org', '--owner=boss@example.org', '--cron=request')
+    check('--cron=request: no token, explains that nothing runs without visitors', 'CRON_MODE=request' in orq and 'while nobody visits' in orq and 'CRON_TOKEN=' not in open(f'{T}/.env').read().replace('CRON_TOKEN=\n', ''), orq[-400:])
+    fresh()
+    c, ob = inst('--yes', '--url=https://shop.example.org', '--owner=boss@example.org', '--cron=weekly')
+    check('--cron with an unknown value is refused and writes nothing', c == 1 and not os.path.exists(f'{T}/.env'))
 
     r = subprocess.run(['php', '-r', 'echo 1;'], capture_output=True)
     cgi = subprocess.run(['php', '-r', 'putenv("X=1"); echo PHP_SAPI;'], capture_output=True, text=True).stdout

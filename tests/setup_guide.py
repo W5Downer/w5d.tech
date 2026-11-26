@@ -25,7 +25,8 @@ for need in ('files', 'install', 'webserver', 'https', 'mail', 'cron', 'backup',
     check(f'step "{need}" present', need in ids['en'])
 b = pages['en'][1]
 check('installer command is shown', 'php bin/install.php --check' in b and 'php bin/install.php' in b)
-check('cron lines for payments-sync, billing, rollup, backup', all(x in b for x in ('bin/payments-sync.php', 'bin/billing.php', 'bin/rollup.php', 'bin/backup.php')))
+check('ONE cron line (bin/cron.php) plus the no-cron solution (CRON_MODE=web with CRON_TOKEN, CRON_MODE=request)', all(x in b for x in ('bin/cron.php', '*/5 * * * *', 'CRON_MODE=web', 'CRON_TOKEN', 'CRON_MODE=request')))
+check('install step mentions the browser installer /install/ and deleting the installation files', '/install/' in b and ('bin/install.php' in b))
 check('nginx block names htdocs as root', 'root /var/www/w5d/htdocs' in html.unescape(b))
 check('says server settings are untested on the owner host', 'not tested on your host' in b)
 check('PAYMENT_MODE is described as a label, not a switch', 'only a label' in b and 'PAYMENT_MODE=demo records orders' not in b)

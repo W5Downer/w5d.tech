@@ -6,7 +6,7 @@ namespace W5D;
 /** Applies db/migrations/*.sql in order. Called automatically by DB::pdo() so a fresh deployment never meets "no such table". */
 final class Migrator
 {
-    private static bool $ran = false;
+    public static bool $ran = false;
 
     /** @return string[] names applied now */
     public static function run(\PDO $pdo, bool $force = false): array

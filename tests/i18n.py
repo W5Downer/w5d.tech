@@ -156,12 +156,16 @@ def tr3_calls(text):
                 yield text.count('\n', 0, m.start()) + 1, vals
 
 items = []
-for f in sorted(glob.glob(os.path.join(ROOT, 'views/templates/**/*.php'), recursive=True)):
+# templates, plus the browser installer (install/*.php), which is written entirely with inline tr3()
+files = sorted(glob.glob(os.path.join(ROOT, 'views/templates/**/*.php'), recursive=True)) + sorted(glob.glob(os.path.join(ROOT, 'install/*.php')))
+for f in files:
     txt = open(f, encoding='utf-8').read()
     for ln, (en, fr, ar) in tr3_calls(txt):
         items.append((f'{os.path.relpath(f, ROOT)}:{ln}', triple_problems(en, fr, ar, f)))
-n_tr3 = report('inline tr3() in templates', items)
+n_tr3 = report('inline tr3() in templates and install/', items)
 check('found a meaningful number of tr3 triples', n_tr3 > 300, str(n_tr3))
+inst_n = sum(1 for w, _ in items if w.startswith('install/'))
+check('the installer wizard contributes its own triples (all checked)', inst_n > 150, str(inst_n))
 
 # ---------------------------------------------------------------- help.php
 import subprocess

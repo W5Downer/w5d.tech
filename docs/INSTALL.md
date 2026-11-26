@@ -56,17 +56,40 @@ echo 'a-long-owner-passphrase' | php bin/install.php --yes \
 
 What it does, step by step (each line prints `OK`, `WARN` or `FAIL`; it is safe to run again):
 
-1. Checks PHP ≥ 8.4 and the extensions (missing `gd`/`zip` are warnings only).
+1. Checks PHP ≥ 8.4 and the extensions, including `sodium` (missing `gd`/`zip`/`iconv` are warnings only). Add `--cron=system|web|request` to choose how scheduled jobs run (default `system`; `web` also generates a random `CRON_TOKEN`).
 2. Creates `storage/{logs,sessions,cache,framework/views,uploads,archive,backups,incoming}` and tightens permissions.
 3. Creates `.env` from `.env.example` **only if none exists** (`--force-env` rebuilds it and keeps `.env.bak-<time>`), sets `APP_ENV=production`, `APP_URL`, `OWNER_EMAIL`, `STAFF_EMAIL_DOMAIN`, a **random** `ADMIN_URL_PATH`, `PAYMENT_MODE=demo`, and – if you type one – stores the owner password **as an Argon2id hash only**. File mode becomes `600`.
 4. Applies the database migrations and synchronises the content reference tables.
 5. Creates the signing key `storage/app.key` (mode `600`).
 6. Compiles the view cache and runs `bin/preflight.php`.
-7. Prints the portal address, the cron lines with your real paths, and the checklist below.
+7. Writes `storage/installed.lock` (the browser installer stays closed), prints the portal address, the single cron line (or the timer URL) with your real paths, the checklist below, and the reminder to **delete `install/` and `bin/install.php`**.
 
 It never sends e-mail, never touches payment settings and never prints a secret. The **portal address** it prints is shown in full only there: write it down.
 
 Common refusals: `APP_URL` must be `https://host` without a path; the owner address must be on the team domain; the portal path must be 6–60 letters/digits/`-`/`_` and not `admin`, `panel`, `panel-admin` or `dashboard`.
+
+### 1.2b No SSH? Use the browser installer (`/install/`)
+
+If the host gives you only FTP / a file manager, upload the whole project (including the `install/` folder), point the domain at `htdocs/` and open **`https://your-domain/install/`**. While the site is not installed, every page leads there. It is the same installer as a wizard, one step per group of production settings (each field shows the `.env` key it fills):
+
+| Step | What it asks (`.env` keys) |
+|---|---|
+| 1. Requirements | Nothing to type. Shows the PHP version (8.4+), every required extension (`pdo_sqlite`, `mbstring`, `json`, `openssl`, `curl`, `sodium`, `ctype`, `session`, `filter`), optional ones (`gd` with WebP, `zip`, `iconv`, Argon2id), the writable folders, `.env`, HTTPS and the document root. Red lines block the next step. |
+| 2. Site address | `APP_URL`, `APP_BASE_PATH`, `APP_LANG`, `ADMIN_URL_PATH` (a random secret portal path is proposed) |
+| 3. Owner and team | `OWNER_EMAIL`, `STAFF_EMAIL_DOMAIN`, owner password (stored only as an Argon2id/bcrypt hash in `WEBMASTER_PASSWORD_HASH`), `STAFF_CODE_TTL_MIN`, `STAFF_IDLE_MINUTES` |
+| 4. Storage | `DB_PATH` (`DB_DRIVER` is fixed to `sqlite`), `BACKUP_DRIVER`, `ARCHIVE_DRIVER`, `UPLOAD_MAX_MB` |
+| 5. Mail | `MAIL_DRIVER`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_ENCRYPTION`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME`, `MAIL_REPLY_TO`, `MAIL_FOOTER_ADDRESS`, `CONTACT_EMAIL` |
+| 6. Payments | `PAYMENT_MODE` is fixed to `demo`; `PAYMENT_D17_ENABLED`, `PAYMENT_D17_GSM`, `PAYMENT_D17_NAME`, `PAYMENT_D17_NOTE` |
+| 7. Brand and social | `SEO_ORG_NAME`, `SEO_ORG_EMAIL`, `SOCIAL_SHARE_VIA`, `SOCIAL_PROFILE_*` |
+| 8. Scheduled jobs | `CRON_MODE` (`system`, `web` or `request`; see "No cron on this host") |
+| 9. Review | Every value by its `.env` name (secrets shown as "set (hidden)"), then **Install now** |
+| 10. Finish | Portal address, the cron line or timer URL for the mode you chose, and the **delete the installation files** message |
+
+Nothing is written until the last button. The install itself: migrates the database and creates the signing key first (if that fails, `.env` is not written and you can fix the cause and press the button again), then writes `.env` (mode `600`), compiles the view cache and writes `storage/installed.lock`. After that `/install/` answers 404 to everybody, and only the browser that just installed can still open the finish page.
+
+**Then delete the installation files.** The finish page lists them (`install/` and `bin/install.php`) and offers a button that tries to delete them. That works only when the PHP user may delete those files; otherwise delete them with FTP, the file manager or `rm -r install bin/install.php`. Until they are gone, `php bin/preflight.php` and the portal's System screen show a warning. The site works without the `install/` folder; if `.env` is missing and the folder is gone, visitors see a "not installed" page that says what to do.
+
+Limits, honestly: the wizard needs a PHP session and a writable project folder (or an empty writable `.env`); it was tested against a local PHP server and a throw-away copy, **not on a real shared host**. A browser installer is only as safe as the time it is reachable: upload, finish and delete in one sitting, and use HTTPS (the requirements step warns when the page is plain http).
 
 ### 1.3 Point the web server at `htdocs/`
 
@@ -124,18 +147,38 @@ Until a test message arrives, nobody can receive a team sign-in code. **Locked o
 
 ### 1.6 Scheduled jobs
 
-`crontab -e` as the PHP user (the installer prints these with your absolute paths):
+One line is enough. `crontab -e` as the PHP user, or the "Cron jobs" screen of your hosting panel (the installer prints it with your absolute paths):
 
 ```cron
-*/10 * * * *  php /path/to/w5d/bin/payments-sync.php   # re-check online payments whose webhook was missed
-15 6 * * *    php /path/to/w5d/bin/billing.php         # plan renewal invoices and grace periods
-5 * * * *     php /path/to/w5d/bin/rollup.php          # dashboard figures
-30 3 * * *    php /path/to/w5d/bin/backup.php          # consistent database snapshot
-45 3 * * 0    php /path/to/w5d/bin/archive.php         # weekly clean-up
-*/15 * * * *  php /path/to/w5d/bin/health.php         # storage thresholds
+*/5 * * * *  php /path/to/w5d/bin/cron.php
 ```
 
-`billing.php` never charges anybody: it sends invoices that the buyer pays like any other bill.
+`bin/cron.php` starts only the jobs that are due, each under its own lock, and keeps the last-run times in `storage/cron-state.json`:
+
+| Job | Runs | What it does |
+|---|---|---|
+| `payments-sync` | every 10 minutes | re-checks online payments whose webhook was missed |
+| `health` | every 15 minutes | storage thresholds |
+| `rollup` | hourly | dashboard figures |
+| `billing` | daily | plan renewal invoices and grace periods (never charges anybody: the buyer pays the invoice like any other bill) |
+| `backup` | daily | consistent database snapshot (`storage/backups/latest.sqlite`) |
+| `archive` | weekly | clean-up |
+
+Check it: `php bin/cron.php --status` (or the System screen of the portal). `php bin/cron.php --force` runs everything now; `--job=backup` runs one job. The six old scripts (`bin/billing.php`, `bin/payments-sync.php`, ...) still work on their own if you prefer six cron lines.
+
+### No cron on this host
+
+Many shared hosts have no crontab. Pick one of these in `.env` (the browser installer asks in step 8):
+
+| `CRON_MODE` | How jobs get triggered | Good for | Weak point |
+|---|---|---|---|
+| `system` (default) | the crontab line above | any host with cron or SSH | needs cron |
+| `web` | a free outside timer (cron-job.org, UptimeRobot, a monitoring service, your registrar's "scheduled task") opens `https://your-domain/cron/<CRON_TOKEN>/` every 5 minutes | hosts with no cron but a public site | depends on the outside timer; the address is a secret |
+| `request` | no cron at all: after a visitor's page has been sent, **one** due job runs (at most 1 check per minute, 1 job per request) | tiny sites, first days, emergencies | **nothing runs while nobody visits**; daily jobs may run late; a busy moment can do one job's work after a page |
+
+For `web`: put at least 24 random letters/digits in `CRON_TOKEN` (make one with `php bin/cron.php --token`; the installer generates it for you) and give that address to the timer. The endpoint answers in plain text (`ran ok`, `not due`), never sets a cookie, is never cached or indexed (`robots.txt` disallows `/cron/`), and answers **404 to a wrong token** (guessing is rate-limited per address). `?job=backup` runs only that job and `&force=1` ignores the schedule. To rotate the secret, change `CRON_TOKEN` and update the timer.
+
+Whatever the mode, the System screen and `php bin/preflight.php` say when a job has never run or is overdue. Honest limits: request mode is a fallback, not a scheduler; none of the three modes was tested on a real shared host; the outside timer is a third party you rely on.
 
 ### 1.7 Backups
 
@@ -158,7 +201,8 @@ Open the public site in English, French and Arabic; open `/sitemap.xml` and `/ro
 - [ ] Document root = `htdocs/`; `/.env`, `/storage/…`, `/src/…` give 403/404
 - [ ] HTTPS on, http redirects
 - [ ] SMTP test message received
-- [ ] Cron lines added; `storage/backups/latest.sqlite` appears after the night run
+- [ ] ONE cron line (`bin/cron.php`) added, or `CRON_MODE=web` + outside timer, or `CRON_MODE=request` chosen knowingly; `php bin/cron.php --status` shows recent runs and `storage/backups/latest.sqlite` appears after the night run
+- [ ] Installation files deleted (`install/`, `bin/install.php`); preflight no longer warns about them
 - [ ] Off-server backup of the database **and** `storage/app.key` tested once
 - [ ] `php bin/preflight.php` shows no FAIL
 - [ ] Owner signed in with an e-mailed code
@@ -230,7 +274,10 @@ Stop writes, replace `storage/w5d.sqlite` with a backup copy (delete `-wal`/`-sh
 | Cannot stay signed in | Site served over http, or a proxy not sending `X-Forwarded-Proto: https` |
 | Old page after an update | `php bin/view.php cache` |
 | Images tool says it cannot convert | `gd` with WebP missing (preflight shows it as a warning) |
-| Payment stuck "pending" | Webhook not registered at the provider, or `payments-sync.php` not in cron |
+| Payment stuck "pending" | Webhook not registered at the provider, or scheduled jobs not running (`php bin/cron.php --status`; see "No cron on this host") |
+| Every page redirects to `/install/` | No `.env` with settings and no `storage/installed.lock`: finish the wizard, or restore your `.env` |
+| `/install/` gives 404 | Already installed (by design), or the `install/` folder was deleted |
+| `/cron/<token>/` gives 404 | `CRON_TOKEN` differs from the address, or fewer than 24 characters |
 | Share links without `?ref=` | Not signed in, affiliate not active, no paid part yet, programme paused, or `affiliate.share_min_parts` higher than the parts paid |
 
 ### What this installer cannot know

@@ -626,7 +626,8 @@ python3 tests/{qcm,cert,affiliate,contract}.py   # programmes (QCM, certificatio
 python3 tests/audit.py; python3 tests/audit_auth.py; python3 tests/audit_browser.py   # professionalism audits (0 errors expected)
 bash tests/production.sh         # FULL production simulation: APP_ENV=production + HTTPS proxy + trusted view cache + every suite + security checks
 php bin/preflight.php            # deploy-readiness check of the CURRENT .env (run on the real host; exit 1 on any FAIL)
-php bin/install.php --help        # first-upload installer (see docs/INSTALL.md)
+php bin/install.php --help        # first-upload installer (see docs/INSTALL.md); no SSH: open /install/ in a browser (wizard)
+php bin/cron.php                 # cron: ONE line (*/5) that runs whatever is due; --status, --force, --job=NAME, --token
 php bin/billing.php              # cron: plan renewal invoices + lapsed plans (never charges anybody)
 cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)
 ```
@@ -651,7 +652,7 @@ Docs: [`docs/pricing.md`](docs/pricing.md), [`docs/templates.md`](docs/templates
 ## Installation
 
 > **Step-by-step guides (webmaster first upload, owner configuration, update, restore, troubleshooting): [`docs/INSTALL.md`](docs/INSTALL.md).**
-> On a fresh server run `php bin/install.php --check`, then `php bin/install.php` (creates `.env`, folders, database, signing key, view cache, runs the preflight and prints your cron lines). The same two guides live in the owner portal under *Setup guide*. The installer is tested in a throw-away copy only, not yet on a real host.
+> On a fresh server run `php bin/install.php --check`, then `php bin/install.php` (creates `.env`, folders, database, signing key, view cache, runs the preflight and prints your cron lines). No SSH? Upload the project and open `https://your-domain/install/`: the same installer as a browser wizard (requirements check first, then one step per group of `.env` settings, then a message to delete the `install/` folder and `bin/install.php`). No cron on the host? Set `CRON_MODE=web` (a free outside timer opens `/cron/<CRON_TOKEN>/`) or `CRON_MODE=request` (visitors' page views run the due jobs; nothing runs while nobody visits). The same guides live in the owner portal under *Setup guide*. Both installers are tested in a throw-away copy only, not yet on a real host.
 
 Manual equivalent:
 
@@ -689,11 +690,10 @@ php bin/sync-content.php
 **Cron:**
 
 ```cron
-*/15 * * * 5  php /path/to/w5d/bin/rollup.php && php /path/to/w5d/bin/archive.php
-0    * * * *  php /path/to/w5d/bin/rollup.php && php /path/to/w5d/bin/archive.php
-*/15 * * * *  php /path/to/w5d/bin/health.php
-0    3 * * *  php /path/to/w5d/bin/backup.php
+*/5 * * * *  php /path/to/w5d/bin/cron.php     # payments-sync, health, rollup, billing, backup, archive: only what is due
 ```
+
+No crontab on the host: `CRON_MODE=web` + `CRON_TOKEN` (outside timer opens `/cron/<CRON_TOKEN>/` every 5 minutes) or `CRON_MODE=request`. Details and limits: `docs/INSTALL.md`, "No cron on this host".
 
 **First login:** `https://w5d.tech/{ADMIN_URL_PATH}`.
 

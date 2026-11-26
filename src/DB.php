@@ -60,5 +60,6 @@ final class DB
         return (int)self::pdo()->lastInsertId();
     }
 
-    public static function reset(): void { self::$pdo = null; }
+    /** Forget the open connection (the browser installer switches to the database it has just configured). */
+    public static function reset(): void { self::$pdo = null; Migrator::$ran = false; }
 }
