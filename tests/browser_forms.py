@@ -162,10 +162,16 @@ with sync_playwright() as pw:
     check('the result report is shown', p.locator('text=Last upload').count() >= 1)
     check('page still fits (no horizontal scroll)', p.evaluate('()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1'))
     # keyboard: zone is focusable and Enter/Space opens the chooser
-    p.locator('[data-dropzone]').focus()
-    with p.expect_file_chooser(timeout=3000) as fc:
-        p.keyboard.press('Enter')
-    check('keyboard Enter on the zone opens the file chooser', fc.value is not None)
+    p.locator('[data-dropzone]').focus(); p.wait_for_timeout(300)
+    chooser = None
+    for _try in range(3):   # the first key press right after a navigation is occasionally swallowed by the browser; retry
+        try:
+            with p.expect_file_chooser(timeout=1500) as fc:
+                p.keyboard.press('Enter')
+            chooser = fc.value; break
+        except Exception:
+            p.locator('[data-dropzone]').focus(); p.wait_for_timeout(300)
+    check('keyboard Enter on the zone opens the file chooser', chooser is not None)
     # delete through the confirm dialog
     p.once('dialog', lambda d: d.accept())
     p.locator('ul li:has-text("drop-a") button:has-text("Delete")').first.click(); p.wait_for_load_state('load')
@@ -173,6 +179,21 @@ with sync_playwright() as pw:
     for m in set(os.listdir(lib)) - pre:
         os.remove(os.path.join(lib, m))
     p.screenshot(path='/tmp/images-1280.png')
+    x.close()
+
+    # drafts on the contact and register forms (never passwords)
+    x = ctx(); p = x.new_page()
+    p.on('pageerror', lambda e: errors.append(str(e)))
+    for path, field, other, name in (('/contact/', 'input[name=name], input[name=full_name]', 'textarea[name=message]', 'contact'), ('/account/register/', 'input[name=name]', 'input[name=password]', 'register')):
+        p.goto(BASE + path); p.wait_for_load_state('load')
+        check(f'{name}: form carries data-draft', p.locator(f'form[data-draft="{name}"]').count() == 1)
+        p.locator(field).first.fill('Draft Person'); p.locator(other).first.fill('Msg-Body-77' if name == 'contact' else 'Secret-Value-123'); p.wait_for_timeout(700)
+        p.reload(); p.wait_for_load_state('load'); p.wait_for_timeout(300)
+        check(f'{name}: typed name restored after reload', p.locator(field).first.input_value() == 'Draft Person')
+        check(f'{name}: restored notice shown', p.locator('.draft-bar').count() == 1)
+        if name == 'register':
+            check('register: password is never restored', p.locator('input[name=password]').input_value() == '')
+            check('register: password never stored', p.evaluate("()=>Object.keys(localStorage).every(k=>(localStorage.getItem(k)||'').indexOf('Secret-Value-123')<0)"))
     x.close()
 
     br.close()

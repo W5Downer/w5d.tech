@@ -626,8 +626,12 @@ python3 tests/{qcm,cert,affiliate,contract}.py   # programmes (QCM, certificatio
 python3 tests/audit.py; python3 tests/audit_auth.py; python3 tests/audit_browser.py   # professionalism audits (0 errors expected)
 bash tests/production.sh         # FULL production simulation: APP_ENV=production + HTTPS proxy + trusted view cache + every suite + security checks
 php bin/preflight.php            # deploy-readiness check of the CURRENT .env (run on the real host; exit 1 on any FAIL)
+php bin/install.php --help        # first-upload installer (see docs/INSTALL.md)
+php bin/billing.php              # cron: plan renewal invoices + lapsed plans (never charges anybody)
 cd tools && node build.mjs       # rebuild Tailwind + icons + fonts (local, no CDN)
 ```
+
+Billing, image library and asset bundles: see sections 5 and 7 of [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). After changing any CSS/JS source run `cd tools && node build.mjs` (never edit `bundle*.css` or `*.min.js`).
 
 Docs: [`docs/pricing.md`](docs/pricing.md), [`docs/templates.md`](docs/templates.md), [`docs/design.md`](docs/design.md), [`docs/ontology-six-layers.md`](docs/ontology-six-layers.md).
 

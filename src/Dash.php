@@ -126,6 +126,9 @@ final class Dash
             'admin', 'leader', 'manager' => [$A('layout-dashboard', $L('Open the admin portal', 'Ouvrir le portail d’administration', 'افتح بوابة الإدارة'), admin_url())],
             default => [$A('graduation-cap', $L('Check my eligibility', 'Vérifier mon admissibilité', 'تحقق من أهليتي'), url('/join/eligibility/')), $A('badge-check', $L('Open my applicant file', 'Ouvrir mon dossier', 'افتح ملفي'), url('/app/register/')), $A('layers', $L('Browse services', 'Parcourir les services', 'تصفح الخدمات'), url('/services/'))],
         };
+        $openInv = 0;
+        try { $openInv = count(array_filter(Billing::forUser((int)($u['id'] ?? 0), (string)($u['email'] ?? '')), fn($i) => ($i['status'] ?? '') === 'sent')); } catch (\Throwable) {}
+        if ($openInv > 0) array_unshift($actions, $A('receipt', $L('Open invoices to pay: ' . $openInv, 'Factures ouvertes à payer : ' . $openInv, 'فواتير مفتوحة للدفع: ' . $openInv), url('/account/invoices/')));
         $actions[] = $A('code', $L('API and documentation for my role', 'API et documentation pour mon rôle', 'واجهة API ووثائق دوري'), self::api($role));
         return ['role' => $role, 'label' => $spec['label'], 'blurb' => $spec['blurb'], 'icon' => $spec['icon'], 'tiles' => $tiles, 'actions' => $actions];
     }
@@ -144,6 +147,7 @@ final class Dash
         $add('applicants', self::L('Registered applicants', 'Candidats inscrits', 'مترشحون مسجلون'), $n("SELECT COUNT(*) FROM applicants WHERE status = 'registered'"), admin_url('applicants/'));
         $add('qcm', self::L('QCM fee passes to verify', 'Accès QCM payants à vérifier', 'تصاريح QCM المدفوعة للتحقق'), $n("SELECT COUNT(*) FROM qcm_passes WHERE status = 'pending'"), admin_url('qcm-review/'));
         $add('qcm', self::L('QCM tasks to review', 'Tâches QCM à examiner', 'مهام QCM للمراجعة'), $n("SELECT COUNT(*) FROM qcm_tasks WHERE status = 'submitted'"), admin_url('qcm-review/'));
+        $add('billing', self::L('Open invoices', 'Factures ouvertes', 'فواتير مفتوحة'), $n("SELECT COUNT(*) FROM invoices WHERE status = 'sent'"), admin_url('invoices/'));
         $add('affiliates', self::L('Affiliate applications and payouts', 'Candidatures d’affiliés et versements', 'طلبات المُحيلين والصرف'), $n("SELECT (SELECT COUNT(*) FROM affiliates WHERE status = 'pending') + (SELECT COUNT(*) FROM affiliate_payouts WHERE status = 'requested')"), admin_url('affiliates/'));
         return ['label' => self::spec($role)['label'], 'blurb' => self::spec($role)['blurb'], 'queues' => $q, 'widgets' => self::spec($role)['widgets']];
     }

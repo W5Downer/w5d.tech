@@ -5,7 +5,7 @@
   $lock = \W5D\Gate::lockEmail();
 @endphp
 <x-section :d="$d">
-  <form method="post" action="{{ url($d['action']) }}" class="max-w-3xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5 sm:p-8" novalidate>
+  <form method="post" action="{{ url($d['action']) }}" data-draft="{{ trim($d['action'], '/') ?: 'form' }}" class="max-w-3xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5 sm:p-8" novalidate>
     {!! csrf_field() !!}
     <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
     {!! \W5D\Integrations::field() !!}

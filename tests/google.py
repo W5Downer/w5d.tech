@@ -69,7 +69,13 @@ for src in ('src', 'views/templates', 'config'):
     out = subprocess.run(['grep', '-rIil', '-E', r'openai|stable.?diffusion|midjourney|deepfake|undress|nudify|image.?generation', os.path.join(ROOT, src)], capture_output=True, text=True).stdout.split()
     bad_files = [f for f in out if 'help.php' not in f]
     check(f'no image-generation / AI-imagery feature wired in {src}/', not bad_files, str(bad_files))
-check('no file upload feature (nothing user-supplied is hosted)', subprocess.run(['grep', '-rIl', '-E', r'\$_FILES|type="file"', os.path.join(ROOT, 'src'), os.path.join(ROOT, 'views/templates')], capture_output=True, text=True).stdout.strip() == '')
+_up = subprocess.run(['grep', '-rIl', '-E', r'\$_FILES|type="file"', os.path.join(ROOT, 'src'), os.path.join(ROOT, 'views/templates')], capture_output=True, text=True).stdout.split()
+_up = sorted(os.path.relpath(f, ROOT) for f in _up)
+check('file uploads exist only in the owner image library (portal-only), nowhere public', _up == ['src/controllers/Media.php', 'views/templates/w5d/admin/images.blade.php'], str(_up))
+_media = open(os.path.join(ROOT, 'src/controllers/Media.php'), encoding='utf-8').read()
+_app = open(os.path.join(ROOT, 'src/App.php'), encoding='utf-8').read()
+check('every upload handler requires the portal "media" permission', _media.count("Auth::require('media')") >= 2 and 'public static function upload' in _media)
+check('upload and delete routes live under the secret portal mount only', "$r->post($m . '/images/upload'" in _app and "$r->post('/images/upload'" not in _app and "'/images/upload'" not in _app.replace("$m . '/images/upload'", ''))
 
 # ---- the button + note only when configured (throw-away server with fake credentials; the real .env is untouched)
 def free_port():

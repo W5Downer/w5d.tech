@@ -53,14 +53,14 @@ final class Images
      */
     public static function convert(string $bytes, int $w, int $h, string $fit = 'cover', int $quality = 80): array
     {
-        if (!self::gdOk()) return [null, 'The server has no GD/WebP support.', 0, 0];
-        if ($bytes === '' || strlen($bytes) > self::MAX_BYTES) return [null, 'Larger than ' . (self::MAX_BYTES >> 20) . ' MB or empty.', 0, 0];
+        if (!self::gdOk()) return [null, tr3('The server has no GD/WebP support.', 'Le serveur n’a pas la prise en charge GD/WebP.', 'الخادم لا يدعم GD/WebP.'), 0, 0];
+        if ($bytes === '' || strlen($bytes) > self::MAX_BYTES) return [null, tr3('Larger than ', 'Plus grand que ', 'أكبر من ') . (self::MAX_BYTES >> 20) . tr3(' MB or empty.', ' Mo ou vide.', ' ميغابايت أو فارغ.'), 0, 0];
         $info = @getimagesizefromstring($bytes);
-        if (!$info || !in_array($info[2], [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF, IMAGETYPE_WEBP], true)) return [null, 'Not a JPEG, PNG, GIF or WebP picture.', 0, 0];
+        if (!$info || !in_array($info[2], [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF, IMAGETYPE_WEBP], true)) return [null, tr3('Not a JPEG, PNG, GIF or WebP picture.', 'Ce n’est pas une image JPEG, PNG, GIF ou WebP.', 'ليست صورة JPEG أو PNG أو GIF أو WebP.'), 0, 0];
         [$sw, $sh] = [(int)$info[0], (int)$info[1]];
         if ($sw < 1 || $sh < 1 || $sw * $sh > self::MAX_PIXELS) return [null, 'Too many pixels (' . $sw . 'x' . $sh . '; the limit is ' . number_format(self::MAX_PIXELS / 1e6, 0) . ' megapixels).', $sw, $sh];
         $src = @imagecreatefromstring($bytes);
-        if (!$src) return [null, 'The picture could not be decoded.', $sw, $sh];
+        if (!$src) return [null, tr3('The picture could not be decoded.', 'L’image n’a pas pu être décodée.', 'تعذر فك ترميز الصورة.'), $sw, $sh];
         // Phones store the rotation in EXIF: honour it so every output is upright.
         if ($info[2] === IMAGETYPE_JPEG && function_exists('exif_read_data') && function_exists('imagerotate')) {
             try {
@@ -81,7 +81,7 @@ final class Images
         }
         ob_start(); $ok = imagewebp($dst, null, max(30, min(95, $quality))); $out = (string)ob_get_clean();
         unset($src, $dst);
-        return $ok && $out !== '' ? [$out, null, $sw, $sh] : [null, 'WebP encoding failed.', $sw, $sh];
+        return $ok && $out !== '' ? [$out, null, $sw, $sh] : [null, tr3('WebP encoding failed.', 'L’encodage WebP a échoué.', 'فشل ترميز WebP.'), $sw, $sh];
     }
 
     /** Store WebP bytes under a safe, unique name; returns the file name. */
@@ -120,22 +120,22 @@ final class Images
     public static function zipPictures(string $path): array
     {
         $pics = []; $skip = [];
-        if (!self::zipOk()) return [[], [['name' => basename($path), 'error' => 'The server has no ZIP support.']]];
+        if (!self::zipOk()) return [[], [['name' => basename($path), 'error' => tr3('The server has no ZIP support.', 'Le serveur ne prend pas en charge ZIP.', 'الخادم لا يدعم ZIP.')]]];
         $z = new \ZipArchive();
-        if ($z->open($path, \ZipArchive::RDONLY) !== true) return [[], [['name' => 'ZIP', 'error' => 'Not a readable ZIP file.']]];
+        if ($z->open($path, \ZipArchive::RDONLY) !== true) return [[], [['name' => 'ZIP', 'error' => tr3('Not a readable ZIP file.', 'Fichier ZIP illisible.', 'ملف ZIP غير قابل للقراءة.')]]];
         $total = 0;
         $n = min($z->numFiles, 5000);
         for ($i = 0; $i < $n; $i++) {
             $st = $z->statIndex($i); if (!$st) continue;
             $name = (string)$st['name'];
             if (str_ends_with($name, '/') || str_starts_with($name, '__MACOSX/') || str_starts_with(basename($name), '.')) continue;
-            if (!in_array(strtolower(pathinfo($name, PATHINFO_EXTENSION)), self::EXT, true)) { $skip[] = ['name' => basename($name), 'error' => 'Not a picture type we accept (JPEG, PNG, GIF, WebP).']; continue; }
+            if (!in_array(strtolower(pathinfo($name, PATHINFO_EXTENSION)), self::EXT, true)) { $skip[] = ['name' => basename($name), 'error' => tr3('Not a picture type we accept (JPEG, PNG, GIF, WebP).', 'Type d’image non accepté (JPEG, PNG, GIF, WebP).', 'نوع صورة غير مقبول (JPEG وPNG وGIF وWebP).')]; continue; }
             if (count($pics) >= self::MAX_ZIP_FILES) { $skip[] = ['name' => basename($name), 'error' => 'Skipped: more than ' . self::MAX_ZIP_FILES . ' pictures in the ZIP.']; continue; }
-            if ((int)$st['size'] > self::MAX_BYTES) { $skip[] = ['name' => basename($name), 'error' => 'Larger than ' . (self::MAX_BYTES >> 20) . ' MB.']; continue; }
+            if ((int)$st['size'] > self::MAX_BYTES) { $skip[] = ['name' => basename($name), 'error' => tr3('Larger than ', 'Plus grand que ', 'أكبر من ') . (self::MAX_BYTES >> 20) . tr3(' MB.', ' Mo.', ' ميغابايت.')]; continue; }
             if ($total + (int)$st['size'] > self::MAX_ZIP_TOTAL) { $skip[] = ['name' => basename($name), 'error' => 'Skipped: the ZIP holds more than ' . (self::MAX_ZIP_TOTAL >> 20) . ' MB of pictures.']; continue; }
-            $fp = $z->getStream($name); if (!$fp) { $skip[] = ['name' => basename($name), 'error' => 'Could not be read (encrypted or damaged).']; continue; }
+            $fp = $z->getStream($name); if (!$fp) { $skip[] = ['name' => basename($name), 'error' => tr3('Could not be read (encrypted or damaged).', 'Lecture impossible (chiffré ou endommagé).', 'تعذرت القراءة (مشفّر أو تالف).')]; continue; }
             $buf = (string)stream_get_contents($fp, self::MAX_BYTES + 1); fclose($fp);   // never trust the declared size
-            if (strlen($buf) > self::MAX_BYTES) { $skip[] = ['name' => basename($name), 'error' => 'Larger than ' . (self::MAX_BYTES >> 20) . ' MB.']; continue; }
+            if (strlen($buf) > self::MAX_BYTES) { $skip[] = ['name' => basename($name), 'error' => tr3('Larger than ', 'Plus grand que ', 'أكبر من ') . (self::MAX_BYTES >> 20) . tr3(' MB.', ' Mo.', ' ميغابايت.')]; continue; }
             $total += strlen($buf);
             $pics[] = ['name' => basename(str_replace('\\', '/', $name)), 'bytes' => $buf];
         }

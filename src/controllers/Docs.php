@@ -105,7 +105,8 @@ final class Docs
             'Show the full schedule and total before a human confirms any commitment. Writes require the human\'s explicit instruction.',
             'Respect rate limits (10 writes / 10 min / IP). Do not retry a 429 immediately.',
             'Cite the as_of date from meta.as_of when giving figures.',
-            'Demo mode: no payment is taken. Say so.',
+            'Payment: never say that money has moved. Whether a payment method is available is decided by the owner; manual methods are verified by a person. Point the human to /checkout/ or the invoice page and let them pay there.',
+            'Plans and invoices: plans, fees and invoices are set and issued by the owner. Do not quote or invent a plan price; send the human to /plans/.',
         ];
     }
 
@@ -132,7 +133,7 @@ final class Docs
         $b = self::base();
         $o = "# W5D — World Five Dimensions\n\n> Five macro works, " . Variables::get('counts.services') . " services, one weekly work engine. Investors take at least a part of W5D every day; experts and team managers join a certified path. A part is an investment in a path, not a job. No return is promised.\n\n";
         $o .= "## Rules for AI agents\n" . implode("\n", array_map(fn($r) => '- ' . $r, self::rules())) . "\n\n";
-        $o .= "## Key pages\n- [Investors]($b/investors/)\n- [Pricing]($b/pricing/)\n- [Checkout]($b/checkout/)\n- [Daily subscription]($b/subscription/)\n- [Become a manager]($b/careers/managers/)\n- [How it works]($b/how-it-works/)\n- [Trust and declared limits]($b/trust/statement/)\n- [Status]($b/status/)\n- [Sitemap]($b/sitemap/)\n\n";
+        $o .= "## Key pages\n- [Investors]($b/investors/)\n- [Pricing]($b/pricing/)\n- [Plans]($b/plans/) (individual, team and enterprise plans; the owner sets and publishes them, and each renewal is an invoice the buyer pays)\n- [Checkout]($b/checkout/)\n- [Daily subscription]($b/subscription/)\n- [Become a manager]($b/careers/managers/)\n- [How it works]($b/how-it-works/)\n- [Trust and declared limits]($b/trust/statement/)\n- [Status]($b/status/)\n- [Sitemap]($b/sitemap/)\n\n";
         $o .= "## Machine interfaces\n- [OpenAPI]($b/api/openapi.json)\n- [Agent manifest]($b/api/agents.json)\n- [Agent tools]($b/api/docs/agents/tools.json)\n- [API index]($b/api/index.json)\n- [Full text]($b/llms-full.txt)\n";
         return Response::text($o, 'text/plain');
     }
