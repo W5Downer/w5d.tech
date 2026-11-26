@@ -21,7 +21,7 @@ slugs = [s for s in roles if isinstance(s, str)]
 check('menu slugs loaded', len(slugs) >= 40, str(len(slugs)))
 for s in slugs:
     check(f'help entry admin.{s}', f'admin.{s}' in h)
-for pnl in ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api', 'qcm', 'certificates', 'affiliate']:
+for pnl in ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api', 'qcm', 'certificates', 'affiliate', 'invoices', 'plan']:
     check(f'help entry account.{pnl}', f'account.{pnl}' in h)
 modes = {v[0] for v in h.values()}
 check('both modes used', modes == {'tip', 'pop'}, str(modes))

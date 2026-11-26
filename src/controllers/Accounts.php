@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, Affiliate, ApiGuide, Auth, Csrf, DB, Dash, Env, Gateways, Integrations, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
+use W5D\{Account, Affiliate, ApiGuide, Auth, Billing, Csrf, DB, Dash, Env, Gateways, Integrations, Mail, OAuth, Payments, RateLimit, Request, Response, Secret, Session, Variables, ViewEnv};
 
 /** Public accounts: sign in/up, e-mail verification, password reset, social login, user dashboard, D17 payment page. */
 final class Accounts
@@ -283,13 +283,14 @@ final class Accounts
         if ($r = self::need($q)) return $r;
         $panel = (string)($q->params['panel'] ?? 'overview');
         if ($panel === '') $panel = 'overview';
-        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api', 'qcm', 'certificates', 'affiliate'], true)) return Pages::notFound($q);
+        if (!in_array($panel, ['overview', 'orders', 'payments', 'applications', 'notifications', 'profile', 'security', 'api', 'qcm', 'certificates', 'affiliate', 'invoices', 'plan'], true)) return Pages::notFound($q);
         $u = Account::row();
         if (!$u) return Response::redirect(url('/account/login/'));
         $d = self::data($u);
         if ($panel === 'notifications' && $q->isPost() === false && ($d['notes'])) DB::q('UPDATE notifications SET read_at = CURRENT_TIMESTAMP WHERE user_id = ? AND read_at IS NULL', [$u['id']]);
         $titles = ['overview' => __('acct.overview'), 'orders' => __('acct.orders'), 'payments' => __('acct.payments'), 'applications' => __('acct.applications'), 'notifications' => __('acct.notifications'), 'profile' => __('acct.profile'), 'security' => __('acct.security'), 'api' => tr3('API & documentation', 'API et documentation', 'واجهة API والوثائق'),
-            'qcm' => tr3('QCM & practice', 'QCM et entraînement', 'الاختبارات والتدريب'), 'certificates' => tr3('Certificates', 'Certificats', 'الشهادات'), 'affiliate' => tr3('Affiliate programme', 'Programme d’affiliation', 'برنامج الإحالة')];
+            'qcm' => tr3('QCM & practice', 'QCM et entraînement', 'الاختبارات والتدريب'), 'certificates' => tr3('Certificates', 'Certificats', 'الشهادات'), 'affiliate' => tr3('Affiliate programme', 'Programme d’affiliation', 'برنامج الإحالة'),
+            'invoices' => tr3('Invoices & bills', 'Factures', 'الفواتير'), 'plan' => tr3('Plan & seats', 'Formule et sièges', 'الباقة والمقاعد')];
         $role = (string)($u['role_slug'] ?? 'user');
         $extra = [];
         if ($panel === 'api') {
@@ -299,6 +300,7 @@ final class Accounts
             $extra = ['guide' => ApiGuide::build($as, $role), 'tabs' => $tabs, 'as' => $as, 'tab_base' => url('/account/api/'), 'role' => $role];
         }
         if (in_array($panel, ['qcm', 'certificates', 'affiliate'], true)) $extra = Programs::panelData($panel, $u);
+        if (in_array($panel, ['invoices', 'plan'], true)) $extra = Bills::panelData($panel, $u);
         return self::page($q, 'account.panel', ['panel' => $panel, 'title' => $titles[$panel], 'u' => $u, 'd' => $d, 'dash' => Dash::account($u, $d), 'next' => self::nextAction($u, $d), 'price' => Variables::get('price'), 'Lbl' => [Pages::class, 'L']] + $extra);
     }
 
@@ -349,15 +351,42 @@ final class Accounts
     {
         $ref = (string)($q->params['ref'] ?? '');
         $sig = (string)$q->input('s', '');
-        $o = preg_match('/^ORD-[A-F0-9]{8}$/', $ref) ? DB::one('SELECT o.*, i.full_name, i.email, i.phone FROM investor_orders o JOIN investors i ON i.id = o.investor_id WHERE o.ref = ?', [$ref]) : null;
-        if (!$o || !Secret::verify('pay:' . $ref, $sig)) return Pages::notFound($q);
-        $p = DB::one('SELECT * FROM payments WHERE order_ref = ? ORDER BY id DESC', [$ref]);
+        // One payment page for everything that is billed: an order reference (ORD-…) or any invoice number (INV-YYYY-NNNNN).
+        $inv = null; $o = null;
+        if (preg_match('/^ORD-[A-F0-9]{8}$/', $ref)) {
+            $o = DB::one('SELECT o.*, i.full_name, i.email, i.phone FROM investor_orders o JOIN investors i ON i.id = o.investor_id WHERE o.ref = ?', [$ref]);
+            if ($o) $inv = Billing::forSource('order', $ref);
+        } elseif ($inv = Billing::byNumber($ref)) {
+            $ph = $inv['user_id'] ? (string)DB::val('SELECT phone FROM users WHERE id = ?', [$inv['user_id']]) : '';
+            $o = ['ref' => $ref, 'full_name' => (string)$inv['name'], 'email' => (string)$inv['email'], 'phone' => $ph, 'total' => $inv['amount']];
+        }
+        if (!$o || !Secret::verify('pay:' . $ref, $sig) || ($inv && $inv['status'] === 'void')) return Pages::notFound($q);
+        $p = $inv && !str_starts_with($ref, 'ORD-')
+            ? DB::one('SELECT * FROM payments WHERE invoice_id = ? ORDER BY (status = \'verified\') DESC, id DESC', [$inv['id']])
+            : DB::one('SELECT * FROM payments WHERE order_ref = ? ORDER BY id DESC', [$ref]);
+        $payable = $inv && $inv['status'] === 'sent';
+        $back = '/pay/' . $ref . '/?s=' . $sig;
+        // Choose (or change) the way to pay: the same step for every kind of bill.
+        $pickNow = $payable && (!$p || !Gateways::def((string)$p['method']) || (!Gateways::enabled((string)$p['method']) && $p['status'] !== 'verified') || isset($q->query['change']));
+        if ($payable && $q->isPost() && ($q->post['do'] ?? '') === 'choose') {
+            if ($r = self::guard($q, 'pay-submit', $back, 20, 3600)) return $r;
+            $pick = (string)($q->post['method'] ?? '');
+            $np = Billing::choose($inv, $pick);
+            if (!$np) return self::bounce($q, $back, ['_form' => self::m('This payment method is not available right now.', 'Ce moyen de paiement n’est pas disponible pour le moment.', 'وسيلة الدفع هذه غير متاحة حاليا.')]);
+            return Response::redirect(url($back));
+        }
+        if ($pickNow && !$q->isPost()) {
+            $ids = Gateways::enabledIds();
+            if (!$ids) return Pages::notFound($q);
+            $rows = [];
+            foreach ($ids as $id) $rows[] = ['id' => $id, 'name' => Gateways::short($id), 'online' => Gateways::online($id), 'icon' => Gateways::def($id)['icon'] ?? 'wallet', 'fee' => Gateways::fee($id, (float)$inv['amount']), 'line' => Gateways::feeBuyerLine($id, (float)$inv['amount'])];
+            return self::page($q, 'account.pay-choose', ['title' => tr3('Choose how to pay', 'Choisissez comment payer', 'اختر طريقة الدفع'), 'o' => $o, 'inv' => $inv, 'lines' => Billing::lines((int)$inv['id']), 'methods' => $rows, 'sig' => $sig, 'ref' => $ref, 'current' => $p['method'] ?? null]);
+        }
         if (!$p || !Gateways::def((string)$p['method'])) return Pages::notFound($q);
         $m = (string)$p['method'];
         $online = Gateways::online($m);
-        // A method the owner has switched off since the order was placed can no longer be paid; a verified payment stays viewable.
+        // A method the owner has switched off since the bill was made can no longer be paid; a verified payment stays viewable.
         if (!Gateways::enabled($m) && $p['status'] !== 'verified') return Pages::notFound($q);
-        $back = '/pay/' . $ref . '/?s=' . $sig;
         if ($q->isPost()) {
             if ($r = self::guard($q, 'pay-submit', $back, 12, 3600)) return $r;
             if ($online) {
@@ -384,6 +413,7 @@ final class Accounts
             if (($txn !== '' ? DB::one("SELECT id FROM payments WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']]) : null)) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل من قبل.');
             if ($e) return self::bounce($q, $back, $e);
             DB::q("UPDATE payments SET sender_gsm = ?, txn_ref = ?, status = 'pending', note = NULL WHERE id = ?", [$gsm, $txn, $p['id']]);
+            Billing::onSubmitted($p);
             $u = DB::one('SELECT id FROM users WHERE email = ?', [$o['email']]);
             $nm = Gateways::short($m);
             if ($u) Account::notify((int)$u['id'], tr3($nm . ' reference received', 'Référence ' . $nm . ' reçue', 'تم استلام مرجع ' . $nm), $p['ref'] . ' · ' . $txn, '/account/payments/');
@@ -394,7 +424,7 @@ final class Accounts
         $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]);
         // A buyer who lands here while the provider has not yet confirmed (webhook still on its way) gets one look-up, rate-limited.
         if ($online && $p['status'] === 'pending' && $p['provider_ref'] && !empty($q->query['w']) && (!$p['checked_at'] || time() - (int)strtotime($p['checked_at'] . ' UTC') > 6)) { Payments::sync($p, 'pay-page'); $p = DB::one('SELECT * FROM payments WHERE id = ?', [$p['id']]); }
-        return self::page($q, 'account.pay', ['title' => Gateways::short($m), 'o' => $o, 'p' => $p, 'm' => $m, 'online' => $online, 'ins' => $online ? null : Gateways::instructions($m, Payments::due($p)), 'sig' => $sig, 'waiting' => $online && $p['status'] === 'pending' && !empty($q->query['w'])]);
+        return self::page($q, 'account.pay', ['title' => Gateways::short($m), 'o' => $o, 'p' => $p, 'm' => $m, 'online' => $online, 'ins' => $online ? null : Gateways::instructions($m, Payments::due($p)), 'sig' => $sig, 'inv' => $inv, 'lines' => $inv ? Billing::lines((int)$inv['id']) : [], 'canChange' => $payable && $p['status'] !== 'verified', 'waiting' => $online && $p['status'] === 'pending' && !empty($q->query['w'])]);
     }
 
     /* ======================= admin: D17 verification + user roles ======================= */

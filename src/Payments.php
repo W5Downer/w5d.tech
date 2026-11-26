@@ -41,11 +41,11 @@ final class Payments
         return ['gsm' => self::gsm(), 'name' => self::holder(), 'amount' => $amount, 'note' => self::note()];
     }
 
-    public static function create(string $orderRef, int $investorId, float $amount, string $method = 'd17'): string
+    public static function create(string $orderRef, int $investorId, float $amount, string $method = 'd17', ?int $invoiceId = null): string
     {
         $ref = 'PAY-' . strtoupper(bin2hex(random_bytes(4)));
         $f = Gateways::fee($method, $amount);   // snapshot: later changes of the owner's rates never rewrite an existing payment
-        DB::insert('payments', ['ref' => $ref, 'order_ref' => $orderRef, 'investor_id' => $investorId, 'method' => $method, 'amount' => round($amount, 2), 'fee' => $f['fee'], 'fee_payer' => $f['payer'], 'charge' => $f['charge'], 'currency' => (string)Variables::get('money.currency', 'TND'), 'status' => 'pending']);
+        DB::insert('payments', ['ref' => $ref, 'order_ref' => $orderRef, 'investor_id' => $investorId ?: null, 'invoice_id' => $invoiceId, 'method' => $method, 'amount' => round($amount, 2), 'fee' => $f['fee'], 'fee_payer' => $f['payer'], 'charge' => $f['charge'], 'currency' => (string)Variables::get('money.currency', 'TND'), 'status' => 'pending']);
         return $ref;
     }
 
@@ -85,10 +85,15 @@ final class Payments
     {
         $p = DB::one('SELECT p.*, i.full_name, i.email, i.lang FROM payments p LEFT JOIN investors i ON i.id = p.investor_id WHERE p.id = ?', [$paymentId]);
         if (!$p || $p['status'] === 'verified') return false;
+        if (!empty($p['invoice_id']) && !$p['email'] && ($iv = Billing::byId((int)$p['invoice_id']))) { $p['email'] = $iv['email']; $p['full_name'] = $iv['name']; $p['lang'] = $iv['lang']; }
         $status = $ok ? 'verified' : 'rejected';
         $st = DB::q("UPDATE payments SET status = ?, note = ?, verified_by = ?, verified_at = CURRENT_TIMESTAMP WHERE id = ? AND status != 'verified'", [$status, $note !== '' ? mb_substr($note, 0, 300) : null, $by, $paymentId]);
         if ($st->rowCount() !== 1) return false;
         DB::q('UPDATE investor_orders SET status = ? WHERE ref = ?', [$ok ? 'paid' : 'awaiting_payment', $p['order_ref']]);
+        if (!empty($p['invoice_id'])) {
+            if ($ok) Billing::markPaid((int)$p['invoice_id'], $by, (string)$p['ref'], (string)$p['method']);
+            else Billing::onRejected($p);
+        }
         try {
             DB::insert('audit_log', ['country_id' => 'tn', 'actor' => $by, 'action' => 'payment.' . $status, 'subject' => (string)$p['ref'], 'detail' => mb_substr($p['order_ref'] . ' ' . $p['method'] . ' ' . $note, 0, 1000)]);
         } catch (\Throwable) {}

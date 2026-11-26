@@ -105,6 +105,14 @@ return [
         'levels'          => 4,
         'verify_per_10min' => 30,   // public lookups allowed per IP per 10 minutes
     ],
+    // Billing: invoices, plans, placement commission. Prices themselves live in the portal (Plans, Fees, Milestones), never here.
+    'billing' => [
+        'due_days'              => 14,    // payment term printed on invoices
+        'renew_days_before'     => 7,     // renewal invoice is issued this many days before a plan period ends
+        'grace_days'            => 7,     // an unpaid renewal lapses this many days after the period end
+        'placement_rate_pct'    => 0.0,   // default commission on a placement (percent of the contract value); owner sets it
+        'milestone_review_hours' => 72,   // target time for a reviewer to accept or dispute a delivered milestone
+    ],
     // QCM engine defaults (each round's own rules live in the portal: QCM rules).
     'qcm' => [
         'enabled'            => 1,

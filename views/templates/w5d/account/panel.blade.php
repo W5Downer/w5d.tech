@@ -5,7 +5,7 @@
 @section('content')
 @php
   $nav = [
-    'overview' => ['layout-dashboard', __('acct.overview')], 'orders' => ['coins', __('acct.orders')], 'payments' => ['smartphone', __('acct.payments')],
+    'overview' => ['layout-dashboard', __('acct.overview')], 'orders' => ['coins', __('acct.orders')], 'payments' => ['smartphone', __('acct.payments')], 'invoices' => ['receipt', tr3('Invoices', 'Factures', 'الفواتير')], 'plan' => ['layers', tr3('Plan & seats', 'Formule', 'الباقة')],
     'applications' => ['badge-check', __('acct.applications')], 'qcm' => ['list-checks', tr3('QCM rounds', 'Sessions QCM', 'جولات الاختبار')], 'certificates' => ['award', tr3('Certificates', 'Certificats', 'الشهادات')],
     'affiliate' => ['share-2', tr3('Affiliate', 'Affiliation', 'الإحالة')], 'notifications' => ['bell', __('acct.notifications')],
     'profile' => ['user-round', __('acct.profile')], 'security' => ['shield-check', __('acct.security')],
@@ -80,6 +80,12 @@
 
       @elseif($panel === 'certificates')
         @include('account.sec-certificates')
+
+      @elseif($panel === 'invoices')
+        @include('account.sec-invoices')
+
+      @elseif($panel === 'plan')
+        @include('account.sec-plan')
 
       @elseif($panel === 'affiliate')
         @include('account.sec-affiliate')

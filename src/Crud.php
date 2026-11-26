@@ -34,6 +34,14 @@ final class Crud
         return array_values(array_filter(self::ACTIONS, fn($a) => self::can($role, $slug, $a)));
     }
 
+    /** Optional per-row lock (resource key editable_if = SQL condition): false when the row may no longer be edited. */
+    public static function editable(string $slug, int $id): bool
+    {
+        $d = self::def($slug);
+        if (!$d || empty($d['editable_if'])) return true;
+        return (int)DB::val("SELECT COUNT(*) FROM {$d['table']} WHERE " . ($d['pk'] ?? 'id') . " = ? AND ({$d['editable_if']})", [$id]) > 0;
+    }
+
     public static function scopeCol(string $role, array $d): ?string { return $d['scope'][$role] ?? null; }
 
     public static function options(array $f): array

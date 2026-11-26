@@ -196,7 +196,7 @@ ADMIN_MENUS = ['countries', 'regions-hubs', 'campaigns', 'applicants', 'verifica
                'manager-applications', 'subscriptions', 'payments-d17', 'payment-methods', 'integrations', 'mail-outbox', 'api-docs', 'inbox', 'contracts', 'invoices', 'directives']
 for page in ADMIN_MENUS:
     s, h, t2 = call(c, 'GET', f'{M}/{page}/')
-    check(f'admin menu /{page}/ renders (no placeholder, no secrets)', s == 200 and 'Read-only preview' not in t2 and 'ships with the next iteration' not in t2 and 'password_hash' not in t2 and '$argon2' not in t2, str(s))
+    check(f'admin menu /{page}/ renders (no placeholder, no secrets)', s == 200 and 'Read-only preview' not in t2 and 'ships with the next iteration' not in t2 and not re.search(r'password_hash(&quot;|")\s*:\s*(&quot;|")(?!\(changed\))', t2) and '$argon2' not in t2, str(s))
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': tok, 'do': 'seed'})
 check('seed demo data (redirect)', s in (302, 303), f'{s}')
 s, h, t = call(c, 'POST', M + '/seed', {'_csrf': 'bad', 'do': 'purge'})

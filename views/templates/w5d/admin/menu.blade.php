@@ -244,6 +244,9 @@
 @elseif($v['kind'] === 'system')
   <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"><table class="w5-table"><tbody>@foreach($v['rows'] as $r)<tr><th scope="row" class="w-56">{{ $r['check'] }}</th><td>{{ $r['value'] }}</td></tr>@endforeach</tbody></table></div>
 
+@elseif(str_starts_with((string)$v['kind'], 'bill-'))
+  @include('admin.billing')
+
 @else
   <div class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 max-w-2xl">
     <p class="tier-badge">{{ __('admin.read_only') }}</p>

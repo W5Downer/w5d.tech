@@ -18,4 +18,20 @@
     @endforeach
   </ul>
 @endif
+@if(!empty($c_open))
+  <p class="mt-6 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm" role="status">{{ tr3('A fee is waiting for payment:', 'Des frais attendent le paiement :', 'رسوم بانتظار الدفع:') }}
+    @foreach($c_open as $o)<a class="btn-link ms-2" href="{{ url('/account/invoices/pay/' . $o['number'] . '/') }}">{{ $o['number'] }} · {{ number_format((float)$o['amount'], 2) }} {{ $o['currency'] }}</a>@endforeach</p>
+@endif
+@if(!empty($c_fees))
+  <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Assessment and certification fees', 'Frais d’évaluation et de certification', 'رسوم التقييم والاعتماد') }}</h2>
+  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300 max-w-3xl">{{ tr3('A fee gives you the attempt, never the result. A certificate is issued only after a passed round and it expires: re-certification is a separate fee.', 'Des frais donnent la tentative, jamais le résultat. Un certificat n’est délivré qu’après une session réussie et il expire : la recertification est un frais distinct.', 'الرسوم تمنح المحاولة لا النتيجة. لا تصدر الشهادة إلا بعد جولة ناجحة وهي تنتهي: إعادة الاعتماد رسم منفصل.') }}</p>
+  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+    @foreach($c_fees as $f)
+      <li class="rounded-2xl border border-slate-200 dark:border-white/10 p-4 flex flex-wrap items-center justify-between gap-3" data-fee="{{ $f['id'] }}">
+        <div><p class="eyebrow">{{ \W5D\Billing::kindLabel((string)$f['kind']) }}@if((int)$f['level'] > 0) · L{{ $f['level'] }}@endif</p><p class="font-semibold">{{ $f['name'] }}</p><p class="text-sm tabular-nums text-slate-600 dark:text-slate-300">{{ number_format((float)$f['amount'], 2) }} {{ \W5D\Billing::currency() }}</p></div>
+        <form method="post" action="{{ url('/account/fee/buy') }}">{!! csrf_field() !!}<input type="hidden" name="fee" value="{{ $f['id'] }}"><button class="btn-focus" type="submit">{{ tr3('Pay this fee', 'Payer ces frais', 'ادفع هذه الرسوم') }}</button></form>
+      </li>
+    @endforeach
+  </ul>
+@endif
 <p class="mt-8 text-xs text-slate-500">{{ __('limits.returns') }}</p>

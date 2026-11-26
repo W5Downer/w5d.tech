@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, Gateways, Gate, Integrations, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
+use W5D\{Billing, Content, Csrf, DB, Gateways, Gate, Integrations, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
 
 /** Investor flows: pledge checkout, daily subscription, management by reference + key. Money moves only through an enabled payment method (Gateways). */
 final class Checkout
@@ -95,8 +95,16 @@ final class Checkout
             DB::insert('investor_subscriptions', ['country_id' => 'tn', 'token' => hash('sha256', $token), 'investor_id' => $iid, 'order_ref' => $ref, 'parts_per_day' => $parts, 'macro_slug' => $macro ?: null, 'status' => 'active', 'next_charge_on' => $start->format('Y-m-d')]);
         }
         $payRef = $payUrl = $gwUrl = null;
+        // Every order is an invoice (the "bill" in the buyer's Invoices menu); paying it by any method settles both.
+        $invoice = null;
+        if ((float)$q['schedule']['total'] > 0) {
+            try {
+                $invoice = Billing::forOrder($ref, ['email' => $email, 'full_name' => Forms::str($in, 'full_name', 120), 'lang' => lang()], (float)$q['schedule']['total'],
+                    ['en' => $parts . ' part(s) per day × ' . $days . ' day(s), from ' . $start->format('Y-m-d'), 'fr' => $parts . ' part(s) par jour × ' . $days . ' jour(s), à partir du ' . $start->format('Y-m-d'), 'ar' => $parts . ' حصة يوميا × ' . $days . ' يوم، ابتداء من ' . $start->format('Y-m-d')]);
+            } catch (\Throwable) {}
+        }
         if ($method !== '') {
-            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total'], $method);
+            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total'], $method, $invoice ? (int)$invoice['id'] : null);
             $payUrl = Payments::link($ref);
             if (Gateways::online($method)) {
                 $prow = DB::one('SELECT * FROM payments WHERE ref = ?', [$payRef]);
@@ -108,12 +116,12 @@ final class Checkout
         Mail::send($mailTo, 'order_receipt', [
             'name' => Forms::str($in, 'full_name', 120), 'ref' => $ref, 'parts' => $parts, 'days' => $days, 'start' => $start->format('Y-m-d'),
             'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'key' => $token,
-            'pay_url' => $method !== '' ? Payments::absLink($ref) : null,
+            'pay_url' => $method !== '' ? Payments::absLink($ref) : ($invoice ? Billing::absLink($invoice) : null), 'invoice' => $invoice['number'] ?? null,
             'fee' => $fee && $fee['payer'] === 'buyer' ? $fee['fee'] : 0, 'due' => $fee ? $fee['charge'] : (float)$q['schedule']['total'],
             'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => ($method !== '' && !Gateways::online($method)) ? Gateways::instructions($method, (float)($fee['charge'] ?? $q['schedule']['total']))['rows'] : [],
         ], lang());
         if ($method !== '') Mail::staff('New order · ' . Gateways::short($method), ['order' => $ref, 'payment' => $payRef, 'amount' => number_format((float)$q['schedule']['total'], 2) . ' ' . $q['currency']]);
-        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'none: pledge recorded, no payment method chosen' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'fee' => $fee['fee'] ?? 0, 'fee_payer' => $fee['payer'] ?? null, 'amount_due' => $fee['charge'] ?? $q['schedule']['total'], 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'pay_url' => $payUrl, 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
+        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'none: pledge recorded, no payment method chosen' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'fee' => $fee['fee'] ?? 0, 'fee_payer' => $fee['payer'] ?? null, 'amount_due' => $fee['charge'] ?? $q['schedule']['total'], 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'invoice' => $invoice['number'] ?? null, 'pay_url' => $payUrl ?: ($invoice ? Billing::link($invoice) : null), 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
     }
 
     private static function back(string $mode): string { return $mode === 'subscription' ? '/subscription/' : '/checkout/'; }

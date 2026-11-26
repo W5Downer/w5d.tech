@@ -11,6 +11,7 @@ return [
         'affiliate_status'   => ['subject' => ['en' => 'Your W5D affiliate profile', 'fr' => 'Votre profil d’affilié W5D', 'ar' => 'ملف الإحالة الخاص بك في W5D']],
         'payout_status'      => ['subject' => ['en' => 'Your W5D affiliate payout', 'fr' => 'Votre paiement d’affilié W5D', 'ar' => 'صرف عمولة الإحالة في W5D']],
         'qcm_pass_status'    => ['subject' => ['en' => 'W5D QCM fee :ref: :status', 'fr' => 'Frais QCM W5D :ref : :status', 'ar' => 'رسوم اختبار W5D :ref: :status']],
+        'invoice_issued' => ['subject' => ['en' => 'W5D invoice :ref', 'fr' => 'Facture W5D :ref', 'ar' => 'فاتورة W5D :ref']],
         'form_ack'       => ['subject' => ['en' => 'We received your message', 'fr' => 'Nous avons bien reçu votre message', 'ar' => 'استلمنا رسالتك']],
     ],
 ];

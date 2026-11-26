@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds, Pwa};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds, Pwa, Bills};
 
 final class App
 {
@@ -125,9 +125,15 @@ final class App
         $r->any('/account/qcm/pay/{ref}', [Programs::class, 'qcmPay']);
         $r->post('/account/affiliate/apply', [Programs::class, 'affApply']);
         $r->post('/account/affiliate/payout', [Programs::class, 'affPayout']);
+        $r->post('/account/plan/buy', [Bills::class, 'planBuy']);
+        $r->post('/account/plan/manage', [Bills::class, 'planManage']);
+        $r->post('/account/fee/buy', [Bills::class, 'feeBuy']);
+        $r->get('/account/invoices/pay/{number}', [Bills::class, 'payMine']);
         $r->get('/account', [Accounts::class, 'panel']);
         $r->get('/account/{panel}', [Accounts::class, 'panel']);
         $r->any('/pay/{ref}', [Accounts::class, 'pay']);
+        $r->get('/invoice/{number}', [Bills::class, 'view']);
+        $r->get('/plans', [Bills::class, 'plans']);
         // online gateways: buyer return (signed, re-verified) and server-to-server webhooks (signature + re-verification; no session, no CSRF by design)
         $r->get('/pay/return/{ref}', [PayHooks::class, 'back']);
         $r->any('/pay/hook/{provider}', [PayHooks::class, 'hook']);
@@ -202,6 +208,7 @@ final class App
         $r->post($m . '/seed', [Admin::class, 'seed']);
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
         $r->post($m . '/payment-methods/save', [Admin::class, 'savePayMethods']);
+        $r->post($m . '/billing/act', [Bills::class, 'act']);
         $r->post($m . '/integrations/save', [Admin::class, 'saveIntegrations']);
         // QCM bank / review, affiliates, certificates (src/controllers/Programs.php)
         $r->get($m . '/qcm-bank/export', [Programs::class, 'bankExport']);
