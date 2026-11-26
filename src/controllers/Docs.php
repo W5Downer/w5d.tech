@@ -254,7 +254,7 @@ final class Docs
     public static function robots(Request $q): Response
     {
         // The portal mount is secret: it is never printed here (the portal answers noindex + no-store on its own).
-        $dis = ['/account/', '/for/owner/', '/for/admin/', '/for/leader/', '/pay/', '/language/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote', '/developers/', '/agents/', '/api/openapi.json', '/openapi.json', '/api/agents.json', '/api/docs/', '/llms.txt', '/llms-full.txt', '/.well-known/agents.json'];
+        $dis = ['/account/', '/for/owner/', '/for/admin/', '/for/leader/', '/pay/', '/language/', '/install/', '/cron/', '/lang/', '/subscription/manage/', '/checkout/done/', '/unsubscribe/', '/api/quote', '/developers/', '/agents/', '/api/openapi.json', '/openapi.json', '/api/agents.json', '/api/docs/', '/llms.txt', '/llms-full.txt', '/.well-known/agents.json'];
         $o = "User-agent: *\nAllow: /\n" . implode('', array_map(fn($d) => "Disallow: $d\n", $dis)) . "\nSitemap: " . Env::baseUrl() . "/sitemap.xml\n# API documentation is private: sign in and open API & Docs in your dashboard.\n";
         return Response::text($o, 'text/plain');
     }

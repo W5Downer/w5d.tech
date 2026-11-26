@@ -36,7 +36,7 @@ final class Integrations
     {
         $admin = self::adminPath();
         if ($path === $admin || str_starts_with($path, $admin . '/')) return false;
-        return !preg_match('#^/(account|pay|unsubscribe|subscription/manage|certificate|language|lang|api|_)(/|$)#', $path);
+        return !preg_match('#^/(account|pay|unsubscribe|subscription/manage|certificate|language|lang|api|install|cron|_)(/|$)#', $path);
     }
 
     /** Tracker configuration for this path, or null when nothing applies. Contains no secrets. */

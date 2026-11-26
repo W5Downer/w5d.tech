@@ -26,6 +26,9 @@ final class Env
         }
     }
 
+    /** In-memory values for the rest of this request (the browser installer uses them before .env exists). Real environment variables still win. */
+    public static function override(array $kv): void { foreach ($kv as $k => $v) self::$vars[(string)$k] = (string)$v; }
+
     public static function get(string $key, ?string $default = null): ?string
     {
         $real = getenv($key);

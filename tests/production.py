@@ -63,7 +63,7 @@ if sid:
 
 print('internals are not reachable')
 for p in ('/.env', '/.env.example', '/src/App.php', '/config/app.php', '/config/mail.php', '/storage/w5d.sqlite', '/storage/app.key', '/storage/logs/', '/data/content/pages/home.json', '/db/migrations/001_initial.sql',
-          '/README.md', '/LICENSE', '/bin/health.php', '/bin/preflight.php', '/tests/flows.py', '/tools/package.json', '/lang/en.php', '/views/templates/w5d/pages/page.blade.php', '/docs/pricing.md', '/.git/config', '/.git/HEAD', '/index.php', '/htdocs/index.php', '/vendor/autoload.php', '/phpinfo.php'):
+          '/README.md', '/LICENSE', '/bin/health.php', '/bin/preflight.php', '/bin/cron.php', '/bin/install.php', '/install/Wizard.php', '/install/Runner.php', '/src/Cron.php', '/src/InstallGate.php', '/storage/cron-state.json', '/storage/installed.lock', '/tests/flows.py', '/tools/package.json', '/lang/en.php', '/views/templates/w5d/pages/page.blade.php', '/docs/pricing.md', '/.git/config', '/.git/HEAD', '/index.php', '/htdocs/index.php', '/vendor/autoload.php', '/phpinfo.php'):
     s, h, t, c = get(p)
     leaked = any(x in t for x in ('<?php', 'OWNER_EMAIL=', 'SQLite format 3', '[core]', 'ref: refs/heads', 'APP_KEY'))
     check(f'{p} -> not served (got {s})', s in (301, 302, 303, 400, 403, 404) and not leaked and (s != 200))

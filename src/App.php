@@ -12,17 +12,19 @@ final class App
         Env::load(ROOT . '/.env');
         date_default_timezone_set('Africa/Tunis');
         mb_internal_encoding('UTF-8');
-        if (PHP_SAPI !== 'cli') Session::start();
+        if (PHP_SAPI !== 'cli' && !Cron::sessionless()) Session::start(); // the web-cron URL is a machine call: no cookie, no session
         else $_SESSION = $_SESSION ?? [];
-        if (PHP_SAPI !== 'cli') StaffAuth::alive();
-        if (PHP_SAPI !== 'cli') { try { Account::restore(); } catch (\Throwable $e) { /* DB not ready: stay a guest */ } }
+        if (PHP_SAPI !== 'cli' && session_status() === PHP_SESSION_ACTIVE) StaffAuth::alive();
+        if (PHP_SAPI !== 'cli' && session_status() === PHP_SESSION_ACTIVE && InstallGate::installed()) { try { Account::restore(); } catch (\Throwable $e) { /* DB not ready: stay a guest */ } }
         ViewEnv::share('currentLang', Lang::current());
     }
 
     public static function run(): void
     {
         self::boot();
-        self::handle(new Request())->send();
+        $req = new Request();
+        self::handle($req)->send();
+        Cron::afterRequest($req); // CRON_MODE=request: at most one due job, after the visitor already has the page
     }
 
     public static function handle(Request $req): Response
@@ -30,7 +32,7 @@ final class App
         Integrations::setPath($req->path);
         Affiliate::track($req); // ?ref=CODE: first-touch cookie + one click per visitor per day (never throws)
         try {
-            $res = self::router()->dispatch($req);
+            $res = InstallGate::intercept($req) ?? self::router()->dispatch($req);
         } catch (\Throwable $e) {
             @file_put_contents(ROOT . '/storage/logs/app-' . date('Y-m-d') . '.log', '[' . date('c') . '] ' . $e::class . ': ' . $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() . "\n", FILE_APPEND);
             $dbg = Env::get('APP_ENV') !== 'production';
@@ -68,6 +70,13 @@ final class App
     public static function router(): Router
     {
         $r = new Router();
+
+        // ---- browser installer: exists only while the site is not installed (and only if install/ is still on the server) ----
+        if (InstallGate::routesWanted()) {
+            foreach (['Fields', 'Runner', 'Wizard'] as $c) require_once ROOT . "/install/$c.php";
+            \W5D\Install\Wizard::routes($r);
+        }
+        $r->any('/cron/{token}', [Cron::class, 'endpoint']); // scheduled jobs for hosts without crontab (CRON_MODE=web)
 
         // ---- public site ----
         $r->get('/', [Pages::class, 'home']);
