@@ -164,64 +164,64 @@ final class Bills
             case 'invoice-new':
                 $email = mb_strtolower(trim((string)($q->post['email'] ?? ''))); $amount = round((float)str_replace(',', '.', (string)($q->post['amount'] ?? '0')), 2);
                 $desc = mb_substr(trim((string)($q->post['desc'] ?? '')), 0, 200);
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $desc === '' || $amount <= 0 || $amount > 100000000) { self::flashA('error', 'Give a valid e-mail, a description and an amount above 0.'); break; }
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $desc === '' || $amount <= 0 || $amount > 100000000) { self::flashA('error', tr3('Give a valid e-mail, a description and an amount above 0.', 'Indiquez un e-mail valide, une description et un montant supérieur à 0.', 'أدخل بريدا إلكترونيا صالحا ووصفا ومبلغا أكبر من 0.')); break; }
                 $inv = Billing::create(['kind' => 'manual', 'email' => $email, 'name' => mb_substr(trim((string)($q->post['name'] ?? '')), 0, 120), 'lines' => [[$desc, 1, $amount]], 'note' => $note ?: null]);
                 Admin::audit('invoice.create', (string)$inv['number'], 'manual ' . $amount . ' ' . $inv['currency'] . ' to ' . $email);
                 Billing::send($inv);
-                self::flashA('ok', $inv['number'] . ' created and e-mailed.'); break;
+                self::flashA('ok', $inv['number'] . tr3(' created and e-mailed.', ' créée et envoyée par e-mail.', ' أُنشئت وأُرسلت بالبريد.')); break;
             case 'invoice-void':
-                if (mb_strlen($note) < 3) { self::flashA('error', 'Give a short reason to void an invoice.'); break; }
+                if (mb_strlen($note) < 3) { self::flashA('error', tr3('Give a short reason to void an invoice.', 'Donnez une courte raison pour annuler une facture.', 'اذكر سببا قصيرا لإلغاء الفاتورة.')); break; }
                 $done = Billing::void($id, $by, $note);
-                self::flashA($done ? 'ok' : 'error', $done ? 'Invoice voided.' : 'Only an open invoice can be voided.');
+                self::flashA($done ? 'ok' : 'error', $done ? tr3('Invoice voided.', 'Facture annulée.', 'أُلغيت الفاتورة.') : tr3('Only an open invoice can be voided.', 'Seule une facture ouverte peut être annulée.', 'لا يمكن إلغاء إلا فاتورة مفتوحة.'));
                 break;
             case 'invoice-send':
                 $inv = Billing::byId($id);
-                self::flashA($inv && $inv['status'] === 'sent' && Billing::send($inv, 'reminder') ? 'ok' : 'error', $inv ? $inv['number'] . ' sent again.' : 'Not found.'); break;
+                self::flashA($inv && $inv['status'] === 'sent' && Billing::send($inv, 'reminder') ? 'ok' : 'error', $inv ? $inv['number'] . tr3(' sent again.', ' renvoyée.', ' أُعيد إرسالها.') : tr3('Not found.', 'Introuvable.', 'غير موجود.')); break;
             case 'invoice-paid':
-                if (!Auth::can('billing.settle')) { self::flashA('error', 'Only the owner can record a payment received outside the platform.'); break; }
-                if (mb_strlen($note) < 5) { self::flashA('error', 'Say how the money was received (at least 5 characters): it is kept in the audit log.'); break; }
+                if (!Auth::can('billing.settle')) { self::flashA('error', tr3('Only the owner can record a payment received outside the platform.', 'Seul le propriétaire peut enregistrer un paiement reçu hors de la plateforme.', 'المالك وحده يستطيع تسجيل دفعة وصلت خارج المنصة.')); break; }
+                if (mb_strlen($note) < 5) { self::flashA('error', tr3('Say how the money was received (at least 5 characters): it is kept in the audit log.', 'Dites comment l’argent a été reçu (5 caractères au minimum) : cela reste dans le journal d’audit.', 'اذكر كيف وصل المال (5 أحرف على الأقل): يُحفظ ذلك في سجل التدقيق.')); break; }
                 $inv = Billing::byId($id);
-                if ($inv && Billing::markPaid($id, $by, null, 'offline')) { Admin::audit('invoice.paid_offline', (string)$inv['number'], $note); self::flashA('ok', $inv['number'] . ' recorded as paid.'); }
-                else self::flashA('error', 'Only an open invoice can be marked as paid.');
+                if ($inv && Billing::markPaid($id, $by, null, 'offline')) { Admin::audit('invoice.paid_offline', (string)$inv['number'], $note); self::flashA('ok', $inv['number'] . tr3(' recorded as paid.', ' enregistrée comme payée.', ' سُجلت كمدفوعة.')); }
+                else self::flashA('error', tr3('Only an open invoice can be marked as paid.', 'Seule une facture ouverte peut être marquée comme payée.', 'لا يمكن وسم إلا فاتورة مفتوحة كمدفوعة.'));
                 break;
             case 'ms-invoice':
                 [$inv, $err] = Billing::invoiceMilestone($id);
                 if (!$inv) { self::flashA('error', (string)$err); break; }
                 Admin::audit('milestone.invoice', Billing::milestoneRef($id), (string)$inv['number']); Billing::send($inv);
-                self::flashA('ok', $inv['number'] . ' issued and e-mailed to the client.'); break;
+                self::flashA('ok', $inv['number'] . tr3(' issued and e-mailed to the client.', ' émise et envoyée par e-mail au client.', ' صدرت وأُرسلت بالبريد إلى العميل.')); break;
             case 'ms-deliver':
-                if (mb_strlen($note) < 5) { self::flashA('error', 'Describe what was delivered (at least 5 characters).'); break; }
+                if (mb_strlen($note) < 5) { self::flashA('error', tr3('Describe what was delivered (at least 5 characters).', 'Décrivez ce qui a été livré (5 caractères au minimum).', 'صف ما سُلّم (5 أحرف على الأقل).')); break; }
                 $st = DB::q("UPDATE milestones SET status = 'delivered', delivered_by = ?, delivered_at = CURRENT_TIMESTAMP, delivery_note = ?, reviewed_by = NULL, reviewed_at = NULL, review_note = NULL WHERE id = ? AND status = 'funded'", [$by, $note, $id]);
-                if ($st->rowCount() === 1) { Admin::audit('milestone.deliver', Billing::milestoneRef($id), $note); self::flashA('ok', 'Marked as delivered: a reviewer must now accept it.'); }
-                else self::flashA('error', 'Only a funded milestone can be delivered: the client’s payment must be verified first.');
+                if ($st->rowCount() === 1) { Admin::audit('milestone.deliver', Billing::milestoneRef($id), $note); self::flashA('ok', tr3('Marked as delivered: a reviewer must now accept it.', 'Marqué comme livré : un relecteur doit maintenant l’accepter.', 'وُسمت كمسلَّمة: يجب أن يقبلها مراجع الآن.')); }
+                else self::flashA('error', tr3('Only a funded milestone can be delivered: the client’s payment must be verified first.', 'Seul un jalon financé peut être livré : le paiement du client doit d’abord être vérifié.', 'لا تُسلَّم إلا مرحلة ممولة: يجب التحقق من دفعة العميل أولا.'));
                 break;
             case 'ms-release':
             case 'ms-dispute':
                 $m = DB::one("SELECT m.*, e.client_email, e.title AS etitle FROM milestones m JOIN service_engagements e ON e.id = m.engagement_id WHERE m.id = ? AND m.status = 'delivered'", [$id]);
-                if (!$m) { self::flashA('error', 'Only a delivered milestone can be reviewed.'); break; }
+                if (!$m) { self::flashA('error', tr3('Only a delivered milestone can be reviewed.', 'Seul un jalon livré peut être relu.', 'لا تُراجع إلا مرحلة مسلَّمة.')); break; }
                 $release = $do === 'ms-release';
-                if (!$release && mb_strlen($note) < 5) { self::flashA('error', 'Say what is missing (at least 5 characters).'); break; }
-                if ($release && Auth::role() !== 'owner' && mb_strtolower((string)$m['delivered_by']) === mb_strtolower($by)) { self::flashA('error', 'Four eyes: the person who delivered cannot also release. Ask another reviewer.'); break; }
+                if (!$release && mb_strlen($note) < 5) { self::flashA('error', tr3('Say what is missing (at least 5 characters).', 'Dites ce qui manque (5 caractères au minimum).', 'اذكر ما ينقص (5 أحرف على الأقل).')); break; }
+                if ($release && Auth::role() !== 'owner' && mb_strtolower((string)$m['delivered_by']) === mb_strtolower($by)) { self::flashA('error', tr3('Four eyes: the person who delivered cannot also release. Ask another reviewer.', 'Quatre yeux : la personne qui a livré ne peut pas aussi valider. Demandez à un autre relecteur.', 'عينان إضافيتان: من سلّم لا يستطيع أن يعتمد أيضا. اطلب من مراجع آخر.')); break; }
                 DB::q('UPDATE milestones SET status = ?, reviewed_by = ?, reviewed_at = CURRENT_TIMESTAMP, review_note = ? WHERE id = ?', [$release ? 'released' : 'disputed', $by, $note ?: null, $id]);
                 Admin::audit($release ? 'milestone.release' : 'milestone.dispute', Billing::milestoneRef($id), $note);
                 if ($uu = DB::one('SELECT id FROM users WHERE email = ?', [mb_strtolower((string)$m['client_email'])])) Account::notify((int)$uu['id'], $release ? tr3('Milestone accepted', 'Jalon accepté', 'قُبلت المرحلة') : tr3('Milestone needs more work', 'Jalon à reprendre', 'المرحلة تحتاج مزيدا من العمل'), (string)$m['etitle'] . ' · ' . $m['title'], '/account/invoices/');
                 if ($release && !DB::val("SELECT COUNT(*) FROM milestones WHERE engagement_id = ? AND status NOT IN ('released','cancelled')", [$m['engagement_id']])) DB::q("UPDATE service_engagements SET status = 'completed' WHERE id = ?", [$m['engagement_id']]);
-                self::flashA('ok', Billing::milestoneRef($id) . ($release ? ' released.' : ' sent back.')); break;
+                self::flashA('ok', Billing::milestoneRef($id) . ($release ? tr3(' released.', ' validé.', ' اعتُمدت.') : tr3(' sent back.', ' renvoyé pour reprise.', ' أُعيدت للتعديل.'))); break;
             case 'ms-reopen':
                 $st = DB::q("UPDATE milestones SET status = 'funded' WHERE id = ? AND status = 'disputed'", [$id]);
-                self::flashA($st->rowCount() === 1 ? 'ok' : 'error', $st->rowCount() === 1 ? 'Back to funded: the team can deliver again.' : 'Only a disputed milestone can be reopened.'); break;
+                self::flashA($st->rowCount() === 1 ? 'ok' : 'error', $st->rowCount() === 1 ? tr3('Back to funded: the team can deliver again.', 'De nouveau financé : l’équipe peut livrer à nouveau.', 'عادت إلى حالة ممولة: يستطيع الفريق التسليم من جديد.') : tr3('Only a disputed milestone can be reopened.', 'Seul un jalon contesté peut être rouvert.', 'لا تُعاد فتح إلا مرحلة متنازع عليها.')); break;
             case 'pl-invoice':
                 [$inv, $err] = Billing::invoicePlacement($id);
                 if (!$inv) { self::flashA('error', (string)$err); break; }
                 Admin::audit('placement.invoice', (string)$inv['source_ref'], (string)$inv['number'] . ' ' . $inv['amount']); Billing::send($inv);
-                self::flashA('ok', $inv['number'] . ' issued and e-mailed to the client.'); break;
+                self::flashA('ok', $inv['number'] . tr3(' issued and e-mailed to the client.', ' émise et envoyée par e-mail au client.', ' صدرت وأُرسلت بالبريد إلى العميل.')); break;
             case 'pl-cancel':
                 $st = DB::q("UPDATE placements SET status = 'cancelled' WHERE id = ? AND status = 'proposed'", [$id]);
-                self::flashA($st->rowCount() === 1 ? 'ok' : 'error', $st->rowCount() === 1 ? 'Placement cancelled.' : 'Only a placement not yet invoiced can be cancelled.'); break;
+                self::flashA($st->rowCount() === 1 ? 'ok' : 'error', $st->rowCount() === 1 ? tr3('Placement cancelled.', 'Placement annulé.', 'أُلغي التوظيف.') : tr3('Only a placement not yet invoiced can be cancelled.', 'Seul un placement non encore facturé peut être annulé.', 'لا يُلغى إلا توظيف لم تصدر له فاتورة بعد.')); break;
             case 'sub-cancel':
                 $s = DB::one("SELECT * FROM plan_subscriptions WHERE id = ? AND status IN ('active','pending')", [$id]);
-                if ($s) { DB::q("UPDATE plan_subscriptions SET status = 'cancelled' WHERE id = ?", [$id]); Admin::audit('plan.cancel', (string)$s['ref'], $note); self::flashA('ok', $s['ref'] . ' cancelled.'); }
-                else self::flashA('error', 'Not found.');
+                if ($s) { DB::q("UPDATE plan_subscriptions SET status = 'cancelled' WHERE id = ?", [$id]); Admin::audit('plan.cancel', (string)$s['ref'], $note); self::flashA('ok', $s['ref'] . tr3(' cancelled.', ' annulé.', ' أُلغي.')); }
+                else self::flashA('error', tr3('Not found.', 'Introuvable.', 'غير موجود.'));
                 break;
         }
         return Response::redirect($back);
