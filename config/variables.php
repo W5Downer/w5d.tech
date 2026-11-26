@@ -98,6 +98,7 @@ return [
         'hold_days'      => 14,    // days a commission stays pending before it becomes payable
         'min_payout'     => 50.0,  // TND: smallest payout that can be requested
         'auto_approve'   => 0,     // 1 = new affiliates are active at once; 0 = a person approves them
+        'share_min_parts' => 1,    // paid parts a subscriber needs before the site's Share buttons add their ?ref= code
     ],
     // Certificates: issued only by a passed certification/upgrade QCM round (or by hand by the owner), verifiable by anyone with the code.
     'cert' => [

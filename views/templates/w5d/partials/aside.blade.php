@@ -17,7 +17,7 @@
 </aside>
 
 @php
-  $shUrl = \W5D\Env::baseUrl() . url($canonicalPath ?? '/');
+  $shUrl = \W5D\Affiliate::tagUrl(\W5D\Env::baseUrl() . url($canonicalPath ?? '/'));
   $shText = html_entity_decode(strip_tags($__env->yieldContent('title', 'W5D')), ENT_QUOTES);
   $shLinks = \W5D\Social::enabled() ? \W5D\Social::links($shUrl, $shText) : [];
   $shIds = \W5D\Social::ids();
