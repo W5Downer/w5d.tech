@@ -38,7 +38,7 @@ final class Programs
                 'q_hist' => DB::all('SELECT id, purpose, level, service_slug, status, score_pct, passed, correct, total, started_at FROM qcm_attempts WHERE user_id = ? ORDER BY id DESC LIMIT 15', [$uid]),
                 'q_tasks' => DB::all('SELECT id, title, service_slug, status, note, created_at FROM qcm_tasks WHERE user_id = ? ORDER BY id DESC LIMIT 10', [$uid])];
         }
-        if ($panel === 'certificates') return ['c_rows' => Certificate::forUser($uid), 'c_level' => Certificate::level($uid), 'c_fees' => Billing::certFees(), 'c_open' => DB::all("SELECT number, amount, currency FROM invoices WHERE kind = 'cert' AND status = 'sent' AND user_id = ? ORDER BY id DESC LIMIT 5", [$uid])];
+        if ($panel === 'certificates') return ['c_rows' => Certificate::forUser($uid), 'c_renew' => Certificate::renewals($uid), 'c_level' => Certificate::level($uid), 'c_fees' => Billing::certFees(), 'c_open' => DB::all("SELECT number, amount, currency FROM invoices WHERE kind = 'cert' AND status = 'sent' AND user_id = ? ORDER BY id DESC LIMIT 5", [$uid])];
         $a = Affiliate::forUser($uid);
         return ['a_on' => Affiliate::enabled(), 'a' => $a, 'a_stats' => $a ? Affiliate::stats((int)$a['id']) : null,
             'a_link' => $a ? Affiliate::link((string)$a['code'], '/') : null,

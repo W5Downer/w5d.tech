@@ -104,6 +104,7 @@ return [
     'cert' => [
         'validity_months' => 24,
         'levels'          => 4,
+        'recert_warn_days' => 60,   // the account shows a re-certification prompt this many days before a certificate expires (0 = only after)
         'verify_per_10min' => 30,   // public lookups allowed per IP per 10 minutes
     ],
     // Billing: invoices, plans, placement commission. Prices themselves live in the portal (Plans, Fees, Milestones), never here.

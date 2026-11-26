@@ -93,6 +93,27 @@ final class Certificate
         return DB::all('SELECT * FROM certificates WHERE user_id = ? ORDER BY id DESC', [$userId]);
     }
 
+    /**
+     * Certificates that need renewing: still marked valid but expired, or expiring within `cert.recert_warn_days`.
+     * A renewed certificate is revoked by issue(), so it never shows up here twice. Each row gets `state` (expiring|expired),
+     * `days` (days left, negative once expired) and `fee` (the active re-certification fee for its level, or null).
+     * @return array<int,array>
+     */
+    public static function renewals(int $userId): array
+    {
+        $warn = max(0, (int)Variables::get('cert.recert_warn_days', 60));
+        $out = [];
+        foreach (DB::all("SELECT * FROM certificates WHERE user_id = ? AND status = 'valid' AND expires_at IS NOT NULL AND expires_at <> '' ORDER BY expires_at", [$userId]) as $c) {
+            $days = (int)floor((strtotime((string)$c['expires_at']) - time()) / 86400);
+            if ($days > $warn) continue;
+            $c['state'] = $days < 0 ? 'expired' : 'expiring';
+            $c['days'] = $days;
+            $c['fee'] = Billing::recertFee((int)$c['level']);
+            $out[] = $c;
+        }
+        return $out;
+    }
+
     /** Highest level currently valid for the user (0 = none). */
     public static function level(int $userId): int
     {

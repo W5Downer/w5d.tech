@@ -1,5 +1,21 @@
 <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">{{ tr3('Each certificate has a public code. Anyone can verify it online; the verifier shows a masked name, the service, the level, the score and the dates, never your e-mail address.', 'Chaque certificat a un code public. Chacun peut le vérifier en ligne ; le vérificateur affiche un nom masqué, le service, le niveau, le score et les dates, jamais votre e-mail.', 'لكل شهادة رمز عام. يمكن لأي شخص التحقق منها عبر الإنترنت؛ تعرض صفحة التحقق اسما مقنّعا والخدمة والمستوى والنتيجة والتواريخ، ولا تعرض بريدك أبدا.') }}</p>
 <p class="mt-2 text-sm"><span class="tier-badge">{{ tr3('Highest valid level', 'Niveau valide le plus élevé', 'أعلى مستوى صالح') }}: {{ $c_level ? 'L' . $c_level : '—' }}</span></p>
+@if(!empty($c_renew))
+  <div class="mt-6 space-y-3" data-recert-prompts>
+  @foreach($c_renew as $r)
+    <div class="rounded-2xl border {{ $r['state'] === 'expired' ? 'border-red-500/40 bg-red-500/5' : 'border-amber-500/40 bg-amber-500/10' }} p-4" role="status" data-recert="{{ $r['code'] }}" data-recert-state="{{ $r['state'] }}">
+      <p class="font-semibold">{{ \W5D\Certificate::serviceTitle((string)$r['service_slug']) }} · L{{ $r['level'] }}</p>
+      <p class="mt-1 text-sm">@if($r['state'] === 'expired'){{ tr3('This certificate expired on', 'Ce certificat a expiré le', 'انتهت صلاحية هذه الشهادة في') }} {{ substr((string)$r['expires_at'], 0, 10) }}. {{ tr3('Anyone verifying the code now sees it as expired.', 'Toute personne qui vérifie le code le voit désormais comme expiré.', 'أي شخص يتحقق من الرمز الآن يراها منتهية.') }}@else{{ tr3('This certificate expires on', 'Ce certificat expire le', 'تنتهي صلاحية هذه الشهادة في') }} {{ substr((string)$r['expires_at'], 0, 10) }} ({{ $r['days'] }} {{ tr3('days left', 'jours restants', 'يوما متبقيا') }}).@endif {{ tr3('Renewing needs a new passed round: paying a fee only gives the attempt, never the result.', 'Le renouvellement exige une nouvelle session réussie : des frais ne donnent que la tentative, jamais le résultat.', 'التجديد يتطلب جولة جديدة ناجحة: الرسوم تمنح المحاولة فقط وليس النتيجة.') }}</p>
+      <div class="mt-3 flex flex-wrap items-center gap-3">
+        @if($r['fee'])
+          <form method="post" action="{{ url('/account/fee/buy') }}">{!! csrf_field() !!}<input type="hidden" name="fee" value="{{ $r['fee']['id'] }}"><button class="btn-focus" type="submit">{{ tr3('Pay the re-certification fee', 'Payer les frais de recertification', 'ادفع رسوم إعادة الاعتماد') }} · {{ number_format((float)$r['fee']['amount'], 2) }} {{ \W5D\Billing::currency() }}</button></form>
+        @endif
+        <a class="btn-ghost" href="{{ url('/account/qcm/') }}">{{ icon('list-checks', 'w-4 h-4') }} {{ tr3('Go to QCM rounds', 'Aller aux sessions QCM', 'اذهب إلى جولات الاختبار') }}</a>
+      </div>
+    </div>
+  @endforeach
+  </div>
+@endif
 @if(!$c_rows)
   <p class="mt-6 rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-6 text-slate-600 dark:text-slate-300">{{ tr3('No certificate yet. Pass a certification round to get your first one.', 'Pas encore de certificat. Réussissez une session de certification pour obtenir le premier.', 'لا شهادة بعد. انجح في جولة اعتماد لتحصل على الأولى.') }}</p>
   <p class="mt-4"><a class="btn-peak" href="{{ url('/account/qcm/') }}">{{ icon('list-checks', 'w-4 h-4') }} {{ tr3('Go to QCM rounds', 'Aller aux sessions QCM', 'اذهب إلى جولات الاختبار') }}</a></p>
