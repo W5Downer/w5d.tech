@@ -6,9 +6,9 @@
   "ar": "إتمام الشراء — احصل على حصة اليوم"
  },
  "description": {
-  "en": "Three-step checkout wizard: your details, your parts, review and confirm. Demo mode.",
-  "fr": "Parcours de paiement en trois étapes : vos coordonnées, vos parts, puis vérification et confirmation. Mode démo.",
-  "ar": "معالج إتمام شراء من ثلاث خطوات: بياناتك، وحصصك، ثم المراجعة والتأكيد. الوضع التجريبي."
+  "en": "Checkout in easy steps: your details, your parts, then payment. The total and any fee are shown before you confirm.",
+  "fr": "Paiement en étapes simples : vos coordonnées, vos parts, puis le règlement. Le total et les frais éventuels sont affichés avant de confirmer.",
+  "ar": "إتمام الشراء بخطوات سهلة: بياناتك، ثم حصصك، ثم الدفع. يُعرض المجموع وأي رسوم قبل التأكيد."
  },
  "sections": [
   {
@@ -44,9 +44,9 @@
     "ar": "إتمام الشراء"
    },
    "note": {
-    "en": "Demo mode: no payment is taken.",
-    "fr": "Mode démo : aucun paiement n’est effectué.",
-    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+    "en": "You see the full amount and any fee before you confirm.",
+    "fr": "Vous voyez le montant total et les frais éventuels avant de confirmer.",
+    "ar": "ترى المبلغ الكامل وأي رسوم قبل أن تؤكد."
    }
   },
   {
@@ -107,9 +107,9 @@
       "ar": "هل يُخصم مال عند التأكيد؟"
      },
      "a": {
-      "en": "Only if payments are open. With D17 you send the transfer yourself and a person verifies it. In demo mode nothing moves.",
-      "fr": "Seulement si les paiements sont ouverts. Avec D17, vous envoyez le virement et une personne le vérifie. En mode démo, rien ne bouge.",
-      "ar": "فقط إن كان الدفع مفتوحا. مع D17 ترسل التحويل ويتحقق منه شخص. في الوضع التجريبي لا يتحرك شيء."
+      "en": "Not by us at the moment you confirm. You then pay with the method you chose: with D17 or a bank transfer you send the amount yourself and a person verifies it; with Flouci, Konnect or Paymee you pay on their secure page.",
+      "fr": "Pas par nous au moment de la confirmation. Vous payez ensuite avec le moyen choisi : avec D17 ou un virement, vous envoyez le montant vous-même et une personne le vérifie ; avec Flouci, Konnect ou Paymee, vous payez sur leur page sécurisée.",
+      "ar": "ليس منا لحظة التأكيد. ثم تدفع بالوسيلة التي اخترتها: مع D17 أو التحويل البنكي ترسل المبلغ بنفسك ويتحقق منه شخص؛ ومع Flouci أو Konnect أو Paymee تدفع على صفحتهم الآمنة."
      }
     },
     {

@@ -124,7 +124,8 @@ final class Admin
         foreach (ACL::matrix()['menus'] as $m) if ($m['slug'] === $slug) $menu = $m;
         if (!$menu) return Response::html(view('pages.404', ['title' => '404']), 404);
         if ($r = Auth::require($menu['perm'])) return $r;
-        $view = Crud::has($slug) ? self::vCrud($slug) : match ($slug) {
+        $custom = match ($slug) { 'invoices' => Bills::vInvoices(), 'my-invoices' => Bills::vMine(), 'plan-subscriptions' => Bills::vPlanSubs(), 'milestones' => Bills::vMilestones(), 'placements' => Bills::vPlacements(), 'images' => Media::view(), default => null };
+        $view = $custom ?? (Crud::has($slug) ? self::vCrud($slug) : match ($slug) {
             'progressive-pricing' => self::vPricing(),
             'qcm-bank' => Programs::vBank($q),
             'qcm-review' => Programs::vReview(),
@@ -166,7 +167,7 @@ final class Admin
             'reports' => self::vTable('SELECT day, country_id AS country, macro_slug AS macro, registered, verified, certified, reports_submitted AS submitted, reports_approved AS approved FROM rollups_daily ORDER BY day DESC, macro_slug LIMIT 300'),
             'compliance' => self::vTable('SELECT id, country_id AS country, subject_ref AS subject, purpose, granted, created_at FROM consents ORDER BY id DESC LIMIT 300'),
             default => ['kind' => 'preview'],
-        };
+        });
         return self::page('admin.menu', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'v' => $view, 'flash' => $_SESSION['_admin_flash'] ?? null, 'back' => $slug]);
     }
 
@@ -201,7 +202,10 @@ final class Admin
         if ($g instanceof Response) return $g;
         [$menu, $d] = $g;
         $row = null;
-        if ($id) { $row = Crud::find($slug, $id, Auth::role(), self::uid()); if (!$row) return Response::html(view('pages.404', ['title' => '404']), 404); }
+        if ($id) {
+            $row = Crud::find($slug, $id, Auth::role(), self::uid()); if (!$row) return Response::html(view('pages.404', ['title' => '404']), 404);
+            if (!Crud::editable($slug, $id)) { self::flash('error', 'This record is locked: it has already been invoiced or closed.'); return Response::redirect(admin_url($slug . '/')); }
+        }
         $res = self::page('admin.crud-form', ['title' => t($menu['label']), 'active' => $slug, 'menu' => $menu, 'def' => $d, 'slug' => $slug, 'row' => $row, 'errors' => $_SESSION['_errors'] ?? [], 'flash' => $_SESSION['_admin_flash'] ?? null, 'role' => Auth::role()]);
         unset($_SESSION['_errors'], $_SESSION['_old']);
         return $res;
@@ -222,6 +226,7 @@ final class Admin
         if (!Csrf::check($q)) { self::flash('error', __('msg.csrf')); return Response::redirect($list); }
         $role = Auth::role(); $uid = self::uid();
         if ($id && !Crud::find($slug, $id, $role, $uid)) { self::flash('error', __('ux.crud_missing')); return Response::redirect($list); }
+        if ($id && !Crud::editable($slug, $id)) { self::flash('error', 'This record is locked: it has already been invoiced or closed.'); return Response::redirect($list); }
         [$vals, $err] = Crud::validate($d, $q->post, $role, $uid, $id === 0);
         if ($err) {
             $_SESSION['_errors'] = $err;
@@ -267,7 +272,7 @@ final class Admin
     private static function vPayments(): array
     {
         try {
-            $rows = DB::available() ? DB::all('SELECT p.id, p.ref, p.order_ref, i.full_name, i.email, p.method, p.provider_ref, p.gateway_status, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.verified_by, p.created_at FROM payments p LEFT JOIN investors i ON i.id = p.investor_id ORDER BY (p.status = \'pending\' AND p.txn_ref IS NOT NULL) DESC, p.id DESC LIMIT 300') : [];
+            $rows = DB::available() ? DB::all('SELECT p.id, p.ref, p.order_ref, COALESCE(i.full_name, v.name) AS full_name, COALESCE(i.email, v.email) AS email, v.number AS invoice, p.method, p.provider_ref, p.gateway_status, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.verified_by, p.created_at FROM payments p LEFT JOIN investors i ON i.id = p.investor_id LEFT JOIN invoices v ON v.id = p.invoice_id ORDER BY (p.status = \'pending\' AND p.txn_ref IS NOT NULL) DESC, p.id DESC LIMIT 300') : [];
         } catch (\Throwable $e) { return ['kind' => 'payments', 'rows' => [], 'error' => $e->getMessage()]; }
         return ['kind' => 'payments', 'rows' => $rows, 'enabled' => \W5D\Payments::enabled(), 'gsm' => \W5D\Payments::gsm()];
     }
@@ -421,6 +426,7 @@ final class Admin
             ['check' => 'PHP', 'value' => PHP_VERSION], ['check' => 'Database', 'value' => DB::available() ? 'connected (' . Env::get('DB_DRIVER', 'sqlite') . ')' : 'unavailable'],
             ['check' => 'Migrations', 'value' => implode(', ', $mig) ?: 'none'], ['check' => 'Payment mode', 'value' => (string)Env::get('PAYMENT_MODE', 'demo')], ['check' => 'D17 (Tunisia)', 'value' => \W5D\Payments::enabled() ? 'enabled → ' . \W5D\Payments::gsm() : 'disabled'], ['check' => 'Mail driver', 'value' => (string)Env::get('MAIL_DRIVER', 'log') . (Env::get('MAIL_DRIVER', 'log') === 'smtp' ? ' → ' . Env::get('MAIL_HOST', '?') : '')], ['check' => 'APP_URL', 'value' => (string)(Env::get('APP_URL') ?: 'EMPTY (derived from request)')], ['check' => 'APP_ENV', 'value' => (string)Env::get('APP_ENV', '?')],
             ['check' => 'storage/ writable', 'value' => is_writable(ROOT . '/storage') ? 'yes' : 'NO'], ['check' => 'Content', 'value' => Content::count('services') . ' services · ' . Content::count('projects') . ' projects · ' . Content::count('pages') . ' pages'],
+            ['check' => 'Image library (gd + WebP / zip)', 'value' => (\W5D\Images::gdOk() ? 'gd+WebP ready' : 'gd/WebP MISSING: pictures cannot be converted') . ' · ' . (\W5D\Images::zipOk() ? 'zip ready' : 'zip missing: single pictures only')],
             ['check' => 'Compiled assets', 'value' => is_file(ROOT . '/htdocs/assets/_base/css/tailwind.css') ? 'present' : 'missing (run tools/build.mjs)'],
         ];
         return ['kind' => 'system', 'rows' => $rows, 'can_seed' => Auth::can('system')];

@@ -32,7 +32,7 @@
     </form>
     @endif
     <p class="mt-8 text-sm"><a class="btn-link" href="{{ url('/status/') }}">{{ tr3('See the funding status', 'Voir le statut du financement', 'اطّلع على حالة التمويل') }}</a> · <a class="btn-link" href="{{ url('/trust/statement/') }}">{{ __('cta.read_limits') }}</a></p>
-    <p class="mt-3 text-xs text-slate-500">{{ tr3('The legal wording is under review by a Tunisian lawyer and accountant; verify before you rely on it.', 'La formulation juridique est en cours de revue par un avocat et un expert-comptable tunisiens ; vérifiez avant de vous y fier.', 'الصياغة القانونية قيد مراجعة محامٍ ومحاسب تونسيين؛ تحقق قبل الاعتماد عليها.') }}</p>
+    <p class="mt-3 text-xs text-slate-600 dark:text-slate-400">{{ tr3('The legal wording is under review by a Tunisian lawyer and accountant; verify before you rely on it.', 'La formulation juridique est en cours de revue par un avocat et un expert-comptable tunisiens ; vérifiez avant de vous y fier.', 'الصياغة القانونية قيد مراجعة محامٍ ومحاسب تونسيين؛ تحقق قبل الاعتماد عليها.') }}</p>
   </div>
 </section>
 @endsection

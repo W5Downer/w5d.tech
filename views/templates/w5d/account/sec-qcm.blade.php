@@ -41,7 +41,7 @@
             @endforeach
           </ul>
         @else
-          <p class="mt-3 text-sm text-slate-500">{{ tr3('No minimum requirement.', 'Aucune condition minimale.', 'لا شروط دنيا.') }}</p>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">{{ tr3('No minimum requirement.', 'Aucune condition minimale.', 'لا شروط دنيا.') }}</p>
         @endif
         <div class="mt-4 pt-1 flex flex-wrap gap-3 mt-auto">
           @php $needFee = (float)$r['fee'] > 0 && empty($c['pass']); $feeOnly = $needFee && count(array_filter($c['checks'], fn($k) => !$k['ok'] && $k['key'] !== 'fee')) === 0; @endphp
@@ -52,7 +52,7 @@
           @elseif($feeOnly)
             <form method="post" action="{{ url('/account/qcm/buy/') }}">{!! csrf_field() !!}<input type="hidden" name="rule" value="{{ $r['id'] }}"><button class="btn-focus" type="submit">{{ tr3('Pay the round fee', 'Payer les frais de session', 'ادفع رسوم الجولة') }} · {{ number_format((float)$r['fee'], 2) }} {{ $cur }}</button></form>
           @else
-            <span class="text-xs text-slate-500">{{ tr3('Meet the requirements above to unlock this round.', 'Remplissez les conditions ci-dessus pour débloquer cette session.', 'حقّق الشروط أعلاه لفتح هذه الجولة.') }}</span>
+            <span class="text-xs text-slate-600 dark:text-slate-400">{{ tr3('Meet the requirements above to unlock this round.', 'Remplissez les conditions ci-dessus pour débloquer cette session.', 'حقّق الشروط أعلاه لفتح هذه الجولة.') }}</span>
           @endif
         </div>
       </article>
@@ -69,16 +69,16 @@
     <button class="btn-ghost" type="submit">{{ tr3('Send for review', 'Envoyer pour relecture', 'أرسل للمراجعة') }}</button>
   </form>
   @if($q_tasks)
-    <ul class="mt-4 space-y-2 max-w-xl">@foreach($q_tasks as $t)<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm flex justify-between gap-3"><span><strong>{{ $t['title'] }}</strong>@if($t['note'])<span class="block text-xs text-slate-500">{{ $t['note'] }}</span>@endif</span><span class="rounded-full px-2 py-0.5 text-xs h-fit {{ $stl($t['status'] === 'approved' ? 'verified' : ($t['status'] === 'rejected' ? 'rejected' : 'pending')) }}">{{ $t['status'] }}</span></li>@endforeach</ul>
+    <ul class="mt-4 space-y-2 max-w-xl">@foreach($q_tasks as $t)<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm flex justify-between gap-3"><span><strong>{{ $t['title'] }}</strong>@if($t['note'])<span class="block text-xs text-slate-600 dark:text-slate-400">{{ $t['note'] }}</span>@endif</span><span class="rounded-full px-2 py-0.5 text-xs h-fit {{ $stl($t['status'] === 'approved' ? 'verified' : ($t['status'] === 'rejected' ? 'rejected' : 'pending')) }}">{{ $t['status'] }}</span></li>@endforeach</ul>
   @endif
 
   <h2 class="mt-10 font-display text-lg font-semibold">{{ tr3('Your recent rounds', 'Vos dernières sessions', 'جولاتك الأخيرة') }}</h2>
-  @if(!$q_hist)<p class="mt-2 text-sm text-slate-500">{{ tr3('No round yet. Start with a free practice round.', 'Aucune session pour le moment. Commencez par un entraînement gratuit.', 'لا جولات بعد. ابدأ بتدريب مجاني.') }}</p>
+  @if(!$q_hist)<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{{ tr3('No round yet. Start with a free practice round.', 'Aucune session pour le moment. Commencez par un entraînement gratuit.', 'لا جولات بعد. ابدأ بتدريب مجاني.') }}</p>
   @else
     <div class="mt-3 overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10"><table class="w-full text-sm">
-      <thead class="text-xs uppercase text-slate-500"><tr><th class="p-3 text-start">{{ tr3('Date', 'Date', 'التاريخ') }}</th><th class="p-3 text-start">{{ tr3('Type', 'Type', 'النوع') }}</th><th class="p-3 text-start">{{ tr3('Level', 'Niveau', 'المستوى') }}</th><th class="p-3 text-start">{{ tr3('Score', 'Score', 'النتيجة') }}</th><th class="p-3"></th></tr></thead>
-      <tbody>@foreach($q_hist as $h)<tr class="border-t border-slate-200 dark:border-white/10"><td class="p-3 tabular-nums">{{ substr((string)$h['started_at'], 0, 16) }}</td><td class="p-3">{{ $pl($h['purpose']) }}</td><td class="p-3">L{{ $h['level'] }}</td><td class="p-3">@if($h['status'] === 'submitted')<span class="rounded-full px-2 py-0.5 text-xs {{ $stl($h['passed'] ? 'verified' : 'rejected') }}">{{ round((float)$h['score_pct']) }}%</span>@else<span class="text-xs text-slate-500">{{ tr3('open', 'ouverte', 'مفتوحة') }}</span>@endif</td><td class="p-3 text-end"><a class="btn-link" href="{{ url('/account/qcm/attempt/' . $h['id'] . '/') }}">{{ tr3('Open', 'Ouvrir', 'فتح') }}</a></td></tr>@endforeach</tbody>
+      <thead class="text-xs uppercase text-slate-600 dark:text-slate-400"><tr><th class="p-3 text-start">{{ tr3('Date', 'Date', 'التاريخ') }}</th><th class="p-3 text-start">{{ tr3('Type', 'Type', 'النوع') }}</th><th class="p-3 text-start">{{ tr3('Level', 'Niveau', 'المستوى') }}</th><th class="p-3 text-start">{{ tr3('Score', 'Score', 'النتيجة') }}</th><th class="p-3"></th></tr></thead>
+      <tbody>@foreach($q_hist as $h)<tr class="border-t border-slate-200 dark:border-white/10"><td class="p-3 tabular-nums">{{ substr((string)$h['started_at'], 0, 16) }}</td><td class="p-3">{{ $pl($h['purpose']) }}</td><td class="p-3">L{{ $h['level'] }}</td><td class="p-3">@if($h['status'] === 'submitted')<span class="rounded-full px-2 py-0.5 text-xs {{ $stl($h['passed'] ? 'verified' : 'rejected') }}">{{ round((float)$h['score_pct']) }}%</span>@else<span class="text-xs text-slate-600 dark:text-slate-400">{{ tr3('open', 'ouverte', 'مفتوحة') }}</span>@endif</td><td class="p-3 text-end"><a class="btn-link" href="{{ url('/account/qcm/attempt/' . $h['id'] . '/') }}">{{ tr3('Open', 'Ouvrir', 'فتح') }}</a></td></tr>@endforeach</tbody>
     </table></div>
   @endif
 @endif
-<p class="mt-8 text-xs text-slate-500">{{ __('limits.returns') }}</p>
+<p class="mt-8 text-xs text-slate-600 dark:text-slate-400">{{ __('limits.returns') }}</p>

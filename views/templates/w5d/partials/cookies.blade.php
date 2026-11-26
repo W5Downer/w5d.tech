@@ -28,4 +28,4 @@
   </div>
 </div>
 <p class="sr-only" role="status" aria-live="polite" data-cookie-live></p>
-<script src="{{ asset('js/cookies.js') }}" defer></script>
+<script src="{{ asset('js/cookies.min.js') }}" defer></script>

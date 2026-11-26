@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Content, Csrf, DB, Gateways, Gate, Integrations, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
+use W5D\{Billing, Content, Csrf, DB, Gateways, Gate, Integrations, Mail, Payments, Pricing, Request, Response, Variables, ViewEnv};
 
-/** Investor demo flows: pledge checkout, daily subscription, management by reference + key. No money moves in demo mode. */
+/** Investor flows: pledge checkout, daily subscription, management by reference + key. Money moves only through an enabled payment method (Gateways). */
 final class Checkout
 {
     /** Price quote for N parts per period. Cadence 'daily' = one charge per day, 'weekly' = one per 7 days (weekly unit). */
@@ -72,10 +72,9 @@ final class Checkout
         $kind = Forms::str($in, 'kind', 20) === 'company' ? 'company' : 'individual';
         $method = (string)($in['payment_method'] ?? '');
         if ($method !== '' && !Gateways::enabled($method)) { $e['payment_method'] = Forms::err('This payment method is not available right now.', 'Ce moyen de paiement n’est pas disponible pour le moment.', 'وسيلة الدفع هذه غير متاحة حاليا.'); $method = ''; }
-        $d17 = $method === 'd17';
         if ($method !== '' && (Gateways::def($method)['tn_only'] ?? false)) {
             $gsm = Payments::tnGsm(Forms::str($in, 'phone', 40));
-            if (!$gsm) $e['phone'] = Forms::err('D17 is for Tunisian numbers only: give a +216 phone number.', 'D17 est réservé aux numéros tunisiens : indiquez un numéro +216.', 'D17 للأرقام التونسية فقط: أدخل رقم هاتف +216.');
+            if (!$gsm) $e['phone'] = Forms::err('This payment method is for Tunisian phone numbers only: give a +216 number.', 'Ce moyen de paiement est réservé aux numéros tunisiens : indiquez un numéro +216.', 'وسيلة الدفع هذه للأرقام التونسية فقط: أدخل رقم هاتف +216.');
         }
         if ($e) return ['ok' => false, 'errors' => $e];
 
@@ -89,30 +88,40 @@ final class Checkout
         }
         $ref = Forms::ref('ORD');
         DB::insert('investor_orders', ['country_id' => 'tn', 'ref' => $ref, 'investor_id' => $iid, 'cadence' => $cad, 'parts_per_day' => $parts, 'days' => $days, 'macro_slug' => $macro ?: null,
-            'start_on' => $start->format('Y-m-d'), 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'p' => $q['p'], 't' => $q['t'], 'payment_mode' => $method !== '' ? $method : (string)\W5D\Env::get('PAYMENT_MODE', 'demo'), 'status' => $method !== '' ? 'awaiting_payment' : 'pledged']);
+            'start_on' => $start->format('Y-m-d'), 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'p' => $q['p'], 't' => $q['t'], 'payment_mode' => $method !== '' ? $method : 'none', 'status' => $method !== '' ? 'awaiting_payment' : 'pledged']);
         $token = null;
         if ($mode === 'subscription') {
             $token = bin2hex(random_bytes(16));
             DB::insert('investor_subscriptions', ['country_id' => 'tn', 'token' => hash('sha256', $token), 'investor_id' => $iid, 'order_ref' => $ref, 'parts_per_day' => $parts, 'macro_slug' => $macro ?: null, 'status' => 'active', 'next_charge_on' => $start->format('Y-m-d')]);
         }
         $payRef = $payUrl = $gwUrl = null;
+        // Every order is an invoice (the "bill" in the buyer's Invoices menu); paying it by any method settles both.
+        $invoice = null;
+        if ((float)$q['schedule']['total'] > 0) {
+            try {
+                $invoice = Billing::forOrder($ref, ['email' => $email, 'full_name' => Forms::str($in, 'full_name', 120), 'lang' => lang()], (float)$q['schedule']['total'],
+                    ['en' => $parts . ' part(s) per day × ' . $days . ' day(s), from ' . $start->format('Y-m-d'), 'fr' => $parts . ' part(s) par jour × ' . $days . ' jour(s), à partir du ' . $start->format('Y-m-d'), 'ar' => $parts . ' حصة يوميا × ' . $days . ' يوم، ابتداء من ' . $start->format('Y-m-d')]);
+            } catch (\Throwable) {}
+        }
         if ($method !== '') {
-            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total'], $method);
+            $payRef = Payments::create($ref, $iid, (float)$q['schedule']['total'], $method, $invoice ? (int)$invoice['id'] : null);
             $payUrl = Payments::link($ref);
             if (Gateways::online($method)) {
                 $prow = DB::one('SELECT * FROM payments WHERE ref = ?', [$payRef]);
                 $gwUrl = Payments::begin($prow, ['name' => Forms::str($in, 'full_name', 120), 'email' => $email, 'phone' => Forms::str($in, 'phone', 40)]);
             }
         }
+        $fee = $method !== '' ? Gateways::fee($method, (float)$q['schedule']['total']) : null;
         $mailTo = $email;
         Mail::send($mailTo, 'order_receipt', [
             'name' => Forms::str($in, 'full_name', 120), 'ref' => $ref, 'parts' => $parts, 'days' => $days, 'start' => $start->format('Y-m-d'),
             'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'key' => $token,
-            'd17' => $d17 ? Payments::instructions((float)$q['schedule']['total']) : null, 'pay_url' => $method !== '' ? Payments::absLink($ref) : null,
-            'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => $method === 'bank' ? Gateways::instructions('bank', (float)$q['schedule']['total'])['rows'] : [],
+            'pay_url' => $method !== '' ? Payments::absLink($ref) : ($invoice ? Billing::absLink($invoice) : null), 'invoice' => $invoice['number'] ?? null,
+            'fee' => $fee && $fee['payer'] === 'buyer' ? $fee['fee'] : 0, 'due' => $fee ? $fee['charge'] : (float)$q['schedule']['total'],
+            'method' => $method, 'method_name' => $method !== '' ? Gateways::short($method) : '', 'manual' => $method !== '' && !Gateways::online($method), 'manual_rows' => ($method !== '' && !Gateways::online($method)) ? Gateways::instructions($method, (float)($fee['charge'] ?? $q['schedule']['total']))['rows'] : [],
         ], lang());
         if ($method !== '') Mail::staff('New order · ' . Gateways::short($method), ['order' => $ref, 'payment' => $payRef, 'amount' => number_format((float)$q['schedule']['total'], 2) . ' ' . $q['currency']]);
-        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'demo: no money moves' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'pay_url' => $payUrl, 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
+        return ['ok' => true, 'errors' => [], 'data' => ['ref' => $ref, 'management_key' => $token, 'mode' => $mode, 'unit_price' => $q['today']['unit'], 'total' => $q['schedule']['total'], 'currency' => $q['currency'], 'charges' => $q['schedule']['charges'], 'payment' => $method === '' ? 'none: pledge recorded, no payment method chosen' : ($method . ': ' . (Gateways::online($method) ? 'hosted payment page' : 'pending administrator verification')), 'fee' => $fee['fee'] ?? 0, 'fee_payer' => $fee['payer'] ?? null, 'amount_due' => $fee['charge'] ?? $q['schedule']['total'], 'payment_method' => $method ?: null, 'payment_ref' => $payRef, 'invoice' => $invoice['number'] ?? null, 'pay_url' => $payUrl ?: ($invoice ? Billing::link($invoice) : null), 'gateway_url' => $gwUrl, 'manage_url' => $token ? url('/subscription/manage/') : null]];
     }
 
     private static function back(string $mode): string { return $mode === 'subscription' ? '/subscription/' : '/checkout/'; }
@@ -177,13 +186,15 @@ final class Checkout
             [$L('Starts', 'Début', 'البدء'), ['en' => $o['start_on']]],
             [$L('Unit price today', 'Prix unitaire aujourd’hui', 'سعر الوحدة اليوم'), ['en' => money((float)$o['unit_price'])]],
             [$L('Total of the schedule', 'Total du calendrier', 'مجموع الجدول'), ['en' => money((float)$o['total'])]],
-            [$L('Status', 'Statut', 'الحالة'), $o['status'] === 'awaiting_payment' ? $L('Awaiting your payment', 'En attente de votre paiement', 'بانتظار دفعتك') : ($o['status'] === 'paid' ? $L('Paid and confirmed', 'Payé et confirmé', 'مدفوع ومؤكد') : $L('Pledged (demo: no money moved)', 'Engagé (démo : aucun argent versé)', 'التزام (تجريبي: لا أموال تحوّلت)'))],
+            ...(($pay = DB::one('SELECT * FROM payments WHERE order_ref = ? ORDER BY id DESC', [$ref])) && $pay['fee_payer'] === 'buyer' && (float)$pay['fee'] > 0
+                ? [[$L('Transaction fee', 'Frais de transaction', 'رسوم العملية'), ['en' => money((float)$pay['fee'])]], [$L('To pay', 'À payer', 'المبلغ المستحق'), ['en' => money(Payments::due($pay))]]] : []),
+            [$L('Status', 'Statut', 'الحالة'), $o['status'] === 'awaiting_payment' ? $L('Awaiting your payment', 'En attente de votre paiement', 'بانتظار دفعتك') : ($o['status'] === 'paid' ? $L('Paid and confirmed', 'Payé et confirmé', 'مدفوع ومؤكد') : $L('Pledge recorded (no payment chosen)', 'Engagement enregistré (aucun paiement choisi)', 'سُجّل الالتزام (لم تُختر وسيلة دفع)'))],
         ];
         $pm = (string)$o['payment_mode'];
         $secs = [
             ['type' => 'hero', 'id' => 'done-hero', 'variant' => 'classic', 'gradient' => 'peak', 'icon' => 'badge-check', 'eyebrow' => $L('Pledge recorded', 'Engagement enregistré', 'سُجّل التزامك'),
                 'title' => $L('Thank you, ' . $first . '. **Your pledge is recorded.**', 'Merci, ' . $first . '. **Votre engagement est enregistré.**', 'شكرا ' . $first . '. **سُجّل التزامك.**'),
-                'lead' => $L('Keep this reference. In demo mode no payment is taken; the schedule below is what you committed to see.', 'Conservez cette référence. En mode démo, aucun paiement n’est prélevé ; le calendrier ci-dessous est celui que vous avez validé.', 'احتفظ بهذا المرجع. في الوضع التجريبي لا يُحصَّل أي دفع؛ والجدول أدناه هو ما وافقت عليه.'),
+                'lead' => $L('Keep this reference. The summary below is what you confirmed.', 'Conservez cette référence. Le récapitulatif ci-dessous est ce que vous avez confirmé.', 'احتفظ بهذا المرجع. الملخص أدناه هو ما أكدته.'),
                 'ctas' => [['label' => $L('Back home', 'Accueil', 'الرئيسية'), 'href' => '/', 'style' => 'focus'], ['label' => $L('Read the declared limits', 'Lire les limites déclarées', 'اقرأ الحدود المعلنة'), 'href' => '/trust/statement/', 'style' => 'ghost']]],
             ['type' => 'table', 'id' => 'done-receipt', 'tier' => 'i', 'focus' => 3, 'title' => $L('Your receipt', 'Votre reçu', 'إيصالك'), 'columns' => [$L('Item', 'Élément', 'البند'), $L('Value', 'Valeur', 'القيمة')], 'rows' => $rows],
         ];

@@ -7,9 +7,8 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#070711">
   <script src="{{ asset('js/theme-init.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/attention.css') }}">
+  {{-- one render-blocking stylesheet (fonts + tailwind + attention [+ rtl]); built by tools/build.mjs; Arabic faces only in the Arabic bundle --}}
+  <link rel="stylesheet" href="{{ asset(lang() === 'ar' ? 'css/bundle-ar.css' : 'css/bundle.css') }}">
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-ink-950 dark:text-slate-200 antialiased">
   {{-- One static page for everybody: it is cached by the service worker, so it carries all three languages and no personal data. --}}
@@ -21,10 +20,10 @@
       <section lang="ar" dir="rtl"><h2 class="font-semibold">أنت غير متصل</h2><p class="mt-1 text-sm">تحتاج البوابة إلى اتصال: لا تُخزَّن الصفحات والنماذج على هذا الجهاز ولذلك لا يمكن قراءة أي شيء خاص من هنا. لم يُرسل شيء مما كتبته. أعد الاتصال وستُفتح البوابة تلقائيا.</p></section>
       <div class="flex flex-wrap items-center gap-3">
         <button type="button" class="btn-focus" data-offline-retry>Try again · Réessayer · أعد المحاولة</button>
-        <span class="text-xs text-slate-500" data-offline-status role="status" aria-live="polite"></span>
+        <span class="text-xs text-slate-600 dark:text-slate-400" data-offline-status role="status" aria-live="polite"></span>
       </div>
     </div>
   </main>
-  <script src="{{ asset('js/portal.js') }}" defer></script>
+  <script src="{{ asset('js/portal.min.js') }}" defer></script>
 </body>
 </html>

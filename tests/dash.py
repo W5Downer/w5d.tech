@@ -126,9 +126,9 @@ for role in ('admin', 'leader', 'manager'):
     s, h, b = call(c, 'GET', M + '/')
     check(f'{role}: desk is shown', s == 200 and f'data-desk-role="{role}"' in b, s)
     if role == 'admin':
-        check('admin: desk lists payments + messages queues', 'D17 payments to verify' in b and 'New messages' in b)
+        check('admin: desk lists payments + messages queues', 'Payments to verify' in b and 'New messages' in b)
     if role in ('leader', 'manager'):
-        check(f'{role}: desk has no payment/message queues', 'D17 payments to verify' not in b and 'New messages' not in b)
+        check(f'{role}: desk has no payment/message queues', 'Payments to verify' not in b and 'New messages' not in b)
     s, h, b = call(c, 'GET', M + '/api-docs/')
     check(f'{role}: API & Docs page is the {role} guide', s == 200 and f'data-api-guide="{role}"' in b, s)
     if role == 'admin':

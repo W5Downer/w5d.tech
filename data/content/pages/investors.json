@@ -79,9 +79,9 @@
     }
    ],
    "note": {
-    "en": "Demo mode: no payment is taken. A part is an investment in a path, not a job. No return is promised.",
-    "fr": "Mode démo : aucun paiement n’est effectué. Une part est un investissement dans un parcours, pas un emploi. Aucun rendement n’est promis.",
-    "ar": "الوضع التجريبي: لا تُحصّل أي مدفوعات. الحصة استثمار في مسار، لا وظيفة. ولا يوجد عائد مضمون."
+    "en": "A part is an investment in a path, not a job. No return is promised.",
+    "fr": "Une part est un investissement dans un parcours, pas un emploi. Aucun rendement n’est promis.",
+    "ar": "الحصة استثمار في مسار، لا وظيفة. ولا يوجد عائد مضمون."
    }
   },
   {
@@ -259,9 +259,9 @@
       "ar": "راجع"
      },
      "body": {
-      "en": "See the unit price for each day, the total, and the declared limits. Nothing is charged in demo mode.",
-      "fr": "Consultez le prix unitaire de chaque jour, le total et les limites indiquées. Aucun montant n'est prélevé en mode démo.",
-      "ar": "اطّلع على سعر الوحدة لكل يوم، والإجمالي، والحدود المعلنة. لا تُحصّل أي رسوم في الوضع التجريبي."
+      "en": "See the unit price for each day, the total, any payment fee and the declared limits before you confirm.",
+      "fr": "Consultez le prix unitaire de chaque jour, le total, les frais de paiement éventuels et les limites indiquées avant de confirmer.",
+      "ar": "اطّلع على سعر الوحدة لكل يوم، والإجمالي، وأي رسوم دفع، والحدود المعلنة قبل أن تؤكد."
      },
      "meta": {
       "en": "1 minute",
@@ -481,18 +481,6 @@
     },
     {
      "term": {
-      "en": "Demo mode",
-      "fr": "Mode démo",
-      "ar": "الوضع التجريبي"
-     },
-     "def": {
-      "en": "Pledges are recorded, no payment is taken, no money moves.",
-      "fr": "Les engagements sont enregistrés, aucun paiement n’est prélevé et aucun argent ne circule.",
-      "ar": "تُسجَّل التعهدات، ولا يُحصَّل أي مبلغ أو تُحوَّل أي أموال."
-     }
-    },
-    {
-     "term": {
       "en": "Management key",
       "fr": "Clé de gestion",
       "ar": "مفتاح الإدارة"
@@ -625,9 +613,9 @@
     }
    ],
    "note": {
-    "en": "Demo mode: no payment is taken.",
-    "fr": "Mode démo : aucun paiement n’est effectué.",
-    "ar": "الوضع التجريبي: لا تُحصّل أي دفعة."
+    "en": "You see the full amount and any fee before you confirm.",
+    "fr": "Vous voyez le montant total et les frais éventuels avant de confirmer.",
+    "ar": "ترى المبلغ الكامل وأي رسوم قبل أن تؤكد."
    }
   },
   {

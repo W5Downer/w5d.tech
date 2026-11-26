@@ -8,7 +8,7 @@
 <header class="mb-6">
   <p class="eyebrow">{{ t($menu['label']) }}</p>
   <div class="flex items-center gap-3"><h1 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white min-w-0">{{ $editing ? __('ux.crud_edit_title') . ' #' . $row['id'] : __('ux.crud_new_title') }}</h1>{{ help_btn('admin.crud-form', t($menu['label']), 'start', 'page') }}</div>
-  <p class="text-sm text-slate-500 mt-1">{{ t($def['title']) }}</p>
+  <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">{{ t($def['title']) }}</p>
 </header>
 <form method="post" action="{{ admin_url($slug . '/save') }}" class="max-w-2xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 sm:p-8 space-y-4" novalidate>
   {!! csrf_field() !!}
@@ -31,14 +31,14 @@
         <label for="{{ $id }}" class="block text-sm font-medium mb-1">{{ $label }}@if($req) <span aria-hidden="true">*</span>@endif</label>
         @if($locked)
           <input class="field opacity-70" id="{{ $id }}" type="text" value="{{ $user['id'] }}" readonly aria-readonly="true">
-          <p class="text-xs mt-1 text-slate-500">{{ __('ux.crud_scope') }}</p>
+          <p class="text-xs mt-1 text-slate-600 dark:text-slate-400">{{ __('ux.crud_scope') }}</p>
         @elseif($type === 'select')
           <select class="field" id="{{ $id }}" name="{{ $name }}" @if($req) required @endif>
             @foreach(\W5D\Crud::options($f) as $ov => $ol)<option value="{{ $ov }}" @if((string)$val === (string)$ov) selected @endif>{{ $ol }}</option>@endforeach
           </select>
         @elseif($type === 'password')
           <input class="field" id="{{ $id }}" name="{{ $name }}" type="password" value="" autocomplete="new-password" maxlength="200" dir="ltr">
-          <p class="text-xs mt-1 text-slate-500">{{ tr3('Leave empty to keep the current password. At least 10 characters with letters and a digit. It is stored hashed and never shown.', 'Laissez vide pour conserver le mot de passe actuel. Au moins 10 caractères avec des lettres et un chiffre. Il est stocké haché et jamais affiché.', 'اتركه فارغا للإبقاء على كلمة المرور الحالية. 10 أحرف على الأقل مع حروف ورقم. تُخزَّن مشفّرة ولا تُعرض أبدا.') }}</p>
+          <p class="text-xs mt-1 text-slate-600 dark:text-slate-400">{{ tr3('Leave empty to keep the current password. At least 10 characters with letters and a digit. It is stored hashed and never shown.', 'Laissez vide pour conserver le mot de passe actuel. Au moins 10 caractères avec des lettres et un chiffre. Il est stocké haché et jamais affiché.', 'اتركه فارغا للإبقاء على كلمة المرور الحالية. 10 أحرف على الأقل مع حروف ورقم. تُخزَّن مشفّرة ولا تُعرض أبدا.') }}</p>
         @elseif($type === 'textarea')
           <textarea class="field" id="{{ $id }}" name="{{ $name }}" rows="5" @if(isset($f['max'])) maxlength="{{ $f['max'] }}" @endif @if($req) required @endif>{{ $val }}</textarea>
         @else

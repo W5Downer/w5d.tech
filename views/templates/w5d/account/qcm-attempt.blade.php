@@ -31,9 +31,9 @@
             <li class="qcm-step rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-5" data-qid="{{ $it['id'] }}" data-step="{{ $i }}">
               <fieldset>
                 <legend class="w-full">
-                  <span class="flex items-center justify-between gap-3 text-xs text-slate-500"><span>{{ tr3('Question', 'Question', 'السؤال') }} {{ $i + 1 }} / {{ $total }}</span><span class="tier-badge">{{ $multi ? tr3('Several answers', 'Plusieurs réponses', 'عدة إجابات') : tr3('One answer', 'Une réponse', 'إجابة واحدة') }}</span></span>
+                  <span class="flex items-center justify-between gap-3 text-xs text-slate-600 dark:text-slate-400"><span>{{ tr3('Question', 'Question', 'السؤال') }} {{ $i + 1 }} / {{ $total }}</span><span class="tier-badge">{{ $multi ? tr3('Several answers', 'Plusieurs réponses', 'عدة إجابات') : tr3('One answer', 'Une réponse', 'إجابة واحدة') }}</span></span>
                   <span class="mt-2 block font-display text-lg font-semibold text-slate-900 dark:text-white">{{ t($it['q']) }}</span>
-                  @if($multi)<span class="mt-1 block text-xs text-slate-500">{{ tr3('Tick every right choice: a partly right answer scores zero.', 'Cochez tous les bons choix : une réponse partielle vaut zéro.', 'حدّد كل الخيارات الصحيحة: الإجابة الجزئية لا تحصل على شيء.') }}</span>@endif
+                  @if($multi)<span class="mt-1 block text-xs text-slate-600 dark:text-slate-400">{{ tr3('Tick every right choice: a partly right answer scores zero.', 'Cochez tous les bons choix : une réponse partielle vaut zéro.', 'حدّد كل الخيارات الصحيحة: الإجابة الجزئية لا تحصل على شيء.') }}</span>@endif
                 </legend>
                 <div class="mt-4 grid gap-2">
                   @foreach($it['choices'] as $c)
@@ -52,7 +52,7 @@
           <button type="button" class="btn-ghost hidden" data-qcm-next>{{ tr3('Next', 'Suivant', 'التالي') }}</button>
           <button type="submit" class="btn-peak" data-qcm-submit data-confirm-text="{{ tr3('Some questions are unanswered. Submit anyway?', 'Certaines questions restent sans réponse. Soumettre quand même ?', 'بعض الأسئلة بلا إجابة. هل ترسل رغم ذلك؟') }}">{{ icon('circle-check', 'w-4 h-4') }} {{ tr3('Submit my answers', 'Soumettre mes réponses', 'أرسل إجاباتي') }}</button>
         </nav>
-        <p class="mt-4 text-xs text-slate-500">{{ tr3('Your answers are saved as you go. When the timer ends the round is closed and scored with what was saved.', 'Vos réponses sont enregistrées au fil de l’eau. À la fin du chronomètre, la session est close et notée avec ce qui a été enregistré.', 'تُحفظ إجاباتك أثناء التقدم. عند انتهاء المؤقت تُغلق الجولة وتُصحَّح بما تم حفظه.') }}</p>
+        <p class="mt-4 text-xs text-slate-600 dark:text-slate-400">{{ tr3('Your answers are saved as you go. When the timer ends the round is closed and scored with what was saved.', 'Vos réponses sont enregistrées au fil de l’eau. À la fin du chronomètre, la session est close et notée avec ce qui a été enregistré.', 'تُحفظ إجاباتك أثناء التقدم. عند انتهاء المؤقت تُغلق الجولة وتُصحَّح بما تم حفظه.') }}</p>
       </form>
     @else
       @php $pct = (float)$a['score_pct']; $pass = (int)$a['passed'] === 1; @endphp
@@ -70,7 +70,7 @@
       </div>
 
       <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Your answers', 'Vos réponses', 'إجاباتك') }}</h2>
-      @if($a['purpose'] !== 'practice')<p class="text-xs text-slate-500">{{ tr3('The right answers of graded rounds are not shown, so the question bank stays fair.', 'Les bonnes réponses des sessions notées ne sont pas montrées, pour que la banque reste équitable.', 'لا تُعرض الإجابات الصحيحة في الجولات المصحَّحة حفاظا على عدالة البنك.') }}</p>@endif
+      @if($a['purpose'] !== 'practice')<p class="text-xs text-slate-600 dark:text-slate-400">{{ tr3('The right answers of graded rounds are not shown, so the question bank stays fair.', 'Les bonnes réponses des sessions notées ne sont pas montrées, pour que la banque reste équitable.', 'لا تُعرض الإجابات الصحيحة في الجولات المصحَّحة حفاظا على عدالة البنك.') }}</p>@endif
       <ol class="mt-4 space-y-4">
         @foreach($review as $r)
           <li class="rounded-2xl border border-slate-200 dark:border-white/10 p-4" data-review="{{ $r['n'] }}" data-ok="{{ $r['ok'] ? '1' : '0' }}">
@@ -80,13 +80,13 @@
                 <li class="rounded-lg px-3 py-1.5 {{ $c['right'] ? 'bg-emerald-500/15' : ($c['mine'] ? 'bg-red-500/10' : '') }}">{{ $c['mine'] ? '☑' : '☐' }} {{ t($c['t']) }}@if($c['right']) <span class="text-xs text-emerald-700 dark:text-emerald-300">· {{ tr3('right answer', 'bonne réponse', 'الإجابة الصحيحة') }}</span>@endif</li>
               @endforeach
             </ul>
-            @if($r['skipped'])<p class="mt-1 text-xs text-slate-500">{{ tr3('Not answered.', 'Sans réponse.', 'بلا إجابة.') }}</p>@endif
+            @if($r['skipped'])<p class="mt-1 text-xs text-slate-600 dark:text-slate-400">{{ tr3('Not answered.', 'Sans réponse.', 'بلا إجابة.') }}</p>@endif
             @if($r['explain'])<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ t($r['explain']) }}</p>@endif
           </li>
         @endforeach
       </ol>
     @endif
-    <p class="mt-8 text-xs text-slate-500">{{ __('limits.returns') }}</p>
+    <p class="mt-8 text-xs text-slate-600 dark:text-slate-400">{{ __('limits.returns') }}</p>
   </div>
 </section>
 @endsection

@@ -42,6 +42,9 @@ foreach (['storage', 'storage/logs', 'storage/sessions', 'storage/framework/view
 try { DB::available() ? $add('OK', 'database', $get('DB_DRIVER', 'sqlite') . ' reachable, ' . count(DB::all("SELECT name FROM sqlite_master WHERE type='table'")) . ' tables') : $add('FAIL', 'database', 'not reachable'); }
 catch (Throwable $e) { $add('FAIL', 'database', $e->getMessage()); }
 foreach (['pdo_sqlite', 'mbstring', 'json', 'openssl', 'curl'] as $x) extension_loaded($x) ? null : $add('FAIL', "php ext $x", 'missing');
+// Owner image library (menu "Image library"): GD with WebP converts pictures, zip reads ZIP uploads. Missing = the tool says so; the public site is unaffected.
+\W5D\Images::gdOk() ? $add('OK', 'php ext gd (WebP)', 'image library can convert pictures') : $add('WARN', 'php ext gd (WebP)', 'missing: the owner image library cannot convert pictures until the host enables gd with WebP');
+\W5D\Images::zipOk() ? $add('OK', 'php ext zip', 'ZIP uploads work') : $add('WARN', 'php ext zip', 'missing: ZIP uploads are disabled (single pictures still work)');
 PHP_VERSION_ID >= 80400 ? $add('OK', 'PHP', PHP_VERSION) : $add('FAIL', 'PHP', PHP_VERSION . ' (>= 8.4 required)');
 $get('PAYMENT_MODE', 'demo') === 'demo' ? $add('OK', 'PAYMENT_MODE', 'demo (no card money moves; D17 is manual verification)') : $add('WARN', 'PAYMENT_MODE', $get('PAYMENT_MODE') . ': only after counsel + PSP contract');
 

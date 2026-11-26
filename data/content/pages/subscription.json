@@ -79,9 +79,9 @@
     }
    ],
    "note": {
-    "en": "Demo mode: no payment is taken until the provider is connected.",
-    "fr": "Mode démo : aucun paiement n’est prélevé tant que le prestataire n’est pas connecté.",
-    "ar": "الوضع التجريبي: لن يُستوفى أي مبلغ حتى يتم ربط مزوّد الخدمة."
+    "en": "You see the full amount and any fee before you confirm.",
+    "fr": "Vous voyez le montant total et les frais éventuels avant de confirmer.",
+    "ar": "ترى المبلغ الكامل وأي رسوم قبل أن تؤكد."
    }
   },
   {
@@ -144,9 +144,9 @@
       "ar": "هل سيُخصم أي مبلغ الآن؟"
      },
      "a": {
-      "en": "No. In demo mode no payment is taken. When a payment provider is connected, the payment terms will be shown before you confirm.",
-      "fr": "Non. En mode démo, aucun paiement n’est prélevé. Lorsqu’un prestataire de paiement sera connecté, les modalités de paiement seront affichées avant votre confirmation.",
-      "ar": "لا. لا يُستوفى أي مبلغ في الوضع التجريبي. وعند ربط مزوّد للدفع، ستُعرض شروط الدفع قبل التأكيد."
+      "en": "Not at the moment you confirm. Confirming records your subscription; you then pay with the method you chose, and the amount and any fee are shown first.",
+      "fr": "Pas au moment de la confirmation. Confirmer enregistre votre abonnement ; vous payez ensuite avec le moyen choisi, et le montant et les frais éventuels s’affichent d’abord.",
+      "ar": "ليس لحظة التأكيد. التأكيد يسجّل اشتراكك؛ ثم تدفع بالوسيلة التي اخترتها، ويُعرض المبلغ وأي رسوم أولا."
      }
     }
    ]

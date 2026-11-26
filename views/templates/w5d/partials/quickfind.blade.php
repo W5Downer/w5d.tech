@@ -6,12 +6,12 @@
     <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white pe-10">{{ __('ux.find') }}</h2>
     <label class="sr-only" for="quickInput">{{ __('ux.find') }}</label>
     <input id="quickInput" type="search" class="field mt-3" placeholder="{{ __('ux.find_ph') }}" autocomplete="off" data-quick-input>
-    <p class="text-xs text-slate-500 mt-2">{{ __('ux.find_hint') }}</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 mt-2">{{ __('ux.find_hint') }}</p>
     <ul class="mt-3 max-h-[52vh] overflow-y-auto grid gap-1" data-quick-list>
       @foreach($qf as $row)
-        <li data-quick-item="{{ mb_strtolower($row['label'] . ' ' . $row['hint']) }}"><a class="flex items-center justify-between gap-3 rounded-xl px-3 py-2 hover:bg-brand-500/10 focus:bg-brand-500/10" href="{{ $row['href'] }}"><span class="font-semibold text-slate-900 dark:text-white">{{ $row['label'] }}</span><span class="text-xs text-slate-500 truncate">{{ $row['hint'] }}</span></a></li>
+        <li data-quick-item="{{ mb_strtolower($row['label'] . ' ' . $row['hint']) }}"><a class="flex items-center justify-between gap-3 rounded-xl px-3 py-2 hover:bg-brand-500/10 focus:bg-brand-500/10" href="{{ $row['href'] }}"><span class="font-semibold text-slate-900 dark:text-white">{{ $row['label'] }}</span><span class="text-xs text-slate-600 dark:text-slate-400 truncate">{{ $row['hint'] }}</span></a></li>
       @endforeach
     </ul>
-    <p class="text-sm text-slate-500 mt-3 hidden" data-quick-empty>{{ __('ux.find_empty') }}</p>
+    <p class="text-sm text-slate-600 dark:text-slate-400 mt-3 hidden" data-quick-empty>{{ __('ux.find_empty') }}</p>
   </div>
 </dialog>

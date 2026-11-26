@@ -48,7 +48,7 @@
 @endif
 
 @if(empty($v['rows']))
-  <p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-500">No question for this selection.</p>
+  <p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-600 dark:text-slate-400">No question for this selection.</p>
 @else
   <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden">
     <table class="w5-table w5-stack"><thead><tr><th>ID</th><th>Type</th><th>Question (EN)</th><th>Right</th><th>State</th><th>Actions</th></tr></thead><tbody>
@@ -68,7 +68,7 @@
     @endforeach
     </tbody></table>
   </div>
-  <p class="mt-2 flex flex-wrap items-center gap-3 text-xs text-slate-500">{{ $v['total'] }} question(s) · page {{ $v['page'] }} / {{ $v['pages'] }}
+  <p class="mt-2 flex flex-wrap items-center gap-3 text-xs text-slate-600 dark:text-slate-400">{{ $v['total'] }} question(s) · page {{ $v['page'] }} / {{ $v['pages'] }}
     @if($v['page'] > 1)<a class="btn-link" href="{{ $q(['page' => $v['page'] - 1]) }}">Previous</a>@endif @if($v['page'] < $v['pages'])<a class="btn-link" href="{{ $q(['page' => $v['page'] + 1]) }}">Next</a>@endif</p>
 @endif
 

@@ -20,7 +20,7 @@ final class Pwa
     /** Static files that make the offline page (and the shell) work with no network. Each URL is exactly what asset() prints. */
     private static function shell(): array
     {
-        return [asset('css/fonts.css'), asset('css/tailwind.css'), asset('css/attention.css'), asset('css/rtl.css'), asset('js/theme-init.js'), asset('js/portal.js'),
+        return [asset('css/bundle.css'), asset('css/bundle-ar.css'), asset('js/theme-init.js'), asset('js/portal.min.js'),
             asset('images/logo.svg'), asset('images/icon-192.png'), asset('images/icon-512.png')];
     }
 

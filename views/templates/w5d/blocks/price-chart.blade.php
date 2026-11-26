@@ -16,7 +16,7 @@
         <circle class="pc-now" r="6" cx="{{ $px(max($snap['p'], $snap['t'])) }}" cy="{{ $py($snap['day']) }}"/>
         <text x="{{ $pad }}" y="{{ $H - 8 }}" font-size="10" fill="currentColor" opacity=".7">{{ __('price.progress') }} / {{ __('price.time') }}  0 → 100%</text>
       </svg>
-      <figcaption class="text-xs text-slate-500 mt-2 flex flex-wrap gap-4"><span><i class="inline-block w-3 h-0.5 bg-violet-500 align-middle"></i> {{ __('price.per_day') }}</span><span><i class="inline-block w-3 h-0.5 bg-cyan-500 align-middle"></i> {{ __('price.per_week') }}</span><span><i class="inline-block w-3 h-0.5 bg-red-600 align-middle"></i> {{ __('price.cap') }}</span></figcaption>
+      <figcaption class="text-xs text-slate-600 dark:text-slate-400 mt-2 flex flex-wrap gap-4"><span><i class="inline-block w-3 h-0.5 bg-violet-500 align-middle"></i> {{ __('price.per_day') }}</span><span><i class="inline-block w-3 h-0.5 bg-cyan-500 align-middle"></i> {{ __('price.per_week') }}</span><span><i class="inline-block w-3 h-0.5 bg-red-600 align-middle"></i> {{ __('price.cap') }}</span></figcaption>
     </figure>
     <div class="space-y-4">
       <div class="rounded-2xl border border-brand-500/40 bg-brand-500/10 p-5">
@@ -25,12 +25,12 @@
         <p class="text-sm text-slate-600 dark:text-slate-400">{{ __('price.per_day') }} · {{ number_format($snap['week'], 2) }} {{ __('price.per_week') }}</p>
       </div>
       <dl class="text-sm grid grid-cols-2 gap-3">
-        <div><dt class="text-slate-500">{{ __('price.progress') }} (p)</dt><dd class="font-semibold">{{ number_format($snap['p'] * 100, 2) }}%</dd></div>
-        <div><dt class="text-slate-500">{{ __('price.time') }} (t)</dt><dd class="font-semibold">{{ number_format($snap['t'] * 100, 2) }}%</dd></div>
-        <div><dt class="text-slate-500">{{ __('price.at_p0') }}</dt><dd class="font-semibold">{{ number_format($snap['base_day'], 2) }}</dd></div>
-        <div><dt class="text-slate-500">{{ __('price.at_p1') }}</dt><dd class="font-semibold">{{ number_format($snap['base_day'] * $snap['cap'], 2) }}</dd></div>
+        <div><dt class="text-slate-600 dark:text-slate-400">{{ __('price.progress') }} (p)</dt><dd class="font-semibold">{{ number_format($snap['p'] * 100, 2) }}%</dd></div>
+        <div><dt class="text-slate-600 dark:text-slate-400">{{ __('price.time') }} (t)</dt><dd class="font-semibold">{{ number_format($snap['t'] * 100, 2) }}%</dd></div>
+        <div><dt class="text-slate-600 dark:text-slate-400">{{ __('price.at_p0') }}</dt><dd class="font-semibold">{{ number_format($snap['base_day'], 2) }}</dd></div>
+        <div><dt class="text-slate-600 dark:text-slate-400">{{ __('price.at_p1') }}</dt><dd class="font-semibold">{{ number_format($snap['base_day'] * $snap['cap'], 2) }}</dd></div>
       </dl>
-      <p class="text-xs font-mono text-slate-500">{{ __('price.formula') }}</p>
+      <p class="text-xs font-mono text-slate-600 dark:text-slate-400">{{ __('price.formula') }}</p>
     </div>
   </div>
   <x-ctas :list="$d['ctas'] ?? []" />

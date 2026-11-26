@@ -188,6 +188,7 @@ final class Docs
         // pages served by code, with no JSON file of their own
         $u['/certification/verify/'] = ['pr' => .4, 'mod' => $mt($root . '/pages/certification.json')];
         $u['/sitemap/'] = ['pr' => .3, 'mod' => $mt(__FILE__)];
+        $u['/plans/'] = ['pr' => .6, 'mod' => $mt(ROOT . '/views/templates/w5d/pages/plans.blade.php')];
         foreach (array_diff(Pages::AUDIENCES, Pages::PRIVATE_AUDIENCES) as $a) $u['/for/' . $a . '/'] ??= ['pr' => .7, 'mod' => $mt($root . '/pages/for.json')];
 
         $coll = ['macros' => ['/macro-works/', .8], 'services' => ['/services/', .5], 'projects' => ['/projects/', .6]];

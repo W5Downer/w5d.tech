@@ -73,7 +73,7 @@ return [
     ],
     'msg' => [
         'thanks' => 'Merci. Votre demande est enregistrée.', 'error' => 'Veuillez corriger les champs signalés.', 'csrf' => 'Session expirée. Rechargez la page et réessayez.',
-        'rate' => 'Trop de tentatives. Réessayez plus tard.', 'demo' => 'Mode démo : aucun paiement n’est prélevé. Votre engagement est enregistré, aucun argent ne circule.',
+        'rate' => 'Trop de tentatives. Réessayez plus tard.', 'pay_closed' => 'Les paiements ne sont pas encore ouverts : votre engagement est enregistré et rien n’est prélevé.',
         'dup_email' => 'Cet e-mail est déjà enregistré.', 'invalid_email' => 'Saisissez une adresse e-mail valide.', 'not_found' => 'Page introuvable.',
     ],
     'admin' => [
@@ -102,9 +102,9 @@ return [
         'amount' => 'Montant', 'date' => 'Date', 'phone' => 'Téléphone',
         'language' => 'Langue', 'member_since' => 'Membre depuis', 'verified' => 'E-mail confirmé',
         'not_verified' => 'E-mail non confirmé', 'pay_title' => 'Payer avec D17 (Tunisie uniquement)', 'pay_steps' => 'Envoyez le montant par D17 au numéro ci-dessous, puis saisissez la référence de transaction. Un administrateur la vérifie manuellement.',
-        'pay_to' => 'Envoyer à', 'pay_holder' => 'Titulaire du compte', 'pay_amount' => 'Montant',
+        'pay_to' => 'Envoyer à', 'pay_holder' => 'Titulaire du compte', 'pay_fee' => 'Frais de transaction', 'pay_fee_incl' => ':fee en plus du prix de :price', 'pay_amount' => 'Montant',
         'pay_sender' => 'Votre numéro D17 (+216…)', 'pay_txn' => 'Référence de transaction D17', 'pay_submit' => 'J’ai envoyé le paiement',
-        'pay_status' => 'Statut du paiement', 'pay_demo' => 'La commande et le paiement sont de vrais enregistrements ; aucune carte n’est débitée.', 'st_pending' => 'En attente de vérification',
+        'pay_status' => 'Statut du paiement', 'st_pending' => 'En attente de vérification',
         'st_verified' => 'Vérifié', 'st_rejected' => 'Rejeté', 'st_awaiting' => 'En attente de paiement',
         'sec_sessions' => 'Sessions « se souvenir de moi »', 'sec_password' => 'Changer le mot de passe', 'sec_tip' => 'Utilisez un mot de passe unique. Le changer déconnecte tous les appareils mémorisés.',
         'none_orders' => 'Vous n’avez pas encore de parts.', 'none_pays' => 'Aucun paiement enregistré.', 'none_apps' => 'Aucune candidature.',

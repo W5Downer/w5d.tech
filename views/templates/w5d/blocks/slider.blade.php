@@ -13,7 +13,7 @@
             <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
               @foreach(($s['ctas'] ?? []) as $c)<x-cta :c="$c" />@endforeach
             </div>
-            @if(!empty($s['note']))<p class="mt-5 text-xs text-slate-500">{{ rich($s['note']) }}</p>@endif
+            @if(!empty($s['note']))<p class="mt-5 text-xs text-slate-600 dark:text-slate-400">{{ rich($s['note']) }}</p>@endif
           </div>
         </div>
       </div>
@@ -22,11 +22,11 @@
   <div class="absolute bottom-0 inset-x-0 z-10">
     <div class="w5-progress"><i></i></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between text-slate-700 dark:text-white">
-      <div class="flex items-center gap-2" role="tablist">
+      <div class="flex items-center" role="group" aria-label="{{ __('cta.next') }}">
         @foreach($slides as $i => $s)<button type="button" class="w5-dot" data-dot aria-label="{{ $i + 1 }}" @if($i === 0) aria-current="true" @endif></button>@endforeach
       </div>
       <div class="flex items-center gap-2">
-        <span class="text-xs tabular-nums opacity-80" data-live aria-live="polite">1 / {{ count($slides) }}</span>
+        <span class="hidden min-[400px]:inline text-xs tabular-nums opacity-80" data-live aria-live="polite">1 / {{ count($slides) }}</span>
         <button type="button" data-prev class="rounded-full glass hover:border-brand-500/60 p-2" aria-label="{{ __('cta.back') }}">{{ icon('chevron-left', 'w-4 h-4 rtl:rotate-180') }}</button>
         <button type="button" data-next class="rounded-full glass hover:border-brand-500/60 p-2" aria-label="{{ __('cta.next') }}">{{ icon('chevron-right', 'w-4 h-4 rtl:rotate-180') }}</button>
       </div>

@@ -17,7 +17,7 @@
         {!! \W5D\Integrations::field(true) !!}
         <button class="btn-peak w-full" type="submit">{{ __('admin.login') }}</button>
       </form>
-      <div class="flex items-center gap-3 text-xs text-slate-500" aria-hidden="true"><span class="h-px flex-1 bg-slate-300/60 dark:bg-white/10"></span>{{ tr3('or', 'ou', 'أو') }}<span class="h-px flex-1 bg-slate-300/60 dark:bg-white/10"></span></div>
+      <div class="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-400" aria-hidden="true"><span class="h-px flex-1 bg-slate-300/60 dark:bg-white/10"></span>{{ tr3('or', 'ou', 'أو') }}<span class="h-px flex-1 bg-slate-300/60 dark:bg-white/10"></span></div>
       <form method="post" action="{{ admin_url('login') }}" class="space-y-3" data-once>
         {!! csrf_field() !!}<input type="hidden" name="do" value="request">
         <p class="text-sm text-slate-600 dark:text-slate-400">{{ tr3('Forgot your password, or no password yet? Enter your e-mail address above, then we send a 6-digit code to it.', 'Mot de passe oublié, ou pas encore de mot de passe ? Saisissez votre e-mail ci-dessus, puis nous y envoyons un code à 6 chiffres.', 'نسيت كلمة المرور أو ليس لديك واحدة بعد؟ أدخل بريدك أعلاه ثم نرسل إليه رمزا من 6 أرقام.') }}</p>
@@ -39,7 +39,7 @@
         <button class="btn-link" type="submit">{{ tr3('Use another address / send a new code', 'Autre adresse / nouveau code', 'عنوان آخر / رمز جديد') }}</button>
       </form>
     @endif
-    <p class="text-xs text-slate-500">{{ tr3('Codes are single-use and expire. Sessions end after inactivity. We never show or e-mail a password.', 'Les codes sont à usage unique et expirent. Les sessions se ferment après inactivité. Nous n’affichons ni n’envoyons jamais de mot de passe.', 'الرموز لمرة واحدة وتنتهي صلاحيتها. تنتهي الجلسات بعد عدم النشاط. لا نعرض كلمة المرور ولا نرسلها أبدا.') }}</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400">{{ tr3('Codes are single-use and expire. Sessions end after inactivity. We never show or e-mail a password.', 'Les codes sont à usage unique et expirent. Les sessions se ferment après inactivité. Nous n’affichons ni n’envoyons jamais de mot de passe.', 'الرموز لمرة واحدة وتنتهي صلاحيتها. تنتهي الجلسات بعد عدم النشاط. لا نعرض كلمة المرور ولا نرسلها أبدا.') }}</p>
   </div>
 </div>
 @endsection

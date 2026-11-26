@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D\Controllers;
 
-use W5D\{Account, ACL, Affiliate, Auth, Certificate, Content, Csrf, DB, Mail, Payments, Qcm, RateLimit, Request, Response, Variables, ViewEnv};
+use W5D\{Account, ACL, Affiliate, Auth, Billing, Certificate, Content, Csrf, DB, Gateways, Mail, Payments, Qcm, RateLimit, Request, Response, Variables, ViewEnv};
 
 /**
  * Affiliate programme, certification and the QCM engine: account actions, public verification, owner-portal screens.
@@ -38,7 +38,7 @@ final class Programs
                 'q_hist' => DB::all('SELECT id, purpose, level, service_slug, status, score_pct, passed, correct, total, started_at FROM qcm_attempts WHERE user_id = ? ORDER BY id DESC LIMIT 15', [$uid]),
                 'q_tasks' => DB::all('SELECT id, title, service_slug, status, note, created_at FROM qcm_tasks WHERE user_id = ? ORDER BY id DESC LIMIT 10', [$uid])];
         }
-        if ($panel === 'certificates') return ['c_rows' => Certificate::forUser($uid), 'c_level' => Certificate::level($uid)];
+        if ($panel === 'certificates') return ['c_rows' => Certificate::forUser($uid), 'c_renew' => Certificate::renewals($uid), 'c_level' => Certificate::level($uid), 'c_fees' => Billing::certFees(), 'c_open' => DB::all("SELECT number, amount, currency FROM invoices WHERE kind = 'cert' AND status = 'sent' AND user_id = ? ORDER BY id DESC LIMIT 5", [$uid])];
         $a = Affiliate::forUser($uid);
         return ['a_on' => Affiliate::enabled(), 'a' => $a, 'a_stats' => $a ? Affiliate::stats((int)$a['id']) : null,
             'a_link' => $a ? Affiliate::link((string)$a['code'], '/') : null,
@@ -103,36 +103,24 @@ final class Programs
         if ($r = Accounts::guard($q, 'qcm-buy', '/account/qcm/', 20, 3600)) return $r;
         $rule = Qcm::rule((int)($q->post['rule'] ?? 0));
         if (!$rule || (float)$rule['fee'] <= 0) return self::back('/account/qcm/', 'error', self::m('No fee is due for this round.', 'Aucun frais n’est dû pour cette session.', 'لا رسوم على هذه الجولة.'));
-        if (!Payments::enabled()) return self::back('/account/qcm/', 'error', self::m('Payments are not open yet.', 'Les paiements ne sont pas encore ouverts.', 'الدفع غير مفتوح بعد.'));
+        if (!Gateways::any()) return self::back('/account/qcm/', 'error', self::m('Payments are not open yet.', 'Les paiements ne sont pas encore ouverts.', 'الدفع غير مفتوح بعد.'));
+        $u = Account::row();
         $p = Qcm::buyPass(Account::id(), $rule);
-        return Response::redirect(url('/account/qcm/pay/' . $p['ref'] . '/'));
+        if (!$u || !$p) return self::back('/account/qcm/', 'error', self::m('No fee is due for this round.', 'Aucun frais n’est dû pour cette session.', 'لا رسوم على هذه الجولة.'));
+        return Response::redirect(Billing::link(Billing::invoiceForPass($p, $u, (string)$rule['name'])));
     }
 
+    /** Old fee-payment address: the fee is an invoice now, paid on the one payment page of the platform. */
     public static function qcmPay(Request $q): Response
     {
         if ($r = Accounts::need($q)) return $r;
         $ref = (string)($q->params['ref'] ?? '');
-        $sel = 'SELECT p.*, r.name AS rule_name FROM qcm_passes p LEFT JOIN qcm_rules r ON r.id = p.rule_id WHERE ';
-        $p = preg_match('/^QP-[A-F0-9]{8}$/', $ref) && Payments::enabled() ? DB::one($sel . 'p.ref = ? AND p.user_id = ?', [$ref, Account::id()]) : null;
-        if (!$p) return Pages::notFound($q);
-        $back = '/account/qcm/pay/' . $ref . '/';
-        if ($q->isPost()) {
-            if ($r = Accounts::guard($q, 'qcm-pay', $back, 12, 3600)) return $r;
-            $e = [];
-            $gsm = Payments::tnGsm((string)($q->post['sender_gsm'] ?? ''));
-            if (!$gsm) $e['sender_gsm'] = self::m('D17 is for Tunisian numbers only: use +216 followed by 8 digits.', 'D17 est réservé aux numéros tunisiens : +216 suivi de 8 chiffres.', 'D17 للأرقام التونسية فقط: +216 متبوعا بـ 8 أرقام.');
-            $txn = strtoupper(trim((string)($q->post['txn_ref'] ?? '')));
-            if (!preg_match('/^[A-Z0-9\-]{6,32}$/', $txn)) $e['txn_ref'] = self::m('Enter the D17 transaction reference (6 to 32 letters or digits).', 'Saisissez la référence de transaction D17 (6 à 32 lettres ou chiffres).', 'أدخل مرجع عملية D17 (من 6 إلى 32 حرفا أو رقما).');
-            elseif (DB::one("SELECT 1 FROM payments WHERE txn_ref = ? AND status != 'rejected'", [$txn]) || DB::one("SELECT 1 FROM qcm_passes WHERE txn_ref = ? AND id != ? AND status != 'rejected'", [$txn, $p['id']])) $e['txn_ref'] = self::m('This transaction reference was already used.', 'Cette référence de transaction a déjà été utilisée.', 'مرجع العملية هذا مستعمل مسبقا.');
-            if (in_array($p['status'], ['verified', 'used'], true)) $e['_form'] = self::m('This fee is already verified.', 'Ces frais sont déjà vérifiés.', 'تم التحقق من هذه الرسوم مسبقا.');
-            if ($e) return Accounts::bounce($q, $back, $e);
-            DB::q("UPDATE qcm_passes SET sender_gsm = ?, txn_ref = ?, status = 'pending', note = NULL WHERE id = ?", [$gsm, $txn, $p['id']]);
-            Mail::staff('QCM fee to verify', ['pass' => $ref, 'round' => (string)$p['rule_name'], 'amount' => number_format((float)$p['amount'], 2) . ' ' . $p['currency'], 'sender' => $gsm, 'txn' => $txn]);
-            Account::notify(Account::id(), tr3('D17 reference received', 'Référence D17 reçue', 'تم استلام مرجع D17'), $ref . ' · ' . $txn, '/account/qcm/');
-            return self::back($back, 'ok', self::m('Thank you. An administrator will verify the transfer by hand and we will notify you.', 'Merci. Un administrateur vérifiera le virement manuellement et nous vous préviendrons.', 'شكرا. سيتحقق مسؤول من التحويل يدويا وسنخطرك.'));
-        }
-        $p = DB::one($sel . 'p.id = ?', [$p['id']]);
-        return Accounts::page($q, 'account.qcm-pay', ['title' => tr3('QCM round fee', 'Frais de session QCM', 'رسوم جولة الاختبار'), 'p' => $p, 'd17' => Payments::instructions((float)$p['amount'])]);
+        $p = preg_match('/^QP-[A-F0-9]{8}$/', $ref) ? DB::one('SELECT p.*, r.name AS rule_name FROM qcm_passes p LEFT JOIN qcm_rules r ON r.id = p.rule_id WHERE p.ref = ? AND p.user_id = ?', [$ref, Account::id()]) : null;
+        $u = Account::row();
+        if (!$p || !$u) return Pages::notFound($q);
+        if (in_array($p['status'], ['verified', 'used'], true)) return self::back('/account/invoices/', 'ok', self::m('This fee is already verified.', 'Ces frais sont déjà vérifiés.', 'تم التحقق من هذه الرسوم مسبقا.'));
+        if (!Gateways::any()) return Pages::notFound($q);
+        return Response::redirect(Billing::link(Billing::invoiceForPass($p, $u, (string)($p['rule_name'] ?? ''))));
     }
 
     public static function qcmTask(Request $q): Response
@@ -402,7 +390,7 @@ final class Programs
     public static function vReview(): array
     {
         return ['kind' => 'qcm-review', 'stats' => Qcm::stats(),
-            'passes' => DB::all("SELECT p.id, p.ref, p.amount, p.currency, p.sender_gsm, p.txn_ref, p.status, p.note, p.created_at, u.name, u.email, r.name AS rule FROM qcm_passes p JOIN users u ON u.id = p.user_id LEFT JOIN qcm_rules r ON r.id = p.rule_id WHERE p.status != 'awaiting' ORDER BY (p.status = 'pending') DESC, p.id DESC LIMIT 100"),
+            'passes' => DB::all("SELECT p.id, p.ref, p.amount, p.currency, COALESCE((SELECT y.sender_gsm FROM payments y JOIN invoices v ON v.id = y.invoice_id WHERE v.source_ref = p.ref ORDER BY y.id DESC LIMIT 1), p.sender_gsm) AS sender_gsm, COALESCE((SELECT y.txn_ref FROM payments y JOIN invoices v ON v.id = y.invoice_id WHERE v.source_ref = p.ref ORDER BY y.id DESC LIMIT 1), p.txn_ref) AS txn_ref, p.status, p.note, p.created_at, u.name, u.email, r.name AS rule FROM qcm_passes p JOIN users u ON u.id = p.user_id LEFT JOIN qcm_rules r ON r.id = p.rule_id WHERE p.status != 'awaiting' ORDER BY (p.status = 'pending') DESC, p.id DESC LIMIT 100"),
             'tasks' => DB::all("SELECT t.id, t.title, t.service_slug, t.evidence, t.status, t.note, t.created_at, u.name, u.email FROM qcm_tasks t JOIN users u ON u.id = t.user_id ORDER BY (t.status = 'submitted') DESC, t.id DESC LIMIT 100"),
             'can' => Auth::can('qcm.update')];
     }
@@ -415,6 +403,16 @@ final class Programs
         $p = DB::one("SELECT p.*, u.email, u.name, u.lang FROM qcm_passes p JOIN users u ON u.id = p.user_id WHERE p.id = ? AND p.status = 'pending'", [$id]);
         if (!$p) { self::flashA('error', 'That fee is not waiting for review any more.'); return Response::redirect(admin_url('qcm-review/')); }
         if (!$ok && mb_strlen($note) < 3) { self::flashA('error', 'Give the person a short reason when rejecting.'); return Response::redirect(admin_url('qcm-review/')); }
+        // The fee is an invoice with a payment: settle that payment (marks the invoice paid, verifies the pass, e-mails the buyer).
+        $inv = Billing::forSource('qcm_pass', (string)$p['ref']);
+        $pay = $inv ? DB::one("SELECT id FROM payments WHERE invoice_id = ? AND status = 'pending' AND txn_ref IS NOT NULL ORDER BY id DESC", [$inv['id']]) : null;
+        if ($pay) {
+            Payments::settle((int)$pay['id'], $ok, self::who(), $note);
+            if (!$ok) DB::q('UPDATE qcm_passes SET note = ? WHERE id = ?', [$note ?: null, $id]);
+            Admin::audit('qcm.pass', (string)$p['ref'], $ok ? 'verified' : 'rejected');
+            self::flashA('ok', $p['ref'] . ' → ' . ($ok ? 'verified' : 'rejected'));
+            return Response::redirect(admin_url('qcm-review/'));
+        }
         DB::q('UPDATE qcm_passes SET status = ?, note = ?, verified_by = ?, verified_at = CURRENT_TIMESTAMP WHERE id = ?', [$ok ? 'verified' : 'rejected', $note ?: null, self::who(), $id]);
         if ($ok) Affiliate::onPayment((string)$p['email'], (string)$p['ref'], (float)$p['amount']);
         Mail::send((string)$p['email'], 'qcm_pass_status', ['name' => $p['name'], 'ref' => $p['ref'], 'status' => $ok ? 'verified' : 'rejected', 'amount' => $p['amount'], 'currency' => $p['currency'], 'note' => $note, 'url' => abs_url('/account/qcm/')], $p['lang'] ?? null);

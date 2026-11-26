@@ -1,7 +1,7 @@
 # Card image prompts
 
 Every card element on the site has one image (or a small carousel). The files in `htdocs/assets/_base/images/cards/` are
-indexed **placeholders** (`img-NNNN.jpg`, 640x360). To replace one, generate an image from its prompt and save it under the same
+indexed **placeholders** (`img-NNNN.webp`, 640x360). To replace one, generate an image from its prompt and save it under the same
 file name (1280x720 JPEG recommended). The index is stable: it never changes when other cards are added.
 
 The prompts are split into small files by index range so that no single document is too long to open or to preview in full.

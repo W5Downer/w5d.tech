@@ -25,6 +25,41 @@ final class Affiliate
 
     public static function link(string $code, string $path = '/'): string { return abs_url($path) . '?ref=' . $code; }
 
+    /** Paid parts (parts per day x days of each paid order) bought by the signed-in subscriber, matched on the account e-mail. */
+    public static function paidParts(int $userId): int
+    {
+        try {
+            $r = DB::one("SELECT COALESCE(SUM(o.parts_per_day * o.days), 0) AS n FROM investor_orders o JOIN investors i ON i.id = o.investor_id JOIN users u ON lower(u.email) = lower(i.email) WHERE u.id = ? AND o.status = 'paid'", [$userId]);
+            return (int)($r['n'] ?? 0);
+        } catch (\Throwable) { return 0; }
+    }
+
+    /**
+     * Code to append as ?ref= on share links. Only for a signed-in subscriber whose affiliate profile is active and who has paid for
+     * at least `affiliate.share_min_parts` part(s). Everybody else gets null: share links stay clean.
+     */
+    public static function shareCode(): ?string
+    {
+        if (PHP_SAPI === 'cli' || !self::enabled() || !Account::check()) return null;
+        try {
+            if (!DB::available()) return null;
+            $a = self::forUser(Account::id());
+            if (!$a || $a['status'] !== 'active') return null;
+            return self::paidParts(Account::id()) >= max(1, (int)self::cfg('share_min_parts')) ? (string)$a['code'] : null;
+        } catch (\Throwable) { return null; }
+    }
+
+    /** Append ref=CODE to a URL (keeps the query and fragment, never duplicates an existing ref). */
+    public static function tagUrl(string $url, ?string $code = null): string
+    {
+        $code ??= self::shareCode();
+        if ($code === null || $code === '') return $url;
+        $frag = '';
+        if (($h = strpos($url, '#')) !== false) { $frag = substr($url, $h); $url = substr($url, 0, $h); }
+        if (preg_match('/[?&]ref=/', $url)) return $url . $frag;
+        return $url . (str_contains($url, '?') ? '&' : '?') . 'ref=' . rawurlencode($code) . $frag;
+    }
+
     private static function newCode(): string
     {
         for ($i = 0; $i < 20; $i++) {

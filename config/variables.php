@@ -98,12 +98,22 @@ return [
         'hold_days'      => 14,    // days a commission stays pending before it becomes payable
         'min_payout'     => 50.0,  // TND: smallest payout that can be requested
         'auto_approve'   => 0,     // 1 = new affiliates are active at once; 0 = a person approves them
+        'share_min_parts' => 1,    // paid parts a subscriber needs before the site's Share buttons add their ?ref= code
     ],
     // Certificates: issued only by a passed certification/upgrade QCM round (or by hand by the owner), verifiable by anyone with the code.
     'cert' => [
         'validity_months' => 24,
         'levels'          => 4,
+        'recert_warn_days' => 60,   // the account shows a re-certification prompt this many days before a certificate expires (0 = only after)
         'verify_per_10min' => 30,   // public lookups allowed per IP per 10 minutes
+    ],
+    // Billing: invoices, plans, placement commission. Prices themselves live in the portal (Plans, Fees, Milestones), never here.
+    'billing' => [
+        'due_days'              => 14,    // payment term printed on invoices
+        'renew_days_before'     => 7,     // renewal invoice is issued this many days before a plan period ends
+        'grace_days'            => 7,     // an unpaid renewal lapses this many days after the period end
+        'placement_rate_pct'    => 0.0,   // default commission on a placement (percent of the contract value); owner sets it
+        'milestone_review_hours' => 72,   // target time for a reviewer to accept or dispute a delivered milestone
     ],
     // QCM engine defaults (each round's own rules live in the portal: QCM rules).
     'qcm' => [

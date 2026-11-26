@@ -36,18 +36,60 @@ final class Gateways
     /** Short label for the buyer. */
     public static function short(string $id): string { return trim(explode('(', self::name($id))[0]); }
 
-    /** Rows shown to the buyer for a manual method: [label, value, copyable] */
+    /* ---------------------------------------------------------------- transaction fees */
+
+    private static function num(string $id, string $k): float
+    {
+        $v = str_replace(',', '.', self::cfg($id, $k));
+        return is_numeric($v) ? max(0.0, (float)$v) : 0.0;
+    }
+
+    /**
+     * Fee for one transaction of $amount (the published price), from the owner's per-method variables.
+     * @return array{pct:float,fixed:float,fee:float,payer:string,charge:float,net:float}
+     *   fee = percent of the amount + fixed fee; charge = what the buyer pays; net = what we keep.
+     *   The provider's VAT on its fee is NOT modelled: it is in the provider contract, not in this app.
+     */
+    public static function fee(string $id, float $amount): array
+    {
+        $amount = round(max(0.0, $amount), 2);
+        $pct = self::num($id, 'fee_pct'); $fixed = self::num($id, 'fee_fixed');
+        $payer = self::cfg($id, 'fee_payer') === 'buyer' ? 'buyer' : 'seller';
+        $fee = $amount > 0 ? round($amount * $pct / 100 + $fixed, 2) : 0.0;
+        if ($payer === 'buyer') return ['pct' => $pct, 'fixed' => $fixed, 'fee' => $fee, 'payer' => $payer, 'charge' => round($amount + $fee, 2), 'net' => $amount];
+        return ['pct' => $pct, 'fixed' => $fixed, 'fee' => $fee, 'payer' => $payer, 'charge' => $amount, 'net' => round($amount - $fee, 2)];
+    }
+
+    /** Buyer-facing one-liner, e.g. "+ 1.00 TND fee (1 %)"; empty when the buyer pays nothing extra. */
+    public static function feeBuyerLine(string $id, float $amount): string
+    {
+        $f = self::fee($id, $amount);
+        if ($f['payer'] !== 'buyer' || $f['fee'] <= 0) return '';
+        return number_format($f['fee'], 2) . ' ' . (string)Variables::get('money.currency', 'TND');
+    }
+
+    /** Rows shown to the buyer for a manual method: [label, value, copyable]. Driven by the 'show' list in config/gateways.php. */
     public static function instructions(string $id, float $amount): array
     {
         $cur = (string)Variables::get('money.currency', 'TND');
         $rows = [];
-        if ($id === 'd17') $rows = [[tr3('Send to', 'Envoyer au', 'أرسل إلى'), self::cfg('d17', 'gsm'), true], [tr3('Account holder', 'Titulaire', 'صاحب الحساب'), self::cfg('d17', 'holder'), false]];
-        if ($id === 'bank') {
-            $rows = [[tr3('Bank', 'Banque', 'البنك'), self::cfg('bank', 'bank_name'), false], [tr3('Account holder', 'Titulaire', 'صاحب الحساب'), self::cfg('bank', 'holder'), false], [tr3('RIB / IBAN', 'RIB / IBAN', 'RIB / IBAN'), self::cfg('bank', 'iban'), true]];
-            if (self::cfg('bank', 'bic') !== '') $rows[] = ['BIC / SWIFT', self::cfg('bank', 'bic'), true];
-        }
+        foreach ((self::def($id)['show'] ?? []) as [$label, $key, $copy]) $rows[] = [is_array($label) ? t($label) : (string)$label, self::cfg($id, (string)$key), (bool)$copy];
         $rows[] = [tr3('Amount', 'Montant', 'المبلغ'), number_format($amount, 2) . ' ' . $cur, false];
         return ['rows' => array_values(array_filter($rows, fn($r) => $r[1] !== '')), 'note' => self::cfg($id, 'note')];
+    }
+
+    /** Does this manual method identify the sender by a Tunisian phone number (wallets) or by a free name/account (bank, postal)? */
+    public static function senderIsPhone(string $id): bool { return (self::def($id)['sender'] ?? 'name') === 'gsm'; }
+
+    /** Manual methods the buyer can pick right now. */
+    public static function manualIds(): array { return array_values(array_filter(self::enabledIds(), fn($i) => !self::online($i))); }
+
+    /** Step-by-step guide (what / owner / buyer / check) in the current language, or null. */
+    public static function guide(string $id): ?array
+    {
+        $g = self::def($id)['guide'] ?? null;
+        if (!$g) return null;
+        return ['what' => t($g['what']), 'owner' => array_map('t', $g['owner']), 'buyer' => array_map('t', $g['buyer']), 'check' => t($g['check'])];
     }
 
     /* ---------------------------------------------------------------- helpers */
@@ -83,7 +125,7 @@ final class Gateways
     {
         $fail = fn(string $why) => ['ok' => false, 'url' => null, 'ref' => null, 'error' => $why];
         if (!self::enabled($id) || !self::online($id)) return $fail('method not available');
-        $amount = round((float)$p['amount'], 2);
+        $amount = Payments::due($p);
         if ($amount <= 0 || $amount > 100000 || (string)$p['currency'] !== 'TND') return $fail('invalid amount or currency');
         $base = self::base($id); $pr = (string)$p['ref'];
         [$fn, $ln] = self::names((string)($buyer['name'] ?? ''));
@@ -140,7 +182,8 @@ final class Gateways
         $pref = (string)($p['provider_ref'] ?? '');
         if (!self::online($id) || $pref === '' || !self::enabled($id)) return $out('error', '', 'not verifiable');
         $base = self::base($id);
-        $expectMilli = self::millimes((float)$p['amount']);
+        $due = Payments::due($p);
+        $expectMilli = self::millimes($due);
         switch ($id) {
             case 'flouci':
                 $r = Http::request('GET', $base . '/api/v2/verify_payment/' . rawurlencode($pref), self::flouciAuth());
@@ -172,7 +215,7 @@ final class Gateways
                 $d = is_array($j['data'] ?? null) ? $j['data'] : null;
                 if ($r['status'] !== 200 || !$d) return $out('error', 'http ' . $r['status']);
                 if (!empty($d['payment_status'])) {
-                    if (isset($d['amount']) && is_numeric($d['amount']) && abs((float)$d['amount'] - round((float)$p['amount'], 2)) > 0.001) return $out('failed', 'paid', 'amount mismatch: got ' . $d['amount'] . ' expected ' . number_format((float)$p['amount'], 2, '.', ''));
+                    if (isset($d['amount']) && is_numeric($d['amount']) && abs((float)$d['amount'] - $due) > 0.001) return $out('failed', 'paid', 'amount mismatch: got ' . $d['amount'] . ' expected ' . number_format($due, 2, '.', ''));
                     return $out('paid', 'paid');
                 }
                 return $out('pending', 'unpaid');

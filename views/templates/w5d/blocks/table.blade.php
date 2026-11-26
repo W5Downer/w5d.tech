@@ -5,6 +5,6 @@
       <tbody>@foreach(($d['rows'] ?? []) as $r)<tr>@foreach($r as $cell)<td>{{ rich($cell) }}</td>@endforeach</tr>@endforeach</tbody>
     </table>
   </div>
-  @if(!empty($d['note']))<p class="text-xs text-slate-500 mt-3">{{ rich($d['note']) }}</p>@endif
+  @if(!empty($d['note']))<p class="text-xs text-slate-600 dark:text-slate-400 mt-3">{{ rich($d['note']) }}</p>@endif
   <x-ctas :list="$d['ctas'] ?? []" />
 </x-section>

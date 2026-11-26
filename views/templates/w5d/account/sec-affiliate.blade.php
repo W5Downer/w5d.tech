@@ -20,16 +20,19 @@
     <div class="mt-4 rounded-2xl border border-violet-500/30 bg-violet-500/10 p-5 max-w-2xl">
       <p class="eyebrow">{{ tr3('Your link', 'Votre lien', 'رابطك') }}</p>
       <p class="mt-1 font-mono text-sm break-all" dir="ltr" id="aff-link">{{ $a_link }}</p>
-      <p class="mt-3 flex flex-wrap gap-3"><button type="button" class="btn-focus" data-copy-text="{{ $a_link }}">{{ icon('copy', 'w-4 h-4') }} {{ __('cta.copy') }}</button><span class="text-xs text-slate-500 self-center">{{ tr3('Your code', 'Votre code', 'رمزك') }}: <strong class="font-mono">{{ $a['code'] }}</strong> · {{ tr3('attribution lasts', 'l’attribution dure', 'مدة الإسناد') }} {{ $v('cookie_days') }} {{ tr3('days', 'jours', 'يوما') }}</span></p>
+      <p class="mt-3 flex flex-wrap gap-3"><button type="button" class="btn-focus" data-copy-text="{{ $a_link }}">{{ icon('copy', 'w-4 h-4') }} {{ __('cta.copy') }}</button><span class="text-xs text-slate-600 dark:text-slate-400 self-center">{{ tr3('Your code', 'Votre code', 'رمزك') }}: <strong class="font-mono">{{ $a['code'] }}</strong> · {{ tr3('attribution lasts', 'l’attribution dure', 'مدة الإسناد') }} {{ $v('cookie_days') }} {{ tr3('days', 'jours', 'يوما') }}</span></p>
     </div>
+  @endif
+  @if($a['status'] === 'active')
+    <p class="mt-3 text-sm text-slate-600 dark:text-slate-300 max-w-2xl">{{ tr3('The Share button on every page adds your code to the link it shares, once you have paid for at least', 'Le bouton Partager de chaque page ajoute votre code au lien partagé, dès que vous avez payé au moins', 'يضيف زر المشاركة في كل صفحة رمزك إلى الرابط المشارَك بمجرد أن تدفع ما لا يقل عن') }} {{ max(1, (int)$v('share_min_parts')) }} {{ tr3('part(s).', 'part(s).', 'جزء.') }} {{ \W5D\Affiliate::shareCode() ? tr3('It is on for you now.', 'Elle est active pour vous.', 'وهي مفعّلة لك الآن.') : tr3('It is not on yet: no paid part found for this account e-mail.', 'Elle n’est pas encore active : aucune part payée trouvée pour l’e-mail de ce compte.', 'لم تُفعَّل بعد: لا توجد حصة مدفوعة لبريد هذا الحساب.') }}</p>
   @endif
   @if($a_stats)
     <div class="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4">
       @foreach([[tr3('Clicks', 'Clics', 'النقرات'), $a_stats['clicks']], [tr3('Confirmed sign-ups', 'Inscriptions confirmées', 'تسجيلات مؤكدة'), $a_stats['signups']], [tr3('Pending', 'En attente', 'قيد الانتظار'), number_format($a_stats['pending'], 2) . ' ' . $cur], [tr3('Available to withdraw', 'Disponible au retrait', 'متاح للسحب'), number_format($a_stats['available'], 2) . ' ' . $cur], [tr3('Approved, on hold', 'Approuvé, en attente', 'مقبول قيد الانتظار'), number_format($a_stats['approved'], 2) . ' ' . $cur], [tr3('In a payout request', 'Dans une demande de paiement', 'ضمن طلب صرف'), number_format($a_stats['locked'], 2) . ' ' . $cur], [tr3('Paid', 'Payé', 'مدفوع'), number_format($a_stats['paid'], 2) . ' ' . $cur]] as [$l, $n])
-        <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-500">{{ $l }}</p><p class="mt-1 text-xl font-display font-bold break-words">{{ $n }}</p></div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-4"><p class="text-xs text-slate-600 dark:text-slate-400">{{ $l }}</p><p class="mt-1 text-xl font-display font-bold break-words">{{ $n }}</p></div>
       @endforeach
     </div>
-    <p class="mt-3 text-xs text-slate-500">{{ tr3('Approved commissions wait', 'Les commissions approuvées attendent', 'تنتظر العمولات المقبولة') }} {{ $v('hold_days') }} {{ tr3('days before they can be withdrawn. Minimum payout:', 'jours avant de pouvoir être retirées. Paiement minimum :', 'يوما قبل سحبها. الحد الأدنى للصرف:') }} {{ number_format((float)$v('min_payout'), 2) }} {{ $cur }}.</p>
+    <p class="mt-3 text-xs text-slate-600 dark:text-slate-400">{{ tr3('Approved commissions wait', 'Les commissions approuvées attendent', 'تنتظر العمولات المقبولة') }} {{ $v('hold_days') }} {{ tr3('days before they can be withdrawn. Minimum payout:', 'jours avant de pouvoir être retirées. Paiement minimum :', 'يوما قبل سحبها. الحد الأدنى للصرف:') }} {{ number_format((float)$v('min_payout'), 2) }} {{ $cur }}.</p>
   @endif
 
   <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Payout details', 'Détails de paiement', 'بيانات الصرف') }}</h2>
@@ -45,11 +48,11 @@
   @endif
 
   <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Recent commissions', 'Commissions récentes', 'العمولات الأخيرة') }}</h2>
-  @if(!$a_refs)<p class="mt-2 text-sm text-slate-500">{{ tr3('Nothing yet.', 'Rien pour le moment.', 'لا شيء بعد.') }}</p>
+  @if(!$a_refs)<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{{ tr3('Nothing yet.', 'Rien pour le moment.', 'لا شيء بعد.') }}</p>
   @else<div class="mt-3 overflow-x-auto rounded-2xl border border-slate-200 dark:border-white/10"><table class="w-full text-sm"><tbody>@foreach($a_refs as $x)<tr class="border-t first:border-t-0 border-slate-200 dark:border-white/10"><td class="p-3 tabular-nums">{{ substr((string)$x['created_at'], 0, 10) }}</td><td class="p-3">{{ $x['kind'] === 'signup' ? tr3('Sign-up', 'Inscription', 'تسجيل') : ($x['kind'] === 'payment' ? tr3('Verified payment', 'Paiement vérifié', 'دفعة موثقة') : tr3('First certificate', 'Premier certificat', 'أول شهادة')) }}</td><td class="p-3 tabular-nums">{{ number_format((float)$x['commission'], 2) }} {{ $cur }}</td><td class="p-3"><span class="rounded-full px-2 py-0.5 text-xs {{ $stl($x['status'] === 'paid' ? 'verified' : ($x['status'] === 'rejected' ? 'rejected' : 'pending')) }}">{{ $x['status'] }}</span></td></tr>@endforeach</tbody></table></div>@endif
   @if($a_pays)
     <h2 class="mt-8 font-display text-lg font-semibold">{{ tr3('Payout requests', 'Demandes de paiement', 'طلبات الصرف') }}</h2>
-    <ul class="mt-3 space-y-2 max-w-xl">@foreach($a_pays as $x)<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm flex justify-between gap-3"><span>{{ number_format((float)$x['amount'], 2) }} {{ $cur }} <span class="text-xs text-slate-500">· {{ substr((string)$x['created_at'], 0, 10) }}@if($x['txn_ref']) · {{ $x['txn_ref'] }}@endif</span></span><span class="rounded-full px-2 py-0.5 text-xs h-fit {{ $stl($x['status'] === 'paid' ? 'verified' : ($x['status'] === 'rejected' ? 'rejected' : 'pending')) }}">{{ $x['status'] }}</span></li>@endforeach</ul>
+    <ul class="mt-3 space-y-2 max-w-xl">@foreach($a_pays as $x)<li class="rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm flex justify-between gap-3"><span>{{ number_format((float)$x['amount'], 2) }} {{ $cur }} <span class="text-xs text-slate-600 dark:text-slate-400">· {{ substr((string)$x['created_at'], 0, 10) }}@if($x['txn_ref']) · {{ $x['txn_ref'] }}@endif</span></span><span class="rounded-full px-2 py-0.5 text-xs h-fit {{ $stl($x['status'] === 'paid' ? 'verified' : ($x['status'] === 'rejected' ? 'rejected' : 'pending')) }}">{{ $x['status'] }}</span></li>@endforeach</ul>
   @endif
 @endif
-<p class="mt-8 text-xs text-slate-500">{{ __('limits.returns') }} {{ tr3('Affiliate commissions are not a salary and are never guaranteed.', 'Les commissions d’affiliation ne sont pas un salaire et ne sont jamais garanties.', 'عمولات الإحالة ليست راتبا ولا تُضمن أبدا.') }}</p>
+<p class="mt-8 text-xs text-slate-600 dark:text-slate-400">{{ __('limits.returns') }} {{ tr3('Affiliate commissions are not a salary and are never guaranteed.', 'Les commissions d’affiliation ne sont pas un salaire et ne sont jamais garanties.', 'عمولات الإحالة ليست راتبا ولا تُضمن أبدا.') }}</p>

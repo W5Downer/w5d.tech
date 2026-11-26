@@ -5,7 +5,7 @@
       @php $ph = $m['photo'] ?? null; @endphp
       <article data-rvi="up" class="group spot shine lg:col-span-1 rounded-3xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 overflow-hidden flex flex-col" @if(!empty($m['id']))id="{{ $m['id'] }}"@endif>
         @if($ph)
-        <img src="{{ asset('images/team/' . $ph . '-360.jpg') }}" srcset="{{ asset('images/team/' . $ph . '-360.jpg') }} 360w, {{ asset('images/team/' . $ph . '.jpg') }} 576w" sizes="(min-width:1024px) 320px, 90vw" width="360" height="640" alt="{{ t($m['alt'] ?? $m['name']) }}" loading="lazy" decoding="async" class="w-full aspect-[4/5] object-cover object-top">
+        <img src="{{ asset('images/team/' . $ph . '-360.webp') }}" srcset="{{ asset('images/team/' . $ph . '-360.webp') }} 360w, {{ asset('images/team/' . $ph . '.webp') }} 576w" sizes="(min-width:1024px) 320px, 90vw" width="360" height="640" alt="{{ t($m['alt'] ?? $m['name']) }}" loading="lazy" decoding="async" class="w-full aspect-[4/5] object-cover object-top">
         @endif
         <div class="p-6 flex flex-col gap-2">
           <div class="flex flex-wrap gap-2">@foreach(($m['roles'] ?? []) as $r)<span class="tier-badge">{{ t($r) }}</span>@endforeach</div>

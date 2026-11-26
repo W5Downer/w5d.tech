@@ -21,7 +21,7 @@
         @foreach($d['badges'] as $b)<li class="glass rounded-full px-3 py-1.5 inline-flex items-center gap-1.5">{{ icon($b['icon'] ?? 'check', 'w-3.5 h-3.5') }} {{ rich($b['label']) }}</li>@endforeach
       </ul>
       @endif
-      @if(!empty($d['note']))<p class="mt-5 text-xs text-slate-500 max-w-xl {{ $center ? 'mx-auto' : '' }}">{{ rich($d['note']) }}</p>@endif
+      @if(!empty($d['note']))<p class="mt-5 text-xs text-slate-600 dark:text-slate-400 max-w-xl {{ $center ? 'mx-auto' : '' }}">{{ rich($d['note']) }}</p>@endif
     </div>
     @if($variant === 'product')
     <div class="grad-border rounded-3xl glass p-6 shadow-2xl shadow-brand-500/10 text-slate-900 dark:text-white">

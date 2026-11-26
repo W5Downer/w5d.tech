@@ -43,6 +43,7 @@ final class SettingsForm
         return match ($f['t']) {
             'url' => (bool)preg_match('#^https://[A-Za-z0-9.\-]+(:\d+)?(/[^\s]*)?$#', $v) || (Env::get('APP_ENV') !== 'production' && (bool)preg_match('#^http://(localhost|127\.0\.0\.1)(:\d+)?(/[^\s]*)?$#', $v)),
             'int' => ctype_digit($v) && (int)$v >= (int)($f['min'] ?? 0) && (int)$v <= (int)($f['max'] ?? PHP_INT_MAX),
+            'pct', 'dec' => (bool)preg_match('/^\d{1,6}(\.\d{1,3})?$/', $v) && (float)$v >= (float)($f['min'] ?? 0) && (float)$v <= (float)($f['max'] ?? ($f['t'] === 'pct' ? 100 : 1000000)),
             'select' => isset(($f['options'] ?? [])[$v]),
             'bool' => in_array($v, ['0', '1'], true),
             'secret' => mb_strlen($v) >= 4 && mb_strlen($v) <= 400 && !preg_match('/[\x00-\x1f]/', $v),
@@ -75,7 +76,7 @@ final class SettingsForm
                 $fields[] = $f + ['value' => $isSecret ? '' : self::cfg($defs, $prefix, $id, $f['k']), 'is_set' => $isSecret ? Settings::isSet(self::key($prefix, $id, $f['k'])) : null];
             }
             $items[] = ['id' => $id, 'name' => $d['name'], 'doc' => $d['doc'] ?? '', 'icon' => $d['icon'] ?? 'plug', 'kind' => $d['kind'] ?? '', 'on' => self::on($defs, $prefix, $id), 'ready' => self::ready($defs, $prefix, $id),
-                'missing' => self::missing($defs, $prefix, $id), 'fields' => $fields, 'hook' => !empty($d['webhook']) ? abs_url('/pay/hook/' . $id . '/') : null, 'note' => $d['warn'] ?? null, 'src' => isset($d['env']) && !Settings::isSet(self::key($prefix, $id, 'enabled')) ? 'env' : 'portal'];
+                'missing' => self::missing($defs, $prefix, $id), 'fields' => $fields, 'hook' => !empty($d['webhook']) ? abs_url('/pay/hook/' . $id . '/') : null, 'note' => $d['warn'] ?? null, 'fee_note' => $d['fee_note'] ?? null, 'guide' => isset($d['guide']['what']) ? ['what' => t($d['guide']['what']), 'owner' => array_map('t', $d['guide']['owner'] ?? []), 'buyer' => array_map('t', $d['guide']['buyer'] ?? []), 'check' => t($d['guide']['check'] ?? '')] : null, 'src' => isset($d['env']) && !Settings::isSet(self::key($prefix, $id, 'enabled')) ? 'env' : 'portal'];
         }
         $hist = [];
         try { $hist = DB::all("SELECT skey, action, old_value, new_value, changed_by, note, changed_at FROM settings_audit WHERE skey LIKE ? ORDER BY id DESC LIMIT 25", [$prefix . '.%']); } catch (\Throwable) {}
@@ -102,6 +103,7 @@ final class SettingsForm
                 }
                 if ($f['t'] === 'bool') $v = isset($in[$k]) ? '1' : '0';
                 else $v = trim((string)($in[$k] ?? ''));
+                if (in_array($f['t'], ['pct', 'dec'], true)) $v = str_replace(',', '.', $v);
                 if ($v === '' && ($f['default'] ?? '') !== '' && $f['t'] !== 'url') $v = (string)$f['default'];
                 if (!self::validValue($f, $v)) { $errs[] = $d['name'] . ' · ' . $f['label']; continue; }
                 // store an explicit empty only by clearing; unchanged-vs-default values are still stored so the owner's choice is explicit
