@@ -30,7 +30,7 @@
 <header class="fixed top-0 inset-x-0 z-50">
   <div class="max-w-[96rem] mx-auto px-3 sm:px-6 xl:px-4 mt-3">
     <nav class="nav-solid rounded-2xl flex items-center justify-between gap-1 min-[400px]:gap-3 px-2 min-[400px]:px-4 sm:px-6 py-3" aria-label="Primary">
-      <a href="{{ url('/') }}" class="flex items-center gap-2 shrink-0" aria-label="W5D">
+      <a href="{{ url('/') }}" class="flex flex-row items-center gap-2 shrink-0 whitespace-nowrap" aria-label="W5D">
         <img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-8 w-auto shrink-0" decoding="async">
         <span class="font-display font-bold text-lg tracking-tight text-slate-900 dark:text-white">W5D</span>
       </a>
@@ -46,7 +46,7 @@
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 grid gap-8 items-start {{ !empty($item['promo']) ? 'grid-cols-[minmax(0,1fr)_minmax(0,1fr)_16rem]' : 'grid-cols-2' }}">
                 @foreach($item['groups'] as $g)
                   <div>
-                    <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mb-2 font-semibold">{{ t($g['heading']) }}</p>
+                    <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-600 dark:text-slate-400 mb-2 font-semibold">{{ t($g['heading']) }}</p>
                     <ul class="space-y-1">
                       @php
                         $links = $g['items'] ?? [];
@@ -61,7 +61,7 @@
                           <a href="{{ link_to($l['href']) }}" @if($lon !== '') data-active-link aria-current="{{ $lon }}" @endif class="flex items-start gap-3 rounded-xl px-3 py-2 hover:bg-brand-500/10 transition">
                             <span class="mt-0.5 text-brand-500">{{ icon($l['icon'], 'w-5 h-5') }}</span>
                             <span><span class="block font-semibold text-slate-900 dark:text-white">{{ t($l['label']) }}</span>
-                            <span class="block text-xs text-slate-500">{{ t($l['desc']) }}</span></span>
+                            <span class="block text-xs text-slate-600 dark:text-slate-400">{{ t($l['desc']) }}</span></span>
                           </a>
                         </li>
                       @endforeach
@@ -113,7 +113,7 @@
     <div id="mobileMenu" class="menu-panel xl:hidden nav-solid rounded-2xl mt-2 p-4 max-h-[75vh] overflow-y-auto" aria-hidden="true">
       @if(!$signedIn)<div class="grid grid-cols-2 gap-2 mb-2"><a class="btn-ghost justify-center" href="{{ url('/account/login/') }}" data-auth-open="login">{{ __('ux.sign_in') }}</a><a class="btn-ghost justify-center" href="{{ url('/account/register/') }}" data-auth-open="register">{{ __('ux.sign_up') }}</a></div>@endif
       @foreach($nav['items'] as $ni => $item)
-        <p class="text-[0.68rem] uppercase tracking-[0.18em] mt-3 mb-1 font-semibold {{ $ni === $navBest ? 'text-brand-500' : 'text-slate-500' }}">{{ t($item['label']) }}</p>
+        <p class="text-[0.68rem] uppercase tracking-[0.18em] mt-3 mb-1 font-semibold {{ $ni === $navBest ? 'text-brand-500' : 'text-slate-600 dark:text-slate-400' }}">{{ t($item['label']) }}</p>
         @foreach($item['groups'] as $g)
           @php
             $links = $g['items'] ?? [];

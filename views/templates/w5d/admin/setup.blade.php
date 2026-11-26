@@ -116,7 +116,7 @@
       <div class="mt-3 overflow-x-auto rounded-xl border border-slate-200 dark:border-white/10">
         <table class="w5-table w5-stack"><thead><tr><th scope="col">{{ tr3('Variable', 'Variable', 'المتغير') }}</th><th scope="col">{{ tr3('Example', 'Exemple', 'مثال') }}</th><th scope="col">{{ tr3('Notes', 'Notes', 'ملاحظات') }}</th><th scope="col">{{ tr3('Now', 'Maintenant', 'الآن') }}</th></tr></thead><tbody>
         @foreach($st['vars'] as $r)
-          <tr><td data-label="{{ tr3('Variable', 'Variable', 'المتغير') }}"><code dir="ltr">{{ $r[0] }}</code></td><td data-label="{{ tr3('Example', 'Exemple', 'مثال') }}"><code dir="ltr">{{ $r[1] }}</code></td><td data-label="{{ tr3('Notes', 'Notes', 'ملاحظات') }}" class="text-xs text-slate-500">{{ $r[2] }}</td>
+          <tr><td data-label="{{ tr3('Variable', 'Variable', 'المتغير') }}"><code dir="ltr">{{ $r[0] }}</code></td><td data-label="{{ tr3('Example', 'Exemple', 'مثال') }}"><code dir="ltr">{{ $r[1] }}</code></td><td data-label="{{ tr3('Notes', 'Notes', 'ملاحظات') }}" class="text-xs text-slate-600 dark:text-slate-400">{{ $r[2] }}</td>
             <td data-label="{{ tr3('Now', 'Maintenant', 'الآن') }}">@if(array_key_exists($r[0], $env))<span class="tier-badge {{ $pill($env[$r[0]]) }}" data-env="{{ $r[0] }}" data-set="{{ $env[$r[0]] ? '1' : '0' }}">{{ $env[$r[0]] ? $yes : $no }}</span>@else<span class="text-xs text-slate-400">—</span>@endif</td></tr>
         @endforeach
         </tbody></table>
@@ -141,7 +141,7 @@
       <p class="mt-2 text-sm">{{ $p['lead'] }}</p>
       <ol class="mt-3 list-decimal ps-5 space-y-1.5 text-sm text-slate-700 dark:text-slate-300">@foreach($p['do'] as $d)<li>{{ $d }}</li>@endforeach</ol>
       <p class="mt-3 rounded-lg border border-red-500/30 bg-red-500/5 p-2.5 text-sm"><strong>{{ tr3('Avoid:', 'À éviter :', 'تجنّب:') }}</strong> {{ $p['dont'] }}</p>
-      <p class="mt-2 text-sm text-slate-500">{{ $p['next'] }}</p>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{{ $p['next'] }}</p>
     </section>
   @endforeach
   </div>

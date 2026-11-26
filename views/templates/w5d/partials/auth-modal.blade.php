@@ -7,7 +7,7 @@
       return '<div data-field="' . $name . '"><label for="' . $id . '" class="block text-sm font-medium mb-1">' . e($label) . ' <span aria-hidden="true">*</span></label>'
         . '<input class="field" id="' . $id . '" name="' . $name . '" type="' . $type . '" required' . ($auto ? ' autocomplete="' . $auto . '"' : '')
         . ' aria-describedby="' . $id . '-err"' . '>'
-        . ($hint !== '' ? '<p class="text-xs mt-1 text-slate-500 dark:text-slate-400">' . e($hint) . '</p>' : '')
+        . ($hint !== '' ? '<p class="text-xs mt-1 text-slate-600 dark:text-slate-400">' . e($hint) . '</p>' : '')
         . '<p id="' . $id . '-err" class="text-xs mt-1 text-red-500" role="alert" data-err="' . $name . '"></p></div>';
   };
 @endphp
@@ -50,11 +50,11 @@
 
   @if($providers)
     <div class="mt-5">
-      <p class="text-xs uppercase tracking-wide text-slate-500 text-center">{{ __('acct.continue_with') }}</p>
+      <p class="text-xs uppercase tracking-wide text-slate-600 dark:text-slate-400 text-center">{{ __('acct.continue_with') }}</p>
       <div class="mt-2 grid grid-cols-2 gap-2">
         @foreach($providers as $k => $p)<a class="btn-ghost justify-center" href="{{ url('/account/social/' . $k . '/') . $nextQ }}">{{ brand($k, 'w-4 h-4') }} {{ $p['label'] }}</a>@endforeach
       </div>
-      @if(isset($providers['google']))<p class="mt-3 text-xs text-slate-500 text-center" data-google-note>{{ tr3('Google sign-in shares only your name and verified e-mail with W5D, used to create or open your account. Nothing else is read.', 'La connexion Google ne partage avec W5D que votre nom et votre e-mail vérifié, utilisés pour créer ou ouvrir votre compte. Rien d’autre n’est lu.', 'يشارك الدخول عبر Google مع W5D اسمك وبريدك الموثّق فقط لإنشاء حسابك أو فتحه. لا يُقرأ شيء آخر.') }} <a class="underline" href="{{ url('/trust/privacy/') }}#pv-google">{{ __('footer.privacy') }}</a></p>@endif
+      @if(isset($providers['google']))<p class="mt-3 text-xs text-slate-600 dark:text-slate-400 text-center" data-google-note>{{ tr3('Google sign-in shares only your name and verified e-mail with W5D, used to create or open your account. Nothing else is read.', 'La connexion Google ne partage avec W5D que votre nom et votre e-mail vérifié, utilisés pour créer ou ouvrir votre compte. Rien d’autre n’est lu.', 'يشارك الدخول عبر Google مع W5D اسمك وبريدك الموثّق فقط لإنشاء حسابك أو فتحه. لا يُقرأ شيء آخر.') }} <a class="underline" href="{{ url('/trust/privacy/') }}#pv-google">{{ __('footer.privacy') }}</a></p>@endif
     </div>
   @endif
 

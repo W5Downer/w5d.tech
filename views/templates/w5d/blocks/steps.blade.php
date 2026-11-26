@@ -7,7 +7,7 @@
         <span class="inline-flex w-9 h-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-cyan-500 text-white font-bold text-sm">{{ $i + 1 }}</span>
         <h3 class="font-display font-semibold text-lg mt-4 text-slate-900 dark:text-white">{{ t($s['title']) }}</h3>
         <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">{{ rich($s['body'] ?? '') }}</p>
-        @if(!empty($s['meta']))<p class="text-xs mt-3 text-slate-500">{{ icon('clock', 'w-3.5 h-3.5 inline') }} {{ t($s['meta']) }}</p>@endif
+        @if(!empty($s['meta']))<p class="text-xs mt-3 text-slate-600 dark:text-slate-400">{{ icon('clock', 'w-3.5 h-3.5 inline') }} {{ t($s['meta']) }}</p>@endif
         </div>
       </li>
     @endforeach

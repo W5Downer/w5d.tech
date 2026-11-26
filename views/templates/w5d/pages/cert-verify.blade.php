@@ -22,19 +22,19 @@
       <div class="mt-6 rounded-2xl border p-6 {{ $ok ? 'border-emerald-500/40 bg-emerald-500/10' : 'border-amber-500/40 bg-amber-500/10' }}" data-cert-state="{{ $rec['status'] }}">
         <p class="font-semibold flex items-center gap-2">{{ icon($ok ? 'circle-check' : 'circle-x', 'w-5 h-5 ' . ($ok ? 'text-emerald-500' : 'text-amber-500')) }} {{ $ok ? tr3('Valid certificate', 'Certificat valide', 'شهادة صالحة') : ($rec['status'] === 'revoked' ? tr3('Revoked certificate', 'Certificat révoqué', 'شهادة ملغاة') : tr3('Expired certificate', 'Certificat expiré', 'شهادة منتهية')) }}</p>
         <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
-          <dt class="text-slate-500">{{ tr3('Code', 'Code', 'الرمز') }}</dt><dd class="font-mono" dir="ltr">{{ $rec['code'] }}</dd>
-          <dt class="text-slate-500">{{ tr3('Holder', 'Titulaire', 'الحامل') }}</dt><dd>{{ $rec['holder'] }}</dd>
-          <dt class="text-slate-500">{{ tr3('Service', 'Service', 'الخدمة') }}</dt><dd>{{ $rec['service_title'] }}</dd>
-          <dt class="text-slate-500">{{ tr3('Level', 'Niveau', 'المستوى') }}</dt><dd>L{{ $rec['level'] }} · {{ $rec['level_label'] }}</dd>
-          @if($rec['score'] !== null)<dt class="text-slate-500">{{ tr3('Score', 'Score', 'النتيجة') }}</dt><dd>{{ round($rec['score']) }}%</dd>@endif
-          <dt class="text-slate-500">{{ tr3('Issued', 'Délivré', 'تاريخ الإصدار') }}</dt><dd class="tabular-nums">{{ $rec['issued_at'] }}</dd>
-          @if($rec['expires_at'])<dt class="text-slate-500">{{ tr3('Valid until', 'Valide jusqu’au', 'صالحة حتى') }}</dt><dd class="tabular-nums">{{ $rec['expires_at'] }}</dd>@endif
-          <dt class="text-slate-500">{{ tr3('Issuer', 'Émetteur', 'الجهة المصدرة') }}</dt><dd>{{ $rec['issuer'] }}</dd>
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Code', 'Code', 'الرمز') }}</dt><dd class="font-mono" dir="ltr">{{ $rec['code'] }}</dd>
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Holder', 'Titulaire', 'الحامل') }}</dt><dd>{{ $rec['holder'] }}</dd>
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Service', 'Service', 'الخدمة') }}</dt><dd>{{ $rec['service_title'] }}</dd>
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Level', 'Niveau', 'المستوى') }}</dt><dd>L{{ $rec['level'] }} · {{ $rec['level_label'] }}</dd>
+          @if($rec['score'] !== null)<dt class="text-slate-600 dark:text-slate-400">{{ tr3('Score', 'Score', 'النتيجة') }}</dt><dd>{{ round($rec['score']) }}%</dd>@endif
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Issued', 'Délivré', 'تاريخ الإصدار') }}</dt><dd class="tabular-nums">{{ $rec['issued_at'] }}</dd>
+          @if($rec['expires_at'])<dt class="text-slate-600 dark:text-slate-400">{{ tr3('Valid until', 'Valide jusqu’au', 'صالحة حتى') }}</dt><dd class="tabular-nums">{{ $rec['expires_at'] }}</dd>@endif
+          <dt class="text-slate-600 dark:text-slate-400">{{ tr3('Issuer', 'Émetteur', 'الجهة المصدرة') }}</dt><dd>{{ $rec['issuer'] }}</dd>
         </dl>
         <p class="mt-4 text-xs text-slate-600 dark:text-slate-300">{{ tr3('Machine-readable record:', 'Fiche lisible par machine :', 'السجل المقروء آليا:') }} <a class="btn-link" href="{{ url('/api/certificates/' . $rec['code'] . '.json') }}" dir="ltr">/api/certificates/{{ $rec['code'] }}.json</a></p>
       </div>
     @endif
-    <p class="mt-8 text-xs text-slate-500">{{ tr3('A certificate proves that someone passed a W5D round on a given day. It is not a diploma, not a job offer and not a promise of income.', 'Un certificat prouve qu’une personne a réussi une session W5D à une date donnée. Ce n’est ni un diplôme, ni une offre d’emploi, ni une promesse de revenu.', 'الشهادة تثبت أن شخصا نجح في جولة W5D في يوم محدد. وهي ليست دبلوما ولا عرض عمل ولا وعدا بدخل.') }}</p>
+    <p class="mt-8 text-xs text-slate-600 dark:text-slate-400">{{ tr3('A certificate proves that someone passed a W5D round on a given day. It is not a diploma, not a job offer and not a promise of income.', 'Un certificat prouve qu’une personne a réussi une session W5D à une date donnée. Ce n’est ni un diplôme, ni une offre d’emploi, ni une promesse de revenu.', 'الشهادة تثبت أن شخصا نجح في جولة W5D في يوم محدد. وهي ليست دبلوما ولا عرض عمل ولا وعدا بدخل.') }}</p>
   </div>
 </section>
 @endsection

@@ -21,7 +21,7 @@
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-300">{{ icon($sp['icon'], 'w-5 h-5') }}</span>
         <h3 class="mt-3 font-display text-lg font-semibold text-slate-900 dark:text-white">{{ t($sp['label']) }}</h3>
         <p class="mt-1 text-sm text-slate-600 dark:text-slate-300 grow">{{ t($sp['blurb']) }}</p>
-        <ul class="mt-3 space-y-1 text-xs text-slate-500">
+        <ul class="mt-3 space-y-1 text-xs text-slate-600 dark:text-slate-400">
           @foreach(array_slice($sp['widgets'], 0, 3) as [$wi, $wl])<li class="flex items-center gap-2">{{ icon($wi, 'w-3.5 h-3.5') }} {{ t($wl) }}</li>@endforeach
         </ul>
         <p class="mt-4 flex flex-wrap gap-3 text-sm">
@@ -31,5 +31,5 @@
       </li>
     @endforeach
   </ul>
-  <p class="mt-6 text-sm text-slate-500">{{ tr3('API documentation is private: sign in and open “API & Docs” in your own dashboard.', 'La documentation de l’API est privée : connectez-vous et ouvrez « API et docs » dans votre tableau de bord.', 'وثائق API خاصة: سجّل الدخول وافتح «API والوثائق» في لوحتك.') }} <a class="btn-link" href="{{ url('/account/api/') }}">{{ tr3('Open my docs', 'Ouvrir mes docs', 'افتح وثائقي') }}</a></p>
+  <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">{{ tr3('API documentation is private: sign in and open “API & Docs” in your own dashboard.', 'La documentation de l’API est privée : connectez-vous et ouvrez « API et docs » dans votre tableau de bord.', 'وثائق API خاصة: سجّل الدخول وافتح «API والوثائق» في لوحتك.') }} <a class="btn-link" href="{{ url('/account/api/') }}">{{ tr3('Open my docs', 'Ouvrir mes docs', 'افتح وثائقي') }}</a></p>
 </x-section>

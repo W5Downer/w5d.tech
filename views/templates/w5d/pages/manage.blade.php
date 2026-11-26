@@ -18,10 +18,10 @@
     @else
       <div class="max-w-2xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-5 sm:p-8">
         <dl class="grid sm:grid-cols-2 gap-4 text-sm">
-          <div><dt class="text-slate-500">{{ __('lbl.ref') }}</dt><dd class="font-mono font-semibold">{{ $sub['order_ref'] }}</dd></div>
-          <div><dt class="text-slate-500">{{ __('lbl.status') }}</dt><dd><span class="tier-badge">{{ $sub['status'] }}</span></dd></div>
-          <div><dt class="text-slate-500">{{ __('lbl.parts') }}</dt><dd class="font-semibold">{{ $sub['parts_per_day'] }}</dd></div>
-          <div><dt class="text-slate-500">{{ __('lbl.start') }}</dt><dd class="font-semibold">{{ $sub['start_on'] }}</dd></div>
+          <div><dt class="text-slate-600 dark:text-slate-400">{{ __('lbl.ref') }}</dt><dd class="font-mono font-semibold">{{ $sub['order_ref'] }}</dd></div>
+          <div><dt class="text-slate-600 dark:text-slate-400">{{ __('lbl.status') }}</dt><dd><span class="tier-badge">{{ $sub['status'] }}</span></dd></div>
+          <div><dt class="text-slate-600 dark:text-slate-400">{{ __('lbl.parts') }}</dt><dd class="font-semibold">{{ $sub['parts_per_day'] }}</dd></div>
+          <div><dt class="text-slate-600 dark:text-slate-400">{{ __('lbl.start') }}</dt><dd class="font-semibold">{{ $sub['start_on'] }}</dd></div>
         </dl>
         @if($sub['status'] !== 'cancelled')
         <form method="post" action="{{ url('/subscription/action/') }}" class="mt-6 flex flex-wrap gap-3">

@@ -6,8 +6,8 @@
       <li data-rvi="up" data-filter-item="{{ mb_strtolower(t($s['title']) . ' ' . $s['slug']) }}">
         <a href="{{ url('/services/' . $s['slug'] . '/') }}" class="group spot flex flex-col rounded-xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 overflow-hidden hover:border-brand-500/60 transition h-full">
           <x-card-media :k="'service:' . $s['slug']" :alt="t($s['title'])" class="aspect-[16/7]" />
-          <span class="flex gap-3 p-4"><span class="font-mono text-xs text-slate-500 pt-0.5">#{{ str_pad((string)$s['id'], 3, '0', STR_PAD_LEFT) }}</span>
-          <span><span class="block font-semibold text-slate-900 dark:text-white text-sm">{{ t($s['title']) }}</span><span class="block text-xs text-slate-500 mt-1">{{ t($s['short']) }}</span></span></span>
+          <span class="flex gap-3 p-4"><span class="font-mono text-xs text-slate-600 dark:text-slate-400 pt-0.5">#{{ str_pad((string)$s['id'], 3, '0', STR_PAD_LEFT) }}</span>
+          <span><span class="block font-semibold text-slate-900 dark:text-white text-sm">{{ t($s['title']) }}</span><span class="block text-xs text-slate-600 dark:text-slate-400 mt-1">{{ t($s['short']) }}</span></span></span>
         </a>
       </li>
     @endforeach

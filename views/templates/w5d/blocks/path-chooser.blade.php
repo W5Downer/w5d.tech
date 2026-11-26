@@ -11,5 +11,5 @@
       </li>
     @endforeach
   </ul>
-  <p class="mt-5 text-sm text-slate-500">{{ __('ux.find_hint') }} · <button type="button" class="btn-link" data-quick-open>{{ icon('search', 'w-4 h-4 inline') }} {{ __('ux.find_open') }}</button></p>
+  <p class="mt-5 text-sm text-slate-600 dark:text-slate-400">{{ __('ux.find_hint') }} · <button type="button" class="btn-link" data-quick-open>{{ icon('search', 'w-4 h-4 inline') }} {{ __('ux.find_open') }}</button></p>
 </x-section>

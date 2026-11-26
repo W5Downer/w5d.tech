@@ -58,10 +58,8 @@
   <script type="application/ld+json">{!! \W5D\Seo::jsonLd(\W5D\Seo::graph($seoPath, $seoTitle, $seoDesc, $seoRobots, $seoImg)) !!}</script>
   @endif
   <script src="{{ asset('js/theme-init.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/attention.css') }}">
-  @if(lang() === 'ar')<link rel="stylesheet" href="{{ asset('css/rtl.css') }}">@endif
+  {{-- one render-blocking stylesheet (fonts + tailwind + attention [+ rtl]); built by tools/build.mjs; Arabic faces only in the Arabic bundle --}}
+  <link rel="stylesheet" href="{{ asset(lang() === 'ar' ? 'css/bundle-ar.css' : 'css/bundle.css') }}">
   @foreach(\W5D\Integrations::verificationTags() as $__vn => $__vc)
   <meta name="{{ $__vn }}" content="{{ $__vc }}">
   @endforeach
@@ -90,8 +88,8 @@
     @include('partials.auth-dialog')
     @include('partials.quickfind')
   @endif
-  <script src="{{ asset('js/site.js') }}" defer></script>
-  <script src="{{ asset('js/forms.js') }}" defer></script>
+  <script src="{{ asset('js/site.min.js') }}" defer></script>
+  <script src="{{ asset('js/forms.min.js') }}" defer></script>
   @include('partials.cookies')
   @include('partials.integrations')
   @stack('scripts')

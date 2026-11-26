@@ -8,8 +8,8 @@
       <div class="mt-6 flex flex-wrap gap-3">@foreach(($d['ctas'] ?? []) as $c)<x-cta :c="$c" />@endforeach</div>
     </div>
     <div class="grid grid-cols-2 gap-3 text-sm">
-      <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4"><p class="text-slate-500">{{ __('price.today') }}</p><p class="font-display text-2xl font-bold">{{ number_format($pr['day'], 2) }}</p><p class="text-xs text-slate-500">{{ $pr['currency'] }} / {{ __('price.per_day') }}</p></div>
-      <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4"><p class="text-slate-500">{{ __('price.progress') }}</p><p class="font-display text-2xl font-bold">{{ number_format($pr['p']*100, 1) }}%</p><p class="text-xs text-slate-500">{{ num($v['experts']['current']) }} / {{ num($v['d']['experts_target']) }}</p></div>
+      <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4"><p class="text-slate-600 dark:text-slate-400">{{ __('price.today') }}</p><p class="font-display text-2xl font-bold">{{ number_format($pr['day'], 2) }}</p><p class="text-xs text-slate-600 dark:text-slate-400">{{ $pr['currency'] }} / {{ __('price.per_day') }}</p></div>
+      <div class="rounded-xl bg-white/60 dark:bg-white/5 p-4"><p class="text-slate-600 dark:text-slate-400">{{ __('price.progress') }}</p><p class="font-display text-2xl font-bold">{{ number_format($pr['p']*100, 1) }}%</p><p class="text-xs text-slate-600 dark:text-slate-400">{{ num($v['experts']['current']) }} / {{ num($v['d']['experts_target']) }}</p></div>
     </div>
   </div>
 </x-section>

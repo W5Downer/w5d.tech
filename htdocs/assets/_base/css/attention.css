@@ -437,12 +437,13 @@ section.focus-5 :where(h2){font-size:clamp(2rem,5vw,3.4rem)}
 .w5-slide.is-active .rise>*{opacity:1;transform:none}
 .w5-slide.is-active .rise>*:nth-child(2){transition-delay:.08s}.w5-slide.is-active .rise>*:nth-child(3){transition-delay:.16s}
 .w5-slide.is-active .rise>*:nth-child(4){transition-delay:.24s}.w5-slide.is-active .rise>*:nth-child(5){transition-delay:.32s}
-.w5-dot{width:.55rem;height:.55rem;border-radius:99px;background:rgba(148,163,184,.5);transition:all .3s}
-.w5-dot[aria-current="true"]{width:1.8rem;background:linear-gradient(90deg,#8b5cf6,#06b6d4)}
+.w5-dot{box-sizing:content-box;width:.55rem;height:.55rem;padding:8px;background-clip:content-box;border-radius:99px;background-color:rgba(148,163,184,.5);transition:width .3s,background-color .3s}
+.w5-dot[aria-current="true"]{width:1.8rem;background-image:linear-gradient(90deg,#8b5cf6,#06b6d4)}
 .w5-progress{height:2px;background:rgba(148,163,184,.25);overflow:hidden}
-.w5-progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#06b6d4)}
+.w5-progress>i{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#8b5cf6,#06b6d4)}
 .w5-slider[data-playing="1"] .w5-progress>i{animation:w5bar var(--slider-ms,7000ms) linear forwards}
-@keyframes w5bar{from{width:0}to{width:100%}}
+@keyframes w5bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+[dir="rtl"] .w5-progress>i{transform-origin:right center}
 
 /* ---------- Forms & wizard ---------- */
 .field{display:block;width:100%;border-radius:.75rem;border:1px solid rgba(148,163,184,.35);background:rgba(148,163,184,.06);padding:.7rem .9rem;color:inherit;font:inherit}
@@ -684,8 +685,6 @@ a[data-active-link] .font-semibold{color:#6d28d9}
 .dark a[data-active-link] .font-semibold{color:#c4b5fd}
 
 /* Touch targets: visual size stays, hit area grows to >= 40px (WCAG 2.5.8 / Apple HIG) */
-.w5-dot{position:relative}
-.w5-dot::after{content:"";position:absolute;inset:-16px -6px}
 .w5-slider [data-prev],.w5-slider [data-next]{min-width:2.5rem;min-height:2.5rem;display:inline-flex;align-items:center;justify-content:center}
 @media (pointer:coarse){
   .auth-links a,form a.text-sm,form p a{display:inline-block;padding:.65rem .25rem}

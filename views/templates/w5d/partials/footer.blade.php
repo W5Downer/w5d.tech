@@ -8,8 +8,8 @@
           <img src="{{ asset('images/logo.svg') }}" alt="" width="40" height="19" class="h-8 w-auto shrink-0" decoding="async">
           <span class="font-display font-bold text-lg text-slate-900 dark:text-white">W5D</span>
         </a>
-        <p class="text-sm text-slate-500 mt-3">{{ __('brand.tagline') }}</p>
-        <p class="text-xs text-slate-500 mt-3">{{ \W5D\Variables::get('investor.contact') }}</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">{{ __('brand.tagline') }}</p>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-3">{{ \W5D\Variables::get('investor.contact') }}</p>
       </div>
       @foreach($nav['columns'] as $col)
         <div>
@@ -36,7 +36,7 @@
       <div class="lg:col-span-5">
         <p class="font-display font-semibold text-slate-900 dark:text-white">{{ \W5D\Variables::get('company.brand') }}</p>
         <p class="mt-2 text-slate-600 dark:text-slate-400 max-w-prose">{{ __('footer.about') }}</p>
-        <p class="mt-3 text-xs text-slate-500 max-w-prose">{{ rich(__('footer.status_' . $lf)) }}</p>
+        <p class="mt-3 text-xs text-slate-600 dark:text-slate-400 max-w-prose">{{ rich(__('footer.status_' . $lf)) }}</p>
       </div>
       <div class="lg:col-span-3">
         <p class="font-display font-semibold text-slate-900 dark:text-white">{{ __('footer.contact') }}</p>
@@ -44,7 +44,7 @@
           <li class="flex items-center gap-2">{{ icon('mail', 'w-4 h-4 text-brand-500') }} <a class="link-underline hover:text-brand-500" href="mailto:{{ $mail }}">{{ $mail }}</a></li>
           <li class="flex items-center gap-2">{{ icon('map-pin', 'w-4 h-4 text-brand-500') }} {{ \W5D\Variables::get('company.country') }}</li>
           <li class="flex items-center gap-2">{{ icon('clock', 'w-4 h-4 text-brand-500') }} {{ \W5D\Variables::get('company.hours') }}</li>
-          <li class="text-xs text-slate-500">{{ __('footer.reply') }} <a class="underline" href="{{ url('/contact/') }}">{{ __('nav.contact') }}</a></li>
+          <li class="text-xs text-slate-600 dark:text-slate-400">{{ __('footer.reply') }} <a class="underline" href="{{ url('/contact/') }}">{{ __('nav.contact') }}</a></li>
         </ul>
       </div>
       <nav class="lg:col-span-4" aria-label="{{ __('footer.legal_title') }}">
@@ -54,7 +54,7 @@
         </ul>
       </nav>
     </div>
-    <div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-white/5 text-xs text-slate-500 space-y-1.5">
+    <div class="mt-8 pt-6 border-t border-slate-200/60 dark:border-white/5 text-xs text-slate-600 dark:text-slate-400 space-y-1.5">
       <p class="text-slate-700 dark:text-slate-300 font-medium">{{ __('footer.copyright') }}</p>
       <p>{{ __('footer.marks') }}</p>
       <p>{{ rich(__('footer.prices')) }}</p>

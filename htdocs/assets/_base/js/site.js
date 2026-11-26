@@ -202,10 +202,9 @@
     }
     function restart() {
       clearTimeout(timer);
-      var bar = $('.w5-progress > i', root);
       root.setAttribute('data-playing', '0');
-      if (bar) { bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
-      root.setAttribute('data-playing', '1');
+      /* restart the CSS bar after two frames: no forced synchronous layout */
+      requestAnimationFrame(function () { requestAnimationFrame(function () { root.setAttribute('data-playing', '1'); }); });
       timer = setTimeout(function () { go(i + 1); }, ms);
     }
     function stop() { clearTimeout(timer); root.setAttribute('data-playing', '0'); }
@@ -258,8 +257,10 @@
   /* ---------- sticky CTA (after 40 % scroll) ---------- */
   var sc = $('[data-sticky-cta]');
   if (sc) {
+    var docH = 1;
+    if ('ResizeObserver' in window) new ResizeObserver(function () { docH = document.documentElement.scrollHeight; onScroll(); }).observe(document.body);
     var onScroll = function () {
-      var h = document.documentElement, pct = (window.scrollY + window.innerHeight) / h.scrollHeight;
+      var pct = (window.scrollY + window.innerHeight) / (docH > 1 ? docH : (docH = document.documentElement.scrollHeight));
       sc.classList.toggle('is-on', window.scrollY > 200 && pct > 0.4 && pct < 0.96);
     };
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();

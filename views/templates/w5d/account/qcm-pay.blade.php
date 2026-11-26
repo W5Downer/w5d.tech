@@ -17,13 +17,13 @@
       @if(!empty($flash))<p class="mt-4 rounded-lg p-3 text-sm bg-emerald-500/10 border border-emerald-500/40" role="status">{{ t($flash['msg']) }}</p>@endif
       @if(!empty($errors['_form']))<p class="mt-4 rounded-lg bg-red-500/10 border border-red-500/40 p-3 text-sm" role="alert">{{ t($errors['_form']) }}</p>@endif
       <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
-        <dt class="text-slate-500">{{ __('acct.pay_to') }}</dt><dd class="font-mono font-semibold" dir="ltr">{{ $d17['gsm'] }} <button type="button" class="btn-link text-xs ms-2" data-copy-text="{{ $d17['gsm'] }}">{{ __('cta.copy') }}</button></dd>
-        <dt class="text-slate-500">{{ __('acct.pay_holder') }}</dt><dd>{{ $d17['name'] }}</dd>
-        <dt class="text-slate-500">{{ __('acct.pay_amount') }}</dt><dd class="font-semibold">{{ number_format((float)$d17['amount'], 2) }} {{ $p['currency'] }}</dd>
-        <dt class="text-slate-500">{{ __('acct.status') }}</dt><dd><span class="rounded-full px-2 py-0.5 text-xs {{ $stl }}">{{ $stx }}</span>@if($p['status'] === 'rejected' && $p['note']) <span class="text-xs">{{ $p['note'] }}</span>@endif</dd>
-        @if($p['txn_ref'])<dt class="text-slate-500">{{ __('acct.pay_txn') }}</dt><dd class="font-mono">{{ $p['txn_ref'] }}</dd>@endif
+        <dt class="text-slate-600 dark:text-slate-400">{{ __('acct.pay_to') }}</dt><dd class="font-mono font-semibold" dir="ltr">{{ $d17['gsm'] }} <button type="button" class="btn-link text-xs ms-2" data-copy-text="{{ $d17['gsm'] }}">{{ __('cta.copy') }}</button></dd>
+        <dt class="text-slate-600 dark:text-slate-400">{{ __('acct.pay_holder') }}</dt><dd>{{ $d17['name'] }}</dd>
+        <dt class="text-slate-600 dark:text-slate-400">{{ __('acct.pay_amount') }}</dt><dd class="font-semibold">{{ number_format((float)$d17['amount'], 2) }} {{ $p['currency'] }}</dd>
+        <dt class="text-slate-600 dark:text-slate-400">{{ __('acct.status') }}</dt><dd><span class="rounded-full px-2 py-0.5 text-xs {{ $stl }}">{{ $stx }}</span>@if($p['status'] === 'rejected' && $p['note']) <span class="text-xs">{{ $p['note'] }}</span>@endif</dd>
+        @if($p['txn_ref'])<dt class="text-slate-600 dark:text-slate-400">{{ __('acct.pay_txn') }}</dt><dd class="font-mono">{{ $p['txn_ref'] }}</dd>@endif
       </dl>
-      @if(!empty($d17['note']))<p class="mt-4 text-xs text-slate-500">{{ $d17['note'] }}</p>@endif
+      @if(!empty($d17['note']))<p class="mt-4 text-xs text-slate-600 dark:text-slate-400">{{ $d17['note'] }}</p>@endif
       @if(!in_array($p['status'], ['verified', 'used'], true))
       <form method="post" action="{{ url('/account/qcm/pay/' . $p['ref'] . '/') }}" class="mt-6 space-y-4" novalidate>
         {!! csrf_field() !!}<input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
@@ -34,7 +34,7 @@
       @else
       <p class="mt-6"><a class="btn-peak" href="{{ url('/account/qcm/') }}">{{ tr3('Back to QCM rounds', 'Retour aux sessions QCM', 'العودة إلى جولات الاختبار') }}</a></p>
       @endif
-      <p class="mt-6 text-xs text-slate-500">{{ __('limits.returns') }}</p>
+      <p class="mt-6 text-xs text-slate-600 dark:text-slate-400">{{ __('limits.returns') }}</p>
     </div>
   </div>
 </section>

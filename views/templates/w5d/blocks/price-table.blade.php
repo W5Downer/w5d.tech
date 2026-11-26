@@ -5,5 +5,5 @@
       @foreach($steps as $p)<tr><th scope="row">{{ (int)($p*100) }}%</th>@foreach($steps as $t)<td class="tabular-nums">{{ number_format(\W5D\Pricing::perPart('day', $p, $t), 2) }}</td>@endforeach</tr>@endforeach
     </tbody></table>
   </div>
-  <p class="text-xs text-slate-500 mt-3">{{ __('price.per_day') }} · {{ \W5D\Variables::get('money.currency') }} · {{ __('price.formula') }}</p>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3">{{ __('price.per_day') }} · {{ \W5D\Variables::get('money.currency') }} · {{ __('price.formula') }}</p>
 </x-section>

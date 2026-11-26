@@ -12,7 +12,7 @@
         </a>
       @endforeach
     </div>
-    <p class="text-xs text-slate-500 mt-5">{{ __('nav.language') }}: cookie · no ?lang= URLs.</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 mt-5">{{ __('nav.language') }}: cookie · no ?lang= URLs.</p>
   </div>
 </aside>
 
@@ -34,7 +34,7 @@
   $pNote = $uA ? \W5D\Account::unread() : 0;
 @endphp
 @if(\W5D\Social::enabled())
-<aside id="aside-share" class="w5d-aside" aria-hidden="true" aria-label="{{ __('share.title') }}" role="dialog">
+<aside id="aside-share" class="w5d-aside" aria-hidden="true" aria-label="{{ __('share.title') }}">
   <header>
     <h2>{{ __('share.title') }}</h2>
     <button type="button" data-aside-close class="btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
@@ -57,7 +57,7 @@
 </aside>
 @endif
 
-<aside id="aside-user" class="w5d-aside" aria-hidden="true" aria-label="{{ __('acct.user_aside') }}" role="dialog">
+<aside id="aside-user" class="w5d-aside" aria-hidden="true" aria-label="{{ __('acct.user_aside') }}">
   <header>
     <h2>{{ __('acct.user_aside') }}</h2>
     <button type="button" data-aside-close class="btn-ghost rounded-lg w-9 h-9 inline-flex items-center justify-center" aria-label="Close">{{ icon('x', 'w-5 h-5') }}</button>
@@ -74,7 +74,7 @@
       <span class="inline-flex w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 via-indigo-500 to-cyan-400 text-white items-center justify-center font-display font-bold text-lg">{{ mb_strtoupper(mb_substr($uName !== '' ? $uName : 'W', 0, 1)) }}</span>
       <div class="min-w-0">
         <p class="font-display font-semibold text-slate-900 dark:text-white truncate">{{ $uName }}</p>
-        @if($uMail !== '')<p class="text-xs text-slate-500 truncate" dir="ltr">{{ $uMail }}</p>@endif
+        @if($uMail !== '')<p class="text-xs text-slate-600 dark:text-slate-400 truncate" dir="ltr">{{ $uMail }}</p>@endif
         <p class="mt-1 flex flex-wrap gap-1.5 text-[0.7rem]"><span class="rounded-full bg-brand-500/15 text-brand-600 dark:text-brand-300 px-2 py-0.5">{{ $roleLabel }}</span>
           <span class="rounded-full px-2 py-0.5 {{ $verified ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-300' : 'bg-amber-500/15 text-amber-700 dark:text-amber-300' }}">{{ $verified ? __('acct.verified') : __('acct.not_verified') }}</span></p>
       </div>
@@ -83,7 +83,7 @@
       <form method="post" action="{{ url('/account/resend/') }}" class="mt-3">{!! csrf_field() !!}<button class="btn-link text-xs" type="submit">{{ __('acct.resend_btn') }}</button></form>
     @endif
     <div class="mt-4 rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm flex items-center justify-between">
-      <span class="text-slate-500">{{ __('acct.today_price') }}</span><strong>{{ money((float)\W5D\Variables::get('price.day')) }}</strong>
+      <span class="text-slate-600 dark:text-slate-400">{{ __('acct.today_price') }}</span><strong>{{ money((float)\W5D\Variables::get('price.day')) }}</strong>
     </div>
     <nav class="mt-4 grid gap-1" aria-label="{{ __('acct.menu') }}">
       @if($uA)
@@ -112,17 +112,17 @@
     </div>
     @php $oauth = \W5D\OAuth::enabled(); @endphp
     @if($oauth)
-      <p class="text-xs text-slate-500 text-center mt-4">{{ __('acct.or') }}</p>
+      <p class="text-xs text-slate-600 dark:text-slate-400 text-center mt-4">{{ __('acct.or') }}</p>
       <div class="mt-2 grid gap-2">
         @foreach($oauth as $k => $pv)<a class="btn-ghost justify-center" href="{{ url('/account/social/' . $k . '/') }}">{{ brand($k, 'w-4 h-4') }} {{ __('acct.continue_with') }} {{ $pv['label'] }}</a>@endforeach
       </div>
     @endif
     <div class="mt-5 rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm">
-      <p class="text-slate-500 text-xs">{{ __('acct.today_price') }}</p>
-      <p class="font-display font-bold text-xl text-slate-900 dark:text-white">{{ money((float)\W5D\Variables::get('price.day')) }} <span class="text-xs font-normal text-slate-500">{{ __('price.per_day') }}</span></p>
-      <div class="mt-2 flex items-center justify-between text-xs text-slate-500"><span>{{ __('acct.language') }}</span><span class="uppercase font-bold">{{ lang() }}</span></div>
+      <p class="text-slate-600 dark:text-slate-400 text-xs">{{ __('acct.today_price') }}</p>
+      <p class="font-display font-bold text-xl text-slate-900 dark:text-white">{{ money((float)\W5D\Variables::get('price.day')) }} <span class="text-xs font-normal text-slate-600 dark:text-slate-400">{{ __('price.per_day') }}</span></p>
+      <div class="mt-2 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400"><span>{{ __('acct.language') }}</span><span class="uppercase font-bold">{{ lang() }}</span></div>
     </div>
-    <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-500 mt-5 mb-1 font-semibold">{{ __('nav.audiences') }}</p>
+    <p class="text-[0.68rem] uppercase tracking-[0.18em] text-slate-600 dark:text-slate-400 mt-5 mb-1 font-semibold">{{ __('nav.audiences') }}</p>
     <nav class="grid grid-cols-2 gap-1" aria-label="{{ __('nav.audiences') }}">
       @foreach($audKeys as $k)<a class="aside-link !py-1.5" href="{{ url('/for/' . $k . '/') }}"><span>{{ $audName[$k] }}</span></a>@endforeach
     </nav>

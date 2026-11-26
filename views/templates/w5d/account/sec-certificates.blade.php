@@ -11,7 +11,7 @@
         <div class="flex items-start justify-between gap-3"><div><p class="eyebrow">L{{ $c['level'] }} · {{ \W5D\Certificate::levelLabel((int)$c['level']) }}</p><h3 class="font-display font-semibold">{{ \W5D\Certificate::serviceTitle((string)$c['service_slug']) }}</h3></div>
           <span class="rounded-full px-2 py-0.5 text-xs h-fit {{ $stl($st === 'valid' ? 'verified' : ($st === 'revoked' ? 'rejected' : 'pending')) }}">{{ $st }}</span></div>
         <p class="mt-2 font-mono text-sm" dir="ltr">{{ $c['code'] }} <button type="button" class="btn-link text-xs ms-2" data-copy-text="{{ $c['code'] }}">{{ __('cta.copy') }}</button></p>
-        <p class="text-xs text-slate-500 mt-1">{{ substr((string)$c['issued_at'], 0, 10) }}@if($c['expires_at']) → {{ substr((string)$c['expires_at'], 0, 10) }}@endif @if($c['score'] !== null) · {{ round((float)$c['score']) }}%@endif</p>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">{{ substr((string)$c['issued_at'], 0, 10) }}@if($c['expires_at']) → {{ substr((string)$c['expires_at'], 0, 10) }}@endif @if($c['score'] !== null) · {{ round((float)$c['score']) }}%@endif</p>
         @if($st === 'revoked' && $c['revoke_reason'])<p class="text-xs mt-1 text-red-600 dark:text-red-300">{{ $c['revoke_reason'] }}</p>@endif
         <p class="mt-3 flex flex-wrap gap-3 text-sm"><a class="btn-ghost" href="{{ url('/certificate/' . $c['code'] . '/') }}">{{ icon('printer', 'w-4 h-4') }} {{ tr3('View and print', 'Voir et imprimer', 'عرض وطباعة') }}</a><a class="btn-link" href="{{ url('/certification/verify/') . '?code=' . $c['code'] }}">{{ icon('qr-code', 'w-4 h-4 inline') }} {{ tr3('Public check', 'Vérification publique', 'التحقق العام') }}</a></p>
       </li>
@@ -34,4 +34,4 @@
     @endforeach
   </ul>
 @endif
-<p class="mt-8 text-xs text-slate-500">{{ __('limits.returns') }}</p>
+<p class="mt-8 text-xs text-slate-600 dark:text-slate-400">{{ __('limits.returns') }}</p>

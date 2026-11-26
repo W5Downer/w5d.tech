@@ -30,7 +30,7 @@
         <dt class="text-slate-600 dark:text-slate-400">{{ __('acct.status') }}</dt><dd><span class="rounded-full px-2 py-0.5 text-xs {{ $stl }}">{{ $stx }}</span>@if($p['status'] === 'rejected' && $p['note']) <span class="text-xs">{{ $p['note'] }}</span>@endif</dd>
         @if(!$online && $p['txn_ref'])<dt class="text-slate-600 dark:text-slate-400">{{ __('acct.pay_txn') }}</dt><dd class="font-mono">{{ $p['txn_ref'] }}</dd>@endif
       </dl>
-      @if(!$online && !empty($ins['note']))<p class="mt-4 text-xs text-slate-500">{{ $ins['note'] }}</p>@endif
+      @if(!$online && !empty($ins['note']))<p class="mt-4 text-xs text-slate-600 dark:text-slate-400">{{ $ins['note'] }}</p>@endif
 
       @if($p['status'] !== 'verified' && $online)
       <form method="post" action="{{ url('/pay/' . $o['ref'] . '/') . '?s=' . $sig }}" class="mt-6 space-y-3" novalidate>
