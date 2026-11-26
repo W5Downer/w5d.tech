@@ -181,6 +181,14 @@
         },
         {
           "label": {
+            "en": "Plans",
+            "fr": "Formules",
+            "ar": "الباقات"
+          },
+          "href": "/plans/"
+        },
+        {
+          "label": {
             "en": "Investor dossier",
             "fr": "Dossier investisseur",
             "ar": "ملف المستثمر"

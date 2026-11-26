@@ -409,6 +409,20 @@
               "href": "/pricing/"
             },
             {
+              "icon": "layers",
+              "label": {
+                "en": "Plans",
+                "fr": "Formules",
+                "ar": "الباقات"
+              },
+              "desc": {
+                "en": "Pipeline access and seats, paid by invoice",
+                "fr": "Accès au pipeline et sièges, payés sur facture",
+                "ar": "الوصول إلى المسار والمقاعد، بفاتورة"
+              },
+              "href": "/plans/"
+            },
+            {
               "icon": "briefcase",
               "label": {
                 "en": "Investor dossier",

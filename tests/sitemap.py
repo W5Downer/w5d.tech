@@ -57,6 +57,7 @@ check('index pages present', all(p in paths for p in want))
 check('every public audience page present', all(f'/for/{a}/' in paths for a in ('member', 'investor', 'customer', 'user')))
 check('private audience doors (owner/admin/leader) are NOT listed', not any(f'/for/{a}/' in paths for a in ('owner', 'admin', 'leader')))
 check('certification verify + human sitemap present', '/certification/verify/' in paths and '/sitemap/' in paths)
+check('plans page present in XML sitemap', '/plans/' in paths)
 
 section('what must NOT be there')
 rob = get('/robots.txt')[2]
