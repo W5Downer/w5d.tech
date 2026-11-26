@@ -179,17 +179,20 @@ try:
     section('payment commission from a verified QCM fee (5%)')
     rid = mk_rule(name='TEST aff fee', fee=100.0); made_rules.append(rid)
     s, h, b = post(v1, '/account/qcm/buy', {'rule': rid}, token_from='/account/qcm/')
-    ref = re.search(r'/account/qcm/pay/(QP-[A-F0-9]{8})/', loc(h)).group(1)
-    post(v1, f'/account/qcm/pay/{ref}/', {'sender_gsm': '+21622345678', 'txn_ref': 'AFF' + uniq()}, token_from=f'/account/qcm/pay/{ref}/')
+    pay = re.search(r'(/pay/INV-\d{4}-\d{5}/\?s=[0-9a-f]+)', loc(h)).group(1)
+    ref = q1("SELECT ref FROM qcm_passes WHERE rule_id=? ORDER BY id DESC", (rid,))
+    post(v1, pay, {'do': 'choose', 'method': 'd17'}, token_from=pay)
+    post(v1, pay, {'sender_gsm': '+21622345678', 'txn_ref': 'AFF' + uniq()}, token_from=pay)
     check('an unverified fee earns no commission', not [x for x in lines(A1['id']) if x['kind'] == 'payment'])
     pid = q1('SELECT id FROM qcm_passes WHERE ref=?', (ref,))
     post(o, M + '/qcm-review/pass', {'id': pid, 'decision': 'verify'}, token_from=M + '/qcm-review/')
     pay = [x for x in lines(A1['id']) if x['kind'] == 'payment']
-    check('verifying the fee credits 5.00 on a 100.00 base, keyed by the pass ref', len(pay) == 1 and abs(pay[0]['commission'] - 5.0) < 0.001 and abs(pay[0]['base_amount'] - 100.0) < 0.001 and pay[0]['ref_key'] == ref, pay)
+    pref = q1("SELECT y.ref FROM payments y JOIN invoices v ON v.id = y.invoice_id WHERE v.source_ref = ? ORDER BY y.id DESC", (ref,))
+    check('verifying the fee credits 5.00 on a 100.00 base, keyed by the payment ref', len(pay) == 1 and abs(pay[0]['commission'] - 5.0) < 0.001 and abs(pay[0]['base_amount'] - 100.0) < 0.001 and pay[0]['ref_key'] == pref, pay)
     post(o, M + '/qcm-review/pass', {'id': pid, 'decision': 'verify'}, token_from=M + '/qcm-review/')
     check('verifying again cannot pay twice', len([x for x in lines(A1['id']) if x['kind'] == 'payment']) == 1)
     try:
-        run("INSERT INTO affiliate_referrals (affiliate_id,kind,user_id,ref_key,commission) VALUES (?,?,?,?,1)", (A1['id'], 'payment', nuu, ref)); dup = True
+        run("INSERT INTO affiliate_referrals (affiliate_id,kind,user_id,ref_key,commission) VALUES (?,?,?,?,1)", (A1['id'], 'payment', nuu, pref)); dup = True
     except Exception:
         dup = False
     check('database UNIQUE(kind, ref_key) blocks a duplicate credit', not dup)

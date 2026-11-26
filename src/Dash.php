@@ -30,7 +30,7 @@ final class Dash
             'admin' => ['icon' => 'shield-check', 'label' => $L('Administrator', 'Administrateur', 'مسؤول'),
                 'blurb' => $L('Queues first: payments, applications, then messages.', 'D’abord les files : paiements, candidatures, puis messages.', 'القوائم أولا: الدفعات ثم الطلبات ثم الرسائل.'),
                 'widgets' => [
-                    ['smartphone', $L('Payments queue', 'File des paiements', 'قائمة الدفعات'), $L('Verify or reject D17 transfers with a note; the buyer is notified.', 'Validez ou rejetez les virements D17 avec une note ; l’acheteur est notifié.', 'تحقق من تحويلات D17 أو ارفضها مع ملاحظة؛ يُبلَّغ المشتري.')],
+                    ['smartphone', $L('Payments queue', 'File des paiements', 'قائمة الدفعات'), $L('Verify or reject manual transfers (D17, wallets, bank, post office) with a note; the buyer is notified.', 'Validez ou rejetez les virements manuels (D17, portefeuilles, banque, poste) avec une note ; l’acheteur est notifié.', 'تحقق من التحويلات اليدوية (D17 والمحافظ والبنك والبريد) أو ارفضها مع ملاحظة؛ يُبلَّغ المشتري.')],
                     ['user-check', $L('Manager applications', 'Candidatures de managers', 'طلبات المديرين'), $L('Read in full; ranking only sets the reading order.', 'Lues en entier ; le classement ne fixe que l’ordre de lecture.', 'تُقرأ كاملة؛ الترتيب يحدد ترتيب القراءة فقط.')],
                     ['inbox', $L('Contact inbox', 'Boîte de contact', 'صندوق الرسائل'), $L('Messages by desk, with a status you set.', 'Messages par bureau, avec un statut que vous fixez.', 'الرسائل حسب المكتب بحالة تحددها.')],
                     ['users', $L('Applicants', 'Candidats', 'المترشحون'), $L('Registered applicants and their verification status.', 'Candidats inscrits et leur état de vérification.', 'المترشحون المسجلون وحالة التحقق.')],
@@ -61,7 +61,7 @@ final class Dash
                 'blurb' => $L('Your parts, their schedules and their payments, with the price formula in plain view.', 'Vos parts, leurs calendriers et leurs paiements, avec la formule de prix à la vue de tous.', 'حصصك وجداولها ودفعاتها مع صيغة السعر ظاهرة.'),
                 'widgets' => [
                     ['coins', $L('Your parts', 'Vos parts', 'حصصك'), $L('Every pledge with its full schedule and reference.', 'Chaque engagement avec son calendrier complet et sa référence.', 'كل التزام بجدوله الكامل ومرجعه.')],
-                    ['smartphone', $L('Payments (D17)', 'Paiements (D17)', 'المدفوعات (D17)'), $L('Send the transaction reference; a person verifies it.', 'Envoyez la référence de transaction ; une personne la vérifie.', 'أرسل مرجع العملية ويتحقق منه شخص.')],
+                    ['smartphone', $L('Payments', 'Paiements', 'المدفوعات'), $L('Send the transaction reference; a person verifies it.', 'Envoyez la référence de transaction ; une personne la vérifie.', 'أرسل مرجع العملية ويتحقق منه شخص.')],
                     ['repeat', $L('Daily subscription', 'Abonnement quotidien', 'اشتراك يومي'), $L('Pause or cancel at any time.', 'Suspendez ou annulez à tout moment.', 'أوقف أو ألغِ في أي وقت.')],
                     ['trending-up', $L('Live price', 'Prix du jour', 'سعر اليوم'), $L('Read from the published function, never hard-coded.', 'Lu depuis la fonction publiée, jamais codé en dur.', 'يُقرأ من الدالة المنشورة ولا يُكتب يدويا.')],
                 ]],
@@ -138,7 +138,7 @@ final class Dash
         $add = function (string $perm, array $label, int $count, string $href) use (&$q, $role) {
             if (ACL::can($role, $perm)) $q[] = ['label' => $label, 'count' => $count, 'href' => $href];
         };
-        $add('payments', self::L('D17 payments to verify', 'Paiements D17 à vérifier', 'دفعات D17 للتحقق'), $n("SELECT COUNT(*) FROM payments WHERE status = 'pending' AND txn_ref IS NOT NULL"), admin_url('payments-d17/'));
+        $add('payments', self::L('Payments to verify', 'Paiements à vérifier', 'دفعات للتحقق'), $n("SELECT COUNT(*) FROM payments WHERE status = 'pending' AND txn_ref IS NOT NULL"), admin_url('payments-d17/'));
         $add('managers', self::L('Manager applications to read', 'Candidatures de managers à lire', 'طلبات مديرين للقراءة'), $n("SELECT COUNT(*) FROM manager_applications WHERE status = 'received'"), admin_url('manager-applications/'));
         $add('messages', self::L('New messages', 'Nouveaux messages', 'رسائل جديدة'), $n("SELECT COUNT(*) FROM contact_messages WHERE status = 'new'"), admin_url('inbox/'));
         $add('applicants', self::L('Registered applicants', 'Candidats inscrits', 'مترشحون مسجلون'), $n("SELECT COUNT(*) FROM applicants WHERE status = 'registered'"), admin_url('applicants/'));

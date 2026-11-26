@@ -352,7 +352,11 @@ final class Qcm
         return DB::one('SELECT * FROM qcm_passes WHERE ref = ?', [$ref]);
     }
 
-    public static function passLink(string $ref): string { return url('/account/qcm/pay/' . $ref . '/'); }
+    public static function passLink(string $ref): string
+    {
+        $inv = Billing::forSource('qcm_pass', $ref);
+        return $inv && $inv['status'] === 'sent' ? Billing::link($inv) : url('/account/qcm/pay/' . $ref . '/');
+    }
 
     public static function stats(): array
     {

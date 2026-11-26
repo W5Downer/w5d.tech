@@ -76,7 +76,7 @@ final class SettingsForm
                 $fields[] = $f + ['value' => $isSecret ? '' : self::cfg($defs, $prefix, $id, $f['k']), 'is_set' => $isSecret ? Settings::isSet(self::key($prefix, $id, $f['k'])) : null];
             }
             $items[] = ['id' => $id, 'name' => $d['name'], 'doc' => $d['doc'] ?? '', 'icon' => $d['icon'] ?? 'plug', 'kind' => $d['kind'] ?? '', 'on' => self::on($defs, $prefix, $id), 'ready' => self::ready($defs, $prefix, $id),
-                'missing' => self::missing($defs, $prefix, $id), 'fields' => $fields, 'hook' => !empty($d['webhook']) ? abs_url('/pay/hook/' . $id . '/') : null, 'note' => $d['warn'] ?? null, 'fee_note' => $d['fee_note'] ?? null, 'src' => isset($d['env']) && !Settings::isSet(self::key($prefix, $id, 'enabled')) ? 'env' : 'portal'];
+                'missing' => self::missing($defs, $prefix, $id), 'fields' => $fields, 'hook' => !empty($d['webhook']) ? abs_url('/pay/hook/' . $id . '/') : null, 'note' => $d['warn'] ?? null, 'fee_note' => $d['fee_note'] ?? null, 'guide' => isset($d['guide']['what']) ? ['what' => t($d['guide']['what']), 'owner' => array_map('t', $d['guide']['owner'] ?? []), 'buyer' => array_map('t', $d['guide']['buyer'] ?? []), 'check' => t($d['guide']['check'] ?? '')] : null, 'src' => isset($d['env']) && !Settings::isSet(self::key($prefix, $id, 'enabled')) ? 'env' : 'portal'];
         }
         $hist = [];
         try { $hist = DB::all("SELECT skey, action, old_value, new_value, changed_by, note, changed_at FROM settings_audit WHERE skey LIKE ? ORDER BY id DESC LIMIT 25", [$prefix . '.%']); } catch (\Throwable) {}

@@ -66,7 +66,7 @@
   @endif
 
 @elseif($v['kind'] === 'payments')
-  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">All payment methods. Manual ones (D17, bank transfer): check the transfer in your app or bank statement, then verify or reject. Online ones (Flouci, Konnect, Paymee) settle by themselves when the provider confirms; use “Re-check” if a webhook never arrived. Keys and switches: <a class="btn-link" href="{{ admin_url('payment-methods/') }}">Payment methods</a>. The buyer is e-mailed on every outcome.</p>
+  <p class="mb-4 text-sm text-slate-600 dark:text-slate-400">All payment methods. Manual ones (D17, bank transfer, Flouci wallet, Mobiflouss, Mobimoney, Telecomoney, La Poste): check the transfer in your own app, card or statement, then verify or reject. Online ones (Flouci, Konnect, Paymee) settle by themselves when the provider confirms; use “Re-check” if a webhook never arrived. Keys and switches: <a class="btn-link" href="{{ admin_url('payment-methods/') }}">Payment methods</a>. The buyer is e-mailed on every outcome.</p>
   @if(!empty($v['error']))<p class="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm">{{ $v['error'] }}</p>@endif
   @if(empty($v['rows']))<p class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 text-center text-slate-500">{{ __('lbl.none') }}</p>
   @else
@@ -129,6 +129,19 @@
       @if(!empty($it['hook']))<p class="mt-3 text-xs">Webhook URL to register at the provider: <code class="font-mono select-all" dir="ltr">{{ $it['hook'] }}</code></p>@endif
       @if(!empty($it['note']))<p class="mt-2 text-xs text-amber-700 dark:text-amber-300">{{ $it['note'] }}</p>@endif
       @if(!empty($it['fee_note']))<p class="mt-2 text-xs text-slate-600 dark:text-slate-300"><strong>Fees:</strong> {{ $it['fee_note'] }}</p>@endif
+      @if(!empty($it['guide']))
+      <details class="mt-3 rounded-xl border border-slate-200 dark:border-white/10 p-3 text-sm" data-guide="{{ $it['id'] }}">
+        <summary class="cursor-pointer font-semibold">{{ tr3('How this method works, step by step', 'Comment fonctionne ce moyen, pas à pas', 'كيف تعمل هذه الوسيلة خطوة بخطوة') }}</summary>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">{{ $it['guide']['what'] }}</p>
+        <h3 class="mt-3 font-semibold">{{ tr3('1 · What you set up (once)', '1 · Ce que vous préparez (une fois)', '1 · ما تُعدّه (مرة واحدة)') }}</h3>
+        <ol class="list-decimal ps-5 mt-1 space-y-1 text-slate-700 dark:text-slate-300">@foreach($it['guide']['owner'] as $g)<li>{{ $g }}</li>@endforeach</ol>
+        <h3 class="mt-3 font-semibold">{{ tr3('2 · What the buyer does', '2 · Ce que fait l’acheteur', '2 · ما يفعله المشتري') }}</h3>
+        <ol class="list-decimal ps-5 mt-1 space-y-1 text-slate-700 dark:text-slate-300">@foreach($it['guide']['buyer'] as $g)<li>{{ $g }}</li>@endforeach</ol>
+        <h3 class="mt-3 font-semibold">{{ tr3('3 · How you check it before verifying', '3 · Comment vérifier avant de valider', '3 · كيف تتحقق قبل التأكيد') }}</h3>
+        <p class="mt-1 text-slate-700 dark:text-slate-300">{{ $it['guide']['check'] }}</p>
+        <p class="mt-3 text-xs text-slate-600 dark:text-slate-400">{{ tr3('Verify only what you can see in your own app, card or statement. Tariffs of operators and La Poste change: confirm them in your own contract.', 'Ne validez que ce que vous voyez dans votre application, carte ou relevé. Les tarifs des opérateurs et de La Poste changent : confirmez-les dans votre contrat.', 'لا تؤكد إلا ما تراه في تطبيقك أو بطاقتك أو كشفك. تتغير تعريفات المشغلين والبريد: تأكد منها في عقدك.') }}</p>
+      </details>
+      @endif
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         @foreach($it['fields'] as $f)
           @php $fid = 'f-' . $it['id'] . '-' . $f['k']; $nm = 'f[' . $it['id'] . '][' . $f['k'] . ']'; @endphp

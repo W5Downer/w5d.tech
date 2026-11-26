@@ -49,7 +49,7 @@ return [
         // Additions required by the demo flows (managers hiring + checkout/subscription management)
         ['n' => 26, 'slug' => 'manager-applications','icon' => 'user-check',       'perm' => 'managers',    'label' => ['en' => 'Manager Applications', 'fr' => 'Candidatures de managers', 'ar' => 'طلبات المديرين']],
         ['n' => 27, 'slug' => 'subscriptions',       'icon' => 'repeat',           'perm' => 'investors.read','label' => ['en' => 'Daily Subscriptions', 'fr' => 'Abonnements quotidiens', 'ar' => 'الاشتراكات اليومية']],
-        ['n' => 29, 'slug' => 'payments-d17',        'icon' => 'smartphone',       'perm' => 'payments',    'label' => ['en' => 'Payments (D17)', 'fr' => 'Paiements (D17)', 'ar' => 'المدفوعات (D17)']],
+        ['n' => 29, 'slug' => 'payments-d17',        'icon' => 'smartphone',       'perm' => 'payments',    'label' => ['en' => 'Payments', 'fr' => 'Paiements', 'ar' => 'المدفوعات']],
         ['n' => 30, 'slug' => 'mail-outbox',         'icon' => 'mail',             'perm' => 'messages',    'label' => ['en' => 'Mail outbox', 'fr' => 'Boîte d’envoi', 'ar' => 'صندوق الصادر']],
         ['n' => 31, 'slug' => 'api-docs',            'icon' => 'code',             'perm' => 'dashboard',   'label' => ['en' => 'API & Docs', 'fr' => 'API et documentation', 'ar' => 'واجهة API والوثائق']],
         ['n' => 28, 'slug' => 'inbox',               'icon' => 'inbox',            'perm' => 'messages',    'label' => ['en' => 'Contact Inbox', 'fr' => 'Boîte de contact', 'ar' => 'صندوق الرسائل']],
