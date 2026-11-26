@@ -646,6 +646,11 @@ Docs: [`docs/pricing.md`](docs/pricing.md), [`docs/templates.md`](docs/templates
 
 ## Installation
 
+> **Step-by-step guides (webmaster first upload, owner configuration, update, restore, troubleshooting): [`docs/INSTALL.md`](docs/INSTALL.md).**
+> On a fresh server run `php bin/install.php --check`, then `php bin/install.php` (creates `.env`, folders, database, signing key, view cache, runs the preflight and prints your cron lines). The same two guides live in the owner portal under *Setup guide*. The installer is tested in a throw-away copy only, not yet on a real host.
+
+Manual equivalent:
+
 ```bash
 git clone https://github.com/W5Downer/w5d.tech.git
 cd w5d.tech
