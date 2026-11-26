@@ -23,7 +23,8 @@ def clear_overrides():
 
 
 def mk_aff(uid, status):
-    code = ('SR' + uniq()).upper().replace('0', '2').replace('1', '3').replace('O', 'P')[:8]
+    import secrets
+    code = 'SR' + ''.join(secrets.choice('ABCDEFGHJKLMNPQRSTUVWXYZ23456789') for _ in range(6))   # random: a truncated timestamp collided when two codes were made close together
     run('INSERT INTO affiliates (country_id,user_id,code,status,pitch,payout_gsm) VALUES (?,?,?,?,?,?)', ('tn', uid, code, status, 'test', ''))
     return code
 
