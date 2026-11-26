@@ -260,6 +260,9 @@
 @elseif(str_starts_with((string)$v['kind'], 'bill-'))
   @include('admin.billing')
 
+@elseif($v['kind'] === 'images')
+  @include('admin.images')
+
 @else
   <div class="rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-8 max-w-2xl">
     <p class="tier-badge">{{ __('admin.read_only') }}</p>

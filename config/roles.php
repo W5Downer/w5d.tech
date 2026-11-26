@@ -71,5 +71,6 @@ return [
         ['n' => 49, 'slug' => 'plan-subscriptions',  'icon' => 'repeat',           'perm' => 'billing',      'label' => ['en' => 'Plan subscribers', 'fr' => 'Abonnés aux formules', 'ar' => 'مشتركو الباقات']],
         ['n' => 50, 'slug' => 'cert-fees',           'icon' => 'award',            'perm' => 'billing',      'label' => ['en' => 'Certification fees', 'fr' => 'Frais de certification', 'ar' => 'رسوم الاعتماد']],
         ['n' => 51, 'slug' => 'placements',          'icon' => 'users',            'perm' => 'billing',      'label' => ['en' => 'Placements & commission', 'fr' => 'Placements et commission', 'ar' => 'التوظيف والعمولة']],
+        ['n' => 52, 'slug' => 'images',              'icon' => 'image',            'perm' => 'media',        'label' => ['en' => 'Image library', 'fr' => 'Bibliothèque d’images', 'ar' => 'مكتبة الصور']],
     ],
 ];

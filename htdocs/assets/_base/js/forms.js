@@ -178,6 +178,36 @@
     form.addEventListener('submit', function () { try { store.removeItem(key); } catch (e) {} });
   }
 
+  /* ---------- image tool: drag-drop zone, size presets, click-to-select address fields (owner image library) ---------- */
+  function dropzone(zone) {
+    var input = $('[data-drop-input]', zone), list = $('[data-drop-list]', zone);
+    if (!input) return;
+    var show = function () {
+      var f = input.files || [], n = f.length, kb = 0, i;
+      for (i = 0; i < n; i++) kb += f[i].size;
+      list.textContent = n ? n + ' · ' + (kb > 1048576 ? (kb / 1048576).toFixed(1) + ' MB' : Math.round(kb / 1024) + ' KB') + (n <= 4 ? ' · ' + Array.prototype.map.call(f, function (x) { return x.name; }).join(', ') : '') : '';
+      zone.classList.toggle('has-files', !!n);
+    };
+    input.addEventListener('change', show);
+    ['dragenter', 'dragover'].forEach(function (ev) { zone.addEventListener(ev, function (e) { e.preventDefault(); zone.classList.add('is-over'); }); });
+    ['dragleave', 'dragend', 'drop'].forEach(function (ev) { zone.addEventListener(ev, function () { zone.classList.remove('is-over'); }); });
+    zone.addEventListener('drop', function (e) {
+      e.preventDefault();
+      var dt = e.dataTransfer; if (!dt || !dt.files || !dt.files.length) return;
+      try { input.files = dt.files; } catch (x) { return; }   // very old browsers: the click-to-choose path still works
+      show();
+    });
+    zone.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+  }
+  $$('[data-dropzone]').forEach(dropzone);
+  $$('[data-preset]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.getAttribute('data-preset').split('x'), f = b.form || b.closest('form'); if (!f) return;
+      var w = $('[data-size=w]', f), h = $('[data-size=h]', f); if (w) w.value = p[0]; if (h) h.value = p[1];
+    });
+  });
+  $$('input[data-select-all]').forEach(function (i) { i.addEventListener('focus', function () { i.select(); }); });
+
   function init(root) {
     $$('input[type=tel][data-phone]', root).forEach(phone);
     $$('input[type=email]', root).forEach(email);

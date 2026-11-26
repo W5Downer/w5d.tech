@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace W5D;
 
-use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds, Pwa, Bills};
+use W5D\Controllers\{Pages, Forms, Checkout, Api, Docs, Admin, Accounts, Unsubscribe, Programs, PayHooks, Funds, Pwa, Bills, Media};
 
 final class App
 {
@@ -209,6 +209,8 @@ final class App
         $r->post($m . '/payments/review', [Admin::class, 'reviewPayment']);
         $r->post($m . '/payment-methods/save', [Admin::class, 'savePayMethods']);
         $r->post($m . '/billing/act', [Bills::class, 'act']);
+        $r->post($m . '/images/upload', [Media::class, 'upload']);
+        $r->post($m . '/images/delete', [Media::class, 'delete']);
         $r->post($m . '/integrations/save', [Admin::class, 'saveIntegrations']);
         // QCM bank / review, affiliates, certificates (src/controllers/Programs.php)
         $r->get($m . '/qcm-bank/export', [Programs::class, 'bankExport']);

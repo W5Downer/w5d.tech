@@ -124,7 +124,7 @@ final class Admin
         foreach (ACL::matrix()['menus'] as $m) if ($m['slug'] === $slug) $menu = $m;
         if (!$menu) return Response::html(view('pages.404', ['title' => '404']), 404);
         if ($r = Auth::require($menu['perm'])) return $r;
-        $custom = match ($slug) { 'invoices' => Bills::vInvoices(), 'my-invoices' => Bills::vMine(), 'plan-subscriptions' => Bills::vPlanSubs(), 'milestones' => Bills::vMilestones(), 'placements' => Bills::vPlacements(), default => null };
+        $custom = match ($slug) { 'invoices' => Bills::vInvoices(), 'my-invoices' => Bills::vMine(), 'plan-subscriptions' => Bills::vPlanSubs(), 'milestones' => Bills::vMilestones(), 'placements' => Bills::vPlacements(), 'images' => Media::view(), default => null };
         $view = $custom ?? (Crud::has($slug) ? self::vCrud($slug) : match ($slug) {
             'progressive-pricing' => self::vPricing(),
             'qcm-bank' => Programs::vBank($q),
@@ -426,6 +426,7 @@ final class Admin
             ['check' => 'PHP', 'value' => PHP_VERSION], ['check' => 'Database', 'value' => DB::available() ? 'connected (' . Env::get('DB_DRIVER', 'sqlite') . ')' : 'unavailable'],
             ['check' => 'Migrations', 'value' => implode(', ', $mig) ?: 'none'], ['check' => 'Payment mode', 'value' => (string)Env::get('PAYMENT_MODE', 'demo')], ['check' => 'D17 (Tunisia)', 'value' => \W5D\Payments::enabled() ? 'enabled → ' . \W5D\Payments::gsm() : 'disabled'], ['check' => 'Mail driver', 'value' => (string)Env::get('MAIL_DRIVER', 'log') . (Env::get('MAIL_DRIVER', 'log') === 'smtp' ? ' → ' . Env::get('MAIL_HOST', '?') : '')], ['check' => 'APP_URL', 'value' => (string)(Env::get('APP_URL') ?: 'EMPTY (derived from request)')], ['check' => 'APP_ENV', 'value' => (string)Env::get('APP_ENV', '?')],
             ['check' => 'storage/ writable', 'value' => is_writable(ROOT . '/storage') ? 'yes' : 'NO'], ['check' => 'Content', 'value' => Content::count('services') . ' services · ' . Content::count('projects') . ' projects · ' . Content::count('pages') . ' pages'],
+            ['check' => 'Image library (gd + WebP / zip)', 'value' => (\W5D\Images::gdOk() ? 'gd+WebP ready' : 'gd/WebP MISSING: pictures cannot be converted') . ' · ' . (\W5D\Images::zipOk() ? 'zip ready' : 'zip missing: single pictures only')],
             ['check' => 'Compiled assets', 'value' => is_file(ROOT . '/htdocs/assets/_base/css/tailwind.css') ? 'present' : 'missing (run tools/build.mjs)'],
         ];
         return ['kind' => 'system', 'rows' => $rows, 'can_seed' => Auth::can('system')];
