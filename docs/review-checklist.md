@@ -47,6 +47,9 @@ Extends `docs/LEGAL-REVIEW.md`. Items added or touched in this round:
 | C2 | Real SMTP provider delivery and TLS | `tests/smtp.py` uses a local relay without TLS; STARTTLS/SSL certificate checks, SPF/DKIM/DMARC and inbox placement need the real provider | `php bin/mail.php test you@yourmailbox` then request a team code; read headers in the mailbox |
 | C3 | Real-device install of the portal as an app | Chromium confirms there are no installability errors and the install events work; the OS install dialog, home-screen icon and iOS Add-to-Home need a phone | Android Chrome: menu, Install app. iPhone Safari: Share, Add to Home Screen. Open it, sign in, switch to airplane mode |
 | C4 | Screen-reader and RTL feel | Needs a person using VoiceOver/TalkBack/NVDA | Walk sign-in, the Setup guide and one dashboard page in Arabic |
+| C5 | Billing with real money | Tests use a local gateway stub and manual-method fixtures; real provider fees, refunds, tax and the legal text on invoices need the owner and an accountant | Issue one small invoice to yourself, pay it with each enabled method, check the e-mail, the invoice page and the audit log; then keep plans and fees switched off until the accountant agrees |
+| C6 | Image library on the real host | Tests run with the local PHP build | Upload one picture and one small ZIP in the portal Images screen; if it says WebP is unavailable, ask the host to enable `gd` with WebP and `zip` (see System) |
+| C7 | `bin/install.php` on the real host | Only run against throw-away folders here | Follow the first-upload track of the Setup guide on the server and keep the installer output |
 
 ## Sign-off
 
